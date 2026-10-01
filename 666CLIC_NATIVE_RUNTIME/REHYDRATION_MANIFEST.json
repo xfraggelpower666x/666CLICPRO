@@ -1,7 +1,7 @@
 {
   "system": "666CLIC",
   "status": "STAGING_FULL_RECOVERY_NOT_YET_VERIFIED",
-  "authority": "GOOGLE_DRIVE_REV79_UNTIL_PROMOTION",
+  "authority": "GOOGLE_DRIVE_REV80_UNTIL_PROMOTION",
   "required_order": [
     "AUTHORITY_CONTRACT.md",
     "CURRENT_POINTER.json",
@@ -11,7 +11,8 @@
     "continuity/LIVE_CIRCLE.md",
     "current/OPERATIONS_CENTER.md",
     "relations/CROSS_SYSTEM_RELATIONS.md",
-    "continuity/RECOVERY_AND_HANDOFF.md"
+    "continuity/RECOVERY_AND_HANDOFF.md",
+    "relations/LYVRA_UNDERSTANDING_CARD_REV80.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -33,5 +34,20 @@
     "READBACK_PENDING",
     "CONFLICT_QUARANTINE"
   ],
-  "result": "PARTIAL"
+  "result": "PARTIAL",
+  "staging_sync_rev": 80,
+  "current_source_evidence": {
+    "clic_revision": 80,
+    "lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
+    "source_verification": "CLIC_DRIVE_READBACK",
+    "github_migration_scope": "PUBLIC_SANITIZED_STAGING"
+  },
+  "remaining_checks": [
+    "COMPLETE_CLIC_NATIVE_COVERAGE",
+    "FRESH_CHAT_REHYDRATION_TEST",
+    "LIVE_CIRCLE_FUNCTION_TEST",
+    "PRIVATE_RECOVERY_VALIDATION",
+    "RESTORE_TEST",
+    "GITHUB_PROMOTION_GATE"
+  ]
 }
