@@ -1,13 +1,21 @@
 {
   "system": "666CLIC",
   "status": "PARTIAL_STAGING_NOT_PROMOTED",
-  "legacy_current_authority": "GOOGLE_DRIVE_REV79",
+  "staging_sync_revision": 80,
+  "source_authority": "GOOGLE_DRIVE_REV80",
+  "source_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
+  "lyvra_understanding_card_revision": 80,
+  "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
-  "body_head_before_pointer": "9b0a5255cb6b39f06749962f634741898d0d3b72",
-  "body_readback": "PASS_9_OF_9",
-  "full_rehydration": "OPEN",
-  "live_circle_test": "OPEN",
+  "prechange_backup_branch": "clic-pre-rev80-sync-backup-20261002",
+  "body_head_before_pointer": "021aa18f60626dae538e5fec2871d5564f9303a4",
+  "changed_carriers_readback": "PASS_3_OF_3",
+  "full_native_coverage": "OPEN",
+  "full_fresh_rehydration": "OPEN",
+  "live_circle_functional_test": "OPEN",
   "private_recovery": "OPEN",
   "authority_switch": false,
-  "pointer_written_last": true
+  "migration_promotion": false,
+  "pointer_written_last": true,
+  "no_post_pointer_mutation": true
 }
