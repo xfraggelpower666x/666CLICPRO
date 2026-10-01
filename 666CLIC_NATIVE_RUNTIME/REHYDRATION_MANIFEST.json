@@ -49,5 +49,13 @@
     "PRIVATE_RECOVERY_VALIDATION",
     "RESTORE_TEST",
     "GITHUB_PROMOTION_GATE"
-  ]
+  ],
+  "coverage_gate": "migration/COVERAGE_GATE_2026-10-02.md",
+  "coverage_audit": {
+    "source_current_revision": 80,
+    "document_count_directly_read": 7,
+    "scope": "BOUNDED_CRITICAL_CARRIERS_NOT_FULL_INVENTORY",
+    "missing": "NATIVE_SEMANTIC_COVERAGE_AND_FRESH_REHYDRATION",
+    "promotion": "NOT_AUTHORIZED"
+  }
 }
