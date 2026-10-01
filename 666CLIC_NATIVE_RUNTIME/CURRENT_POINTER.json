@@ -1,0 +1,13 @@
+{
+  "system": "666CLIC",
+  "status": "PARTIAL_STAGING_NOT_PROMOTED",
+  "legacy_current_authority": "GOOGLE_DRIVE_REV79",
+  "staging_branch": "clic-migration-rev79-staging",
+  "body_head_before_pointer": "9b0a5255cb6b39f06749962f634741898d0d3b72",
+  "body_readback": "PASS_9_OF_9",
+  "full_rehydration": "OPEN",
+  "live_circle_test": "OPEN",
+  "private_recovery": "OPEN",
+  "authority_switch": false,
+  "pointer_written_last": true
+}
