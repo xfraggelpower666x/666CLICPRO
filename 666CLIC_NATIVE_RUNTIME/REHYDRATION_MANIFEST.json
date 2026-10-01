@@ -1,0 +1,37 @@
+{
+  "system": "666CLIC",
+  "status": "STAGING_FULL_RECOVERY_NOT_YET_VERIFIED",
+  "authority": "GOOGLE_DRIVE_REV79_UNTIL_PROMOTION",
+  "required_order": [
+    "AUTHORITY_CONTRACT.md",
+    "CURRENT_POINTER.json",
+    "current/CURRENT_STATE.md",
+    "current/FORENSICS_AND_BOUNDARIES.md",
+    "continuity/PROVENANCE_SUPERSESSION.md",
+    "continuity/LIVE_CIRCLE.md",
+    "current/OPERATIONS_CENTER.md",
+    "relations/CROSS_SYSTEM_RELATIONS.md",
+    "continuity/RECOVERY_AND_HANDOFF.md"
+  ],
+  "pass_gates": [
+    "CURRENT_POINTER_MATCHES_GIT_HEAD",
+    "FULL_NATIVE_SOURCE_COVERAGE",
+    "RECOVERY_READBACK",
+    "LIVE_CIRCLE_ACCEPTANCE",
+    "NO_ORPHANED_MEANING",
+    "PRIVATE_RECOVERY_REACHABLE",
+    "NO_FOREIGN_AUTOACTIVATION"
+  ],
+  "status_values": [
+    "VERIFIZIERT",
+    "ABGELEITET",
+    "VORGESCHLAGEN",
+    "OFFEN",
+    "BLOCKIERT",
+    "PARTIAL",
+    "WRITE_BLOCKED",
+    "READBACK_PENDING",
+    "CONFLICT_QUARANTINE"
+  ],
+  "result": "PARTIAL"
+}
