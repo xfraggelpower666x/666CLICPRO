@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev80-sync-backup-20261002",
-  "body_head_before_pointer": "021aa18f60626dae538e5fec2871d5564f9303a4",
+  "body_head_before_pointer": "bbfbe90da930ba6cd89860a7cd9ca89dc9fdaa8c",
   "changed_carriers_readback": "PASS_3_OF_3",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "OPEN",
@@ -17,5 +17,12 @@
   "authority_switch": false,
   "migration_promotion": false,
   "pointer_written_last": true,
-  "no_post_pointer_mutation": true
+  "no_post_pointer_mutation": true,
+  "coverage_audit_2026_10_02": {
+    "result": "PARTIAL",
+    "critical_source_docs_read": 7,
+    "audit_path": "666CLIC_NATIVE_RUNTIME/migration/COVERAGE_GATE_2026-10-02.md",
+    "semantic_coverage": "NOT_YET_PROVEN",
+    "promotion": "BLOCKED_UNTIL_COVERAGE_AND_RECOVERY_ACCEPTANCE"
+  }
 }
