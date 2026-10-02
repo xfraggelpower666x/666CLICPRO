@@ -1,9 +1,9 @@
 {
   "system": "666CLIC",
   "status": "STAGING_FULL_RECOVERY_NOT_YET_VERIFIED",
-  "authority": "GOOGLE_DRIVE_REV90_UNTIL_PROMOTION",
+  "authority": "GOOGLE_DRIVE_REV91_UNTIL_PROMOTION",
   "required_order": [
-    "current/REV90_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+    "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
     "AUTHORITY_CONTRACT.md",
     "CURRENT_POINTER.json",
     "current/CURRENT_STATE.md",
@@ -90,7 +90,7 @@
     "semantic_coverage": "PARTIAL"
   },
   "sanitized_rev85_rev89_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
-  "current_source_authority": "GOOGLE_DRIVE_REV90",
+  "current_source_authority": "GOOGLE_DRIVE_REV91",
   "staging_sync_note": "CURRENTNESS_BRIDGE_ONLY; FUNCTIONAL_COVERAGE_OPEN",
-  "currentness_bridge": "current/REV90_SOURCE_BRIDGE_AND_ACCEPTANCE.md"
+  "currentness_bridge": "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md"
 }
