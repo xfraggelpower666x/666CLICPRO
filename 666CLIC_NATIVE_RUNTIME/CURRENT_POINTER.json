@@ -7,8 +7,8 @@
   "lyvra_understanding_card_revision": 80,
   "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
-  "prechange_backup_branch": "clic-pre-rev82-source-audit-20261002",
-  "body_head_before_pointer": "59ef67d044075d049d6e9d2c3be190329ce25080",
+  "prechange_backup_branch": "clic-pre-rev83-target-card-reconcile-20261002",
+  "body_head_before_pointer": "2f1f2154f53af58975321c5394b33082f3497be7",
   "changed_carriers_readback": "PASS_3_OF_3",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "OPEN",
@@ -32,5 +32,12 @@
     "scope": "BOUNDED_FOLDERS_AND_P14_P20_P21_DEEP_READ",
     "functional_gates": "PARTIAL",
     "p20_new_chat_runtime": "RETEST_PENDING"
+  },
+  "target_card_supersession": {
+    "class": "REV83_CANDIDATE_PENDING_DRIVE_COMMIT",
+    "ledger": "666CLIC_NATIVE_RUNTIME/migration/REV83_TARGET_CARD_SUPERSESSION_2026-10-02.md",
+    "lyvra_head": "f9b68ab4f37d5f501b7f572c4537fd2b944d014e",
+    "delta_commits": 77,
+    "status": "GIT_READBACK_ONLY_DRIVE_REV82_STILL_AUTHORITY"
   }
 }
