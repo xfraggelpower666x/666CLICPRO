@@ -48,7 +48,10 @@
     "LIVE_CIRCLE_FUNCTION_TEST",
     "PRIVATE_RECOVERY_VALIDATION",
     "RESTORE_TEST",
-    "GITHUB_PROMOTION_GATE"
+    "GITHUB_PROMOTION_GATE",
+    "P20_REAL_NEW_CHAT",
+    "ISOLATED_RESTORE",
+    "PRIVATE_RECOVERY"
   ],
   "coverage_gate": "migration/COVERAGE_GATE_2026-10-02.md",
   "coverage_audit": {
@@ -68,7 +71,7 @@
   },
   "target_card_supersession_2026_10_02": "migration/REV83_TARGET_CARD_SUPERSESSION_2026-10-02.md",
   "source_evidence": {
-    "clic_current_verified_rev": 82,
+    "clic_current_verified_rev": 89,
     "lyvra_latest_head": "f9b68ab4f37d5f501b7f572c4537fd2b944d014e",
     "new_commits_since_rev80": 77,
     "plugin_account_archive": "v0.13.1",
@@ -84,5 +87,8 @@
     "universal_tool_files": 5,
     "index_folder_reconciliation": "OPEN",
     "semantic_coverage": "PARTIAL"
-  }
+  },
+  "sanitized_rev85_rev89_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
+  "current_source_authority": "GOOGLE_DRIVE_REV89",
+  "staging_sync_note": "NONPRIVATE_DELTA_ONLY_FULL_REHYDRATION_OPEN"
 }
