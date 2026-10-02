@@ -57,5 +57,13 @@
     "scope": "BOUNDED_CRITICAL_CARRIERS_NOT_FULL_INVENTORY",
     "missing": "NATIVE_SEMANTIC_COVERAGE_AND_FRESH_REHYDRATION",
     "promotion": "NOT_AUTHORIZED"
+  },
+  "active_source_gate_ledger": "migration/ACTIVE_SOURCE_AND_GATE_LEDGER_2026-10-02.md",
+  "functional_acceptance_gates": {
+    "P14": "OPEN_EVENT_GATED",
+    "P20_NEW_CHAT_RUNTIME": "RETEST_PENDING",
+    "P21_CAUSAL_CONSUMPTION": "OPEN",
+    "LIVE_CIRCLE": "UNTESTED",
+    "PRIVATE_RESTORE": "UNTESTED"
   }
 }
