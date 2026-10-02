@@ -7,8 +7,8 @@
   "lyvra_understanding_card_revision": 80,
   "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
-  "prechange_backup_branch": "clic-pre-rev80-sync-backup-20261002",
-  "body_head_before_pointer": "bbfbe90da930ba6cd89860a7cd9ca89dc9fdaa8c",
+  "prechange_backup_branch": "clic-pre-rev82-source-audit-20261002",
+  "body_head_before_pointer": "59ef67d044075d049d6e9d2c3be190329ce25080",
   "changed_carriers_readback": "PASS_3_OF_3",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "OPEN",
@@ -24,5 +24,13 @@
     "audit_path": "666CLIC_NATIVE_RUNTIME/migration/COVERAGE_GATE_2026-10-02.md",
     "semantic_coverage": "NOT_YET_PROVEN",
     "promotion": "BLOCKED_UNTIL_COVERAGE_AND_RECOVERY_ACCEPTANCE"
+  },
+  "latest_source_audit": {
+    "audit_date": "2026-10-02",
+    "source_rev": 81,
+    "source_ledger": "666CLIC_NATIVE_RUNTIME/migration/ACTIVE_SOURCE_AND_GATE_LEDGER_2026-10-02.md",
+    "scope": "BOUNDED_FOLDERS_AND_P14_P20_P21_DEEP_READ",
+    "functional_gates": "PARTIAL",
+    "p20_new_chat_runtime": "RETEST_PENDING"
   }
 }
