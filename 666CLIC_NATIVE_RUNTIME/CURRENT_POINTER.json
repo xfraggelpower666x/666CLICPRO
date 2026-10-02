@@ -7,8 +7,8 @@
   "lyvra_understanding_card_revision": 80,
   "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
-  "prechange_backup_branch": "clic-pre-rev83-target-card-reconcile-20261002",
-  "body_head_before_pointer": "2f1f2154f53af58975321c5394b33082f3497be7",
+  "prechange_backup_branch": "clic-pre-rev84-capability-audit-20261002",
+  "body_head_before_pointer": "9b9b99f5fc04061877a7fe7252de7d46eba20881",
   "changed_carriers_readback": "PASS_3_OF_3",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "OPEN",
@@ -39,5 +39,15 @@
     "lyvra_head": "f9b68ab4f37d5f501b7f572c4537fd2b944d014e",
     "delta_commits": 77,
     "status": "GIT_READBACK_ONLY_DRIVE_REV82_STILL_AUTHORITY"
+  },
+  "capability_inventory_rev84": {
+    "source_clic_rev": 83,
+    "ledger": "666CLIC_NATIVE_RUNTIME/migration/REV84_CAPABILITY_INVENTORY_2026-10-02.md",
+    "index_entries": 25,
+    "folder_items": 29,
+    "patterns": 20,
+    "universal_tools": 5,
+    "workflow_sequences": 6,
+    "disposition": "PARTIAL_RECONCILIATION_REQUIRED"
   }
 }
