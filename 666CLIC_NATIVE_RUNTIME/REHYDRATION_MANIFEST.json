@@ -1,8 +1,9 @@
 {
   "system": "666CLIC",
   "status": "STAGING_FULL_RECOVERY_NOT_YET_VERIFIED",
-  "authority": "GOOGLE_DRIVE_REV80_UNTIL_PROMOTION",
+  "authority": "GOOGLE_DRIVE_REV90_UNTIL_PROMOTION",
   "required_order": [
+    "current/REV90_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
     "AUTHORITY_CONTRACT.md",
     "CURRENT_POINTER.json",
     "current/CURRENT_STATE.md",
@@ -37,7 +38,7 @@
   "result": "PARTIAL",
   "staging_sync_rev": 80,
   "current_source_evidence": {
-    "clic_revision": 80,
+    "clic_revision": 90,
     "lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
     "source_verification": "CLIC_DRIVE_READBACK",
     "github_migration_scope": "PUBLIC_SANITIZED_STAGING"
@@ -64,14 +65,14 @@
   "active_source_gate_ledger": "migration/ACTIVE_SOURCE_AND_GATE_LEDGER_2026-10-02.md",
   "functional_acceptance_gates": {
     "P14": "OPEN_EVENT_GATED",
-    "P20_NEW_CHAT_RUNTIME": "RETEST_PENDING",
+    "P20_NEW_CHAT_RUNTIME": "OPEN_FRESH_NEW_UI_CHAT",
     "P21_CAUSAL_CONSUMPTION": "OPEN",
     "LIVE_CIRCLE": "UNTESTED",
     "PRIVATE_RESTORE": "UNTESTED"
   },
   "target_card_supersession_2026_10_02": "migration/REV83_TARGET_CARD_SUPERSESSION_2026-10-02.md",
   "source_evidence": {
-    "clic_current_verified_rev": 89,
+    "clic_current_verified_rev": 90,
     "lyvra_latest_head": "f9b68ab4f37d5f501b7f572c4537fd2b944d014e",
     "new_commits_since_rev80": 77,
     "plugin_account_archive": "v0.13.1",
@@ -89,6 +90,7 @@
     "semantic_coverage": "PARTIAL"
   },
   "sanitized_rev85_rev89_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
-  "current_source_authority": "GOOGLE_DRIVE_REV89",
-  "staging_sync_note": "NONPRIVATE_DELTA_ONLY_FULL_REHYDRATION_OPEN"
+  "current_source_authority": "GOOGLE_DRIVE_REV90",
+  "staging_sync_note": "CURRENTNESS_BRIDGE_ONLY; FUNCTIONAL_COVERAGE_OPEN",
+  "currentness_bridge": "current/REV90_SOURCE_BRIDGE_AND_ACCEPTANCE.md"
 }
