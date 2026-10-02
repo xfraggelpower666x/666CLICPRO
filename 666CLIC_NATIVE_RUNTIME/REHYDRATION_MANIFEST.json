@@ -4,6 +4,7 @@
   "authority": "GOOGLE_DRIVE_REV91_UNTIL_PROMOTION",
   "required_order": [
     "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+    "current/REV91_SECONDARY_CARRIER_GUARD.md",
     "AUTHORITY_CONTRACT.md",
     "CURRENT_POINTER.json",
     "current/CURRENT_STATE.md",
