@@ -99,5 +99,28 @@
     "authority_switch": false,
     "promotion": false,
     "pointer_last": true
+  },
+  "rev91_static_carrier_audit": {
+    "status": "STATIC_READBACK_VERIFIED_RUNTIME_OPEN",
+    "date_local": "2026-10-05",
+    "source_authority": "GOOGLE_DRIVE_REV91",
+    "carriers_readable": "PASS_12_OF_12",
+    "static_preflight": "PASS_8_OF_8",
+    "drive_pointer_work_dev": "PASS_3_OF_3",
+    "audit": "migration/REV91_STATIC_CARRIER_AUDIT_2026-10-05.md",
+    "runbook": "continuity/REV91_FRESH_CHAT_TEST_RUNBOOK_2026-10-05.md",
+    "prechange_head": "36f5b39d7c6fbb53e1c44561d62f6f3ae5e3c168",
+    "prechange_backup_branch": "clic-pre-rev91-static-audit-20261005-0103",
+    "body_head_before_pointer": "7d9aedbe05591f640b581442d103dea9c45efbfe",
+    "p20_real_new_chat": "OPEN",
+    "p21_functional": "OPEN",
+    "live_circle_functional": "OPEN",
+    "isolated_restore": "OPEN",
+    "private_security": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
+    "foreign_mutations": false,
+    "authority_switch": false,
+    "promotion": false,
+    "pointer_last": true
   }
 }
