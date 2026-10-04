@@ -61,9 +61,12 @@ def assess(manifest, pointer, drive_pointer_text, carrier_names):
     required = manifest.get('required_order')
     require(isinstance(required, list) and len(required) == 12, 'INVALID_REQUIRED_ORDER')
     if isinstance(required, list):
+        types_valid = all(isinstance(n, str) for n in required)
+        require(types_valid, 'INVALID_CARRIER_TYPE')
         require(required[:2] == [REV91_BRIDGE, REV91_GUARD], 'REV91_PRECEDENCE_LOST')
-        require(len(required) == len(set(required)), 'DUPLICATE_REQUIRED_CARRIER')
-        require(all(isinstance(n, str) and n in carrier_names for n in required), 'MISSING_REQUIRED_CARRIER')
+        if types_valid:
+            require(len(required) == len(set(required)), 'DUPLICATE_REQUIRED_CARRIER')
+            require(all(n in carrier_names for n in required), 'MISSING_REQUIRED_CARRIER')
     # Historical REV90 evidence is intentionally retained, but never promoted.
     require((manifest.get('current_source_evidence') or {}).get('clic_revision') == 90, 'HISTORICAL_EVIDENCE_CHANGED_UNEXPECTEDLY')
     require('current_source_evidence.clic_revision' in resolved.get('legacy_fields_historical_not_current', []), 'HISTORY_NOT_EXPLICITLY_CLASSIFIED')
