@@ -1,0 +1,18 @@
+{
+  "system": "666CLIC",
+  "transaction": "PFS_CURRENT_POINTER_FORENSIC_SUPERSESSION",
+  "status": "COOPERATIVE_SCOPE_CLAIMED",
+  "native_clic_authority": "GOOGLE_DRIVE_REV91",
+  "staging_only": true,
+  "global_exclusive_lock": false,
+  "backup": "clic-pre-pfs-live-pointer-20261005-0205",
+  "prechange_head": "d75c38138dfb4a72ecf1af5e36df916ab63e4073",
+  "allowed_body": [
+    "666CLIC_NATIVE_RUNTIME/migration/REV91_PFS_CSM_LIVE_POINTER_SUPERSESSION_2026-10-05.md"
+  ],
+  "pointer_last": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
+  "release_before_pointer": true,
+  "pfs_repo_mutation": false,
+  "pfs_drive_mutation": false,
+  "promotion": false
+}
