@@ -75,7 +75,9 @@ def main():
 if __name__ == '__main__':
     sys.exit(main())
 , drive_pointer_text, re.MULTILINE))
-    if not revision_markers or revision_markers[-1].group(1) != '91' or revision_markers[-1].start() != start:
+    if (not revision_markers or revision_markers[-1].group(1) != '91'
+            or revision_markers[-1].start() != start
+            or sum(hit.group(1) == '91' for hit in revision_markers) != 1):
         errors.append('NEWER_OR_AMBIGUOUS_CURRENT_RECORD')
     parsed_pairs = [
         line.split('=', 1) for line in record.splitlines()
