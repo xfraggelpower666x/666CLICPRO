@@ -54,4 +54,12 @@ class GuardTests(unittest.TestCase):
  def test_duplicate_rev91_record_fails_closed(self):
   self.assertIn('NEWER_OR_AMBIGUOUS_CURRENT_RECORD',assess(MANIFEST,POINTER,DRIVE+'\n'+DRIVE,ORDER)['errors'])
 
+
+ def test_nonstring_carrier_is_quarantined(self):
+  x=copy.deepcopy(MANIFEST);x['required_order'][-1]=['invalid-list-carrier']
+  self.assertIn('INVALID_CARRIER_TYPE',assess(x,POINTER,DRIVE,ORDER)['errors'])
+ def test_truncated_rev91_record_is_quarantined(self):
+  broken=DRIVE.replace('END_666CLIC_CURRENT_POINTER_REV91','')
+  self.assertIn('MISSING_VERIFIED_REV91_RECORD',assess(MANIFEST,POINTER,broken,ORDER)['errors'])
+
 if __name__ == '__main__': unittest.main()
