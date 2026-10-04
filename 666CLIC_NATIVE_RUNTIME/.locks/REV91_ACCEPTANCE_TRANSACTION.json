@@ -1,0 +1,15 @@
+{
+  "system": "666CLIC",
+  "lock_class": "GITHUB_SCOPED_COOPERATIVE",
+  "status": "ACQUIRED",
+  "scope": [
+    "666CLIC_NATIVE_RUNTIME/migration/REV91_RUNTIME_ACCEPTANCE_CONTRACT_2026-10-05.md",
+    "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  ],
+  "branch": "clic-migration-rev79-staging",
+  "prechange_head": "a1982da431d3fd7695c4912b3054162abab904ed",
+  "backup_branch": "clic-pre-rev91-acceptance-20261005-0100",
+  "foreign_write": false,
+  "release_before_pointer": true,
+  "global_drive_lock": false
+}
