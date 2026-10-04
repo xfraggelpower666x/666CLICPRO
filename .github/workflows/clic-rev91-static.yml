@@ -7,6 +7,8 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/tools/rev91_validator.py'
       - '666CLIC_NATIVE_RUNTIME/tests/test_rev91_validator.py'
+      - '666CLIC_NATIVE_RUNTIME/tools/continuity_recovery_probe.py'
+      - '666CLIC_NATIVE_RUNTIME/tests/test_continuity_recovery_probe.py'
       - '.github/workflows/clic-rev91-static.yml'
   workflow_dispatch:
 
@@ -28,8 +30,11 @@ jobs:
         with:
           python-version: '3.11'
       - name: Verify offline guard fixtures
-        run: python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p 'test_rev91_validator.py' -v
+        run: python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p 'test_*.py' -v
 
 # These tests use in-repository dummy fixtures only.
 # They do not contact Drive, rehydrate a fresh chat, restore data, deploy,
 # publish a release, or change CLIC native decision authority.
+
+# Fixture suite also covers seven-domain continuity and synthetic hash restore.
+# No private data or production restore is accessed by this workflow.
