@@ -1,0 +1,15 @@
+{
+  "system": "666CLIC",
+  "status": "CLAIMED",
+  "class": "COOPERATIVE_GITHUB_STAGING_ONLY",
+  "prechange": "8704a94f2806e1c266311f64d4c76cd4dc65d31b",
+  "backup": "clic-pre-rev91-14test-attestation-20261005-0135",
+  "scope": [
+    "migration/REV91_LOCAL_14_TEST_ATTESTATION_2026-10-05.md",
+    "CURRENT_POINTER.json"
+  ],
+  "release_before_pointer": true,
+  "no_foreign_mutation": true,
+  "authority": "GOOGLE_DRIVE_REV91",
+  "promotion": false
+}
