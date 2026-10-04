@@ -297,5 +297,30 @@
     "private_restore": "OPEN",
     "promotion": false,
     "pointer_last": true
+  },
+  "rev91_pfs_native_live_pointer": {
+    "date_local": "2026-10-05",
+    "status": "PFS_NATIVE_LIVE_POINTER_DIRECT_READ_AND_FOLDER_CHAIN_VERIFIED",
+    "native_pfs_pointer_id": "1DZ8SERyNIeDCb0fe5funDqO12BL5_554ro6tFwMWpzc",
+    "native_pfs_pointer_path": "666PFS__666_PROMPT_FRAMEWORK_SYSTEM/CURRENT/00_LIVE_STATE/CURRENT_POINTER_v2_5_0",
+    "native_pfs_core_version_observed": "2.7.3",
+    "native_pfs_last_observed_child_publication": "WEBLYVRA-36001_BACKUP_v1.2.0",
+    "foreign_native_runtime": "NOT_TESTED",
+    "foreign_pointer_activation": "NO",
+    "foreign_repository_promotion": false,
+    "report": "migration/REV91_PFS_CSM_LIVE_POINTER_SUPERSESSION_2026-10-05.md",
+    "supersedes_prior_location_undetermined": true,
+    "prechange_backup": "clic-pre-pfs-live-pointer-20261005-0205",
+    "prechange_head": "d75c38138dfb4a72ecf1af5e36df916ab63e4073",
+    "body_head_before_pointer": "fde6303bf5b3bb232e9491f4e4b2397b15e5102c",
+    "clic_authority": "GOOGLE_DRIVE_REV91",
+    "clic_p20": "OPEN",
+    "clic_p21": "OPEN",
+    "clic_live_circle": "OPEN",
+    "clic_isolated_restore": "OPEN",
+    "foreign_writes": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
