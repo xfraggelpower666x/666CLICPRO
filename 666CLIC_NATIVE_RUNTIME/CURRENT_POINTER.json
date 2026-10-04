@@ -222,5 +222,28 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_exact_git_blob_local_test": {
+    "date_local": "2026-10-05",
+    "status": "EXACT_GITHUB_VALIDATOR_AND_TEST_BLOBS_LOCAL_PASS_14_OF_14",
+    "validator_git_sha": "2e666cfb7d109ed6868309e49c16380aefc0076c",
+    "tests_git_sha": "7f60fd61d346df891774c94b1817cb694d3f8624",
+    "command": "python -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p test_rev91_validator.py -v",
+    "result": "14_TESTS_OK_EXIT_0",
+    "evidence": "migration/REV91_EXACT_GIT_BLOB_TEST_ATTESTATION_2026-10-05.md",
+    "prechange_backup_branch": "clic-pre-rev91-exact14-attest-20261005-0140",
+    "prechange_head": "e02bf710649d202ec659820c1cf3cb69fe2a87d8",
+    "body_head_before_pointer": "34da12b610043af705a5bca7bbc096919e794bd4",
+    "github_actions_push_run": "UNVERIFIED",
+    "native_authority": "GOOGLE_DRIVE_REV91",
+    "functional_P20": "OPEN",
+    "functional_P21": "OPEN",
+    "live_circle": "OPEN",
+    "isolated_restore": "OPEN",
+    "full_native_coverage": "OPEN",
+    "foreign_mutation": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
