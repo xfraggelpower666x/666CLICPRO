@@ -122,5 +122,28 @@
     "authority_switch": false,
     "promotion": false,
     "pointer_last": true
+  },
+  "rev91_offline_validator": {
+    "date_local": "2026-10-05",
+    "status": "GITHUB_SOURCE_READBACK_VERIFIED_LOCAL_FIXTURE_TESTS_9_OF_9",
+    "tool": "tools/rev91_validator.py",
+    "tests": "tests/test_rev91_validator.py",
+    "instructions": "tools/REV91_VALIDATOR_README.md",
+    "local_fixture_tests": "PASS_9_OF_9",
+    "staging_code_execution": "NOT_PERFORMED",
+    "scope": "STATIC_SNAPSHOT_FAIL_CLOSED_ONLY",
+    "source_authority": "GOOGLE_DRIVE_REV91",
+    "prechange_head": "838f78481603518b0bc2bb2cb4b0dbf131ed1b59",
+    "prechange_backup_branch": "clic-pre-rev91-validator-20261005-0110",
+    "body_head_before_pointer": "1bb1fc6ffbf2a49686f7150af9326dcc1219f49d",
+    "p20_real_new_chat": "OPEN",
+    "p21_functional": "OPEN",
+    "live_circle_runtime": "OPEN",
+    "isolated_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
+    "no_foreign_mutation": true,
+    "authority_switch": false,
+    "promotion": false,
+    "pointer_last": true
   }
 }
