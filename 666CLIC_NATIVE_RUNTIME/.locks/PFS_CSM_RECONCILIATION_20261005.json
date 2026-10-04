@@ -1,0 +1,18 @@
+{
+  "system": "666CLIC",
+  "class": "SCOPED_COOPERATIVE_GITHUB_STAGE_LOCK",
+  "status": "CLAIMED",
+  "scope": [
+    "666CLIC_NATIVE_RUNTIME/migration/REV91_PFS_CSM_REPO_GAP_RECONCILIATION_2026-10-05.md",
+    "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  ],
+  "prechange_head": "1298b9b4697612cab1bad793603a376d5d234cde",
+  "backup": "clic-pre-pfs-csm-reconciliation-20261005-0200",
+  "foreign_write": false,
+  "repo": "666CLICPRO",
+  "pfs_repo_writes": false,
+  "global_exclusive": false,
+  "release_before_pointer": true,
+  "source_authority": "GOOGLE_DRIVE_REV91",
+  "promotion": false
+}
