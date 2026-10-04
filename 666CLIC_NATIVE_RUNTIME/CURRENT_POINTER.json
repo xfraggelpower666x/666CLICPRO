@@ -271,5 +271,31 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_pfs_csm_reconciliation": {
+    "date_local": "2026-10-05",
+    "status": "CLIC_GITHUB_FORENSIC_READBACK_VERIFIED_PFS_MIGRATION_OPEN",
+    "evidence": "migration/REV91_PFS_CSM_REPO_GAP_RECONCILIATION_2026-10-05.md",
+    "foreign_repo": "xfraggelpower666x/666PFS_CSM",
+    "foreign_main_head": "48ea7c2427f6d38274d762820e106afd8b0d2272",
+    "foreign_repo_scope": "README_ONLY_OBSERVED_MAIN",
+    "foreign_pointer": "NOT_FOUND_AT_CHECKED_PATH_NATIVE_DRIVE_CURRENT_UNVERIFIED",
+    "foreign_registry_entry_id_unique_text_counts": {
+      "child": 33,
+      "system": 17
+    },
+    "foreign_live_child_count": "NOT_VERIFIED",
+    "foreign_writes": false,
+    "foreign_authority_switch": false,
+    "prechange_head": "1298b9b4697612cab1bad793603a376d5d234cde",
+    "backup_branch": "clic-pre-pfs-csm-reconciliation-20261005-0200",
+    "body_head_before_pointer": "c75a5e95e6fd43ebfa5e220bdad0e759a647369f",
+    "clic_product_authority": "GOOGLE_DRIVE_REV91",
+    "p20": "OPEN",
+    "p21": "OPEN",
+    "live_circle": "OPEN",
+    "private_restore": "OPEN",
+    "promotion": false,
+    "pointer_last": true
   }
 }
