@@ -79,5 +79,25 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_acceptance_contract": {
+    "status": "GITHUB_STAGING_DOCUMENT_READBACK_VERIFIED_RUNTIME_TESTS_OPEN",
+    "path": "migration/REV91_RUNTIME_ACCEPTANCE_CONTRACT_2026-10-05.md",
+    "native_current_rev": 91,
+    "native_authority": "GOOGLE_DRIVE",
+    "prechange_head": "a1982da431d3fd7695c4912b3054162abab904ed",
+    "prechange_backup_branch": "clic-pre-rev91-acceptance-20261005-0100",
+    "body_head_before_pointer": "930a6fe8bdf400c009c0066e09a4c091b556dadc",
+    "p20_incoming": "OPEN",
+    "p21_causal": "OPEN",
+    "live_circle": "OPEN",
+    "isolated_restore": "OPEN",
+    "full_semantic_coverage": "OPEN",
+    "privacy_review": "OPEN",
+    "scope": "CLIC_ONLY",
+    "foreign_mutation": false,
+    "authority_switch": false,
+    "promotion": false,
+    "pointer_last": true
   }
 }
