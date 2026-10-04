@@ -199,5 +199,28 @@
     "no_promotion": true,
     "no_foreign_mutation": true,
     "pointer_last": true
+  },
+  "rev91_local_validator_attestation": {
+    "date_local": "2026-10-05",
+    "status": "LOCAL_VALIDATOR_BLOB_IDENTICAL_14_FIXTURE_TESTS_PASS",
+    "direct_github_validator_blob_sha": "2e666cfb7d109ed6868309e49c16380aefc0076c",
+    "original_github_tests_blob_sha": "7f60fd61d346df891774c94b1817cb694d3f8624",
+    "locally_reconstructed_tests": "PASS_14_OF_14_EQUIVALENT_FIXTURES",
+    "exact_github_test_file_execution": "NOT_ESTABLISHED",
+    "github_actions_push_result": "UNVERIFIED",
+    "report": "migration/REV91_LOCAL_14_TEST_ATTESTATION_2026-10-05.md",
+    "prechange_backup": "clic-pre-rev91-14test-attestation-20261005-0135",
+    "prechange_head": "8704a94f2806e1c266311f64d4c76cd4dc65d31b",
+    "body_head_before_pointer": "235f0b62131ff48ac82e51d4847a49a34e760738",
+    "product_authority": "GOOGLE_DRIVE_REV91",
+    "p20": "OPEN",
+    "p21": "OPEN",
+    "live_circle": "OPEN",
+    "isolated_restore": "OPEN",
+    "full_coverage": "OPEN",
+    "no_foreign_mutation": true,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
