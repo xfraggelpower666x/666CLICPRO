@@ -1,0 +1,14 @@
+{
+  "system": "666CLIC",
+  "lock_class": "GITHUB_STAGE_SCOPED_COOPERATIVE_LOCK",
+  "scope": "666CLIC_NATIVE_RUNTIME only",
+  "branch": "clic-migration-rev79-staging",
+  "prechange_sha": "0ba8a60f77c87bb7bcde41a7a18c96975fe22ce7",
+  "prechange_backup_branch": "clic-pre-rev91-currentness-merge-20261005-0050",
+  "repair_source_branch": "clic-repair-rev91-currentness-20261004-2355",
+  "authority": "GOOGLE_DRIVE_REV91_UNCHANGED",
+  "status": "ACQUIRED_FOR_BOUNDED_TRANSACTION",
+  "warning": "Not a global Drive lock; fail closed on conflicting writers",
+  "release_policy": "delete after body readback, before pointer-last",
+  "foreign_mutation": false
+}
