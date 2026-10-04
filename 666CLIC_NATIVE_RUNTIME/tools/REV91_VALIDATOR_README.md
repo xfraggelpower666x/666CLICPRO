@@ -37,6 +37,9 @@ private isolated restore, byte-exact integrity and full native semantic coverage
 The validator intentionally preserves historical REV90 evidence, which is NOT active authority.
 
 ## Evidence
-- Local deterministic fixture suite: nine cases executed successfully on 2026-10-05.
+- Baseline fixture suite: nine cases previously executed successfully; three additional negative cases (later REV92, duplicate authority field, duplicate REV91 record) are now staged. A 12-case GitHub Actions run still requires direct job-result readback before declaring CI PASS.
 - This README and the accompanying source are staging artifacts; GitHub Readback does not itself execute tests.
 - GitHub staging must remain nonauthoritative until separate genuine runtime acceptance and explicit promotion.
+
+## CI execution boundary
+A path-scoped GitHub Actions workflow is defined at `.github/workflows/clic-rev91-static.yml` for the staging branch. It runs only synthetic tests under read-only contents permissions, with no Drive access, release, deployment or restore. The presence of that file does NOT prove a workflow run occurred or passed. Inspect actual GitHub Actions job logs before claiming CI success.
