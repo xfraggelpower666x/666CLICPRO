@@ -60,5 +60,24 @@
   "p21_historical_package_closeout": "COMPLETE_CURRENT_SCOPE",
   "p21_functional_causal_acceptance": "OPEN",
   "byte_exact_integrity": "OPEN",
-  "security_review": "OPEN"
+  "security_review": "OPEN",
+  "staging_rev91_repair": {
+    "status": "GITHUB_STAGING_READBACK_VERIFIED_NONAUTHORITATIVE",
+    "source_authority": "GOOGLE_DRIVE_REV91",
+    "validated_manifest": "REHYDRATION_MANIFEST.json",
+    "validated_identity_ledger": "migration/PFS_CSM_MULTIKEY_IDENTITY_AUDIT.md",
+    "origin_repair_branch": "clic-repair-rev91-currentness-20261004-2355",
+    "prechange_backup_branch": "clic-pre-rev91-currentness-merge-20261005-0050",
+    "prechange_head": "0ba8a60f77c87bb7bcde41a7a18c96975fe22ce7",
+    "body_head_before_pointer": "b88de24fb83c52cf3430f82b40c279df0f9f8868",
+    "historical_rev90_evidence": "RETAINED_AS_HISTORY",
+    "repo_scope": "CLIC_ONLY",
+    "native_functional_gates": "OPEN",
+    "staging_lock": "GITHUB_SCOPED_LOCK_RELEASED_BEFORE_POINTER",
+    "staging_lock_ne_global_drive_lock": true,
+    "foreign_mutations": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
+  }
 }
