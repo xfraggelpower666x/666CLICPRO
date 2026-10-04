@@ -245,5 +245,31 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_synthetic_continuity_recovery": {
+    "date_local": "2026-10-05",
+    "status": "EXACT_GIT_BLOBS_LOCAL_FIXTURES_PASS_26_OF_26",
+    "original_14_tests": "PASS_14_OF_14_LOCAL_EXACT_BLOBS",
+    "additional_12_synthetic_continuity_tests": "PASS_12_OF_12_LOCAL_EXACT_BLOBS",
+    "combined_test_command": "python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p test_*.py -v",
+    "combined_result": "26_TESTS_OK_EXIT_0_LOCAL_ONLY",
+    "continuity_probe": "tools/continuity_recovery_probe.py",
+    "probe_test": "tests/test_continuity_recovery_probe.py",
+    "ci_workflow": ".github/workflows/clic-rev91-static.yml",
+    "ci_status": "PUSH_RUN_NOT_VERIFIED",
+    "synthetic_fixture_restore": "SIMULATED_HASH_ONLY",
+    "actual_private_restore": "OPEN",
+    "p20_incoming": "OPEN",
+    "p21_functional": "OPEN",
+    "live_circle_runtime": "OPEN",
+    "native_semantic_coverage": "OPEN",
+    "prechange_backup": "clic-pre-rev91-synthetic-recovery-probe-20261005-0150",
+    "prechange_head": "b6ed0a11b77672dd86ebcc07fa5b03d1c43d63d4",
+    "body_head_before_pointer": "926af9f26d4f57c44715b43c4cdf5c9b922c5210",
+    "product_authority": "GOOGLE_DRIVE_REV91",
+    "foreign_mutation": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
