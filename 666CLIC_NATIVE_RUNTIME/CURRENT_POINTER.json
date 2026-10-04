@@ -174,5 +174,30 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_validator_repair": {
+    "date_local": "2026-10-05",
+    "state": "GITHUB_SOURCE_REPAIR_READBACK_VERIFIED",
+    "severity": "BLOCKING_SYNTAX_REGRESSION_IN_PRIOR_COMMIT",
+    "discovered_in_commit": "abf5a3d66bc8a5ca29aee80f30eeb23598a845d2",
+    "repaired_path": "tools/rev91_validator.py",
+    "negative_test_suite": "tests/test_rev91_validator.py",
+    "test_cases_defined": 14,
+    "locally_executed_full_suite": false,
+    "github_actions_verified": false,
+    "github_runner_status": "UNVERIFIED",
+    "readback_of_repaired_files": "PASS_3_OF_3",
+    "source_static_shape": "ONE_MODULE_ONE_ASSESS_ONE_MAIN",
+    "backups": "clic-pre-rev91-validator-syntax-repair-20261005-0125",
+    "body_head_before_pointer": "25e12ed797d9473353f42ed1647f2d274341bd45",
+    "source_authority": "GOOGLE_DRIVE_REV91",
+    "runtime_p20": "OPEN",
+    "runtime_p21": "OPEN",
+    "live_circle": "OPEN",
+    "isolated_restore": "OPEN",
+    "native_full_coverage": "OPEN",
+    "no_promotion": true,
+    "no_foreign_mutation": true,
+    "pointer_last": true
   }
 }
