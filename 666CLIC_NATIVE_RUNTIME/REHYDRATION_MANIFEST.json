@@ -93,5 +93,33 @@
   "sanitized_rev85_rev89_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
   "current_source_authority": "GOOGLE_DRIVE_REV91",
   "staging_sync_note": "CURRENTNESS_BRIDGE_ONLY; FUNCTIONAL_COVERAGE_OPEN",
-  "currentness_bridge": "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md"
+  "currentness_bridge": "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+  "currentness_resolution": {
+    "schema": "CLIC_REV91_EVIDENCE_PRECEDENCE_V1",
+    "effective_source": "GOOGLE_DRIVE_CURRENT_POINTER",
+    "effective_source_revision": 91,
+    "effective_source_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
+    "staging_is_production_authority": false,
+    "legacy_fields_historical_not_current": [
+      "current_source_evidence.clic_revision",
+      "source_evidence.clic_current_verified_rev",
+      "coverage_audit.source_current_revision",
+      "staging_sync_rev",
+      "capability_inventory_rev84.source_clic_rev"
+    ],
+    "resolution_order": [
+      "VERIFY_LIVE_DRIVE_CURRENT_POINTER",
+      "VERIFY_REV91_SOURCE_BRIDGE",
+      "VERIFY_REV91_SECONDARY_CARRIER_GUARD",
+      "LOAD_HISTORICAL_PROVENANCE_AS_HISTORY_ONLY"
+    ],
+    "on_missing_current_pointer": "CONFLICT_QUARANTINE",
+    "on_revision_conflict": "CONFLICT_QUARANTINE",
+    "functional_acceptance": "OPEN",
+    "fresh_chat_p20": "OPEN",
+    "live_circle_runtime": "OPEN",
+    "isolated_restore": "OPEN",
+    "authority_switch": "FALSE",
+    "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED"
+  }
 }
