@@ -145,5 +145,34 @@
     "authority_switch": false,
     "promotion": false,
     "pointer_last": true
+  },
+  "rev91_ci_hardening": {
+    "date_local": "2026-10-05",
+    "status": "GITHUB_SOURCE_READBACK_VERIFIED_CI_RUN_UNVERIFIED",
+    "validator": "tools/rev91_validator.py",
+    "tests": "tests/test_rev91_validator.py",
+    "workflow": ".github/workflows/clic-rev91-static.yml",
+    "test_cases_defined": 12,
+    "new_regression_cases": [
+      "LATER_REVISION_92",
+      "DUPLICATE_AUTHORITY_FIELD",
+      "DUPLICATE_REV91_RECORD"
+    ],
+    "ci_run_verified": false,
+    "locally_executed_new_12_case_suite": false,
+    "prechange_head": "e99a6d53c8face46c37feff88ede6d6e83b4fa07",
+    "prechange_backup_branch": "clic-pre-rev91-ci-hardening-20261005-0120",
+    "body_head_before_pointer": "924842c5de2ff6759ba30caf39b816b7f6d1a935",
+    "native_authority": "GOOGLE_DRIVE_REV91",
+    "github_staging_only": true,
+    "p20_fresh_chat": "OPEN",
+    "p21_causal": "OPEN",
+    "live_circle_runtime": "OPEN",
+    "isolated_restore": "OPEN",
+    "semantic_coverage": "OPEN",
+    "foreign_mutations": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
