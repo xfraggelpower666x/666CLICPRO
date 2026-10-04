@@ -1,0 +1,35 @@
+name: 666CLIC REV91 Static Guard
+
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/tools/rev91_validator.py'
+      - '666CLIC_NATIVE_RUNTIME/tests/test_rev91_validator.py'
+      - '.github/workflows/clic-rev91-static.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-guard:
+    name: Offline fail-closed fixture tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout staging source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify offline guard fixtures
+        run: python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p 'test_rev91_validator.py' -v
+
+# These tests use in-repository dummy fixtures only.
+# They do not contact Drive, rehydrate a fresh chat, restore data, deploy,
+# publish a release, or change CLIC native decision authority.
