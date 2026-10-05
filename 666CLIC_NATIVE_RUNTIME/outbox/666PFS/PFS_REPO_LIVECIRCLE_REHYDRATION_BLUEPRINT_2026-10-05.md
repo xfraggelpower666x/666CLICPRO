@@ -213,3 +213,28 @@ AUTHORITY_PROMOTION_IF_CHILD_MIGRATION_INCOMPLETE=FORBIDDEN
 MISSING_CURRENT_CHILD_ACTION=BLOCK_PROMOTION
 DUPLICATE_IDENTITY_ACTION=BLOCK_PROMOTION_AND_RECONCILE
 STALE_RETIRED_REACTIVATION_ACTION=BLOCK_PROMOTION
+
+
+## External consumer cutover
+PFS_EXTERNAL_CONSUMER_CENSUS=REQUIRED_AT_EXECUTION_TIME
+PFS_EXTERNAL_CONSUMER_REPO_CUTOVER=REQUIRED
+PFS_EXTERNAL_CONSUMER_SET_SOURCE=LIVE_DEPENDENCY_CENSUS_AT_EXECUTION_TIME
+NO_FIXED_EXTERNAL_CONSUMER_LIST_HARDCODE=true
+
+After verified native PFS repo authority promotion:
+EXTERNAL_PFS_CSM_CURRENT_ROUTE=GITHUB_REPO_CURRENT
+EXTERNAL_PFS_CSM_DRIVE_CURRENT_ROUTE=FORBIDDEN
+DRIVE_ALLOWED_EXTERNAL_USE=HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE
+
+For every external system/service that currently reads, imports, references or rehydrates PFS/CSM:
+- discover dependency and exact consumed carrier
+- publish a PFS-owned sanitized cutover contract/return-handoff
+- require the external system's own native update/trigger to change its route
+- verify the external system now resolves PFS/CSM currentness from GitHub
+- verify it does not silently fall back to Drive-current
+- preserve Drive references only as history/backup/recovery/provenance
+- record VERIFIED_NO_CURRENT_DEPENDENCY when a suspected consumer does not actually depend on current PFS/CSM
+
+PFS_MAY_NOT_MUTATE_FOREIGN_SYSTEM_WITHOUT_NATIVE_TRIGGER=true
+EXTERNAL_CONSUMER_CUTOVER_NE_AUTHORITY_TRANSFER=true
+MIGRATION_CLOSEOUT_IF_UNMIGRATED_CURRENT_EXTERNAL_CONSUMER=FORBIDDEN
