@@ -49,11 +49,10 @@
     "github_migration_scope": "PUBLIC_SANITIZED_STAGING"
   },
   "remaining_checks": [
-    "BYTE_EXACT_PRIVATE_REPO_ARCHIVE",
-    "BIND_ROTATED_PRIVATE_POINTER_CONTENT",
+    "TRANSPORT_BOUNDARY_RESTORE_DECISION",
     "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "ISOLATED_PRIVATE_RESTORE",
-    "FULL_NATIVE_SEMANTIC_COVERAGE"
+    "FULL_NATIVE_SEMANTIC_COVERAGE",
+    "ISOLATED_PRIVATE_RESTORE_FULL_SCOPE"
   ],
   "coverage_gate": "migration/COVERAGE_GATE_2026-10-02.md",
   "coverage_audit": {
@@ -118,7 +117,7 @@
     "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
     "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "live_circle_runtime": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
-    "isolated_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
+    "isolated_restore": "PARTIAL_CORE_VERIFIED_54_OF_54_TRANSPORT_BOUNDARY_EXCLUDED_14",
     "authority_switch": "TRUE_2026-10-05",
     "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED",
     "bootstrap_resolution_order": [
@@ -287,13 +286,13 @@
     "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
     "worker_functional_evidence": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
-    "isolated_private_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
+    "isolated_private_restore": "PARTIAL_CORE_VERIFIED_54_OF_54_TRANSPORT_BOUNDARY_EXCLUDED_14",
     "full_native_semantic_coverage": "OPEN",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
     "live_circle_keep_active": "VERIFIED_2026-10-05",
     "live_circle_keep_reachable": "VERIFIED_2026-10-05",
     "live_circle_supersede": "VERIFIED_2026-10-05",
-    "private_recovery_validation": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
+    "private_recovery_validation": "VERIFIED_OWNER_ONLY_POINTER_BOUND_TO_BODY_HEAD"
   },
   "lyvra_handoff_processing": {
     "status": "CURRENT",
@@ -305,7 +304,7 @@
     },
     "worker_functional_test": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
-    "return_anchor": "BIND_ROTATED_PRIVATE_POINTER_CONTENT_THEN_BUILD_BYTE_EXACT_PRIVATE_REPO_ARCHIVE_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE_FINALIZATION"
+    "return_anchor": "ASSESS_TRANSPORT_BOUNDARY_RESTORE_REQUIREMENT_THEN_SEMANTIC_COVERAGE_FINALIZATION"
   },
   "clic_plugin_current": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
@@ -421,8 +420,8 @@
   },
   "recovery_current_evidence": {
     "date_local": "2026-10-05",
-    "status": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND",
-    "evidence": "migration/RECOVERY_POINTER_ROTATION_2026-10-05.md",
+    "status": "VERIFIED_OWNER_ONLY_POINTER_BOUND_CORE_RESTORE_54_OF_54",
+    "evidence": "migration/BYTE_EXACT_PRIVATE_CORE_RESTORE_2026-10-05.md",
     "repo_backup_pointer_id": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw",
     "history_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
     "work_backup_id": "1GpABAjo_wwOgIe9z9oj2UvwQ3zCe98n1wpFqpcggjEQ",
@@ -444,8 +443,14 @@
     "current_tree_private_id_exposure": false,
     "historical_git_metadata_exposure": true,
     "new_private_resource_id_published_to_public_repo": false,
-    "private_pointer_content": "CURRENTNESS_UNBOUND",
-    "private_recovery_validation": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
+    "private_pointer_content": "VERIFIED_BOUND_TO_SOURCE_BODY_HEAD",
+    "private_recovery_validation": "VERIFIED_OWNER_ONLY_POINTER_BOUND_TO_BODY_HEAD",
+    "byte_exact_private_clic_core_archive": "VERIFIED_54_OF_54",
+    "isolated_private_restore_core": "VERIFIED_54_OF_54_BYTE_EXACT",
+    "full_repo_private_restore": "PARTIAL_TRANSPORT_BOUNDARY_EXCLUDED_14",
+    "transport_boundary_excluded_blobs": 14,
+    "source_body_commit": "b132d2539177434190e08a5534f0f7169b1fb903",
+    "source_tree_sha": "71f29c5e67366960a0d42acc04c4262dc27bc063"
   },
   "semantic_coverage_current_assessment": {
     "status": "OPEN",
@@ -454,9 +459,12 @@
     "p20": "VERIFIED",
     "p21": "VERIFIED",
     "live_circle": "VERIFIED",
-    "primary_remaining_blocker": "BIND_PRIVATE_POINTER_CONTENT_THEN_BYTE_EXACT_PRIVATE_REPO_ARCHIVE_AND_ISOLATED_RESTORE",
+    "primary_remaining_blocker": "TRANSPORT_BOUNDARY_RESTORE_DECISION_AND_FULL_SCOPE_RESTORE_CLASSIFICATION",
     "event_gated_remaining": "P14",
     "full_pass_claimed": false,
-    "private_recovery": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
+    "private_recovery": "VERIFIED_OWNER_ONLY_POINTER_BOUND_TO_BODY_HEAD",
+    "byte_exact_private_clic_core_archive": "VERIFIED_54_OF_54",
+    "isolated_private_restore_core": "VERIFIED_54_OF_54",
+    "transport_boundary_excluded_blobs": 14
   }
 }
