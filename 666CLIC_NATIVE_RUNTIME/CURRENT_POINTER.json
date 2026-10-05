@@ -8,10 +8,10 @@
   "last_verified_lyvra_head": "98a4dd413298652ce84a25af3f78219831182220",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "9b9b99f5fc04061877a7fe7252de7d46eba20881",
+  "body_head_before_pointer": "4feecbde4c135945d893aa78361d696cf00d64be",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "OPEN",
-  "full_fresh_rehydration": "OPEN",
+  "full_fresh_rehydration": "VERIFIED_2026-10-05",
   "live_circle_functional_test": "OPEN",
   "private_recovery": "OPEN",
   "authority_switch": true,
@@ -56,7 +56,7 @@
   "native_source_revision_verified": 91,
   "currentness_bridge": "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
   "rev91_gate_audit": "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md",
-  "p20_incoming": "OPEN",
+  "p20_incoming": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
   "p21_historical_package_closeout": "COMPLETE_CURRENT_SCOPE",
   "p21_functional_causal_acceptance": "OPEN",
   "byte_exact_integrity": "OPEN",
@@ -715,6 +715,33 @@
     "manual_copy_required": false,
     "p20": "OPEN_UNTIL_FRESH_CHAT_REHYDRATION_EVIDENCE",
     "resume_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
+    "pointer_last": true
+  },
+  "clic_plugin_sync": {
+    "status": "VERIFIED_V0_1_5",
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919",
+    "readback": "VERIFIED"
+  },
+  "worker_functional_evidence": {
+    "status": "PARTIAL",
+    "configuration_readback": "VERIFIED",
+    "deployment_readback": "VERIFIED",
+    "ticket_flow": "BLOCKED_ENDPOINT_EXECUTION_NOT_AVAILABLE_IN_CURRENT_TOOL_PATH",
+    "secret_values_exposed": false
+  },
+  "p20_plugin_worker_update": {
+    "date_local": "2026-10-05",
+    "prechange_head": "3c792956d1e6bf63b7c483a5af2b62c517cc376c",
+    "prechange_backup_branch": "clic-pre-p20-plugin-worker-20261005-1707",
+    "evidence": "migration/P20_PLUGIN_WORKER_UPDATE_2026-10-05.md",
+    "body_head_before_pointer": "4feecbde4c135945d893aa78361d696cf00d64be",
+    "p20": "VERIFIED",
+    "plugin": "VERIFIED_V0_1_5",
+    "worker": "PARTIAL",
+    "p21": "OPEN",
+    "isolated_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
     "pointer_last": true
   }
 }
