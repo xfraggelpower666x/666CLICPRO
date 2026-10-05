@@ -246,7 +246,7 @@
       "OPERATIONS_CENTER_REV86_WORK_SCOPE_TEXT"
     ],
     "clic_foreign_repair_authority": false,
-    "source_head": "e025562da52813b71b485b18b926085ecccfc074",
+    "source_head": "3236a6a802523bbb993fad79f44496fe713c3769",
     "latest_evolution_class": "VALID_DASHBOARD_PRESENTATION_CONTINUITY_ONLY",
     "pointer_changed": false,
     "deep_facets_integrated": [
@@ -274,7 +274,9 @@
     "additional_native_cleanup_candidates": [
       "README_STALE_MIGRATION_IN_PROGRESS_TEXT",
       "REACHABLE_LANDSCAPE_STALE_DEV_AND_REV86_METADATA"
-    ]
+    ],
+    "direct_read_progress_policy": "NO_ESTIMATED_NUMERATOR_UNTIL_DEDUPLICATED_LEDGER_COMPLETE",
+    "dashboard_index_classification": "EMPTY_OR_NON_TEXT_PRESENTATION_CARRIER"
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
