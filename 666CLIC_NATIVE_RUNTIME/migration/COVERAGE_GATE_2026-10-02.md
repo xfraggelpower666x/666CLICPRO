@@ -1,3 +1,5 @@
+> CURRENTNESS NOTICE 2026-10-05: HISTORICAL_BOUNDED_COVERAGE_AUDIT. This carrier is preserved as historical test/provenance material. It is NOT current authority and must not override CURRENT_POINTER.json, REHYDRATION_MANIFEST.json, CURRENT_STATE.md, or newer verified runtime evidence.
+
 # 666CLIC — Native Migration Coverage Gate
 Audit: 2026-10-02
 Classification: PARTIAL — coverage gaps confirmed, no promotion.
