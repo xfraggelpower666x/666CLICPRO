@@ -55,7 +55,6 @@
     "RESTORE_TEST",
     "ISOLATED_RESTORE",
     "PRIVATE_RECOVERY",
-    "P21_FUNCTIONAL_CAUSAL_ACCEPTANCE",
     "WORKER_FUNCTIONAL_TICKET_FLOW",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE"
@@ -287,12 +286,15 @@
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
     "p20_fresh_chat": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
-    "p21_causal_acceptance": "OPEN",
+    "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
     "worker_functional_evidence": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
     "isolated_private_restore": "OPEN",
     "full_native_semantic_coverage": "OPEN",
-    "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence."
+    "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
+    "live_circle_keep_active": "VERIFIED_2026-10-05",
+    "live_circle_keep_reachable": "VERIFIED_2026-10-05",
+    "live_circle_supersede": "VERIFIED_2026-10-05"
   },
   "lyvra_handoff_processing": {
     "status": "CURRENT",
@@ -304,7 +306,7 @@
     },
     "worker_functional_test": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
-    "return_anchor": "CONTINUE_WORKER_TICKET_FLOW_IF_EXECUTABLE_THEN_P21_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
+    "return_anchor": "CONTINUE_WORKER_TICKET_FLOW_IF_EXECUTABLE_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
   },
   "clic_plugin_current": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
@@ -358,5 +360,25 @@
       "continuity/LIVE_CIRCLE.md": "8f224a1561eaa939211a71db694ed1a879db8c42",
       "migration/CURRENTNESS_NORMALIZATION_2026-10-05.md": "89e86599d10e678143af232b1ac987e7df723398"
     }
+  },
+  "p21_runtime_evidence": {
+    "status": "VERIFIED",
+    "date_local": "2026-10-05",
+    "evidence": "migration/P21_LIVECIRCLE_RUNTIME_EVIDENCE_2026-10-05.md",
+    "open_task": true,
+    "interruption": "USER_MESSAGE_OK_2026-10-05T15:15:19Z",
+    "return_anchor_preserved": true,
+    "resumed": true,
+    "external_boundary": "LYVRA_EXTERNAL_NATIVE_AUTHORITY",
+    "foreign_mutation": false
+  },
+  "historical_test_carriers": {
+    "status": "EXPLICITLY_MARKED_SUPERSEDED_OR_HISTORICAL",
+    "carriers": [
+      "migration/REV91_RUNTIME_ACCEPTANCE_CONTRACT_2026-10-05.md",
+      "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md",
+      "continuity/REV91_FRESH_CHAT_TEST_RUNBOOK_2026-10-05.md",
+      "migration/COVERAGE_GATE_2026-10-02.md"
+    ]
   }
 }
