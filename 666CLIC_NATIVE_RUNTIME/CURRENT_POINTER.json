@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "98a4dd413298652ce84a25af3f78219831182220",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "4feecbde4c135945d893aa78361d696cf00d64be",
+  "body_head_before_pointer": "4a0fa23b98a0ac1feca86becf8e220723938c4f1",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -742,6 +742,22 @@
     "p21": "OPEN",
     "isolated_restore": "OPEN",
     "full_native_semantic_coverage": "OPEN",
+    "pointer_last": true
+  },
+  "currentness_normalization": {
+    "date_local": "2026-10-05",
+    "status": "VERIFIED_READBACK",
+    "prechange_head": "782b9529bb90e835ea19545d307c9442894593fc",
+    "prechange_backup_branch": "clic-pre-currentness-normalization-20261005-1716",
+    "evidence": "migration/CURRENTNESS_NORMALIZATION_2026-10-05.md",
+    "body_head_before_pointer": "4a0fa23b98a0ac1feca86becf8e220723938c4f1",
+    "current_authority": "GITHUB_REPO_CURRENT",
+    "p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
+    "worker": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
+    "p21": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
+    "historical_provenance_preserved": true,
     "pointer_last": true
   }
 }
