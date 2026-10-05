@@ -246,7 +246,7 @@
       "OPERATIONS_CENTER_REV86_WORK_SCOPE_TEXT"
     ],
     "clic_foreign_repair_authority": false,
-    "source_head": "85df04ab07734a279b4c980d5ba49998216de972",
+    "source_head": "e025562da52813b71b485b18b926085ecccfc074",
     "latest_evolution_class": "VALID_DASHBOARD_PRESENTATION_CONTINUITY_ONLY",
     "pointer_changed": false,
     "deep_facets_integrated": [
@@ -259,7 +259,12 @@
       "STUDIO2_EVIDENCE",
       "STUDIO2_DUAL_CONTROL",
       "LYRIC_INTELLIGENCE"
-    ]
+    ],
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_repo_file_by_file_census": "PARTIAL_VERY_HIGH",
+    "coverage_distinction": "FULL_DECLARED_CURRENT_CARRIERS_NE_ABSOLUTE_HISTORICAL_EMPIRICAL_COMPLETENESS",
+    "open_evidence_debt": true,
+    "open_event_gated_validation": true
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
