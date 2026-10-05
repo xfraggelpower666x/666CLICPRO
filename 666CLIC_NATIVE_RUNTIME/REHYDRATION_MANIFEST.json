@@ -160,16 +160,18 @@
     "current_authority": false
   },
   "repo_handoff_transport": {
-    "status": "FIRST_NATIVE_ROUNDTRIP_CLIC_SIDE_VERIFIED",
+    "status": "FIRST_NATIVE_ROUNDTRIP_BIDIRECTIONALLY_VERIFIED",
     "protocol": "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
     "lyvra_inbox": "inbox/LYVRA/",
     "lyvra_outbox": "outbox/LYVRA/",
     "drive_message_bus": false,
     "authority_transfer": false,
-    "functional_acceptance": "PARTIAL_EXTERNAL_RETURN_CONSUMPTION_OPEN",
+    "functional_acceptance": "VERIFIED_REPO_HANDOFF_ROUNDTRIP",
     "last_verified_handoff_id": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
     "last_verified_source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
     "last_roundtrip_test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
-    "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN"
+    "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN",
+    "external_return_consumption": "VERIFIED",
+    "external_return_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
   }
 }
