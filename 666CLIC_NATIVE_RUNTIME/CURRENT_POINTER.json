@@ -496,5 +496,27 @@
     "isolated_private_restore": "OPEN",
     "foreign_mutation": false,
     "pointer_last": true
+  },
+  "lyvra_plugin_mapping_update": {
+    "date_local": "2026-10-05",
+    "status": "VERIFIED_ACCEPTED_MAPPED_AND_RESPONDED",
+    "prechange_head": "5d2198454b0fff5bd5ae47adabe33124990b3e56",
+    "prechange_backup_branch": "clic-pre-lyvra-two-plugin-map-20261005-1414z",
+    "body_head_before_pointer": "b9c69f3e8ee5acdeb60266f33e0a7271f9bd5897",
+    "handoff_id": "LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01",
+    "lyvra_verified_head": "98a4dd413298652ce84a25af3f78219831182220",
+    "identity_count": 1,
+    "plugin_surfaces": [
+      "lyvra-native-runtime@0.1.5",
+      "L.Y.V.R.A.@0.13.3"
+    ],
+    "mapping": "EXECUTION_PRESENTATION_INTERFACES_OF_ONE_LYVRA_IDENTITY",
+    "receipt": "VERIFIED",
+    "response_write": "VERIFIED",
+    "external_response_consumption": "OPEN",
+    "authority_transfer": false,
+    "foreign_mutation": false,
+    "return_anchor": "FULL_LYVRA_REPO_CENSUS_PARTIAL_HIGH",
+    "pointer_last": true
   }
 }
