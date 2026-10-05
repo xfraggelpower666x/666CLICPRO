@@ -176,15 +176,27 @@
     "external_return_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
   },
   "lyvra_deep_analysis": {
-    "status": "CURRENT_CLIC_UNDERSTANDING_PARTIAL_DEEP_CENSUS",
+    "status": "CURRENT_CLIC_UNDERSTANDING_PARTIAL_HIGH_DEEP_CENSUS",
     "source_repo": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
     "source_branch": "lyvra",
     "verified_head": "0e80d0a9cf3ec785bc91555873eb7ef661310f3f",
     "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
-    "full_repo_census": "PARTIAL",
-    "cross_card_parity": "PARTIAL",
+    "full_repo_census": "PARTIAL_HIGH",
+    "cross_card_parity": "PARTIAL_HIGH",
     "full_native_semantic_coverage": "OPEN",
-    "foreign_mutation": false
+    "foreign_mutation": false,
+    "round_2": "VERIFIED_SELECTED_CARRIERS",
+    "covered_relations": [
+      "GARDEN_MYCEL_BRIDGES",
+      "RELATIONAL_CHARACTERS",
+      "SKILLS_TASK_CONTRACTS",
+      "ADAPTER_BOUNDARIES",
+      "SELF_CONDUCTOR_DAEMON_FORCE",
+      "PUBLIC_INTERNAL_BOUNDARY",
+      "STUDIO2_ANALYTICS_MUSIC_MEMORY_EVIDENCE_FLOW",
+      "DEVELOPMENT_TRIPLE_VALIDATION",
+      "PRIVATE_VAULT_ROLE"
+    ]
   }
 }
