@@ -50,11 +50,8 @@
   },
   "remaining_checks": [
     "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "LIVE_CIRCLE_FUNCTION_TEST",
     "PRIVATE_RECOVERY_VALIDATION",
     "RESTORE_TEST",
-    "ISOLATED_RESTORE",
-    "PRIVATE_RECOVERY",
     "WORKER_FUNCTIONAL_TICKET_FLOW",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE"
@@ -121,7 +118,7 @@
     "on_revision_conflict": "CONFLICT_QUARANTINE",
     "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
     "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
-    "live_circle_runtime": "VERIFIED_REPO_HANDOFF_ROUNDTRIP",
+    "live_circle_runtime": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
     "isolated_restore": "OPEN",
     "authority_switch": "TRUE_2026-10-05",
     "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED",
@@ -139,7 +136,9 @@
       "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
       "current/REV91_SECONDARY_CARRIER_GUARD.md"
     ],
-    "legacy_drive_current_carriers_role": "HISTORICAL_PROVENANCE_ONLY"
+    "legacy_drive_current_carriers_role": "HISTORICAL_PROVENANCE_ONLY",
+    "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
+    "historical_rev91_test_contracts": "SUPERSEDED_PROVENANCE_ONLY"
   },
   "bootstrap_source_order": [
     "GITHUB_REPO_CURRENT"
@@ -362,7 +361,7 @@
     }
   },
   "p21_runtime_evidence": {
-    "status": "VERIFIED",
+    "status": "VERIFIED_READBACK",
     "date_local": "2026-10-05",
     "evidence": "migration/P21_LIVECIRCLE_RUNTIME_EVIDENCE_2026-10-05.md",
     "open_task": true,
@@ -370,7 +369,12 @@
     "return_anchor_preserved": true,
     "resumed": true,
     "external_boundary": "LYVRA_EXTERNAL_NATIVE_AUTHORITY",
-    "foreign_mutation": false
+    "foreign_mutation": false,
+    "evidence_blob_sha": "7ebff678552f4b1897e22ec123d962684574f967",
+    "current_state_blob_sha": "161129a42f9ff337a9c40cd10a317857f8ea01f6",
+    "operations_center_blob_sha": "dbb572e87152389d105e9cf9c453f57ffe4abf90",
+    "live_circle_blob_sha": "fce8c6d7965c1ace91c5c4a0cdcf9b38c0eba7c9",
+    "handoff_protocol_blob_sha": "d125778b298c4d0e3c52c4445fbda8ef88e4c8c7"
   },
   "historical_test_carriers": {
     "status": "EXPLICITLY_MARKED_SUPERSEDED_OR_HISTORICAL",
@@ -379,6 +383,13 @@
       "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md",
       "continuity/REV91_FRESH_CHAT_TEST_RUNBOOK_2026-10-05.md",
       "migration/COVERAGE_GATE_2026-10-02.md"
-    ]
+    ],
+    "readback": "VERIFIED",
+    "blobs": {
+      "migration/REV91_RUNTIME_ACCEPTANCE_CONTRACT_2026-10-05.md": "1f55dc795fce9fd9a7d22b8d27deb74b6f7473df",
+      "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md": "a3597abb48f308535c9aa122dc93128db51a79d5",
+      "continuity/REV91_FRESH_CHAT_TEST_RUNBOOK_2026-10-05.md": "6504edef900e66a9b6373e964a494c209dd7b0d7",
+      "migration/COVERAGE_GATE_2026-10-02.md": "d74ee27e6e44ad217f3f5120a99d16e7d7ba2bb8"
+    }
   }
 }
