@@ -349,5 +349,44 @@
         ]
       }
     }
+  },
+  "clic_plugin_sync_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01",
+    "purpose": "Keep the CLIC plugin aligned with current CLIC repository semantics using the same governed plugin workflow proven for LYVRA.",
+    "required_steps": [
+      "Verify current CLIC repository HEAD, CURRENT_POINTER and REHYDRATION_MANIFEST first.",
+      "Use Plugin Creator to discover the editable CLIC plugin by its own current metadata.",
+      "Read current plugin version, release id and only the relevant trigger/visual skills.",
+      "Create a new plugin version; do not overwrite the prior release in place.",
+      "Overlay only changed manifest/skill files and preserve other files/assets.",
+      "Use the current release id as the guarded expected version.",
+      "Read back plugin metadata and every changed skill after publication.",
+      "Report repository currentness and plugin publication as separate evidence."
+    ],
+    "dashboard_alignment": [
+      "SYSTEMSTART -> Whole-CLIC internal dashboard after verified current reads",
+      "UPDATE -> write/readback/recovery/open-gates dashboard",
+      "WEITER -> continuity and return-anchor dashboard",
+      "NEW CHAT / NEXT CHAT -> handoff and resume dashboard",
+      "DASHBOARD -> complete internal Whole-CLIC visualization",
+      "INTEGRATION AUDIT -> evidence/regression/open-gates dashboard",
+      "other native triggers only when visualization materially improves correctness or continuity"
+    ],
+    "visual_policy": [
+      "CLIC defines its own visual language.",
+      "Do not copy LYVRA colors mechanically.",
+      "Status colors must also have text labels.",
+      "No fake progress, fake green or fake live-sync.",
+      "Internal GPT/browser surface only; no public operations dashboard."
+    ],
+    "boundaries": [
+      "Plugin is an execution/presentation surface, not CLIC authority.",
+      "GitHub repository current remains CLIC authority.",
+      "Drive remains history, backup, recovery and provenance.",
+      "Dashboard has no decision, routing or mutation authority."
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01.json",
+    "authority_transfer": false
   }
 }
