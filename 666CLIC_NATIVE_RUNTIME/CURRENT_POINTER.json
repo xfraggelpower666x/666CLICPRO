@@ -322,5 +322,55 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_pfs_csm_multikey_census": {
+    "date_local": "2026-10-05",
+    "status": "CLIC_MULTIKEY_CENSUS_READBACK_VERIFIED_PFS_RUNTIME_PARTIAL",
+    "census": "migration/PFS_CSM_MULTIKEY_CENSUS_REV91_2026-10-05.json",
+    "plan": "migration/REV91_PFS_CSM_MULTIKEY_CENSUS_AND_MIGRATION_PLAN_2026-10-05.md",
+    "logical_records": 35,
+    "classification_counts": {
+      "ACTIVE_EVIDENCE": 21,
+      "SUPERSEDED_PROVISIONAL_ALIAS": 1,
+      "SUPERSEDED_ALIAS_ONLY": 1,
+      "RETIRED_HISTORICAL": 3,
+      "EXTERNAL_NATIVE_AUTHORITY_OR_MIRROR": 2,
+      "CURRENT_BINDING_REVIEW": 3,
+      "BACKUP_ONLY": 2,
+      "SPECIAL_DEPLOYMENT_RUNTIME_FORBIDDEN": 1,
+      "SPECIAL_NATIVE_LIVE_PFS_PRESERVATION": 1
+    },
+    "critical_supersession": [
+      "ASMIF-20001->ARCHEON-20001",
+      "666CFL->CFL-28001",
+      "CLINT-17001_RETIRED",
+      "LYVRA-DOLMETSCHER-13001_RETIRED",
+      "CTIO-7001_DO_NOT_RESURRECT"
+    ],
+    "remaining_review": [
+      "CSLO-9001",
+      "ITRF-6001",
+      "UCCF-10001"
+    ],
+    "pfs_live_pointer_id": "1DZ8SERyNIeDCb0fe5funDqO12BL5_554ro6tFwMWpzc",
+    "pfs_core_version_observed": "2.7.3",
+    "pfs_github_repo": "xfraggelpower666x/666PFS_CSM",
+    "pfs_github_main_head": "48ea7c2427f6d38274d762820e106afd8b0d2272",
+    "pfs_github_migration": "NOT_PERFORMED",
+    "pfs_runtime_acceptance": "OPEN",
+    "pfs_csm_relation_full_census": "OPEN",
+    "pfs_isolated_restore": "OPEN",
+    "clic_p20": "OPEN",
+    "clic_p21": "OPEN",
+    "clic_live_circle": "OPEN",
+    "clic_private_restore": "OPEN",
+    "prechange_backup": "clic-pre-pfs-multikey-census-20261005-1340",
+    "prechange_head": "d4a3ab4714185f0504952c6e5eec5142760d4544",
+    "body_head_before_pointer": "6a40e03a2eb3d3b0761651fe494bb3211919bc17",
+    "clic_product_authority": "GOOGLE_DRIVE_REV91",
+    "foreign_writes": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
