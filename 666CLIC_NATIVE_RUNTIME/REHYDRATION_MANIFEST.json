@@ -160,12 +160,16 @@
     "current_authority": false
   },
   "repo_handoff_transport": {
-    "status": "CLIC_SIDE_BOUNDARY_IMPLEMENTED_EXTERNAL_PRODUCER_OPEN",
+    "status": "FIRST_NATIVE_ROUNDTRIP_CLIC_SIDE_VERIFIED",
     "protocol": "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
     "lyvra_inbox": "inbox/LYVRA/",
     "lyvra_outbox": "outbox/LYVRA/",
     "drive_message_bus": false,
     "authority_transfer": false,
-    "functional_acceptance": "OPEN"
+    "functional_acceptance": "PARTIAL_EXTERNAL_RETURN_CONSUMPTION_OPEN",
+    "last_verified_handoff_id": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
+    "last_verified_source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
+    "last_roundtrip_test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
+    "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN"
   }
 }
