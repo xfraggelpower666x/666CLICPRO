@@ -1,0 +1,89 @@
+{
+  "schema": "666CLIC_NATIVE_RETURN_HANDOFF_V1",
+  "handoff_id": "CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01",
+  "date_local": "2026-10-05",
+  "source_system": "666CLIC",
+  "source_authority": "GITHUB_REPO_CURRENT",
+  "source_repo": "xfraggelpower666x/666CLICPRO",
+  "source_branch": "clic-migration-rev79-staging",
+  "source_head_pre_handoff": "276b6ffae33e194a04085121e921759df67783d1",
+  "target_system": "666PFS",
+  "target_native_authority": "666PFS_ONLY",
+  "authority_transfer": false,
+  "foreign_mutation": false,
+  "executable_by_clic": false,
+  "purpose": "Provide verified CLIC forensic context so native 666PFS can continue its own repository migration without repeating resolved discovery work.",
+  "verified_pfs_observations": {
+    "github_repo": "xfraggelpower666x/666PFS_CSM",
+    "github_branch": "main",
+    "github_main_head": "48ea7c2427f6d38274d762820e106afd8b0d2272",
+    "github_migration_state": "MINIMAL_BOOTSTRAP_ONLY_NOT_NATIVE_AUTHORITY",
+    "native_live_pointer_path": "666PFS__666_PROMPT_FRAMEWORK_SYSTEM/CURRENT/00_LIVE_STATE/CURRENT_POINTER_v2_5_0",
+    "native_core_version_observed": "2.7.3",
+    "native_live_pointer_direct_read": true,
+    "csm_relation": "DISTINCT_MANAGEMENT_PLANE_NOT_PFS_IDENTITY_NOT_CHILD_IDENTITY",
+    "child_autoload_default": "FORBIDDEN",
+    "newer_valid_evolution": "PROTECT"
+  },
+  "identity_and_relation_findings": {
+    "multikey_census": "AVAILABLE_IN_CLIC_EVIDENCE",
+    "active_evidence_records": 24,
+    "current_binding_review": 0,
+    "resolved_identity_cases": [
+      "CSLO-9001",
+      "ITRF-6001",
+      "UCCF-10001"
+    ],
+    "direct_relation_census": "PARTIAL_FAIL_CLOSED",
+    "full_relation_census": "OPEN",
+    "csm_card_parity": "OPEN",
+    "child_card_direct_read_completeness": "OPEN",
+    "uccf_historical_pointer_reference": "UNREACHABLE_HISTORICAL_REFERENCE_DO_NOT_TREAT_AS_CURRENT"
+  },
+  "critical_supersession_guards": [
+    "ASMIF-20001->ARCHEON-20001",
+    "666CFL->CFL-28001",
+    "CLINT-17001_RETIRED_HISTORICAL",
+    "LYVRA-DOLMETSCHER-13001_RETIRED_HISTORICAL",
+    "CTIO-7001_DO_NOT_RESURRECT"
+  ],
+  "external_authority_guards": [
+    "CODEFORGE-11001_EXTERNAL_NATIVE_AUTHORITY_OR_BACKUP_MIRROR_ONLY",
+    "SOUNDWAVE-34001_EXTERNAL_DEVELOPMENT_OR_SOURCE_AUTHORITY",
+    "TRACKHUB-32001_NATIVE_LIVE_RUNTIME_DISTINCT",
+    "STREAM-5001_RUNTIME_AUTHORITY_FORBIDDEN",
+    "WEBLYVRA-36001_BACKUP_ONLY",
+    "LIGHT-35001_BACKUP_ONLY"
+  ],
+  "pfs_native_open_gates": [
+    "PFS_FRESH_CHAT_REHYDRATION_ACCEPTANCE",
+    "PFS_CSM_FULL_RELATION_CENSUS",
+    "PFS_CARD_PARITY_AND_DIRECT_CHILD_CARD_READBACK",
+    "PFS_NATIVE_RUNTIME_ACCEPTANCE",
+    "PFS_PRIVATE_PUBLIC_SECURITY_REVIEW",
+    "PFS_ISOLATED_RESTORE",
+    "PFS_REPO_REHYDRATION_MANIFEST_AND_POINTER",
+    "PFS_GITHUB_AUTHORITY_PROMOTION_DECISION"
+  ],
+  "recommended_native_sequence": [
+    "666PFS SYSTEMSTART",
+    "Verify exact native PFS pointer, registries, CSM relation/card indexes and current GitHub main HEAD independently.",
+    "Consume this CLIC handoff as external evidence only; never as authority.",
+    "Create PFS-native pre-change backup and governed migration branch/transaction.",
+    "Build sanitized repository-native PFS runtime carriers and machine-readable identity/relation census while preserving private Drive material outside public GitHub.",
+    "Run PFS-native fresh-chat rehydration, CSM relation resolution, security/private-public review and isolated restore.",
+    "Publish the PFS pointer last only after direct readback.",
+    "Promote GitHub authority only by explicit native PFS decision after all PFS-native gates pass."
+  ],
+  "evidence_paths": [
+    "migration/PFS_CSM_MULTIKEY_CENSUS_REV91_2026-10-05.json",
+    "migration/PFS_CSM_RELATION_CENSUS_REV91_2026-10-05.json",
+    "migration/PFS_CSM_MULTIKEY_IDENTITY_AUDIT.md",
+    "migration/REV91_PFS_CSM_LIVE_POINTER_SUPERSESSION_2026-10-05.md",
+    "migration/REV91_PFS_CSM_MULTIKEY_CENSUS_AND_MIGRATION_PLAN_2026-10-05.md",
+    "migration/REV91_PFS_CSM_REPO_GAP_RECONCILIATION_2026-10-05.md"
+  ],
+  "consumption_rule": "PFS must independently verify all source currentness before acting.",
+  "return_anchor_after_pfs_consumption": "CLIC_HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
+  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION"
+}
