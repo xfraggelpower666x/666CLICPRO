@@ -188,3 +188,28 @@ PFS must preserve its own identity, CSM model, child registry semantics and nati
 PFS_REPO_FIRST_TARGET_MODEL=REQUIRED
 PFS_DRIVE_POST_PROMOTION_ROLE=HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE
 PFS_DRIVE_NE_CURRENT_AFTER_VERIFIED_PROMOTION=true
+
+
+## Hard child migration promotion gate
+ALL_VALID_CURRENT_CHILD_IDENTITIES_MIGRATED_TO_REPO=REQUIRED_BEFORE_AUTHORITY_SWITCH
+ALL_CURRENT_CSM_RELATIONS_MIGRATED_TO_REPO=REQUIRED_BEFORE_AUTHORITY_SWITCH
+ALL_CURRENT_CHILD_POINTER_AND_ROLE_METADATA_REPRESENTED=REQUIRED_BEFORE_AUTHORITY_SWITCH
+CHILD_MIGRATION_SET_SOURCE=NATIVE_PFS_CURRENT_AT_EXECUTION_TIME
+HISTORICAL_CLIC_CENSUS_COUNT_NE_FINAL_REQUIRED_COUNT=true
+NO_FIXED_CHILD_COUNT_HARDCODE=true
+
+PASS requires:
+- native PFS recomputes the current valid child identity set at migration time
+- every valid active/current child identity is represented in GitHub current
+- renamed/rebound identities are represented once with supersession provenance
+- retired identities remain historical and non-loadable
+- backup-only identities remain backup/recovery role only
+- external native systems remain references without authority transfer
+- every current CSM parent/child/relation needed for rehydration is represented
+- ambiguous or unresolved identities block promotion with HOLD_AND_AUDIT
+- direct repo readback proves no current valid child identity is missing
+
+AUTHORITY_PROMOTION_IF_CHILD_MIGRATION_INCOMPLETE=FORBIDDEN
+MISSING_CURRENT_CHILD_ACTION=BLOCK_PROMOTION
+DUPLICATE_IDENTITY_ACTION=BLOCK_PROMOTION_AND_RECONCILE
+STALE_RETIRED_REACTIVATION_ACTION=BLOCK_PROMOTION
