@@ -4,8 +4,8 @@
   "staging_sync_revision": 91,
   "source_authority": "GITHUB_REPO_CURRENT",
   "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
-  "lyvra_understanding_card_revision": 80,
-  "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
+  "lyvra_understanding_card_revision": "REPO_CURRENT_DEEP_2026-10-05",
+  "last_verified_lyvra_head": "0e80d0a9cf3ec785bc91555873eb7ef661310f3f",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
   "body_head_before_pointer": "9b9b99f5fc04061877a7fe7252de7d46eba20881",
@@ -477,5 +477,24 @@
     "foreign_mutation": false,
     "pointer_last": true,
     "external_response_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
+  },
+  "lyvra_deep_analysis_update": {
+    "date_local": "2026-10-05",
+    "status": "CLIC_CARD_DEEPENING_READBACK_VERIFIED_SEMANTIC_CENSUS_PARTIAL",
+    "prechange_head": "3b98a8736b7acd369847ce30880c70ad187744c5",
+    "prechange_backup_branch": "clic-pre-lyvra-deep-card-20261005-1324z",
+    "body_head_before_pointer": "e2b4f8d798a709ffb48ecfded9dd325c397686ba",
+    "lyvra_verified_head": "0e80d0a9cf3ec785bc91555873eb7ef661310f3f",
+    "lyvra_pointer_sha": "48b3fba543f15419e7106138233acf1d8591e13a",
+    "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
+    "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+    "cross_relations": "relations/CROSS_SYSTEM_RELATIONS.md",
+    "rehydration_manifest_updated": true,
+    "full_lyvra_repo_census": "PARTIAL",
+    "cross_card_parity": "PARTIAL",
+    "full_native_semantic_coverage": "OPEN",
+    "clic_return_recommendation_to_lyvra": "OPEN",
+    "foreign_mutation": false,
+    "pointer_last": true
   }
 }
