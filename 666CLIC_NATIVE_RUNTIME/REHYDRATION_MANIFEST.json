@@ -48,10 +48,7 @@
     "source_verification": "CLIC_DRIVE_READBACK",
     "github_migration_scope": "PUBLIC_SANITIZED_STAGING"
   },
-  "remaining_checks": [
-    "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "FULL_NATIVE_SEMANTIC_COVERAGE"
-  ],
+  "remaining_checks": [],
   "coverage_gate": "migration/COVERAGE_GATE_2026-10-02.md",
   "coverage_audit": {
     "source_current_revision": 80,
@@ -76,7 +73,7 @@
     "plugin_account_archive": "v0.13.1",
     "plugin_native_runtime_archive": "v0.1.3"
   },
-  "full_coverage": "OPEN",
+  "full_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "rev84_capability_inventory": "migration/REV84_CAPABILITY_INVENTORY_2026-10-02.md",
   "capability_coverage": {
     "folder_count": 29,
@@ -285,7 +282,7 @@
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
     "worker_functional_evidence": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "isolated_private_restore": "VERIFIED_CLIC_CORE_54_OF_54_TRANSPORT_PAYLOADS_EXCLUDED_BY_AUTHORITY_BOUNDARY",
-    "full_native_semantic_coverage": "OPEN",
+    "full_native_semantic_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
     "live_circle_keep_active": "VERIFIED_2026-10-05",
     "live_circle_keep_reachable": "VERIFIED_2026-10-05",
@@ -302,7 +299,7 @@
     },
     "worker_functional_test": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
-    "return_anchor": "CONTINUE_COMPLETE_CLIC_NATIVE_COVERAGE_THEN_SEMANTIC_COVERAGE_FINALIZATION"
+    "return_anchor": "HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION"
   },
   "clic_plugin_current": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
@@ -456,19 +453,25 @@
     "transport_boundary_decision_evidence": "migration/TRANSPORT_BOUNDARY_RESTORE_DECISION_2026-10-05.md"
   },
   "semantic_coverage_current_assessment": {
-    "status": "OPEN",
+    "status": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
     "current_runtime_carriers": "FULL_VERIFIED",
+    "clic_core_direct_read": "54_OF_54",
+    "clic_core_unread": 0,
+    "transport_blobs": 14,
+    "transport_role": "AUTHORITY_PRESERVING_HANDOFF_AND_PROVENANCE",
     "worker_functional_gate": "VERIFIED",
     "p20": "VERIFIED",
     "p21": "VERIFIED",
     "live_circle": "VERIFIED",
-    "primary_remaining_blocker": "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "event_gated_remaining": "P14",
-    "full_pass_claimed": false,
     "private_recovery": "VERIFIED_OWNER_ONLY_POINTER_BOUND_TO_BODY_HEAD",
     "byte_exact_private_clic_core_archive": "VERIFIED_54_OF_54",
     "isolated_private_restore_core": "VERIFIED_54_OF_54",
-    "transport_boundary_excluded_blobs": 14,
-    "transport_boundary_restore_decision": "CLOSED_AUTHORITY_BOUNDARY"
+    "transport_boundary_restore_decision": "CLOSED_AUTHORITY_BOUNDARY",
+    "no_orphaned_current_clic_core_meaning": "VERIFIED",
+    "absolute_historical_empirical_completeness": "NOT_CLAIMED_AND_NOT_REQUIRED_FOR_CURRENT_RUNTIME_PASS",
+    "p14": "OPEN_EVENT_GATED",
+    "p14_semantic_coverage_gap": false,
+    "full_pass_claimed_for_scope": true,
+    "evidence": "migration/CURRENT_NATIVE_COVERAGE_CLOSEOUT_2026-10-05.md"
   }
 }
