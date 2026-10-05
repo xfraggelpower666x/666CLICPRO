@@ -51,7 +51,6 @@
   "remaining_checks": [
     "COMPLETE_CLIC_NATIVE_COVERAGE",
     "PRIVATE_RECOVERY_VALIDATION",
-    "RESTORE_TEST",
     "WORKER_FUNCTIONAL_TICKET_FLOW",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE"
@@ -119,7 +118,7 @@
     "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
     "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "live_circle_runtime": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
-    "isolated_restore": "OPEN",
+    "isolated_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
     "authority_switch": "TRUE_2026-10-05",
     "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED",
     "bootstrap_resolution_order": [
@@ -288,12 +287,13 @@
     "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
     "worker_functional_evidence": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
-    "isolated_private_restore": "OPEN",
+    "isolated_private_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
     "full_native_semantic_coverage": "OPEN",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
     "live_circle_keep_active": "VERIFIED_2026-10-05",
     "live_circle_keep_reachable": "VERIFIED_2026-10-05",
-    "live_circle_supersede": "VERIFIED_2026-10-05"
+    "live_circle_supersede": "VERIFIED_2026-10-05",
+    "private_recovery_validation": "BLOCKED_LINK_SHARED_ANYONE_READER"
   },
   "lyvra_handoff_processing": {
     "status": "CURRENT",
@@ -305,7 +305,7 @@
     },
     "worker_functional_test": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
-    "return_anchor": "CONTINUE_WORKER_TICKET_FLOW_IF_EXECUTABLE_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
+    "return_anchor": "HARDEN_PRIVATE_RECOVERY_WHEN_PERMISSION_DELETE_PATH_EXISTS_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
   },
   "clic_plugin_current": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
@@ -391,5 +391,24 @@
       "continuity/REV91_FRESH_CHAT_TEST_RUNBOOK_2026-10-05.md": "6504edef900e66a9b6373e964a494c209dd7b0d7",
       "migration/COVERAGE_GATE_2026-10-02.md": "d74ee27e6e44ad217f3f5120a99d16e7d7ba2bb8"
     }
+  },
+  "recovery_current_evidence": {
+    "date_local": "2026-10-05",
+    "status": "PARTIAL_SECURITY_BLOCKED",
+    "evidence": "migration/RECOVERY_SECURITY_BACKUP_FRESHNESS_2026-10-05.md",
+    "repo_backup_pointer_id": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw",
+    "history_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
+    "work_backup_id": "1GpABAjo_wwOgIe9z9oj2UvwQ3zCe98n1wpFqpcggjEQ",
+    "dev_backup_id": "1o7VftbTNHFYX5lx0y90cw7NgT5SVNvVVjPOthrb9G3Q",
+    "reachability": "VERIFIED",
+    "folder_anyone_reader": true,
+    "repo_backup_pointer_anyone_reader": true,
+    "history_pointer_anyone_reader": true,
+    "work_backup_anyone_reader": true,
+    "dev_backup_anyone_reader": true,
+    "allow_file_discovery": false,
+    "permission_hardening": "BLOCKED_CONNECTOR_HAS_NO_PERMISSION_DELETE_ACTION",
+    "isolated_private_restore": "BLOCKED",
+    "byte_exact_full_repo_archive": "NOT_AVAILABLE_IN_CURRENT_CONNECTOR_PATH"
   }
 }
