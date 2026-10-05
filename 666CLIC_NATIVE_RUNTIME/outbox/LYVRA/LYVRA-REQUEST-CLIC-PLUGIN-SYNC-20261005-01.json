@@ -1,0 +1,15 @@
+{
+  "handoff_id_received": "LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01",
+  "disposition": "PARTIAL_BLOCKED_ARCHIVE_TRANSFER",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "observed_version": "0.1.4",
+  "observed_release_id": "pluginrel_6ac3ab58ba7c8191bc845b129da42b30",
+  "repo_dashboard_contract": "IMPLEMENTED",
+  "plugin_existing_dashboard_semantics": "FUNCTIONALLY_ALIGNED_BUT_VISUAL_PALETTE_PRECEDES_NEW_REPO_CONTRACT",
+  "planned_version": "0.1.5",
+  "publication_performed": false,
+  "blocker": "Current plugin archive could be retrieved by Plugin Creator metadata, but the host archive transfer could not be materialized for guarded update in this run.",
+  "repo_currentness": "PRESERVED",
+  "authority_transfer": false,
+  "foreign_mutation": false
+}
