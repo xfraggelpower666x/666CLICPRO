@@ -536,5 +536,30 @@
       "foreign_mutation": false,
       "lyvra_native_cleanup_required": true
     }
+  },
+  "external_evolution_sync": {
+    "date_local": "2026-10-06",
+    "evidence": "migration/EXTERNAL_EVOLUTION_SYNC_2026-10-06.md",
+    "lyvra_branch_stewardship": {
+      "status": "CONSUMED_AND_EVOLVED_EXTERNALLY",
+      "verified_head": "b20891a5d4c4a72940fc3b0a704ee5b7a3ecc51b",
+      "phase2_total_branches": 133,
+      "phase3_cleanup_candidates": 11,
+      "branch_deletion_performed": 0,
+      "cleanup_authority": "LYVRA_ONLY"
+    },
+    "pfs_repo_first": {
+      "status": "OBSERVED_NATIVE_IMPLEMENTATION_PARTIAL_MIGRATION",
+      "verified_head": "03929c868cb43dae1c2192d89497018700731bf2",
+      "authority": "GITHUB_REPOSITORY",
+      "drive_role": "HISTORY_BACKUP_RECOVERY",
+      "active_registered": 23,
+      "active_ready_or_bound": 19,
+      "active_remaining": 4,
+      "functional_child_payload_migration": "OPEN",
+      "external_consumer_cutover_native_evidence": "NOT_FOUND",
+      "failback_state_machine_native_evidence": "NOT_FOUND",
+      "migration_closeout": "NOT_YET_VERIFIED"
+    }
   }
 }
