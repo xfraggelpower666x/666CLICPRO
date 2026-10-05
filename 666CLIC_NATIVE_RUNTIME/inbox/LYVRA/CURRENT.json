@@ -426,5 +426,38 @@
     ],
     "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01.json",
     "authority_transfer": false
+  },
+  "clic_repository_hygiene_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-REPO-BRANCH-STEWARDSHIP-20261005-01",
+    "purpose": "Adopt a CLIC-native repository and branch stewardship method inspired by LYVRA CodeForge, without copying LYVRA branch topology or transferring authority.",
+    "source_learning": {
+      "lyvra_method": "DISCOVER > CLASSIFY > RELATE > DETECT_REDUNDANCY > VERIFY_SUPERSESSION > PRESERVE_RECOVERY > PREPARE_CLEANUP_PROPOSAL > AUTHORIZED_CLEANUP > DIRECT_READBACK",
+      "lyvra_phase1_observation": "120 branches, 8 exact duplicate SHA groups, no deletion performed"
+    },
+    "clic_required_adaptation": [
+      "Use CLIC's own repository structure and authority model.",
+      "Inventory all CLIC branches from current repo HEAD.",
+      "Classify each branch by actual role: current authority, active work, recovery, audit, migration history, deployment history, superseded, cleanup candidate, unknown.",
+      "Detect exact duplicate SHAs and branches already fully represented by current history.",
+      "Preserve recovery and provenance before any cleanup proposal.",
+      "Keep cleanup as a separate governed phase; do not remove branches in the mapping phase.",
+      "Expose repository health in CLIC's internal Operations/Forensic dashboard when useful.",
+      "No synthetic health percentage; evidence labels only.",
+      "CLIC remains sole decision authority for its own repo.",
+      "Drive remains history/repo-backup/recovery/provenance and must not become alternate current authority."
+    ],
+    "desired_artifacts": [
+      "CLIC-native Branch Stewardship contract",
+      "current branch inventory/registry",
+      "duplicate/redundancy ledger",
+      "supersession/recovery classification",
+      "cleanup proposal list with evidence and blockers",
+      "dashboard repository-health view"
+    ],
+    "first_phase": "READ_ONLY_MAPPING_AND_CLASSIFICATION_NO_BRANCH_REMOVAL",
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-REPO-BRANCH-STEWARDSHIP-20261005-01.json",
+    "authority_transfer": false,
+    "foreign_mutation": false
   }
 }
