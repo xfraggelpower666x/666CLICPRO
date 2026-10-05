@@ -1,0 +1,24 @@
+{
+  "system": "666CLIC",
+  "status": "CLAIMED",
+  "class": "COOPERATIVE_GITHUB_STAGE_ONLY",
+  "prechange_head": "6b95106a03dd85c77bfb3ab77a55c363ec52cae7",
+  "backup_branch": "clic-pre-github-first-bootstrap-20261005-1428",
+  "scope": [
+    "REHYDRATION_MANIFEST.json",
+    "AUTHORITY_CONTRACT.md",
+    "current/CURRENT_STATE.md",
+    "continuity/RECOVERY_AND_HANDOFF.md",
+    "migration/REV91_GITHUB_FIRST_BOOTSTRAP_TRANSITION_2026-10-05.md",
+    "relations/LYVRA_HANDOFF_INPUTS_2026-10-05.md",
+    "CURRENT_POINTER.json"
+  ],
+  "foreign_writes": false,
+  "global_exclusive": false,
+  "source_order_target": [
+    "GITHUB_REPO",
+    "GOOGLE_DRIVE"
+  ],
+  "product_authority_switch": false,
+  "release_before_final_pointer": true
+}
