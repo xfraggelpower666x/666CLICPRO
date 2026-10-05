@@ -183,7 +183,7 @@
     "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
     "full_repo_census": "PARTIAL_HIGH",
-    "cross_card_parity": "PARTIAL_HIGH",
+    "cross_card_parity": "VERIFIED_CURRENT_CARDS",
     "full_native_semantic_coverage": "OPEN",
     "foreign_mutation": false,
     "round_2": "VERIFIED_SELECTED_CARRIERS",
@@ -219,5 +219,15 @@
       "plugin_dashboard_readback": "VERIFIED",
       "custom_gpt_live_builder_publication": "OPEN"
     }
+  },
+  "effective_current_gates": {
+    "p14": "OPEN_EVENT_GATED",
+    "p20_fresh_chat": "OPEN_FRESH_NEW_UI_CHAT",
+    "p21_causal_acceptance": "OPEN",
+    "live_circle_repo_handoff_roundtrip": "VERIFIED",
+    "worker_functional_evidence": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
+    "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence."
   }
 }
