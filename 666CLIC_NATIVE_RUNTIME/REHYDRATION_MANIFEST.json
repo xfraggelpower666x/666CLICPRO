@@ -51,7 +51,6 @@
   "remaining_checks": [
     "COMPLETE_CLIC_NATIVE_COVERAGE",
     "PRIVATE_RECOVERY_VALIDATION",
-    "WORKER_FUNCTIONAL_TICKET_FLOW",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE"
   ],
@@ -286,7 +285,7 @@
     "p20_fresh_chat": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
-    "worker_functional_evidence": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
+    "worker_functional_evidence": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "isolated_private_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
     "full_native_semantic_coverage": "OPEN",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
@@ -303,7 +302,7 @@
       "internal_dashboard_request_01": "VERIFIED_SUPERSEDED_BY_NATIVE_DASHBOARD_02",
       "native_dashboard_system_02": "VERIFIED_REPO_IMPLEMENTED"
     },
-    "worker_functional_test": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
+    "worker_functional_test": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
     "return_anchor": "HARDEN_PRIVATE_RECOVERY_WHEN_PERMISSION_DELETE_PATH_EXISTS_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
   },
@@ -327,12 +326,30 @@
     "custom_domain": "lyvrasystem.666soundsdesign-broadcaster.com",
     "configuration_readback": "VERIFIED",
     "deployment_readback": "VERIFIED",
+    "deployed_version_id": "553a4882-05eb-4cd4-8487-91d1d40ad52d",
+    "deployment_id": "d2b0ecf6-cd8b-4a2f-a822-af551cb2cce7",
+    "deployed_endpoint_code_readback": "VERIFIED",
+    "issue_endpoint": "POST /v2/evidence-ticket",
+    "verify_endpoint": "POST /v2/verify-evidence",
+    "functional_ticket_flow": "VERIFIED_FUNCTIONAL_PASS",
+    "issue_http_status": 200,
+    "issue_valid": true,
+    "verify_valid": true,
+    "purpose": "BOOT",
+    "system_id": "666CLIC-CORE-001",
+    "namespace": "666CLIC",
+    "authority_context": "666CLIC_MAIN_PERSONAL",
+    "branch_class": "MAIN_PERSONAL",
+    "root_revision": "666CLIC-AUTHORITY-CONTEXT-1",
+    "lifetime_seconds": 300,
     "clic_secret_binding": "BOUND",
     "lyvra_secret_binding": "BOUND",
     "secret_values_exposed": false,
-    "functional_ticket_flow": "BLOCKED_ENDPOINT_EXECUTION_NOT_AVAILABLE_IN_CURRENT_TOOL_PATH",
-    "result": "PARTIAL",
-    "authority": false
+    "signed_ticket_stored": false,
+    "signed_ticket_returned_to_model": false,
+    "result": "VERIFIED",
+    "authority": false,
+    "evidence": "migration/WORKER_FUNCTIONAL_RUNTIME_EVIDENCE_2026-10-05.md"
   },
   "currentness_normalization": {
     "date_local": "2026-10-05",
@@ -410,5 +427,16 @@
     "permission_hardening": "BLOCKED_CONNECTOR_HAS_NO_PERMISSION_DELETE_ACTION",
     "isolated_private_restore": "BLOCKED",
     "byte_exact_full_repo_archive": "NOT_AVAILABLE_IN_CURRENT_CONNECTOR_PATH"
+  },
+  "semantic_coverage_current_assessment": {
+    "status": "OPEN",
+    "current_runtime_carriers": "FULL_VERIFIED",
+    "worker_functional_gate": "VERIFIED",
+    "p20": "VERIFIED",
+    "p21": "VERIFIED",
+    "live_circle": "VERIFIED",
+    "primary_remaining_blocker": "PRIVATE_RECOVERY_AND_ISOLATED_RESTORE",
+    "event_gated_remaining": "P14",
+    "full_pass_claimed": false
   }
 }
