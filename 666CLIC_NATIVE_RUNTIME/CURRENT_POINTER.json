@@ -456,25 +456,26 @@
   },
   "repo_to_repo_handoff_update": {
     "date_local": "2026-10-05",
-    "status": "FIRST_NATIVE_LYVRA_HANDOFF_CLIC_SIDE_ROUNDTRIP_VERIFIED",
-    "prechange_head": "36f76eb5771443cf93bfd14889372f8d95dea1aa",
-    "prechange_backup_branch": "clic-pre-lyvra-roundtrip-20261005-1517",
-    "body_head_before_pointer": "8a24114a0c50c6114e066b7693ba2a217881dd82",
+    "status": "FIRST_NATIVE_LYVRA_HANDOFF_BIDIRECTIONAL_ROUNDTRIP_VERIFIED",
+    "prechange_head": "d1f81688b6308f0bc6d6e4622983a805bb4ed1eb",
+    "prechange_backup_branch": "clic-pre-roundtrip-close-20261005-1520",
+    "body_head_before_pointer": "5956a1b69b07d45185f6eb543c8abfcc91b31375",
     "handoff_id": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
     "lyvra_source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
     "source_head_verified": true,
     "roundtrip_test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
     "clic_receive": "VERIFIED",
     "clic_response_write": "VERIFIED",
-    "external_response_consumption": "OPEN",
+    "external_response_consumption": "VERIFIED",
     "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN",
     "drive_message_bus": false,
     "p20_fresh_chat": "OPEN",
     "p21_functional_causal_acceptance": "OPEN",
-    "live_circle_runtime": "PARTIAL_REPO_HANDOFF_ROUNDTRIP",
+    "live_circle_runtime": "VERIFIED_REPO_HANDOFF_ROUNDTRIP",
     "isolated_private_restore": "OPEN",
     "full_native_semantic_coverage": "OPEN",
     "foreign_mutation": false,
-    "pointer_last": true
+    "pointer_last": true,
+    "external_response_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
   }
 }
