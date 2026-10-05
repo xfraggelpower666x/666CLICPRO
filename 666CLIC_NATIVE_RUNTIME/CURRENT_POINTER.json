@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "98a4dd413298652ce84a25af3f78219831182220",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "0a799536c6be7b7dff78a70a923bef064115ce4f",
+  "body_head_before_pointer": "ab8dc0ac7aa5a1a0e5c7b8b590095b98073f0515",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -723,13 +723,7 @@
     "release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919",
     "readback": "VERIFIED"
   },
-  "worker_functional_evidence": {
-    "status": "PARTIAL",
-    "configuration_readback": "VERIFIED",
-    "deployment_readback": "VERIFIED",
-    "ticket_flow": "BLOCKED_ENDPOINT_EXECUTION_NOT_AVAILABLE_IN_CURRENT_TOOL_PATH",
-    "secret_values_exposed": false
-  },
+  "worker_functional_evidence": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
   "p20_plugin_worker_update": {
     "date_local": "2026-10-05",
     "prechange_head": "3c792956d1e6bf63b7c483a5af2b62c517cc376c",
@@ -804,6 +798,33 @@
     "full_native_semantic_coverage": "OPEN",
     "p14": "OPEN_EVENT_GATED",
     "foreign_mutation": false,
+    "pointer_last": true
+  },
+  "worker_functional_update": {
+    "date_local": "2026-10-05",
+    "status": "VERIFIED_READBACK",
+    "prechange_head": "75818bf7f99821e6d85b650e7ec69f7b9421e930",
+    "prechange_backup_branch": "clic-pre-worker-functional-pass-20261005-1736",
+    "evidence": "migration/WORKER_FUNCTIONAL_RUNTIME_EVIDENCE_2026-10-05.md",
+    "evidence_blob_sha": "3f997eda67af82ea82d4fce3a2ff9dbcba287fff",
+    "body_head_before_pointer": "ab8dc0ac7aa5a1a0e5c7b8b590095b98073f0515",
+    "worker": "lyvrasystem",
+    "issue_verify_flow": "VERIFIED_FUNCTIONAL_PASS",
+    "purpose": "BOOT",
+    "system_id": "666CLIC-CORE-001",
+    "namespace": "666CLIC",
+    "authority_context": "666CLIC_MAIN_PERSONAL",
+    "branch_class": "MAIN_PERSONAL",
+    "root_revision": "666CLIC-AUTHORITY-CONTEXT-1",
+    "lifetime_seconds": 300,
+    "secret_values_exposed": false,
+    "signed_ticket_stored": false,
+    "signed_ticket_returned_to_model": false,
+    "authority_transfer": false,
+    "private_recovery": "BLOCKED_LINK_SHARED_ANYONE_READER",
+    "isolated_private_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
+    "full_native_semantic_coverage": "OPEN",
+    "p14": "OPEN_EVENT_GATED",
     "pointer_last": true
   }
 }
