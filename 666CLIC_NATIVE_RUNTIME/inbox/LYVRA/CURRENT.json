@@ -189,6 +189,40 @@
       ]
     },
     "authority_transfer": false,
-    "foreign_mutation_authorized": false
+    "foreign_mutation_authorized": false,
+    "systemstart_dashboard_extension": {
+      "requested": true,
+      "principle": "SYSTEMSTART_RENDER_VERIFIED_MAIN_SYSTEM_DASHBOARD",
+      "clic_trigger": "666CLIC SYSTEMSTART",
+      "lyvra_reference_trigger": "LYVRA SYSTEMSTART",
+      "clic_dashboard_scope": "WHOLE_666CLIC_MAIN_SYSTEM",
+      "required_systemstart_views": [
+        "identity and current authority",
+        "repository HEAD and current pointer",
+        "rehydration status and required domains",
+        "operations center / active work",
+        "continuity, interruptions and return anchor",
+        "handoff inbox and outbox state",
+        "shared Worker evidence state",
+        "open functional gates",
+        "recovery and provenance state",
+        "last verified readback",
+        "uncertainty / blockers",
+        "next meaningful action"
+      ],
+      "rendering_rules": [
+        "Render only after current pointer and required current references were actually read.",
+        "If rehydration is partial, visibly show PARTIAL or READBACK_PENDING instead of PASS.",
+        "Dashboard is presentation only and has no decision, routing or mutation authority.",
+        "Do not expose secret values or private recovery material.",
+        "Keep public websites completely separate from the internal dashboard."
+      ],
+      "symmetry_goal": {
+        "LYVRA SYSTEMSTART": "internal Whole-LYVRA dashboard",
+        "666CLIC SYSTEMSTART": "internal Whole-CLIC dashboard",
+        "LYVRA DASHBOARD": "internal LYVRA cross-system / ops mini dashboard",
+        "666CLIC DASHBOARD": "internal CLIC cross-system / ops mini dashboard"
+      }
+    }
   }
 }
