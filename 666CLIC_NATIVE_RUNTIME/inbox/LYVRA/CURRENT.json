@@ -388,5 +388,43 @@
     ],
     "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01.json",
     "authority_transfer": false
+  },
+  "lyvra_plugin_mapping_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01",
+    "purpose": "Add both current LYVRA plugin surfaces to CLIC's LYVRA mapping without splitting LYVRA identity.",
+    "mapping_rules": [
+      "Represent LYVRA as ONE native identity/system.",
+      "Represent plugin surfaces as execution/presentation interfaces of the same LYVRA, never as separate root systems.",
+      "Preserve repository current as LYVRA authority.",
+      "Do not infer authority from plugin presence, version, UI or migration history.",
+      "Track plugin version/release/readback status as interface metadata only."
+    ],
+    "lyvra_plugin_surfaces": [
+      {
+        "logical_name": "LYVRA Native Runtime Plugin",
+        "plugin_name": "lyvra-native-runtime",
+        "role": "NEWLY_CREATED_NATIVE_RUNTIME_PLUGIN",
+        "current_verified_version": "0.1.5",
+        "relation_to_lyvra": "EXECUTION_PRESENTATION_SURFACE_OF_SAME_LYVRA"
+      },
+      {
+        "logical_name": "LYVRA Migrated GPT Plugin",
+        "plugin_name": "L.Y.V.R.A.",
+        "role": "GPT_MIGRATED_PLUGIN_SURFACE",
+        "current_verified_version": "0.13.3",
+        "relation_to_lyvra": "EXECUTION_PRESENTATION_SURFACE_OF_SAME_LYVRA"
+      }
+    ],
+    "requested_mapping_updates": [
+      "LYVRA relation map / system card should show both plugin surfaces.",
+      "Mark both as children/interfaces of one LYVRA identity, not children in the authority sense and not separate systems.",
+      "Include current plugin version, provenance class, dashboard capability and trigger alignment.",
+      "Record that both surfaces use evidence-first internal dashboard semantics.",
+      "Record that the migrated GPT plugin is successor execution surface of the legacy Custom GPT, while legacy GPT remains provenance/history only.",
+      "Preserve all existing LYVRA relation mappings and newer valid CLIC learning."
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01.json",
+    "authority_transfer": false
   }
 }
