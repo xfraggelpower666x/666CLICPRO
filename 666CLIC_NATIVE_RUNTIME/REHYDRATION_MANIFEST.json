@@ -15,6 +15,7 @@
     "relations/CROSS_SYSTEM_RELATIONS.md",
     "continuity/RECOVERY_AND_HANDOFF.md",
     "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+    "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "relations/LYVRA_UNDERSTANDING_CARD_REV80.md",
     "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
     "current/REV91_SECONDARY_CARRIER_GUARD.md"
@@ -173,5 +174,17 @@
     "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN",
     "external_return_consumption": "VERIFIED",
     "external_return_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
+  },
+  "lyvra_deep_analysis": {
+    "status": "CURRENT_CLIC_UNDERSTANDING_PARTIAL_DEEP_CENSUS",
+    "source_repo": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+    "source_branch": "lyvra",
+    "verified_head": "0e80d0a9cf3ec785bc91555873eb7ef661310f3f",
+    "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
+    "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+    "full_repo_census": "PARTIAL",
+    "cross_card_parity": "PARTIAL",
+    "full_native_semantic_coverage": "OPEN",
+    "foreign_mutation": false
   }
 }
