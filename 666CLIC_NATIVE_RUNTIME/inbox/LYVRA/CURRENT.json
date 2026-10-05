@@ -223,6 +223,86 @@
         "LYVRA DASHBOARD": "internal LYVRA cross-system / ops mini dashboard",
         "666CLIC DASHBOARD": "internal CLIC cross-system / ops mini dashboard"
       }
+    },
+    "clic_native_visual_extension": {
+      "requested": true,
+      "handoff_id": "LYVRA-REQUEST-CLIC-NATIVE-DASHBOARD-SYSTEM-20261005-02",
+      "principle": "CLIC_DEFINES_OWN_INTERNAL_VISUAL_LANGUAGE",
+      "copy_lyvra_palette": false,
+      "public_surface_forbidden": true,
+      "dashboard_role": "PRESENTATION_ONLY",
+      "required_scope": [
+        "Whole-CLIC SYSTEMSTART dashboard",
+        "CLIC operations / cross-system dashboard",
+        "trigger-specific dashboards for CLIC-native trigger families where visual state materially improves correctness or continuity",
+        "system/facet-specific dashboards for CLIC-owned trigger systems and specialist surfaces, without creating new authorities or identities"
+      ],
+      "trigger_discovery_rule": "CLIC must inspect its own current trigger registry, native runtime, operations, continuity and specialist surfaces and decide which triggers materially benefit from an internal dashboard.",
+      "examples_of_likely_trigger_families": [
+        "666CLIC SYSTEMSTART",
+        "666CLIC DASHBOARD",
+        "666CLIC UPDATE",
+        "666CLIC WEITER",
+        "666CLIC INTEGRATION AUDIT",
+        "recovery / continuity / Live-Circle / forensic / learning-import specialist contexts where CLIC already has native trigger semantics"
+      ],
+      "required_dashboard_semantics": [
+        "current repository HEAD and CURRENT pointer",
+        "authority/currentness",
+        "rehydration/coverage status",
+        "active work / current package / return anchor",
+        "input/handoff relationships",
+        "P20/P21 and Live-Circle state when relevant",
+        "recovery/provenance/security state",
+        "worker evidence state when relevant",
+        "open/partial/blocked/conflict gates",
+        "last verified readback",
+        "next meaningful action"
+      ],
+      "clic_visual_language_request": {
+        "ownership": "666CLIC",
+        "instruction": "Choose and document a CLIC-native color palette and visual semantics that best fit CLIC's identity, causal-learning role and forensic/evidence workflows.",
+        "requirements": [
+          "Do not mechanically copy LYVRA neon colors.",
+          "Every status color must also have a readable text label.",
+          "Use color semantically, not decoratively only.",
+          "Preserve accessible contrast and compact internal-browser readability.",
+          "Define explicit semantics for VERIFIED, ACTIVE, PARTIAL, OPEN, BLOCKED, CONFLICT_QUARANTINE and historical/provenance states.",
+          "No fake green, no fabricated percentages, no fake live-sync indicators."
+        ]
+      },
+      "architecture_fences": [
+        "Dashboard is not CLIC identity.",
+        "Dashboard is not a controller.",
+        "Dashboard is not a router.",
+        "Dashboard has no decision authority.",
+        "Dashboard has no mutation authority.",
+        "Trigger dashboard does not create a new system or authority.",
+        "Repository current remains CLIC authority.",
+        "Drive remains history / repository backup / recovery / provenance.",
+        "Public websites must not expose internal operations dashboards or diagnostics."
+      ],
+      "symmetry_reference": {
+        "note": "LYVRA uses the same architectural principle but its own visual language.",
+        "lyvra_whole": "LYVRA SYSTEMSTART -> Whole-LYVRA internal dashboard",
+        "lyvra_ops": "LYVRA DASHBOARD -> internal Ops/Cross-System dashboard",
+        "lyvra_facets": "Track Design / Studio 2 / Speech Design -> contextual LYVRA facet dashboards"
+      },
+      "requested_response": {
+        "response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-NATIVE-DASHBOARD-SYSTEM-20261005-02.json",
+        "required_fields": [
+          "handoff_id_received",
+          "disposition",
+          "selected_visual_language",
+          "selected_trigger_dashboard_families",
+          "systemstart_dashboard_enabled",
+          "public_surface_forbidden",
+          "repo_first_preserved",
+          "result"
+        ]
+      },
+      "authority_transfer": false,
+      "foreign_mutation_authorized": false
     }
   }
 }
