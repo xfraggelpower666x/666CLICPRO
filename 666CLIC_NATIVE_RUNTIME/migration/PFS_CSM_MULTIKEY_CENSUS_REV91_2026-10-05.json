@@ -34,8 +34,9 @@
   ],
   "counts": {
     "ACTIVE_EVIDENCE": 20,
-    "HOLD_REVIEW": 2,
+    "SUPERSEDED_PROVISIONAL_ALIAS": 1,
     "SUPERSEDED_ALIAS_ONLY": 1,
+    "HOLD_REVIEW": 1,
     "RETIRED_HISTORICAL": 3,
     "EXTERNAL_NATIVE_AUTHORITY_OR_MIRROR": 2,
     "CURRENT_BINDING_REVIEW": 3,
@@ -167,8 +168,8 @@
     {
       "entry_id": "666CFL",
       "identity_key": "CHILD_ID",
-      "disposition": "HOLD_REVIEW",
-      "reason": "Identity appears via CHILD_ID rather than ENTRY_ID; kept separate to avoid flattening",
+      "disposition": "SUPERSEDED_PROVISIONAL_ALIAS",
+      "reason": "Provisional CHILD_ID=666CFL is explicitly superseded by corrective ENTRY_ID=CFL-28001; do not count as separate current child",
       "current_binding_text_present": false,
       "latest_evidence": {
         "child": {
@@ -176,17 +177,8 @@
           "key": "CHILD_ID",
           "status": "ACTIVE",
           "system_id": "666CFL-CORE-001",
-          "child_system_id": "666PFS-LIGHT-ORCHESTRA-BACKUP-001",
           "version": "1.4.0",
-          "role": "PRESERVATION_VERSIONING_RESTORE_ONLY",
-          "runtime_authority": "PFS_PERSISTENCE_GOVERNANCE_ONLY",
-          "loadable": "TRUE",
-          "menu_visible": "TRUE",
-          "source_of_truth": "GITHUB_WINDOWS_APP_REPOSITORY",
-          "previous_entry_id": null,
-          "rename_relation": null,
-          "active_child": null,
-          "legacy_alias_only": null
+          "superseded_by": "CFL-28001"
         }
       }
     },
@@ -1010,7 +1002,7 @@
       "entry_id": "ISQF-24001",
       "identity_key": "CHILD_ID",
       "disposition": "ACTIVE_EVIDENCE",
-      "reason": "Identity appears via CHILD_ID rather than ENTRY_ID; kept separate to avoid flattening",
+      "reason": "Explicit CHILD_ID entry with STATUS=FREEZE_VERIFIED; maintained as distinct identity key",
       "current_binding_text_present": true,
       "latest_evidence": {
         "child": {
@@ -1860,5 +1852,10 @@
     "pfs_repo_migration": "OPEN",
     "pfs_promotion": false,
     "foreign_writes": false
-  }
+  },
+  "corrections": [
+    "CHILD_ID parser boundary corrected before pointer finalization",
+    "666CFL provisional identity explicitly superseded by CFL-28001",
+    "ISQF-24001 preserved as CHILD_ID-native active evidence"
+  ]
 }
