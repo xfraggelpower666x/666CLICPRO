@@ -679,5 +679,29 @@
     "foreign_mutation": false,
     "return_anchor": "RESOLVE_LARGE_DASHBOARD_INDEX_HTML_BY_BLOB_OR_ALTERNATE_READ_THEN_REASSESS_67_OF_67",
     "pointer_last": true
+  },
+  "lyvra_runtime_census_closeout": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_FULL_67_OF_67",
+    "prechange_head": "82c68457f3105b83ee744ea58a45c482cb8661f0",
+    "prechange_backup_branch": "clic-pre-lyvra-67of67-20261005-1451z",
+    "body_head_before_pointer": "151a9bcb84401488c085339ae19465e24af1ee98",
+    "lyvra_verified_head": "fe335f0afa9fc02e693867194c4629c8e4b59d63",
+    "lyvra_delta_class": "VALID_DASHBOARD_PRESENTATION_CONTINUITY_ONLY",
+    "lyvra_pointer_changed": false,
+    "runtime_tree_blob_count": 67,
+    "direct_read_classified_count": 67,
+    "unread_count": 0,
+    "file_by_file_full": true,
+    "file_by_file_status": "FULL_VERIFIED_67_OF_67",
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_native_semantic_coverage": "OPEN",
+    "p20": "OPEN_FRESH_NEW_UI_CHAT",
+    "p21": "OPEN",
+    "worker_functional_evidence": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "foreign_mutation": false,
+    "return_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
+    "pointer_last": true
   }
 }
