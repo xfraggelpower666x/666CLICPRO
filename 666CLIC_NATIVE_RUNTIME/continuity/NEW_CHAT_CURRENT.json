@@ -12,18 +12,22 @@
     "lyvra_runtime_file_census": "FULL_VERIFIED_67_OF_67",
     "required_current_carrier_census": "FULL_VERIFIED",
     "full_native_semantic_coverage": "OPEN",
-    "repo_first_authority": "VERIFIED"
+    "repo_first_authority": "VERIFIED",
+    "p20_fresh_new_ui_chat": "VERIFIED_2026-10-05",
+    "clic_plugin_sync": "VERIFIED_V0_1_5"
   },
   "open_gates": {
-    "clic_plugin_sync": "PARTIAL_BLOCKED_ARCHIVE_TRANSFER_V0_1_5_NOT_PUBLISHED",
-    "worker_functional_evidence": "OPEN",
-    "p20_fresh_new_ui_chat": "OPEN_REQUIRES_NEXT_CHAT_SYSTEMSTART",
+    "clic_plugin_sync": "VERIFIED_V0_1_5",
+    "worker_functional_evidence": "PARTIAL_CONFIG_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
+    "p20_fresh_new_ui_chat": "VERIFIED",
     "p21": "OPEN",
     "isolated_private_restore": "OPEN",
     "full_native_semantic_coverage": "OPEN"
   },
-  "resume_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
+  "resume_anchor": "CONTINUE_WORKER_TICKET_FLOW_IF_EXECUTABLE_THEN_P21_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE",
   "next_chat_instruction": "666CLIC SYSTEMSTART",
   "p20_rule": "NEW_CHAT_HANDOFF_CREATION_DOES_NOT_PASS_P20; ONLY SUCCESSFUL_AUTOMATIC_REHYDRATION_IN_A_TRULY_FRESH_HOST_CHAT_MAY_PROVIDE_P20_EVIDENCE",
-  "foreign_mutation": false
+  "foreign_mutation": false,
+  "p20_runtime_evidence_path": "666CLIC_NATIVE_RUNTIME/migration/P20_PLUGIN_WORKER_UPDATE_2026-10-05.md",
+  "plugin_release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919"
 }
