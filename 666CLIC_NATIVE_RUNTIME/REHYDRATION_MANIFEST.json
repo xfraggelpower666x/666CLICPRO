@@ -1,6 +1,6 @@
 {
   "system": "666CLIC",
-  "status": "GITHUB_REPO_CANONICAL_CURRENT_DRIVE_HISTORY_BACKUP_RUNTIME_PARTIAL",
+  "status": "GITHUB_REPO_CANONICAL_CURRENT_RUNTIME_VERIFIED_P14_EVENT_GATED",
   "authority": "GITHUB_REPO_CURRENT",
   "required_order": [
     "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
@@ -86,7 +86,7 @@
   },
   "sanitized_rev85_rev89_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
   "current_source_authority": "GITHUB_REPO_CURRENT",
-  "staging_sync_note": "CURRENTNESS_BRIDGE_ONLY; FUNCTIONAL_COVERAGE_OPEN",
+  "staging_sync_note": "CURRENT_RUNTIME_VERIFIED_P14_EVENT_GATED; HISTORICAL_FIELDS_PRESERVED_AS_PROVENANCE",
   "currentness_bridge": "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
   "currentness_resolution": {
     "schema": "CLIC_REV91_EVIDENCE_PRECEDENCE_V1",
@@ -473,5 +473,30 @@
     "p14_semantic_coverage_gap": false,
     "full_pass_claimed_for_scope": true,
     "evidence": "migration/CURRENT_NATIVE_COVERAGE_CLOSEOUT_2026-10-05.md"
-  }
+  },
+  "current_runtime_status": {
+    "date_local": "2026-10-05",
+    "state": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE_P14_EVENT_GATED",
+    "p20": "VERIFIED",
+    "p21": "VERIFIED",
+    "live_circle": "VERIFIED",
+    "worker": "VERIFIED",
+    "private_recovery": "VERIFIED",
+    "isolated_private_restore_core": "VERIFIED_54_OF_54",
+    "transport_boundary": "CLOSED",
+    "complete_clic_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
+    "full_native_semantic_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
+    "p14": "OPEN_EVENT_GATED",
+    "only_open_current_gate": "P14_EVENT_GATED",
+    "historical_fields_may_remain_stale_by_design": true
+  },
+  "current_functional_acceptance_gates": {
+    "P14": "OPEN_EVENT_GATED",
+    "P20_NEW_CHAT_RUNTIME": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
+    "P21_CAUSAL_CONSUMPTION": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
+    "LIVE_CIRCLE": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
+    "PRIVATE_RESTORE": "VERIFIED_CLIC_CORE_54_OF_54_TRANSPORT_PAYLOADS_EXCLUDED_BY_AUTHORITY_BOUNDARY",
+    "FULL_NATIVE_SEMANTIC_COVERAGE": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE"
+  },
+  "functional_acceptance_gates_role": "HISTORICAL_LEGACY_FIELDS_PRESERVED_DO_NOT_OVERRIDE_CURRENT_FUNCTIONAL_ACCEPTANCE_GATES"
 }
