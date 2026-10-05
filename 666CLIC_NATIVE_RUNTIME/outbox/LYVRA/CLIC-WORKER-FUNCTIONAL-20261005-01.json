@@ -15,19 +15,37 @@
   "deployment_id": "d2b0ecf6-cd8b-4a2f-a822-af551cb2cce7",
   "configuration_readback": "VERIFIED",
   "deployment_readback": "VERIFIED",
-  "ticket_issue_verify_flow": "BLOCKED_ENDPOINT_EXECUTION_NOT_AVAILABLE_IN_CURRENT_TOOL_PATH",
-  "reason": "Configuration and deployment are directly verified, but no authenticated CLIC BOOT ticket issue+verify execution path was available; configuration evidence alone cannot prove functional PASS.",
+  "ticket_issue_verify_flow": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
+  "reason": "Configuration, deployment, deployed endpoint code, ticket issuance and verification are directly verified. The signed ticket value was not stored or returned to the model.",
   "clic_primary_source": "GITHUB_REPO_CURRENT",
   "worker_role": "ADDITIONAL_INDEPENDENT_SIGNED_EVIDENCE_ONLY",
-  "worker_evidence_status": "PARTIAL",
+  "worker_evidence_status": "VERIFIED",
   "signed_ticket_stored": false,
   "open_gates_preserved": [
-    "P21",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE",
     "P14_EVENT_GATED"
   ],
   "authority_transfer": false,
   "foreign_mutation": false,
-  "result": "PARTIAL"
+  "result": "VERIFIED",
+  "runtime_evidence": "migration/WORKER_FUNCTIONAL_RUNTIME_EVIDENCE_2026-10-05.md",
+  "runtime_test": {
+    "transport": "CLOUDFLARE_BROWSER_RENDERING_EPHEMERAL_HTTP",
+    "issue_endpoint": "POST /v2/evidence-ticket",
+    "verify_endpoint": "POST /v2/verify-evidence",
+    "issue_http_status": 200,
+    "issue_valid": true,
+    "verify_valid": true,
+    "purpose": "BOOT",
+    "system_id": "666CLIC-CORE-001",
+    "namespace": "666CLIC",
+    "authority_context": "666CLIC_MAIN_PERSONAL",
+    "branch_class": "MAIN_PERSONAL",
+    "root_revision": "666CLIC-AUTHORITY-CONTEXT-1",
+    "lifetime_seconds": 300,
+    "signing_secret_exposed": false,
+    "signed_ticket_stored": false,
+    "signed_ticket_returned_to_model": false
+  }
 }
