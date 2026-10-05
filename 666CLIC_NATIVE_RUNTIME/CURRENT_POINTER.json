@@ -1,6 +1,6 @@
 {
   "system": "666CLIC",
-  "status": "REPO_NATIVE_CURRENT_RUNTIME_VERIFIED_P14_EVENT_GATED_PFS_HANDOFF_READY",
+  "status": "REPO_NATIVE_CURRENT_RUNTIME_VERIFIED_P14_EVENT_GATED_PFS_REPO_FIRST_HANDOFF_READY",
   "staging_sync_revision": 91,
   "source_authority": "GITHUB_REPO_CURRENT",
   "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "98a4dd413298652ce84a25af3f78219831182220",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "fdc7aaa5ea6125aa8e97a00dd6e22c66cfcbe8ac",
+  "body_head_before_pointer": "335f9f3a17446b8b0ce26c75267dcb318771facd",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -894,10 +894,14 @@
     "only_open_current_gate": "P14_EVENT_GATED",
     "p14": "OPEN_EVENT_GATED",
     "return_anchor": "HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
-    "pfs_return_handoff": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REHYDRATION_BLUEPRINT",
+    "pfs_return_handoff": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_BLUEPRINT",
     "pfs_handoff_path": "outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json",
     "pfs_rehydration_blueprint": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
     "pfs_foreign_mutation": false,
-    "pfs_native_decision_required": true
+    "pfs_native_decision_required": true,
+    "pfs_target_architecture": "GITHUB_REPO_CURRENT_FIRST_DRIVE_HISTORY_BACKUP_RECOVERY_PROVENANCE_AFTER_NATIVE_PROMOTION",
+    "pfs_repo_first_required": true,
+    "pfs_drive_current_after_promotion": false,
+    "pfs_authority_switch_requires_native_pfs_update": true
   }
 }
