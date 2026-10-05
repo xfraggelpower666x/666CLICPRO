@@ -109,7 +109,7 @@
     ],
     "on_missing_current_pointer": "CONFLICT_QUARANTINE",
     "on_revision_conflict": "CONFLICT_QUARANTINE",
-    "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
+    "functional_acceptance": "PARTIAL_P14_EVENT_GATED_ONLY",
     "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "live_circle_runtime": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
     "isolated_restore": "VERIFIED_CLIC_CORE_54_OF_54_TRANSPORT_PAYLOADS_EXCLUDED_BY_AUTHORITY_BOUNDARY",
