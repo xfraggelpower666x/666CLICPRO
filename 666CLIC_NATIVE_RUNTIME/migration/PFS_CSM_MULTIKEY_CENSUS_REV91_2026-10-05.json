@@ -33,10 +33,9 @@
     "No foreign mutation"
   ],
   "counts": {
-    "ACTIVE_EVIDENCE": 20,
+    "ACTIVE_EVIDENCE": 21,
     "SUPERSEDED_PROVISIONAL_ALIAS": 1,
     "SUPERSEDED_ALIAS_ONLY": 1,
-    "HOLD_REVIEW": 1,
     "RETIRED_HISTORICAL": 3,
     "EXTERNAL_NATIVE_AUTHORITY_OR_MIRROR": 2,
     "CURRENT_BINDING_REVIEW": 3,
@@ -348,8 +347,8 @@
     },
     {
       "entry_id": "CGF-31001",
-      "disposition": "HOLD_REVIEW",
-      "reason": "No sufficiently strong current-role classification",
+      "disposition": "ACTIVE_EVIDENCE",
+      "reason": "Direct child registration block states STATUS=ACTIVE_VERIFIED with current pointer/readback evidence",
       "current_binding_text_present": false,
       "latest_evidence": {
         "child": {
@@ -1856,6 +1855,7 @@
   "corrections": [
     "CHILD_ID parser boundary corrected before pointer finalization",
     "666CFL provisional identity explicitly superseded by CFL-28001",
-    "ISQF-24001 preserved as CHILD_ID-native active evidence"
+    "ISQF-24001 preserved as CHILD_ID-native active evidence",
+    "CGF-31001 resolved from direct ACTIVE_VERIFIED registration block"
   ]
 }
