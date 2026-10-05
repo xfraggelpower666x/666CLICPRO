@@ -453,5 +453,23 @@
     "historical_sections_do_not_override_current": true,
     "foreign_mutation": false,
     "pointer_last": true
+  },
+  "repo_to_repo_handoff_update": {
+    "date_local": "2026-10-05",
+    "status": "CLIC_SIDE_REPO_HANDOFF_BOUNDARY_READBACK_PENDING",
+    "prechange_head": "2ddb04db6af4f15722d8b6de338fd9d464ba79e3",
+    "prechange_backup_branch": "clic-pre-repo-handoff-20261005-1511",
+    "protocol": "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
+    "lyvra_inbox": "inbox/LYVRA/",
+    "lyvra_outbox": "outbox/LYVRA/",
+    "drive_message_bus": false,
+    "lyvra_external_producer": "OPEN",
+    "p20_fresh_chat": "OPEN",
+    "p21_functional_causal_acceptance": "OPEN",
+    "live_circle_runtime": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN",
+    "foreign_mutation": false,
+    "pointer_last": true
   }
 }
