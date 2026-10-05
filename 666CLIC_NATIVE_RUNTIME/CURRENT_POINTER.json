@@ -558,5 +558,32 @@
     "foreign_repair_authority": false,
     "return_anchor": "CONTINUE_REMAINING_LYVRA_REQUIRED_DOMAIN_AND_FACET_CARRIERS",
     "pointer_last": true
+  },
+  "lyvra_facet_census_update": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_PARTIAL_VERY_HIGH",
+    "prechange_head": "7aab6b8fb1d84cd37582d6378a32f639df7da818",
+    "prechange_backup_branch": "clic-pre-lyvra-facet-census-20261005-1432z",
+    "body_head_before_pointer": "3fbea47199de70f15952451723848f414f14bcc6",
+    "lyvra_verified_head": "85df04ab07734a279b4c980d5ba49998216de972",
+    "lyvra_head_delta": "ONE_COMMIT_DASHBOARD_ROLLOUT_RESPONSE_SYNC_ONLY",
+    "lyvra_pointer_changed": false,
+    "required_domain_census": "PARTIAL_VERY_HIGH",
+    "full_repo_census": "PARTIAL_VERY_HIGH",
+    "deep_facets_integrated": [
+      "RESPONSIBILITY_CORE",
+      "SELF_CONDUCTOR",
+      "DAEMON",
+      "FORCE",
+      "CODEFORGE",
+      "MUSIC_MEMORY",
+      "STUDIO2_EVIDENCE",
+      "STUDIO2_DUAL_CONTROL",
+      "LYRIC_INTELLIGENCE"
+    ],
+    "full_native_semantic_coverage": "OPEN",
+    "foreign_mutation": false,
+    "return_anchor": "CONTINUE_REMAINING_ANALYTICS_CURRENT_REGISTERS_HISTORY_MIGRATION_DEVELOPMENT_AND_UNCLASSIFIED_CARRIERS",
+    "pointer_last": true
   }
 }
