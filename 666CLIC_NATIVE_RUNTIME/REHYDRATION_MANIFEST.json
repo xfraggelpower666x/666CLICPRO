@@ -168,7 +168,7 @@
     "last_verified_handoff_id": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
     "last_verified_source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
     "last_roundtrip_test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
-    "worker_relation": "PARTIAL_RUNTIME_EVIDENCE_OPEN",
+    "worker_relation": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "external_return_consumption": "VERIFIED",
     "external_return_consumption_head": "cb863b13a24230d45894bab2ad8edb7f4b6e0d0b"
   },
@@ -349,7 +349,16 @@
     "signed_ticket_returned_to_model": false,
     "result": "VERIFIED",
     "authority": false,
-    "evidence": "migration/WORKER_FUNCTIONAL_RUNTIME_EVIDENCE_2026-10-05.md"
+    "evidence": "migration/WORKER_FUNCTIONAL_RUNTIME_EVIDENCE_2026-10-05.md",
+    "readback": "VERIFIED",
+    "readback_blobs": {
+      "evidence": "3f997eda67af82ea82d4fce3a2ff9dbcba287fff",
+      "current_state": "8918c58a4eff40c79b60136bcc57ec7f9fc0de99",
+      "operations_center": "760f9c20f30031d65b253d46d56f7a53ad0a0e27",
+      "worker_outbox": "46358640be594c020926426331c2f4d1fd9afb49"
+    },
+    "prechange_head": "75818bf7f99821e6d85b650e7ec69f7b9421e930",
+    "prechange_backup_branch": "clic-pre-worker-functional-pass-20261005-1736"
   },
   "currentness_normalization": {
     "date_local": "2026-10-05",
