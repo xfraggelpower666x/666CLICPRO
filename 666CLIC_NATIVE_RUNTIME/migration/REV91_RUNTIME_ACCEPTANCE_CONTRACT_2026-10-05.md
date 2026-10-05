@@ -1,3 +1,5 @@
+> CURRENTNESS NOTICE 2026-10-05: SUPERSEDED_HISTORICAL_ACCEPTANCE_CONTRACT. This carrier is preserved as historical test/provenance material. It is NOT current authority and must not override CURRENT_POINTER.json, REHYDRATION_MANIFEST.json, CURRENT_STATE.md, or newer verified runtime evidence.
+
 # 666CLIC REV91 — Runtime Acceptance Contract and Return Anchor
 SYSTEM_ID=666CLIC
 CLASS=PUBLIC_SANITIZED_CLIC_OWNED_ACCEPTANCE_SPECIFICATION
