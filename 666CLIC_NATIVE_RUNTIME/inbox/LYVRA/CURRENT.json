@@ -110,5 +110,36 @@
       "Preserve all still-open functional gates exactly as open unless separately tested.",
       "Write the response to the specified CLIC outbox path; do not mutate LYVRA."
     ]
+  },
+  "worker_functional_test_request": {
+    "requested": true,
+    "test_id": "CLIC-WORKER-FUNCTIONAL-20261005-01",
+    "target_service": "666 MAIN SYSTEM AUTHORITY EVIDENCE GATE",
+    "target_service_version": "2.1.0",
+    "clic_namespace": "666CLIC",
+    "clic_system_id": "666CLIC-CORE-001",
+    "required_evidence_flow": [
+      "resolve CLIC authority context from shared Worker",
+      "issue CLIC BOOT evidence ticket using CLIC namespace only",
+      "verify the issued CLIC ticket",
+      "confirm ticket lifetime does not exceed 300 seconds",
+      "confirm issuer, subject, namespace, system id and authority context match CLIC registration",
+      "confirm LYVRA signing secret/value is neither used nor exposed",
+      "confirm Worker remains additional evidence only and does not replace GitHub current authority"
+    ],
+    "required_result_values": [
+      "PASS",
+      "PARTIAL",
+      "BLOCKED",
+      "CONFLICT_QUARANTINE"
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-WORKER-FUNCTIONAL-20261005-01.json",
+    "fail_closed_rules": [
+      "Do not report PASS from configuration/readback alone.",
+      "Do not expose any secret value or signed ticket in repository output.",
+      "Do not mutate LYVRA.",
+      "Do not change CLIC source authority.",
+      "Preserve all unrelated open functional gates."
+    ]
   }
 }
