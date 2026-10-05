@@ -79,10 +79,12 @@ def assess(manifest, pointer, drive_pointer_text, carrier_names):
             require(len(required) == len(set(required)), "DUPLICATE_REQUIRED_CARRIER")
             require(all(n in carrier_names for n in required),
                     "MISSING_REQUIRED_CARRIER")
-            require(required.index(REV91_BRIDGE) > required.index(REPO_CARRIER),
-                    "HISTORICAL_BRIDGE_PROMOTED")
-            require(required.index(REV91_GUARD) > required.index(REPO_CARRIER),
-                    "HISTORICAL_GUARD_PROMOTED")
+            if REPO_CARRIER in required and REV91_BRIDGE in required:
+                require(required.index(REV91_BRIDGE) > required.index(REPO_CARRIER),
+                        "HISTORICAL_BRIDGE_PROMOTED")
+            if REPO_CARRIER in required and REV91_GUARD in required:
+                require(required.index(REV91_GUARD) > required.index(REPO_CARRIER),
+                        "HISTORICAL_GUARD_PROMOTED")
 
     # Preserve old Drive-era evidence as history only.
     require((manifest.get("current_source_evidence") or {}).get("clic_revision") == 90,
