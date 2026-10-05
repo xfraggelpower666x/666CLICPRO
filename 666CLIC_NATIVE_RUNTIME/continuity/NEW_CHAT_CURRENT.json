@@ -1,0 +1,29 @@
+{
+  "status": "CURRENT_NEW_CHAT_HANDOFF",
+  "system_id": "666CLIC",
+  "authority": "GITHUB_REPO_CURRENT",
+  "source_repo": "xfraggelpower666x/666CLICPRO",
+  "source_branch": "clic-migration-rev79-staging",
+  "source_head_before_handoff": "443e37156caaf09dd1243f6c8a9af8dac5531e39",
+  "created_for": "NEXT_FRESH_CHAT_SYSTEMSTART",
+  "manual_copy_required": false,
+  "drive_current_authority": false,
+  "verified_state": {
+    "lyvra_runtime_file_census": "FULL_VERIFIED_67_OF_67",
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_native_semantic_coverage": "OPEN",
+    "repo_first_authority": "VERIFIED"
+  },
+  "open_gates": {
+    "clic_plugin_sync": "PARTIAL_BLOCKED_ARCHIVE_TRANSFER_V0_1_5_NOT_PUBLISHED",
+    "worker_functional_evidence": "OPEN",
+    "p20_fresh_new_ui_chat": "OPEN_REQUIRES_NEXT_CHAT_SYSTEMSTART",
+    "p21": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN"
+  },
+  "resume_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
+  "next_chat_instruction": "666CLIC SYSTEMSTART",
+  "p20_rule": "NEW_CHAT_HANDOFF_CREATION_DOES_NOT_PASS_P20; ONLY SUCCESSFUL_AUTOMATIC_REHYDRATION_IN_A_TRULY_FRESH_HOST_CHAT_MAY_PROVIDE_P20_EVIDENCE",
+  "foreign_mutation": false
+}
