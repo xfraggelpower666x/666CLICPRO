@@ -1,3 +1,5 @@
+> CURRENTNESS NOTICE 2026-10-05: SUPERSEDED_HISTORICAL_TEST_RUNBOOK. This carrier is preserved as historical test/provenance material. It is NOT current authority and must not override CURRENT_POINTER.json, REHYDRATION_MANIFEST.json, CURRENT_STATE.md, or newer verified runtime evidence.
+
 # 666CLIC REV91 — Fresh Host Chat, Seven Domain and Live Circle Runbook
 SYSTEM_ID=666CLIC
 DATE_LOCAL=2026-10-05
