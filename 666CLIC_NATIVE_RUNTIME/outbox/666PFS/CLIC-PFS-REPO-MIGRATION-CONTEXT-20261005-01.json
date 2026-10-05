@@ -64,7 +64,8 @@
     "PFS_PRIVATE_PUBLIC_SECURITY_REVIEW",
     "PFS_ISOLATED_RESTORE",
     "PFS_REPO_REHYDRATION_MANIFEST_AND_POINTER",
-    "PFS_GITHUB_AUTHORITY_PROMOTION_DECISION"
+    "PFS_GITHUB_AUTHORITY_PROMOTION_DECISION",
+    "PFS_EXTERNAL_CONSUMER_REPO_CUTOVER"
   ],
   "recommended_native_sequence": [
     "666PFS SYSTEMSTART",
@@ -86,7 +87,7 @@
   ],
   "consumption_rule": "PFS must independently verify all source currentness before acting.",
   "return_anchor_after_pfs_consumption": "CLIC_HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
-  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_AND_FULL_CHILD_MIGRATION_GATE",
+  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_FULL_CHILD_MIGRATION_AND_EXTERNAL_CONSUMER_CUTOVER_GATES",
   "repo_rehydration_blueprint": {
     "path": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
     "status": "READY",
@@ -131,5 +132,30 @@
     "retired_identity_rule": "PRESERVE_HISTORY_DO_NOT_REACTIVATE",
     "external_native_rule": "REFERENCE_WITHOUT_AUTHORITY_TRANSFER",
     "pass_condition": "100_PERCENT_OF_NATIVE_CURRENT_VALID_CHILD_SET_PLUS_REQUIRED_CSM_RELATIONS_VERIFIED_IN_REPO_CURRENT"
+  },
+  "external_consumer_cutover_gate": {
+    "status": "REQUIRED_AFTER_NATIVE_PFS_REPO_AUTHORITY_SWITCH_BEFORE_MIGRATION_CLOSEOUT",
+    "rule": "EVERY_EXTERNAL_SYSTEM_OR_SERVICE_THAT_READS_OR_REFERENCES_PFS_OR_CSM_MUST_SWITCH_CURRENT_SOURCE_TO_PFS_GITHUB_REPO_CURRENT",
+    "drive_current_reads_after_cutover": "FORBIDDEN",
+    "drive_allowed_roles_after_cutover": [
+      "HISTORY",
+      "REPO_BACKUP",
+      "RECOVERY",
+      "PROVENANCE"
+    ],
+    "discovery_requirement": "PFS_MUST_CENSUS_ALL_CURRENT_EXTERNAL_CONSUMERS_AT_EXECUTION_TIME",
+    "known_examples_from_clic_relations": [
+      "666MAINSYSTEM_SHARED_LAYER_IF_IT_READS_PFS_CSM",
+      "LYVRA_IF_IT_READS_PFS_CSM",
+      "666LINGUA_IF_IT_READS_PFS_CSM",
+      "666CLS_IF_IT_READS_PFS_CSM",
+      "ANY_REGISTERED_EXTERNAL_NATIVE_CHILD_OR_SERVICE_WITH_PFS_CSM_REFERENCE"
+    ],
+    "fixed_consumer_list_hardcode": false,
+    "native_update_required_per_external_system": true,
+    "authority_transfer": false,
+    "pfs_may_publish_cutover_contract": true,
+    "pfs_may_not_mutate_foreign_systems_without_native_trigger": true,
+    "pass_condition": "100_PERCENT_OF_DISCOVERED_CURRENT_EXTERNAL_CONSUMERS_HAVE_REPO_CURRENT_ROUTE_OR_VERIFIED_NO_CURRENT_DEPENDENCY"
   }
 }
