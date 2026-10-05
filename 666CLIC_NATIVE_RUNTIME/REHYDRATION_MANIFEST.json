@@ -182,7 +182,7 @@
     "verified_head": "98a4dd413298652ce84a25af3f78219831182220",
     "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
-    "full_repo_census": "PARTIAL_HIGH_PLUS",
+    "full_repo_census": "PARTIAL_VERY_HIGH",
     "cross_card_parity": "VERIFIED_CURRENT_CARDS",
     "full_native_semantic_coverage": "OPEN",
     "foreign_mutation": false,
@@ -238,14 +238,28 @@
       "authority_transfer": false,
       "repo_current_remains_authority": true
     },
-    "required_domain_census": "PARTIAL_HIGH_PLUS",
+    "required_domain_census": "PARTIAL_VERY_HIGH",
     "freshness_epoch": "2026-10-01-REV92-U4-NEWCHAT",
     "local_migration_label_classification": "NON_AUTHORITY_METADATA_UNLESS_CURRENTNESS_TUPLE_CONFLICTS",
     "native_cleanup_candidates": [
       "PROVENANCE_SUPERSESSION_PRE_PROMOTION_TEXT",
       "OPERATIONS_CENTER_REV86_WORK_SCOPE_TEXT"
     ],
-    "clic_foreign_repair_authority": false
+    "clic_foreign_repair_authority": false,
+    "source_head": "85df04ab07734a279b4c980d5ba49998216de972",
+    "latest_evolution_class": "VALID_DASHBOARD_PRESENTATION_CONTINUITY_ONLY",
+    "pointer_changed": false,
+    "deep_facets_integrated": [
+      "RESPONSIBILITY_CORE",
+      "SELF_CONDUCTOR",
+      "DAEMON",
+      "FORCE",
+      "CODEFORGE",
+      "MUSIC_MEMORY",
+      "STUDIO2_EVIDENCE",
+      "STUDIO2_DUAL_CONTROL",
+      "LYRIC_INTELLIGENCE"
+    ]
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
