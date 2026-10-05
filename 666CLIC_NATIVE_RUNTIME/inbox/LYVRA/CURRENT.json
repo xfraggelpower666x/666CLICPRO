@@ -141,5 +141,54 @@
       "Do not change CLIC source authority.",
       "Preserve all unrelated open functional gates."
     ]
+  },
+  "internal_dashboard_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-INTERNAL-DASHBOARD-20261005-01",
+    "scope": "CLIC_INTERNAL_ONLY",
+    "public_surface_forbidden": true,
+    "purpose": "Provide CLIC with a compact internal HTML operations dashboard mirroring LYVRA's internal mini-ops concept for the CLIC -> LYVRA direction.",
+    "suggested_trigger": "666CLIC DASHBOARD",
+    "dashboard_direction": "666CLIC_TO_LYVRA",
+    "required_views": [
+      "current CLIC repository HEAD and source authority",
+      "latest CLIC outbox handoff to LYVRA",
+      "latest LYVRA receipt or response if available",
+      "roundtrip test status",
+      "shared 666 MAIN SYSTEM AUTHORITY EVIDENCE GATE status",
+      "CLIC secret binding shown only as BOUND or NOT_BOUND",
+      "worker functional evidence state",
+      "OPEN PARTIAL VERIFIED BLOCKED CONFLICT_QUARANTINE gates",
+      "last verified readback",
+      "next meaningful action"
+    ],
+    "privacy_and_boundary_rules": [
+      "Do not place this dashboard on any public CLIC or LYVRA website.",
+      "Do not expose secret values, signed tickets, private recovery material or sensitive repository contents.",
+      "Use it only as an internal GPT/browser diagnostic and operations surface.",
+      "Dashboard state must be evidence-backed from current repository/native reads; do not fabricate PASS from stale state.",
+      "Dashboard has no decision authority, no routing authority and no mutation authority."
+    ],
+    "symmetry_with_lyvra": {
+      "lyvra_internal_trigger": "LYVRA DASHBOARD",
+      "clic_internal_trigger": "666CLIC DASHBOARD",
+      "lyvra_view_direction": "LYVRA_TO_666CLIC",
+      "clic_view_direction": "666CLIC_TO_LYVRA",
+      "shared_worker": "666 MAIN SYSTEM AUTHORITY EVIDENCE GATE v2.1"
+    },
+    "requested_response": {
+      "response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-INTERNAL-DASHBOARD-20261005-01.json",
+      "required_fields": [
+        "handoff_id_received",
+        "disposition",
+        "dashboard_trigger",
+        "public_surface_forbidden",
+        "repo_first_preserved",
+        "worker_role_preserved",
+        "result"
+      ]
+    },
+    "authority_transfer": false,
+    "foreign_mutation_authorized": false
   }
 }
