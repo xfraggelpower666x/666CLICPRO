@@ -85,5 +85,23 @@
   ],
   "consumption_rule": "PFS must independently verify all source currentness before acting.",
   "return_anchor_after_pfs_consumption": "CLIC_HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
-  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION"
+  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REHYDRATION_BLUEPRINT",
+  "repo_rehydration_blueprint": {
+    "path": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
+    "status": "READY",
+    "pattern_source": "VERIFIED_CLIC_REPO_NATIVE_RUNTIME",
+    "pfs_native_translation_required": true,
+    "includes": [
+      "AUTHORITY_CONTRACT",
+      "CURRENT_POINTER",
+      "REHYDRATION_MANIFEST_REQUIRED_ORDER",
+      "LIVE_CIRCLE_TEMPORAL_LAYERS",
+      "KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE",
+      "INTERRUPTION_CAUSAL_RESUME",
+      "FRESH_CHAT_ACCEPTANCE",
+      "CSM_CHILD_IDENTITY_BOUNDARIES",
+      "PRIVATE_RECOVERY_AND_BYTE_EXACT_RESTORE",
+      "POINTER_LAST_GOVERNANCE"
+    ]
+  }
 }
