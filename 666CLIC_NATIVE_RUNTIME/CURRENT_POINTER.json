@@ -1,6 +1,6 @@
 {
   "system": "666CLIC",
-  "status": "REPO_NATIVE_CURRENT_RUNTIME_RECOVERY_ROTATED_BOUND_CARRIER_NORMALIZATION_PENDING",
+  "status": "REPO_NATIVE_CURRENT_RUNTIME_CORE_RESTORE_VERIFIED_TRANSPORT_BOUNDARY_REVIEW_OPEN",
   "staging_sync_revision": 91,
   "source_authority": "GITHUB_REPO_CURRENT",
   "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
@@ -8,12 +8,12 @@
   "last_verified_lyvra_head": "98a4dd413298652ce84a25af3f78219831182220",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "b132d2539177434190e08a5534f0f7169b1fb903",
+  "body_head_before_pointer": "ceb78be678f7399c7bea51a321cb157a83084cdb",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "OPEN",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
   "live_circle_functional_test": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
-  "private_recovery": "VERIFIED_OWNER_ONLY_ROTATED_POINTER_BOUND_TO_BODY_HEAD",
+  "private_recovery": "VERIFIED_OWNER_ONLY_POINTER_BOUND_TO_SOURCE_BODY_HEAD",
   "authority_switch": true,
   "migration_promotion": true,
   "pointer_written_last": true,
@@ -52,7 +52,7 @@
   },
   "sanitized_source_delta": "migration/REV85_REV89_NONPRIVATE_DELTA_2026-10-02.md",
   "staging_manifest_readback": "PASS",
-  "isolated_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
+  "isolated_restore": "PARTIAL_CORE_VERIFIED_54_OF_54_TRANSPORT_BOUNDARY_EXCLUDED_14",
   "native_source_revision_verified": 91,
   "currentness_bridge": "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
   "rev91_gate_audit": "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md",
@@ -829,7 +829,7 @@
   },
   "private_recovery_update": {
     "date_local": "2026-10-05",
-    "status": "VERIFIED_ROTATED_AND_BOUND_WITH_CARRIER_NORMALIZATION_PENDING",
+    "status": "VERIFIED_ROTATED_BOUND_CORE_RESTORE_54_OF_54",
     "prechange_head": "7825be8d57f7515ad27902298f725ac487703e90",
     "prechange_backup_branch": "clic-pre-recovery-normalization-20261005-1754",
     "private_recovery_target": "DRIVE_OWNER_ONLY_ROTATED_POINTER_ALIAS",
@@ -850,6 +850,14 @@
     "isolated_private_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
     "full_native_semantic_coverage": "OPEN",
     "p14": "OPEN_EVENT_GATED",
-    "pointer_last": true
+    "pointer_last": true,
+    "carrier_normalization_followup": "COMPLETE_CURRENT_SCOPE",
+    "source_body_commit": "b132d2539177434190e08a5534f0f7169b1fb903",
+    "source_tree_sha": "71f29c5e67366960a0d42acc04c4262dc27bc063",
+    "byte_exact_private_clic_core_archive": "VERIFIED_54_OF_54",
+    "isolated_private_restore_core": "VERIFIED_54_OF_54_BYTE_EXACT",
+    "full_repo_private_restore": "PARTIAL_TRANSPORT_BOUNDARY_EXCLUDED_14",
+    "transport_boundary_excluded_blobs": 14,
+    "restore_evidence": "migration/BYTE_EXACT_PRIVATE_CORE_RESTORE_2026-10-05.md"
   }
 }
