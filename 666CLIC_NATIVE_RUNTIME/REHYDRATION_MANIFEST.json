@@ -501,7 +501,7 @@
   "functional_acceptance_gates_role": "HISTORICAL_LEGACY_FIELDS_PRESERVED_DO_NOT_OVERRIDE_CURRENT_FUNCTIONAL_ACCEPTANCE_GATES",
   "cross_system_handoffs": {
     "pfs_repo_migration_context": {
-      "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_AND_FULL_CHILD_MIGRATION_GATE",
+      "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_FULL_CHILD_MIGRATION_AND_EXTERNAL_CONSUMER_CUTOVER_GATES",
       "handoff": "outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json",
       "rehydration_blueprint": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
       "authority_transfer": false,
@@ -513,7 +513,11 @@
       "all_current_csm_relations_migrated_before_authority_switch": "REQUIRED",
       "child_set_source": "NATIVE_PFS_CURRENT_AT_EXECUTION_TIME",
       "fixed_child_count_hardcode": false,
-      "authority_promotion_if_child_migration_incomplete": "FORBIDDEN"
+      "authority_promotion_if_child_migration_incomplete": "FORBIDDEN",
+      "external_consumer_cutover": "REQUIRED_AFTER_NATIVE_PFS_REPO_AUTHORITY_SWITCH",
+      "external_consumer_set_source": "LIVE_DEPENDENCY_CENSUS_AT_EXECUTION_TIME",
+      "drive_current_route_after_cutover": "FORBIDDEN",
+      "foreign_native_mutation_by_pfs_without_trigger": false
     }
   }
 }
