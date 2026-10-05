@@ -261,13 +261,20 @@
       "LYRIC_INTELLIGENCE"
     ],
     "required_current_carrier_census": "FULL_VERIFIED",
-    "full_repo_file_by_file_census": "PARTIAL_EXTREME_HIGH",
+    "full_repo_file_by_file_census": "PARTIAL_EXTREME_HIGH_PLUS",
     "coverage_distinction": "FULL_DECLARED_CURRENT_CARRIERS_NE_ABSOLUTE_HISTORICAL_EMPIRICAL_COMPLETENESS",
     "open_evidence_debt": true,
     "open_event_gated_validation": true,
     "self_conductor_dual_path": "ONE_CAPABILITY_TWO_COMPLEMENTARY_CARRIERS",
     "studio2_plugin_ledger": "READ_CLASSIFIED",
-    "specialist_handoff_current": "READ_VERIFIED_REV92"
+    "specialist_handoff_current": "READ_VERIFIED_REV92",
+    "runtime_tree_blob_count": 67,
+    "runtime_tree_inventory": "FULL_AT_e025562da52813b71b485b18b926085ecccfc074",
+    "direct_content_classification_completeness": "NOT_YET_ALL_67_FILES_DIRECTLY_READ_IN_THIS_CENSUS",
+    "additional_native_cleanup_candidates": [
+      "README_STALE_MIGRATION_IN_PROGRESS_TEXT",
+      "REACHABLE_LANDSCAPE_STALE_DEV_AND_REV86_METADATA"
+    ]
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
