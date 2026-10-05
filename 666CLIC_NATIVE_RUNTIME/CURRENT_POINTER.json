@@ -640,5 +640,24 @@
     "foreign_mutation": false,
     "return_anchor": "DIRECT_READ_AND_CLASSIFY_REMAINING_UNREAD_OF_67_RUNTIME_BLOBS",
     "pointer_last": true
+  },
+  "lyvra_direct_read_batch_update": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_RESIDUAL_BATCH",
+    "prechange_head": "db591aa6c4ee9be4e722eafc715cfc84da7c575e",
+    "prechange_backup_branch": "clic-pre-lyvra-direct-read-batch-20261005-1443z",
+    "body_head_before_pointer": "55f535771e23ec4e79950a21fbeb5e5cb35d54e9",
+    "lyvra_verified_head": "3236a6a802523bbb993fad79f44496fe713c3769",
+    "lyvra_head_delta": "ONE_COMMIT_DASHBOARD_ROLLOUT_STATUS_ONLY",
+    "lyvra_pointer_changed": false,
+    "runtime_tree_denominator": 67,
+    "direct_read_numerator": "DEFERRED_UNTIL_DEDUPLICATED_LEDGER_COMPLETE",
+    "file_by_file_census": "PARTIAL_EXTREME_HIGH_PLUS",
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_native_semantic_coverage": "OPEN",
+    "dashboard_index": "EMPTY_OR_NON_TEXT_PRESENTATION_CARRIER",
+    "foreign_mutation": false,
+    "return_anchor": "BUILD_DEDUPLICATED_67_FILE_DIRECT_READ_LEDGER_AND_CONTINUE_UNREAD_BATCHES",
+    "pointer_last": true
   }
 }
