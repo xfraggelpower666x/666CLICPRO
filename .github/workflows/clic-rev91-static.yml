@@ -1,10 +1,15 @@
-name: 666CLIC REV91 Static Guard
+name: 666CLIC Repository-Native Static Guard
 
 on:
   push:
     branches:
       - clic-migration-rev79-staging
     paths:
+      - '666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+      - '666CLIC_NATIVE_RUNTIME/AUTHORITY_CONTRACT.md'
+      - '666CLIC_NATIVE_RUNTIME/current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md'
+      - '666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md'
       - '666CLIC_NATIVE_RUNTIME/tools/rev91_validator.py'
       - '666CLIC_NATIVE_RUNTIME/tests/test_rev91_validator.py'
       - '666CLIC_NATIVE_RUNTIME/tools/continuity_recovery_probe.py'
@@ -17,11 +22,11 @@ permissions:
 
 jobs:
   offline-guard:
-    name: Offline fail-closed fixture tests
+    name: Repository-native fail-closed fixture tests
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Checkout staging source
+      - name: Checkout canonical CLIC branch
         uses: actions/checkout@v4
         with:
           persist-credentials: false
@@ -32,9 +37,5 @@ jobs:
       - name: Verify offline guard fixtures
         run: python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p 'test_*.py' -v
 
-# These tests use in-repository dummy fixtures only.
-# They do not contact Drive, rehydrate a fresh chat, restore data, deploy,
-# publish a release, or change CLIC native decision authority.
-
-# Fixture suite also covers seven-domain continuity and synthetic hash restore.
-# No private data or production restore is accessed by this workflow.
+# Synthetic/offline only. No Drive, foreign systems, restore, deploy or release writes.
+# A successful workflow run is not P20/P21/Live-Circle/restore acceptance.
