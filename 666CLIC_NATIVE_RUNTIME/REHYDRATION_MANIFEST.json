@@ -501,7 +501,7 @@
   "functional_acceptance_gates_role": "HISTORICAL_LEGACY_FIELDS_PRESERVED_DO_NOT_OVERRIDE_CURRENT_FUNCTIONAL_ACCEPTANCE_GATES",
   "cross_system_handoffs": {
     "pfs_repo_migration_context": {
-      "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_FULL_CHILD_MIGRATION_AND_TWO_PHASE_EXTERNAL_CONSUMER_CUTOVER_GATES",
+      "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_FULL_CHILD_TWO_PHASE_CONSUMER_CUTOVER_AND_FAILBACK_CONTRACT",
       "handoff": "outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json",
       "rehydration_blueprint": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
       "authority_transfer": false,
@@ -520,7 +520,21 @@
       "foreign_native_mutation_by_pfs_without_trigger": false,
       "external_consumer_cutover_mode": "TWO_PHASE_PREPARE_BEFORE_SWITCH_VERIFY_AFTER_SWITCH",
       "zero_blind_window_required": true,
-      "migration_closeout_if_consumer_cutover_incomplete": "FORBIDDEN"
+      "migration_closeout_if_consumer_cutover_incomplete": "FORBIDDEN",
+      "cutover_state_machine": "PREPARED|SWITCHED|VERIFIED|FAILBACK_REQUIRED|QUARANTINED",
+      "failback_if_consumer_breaks_after_switch": "REQUIRED_OR_CONFLICT_QUARANTINE",
+      "silent_drive_repromotion_after_verified": "FORBIDDEN"
+    },
+    "lyvra_branch_stewardship_response": {
+      "status": "RESPONSE_READY_FOR_LYVRA_CONSUMPTION",
+      "response": "outbox/LYVRA/CLIC-LYVRA-BRANCH-STEWARDSHIP-RESPONSE-20261005-01.md",
+      "lyvra_current_head": "dec30b2ba7f810ec70bad85fc2784d3a4285d643",
+      "current_branch_count": 132,
+      "current_duplicate_sha_groups": 10,
+      "branches_in_duplicate_sha_groups": 23,
+      "current_protected_branches": 0,
+      "foreign_mutation": false,
+      "lyvra_native_cleanup_required": true
     }
   }
 }
