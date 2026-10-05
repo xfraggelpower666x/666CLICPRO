@@ -3,8 +3,10 @@
   "status": "GITHUB_REPO_CANONICAL_CURRENT_DRIVE_HISTORY_BACKUP_RUNTIME_PARTIAL",
   "authority": "GITHUB_REPO_CURRENT",
   "required_order": [
-    "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
-    "current/REV91_SECONDARY_CARRIER_GUARD.md",
+    "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
+    "AUTHORITY_CONTRACT.md",
+    "CURRENT_POINTER.json",
+    "current/CURRENT_STATE.md",
     "AUTHORITY_CONTRACT.md",
     "CURRENT_POINTER.json",
     "current/CURRENT_STATE.md",
@@ -14,7 +16,9 @@
     "current/OPERATIONS_CENTER.md",
     "relations/CROSS_SYSTEM_RELATIONS.md",
     "continuity/RECOVERY_AND_HANDOFF.md",
-    "relations/LYVRA_UNDERSTANDING_CARD_REV80.md"
+    "relations/LYVRA_UNDERSTANDING_CARD_REV80.md",
+    "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+    "current/REV91_SECONDARY_CARRIER_GUARD.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -130,7 +134,12 @@
     "effective_bootstrap_source": "GITHUB_REPO_CURRENT",
     "secondary_source": "GOOGLE_DRIVE_HISTORY_BACKUP_RECOVERY",
     "product_authority": "GITHUB_REPO_CURRENT",
-    "staging_is_primary_bootstrap_source": true
+    "staging_is_primary_bootstrap_source": true,
+    "legacy_drive_current_carriers": [
+      "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+      "current/REV91_SECONDARY_CARRIER_GUARD.md"
+    ],
+    "legacy_drive_current_carriers_role": "HISTORICAL_PROVENANCE_ONLY"
   },
   "bootstrap_source_order": [
     "GITHUB_REPO_CURRENT"
