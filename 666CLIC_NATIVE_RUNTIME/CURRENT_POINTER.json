@@ -372,5 +372,32 @@
     "promotion": false,
     "authority_switch": false,
     "pointer_last": true
+  },
+  "rev91_pfs_csm_review_resolution": {
+    "date_local": "2026-10-05",
+    "status": "THREE_REVIEW_IDENTITIES_RESOLVED_RELATION_CENSUS_PARTIAL",
+    "census": "migration/PFS_CSM_MULTIKEY_CENSUS_REV91_2026-10-05.json",
+    "relation_census": "migration/PFS_CSM_RELATION_CENSUS_REV91_2026-10-05.json",
+    "active_evidence": 24,
+    "current_binding_review": 0,
+    "resolved": [
+      "CSLO-9001",
+      "ITRF-6001",
+      "UCCF-10001"
+    ],
+    "itrf_current_pointer": "1hc70uzFUNrvwzRncoBHUk9KkJkCH_St0",
+    "uccf_historical_pointer": "UNREACHABLE_HISTORICAL_REFERENCE",
+    "relation_full_census": "OPEN",
+    "csm_card_parity": "OPEN",
+    "pfs_runtime_acceptance": "OPEN",
+    "pfs_github_migration": "NOT_PERFORMED",
+    "prechange_backup_branch": "clic-pre-pfs-relations-20261005-1405",
+    "prechange_head": "9941f7a588df2e5276cb657d90eda29ecf6f36da",
+    "body_head_before_pointer": "c59b55cfca6de7bb79efab90ff74ba1fdd9da6f3",
+    "clic_product_authority": "GOOGLE_DRIVE_REV91",
+    "foreign_writes": false,
+    "promotion": false,
+    "authority_switch": false,
+    "pointer_last": true
   }
 }
