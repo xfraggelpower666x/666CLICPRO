@@ -218,6 +218,25 @@
       "lyvra_native_runtime_plugin": "0.1.5",
       "plugin_dashboard_readback": "VERIFIED",
       "custom_gpt_live_builder_publication": "OPEN"
+    },
+    "plugin_surfaces": {
+      "handoff_id": "LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01",
+      "status": "ACCEPTED_MAPPED",
+      "identity_count": 1,
+      "surfaces": [
+        {
+          "name": "lyvra-native-runtime",
+          "version": "0.1.5",
+          "role": "NEWLY_CREATED_NATIVE_RUNTIME_PLUGIN"
+        },
+        {
+          "name": "L.Y.V.R.A.",
+          "version": "0.13.3",
+          "role": "GPT_MIGRATED_PLUGIN_SURFACE"
+        }
+      ],
+      "authority_transfer": false,
+      "repo_current_remains_authority": true
     }
   },
   "effective_current_gates": {
