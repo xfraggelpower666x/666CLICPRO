@@ -82,5 +82,33 @@
     "DRIVE_HANDOFF_2_REPO_FIRST_TARGET_NOT_YET_PROMOTED"
   ],
   "authority_transfer": false,
-  "foreign_mutation_authorized": false
+  "foreign_mutation_authorized": false,
+  "roundtrip_test": {
+    "requested": true,
+    "test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
+    "purpose": "VERIFY_REPO_TO_REPO_HANDOFF_AND_CLIC_RESPONSE_PATH",
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-CLIC-ROUNDTRIP-20261005-01.json",
+    "required_response_fields": [
+      "test_id",
+      "receiver_system",
+      "receiver_head",
+      "handoff_id_received",
+      "source_head_verified",
+      "worker_relation_disposition",
+      "clic_primary_source",
+      "drive_role",
+      "worker_evidence_status",
+      "open_gates_preserved",
+      "result"
+    ],
+    "response_requirements": [
+      "Respond only after native CLIC verification of this handoff.",
+      "Confirm the declared LYVRA source HEAD was independently checked.",
+      "Confirm CLIC remains repo-first and Drive remains secondary history/backup/recovery/provenance.",
+      "Report whether the shared Worker relationship is ACCEPTED, PARTIAL, BLOCKED or CONFLICT_QUARANTINE.",
+      "Do not claim Worker evidence is functioning unless CLIC has actually verified the relevant evidence path.",
+      "Preserve all still-open functional gates exactly as open unless separately tested.",
+      "Write the response to the specified CLIC outbox path; do not mutate LYVRA."
+    ]
+  }
 }
