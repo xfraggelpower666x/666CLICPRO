@@ -1,9 +1,9 @@
 {
   "status": "CURRENT_CLIC_FORENSIC_READ_LEDGER",
   "source_repo": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
-  "source_head": "3236a6a802523bbb993fad79f44496fe713c3769",
+  "source_head": "fe335f0afa9fc02e693867194c4629c8e4b59d63",
   "runtime_tree_blob_count": 67,
-  "direct_read_classified_count": 66,
+  "direct_read_classified_count": 67,
   "direct_read_classified": [
     "LYVRA_NATIVE_RUNTIME/AUTHORITY_CONTRACT.md",
     "LYVRA_NATIVE_RUNTIME/CODEFORGE_STEWARDSHIP.md",
@@ -70,19 +70,22 @@
     "LYVRA_NATIVE_RUNTIME/history/HISTORICAL_SOURCE_REGISTRY.json",
     "LYVRA_NATIVE_RUNTIME/migration/COVERAGE_LEDGER.json",
     "LYVRA_NATIVE_RUNTIME/migration/TRIPLE_VALIDATION_CONTRACT.md",
-    "LYVRA_NATIVE_RUNTIME/music/TRACK_REFERENCE_REGISTRY.json"
+    "LYVRA_NATIVE_RUNTIME/music/TRACK_REFERENCE_REGISTRY.json",
+    "LYVRA_NATIVE_RUNTIME/dashboard/index.html"
   ],
-  "present_not_semantically_direct_read": [
-    {
-      "path": "LYVRA_NATIVE_RUNTIME/dashboard/index.html",
-      "blob_sha": "42efcceb7ab54b4ee68c36be54cfdb16bad1e05a",
-      "size_bytes": 7858135,
-      "classification": "PRESENT_LARGE_PRESENTATION_CARRIER_FETCH_FILE_RETURNED_EMPTY_CONTENT_NOT_COUNTED"
-    }
-  ],
+  "present_not_semantically_direct_read": [],
   "unread_count": 0,
   "unread": [],
   "counting_rule": "Only files with direct content read and semantic classification are counted. Tree presence alone is not counted.",
   "required_current_carrier_census": "FULL_VERIFIED",
-  "full_native_semantic_coverage": "OPEN"
+  "full_native_semantic_coverage": "OPEN",
+  "full_repo_file_by_file_census": "FULL_VERIFIED_67_OF_67",
+  "dashboard_index_readback": {
+    "method": "GITHUB_FETCH_BLOB_BY_SHA",
+    "blob_sha": "42efcceb7ab54b4ee68c36be54cfdb16bad1e05a",
+    "content_chars": 7857975,
+    "classification": "LARGE_PRESENTATION_CARRIER_LYVRA_NEON_COMMAND_DASHBOARD_LOCAL_UI_AND_AUDIO_ANALYSIS",
+    "decision_authority": "NONE",
+    "identity_authority": "NONE"
+  }
 }
