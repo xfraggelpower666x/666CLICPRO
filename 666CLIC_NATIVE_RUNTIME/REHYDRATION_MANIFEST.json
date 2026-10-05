@@ -248,5 +248,17 @@
     "isolated_private_restore": "OPEN",
     "full_native_semantic_coverage": "OPEN",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence."
+  },
+  "lyvra_handoff_processing": {
+    "status": "CURRENT",
+    "processed": {
+      "repo_roundtrip": "VERIFIED",
+      "dual_lyvra_plugin_mapping": "VERIFIED",
+      "internal_dashboard_request_01": "VERIFIED_SUPERSEDED_BY_NATIVE_DASHBOARD_02",
+      "native_dashboard_system_02": "VERIFIED_REPO_IMPLEMENTED"
+    },
+    "worker_functional_test": "BLOCKED_FUNCTIONAL_EXECUTION_NOT_PERFORMED",
+    "clic_plugin_sync": "PARTIAL_BLOCKED_ARCHIVE_TRANSFER",
+    "return_anchor": "FULL_LYVRA_REPO_CENSUS_PARTIAL_HIGH"
   }
 }
