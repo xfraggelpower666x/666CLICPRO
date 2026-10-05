@@ -335,7 +335,7 @@
   },
   "currentness_normalization": {
     "date_local": "2026-10-05",
-    "status": "BODY_CARRIERS_NORMALIZED_READBACK_PENDING",
+    "status": "VERIFIED_READBACK",
     "evidence": "migration/CURRENTNESS_NORMALIZATION_2026-10-05.md",
     "prechange_head": "782b9529bb90e835ea19545d307c9442894593fc",
     "prechange_backup_branch": "clic-pre-currentness-normalization-20261005-1716",
@@ -350,6 +350,13 @@
     "worker": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
     "p21": "OPEN",
     "isolated_private_restore": "OPEN",
-    "full_native_semantic_coverage": "OPEN"
+    "full_native_semantic_coverage": "OPEN",
+    "readback": {
+      "continuity/PROVENANCE_SUPERSESSION.md": "c264f76543793bd9389310124ef49ecf424b765e",
+      "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md": "698e0ad69aec946a9878fae2b535a14f7131b95a",
+      "continuity/RECOVERY_AND_HANDOFF.md": "a6311e592c4b4521a13958d9dd3d17c256fb70f9",
+      "continuity/LIVE_CIRCLE.md": "8f224a1561eaa939211a71db694ed1a879db8c42",
+      "migration/CURRENTNESS_NORMALIZATION_2026-10-05.md": "89e86599d10e678143af232b1ac987e7df723398"
+    }
   }
 }
