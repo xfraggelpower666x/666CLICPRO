@@ -603,5 +603,22 @@
     "foreign_mutation": false,
     "return_anchor": "CONTINUE_FILE_BY_FILE_UNCLASSIFIED_CARRIERS_OR_EVENT_GATED_EVIDENCE_WITHOUT_REOPENING_FULL_REQUIRED_CURRENT_CARRIERS",
     "pointer_last": true
+  },
+  "lyvra_file_census_update": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_PARTIAL_EXTREME_HIGH",
+    "prechange_head": "29f305ece4419c1eb5378cf84bfe61891020acf2",
+    "prechange_backup_branch": "clic-pre-lyvra-file-census-20261005-1438z",
+    "body_head_before_pointer": "a77af9f2e4ddfd789354849583dab92f92f1cc0b",
+    "lyvra_verified_head": "e025562da52813b71b485b18b926085ecccfc074",
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_repo_file_by_file_census": "PARTIAL_EXTREME_HIGH",
+    "full_native_semantic_coverage": "OPEN",
+    "self_conductor_dual_path": "ONE_CAPABILITY_TWO_COMPLEMENTARY_CARRIERS",
+    "studio2_plugin_audio_acceptance": "OPEN_CREATOR_HEARING_REQUIRED",
+    "specialist_handoff": "READ_VERIFIED_REV92_U3_WITH_U4_FRESHNESS",
+    "foreign_mutation": false,
+    "return_anchor": "CONTINUE_REMAINING_UNREAD_REPO_FILES_AND_CLASSIFY_WHETHER_FILE_BY_FILE_FULL_IS_REACHABLE_WITHOUT_HISTORICAL_EVENT_GATED_EVIDENCE",
+    "pointer_last": true
   }
 }
