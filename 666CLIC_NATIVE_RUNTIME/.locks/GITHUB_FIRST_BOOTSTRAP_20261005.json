@@ -13,7 +13,9 @@
     "migration/REV91_GITHUB_FIRST_BOOTSTRAP_TRANSITION_2026-10-05.md",
     "tools/rev91_validator.py",
     "tests/test_rev91_validator.py",
+    "tools/REV91_VALIDATOR_README.md",
     ".github/workflows/clic-rev91-static.yml",
+    "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
     "relations/LYVRA_HANDOFF_INPUTS_2026-10-05.md",
     "CURRENT_POINTER.json"
   ],
@@ -25,5 +27,11 @@
   "product_authority_switch": true,
   "release_before_final_pointer": true,
   "drive_target_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
-  "interruption_integrated": "LYVRA_HANDOFFS_AND_REPO_ONLY_USER_CLARIFICATION"
+  "interruption_integrated": "LYVRA_HANDOFFS_AND_REPO_ONLY_USER_CLARIFICATION",
+  "drive_role_transition": {
+    "pointer_backup": "1oM3rhtl2kwsWpeycl3UGQMMoewrvkJ4Iem0pAo53WYQ",
+    "work_backup": "1JLaPBMye5GnpoEbjU1Z8EYcll0YeDJv6Hg_zWLzw3bc",
+    "dev_backup": "19HF51IDZ6zWZx4X12I_09ZfdJab0GsuIbYrl7VQM_30",
+    "repo_backup_pointer": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw"
+  }
 }
