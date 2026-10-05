@@ -538,5 +538,25 @@
     "return_anchor": "FULL_LYVRA_REPO_CENSUS_PARTIAL_HIGH",
     "foreign_mutation": false,
     "pointer_last": true
+  },
+  "lyvra_required_domain_census_update": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_PARTIAL_HIGH_PLUS",
+    "prechange_head": "6475ea2b4ab9a6fca6271d5a6b38987d7adde606",
+    "prechange_backup_branch": "clic-pre-lyvra-census-required-domains-20261005-1429z",
+    "body_head_before_pointer": "5062718adb2327e272a1a7b11e8b7f679c7f5f7e",
+    "lyvra_verified_head": "98a4dd413298652ce84a25af3f78219831182220",
+    "required_domain_census": "PARTIAL_HIGH_PLUS",
+    "full_repo_census": "PARTIAL_HIGH_PLUS",
+    "full_native_semantic_coverage": "OPEN",
+    "freshness_epoch": "2026-10-01-REV92-U4-NEWCHAT",
+    "local_migration_labels": "CLASSIFIED_NON_AUTHORITY_UNLESS_CURRENTNESS_CONFLICT",
+    "native_lyvra_cleanup_candidates": [
+      "PROVENANCE_SUPERSESSION_PRE_PROMOTION_TEXT",
+      "OPERATIONS_CENTER_REV86_WORK_SCOPE_TEXT"
+    ],
+    "foreign_repair_authority": false,
+    "return_anchor": "CONTINUE_REMAINING_LYVRA_REQUIRED_DOMAIN_AND_FACET_CARRIERS",
+    "pointer_last": true
   }
 }
