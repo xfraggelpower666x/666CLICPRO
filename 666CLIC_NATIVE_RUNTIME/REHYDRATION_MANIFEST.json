@@ -182,7 +182,7 @@
     "verified_head": "98a4dd413298652ce84a25af3f78219831182220",
     "deep_analysis": "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
-    "full_repo_census": "PARTIAL_HIGH",
+    "full_repo_census": "PARTIAL_HIGH_PLUS",
     "cross_card_parity": "VERIFIED_CURRENT_CARDS",
     "full_native_semantic_coverage": "OPEN",
     "foreign_mutation": false,
@@ -237,7 +237,15 @@
       ],
       "authority_transfer": false,
       "repo_current_remains_authority": true
-    }
+    },
+    "required_domain_census": "PARTIAL_HIGH_PLUS",
+    "freshness_epoch": "2026-10-01-REV92-U4-NEWCHAT",
+    "local_migration_label_classification": "NON_AUTHORITY_METADATA_UNLESS_CURRENTNESS_TUPLE_CONFLICTS",
+    "native_cleanup_candidates": [
+      "PROVENANCE_SUPERSESSION_PRE_PROMOTION_TEXT",
+      "OPERATIONS_CENTER_REV86_WORK_SCOPE_TEXT"
+    ],
+    "clic_foreign_repair_authority": false
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
