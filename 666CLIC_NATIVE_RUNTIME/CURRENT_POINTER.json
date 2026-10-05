@@ -659,5 +659,25 @@
     "foreign_mutation": false,
     "return_anchor": "BUILD_DEDUPLICATED_67_FILE_DIRECT_READ_LEDGER_AND_CONTINUE_UNREAD_BATCHES",
     "pointer_last": true
+  },
+  "lyvra_direct_read_ledger_update": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_66_OF_67",
+    "prechange_head": "040eeaa1de55c522548177b0c7a70100526ebd3e",
+    "prechange_backup_branch": "clic-pre-lyvra-read-ledger-20261005-1446z",
+    "body_head_before_pointer": "aa375415bcdef172529ec2c9dd7b0f83d251448e",
+    "lyvra_verified_head": "3236a6a802523bbb993fad79f44496fe713c3769",
+    "runtime_tree_blob_count": 67,
+    "direct_read_classified_count": 66,
+    "normal_unread_count": 0,
+    "present_not_semantically_read_count": 1,
+    "present_not_semantically_read": "LYVRA_NATIVE_RUNTIME/dashboard/index.html",
+    "present_not_semantically_read_size_bytes": 7858135,
+    "file_by_file_full": false,
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_native_semantic_coverage": "OPEN",
+    "foreign_mutation": false,
+    "return_anchor": "RESOLVE_LARGE_DASHBOARD_INDEX_HTML_BY_BLOB_OR_ALTERNATE_READ_THEN_REASSESS_67_OF_67",
+    "pointer_last": true
   }
 }
