@@ -11,6 +11,7 @@
     "continuity/PROVENANCE_SUPERSESSION.md",
     "continuity/LIVE_CIRCLE.md",
     "current/OPERATIONS_CENTER.md",
+    "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
     "relations/CROSS_SYSTEM_RELATIONS.md",
     "continuity/RECOVERY_AND_HANDOFF.md",
     "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
@@ -110,9 +111,9 @@
       "capability_inventory_rev84.source_clic_rev"
     ],
     "resolution_order": [
-      "VERIFY_LIVE_DRIVE_CURRENT_POINTER",
-      "VERIFY_REV91_SOURCE_BRIDGE",
-      "VERIFY_REV91_SECONDARY_CARRIER_GUARD",
+      "VERIFY_GITHUB_HEAD_AND_CURRENT_POINTER",
+      "VERIFY_GITHUB_REQUIRED_ORDER",
+      "LOAD_GITHUB_CURRENT_RUNTIME",
       "LOAD_HISTORICAL_PROVENANCE_AS_HISTORY_ONLY"
     ],
     "on_missing_current_pointer": "CONFLICT_QUARANTINE",
@@ -157,5 +158,14 @@
     "role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
     "active_working_source": false,
     "current_authority": false
+  },
+  "repo_handoff_transport": {
+    "status": "CLIC_SIDE_BOUNDARY_IMPLEMENTED_EXTERNAL_PRODUCER_OPEN",
+    "protocol": "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
+    "lyvra_inbox": "inbox/LYVRA/",
+    "lyvra_outbox": "outbox/LYVRA/",
+    "drive_message_bus": false,
+    "authority_transfer": false,
+    "functional_acceptance": "OPEN"
   }
 }
