@@ -585,5 +585,23 @@
     "foreign_mutation": false,
     "return_anchor": "CONTINUE_REMAINING_ANALYTICS_CURRENT_REGISTERS_HISTORY_MIGRATION_DEVELOPMENT_AND_UNCLASSIFIED_CARRIERS",
     "pointer_last": true
+  },
+  "lyvra_current_carrier_census_closeout": {
+    "date_local": "2026-10-05",
+    "status": "READBACK_VERIFIED_REQUIRED_CURRENT_CARRIERS_FULL",
+    "prechange_head": "6a7f7702febc3319f4028fddeb19dc5929046c42",
+    "prechange_backup_branch": "clic-pre-lyvra-census-closeout-20261005-1436z",
+    "body_head_before_pointer": "fd1f73b937d578df7c72e5fb9dc656a41466159e",
+    "lyvra_verified_head": "e025562da52813b71b485b18b926085ecccfc074",
+    "lyvra_head_delta": "ONE_COMMIT_DASHBOARD_ROLLOUT_RESPONSE_SYNC_ONLY",
+    "lyvra_pointer_changed": false,
+    "required_current_carrier_census": "FULL_VERIFIED",
+    "full_repo_file_by_file_census": "PARTIAL_VERY_HIGH",
+    "full_native_semantic_coverage": "OPEN",
+    "open_evidence_debt": true,
+    "open_event_gated_validation": true,
+    "foreign_mutation": false,
+    "return_anchor": "CONTINUE_FILE_BY_FILE_UNCLASSIFIED_CARRIERS_OR_EVENT_GATED_EVIDENCE_WITHOUT_REOPENING_FULL_REQUIRED_CURRENT_CARRIERS",
+    "pointer_last": true
   }
 }
