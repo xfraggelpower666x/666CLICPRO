@@ -703,5 +703,18 @@
     "foreign_mutation": false,
     "return_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
     "pointer_last": true
+  },
+  "new_chat_handoff": {
+    "status": "READBACK_VERIFIED_READY_FOR_FRESH_CHAT",
+    "source_head_before_handoff": "443e37156caaf09dd1243f6c8a9af8dac5531e39",
+    "prechange_backup_branch": "clic-pre-new-chat-handoff-20261005-1501z",
+    "handoff_path": "666CLIC_NATIVE_RUNTIME/continuity/NEW_CHAT_CURRENT.json",
+    "handoff_blob_sha": "47e0dcb53c3c8c80ad7467c0faa9adfcb4a5754d",
+    "body_head_before_pointer": "4cacf68cfbe982ae5bf733fe098ce9780ce46e73",
+    "next_chat_instruction": "666CLIC SYSTEMSTART",
+    "manual_copy_required": false,
+    "p20": "OPEN_UNTIL_FRESH_CHAT_REHYDRATION_EVIDENCE",
+    "resume_anchor": "CONTINUE_OPEN_NON_FILE_CENSUS_GATES_PLUGIN_SYNC_WORKER_FUNCTIONAL_P20_P21_RESTORE_AND_SEMANTIC_EVIDENCE",
+    "pointer_last": true
   }
 }
