@@ -56,6 +56,7 @@
     "LIGHT-35001_BACKUP_ONLY"
   ],
   "pfs_native_open_gates": [
+    "ALL_VALID_CURRENT_CHILD_IDENTITIES_AND_CSM_RELATIONS_MIGRATED_TO_REPO",
     "PFS_FRESH_CHAT_REHYDRATION_ACCEPTANCE",
     "PFS_CSM_FULL_RELATION_CENSUS",
     "PFS_CARD_PARITY_AND_DIRECT_CHILD_CARD_READBACK",
@@ -85,7 +86,7 @@
   ],
   "consumption_rule": "PFS must independently verify all source currentness before acting.",
   "return_anchor_after_pfs_consumption": "CLIC_HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
-  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_BLUEPRINT",
+  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_AND_FULL_CHILD_MIGRATION_GATE",
   "repo_rehydration_blueprint": {
     "path": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
     "status": "READY",
@@ -115,5 +116,20 @@
     "csm_relations_current_source_after_native_promotion": "GITHUB_REPO_CURRENT",
     "child_identity_current_source_after_native_promotion": "GITHUB_REPO_CURRENT",
     "authority_switch_requires_native_pfs_update": true
+  },
+  "child_migration_promotion_gate": {
+    "status": "REQUIRED_BEFORE_AUTHORITY_SWITCH",
+    "all_valid_current_child_identities_migrated_to_repo": true,
+    "all_current_csm_relations_migrated_to_repo": true,
+    "all_current_child_pointer_and_role_metadata_represented": true,
+    "child_set_source": "NATIVE_PFS_CURRENT_AT_EXECUTION_TIME",
+    "fixed_child_count_hardcode": false,
+    "historical_clic_census_is_reference_only": true,
+    "missing_current_child_action": "BLOCK_PROMOTION",
+    "ambiguous_identity_action": "HOLD_AND_AUDIT",
+    "duplicate_identity_action": "BLOCK_PROMOTION_AND_RECONCILE",
+    "retired_identity_rule": "PRESERVE_HISTORY_DO_NOT_REACTIVATE",
+    "external_native_rule": "REFERENCE_WITHOUT_AUTHORITY_TRANSFER",
+    "pass_condition": "100_PERCENT_OF_NATIVE_CURRENT_VALID_CHILD_SET_PLUS_REQUIRED_CSM_RELATIONS_VERIFIED_IN_REPO_CURRENT"
   }
 }
