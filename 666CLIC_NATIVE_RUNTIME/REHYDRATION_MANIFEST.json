@@ -50,14 +50,15 @@
   },
   "remaining_checks": [
     "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "FRESH_CHAT_REHYDRATION_TEST",
     "LIVE_CIRCLE_FUNCTION_TEST",
     "PRIVATE_RECOVERY_VALIDATION",
     "RESTORE_TEST",
-    "GITHUB_PROMOTION_GATE",
-    "P20_REAL_NEW_CHAT",
     "ISOLATED_RESTORE",
-    "PRIVATE_RECOVERY"
+    "PRIVATE_RECOVERY",
+    "P21_FUNCTIONAL_CAUSAL_ACCEPTANCE",
+    "WORKER_FUNCTIONAL_TICKET_FLOW",
+    "ISOLATED_PRIVATE_RESTORE",
+    "FULL_NATIVE_SEMANTIC_COVERAGE"
   ],
   "coverage_gate": "migration/COVERAGE_GATE_2026-10-02.md",
   "coverage_audit": {
@@ -120,8 +121,8 @@
     "on_missing_current_pointer": "CONFLICT_QUARANTINE",
     "on_revision_conflict": "CONFLICT_QUARANTINE",
     "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
-    "fresh_chat_p20": "OPEN",
-    "live_circle_runtime": "OPEN",
+    "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
+    "live_circle_runtime": "VERIFIED_REPO_HANDOFF_ROUNDTRIP",
     "isolated_restore": "OPEN",
     "authority_switch": "TRUE_2026-10-05",
     "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED",
@@ -331,5 +332,24 @@
     "functional_ticket_flow": "BLOCKED_ENDPOINT_EXECUTION_NOT_AVAILABLE_IN_CURRENT_TOOL_PATH",
     "result": "PARTIAL",
     "authority": false
+  },
+  "currentness_normalization": {
+    "date_local": "2026-10-05",
+    "status": "BODY_CARRIERS_NORMALIZED_READBACK_PENDING",
+    "evidence": "migration/CURRENTNESS_NORMALIZATION_2026-10-05.md",
+    "prechange_head": "782b9529bb90e835ea19545d307c9442894593fc",
+    "prechange_backup_branch": "clic-pre-currentness-normalization-20261005-1716",
+    "historical_provenance_preserved": true,
+    "normalized_carriers": [
+      "continuity/PROVENANCE_SUPERSESSION.md",
+      "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
+      "continuity/RECOVERY_AND_HANDOFF.md",
+      "continuity/LIVE_CIRCLE.md"
+    ],
+    "p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
+    "worker": "PARTIAL_CONFIGURATION_DEPLOYMENT_VERIFIED_TICKET_FLOW_BLOCKED",
+    "p21": "OPEN",
+    "isolated_private_restore": "OPEN",
+    "full_native_semantic_coverage": "OPEN"
   }
 }
