@@ -1,9 +1,9 @@
 {
   "system": "666CLIC",
-  "status": "PARTIAL_STAGING_NOT_PROMOTED",
+  "status": "REPO_NATIVE_CURRENT_RUNTIME_PARTIAL",
   "staging_sync_revision": 91,
-  "source_authority": "GOOGLE_DRIVE_REV91",
-  "source_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
+  "source_authority": "GITHUB_REPO_CURRENT",
+  "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
   "lyvra_understanding_card_revision": 80,
   "last_verified_lyvra_head": "89db0978d0f62660986d27efd1d2005265811448",
   "staging_branch": "clic-migration-rev79-staging",
@@ -14,8 +14,8 @@
   "full_fresh_rehydration": "OPEN",
   "live_circle_functional_test": "OPEN",
   "private_recovery": "OPEN",
-  "authority_switch": false,
-  "migration_promotion": false,
+  "authority_switch": true,
+  "migration_promotion": true,
   "pointer_written_last": true,
   "no_post_pointer_mutation": true,
   "coverage_audit_2026_10_02": {
@@ -54,9 +54,9 @@
   "staging_manifest_readback": "PASS",
   "isolated_restore": "OPEN",
   "native_source_revision_verified": 91,
-  "currentness_bridge": "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
+  "currentness_bridge": "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
   "rev91_gate_audit": "migration/REV91_P20_P21_LIVECIRCLE_GATE_AUDIT.md",
-  "p20_incoming": "RETEST_PENDING",
+  "p20_incoming": "OPEN",
   "p21_historical_package_closeout": "COMPLETE_CURRENT_SCOPE",
   "p21_functional_causal_acceptance": "OPEN",
   "byte_exact_integrity": "OPEN",
@@ -398,6 +398,60 @@
     "foreign_writes": false,
     "promotion": false,
     "authority_switch": false,
+    "pointer_last": true
+  },
+  "current_repo": "xfraggelpower666x/666CLICPRO",
+  "canonical_current_branch": "clic-migration-rev79-staging",
+  "branch_name_historical_role_current": true,
+  "repo_current_authority": true,
+  "drive_active_working_source": false,
+  "drive_current_authority": false,
+  "drive_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+  "drive_history_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
+  "drive_repo_backup_pointer_id": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw",
+  "repo_native_authority_switch": {
+    "date_local": "2026-10-05",
+    "user_intent": "REPOSITORY_IS_SOLE_CLIC_WORKFIELD_DRIVE_IS_HISTORY_AND_REPO_BACKUP",
+    "status": "VERIFIED_REPO_CURRENT_AUTHORITY_RUNTIME_ACCEPTANCE_PARTIAL",
+    "prechange_head": "6b95106a03dd85c77bfb3ab77a55c363ec52cae7",
+    "prechange_backup_branch": "clic-pre-github-first-bootstrap-20261005-1428",
+    "body_content_head": "a5b511d8844461090fe2ca7d60a64c5e1d6259ae",
+    "lock_release_head": "7d2d63552ea8444f830f8fa09982e65935686db2",
+    "authority_carrier": "current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md",
+    "required_order_count": 14,
+    "plugin": {
+      "name": "666clic-native-runtime",
+      "version": "0.1.3",
+      "release_id": "pluginrel_6ac3994627908191a650abfa22c165b4",
+      "repo_only_systemstart": true
+    },
+    "github_actions": {
+      "run_id": 37312330707,
+      "job_id": 111770526298,
+      "head_sha": "b16dd159d6c58c058ef227bf1aae5a2d9579df53",
+      "conclusion": "success",
+      "tests": "28_OF_28_OK"
+    },
+    "drive": {
+      "active_working_source": false,
+      "current_authority": false,
+      "role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+      "prechange_pointer_backup": "1oM3rhtl2kwsWpeycl3UGQMMoewrvkJ4Iem0pAo53WYQ",
+      "prechange_work_backup": "1JLaPBMye5GnpoEbjU1Z8EYcll0YeDJv6Hg_zWLzw3bc",
+      "prechange_dev_backup": "19HF51IDZ6zWZx4X12I_09ZfdJab0GsuIbYrl7VQM_30",
+      "repo_backup_pointer": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw",
+      "byte_exact_full_repo_archive": "NOT_AVAILABLE_IN_CURRENT_CONNECTOR_PATH"
+    },
+    "lyvra_handoffs": {
+      "architecture_handoff": "1wkHHD3ISVyiInRm3hOVIWCnHSEi65LNqzZKNYeEX3H8",
+      "relational_receipt": "1IF6k1ilLsl_rC40qbHEhUkM1bGZ1hFsfulJX2i30YGU",
+      "independently_verified_lyvra_head": "0e80d0a9cf3ec785bc91555873eb7ef661310f3f",
+      "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+      "authority_transfer": false
+    },
+    "historical_drive_rev91_preserved": true,
+    "historical_sections_do_not_override_current": true,
+    "foreign_mutation": false,
     "pointer_last": true
   }
 }
