@@ -298,11 +298,56 @@
           "systemstart_dashboard_enabled",
           "public_surface_forbidden",
           "repo_first_preserved",
-          "result"
+          "result",
+          "automatic_trigger_dashboard_policy",
+          "complete_dashboard_scope"
         ]
       },
       "authority_transfer": false,
-      "foreign_mutation_authorized": false
+      "foreign_mutation_authorized": false,
+      "automatic_trigger_policy": {
+        "requested": true,
+        "principle": "AUTOMATIC_CONTEXTUAL_DASHBOARD_FOR_MEANINGFUL_NATIVE_TRIGGERS",
+        "required_trigger_families": [
+          "666CLIC SYSTEMSTART",
+          "666CLIC UPDATE",
+          "666CLIC WEITER",
+          "666CLIC NEW CHAT",
+          "666CLIC NEXT CHAT",
+          "666CLIC DASHBOARD",
+          "666CLIC INTEGRATION AUDIT",
+          "other CLIC-native specialist/forensic/recovery/learning triggers when visualization materially improves correctness or continuity"
+        ],
+        "trigger_intent": {
+          "666CLIC SYSTEMSTART": "render Whole-CLIC current/rehydration dashboard after verified current reads",
+          "666CLIC UPDATE": "render pre-change/write/readback/recovery/open-gates dashboard around governed mutation",
+          "666CLIC WEITER": "render continuity/return-anchor/open-work dashboard",
+          "666CLIC NEW CHAT|666CLIC NEXT CHAT": "render continuity/handoff/resume dashboard",
+          "666CLIC DASHBOARD": "render COMPLETE INTERNAL WHOLE-CLIC SYSTEM VISUALIZATION with all materially relevant current information",
+          "666CLIC INTEGRATION AUDIT": "render evidence/relationship/regression/open-gates audit dashboard"
+        },
+        "complete_dashboard_required_domains": [
+          "identity and authority",
+          "repository branch/head/current pointer",
+          "rehydration/semantic coverage",
+          "system/work/todo/interruptions/obligations/daemon/best-valid-continuation",
+          "P14/P20/P21 and Live-Circle when relevant",
+          "relations / learning / input classification",
+          "cross-system inbox/outbox and handoffs",
+          "shared Worker evidence",
+          "recovery / provenance / backup / restore",
+          "security / uncertainty / blockers",
+          "last verified readback",
+          "next meaningful action"
+        ],
+        "rendering_rules": [
+          "Automatic dashboard rendering does not require separate user confirmation when the native trigger is already invoked.",
+          "Dashboard remains presentation-only with no authority or mutation power.",
+          "Do not claim completeness when required evidence has not been read; visibly show PARTIAL or READBACK_PENDING.",
+          "The DASHBOARD trigger must show the complete system with relevant current information, not only a mini-ops subset.",
+          "Use CLIC's own selected visual language and semantic colors."
+        ]
+      }
     }
   }
 }
