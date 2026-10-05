@@ -49,8 +49,9 @@
     "github_migration_scope": "PUBLIC_SANITIZED_STAGING"
   },
   "remaining_checks": [
+    "BYTE_EXACT_PRIVATE_REPO_ARCHIVE",
+    "BIND_ROTATED_PRIVATE_POINTER_CONTENT",
     "COMPLETE_CLIC_NATIVE_COVERAGE",
-    "PRIVATE_RECOVERY_VALIDATION",
     "ISOLATED_PRIVATE_RESTORE",
     "FULL_NATIVE_SEMANTIC_COVERAGE"
   ],
@@ -117,7 +118,7 @@
     "functional_acceptance": "PARTIAL_GATES_REMAIN_OPEN",
     "fresh_chat_p20": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "live_circle_runtime": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
-    "isolated_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
+    "isolated_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
     "authority_switch": "TRUE_2026-10-05",
     "repair_scope": "ISOLATED_GITHUB_REPAIR_BRANCH_NOT_PROMOTED",
     "bootstrap_resolution_order": [
@@ -286,13 +287,13 @@
     "p21_causal_acceptance": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "live_circle_repo_handoff_roundtrip": "VERIFIED",
     "worker_functional_evidence": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
-    "isolated_private_restore": "BLOCKED_PRIVATE_RECOVERY_SECURITY_AND_NONPRODUCTION_PATH",
+    "isolated_private_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
     "full_native_semantic_coverage": "OPEN",
     "note": "This overlay is current. Older functional_acceptance_gates values are preserved historical fields and do not override newer verified evidence.",
     "live_circle_keep_active": "VERIFIED_2026-10-05",
     "live_circle_keep_reachable": "VERIFIED_2026-10-05",
     "live_circle_supersede": "VERIFIED_2026-10-05",
-    "private_recovery_validation": "BLOCKED_LINK_SHARED_ANYONE_READER"
+    "private_recovery_validation": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
   },
   "lyvra_handoff_processing": {
     "status": "CURRENT",
@@ -304,7 +305,7 @@
     },
     "worker_functional_test": "VERIFIED_FUNCTIONAL_ISSUE_VERIFY_2026-10-05",
     "clic_plugin_sync": "VERIFIED_V0_1_5",
-    "return_anchor": "HARDEN_PRIVATE_RECOVERY_WHEN_PERMISSION_DELETE_PATH_EXISTS_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE"
+    "return_anchor": "BIND_ROTATED_PRIVATE_POINTER_CONTENT_THEN_BUILD_BYTE_EXACT_PRIVATE_REPO_ARCHIVE_THEN_ISOLATED_RESTORE_AND_SEMANTIC_COVERAGE_FINALIZATION"
   },
   "clic_plugin_current": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
@@ -420,8 +421,8 @@
   },
   "recovery_current_evidence": {
     "date_local": "2026-10-05",
-    "status": "PARTIAL_SECURITY_BLOCKED",
-    "evidence": "migration/RECOVERY_SECURITY_BACKUP_FRESHNESS_2026-10-05.md",
+    "status": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND",
+    "evidence": "migration/RECOVERY_POINTER_ROTATION_2026-10-05.md",
     "repo_backup_pointer_id": "1y7j6GueUPCuDfBsHVDN4JB0FoKwacuIWX5KthwGJGIw",
     "history_pointer_id": "1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA",
     "work_backup_id": "1GpABAjo_wwOgIe9z9oj2UvwQ3zCe98n1wpFqpcggjEQ",
@@ -434,8 +435,17 @@
     "dev_backup_anyone_reader": true,
     "allow_file_discovery": false,
     "permission_hardening": "BLOCKED_CONNECTOR_HAS_NO_PERMISSION_DELETE_ACTION",
-    "isolated_private_restore": "BLOCKED",
-    "byte_exact_full_repo_archive": "NOT_AVAILABLE_IN_CURRENT_CONNECTOR_PATH"
+    "isolated_private_restore": "BLOCKED_BYTE_EXACT_ARCHIVE_AND_NONPRODUCTION_RESTORE_PATH",
+    "byte_exact_full_repo_archive": "OPEN",
+    "private_recovery_target": "DRIVE_OWNER_ONLY_ROTATED_POINTER_ALIAS",
+    "private_recovery_storage": "VERIFIED_OWNER_ONLY",
+    "private_pointer_copy": "VERIFIED_OWNER_ONLY",
+    "old_exposed_copy": "DELETED_NOT_FOUND_404",
+    "current_tree_private_id_exposure": false,
+    "historical_git_metadata_exposure": true,
+    "new_private_resource_id_published_to_public_repo": false,
+    "private_pointer_content": "CURRENTNESS_UNBOUND",
+    "private_recovery_validation": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
   },
   "semantic_coverage_current_assessment": {
     "status": "OPEN",
@@ -444,8 +454,9 @@
     "p20": "VERIFIED",
     "p21": "VERIFIED",
     "live_circle": "VERIFIED",
-    "primary_remaining_blocker": "PRIVATE_RECOVERY_AND_ISOLATED_RESTORE",
+    "primary_remaining_blocker": "BIND_PRIVATE_POINTER_CONTENT_THEN_BYTE_EXACT_PRIVATE_REPO_ARCHIVE_AND_ISOLATED_RESTORE",
     "event_gated_remaining": "P14",
-    "full_pass_claimed": false
+    "full_pass_claimed": false,
+    "private_recovery": "PARTIAL_STORAGE_VERIFIED_CONTENT_UNBOUND"
   }
 }
