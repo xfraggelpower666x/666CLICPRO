@@ -85,7 +85,7 @@
   ],
   "consumption_rule": "PFS must independently verify all source currentness before acting.",
   "return_anchor_after_pfs_consumption": "CLIC_HOLD_P14_EVENT_GATED_AND_CONTINUE_NEW_VALID_EVOLUTION",
-  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REHYDRATION_BLUEPRINT",
+  "status": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_LIVECIRCLE_REHYDRATION_BLUEPRINT",
   "repo_rehydration_blueprint": {
     "path": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
     "status": "READY",
@@ -103,5 +103,17 @@
       "PRIVATE_RECOVERY_AND_BYTE_EXACT_RESTORE",
       "POINTER_LAST_GOVERNANCE"
     ]
+  },
+  "target_architecture": {
+    "repo_first_required": true,
+    "sole_active_working_field_after_native_promotion": "GITHUB_REPOSITORY",
+    "current_product_authority_after_native_promotion": "GITHUB_REPO_CURRENT",
+    "drive_current_authority_after_native_promotion": false,
+    "drive_active_working_source_after_native_promotion": false,
+    "drive_role_after_native_promotion": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+    "drive_must_not_override_newer_repo_current": true,
+    "csm_relations_current_source_after_native_promotion": "GITHUB_REPO_CURRENT",
+    "child_identity_current_source_after_native_promotion": "GITHUB_REPO_CURRENT",
+    "authority_switch_requires_native_pfs_update": true
   }
 }
