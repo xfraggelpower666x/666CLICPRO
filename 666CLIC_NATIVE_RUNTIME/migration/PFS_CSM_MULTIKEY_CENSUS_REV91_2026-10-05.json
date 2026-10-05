@@ -33,12 +33,11 @@
     "No foreign mutation"
   ],
   "counts": {
-    "ACTIVE_EVIDENCE": 21,
+    "ACTIVE_EVIDENCE": 24,
     "SUPERSEDED_PROVISIONAL_ALIAS": 1,
     "SUPERSEDED_ALIAS_ONLY": 1,
     "RETIRED_HISTORICAL": 3,
     "EXTERNAL_NATIVE_AUTHORITY_OR_MIRROR": 2,
-    "CURRENT_BINDING_REVIEW": 3,
     "BACKUP_ONLY": 2,
     "SPECIAL_DEPLOYMENT_RUNTIME_FORBIDDEN": 1,
     "SPECIAL_NATIVE_LIVE_PFS_PRESERVATION": 1
@@ -523,8 +522,8 @@
     },
     {
       "entry_id": "CSLO-9001",
-      "disposition": "CURRENT_BINDING_REVIEW",
-      "reason": "Current binding exists but no stronger direct classification in parsed latest blocks",
+      "disposition": "ACTIVE_EVIDENCE",
+      "reason": "Direct current child registry block: STATUS=ACTIVE_VERIFIED, LOADABLE=TRUE, MENU_VISIBLE=TRUE, canonical/backup ZIP SHA256+size+CRC readback PASS.",
       "current_binding_text_present": true,
       "latest_evidence": {
         "child": {
@@ -1025,8 +1024,8 @@
     },
     {
       "entry_id": "ITRF-6001",
-      "disposition": "CURRENT_BINDING_REVIEW",
-      "reason": "Current binding exists but no stronger direct classification in parsed latest blocks",
+      "disposition": "ACTIVE_EVIDENCE",
+      "reason": "Direct child pointer 1hc70uzFUNrvwzRncoBHUk9KkJkCH_St0 read: STATUS=ACTIVE_VERIFIED v1.5.0 with audit/re-audit/freeze and byte/hash/CRC readback PASS.",
       "current_binding_text_present": true,
       "latest_evidence": {
         "child": {
@@ -1049,7 +1048,8 @@
         "pointer": null,
         "system": null,
         "menu": null
-      }
+      },
+      "current_pointer_id": "1hc70uzFUNrvwzRncoBHUk9KkJkCH_St0"
     },
     {
       "entry_id": "LIGHT-35001",
@@ -1561,8 +1561,8 @@
     },
     {
       "entry_id": "UCCF-10001",
-      "disposition": "CURRENT_BINDING_REVIEW",
-      "reason": "Current binding exists but no stronger direct classification in parsed latest blocks",
+      "disposition": "ACTIVE_EVIDENCE",
+      "reason": "Direct current registry block: STATUS=ACTIVE_VERIFIED_CHILD_STORED v1.4.0, LOADABLE=TRUE, MENU_VISIBLE=TRUE, canonical/backup file-set readback present. Historical pointer reference currently unreachable and is not used as current proof.",
       "current_binding_text_present": true,
       "latest_evidence": {
         "child": {
@@ -1585,6 +1585,10 @@
         "pointer": null,
         "system": null,
         "menu": null
+      },
+      "historical_pointer_reference": {
+        "id": "1hWxF-Xgr20jcl3oxnKGUK_dAvEmzvU0SQ_Xf1ETLXU8",
+        "status": "UNREACHABLE_HISTORICAL_REFERENCE"
       }
     },
     {
@@ -1856,6 +1860,9 @@
     "CHILD_ID parser boundary corrected before pointer finalization",
     "666CFL provisional identity explicitly superseded by CFL-28001",
     "ISQF-24001 preserved as CHILD_ID-native active evidence",
-    "CGF-31001 resolved from direct ACTIVE_VERIFIED registration block"
+    "CGF-31001 resolved from direct ACTIVE_VERIFIED registration block",
+    "CSLO-9001 promoted from CURRENT_BINDING_REVIEW to ACTIVE_EVIDENCE from direct current-registry readback",
+    "ITRF-6001 promoted from CURRENT_BINDING_REVIEW to ACTIVE_EVIDENCE from direct own child-pointer readback",
+    "UCCF-10001 promoted from CURRENT_BINDING_REVIEW to ACTIVE_EVIDENCE from current-registry readback; old pointer retained as unreachable historical reference"
   ]
 }
