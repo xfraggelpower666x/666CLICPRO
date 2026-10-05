@@ -1,0 +1,15 @@
+{
+  "test_id": "CLIC-WORKER-FUNCTIONAL-20261005-01",
+  "result": "BLOCKED",
+  "reason": "No authenticated functional Worker evidence-flow execution was performed in this CLIC UPDATE; repository/configuration evidence alone cannot prove functional PASS.",
+  "configuration_relation": "STRUCTURALLY_ACCEPTED",
+  "worker_role": "ADDITIONAL_INDEPENDENT_SIGNED_EVIDENCE_ONLY",
+  "clic_primary_source": "GITHUB_REPO_CURRENT",
+  "drive_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+  "secret_values_exposed": false,
+  "signed_ticket_stored": false,
+  "unrelated_open_gates_preserved": true,
+  "authority_transfer": false,
+  "foreign_mutation": false,
+  "next_required_evidence": "Authenticated CLIC namespace BOOT ticket issue+verify flow with TTL<=300 and issuer/subject/namespace/system_id/authority_context checks, without exposing ticket or secrets."
+}
