@@ -1,3 +1,5 @@
+> CURRENTNESS NOTICE 2026-10-05: SUPERSEDED_HISTORICAL_GATE_AUDIT. This carrier is preserved as historical test/provenance material. It is NOT current authority and must not override CURRENT_POINTER.json, REHYDRATION_MANIFEST.json, CURRENT_STATE.md, or newer verified runtime evidence.
+
 # 666CLIC REV91 · P20/P21/Live-Circle Gate Audit
 DATE_UTC=2026-10-02
 STATUS=PARTIAL_READ_ONLY_EVIDENCE_RECONCILIATION
