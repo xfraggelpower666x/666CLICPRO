@@ -261,7 +261,7 @@
       "LYRIC_INTELLIGENCE"
     ],
     "required_current_carrier_census": "FULL_VERIFIED",
-    "full_repo_file_by_file_census": "PARTIAL_EXTREME_HIGH_PLUS",
+    "full_repo_file_by_file_census": "66_OF_67_DIRECT_READ_CLASSIFIED_ONE_LARGE_PRESENTATION_CARRIER_UNREAD",
     "coverage_distinction": "FULL_DECLARED_CURRENT_CARRIERS_NE_ABSOLUTE_HISTORICAL_EMPIRICAL_COMPLETENESS",
     "open_evidence_debt": true,
     "open_event_gated_validation": true,
@@ -276,7 +276,11 @@
       "REACHABLE_LANDSCAPE_STALE_DEV_AND_REV86_METADATA"
     ],
     "direct_read_progress_policy": "NO_ESTIMATED_NUMERATOR_UNTIL_DEDUPLICATED_LEDGER_COMPLETE",
-    "dashboard_index_classification": "EMPTY_OR_NON_TEXT_PRESENTATION_CARRIER"
+    "dashboard_index_classification": "EMPTY_OR_NON_TEXT_PRESENTATION_CARRIER",
+    "direct_read_classified_count": 66,
+    "direct_read_special_present_not_counted": 1,
+    "direct_read_unread_count": 0,
+    "direct_read_ledger": "666CLIC_NATIVE_RUNTIME/relations/LYVRA_RUNTIME_DIRECT_READ_LEDGER_2026-10-05.json"
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
