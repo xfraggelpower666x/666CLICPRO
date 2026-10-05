@@ -261,10 +261,13 @@
       "LYRIC_INTELLIGENCE"
     ],
     "required_current_carrier_census": "FULL_VERIFIED",
-    "full_repo_file_by_file_census": "PARTIAL_VERY_HIGH",
+    "full_repo_file_by_file_census": "PARTIAL_EXTREME_HIGH",
     "coverage_distinction": "FULL_DECLARED_CURRENT_CARRIERS_NE_ABSOLUTE_HISTORICAL_EMPIRICAL_COMPLETENESS",
     "open_evidence_debt": true,
-    "open_event_gated_validation": true
+    "open_event_gated_validation": true,
+    "self_conductor_dual_path": "ONE_CAPABILITY_TWO_COMPLEMENTARY_CARRIERS",
+    "studio2_plugin_ledger": "READ_CLASSIFIED",
+    "specialist_handoff_current": "READ_VERIFIED_REV92"
   },
   "effective_current_gates": {
     "p14": "OPEN_EVENT_GATED",
