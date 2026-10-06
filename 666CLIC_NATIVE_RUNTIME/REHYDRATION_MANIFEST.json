@@ -579,12 +579,18 @@
     "date_local": "2026-10-06",
     "evidence": "migration/POST_P14_EXTERNAL_EVOLUTION_SYNC_2026-10-06.md",
     "lyvra": {
-      "head": "e396235a0f5819b483e7a5a3c355c09bbe8c8472",
+      "head": "c451e9810faa2f2427f02f8db9a7809913d2641c",
       "pointer_status": "CURRENT_PRODUCTIVE_VERIFIED",
       "post_pointer_metadata_closeout": "VERIFIED_CURRENT_POST_POINTER",
       "account_plugin": "0.13.14",
       "native_plugin": "0.1.14",
-      "full_textual_parity": "VERIFIED"
+      "full_textual_parity": "VERIFIED",
+      "current_work_scope": "HISTORICAL_MARKER_NORMALIZATION_COMPLETE_PLUS_FACET_SCOPED_OPEN_VALIDATION",
+      "historical_marker_normalization": "VERIFIED",
+      "pointer_last": "VERIFIED",
+      "identity_change": false,
+      "music_core_change": false,
+      "plugin_release_change": false
     },
     "pfs": {
       "head": "e392d0f064db7a954d68d4991e82e9ef7b50ef3f",
