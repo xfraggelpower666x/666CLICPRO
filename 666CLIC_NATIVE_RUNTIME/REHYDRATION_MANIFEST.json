@@ -475,8 +475,8 @@
     "evidence": "migration/CURRENT_NATIVE_COVERAGE_CLOSEOUT_2026-10-05.md"
   },
   "current_runtime_status": {
-    "date_local": "2026-10-05",
-    "state": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE_P14_EVENT_GATED",
+    "date_local": "2026-10-06",
+    "state": "VERIFIED_ALL_CURRENT_NATIVE_RUNTIME_GATES",
     "p20": "VERIFIED",
     "p21": "VERIFIED",
     "live_circle": "VERIFIED",
@@ -486,12 +486,13 @@
     "transport_boundary": "CLOSED",
     "complete_clic_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
     "full_native_semantic_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
-    "p14": "OPEN_EVENT_GATED",
-    "only_open_current_gate": "P14_EVENT_GATED",
-    "historical_fields_may_remain_stale_by_design": true
+    "p14": "VERIFIED_REAL_EVENT_FOREGROUND_RELEVANCE_2026-10-06",
+    "only_open_current_gate": "NONE",
+    "historical_fields_may_remain_stale_by_design": true,
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
   },
   "current_functional_acceptance_gates": {
-    "P14": "OPEN_EVENT_GATED",
+    "P14": "VERIFIED_REAL_EVENT_FOREGROUND_RELEVANCE_2026-10-06",
     "P20_NEW_CHAT_RUNTIME": "VERIFIED_FRESH_CHAT_REHYDRATION_2026-10-05",
     "P21_CAUSAL_CONSUMPTION": "VERIFIED_FUNCTIONAL_CAUSAL_ACCEPTANCE_2026-10-05",
     "LIVE_CIRCLE": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
@@ -561,5 +562,17 @@
       "failback_state_machine_native_evidence": "NOT_FOUND",
       "migration_closeout": "NOT_YET_VERIFIED"
     }
+  },
+  "p14_runtime_event_evidence": {
+    "status": "VERIFIED_REAL_EVENT_FOREGROUND_RELEVANCE_2026-10-06",
+    "evidence": "migration/P14_REAL_RUNTIME_EVENT_EVIDENCE_2026-10-06.md",
+    "static_only": false,
+    "forced_closed": false,
+    "qualifying_real_event": true,
+    "newer_valid_evolution_preserved": true,
+    "irrelevant_history_not_reactivated": true,
+    "false_reactivation_prevented": true,
+    "return_anchor_preserved": true,
+    "foreign_mutation": false
   }
 }
