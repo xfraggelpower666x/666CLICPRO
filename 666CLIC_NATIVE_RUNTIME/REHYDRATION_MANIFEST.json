@@ -574,5 +574,33 @@
     "false_reactivation_prevented": true,
     "return_anchor_preserved": true,
     "foreign_mutation": false
+  },
+  "post_p14_external_evolution_sync": {
+    "date_local": "2026-10-06",
+    "evidence": "migration/POST_P14_EXTERNAL_EVOLUTION_SYNC_2026-10-06.md",
+    "lyvra": {
+      "head": "e396235a0f5819b483e7a5a3c355c09bbe8c8472",
+      "pointer_status": "CURRENT_PRODUCTIVE_VERIFIED",
+      "post_pointer_metadata_closeout": "VERIFIED_CURRENT_POST_POINTER",
+      "account_plugin": "0.13.14",
+      "native_plugin": "0.1.14",
+      "full_textual_parity": "VERIFIED"
+    },
+    "pfs": {
+      "head": "e392d0f064db7a954d68d4991e82e9ef7b50ef3f",
+      "authority": "GITHUB_REPOSITORY",
+      "drive_role": "HISTORY_BACKUP_RECOVERY",
+      "active_registered": 24,
+      "active_ready_or_bound": 19,
+      "active_remaining": 3,
+      "migration": "OPEN",
+      "new_child_exceptions": [
+        "CYBERINTRO-38001",
+        "CYBERINTROHQ-39001"
+      ],
+      "pointer_last": "VERIFIED"
+    },
+    "clic_current_gates": "ALL_VERIFIED",
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
   }
 }
