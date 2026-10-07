@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "BLOCKED_CONFIRMED_V0_1_11_BINARY_PARITY_MISMATCH",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-020",
+  "status": "BLOCKED_PENDING_V0_1_12_REPO_BINARY_MIRROR",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-012-PENDING",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -12,22 +12,22 @@
   },
   "exact_release": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-    "version": "0.1.10",
-    "release_id": "pluginrel_6ac68b7c6b9c8191804cc12bf5c0373c"
+    "version": "0.1.12",
+    "release_id": "pluginrel_6ac6988775bc8191b6742f4f873c8967"
   },
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "6f04de4b46f5114c9f1e871bdfb0f8fd738a86ff"
+    "semantic_authority_head": "6523b0f6ea2a898cbd208275d45ff43d729e72fa"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
-  "immutable_snapshot": "666clic-plugin/releases/v0.1.10/source",
-  "source_parity": "PASS_16_OF_16",
-  "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
+  "immutable_snapshot": "BLOCKED_PENDING_REPO_BINARY_MIRROR",
+  "source_parity": "PARTIAL_TEXT_PASS_16_OF_16_REPO_BINARY_MIRROR_PENDING",
+  "semantic_parity": "VERIFIED_RUNTIME_SEMANTICS_PRESENTATION_ALIGNED",
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_CHANGES",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "BLOCKED_PENDING_FRESH_V0_1_11_BINARY_PARITY_AND_APPROVAL",
+  "pfs_execution_status": "BLOCKED_PENDING_FULL_V0_1_12_REPO_SOURCE_PARITY",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -49,14 +49,14 @@
     "reason": "VALID_NEWER_LIVE_PLUGIN_EVOLUTION_WITH_BINARY_ASSET_NOT_YET_REPO_BYTE_VERIFIED"
   },
   "supersession_body_head": "d3084ca886afcfce848fe651b05ace817b098a65",
-  "binary_parity_evidence": "666CLIC_NATIVE_RUNTIME/migration/PLUGIN_V0_1_11_BINARY_PARITY_BLOCKER_2026-10-07.md",
+  "binary_parity_evidence": "666CLIC_NATIVE_RUNTIME/migration/PLUGIN_V0_1_12_LOGO_ALIGNMENT_2026-10-07.md",
   "binary_parity": {
     "live_asset_path": "assets/clic-logo.png",
-    "live_reported_size_bytes": 2459522,
-    "official_logo_size_bytes": 2929725,
     "official_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
-    "byte_identity": "FAIL_BY_SIZE_DIFFERENCE",
-    "text_parity": "PASS_16_OF_16",
-    "full_source_parity": "PARTIAL_BINARY_BLOCKED"
+    "official_logo_size_bytes": 2929725,
+    "live_reported_size_bytes": 2929725,
+    "live_alignment": "VERIFIED_BY_EXACT_UPLOAD_SOURCE_PLUS_POST_UPDATE_SIZE_READBACK",
+    "repo_binary_mirror": "PENDING",
+    "full_source_parity": "PARTIAL"
   }
 }
