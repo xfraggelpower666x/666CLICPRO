@@ -1,6 +1,6 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "SUPERSEDED_PENDING_V0_1_11_BINARY_PARITY",
+  "status": "BLOCKED_CONFIRMED_V0_1_11_BINARY_PARITY_MISMATCH",
   "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-020",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
@@ -27,7 +27,7 @@
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_CHANGES",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "BLOCKED_PENDING_FRESH_V0_1_11_APPROVAL",
+  "pfs_execution_status": "BLOCKED_PENDING_FRESH_V0_1_11_BINARY_PARITY_AND_APPROVAL",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -48,5 +48,15 @@
     "logo_path": "assets/clic-logo.png",
     "reason": "VALID_NEWER_LIVE_PLUGIN_EVOLUTION_WITH_BINARY_ASSET_NOT_YET_REPO_BYTE_VERIFIED"
   },
-  "supersession_body_head": "d3084ca886afcfce848fe651b05ace817b098a65"
+  "supersession_body_head": "d3084ca886afcfce848fe651b05ace817b098a65",
+  "binary_parity_evidence": "666CLIC_NATIVE_RUNTIME/migration/PLUGIN_V0_1_11_BINARY_PARITY_BLOCKER_2026-10-07.md",
+  "binary_parity": {
+    "live_asset_path": "assets/clic-logo.png",
+    "live_reported_size_bytes": 2459522,
+    "official_logo_size_bytes": 2929725,
+    "official_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "byte_identity": "FAIL_BY_SIZE_DIFFERENCE",
+    "text_parity": "PASS_16_OF_16",
+    "full_source_parity": "PARTIAL_BINARY_BLOCKED"
+  }
 }
