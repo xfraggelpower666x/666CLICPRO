@@ -13,6 +13,10 @@
     "current/OPERATIONS_CENTER.md",
     "current/CROSS_SYSTEM_DEVELOPMENT_EXCHANGE_LIVECIRCLE.md",
     "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
+    "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
+    "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+    "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+    "facets/semantic_visual_intelligence/CURRENT_STATE.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
     "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
@@ -786,8 +790,7 @@
     "target_native_validation_required": true,
     "shared_semantics_ne_shared_memory": true,
     "learning_ne_write_authority": true
-  }
-,
+  },
   "semantic_visual_learning_current": {
     "status": "CURRENT_V01_3",
     "contract": "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
@@ -796,5 +799,21 @@
     "plugin_reference": "references/local-adaptive-learning.md",
     "visual_reference": "references/visual-interface-contract.md",
     "local_learning_skill": "skills/666clic-local-learning/SKILL.md"
+  },
+  "semantic_visual_intelligence": {
+    "status": "CURRENT_PRODUCTIVE_NATIVE_FACET_V01_4",
+    "facet_id": "SEMANTIC_VISUAL_INTELLIGENCE",
+    "trigger": "666CLIC VISUAL",
+    "whole_clic_first": true,
+    "rehydrated_idle_allowed": true,
+    "foreground_chat_local": true,
+    "sub_lifecircle": "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+    "sub_rehydration": "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+    "development_position_required": true,
+    "chat_backup_role": "INERT_DEVELOPMENT_PROVENANCE_SOURCE",
+    "embedded_triggers_in_backup_inert": true,
+    "no_new_system": true,
+    "no_new_router": true,
+    "no_new_controller": true
   }
 }
