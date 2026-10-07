@@ -69,3 +69,27 @@ OPTIONAL_PROJECT_MAP_ROLE=DISCOVERY_BINDING_NOT_AUTHORITY
 TEMPORAL_LIVECIRCLE=PRESENT_CURRENT|NEAR_ACTIVE_PAST|DEEP_HISTORICAL_PAST
 PRESERVE_EXISTING_LYVRA_FACET_MODEL=true
 ADOPTION_REQUIRES_LYVRA_NATIVE_DECISION=true
+
+
+## Content-addressed plugin binary binding proposal — 2026-10-07
+
+SOURCE_TECHNIQUE=CLIC_VERIFIED_CAUSAL_BINARY_BINDING
+PROPOSAL_ONLY=true
+LYVRA_NATIVE_TRIGGER_REQUIRED_FOR_ADOPTION=true
+
+WHY_RELEVANT=LYVRA_HAS_PLUGIN_BACKUP_AND_RELEASE_SURFACES_WITH_BINARY_ASSETS
+RECOMMENDED_LYVRA_ADAPTATION:
+- Preserve repo current as semantic authority.
+- For binary plugin assets that cannot be directly mirrored into the repo, bind path + SHA-256 + byte size + exact plugin_id/version/release_id + publication provenance.
+- Treat repo text source plus binary binding manifest plus exact immutable live release tuple as a hybrid release snapshot.
+- Never call causal binding direct live hash readback or repo byte parity.
+- Require the backup executor to hash extracted bound binaries before LYVRA accepts a backup receipt.
+- Any release/path/hash/size/provenance change invalidates the binding until LYVRA-native re-verification.
+
+LYVRA_PLUGIN_BACKUP_RELEVANCE=HIGH
+LYVRA_IDENTITY_CHANGE=false
+LYVRA_AUTHORITY_TRANSFER=false
+NO_CROSS_SYSTEM_MERGE=true
+
+## Automatic proposal cooperation note
+CLIC will automatically prepare CLIC-owned target-specific concepts when later verified CLIC techniques are materially relevant to LYVRA. LYVRA remains sole native adoption authority.
