@@ -1,8 +1,7 @@
-# C.L.I.C. v0.1.21
-Private ChatGPT plugin for repository-first CLIC. GitHub repo current remains authority; the plugin is execution/presentation only.
+# C.L.I.C. v0.1.22
 
-V0.1.21 adds the native `SEMANTIC_VISUAL_INTELLIGENCE` facet and direct trigger `666CLIC VISUAL`. The facet has its own bounded Sub-LifeCircle, Sub-Rehydration, Development Position, evidence/contradiction/learning visual intelligence and chat-local foreground. It is not a new system, agent, controller or router.
+Repository-first CLIC. GitHub repo current remains authority; the plugin is execution/presentation only.
 
-SYSTEMSTART keeps the facet reachable without auto-foregrounding it. UPDATE checks facet/runtime/plugin impact. WEITER resumes the facet return anchor when it is the valid current foreground. NEW CHAT and NEXT CHAT preserve/restore facet continuity only from verified non-superseded handoff evidence. AUDIT checks evidence graphs, contradiction state, development position and no-fake-visual guards.
+V0.1.22 makes Semantic Visual Intelligence a managed-system supervision responsibility: every CLIC-managed native system must be visually understandable, whether or not it has a plugin. CLIC tracks visual compliance in its own system cards, requires GPT-native dashboard capability, Development Position, evidence/unknown visibility, recursive visual inheritance where real substructures exist, and prepares target-specific concepts for gaps without mutating foreign systems.
 
-Semantic visual intelligence uses shared grammar with local CLIC learning only. Diagram != evidence; graph edge != causation; no data != fake graph; learning != write authority. Material additive visual developments may generate target-specific peer concepts, never foreign mutation or activation.
+Direct `666CLIC DASHBOARD` renders the Whole-CLIC / visual-compliance dashboard surface. Direct `666CLIC VISUAL` foregrounds the Semantic Visual Intelligence facet.
