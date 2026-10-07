@@ -18,7 +18,8 @@
     "0.1.4",
     "0.1.5",
     "0.1.6",
-    "0.1.7"
+    "0.1.7",
+    "0.1.8"
   ],
   "repo_source_mirror": "666clic-plugin/source",
   "immutable_baseline": "666clic-plugin/releases/v0.1.5/source",
@@ -26,11 +27,11 @@
   "foreign_mutation": false,
   "note": "Plugin source/release history is a CLIC-owned execution-surface mirror. 666CLIC_NATIVE_RUNTIME remains system authority.",
   "current_live_plugin": {
-    "version": "0.1.7",
-    "release_id": "pluginrel_6ac65a350e9481919591e60b91bdca70",
+    "version": "0.1.8",
+    "release_id": "pluginrel_6ac66802da4c8191a5851390825d283e",
     "readback": "VERIFIED",
     "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE"
   },
-  "latest_immutable_snapshot": "666clic-plugin/releases/v0.1.7/source",
+  "latest_immutable_snapshot": "666clic-plugin/releases/v0.1.8/source",
   "self_interest_sweep_governance": "666CLIC_NATIVE_RUNTIME/current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md"
 }
