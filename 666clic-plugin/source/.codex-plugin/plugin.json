@@ -17,7 +17,7 @@
   },
   "apps": "./.app.json",
   "name": "666clic-native-runtime",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Native 666CLIC repository-first runtime with relational rehydration, shared daemon adapter continuity, understeer/oversteer guards, currentness fingerprints, governed plugin parity, native plugin-backup approval, self-interest learning sweeps, audits and evidence-first dashboards.",
   "author": {
     "name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"
