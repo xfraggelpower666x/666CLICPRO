@@ -761,9 +761,9 @@
     "currentness_fingerprint_binding": true
   },
   "current_cross_system_synthesis": "current/CROSS_SYSTEM_ARCHITECTURE_SYNTHESIS_2026-10-07.md",
-  "current_plugin_version": "0.1.16",
-  "current_plugin_release": "pluginrel_6ac69f9432e4819194f58caa66a28271",
-  "current_plugin_source_parity": "VERIFIED_HYBRID_20_TEXT_PLUS_CAUSAL_BINARY_BINDING",
+  "current_plugin_version": "0.1.20",
+  "current_plugin_release": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
+  "current_plugin_source_parity": "VERIFIED_HYBRID_23_TEXT_PLUS_CAUSAL_BINARY_BINDING",
   "current_understanding_cards": {
     "clic": "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md",
     "lyvra": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
@@ -786,5 +786,15 @@
     "target_native_validation_required": true,
     "shared_semantics_ne_shared_memory": true,
     "learning_ne_write_authority": true
+  }
+,
+  "semantic_visual_learning_current": {
+    "status": "CURRENT_V01_3",
+    "contract": "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
+    "livecircle_integration": true,
+    "rehydration_integration": true,
+    "plugin_reference": "references/local-adaptive-learning.md",
+    "visual_reference": "references/visual-interface-contract.md",
+    "local_learning_skill": "skills/666clic-local-learning/SKILL.md"
   }
 }
