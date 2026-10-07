@@ -1,14 +1,14 @@
 {
   "system": "666CLIC",
-  "status": "REPO_NATIVE_CURRENT_RUNTIME_ALL_GATES_VERIFIED_LYVRA_RELATIONAL_CARD_EVOLVED",
+  "status": "REPO_NATIVE_CURRENT_RUNTIME_ALL_GATES_VERIFIED_LYVRA_RELATIONAL_REHYDRATION_LEARNED",
   "staging_sync_revision": 91,
   "source_authority": "GITHUB_REPO_CURRENT",
   "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
-  "lyvra_understanding_card_revision": "REPO_CURRENT_RELATIONAL_EVOLUTION_2026-10-07",
-  "last_verified_lyvra_head": "4217807487970e8aff8376b8415eca87a4d6305b",
+  "lyvra_understanding_card_revision": "REPO_CURRENT_RELATIONAL_REHYDRATION_EVOLUTION_2026-10-07",
+  "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "1bcb25755c708ccae756c01b03121d743d271469",
+  "body_head_before_pointer": "c0273788390839e00389a28ec67657c85731356f",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -938,7 +938,7 @@
     "p14_runtime_evidence": "migration/P14_REAL_RUNTIME_EVENT_EVIDENCE_2026-10-06.md",
     "all_current_native_runtime_gates": "VERIFIED",
     "post_p14_external_evolution_sync": "VERIFIED_READBACK",
-    "lyvra_verified_head": "4217807487970e8aff8376b8415eca87a4d6305b",
+    "lyvra_verified_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
     "lyvra_post_pointer_metadata_closeout": "VERIFIED_CURRENT_POST_POINTER",
     "pfs_active_registered": 24,
     "pfs_new_child_exceptions": [
@@ -954,13 +954,22 @@
     "lyvra_track_design_revision": 93,
     "lyvra_relational_card_evolution": "VERIFIED_2026-10-07",
     "clic_learned_patterns": [
-      "SUB_LIFECIRCLE_WITHOUT_IDENTITY_SPLIT",
-      "REFERENCE_INTELLIGENCE_DONT_CLONE",
-      "WORKSPACE_LINEAGE_CONTINUITY",
-      "CHAT_LOCAL_FOREGROUND_NE_GLOBAL_STATE",
-      "HISTORICAL_MARKER_NORMALIZATION",
-      "SEMANTIC_SIGNAL_NE_AUTHORITY_TRANSFER"
+      "RELATIONAL_REHYDRATION",
+      "REPAIR_PASS_NE_DEVELOPMENT_COMPLETE",
+      "STRUCTURAL_PASS_NE_GOAL_COMPLETE",
+      "DIRECT_OPERATIONAL_EVIDENCE_GT_METADATA_INFERENCE",
+      "STATE_STEWARDSHIP_NE_DECISION_AUTHORITY",
+      "NEWEST_CANDIDATE_NE_BEST_VALID_STATE",
+      "MODE_SPECIFIC_CONTROL_LOGIC",
+      "MINIMAL_EXECUTION_PACKET"
     ],
-    "lyvra_foreign_mutation": false
+    "lyvra_foreign_mutation": false,
+    "lyvra_plugin_surfaces": [
+      "0.13.31",
+      "0.1.31"
+    ],
+    "lyvra_freshness": "114_CARRIERS_0_MISMATCH",
+    "lyvra_relational_rehydration_learning": "VERIFIED_2026-10-07",
+    "interruption_policy": "PAUSE_INGEST_PROCESS_RESUME_FROM_LAST_VERIFIED_STEP"
   }
 }
