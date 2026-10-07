@@ -1,0 +1,26 @@
+{
+  "system": "666CLIC",
+  "component": "666clic-native-runtime",
+  "architecture_created": "2026-10-07",
+  "authority_repo": "xfraggelpower666x/666CLICPRO",
+  "authority_branch": "clic-migration-rev79-staging",
+  "live_plugin_baseline": {
+    "version": "0.1.5",
+    "release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919",
+    "file_count": 13,
+    "readback": "VERIFIED_DIRECT_PLUGIN_CREATOR"
+  },
+  "release_history_observed": [
+    "0.1.0",
+    "0.1.1",
+    "0.1.2",
+    "0.1.3",
+    "0.1.4",
+    "0.1.5"
+  ],
+  "repo_source_mirror": "666clic-plugin/source",
+  "immutable_baseline": "666clic-plugin/releases/v0.1.5/source",
+  "authority_transfer": false,
+  "foreign_mutation": false,
+  "note": "Plugin source/release history is a CLIC-owned execution-surface mirror. 666CLIC_NATIVE_RUNTIME remains system authority."
+}
