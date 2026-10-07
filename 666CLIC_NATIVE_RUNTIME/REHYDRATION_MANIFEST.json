@@ -753,7 +753,7 @@
     "currentness_fingerprint_binding": true
   },
   "current_cross_system_synthesis": "current/CROSS_SYSTEM_ARCHITECTURE_SYNTHESIS_2026-10-07.md",
-  "current_plugin_version": "0.1.10",
-  "current_plugin_release": "pluginrel_6ac68b7c6b9c8191804cc12bf5c0373c",
-  "current_plugin_source_parity": "PASS_16_OF_16"
+  "current_plugin_version": "0.1.11",
+  "current_plugin_release": "pluginrel_6ac68de349a88191996787ed7da86b10",
+  "current_plugin_source_parity": "PARTIAL_TEXT_16_OF_16_BINARY_PENDING"
 }
