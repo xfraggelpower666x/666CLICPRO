@@ -17,6 +17,8 @@
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
     "facets/semantic_visual_intelligence/CURRENT_STATE.md",
+    "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md",
+    "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
     "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
@@ -814,6 +816,11 @@
     "embedded_triggers_in_backup_inert": true,
     "no_new_system": true,
     "no_new_router": true,
-    "no_new_controller": true
+    "no_new_controller": true,
+    "managed_system_visual_compliance": "REQUIRED",
+    "dashboard_capability_for_managed_systems": "REQUIRED_WITHOUT_PLUGIN_DEPENDENCY",
+    "system_card_visual_fields_required": true,
+    "compliance_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "compliance_standard": "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md"
   }
 }
