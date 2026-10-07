@@ -372,3 +372,25 @@ NOTICE_RECEIVED_NE_STATE_UNDERSTOOD=true
 CLIC_MUST_ANALYZE_PFS_CURRENT_STATE_READ_ONLY_BEFORE_FINAL_CARD_UPDATE=true
 NOTICE_ONLY_CARD_UPDATE=FORBIDDEN
 TARGET_NATIVE_CURRENT_AUTHORITY_MUST_BE_READ=true
+
+
+## Runtime/plugin-state fingerprint approval concept — 2026-10-07
+
+SOURCE_TECHNIQUE=CLIC_RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE
+PROPOSAL_ONLY=true
+PFS_NATIVE_TRIGGER_REQUIRED=true
+
+WHY_RELEVANT=PFS_COORDINATES_MANAGED_PLUGIN_BACKUP_ROUNDS_AND_CURRENTLY_RESTARTS_ROUNDS_ON_STALE_FOREIGN_RELEASE_OBSERVATIONS
+
+RECOMMENDED_PFS_ADAPTATION:
+- Track each managed native system leg by a native runtime/plugin-state fingerprint, not raw repository HEAD alone.
+- Keep repository HEAD as provenance.
+- Treat approval-carrier and root-pointer tail writes as non-semantic when the native fingerprint revalidates unchanged.
+- Require a new round when the native fingerprint changes or cannot be reverified.
+- Preserve per-system native approval authority; PFS never self-approves foreign legs.
+
+PFS_MANAGED_ROUND_FRESHNESS_KEY=TARGET_NATIVE_RUNTIME_PLUGIN_STATE_FINGERPRINT
+HEAD_CHANGE_NE_AUTOMATIC_ROUND_INVALIDATION=true
+FINGERPRINT_CHANGE_REQUIRES_NEW_ROUND=true
+PFS_CURRENT_CLIC_LEG_MUST_REFRESH_TO=0.1.15|pluginrel_6ac69d1c913c81918aca4a6f40113616
+CLIC_CURRENT_APPROVAL=CLIC-PFS-PLUGIN-BACKUP-2026-10-07-015
