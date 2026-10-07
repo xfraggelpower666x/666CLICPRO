@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
   "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-015",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-016",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -12,20 +12,20 @@
   },
   "exact_release": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-    "version": "0.1.15",
-    "release_id": "pluginrel_6ac69d1c913c81918aca4a6f40113616"
+    "version": "0.1.16",
+    "release_id": "pluginrel_6ac69f9432e4819194f58caa66a28271"
   },
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "5cbab9112c6e355a32042e59ac5b799d9d9e527d"
+    "semantic_authority_head": "1c88b7c360df879a310d8e1672c804ba365cebda"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
-  "immutable_snapshot": "666clic-plugin/releases/v0.1.15",
-  "source_parity": "PASS_19_OF_19_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
+  "immutable_snapshot": "666clic-plugin/releases/v0.1.16",
+  "source_parity": "PASS_20_OF_20_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
   "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
-  "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_OR_BINARY_BINDING_CHANGES",
+  "freshness_race_guard": "SUPERSEDED_IF_RUNTIME_PLUGIN_STATE_FINGERPRINT_CHANGES_OR_CANNOT_BE_REVERIFIED",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
   "pfs_execution_status": "PENDING",
   "backup_write_status": "PENDING",
@@ -60,14 +60,29 @@
     "full_source_parity": "PARTIAL"
   },
   "binary_binding": {
-    "manifest": "666clic-plugin/releases/v0.1.15/BINARY_BINDING.json",
+    "manifest": "666clic-plugin/releases/v0.1.16/BINARY_BINDING.json",
     "path": "assets/clic-logo.png",
     "sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
     "size_bytes": 2929725,
     "status": "VERIFIED_CAUSAL_BINARY_BINDING",
-    "direct_live_hash_readback": "UNAVAILABLE",
-    "repo_binary_copy": "NOT_PRESENT",
     "pfs_must_verify_extracted_hash_and_size": true
   },
-  "hybrid_snapshot_status": "VERIFIED"
+  "hybrid_snapshot_status": "VERIFIED",
+  "runtime_plugin_state_fingerprint": {
+    "algorithm": "SHA256_CANONICAL_JSON_V1",
+    "value": "6160e20b0e24e5219c8efd2a63815455dc2a8050bd3c1113cf9b3f830e86d677",
+    "inputs": {
+      "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+      "plugin_version": "0.1.16",
+      "plugin_release_id": "pluginrel_6ac69f9432e4819194f58caa66a28271",
+      "repo_text_source_tree_sha": "1934021bb8c277c38db1cf795865c6bc3023f1b3",
+      "binary_binding_manifest_sha": "d94d8a6585780aa3e6ddccda2056a629cd353d74",
+      "runtime_semantic_body_head": "1c88b7c360df879a310d8e1672c804ba365cebda",
+      "plugin_current_semantic_class": "VERIFIED_HYBRID_SNAPSHOT"
+    }
+  },
+  "approval_freshness_model": "RUNTIME_PLUGIN_STATE_FINGERPRINT",
+  "head_change_ne_automatic_supersession": true,
+  "fingerprint_change_supersedes": true,
+  "governance_only_head_advance_may_preserve_after_direct_revalidation": true
 }
