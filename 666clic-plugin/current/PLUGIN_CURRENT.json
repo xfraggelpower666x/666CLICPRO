@@ -1,0 +1,17 @@
+{
+  "system": "666CLIC",
+  "plugin_name": "666clic-native-runtime",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "current_live_version": "0.1.5",
+  "current_live_release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919",
+  "live_readback": "VERIFIED",
+  "repo_source_path": "666clic-plugin/source",
+  "immutable_release_snapshot": "666clic-plugin/releases/v0.1.5/source",
+  "source_baseline_class": "LIVE_PLUGIN_TEXT_SOURCE_MIRROR",
+  "runtime_repo_head_at_architecture_creation": "fa6767dc9d48d8fe00232c62805e5a6c4c0200ec",
+  "repo_plugin_semantic_parity": "STALE_REQUIRES_RUNTIME_RECONCILIATION",
+  "plugin_is_authority": false,
+  "repo_current_is_authority": true,
+  "next_required_action": "RUNTIME_PLUGIN_IMPACT_AUDIT_AND_GUARDED_PLUGIN_RELEASE",
+  "pointer_role": "PLUGIN_SURFACE_POINTER_ONLY_NOT_CLIC_ROOT_POINTER"
+}
