@@ -19,3 +19,5 @@ TARGET_NATIVE_TRIGGER_REQUIRED_FOR_ADOPTION = true.
 DEVELOPMENT_NOTICE_NE_TRIGGER = true.
 
 Cards should capture change, causal meaning, relations, counterrelations, boundaries, provenance, supersession and executable consequence.
+
+NOTICE_RECEIVED != STATE_UNDERSTOOD. After a verified development notice, CLIC must analyze the affected native system read-only at its current authority before finalizing the understanding-card update. Read the target's current pointer/equivalent plus relevant current-state, rehydration, LiveCircle, daemon/facet/project carriers, compare notice to actual state, classify valid evolution/conflict, then update the card. NOTICE_ONLY_CARD_UPDATE = FORBIDDEN.
