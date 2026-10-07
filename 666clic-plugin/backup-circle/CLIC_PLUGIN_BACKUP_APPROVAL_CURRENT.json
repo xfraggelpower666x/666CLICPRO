@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
   "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-017",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-020",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -12,17 +12,17 @@
   },
   "exact_release": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-    "version": "0.1.16",
-    "release_id": "pluginrel_6ac69f9432e4819194f58caa66a28271"
+    "version": "0.1.20",
+    "release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726"
   },
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "4eca48543c2ecb18288e7063df18b3a9b5178fb5"
+    "semantic_authority_head": "1b2be597e3e426fde5a6c607439a97861f72c33f"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
-  "immutable_snapshot": "666clic-plugin/releases/v0.1.16",
-  "source_parity": "PASS_20_OF_20_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
+  "immutable_snapshot": "666clic-plugin/releases/v0.1.20",
+  "source_parity": "PASS_23_OF_23_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
   "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_RUNTIME_PLUGIN_STATE_FINGERPRINT_CHANGES_OR_CANNOT_BE_REVERIFIED",
@@ -60,7 +60,7 @@
     "full_source_parity": "PARTIAL"
   },
   "binary_binding": {
-    "manifest": "666clic-plugin/releases/v0.1.16/BINARY_BINDING.json",
+    "manifest": "666clic-plugin/releases/v0.1.20/BINARY_BINDING.json",
     "path": "assets/clic-logo.png",
     "sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
     "size_bytes": 2929725,
@@ -70,14 +70,14 @@
   "hybrid_snapshot_status": "VERIFIED",
   "runtime_plugin_state_fingerprint": {
     "algorithm": "SHA256_CANONICAL_JSON_V1",
-    "value": "78cfc46edbfbef7288af9ef31866546130a361f0b5345b75009ae931c740ac5e",
+    "value": "b8fe2c76f4b6e39b086075893dff0f28dff66d1b1b214ccd1b4fbe6387198d37",
     "inputs": {
       "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-      "plugin_version": "0.1.16",
-      "plugin_release_id": "pluginrel_6ac69f9432e4819194f58caa66a28271",
-      "repo_text_source_tree_sha": "1934021bb8c277c38db1cf795865c6bc3023f1b3",
-      "binary_binding_manifest_sha": "d94d8a6585780aa3e6ddccda2056a629cd353d74",
-      "runtime_semantic_body_head": "4eca48543c2ecb18288e7063df18b3a9b5178fb5",
+      "plugin_version": "0.1.20",
+      "plugin_release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
+      "repo_text_source_tree_sha": "e415a0548c0a81ad754205479529bb0816e8365b",
+      "binary_binding_manifest_sha": "51f543d02210ff63fbaa47646b33b8ff6c90127e",
+      "runtime_semantic_body_head": "1b2be597e3e426fde5a6c607439a97861f72c33f",
       "plugin_current_semantic_class": "VERIFIED_HYBRID_SNAPSHOT"
     }
   },
