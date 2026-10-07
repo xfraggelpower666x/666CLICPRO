@@ -2,7 +2,7 @@
   "interface": {
     "displayName": "C.L.I.C.",
     "shortDescription": "Repository-native CLIC",
-    "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, relational rehydration, shared daemon adapter continuity, understeer/oversteer rehydration guards, currentness fingerprints, governed plugin parity and native plugin-backup approval.",
+    "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, native Semantic Visual Intelligence facet, relational rehydration, shared daemon continuity, currentness fingerprints and governed plugin parity.",
     "developerName": "FRAGGELPOWER666 / 666SOUNDsDESIGn",
     "category": "Productivity",
     "capabilities": [
@@ -17,8 +17,8 @@
   },
   "apps": "./.app.json",
   "name": "666clic-native-runtime",
-  "version": "0.1.20",
-  "description": "Native 666CLIC repository-first runtime with relational rehydration, shared daemon adapter continuity, understeer/oversteer guards, currentness fingerprints, governed plugin parity, native plugin-backup approval, self-interest learning sweeps, audits and evidence-first dashboards.",
+  "version": "0.1.21",
+  "description": "Native 666CLIC repository-first runtime with causal learning, semantic visual intelligence facet, relational rehydration, shared daemon continuity, governed plugin parity, audits and evidence-first GPT-native surfaces.",
   "author": {
     "name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"
   },
