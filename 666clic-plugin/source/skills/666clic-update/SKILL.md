@@ -13,3 +13,5 @@ description: Perform governed repository-native CLIC writes with plugin impact p
 8. Plugin is execution/presentation surface; repo current remains authority.
 9. Body writes > direct readback > freshness/manifest alignment > approval carrier if applicable > root pointer last; no post-pointer mutation.
 10. Never fabricate gates, plugin publication, backup execution, readback, receipts or foreign writes.
+
+11. Binary plugin assets may use VERIFIED_CAUSAL_BINARY_BINDING only under references/binary-asset-binding.md when direct live binary hash readback or repo binary ingestion is unavailable. This is never called repo byte parity. Fresh backup approval requires an exact release tuple and immutable hybrid snapshot; PFS must verify the approved binary SHA-256 and size from the extracted exact release archive before a receipt can exist.
