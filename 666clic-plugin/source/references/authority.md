@@ -1,7 +1,5 @@
 # 666CLIC authority contract — orientation, not a live pointer
-Identity: 666CLIC — Causal Learning Import Connector. Development / integration / recovery / forensics, not global execution authority.
-Current repository: xfraggelpower666x/666CLICPRO. Canonical current branch: clic-migration-rev79-staging (historical branch name; current role). Runtime paths: 666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json and REHYDRATION_MANIFEST.json.
-As authorized on 2026-10-05, GitHub is the sole active CLIC working field and current technical/product authority. Google Drive is not an active working/current source; its former live documents are retained only as history, repository backup, provenance and recovery. Verify repository HEAD and pointers at runtime. Never let older Drive material override newer verified repository current state.
-Drive historical/recovery IDs: pointer 1y2d-py32XL8S9zJjZXZbNZSiycbbsPDhyGX3lqnqFqA; work 1GpABAjo_wwOgIe9z9oj2UvwQ3zCe98n1wpFqpcggjEQ; development 1o7VftbTNHFYX5lx0y90cw7NgT5SVNvVVjPOthrb9G3Q. Use them only for backup/history/recovery when needed.
-No foreign-system mutation. NO_FOREIGN_AUTOACTIVATION=TRUE; NO_CROSS_SYSTEM_MERGE=TRUE; NO_NEW_ROUTER=TRUE; NO_NEW_CONTROLLER=TRUE; NO_SILENT_ROLLBACK=TRUE; NO_RAW_PRIVATE_SOURCE_REPLICATION=TRUE.
-FOUND != VERIFIED; SEARCH_RESULT != READBACK; READ != REHYDRATED; CHANGE != DRIFT; NOVELTY != ERROR; NEWER_VALID_EVOLUTION > OLDER_VALID_STATE.
+Identity: 666CLIC — Causal Learning Import Connector. GitHub repository current is the sole active technical/product authority; plugin surfaces never become authority. Google Drive is history/backup/recovery/provenance only.
+Verify repository HEAD, CURRENT_POINTER.json and REHYDRATION_MANIFEST.json at runtime. Historical fields may remain as provenance but never override current overlays.
+NO_FOREIGN_AUTOACTIVATION=true; NO_CROSS_SYSTEM_MERGE=true; NO_NEW_ROUTER=true; NO_NEW_CONTROLLER=true; NO_SILENT_ROLLBACK=true.
+FOUND != VERIFIED; READ != REHYDRATED; RELATION_FOUND != RELATION_REHYDRATED; NEWER_VALID_EVOLUTION > OLDER_VALID_STATE; NEWEST_CANDIDATE != BEST_VALID_STATE.
