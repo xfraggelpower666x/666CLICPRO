@@ -437,3 +437,29 @@ CANDIDATE_NE_PRODUCTION_RULE=true
 CONTRADICTION_NE_OVERWRITE=true
 OUTCOME_REQUIRED_FOR_PROMOTION=true
 FOREIGN_SIGNAL_NE_WRITE_AUTHORITY=true
+
+
+## Managed-round carrier convergence proposal — 2026-10-08
+
+SOURCE_PATTERN=PFS_R02_POINTER_CURRENT_STATE_FREEZE_GT_STALE_SECONDARY_JSON
+SOURCE_PFS_HEAD=364339e440ef03273a519b3dabf8e8c19e0c236a
+PROPOSAL_ONLY=true
+PFS_NATIVE_TRIGGER_REQUIRED=true
+
+OBSERVED:
+- registry/CURRENT_POINTER.md resolves R02
+- registry/CURRENT_STATE.md resolves R02
+- history/666PFS_MANAGED_PLUGIN_ROUND_R02_FREEZE_2026-10-08.md resolves R02
+- 666pfs-plugin/continuity/MANAGED_PLUGIN_BACKUP_ROUND_CURRENT.json still carries an older round
+
+RECOMMENDED_PFS_ADAPTATION:
+- Bind all current-round carriers to a single MANAGED_ROUND_STATE_FINGERPRINT.
+- Pointer/current-state/freeze/round-json/dashboard should either revalidate the same round fingerprint or be explicitly historical/superseded.
+- A stale secondary current-named carrier must never silently coexist as if current.
+- Final execution preflight should reject mismatched round fingerprints before any backup write.
+- Pointer remains last publication carrier.
+
+MANAGED_ROUND_STATE_FINGERPRINT_INPUTS=ROUND_ID|PFS_PLUGIN_RELEASE|LYVRA_RUNTIME_FINGERPRINT|CLIC_RUNTIME_FINGERPRINT|NATIVE_APPROVAL_SET|FREEZE_BLOB
+MISMATCH=REVALIDATE_OR_SUPERSEDE_BEFORE_EXECUTION
+STALE_SECONDARY_CARRIER_NE_CURRENT_AUTHORITY=true
+NO_AUTOMATIC_FOREIGN_MUTATION=true
