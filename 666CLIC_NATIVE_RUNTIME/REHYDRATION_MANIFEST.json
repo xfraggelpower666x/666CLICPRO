@@ -734,5 +734,22 @@
     "receipt_creation": "ONLY_AFTER_REAL_PFS_EXECUTION_EVIDENCE",
     "restore_candidate_only": true,
     "foreign_mutation": false
+  },
+  "current_learning_evolution_2026_10_07": {
+    "status": "CURRENT_PRODUCTIVE",
+    "carrier": "current/LYVRA_DAEMON_FACET_REHYDRATION_LEARNING_2026-10-07.md",
+    "shared_daemon_adapter_rehydration": true,
+    "domain_sub_lifecircle_without_authority_split": true,
+    "rehydrated_reachable_ne_foreground": true,
+    "understeer_oversteer_guard": true,
+    "completeness_ne_maximum_context": true,
+    "currentness_fingerprint_binding": true,
+    "relational_card_counterrelations": true
+  },
+  "rehydration_semantics": {
+    "completeness_ne_maximum_context": true,
+    "understeer_oversteer_guard": true,
+    "rehydrated_reachable_ne_foreground": true,
+    "currentness_fingerprint_binding": true
   }
 }
