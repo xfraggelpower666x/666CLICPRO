@@ -678,7 +678,10 @@
     "plugin_authority": false,
     "repo_current_authority": true,
     "every_semantic_runtime_evolution_requires_plugin_impact_check": true,
-    "runtime_relevant_change_requires_plugin_parity_before_update_closeout": true
+    "runtime_relevant_change_requires_plugin_parity_before_update_closeout": true,
+    "evidence": "migration/PLUGIN_REPO_ARCHITECTURE_AND_PARITY_2026-10-07.md",
+    "current_source_file_parity": "PASS_14_OF_14",
+    "current_immutable_snapshot": "666clic-plugin/releases/v0.1.7/source"
   },
   "external_learning_self_interest_sweep_2026_10_07": {
     "status": "CURRENT_PRODUCTIVE_GOVERNANCE",
