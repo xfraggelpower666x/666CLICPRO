@@ -4,5 +4,3 @@ Private ChatGPT plugin for repository-first CLIC. Runtime-relevant repo evolutio
 Shared daemon adapter rehydration, bounded domain sub-life-circles, rehydrated-idle reachability, understeer/oversteer guards, currentness fingerprint binding and relational-card counterrelations are current runtime semantics.
 
 Cross-system scope learning separates system, workspace, domain, project, lineage and chat-local foreground. Temporal LiveCircle preserves reachable context without global last-scope state.
-
-Presentation current: display name C.L.I.C.; live logo/composer icon asset at assets/clic-logo.png. Binary repo mirror/readback remains pending.
