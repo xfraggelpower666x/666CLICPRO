@@ -11,6 +11,7 @@
     "continuity/PROVENANCE_SUPERSESSION.md",
     "continuity/LIVE_CIRCLE.md",
     "current/OPERATIONS_CENTER.md",
+    "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
     "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
     "relations/CROSS_SYSTEM_RELATIONS.md",
     "continuity/RECOVERY_AND_HANDOFF.md",
@@ -653,5 +654,57 @@
     "interruption_rule": "PAUSE_INGEST_PROCESS_RESUME_FROM_LAST_VERIFIED_STEP",
     "foreign_mutation": false,
     "authority_transfer": false
+  },
+  "clic_plugin_repo_architecture_2026_10_07": {
+    "status": "CURRENT_PRODUCTIVE_VERIFIED",
+    "root": "666clic-plugin",
+    "active_source": "666clic-plugin/source",
+    "current_pointer": "666clic-plugin/current/PLUGIN_CURRENT.json",
+    "sync_contract": "666clic-plugin/PLUGIN_SYNC_CONTRACT.md",
+    "provenance": "666clic-plugin/PROVENANCE.json",
+    "restore": "666clic-plugin/RESTORE.md",
+    "immutable_release_snapshots": [
+      "v0.1.5",
+      "v0.1.6",
+      "v0.1.7"
+    ],
+    "live_plugin": {
+      "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+      "version": "0.1.7",
+      "release_id": "pluginrel_6ac65a350e9481919591e60b91bdca70",
+      "readback": "VERIFIED_METADATA_AND_CHANGED_SKILLS"
+    },
+    "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
+    "plugin_authority": false,
+    "repo_current_authority": true,
+    "every_semantic_runtime_evolution_requires_plugin_impact_check": true,
+    "runtime_relevant_change_requires_plugin_parity_before_update_closeout": true
+  },
+  "external_learning_self_interest_sweep_2026_10_07": {
+    "status": "CURRENT_PRODUCTIVE_GOVERNANCE",
+    "carrier": "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
+    "pass_1": "DOMAIN_AND_UNDERSTANDING_CARD_DELTA",
+    "pass_2": "CLIC_SELF_INTEREST_ARCHITECTURE_SWEEP",
+    "mandatory_domains": [
+      "PLUGIN_ARCHITECTURE",
+      "PLUGIN_PARITY",
+      "RUNTIME_TRIGGERS",
+      "REHYDRATION",
+      "RELATIONAL_REHYDRATION",
+      "CONTINUITY_LINEAGE",
+      "DAEMON_STATE_STEWARDSHIP",
+      "RECOVERY_RESTORE",
+      "BACKUP_HANDOFF",
+      "FRESHNESS_FINGERPRINTS",
+      "POINTER_MANIFEST",
+      "WORKSPACE_FOREGROUND",
+      "AUTHORITY_BOUNDARIES",
+      "EVIDENCE_PRECEDENCE",
+      "REPAIR_DEVELOPMENT",
+      "EXECUTION_PACKET",
+      "SECURITY_FOREIGN_MUTATION"
+    ],
+    "plugin_version": "0.1.7",
+    "plugin_readback": "VERIFIED"
   }
 }
