@@ -1,6 +1,6 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
+  "status": "REVALIDATION_REQUIRED_AFTER_CLIC_RUNTIME_BODY_EVOLUTION",
   "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-023",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
@@ -27,7 +27,7 @@
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_RUNTIME_PLUGIN_STATE_FINGERPRINT_CHANGES_OR_CANNOT_BE_REVERIFIED",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "PENDING",
+  "pfs_execution_status": "BLOCKED_PENDING_REVALIDATION_AND_NATIVE_PFS_BINDING_REFRESH",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -35,8 +35,8 @@
   "pfs_self_approval": false,
   "authority_transfer": false,
   "foreign_mutation": false,
-  "execution_allowed": true,
-  "reissue_required": false,
+  "execution_allowed": false,
+  "reissue_required": true,
   "transaction_tail_writes": [
     "APPROVAL_CARRIER",
     "ROOT_POINTER"
@@ -95,5 +95,17 @@
     "handoff": "666CLIC_NATIVE_RUNTIME/continuity/NEW_CHAT_CURRENT.json",
     "next_chat_instruction": "666CLIC SYSTEMSTART",
     "handoff_creation_ne_fresh_chat_acceptance": true
+  },
+  "last_reconciliation": {
+    "date": "2026-10-08",
+    "prior_approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-023",
+    "lyvra_approval_id": "LYVRA-PFS-PLUGIN-BACKUP-2026-10-08-045",
+    "lyvra_head": "1b278248d7c759827be110c744b38a0391c500c5",
+    "pfs_round": "PFS-MANAGED-PLUGIN-ROUND-2026-10-08-R02",
+    "reason": "CLIC_CARD_AND_HANDOFF_BODY_ADVANCED_FINGERPRINT_NOT_RECOMPUTED",
+    "next": "REVALIDATE_PLUGIN_RUNTIME_STATE_FINGERPRINT_THEN_NATIVE_REISSUE",
+    "backup_written": false,
+    "readback": false,
+    "receipt": false
   }
 }
