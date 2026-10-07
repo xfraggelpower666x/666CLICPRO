@@ -1,0 +1,23 @@
+# 666CLIC Plugin Restore Contract
+
+STATUS=CURRENT_PRODUCTIVE_GOVERNANCE
+PLUGIN=666clic-native-runtime
+AUTHORITY=666CLIC_GITHUB_REPO_CURRENT
+
+## Restore rule
+A plugin restore must bind to an exact verified release snapshot under `666clic-plugin/releases/<version>/source`.
+Never reconstruct from chat memory, partial snippets, or stale plugin metadata.
+
+RESTORE_REQUIRES=
+EXACT_VERSION |
+EXACT_RELEASE_ID |
+SOURCE_SNAPSHOT_READBACK |
+PLUGIN_CREATOR_CURRENT_RELEASE_CHECK |
+GUARDED_UPDATE |
+LIVE_PLUGIN_METADATA_READBACK |
+CHANGED_SKILL_READBACK
+
+PLUGIN_RESTORE_NE_CLIC_AUTHORITY_RESTORE=true
+PLUGIN_IS_EXECUTION_PRESENTATION_SURFACE=true
+REPOSITORY_CURRENT_REMAINS_AUTHORITY=true
+NO_FOREIGN_MUTATION=true
