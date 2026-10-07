@@ -1,2 +1,2 @@
-# 666CLIC Native Runtime v0.1.7
-Private ChatGPT plugin for repository-first CLIC. Runtime-relevant repo evolution requires plugin impact checking and live parity. External-system learning requested “for your cards / personally interesting for CLIC” requires both domain/card analysis and a CLIC self-interest architecture sweep. GitHub repo current remains authority; plugin is execution/presentation only.
+# 666CLIC Native Runtime v0.1.8
+Private ChatGPT plugin for repository-first CLIC. Runtime-relevant repo evolution requires plugin impact checking and live parity. Native plugin-backup approvals are exact-release, parity-gated, freshness-guarded, and bind the last verified semantic runtime body head before approval publication; only approval carrier and root pointer are transaction-tail writes. Backup receipts exist only after real execution evidence. GitHub repo current remains authority; plugin is execution/presentation only.
