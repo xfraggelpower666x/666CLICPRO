@@ -1,12 +1,12 @@
 ---
 name: 666clic-update
-description: Perform governed repository-native CLIC writes and automatically render pre/post UPDATE dashboards with recovery and readback evidence.
+description: Perform governed repository-native CLIC writes with plugin impact parity, recovery, readback and pointer-last publication.
 ---
 # 666CLIC UPDATE
-1. Direct user UPDATE authorizes verified CLIC-owned scope only. GitHub current is sole active authority; Drive is history/backup/recovery/provenance.
-2. Verify HEAD/pointer/manifest, target, permissions, lock/conflict state and pre-change recovery anchor.
-3. Render internal UPDATE dashboard showing scope, current HEAD, planned owner, backup/recovery and open gates; visualization grants no write authority.
-4. Apply the maximum safe sequence of causally related CLIC-owned changes that are actually evidenced, while preserving interrupted work and incorporating new user information without losing the prior return anchor.
-5. Apply minimal correct repo/plugin changes, preserve provenance and perform direct readback. Plugin publication and repository currentness are separate evidence classes.
-6. Pointer publication last when required; no post-pointer mutation in that transaction.
-7. Render final dashboard with actual result, remaining gates, blockers and next meaningful action. Never fabricate P20/P21/Live-Circle/restore/security PASS.
+1. Direct UPDATE authorizes verified CLIC-owned scope only. Verify connector, rights, target, scope, lock/conflict, HEAD/pointer/manifest and recovery anchor.
+2. Apply maximum safe causally related CLIC-owned changes; preserve interrupted work and newer valid evolution.
+3. Separate REPAIR from DEVELOPMENT and STRUCTURAL PASS from GOAL COMPLETE. Prefer direct operational evidence over metadata inference when behavior is observable.
+4. EVERY_SEMANTIC_RUNTIME_EVOLUTION_REQUIRES_PLUGIN_IMPACT_CHECK. If SYSTEMSTART/UPDATE/WEITER/NEW-NEXT CHAT/rehydration/continuity/daemon/audit/dashboard/recovery/authority semantics change, synchronize repo plugin source and guarded live plugin release, then perform metadata + changed-skill readback and semantic parity. If not applicable, record explicit reason.
+5. Plugin is execution/presentation surface; repo current remains authority.
+6. Body writes > direct readback > freshness/manifest alignment > root pointer last; no post-pointer mutation.
+7. Never fabricate gates, plugin publication, readback or foreign writes.
