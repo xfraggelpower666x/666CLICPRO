@@ -1,6 +1,6 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
+  "status": "SUPERSEDED_PENDING_REISSUE",
   "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-017",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
@@ -34,5 +34,8 @@
   "lyvra_approval_for_clic": false,
   "pfs_self_approval": false,
   "authority_transfer": false,
-  "foreign_mutation": false
+  "foreign_mutation": false,
+  "supersession_reason": "BOUND_APPROVAL_BASIS_HEAD_NO_LONGER_EQUALS_CURRENT_TRANSACTION_BODY_STATE",
+  "execution_allowed": false,
+  "reissue_required": true
 }
