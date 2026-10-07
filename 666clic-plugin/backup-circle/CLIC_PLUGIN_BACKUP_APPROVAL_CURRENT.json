@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
   "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-020",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-021",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -18,7 +18,7 @@
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "1b2be597e3e426fde5a6c607439a97861f72c33f"
+    "semantic_authority_head": "607daade7747a43788cc6441bb02c17f1d909eb7"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
   "immutable_snapshot": "666clic-plugin/releases/v0.1.20",
@@ -70,14 +70,14 @@
   "hybrid_snapshot_status": "VERIFIED",
   "runtime_plugin_state_fingerprint": {
     "algorithm": "SHA256_CANONICAL_JSON_V1",
-    "value": "b8fe2c76f4b6e39b086075893dff0f28dff66d1b1b214ccd1b4fbe6387198d37",
+    "value": "7c064ab52afe63fc268b57423f33a9ac3e1c5807880ecd7b8ecfd42c35d396f9",
     "inputs": {
       "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
       "plugin_version": "0.1.20",
       "plugin_release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
       "repo_text_source_tree_sha": "e415a0548c0a81ad754205479529bb0816e8365b",
       "binary_binding_manifest_sha": "51f543d02210ff63fbaa47646b33b8ff6c90127e",
-      "runtime_semantic_body_head": "1b2be597e3e426fde5a6c607439a97861f72c33f",
+      "runtime_semantic_body_head": "607daade7747a43788cc6441bb02c17f1d909eb7",
       "plugin_current_semantic_class": "VERIFIED_HYBRID_SNAPSHOT"
     }
   },
