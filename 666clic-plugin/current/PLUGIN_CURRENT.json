@@ -15,7 +15,7 @@
   "next_required_action": "CONTINUE_PLUGIN_IMPACT_CHECK_ON_EVERY_RUNTIME_RELEVANT_EVOLUTION",
   "pointer_role": "PLUGIN_SURFACE_POINTER_ONLY_NOT_CLIC_ROOT_POINTER",
   "last_runtime_semantic_addition": "LOCAL_ADAPTIVE_LEARNING_AND_GPT_NATIVE_VISUAL_INTERFACE",
-  "last_verified_repo_head_before_closeout": "8d0490d6be6cf82b71ad7b1733dd6dc52b3b504a",
+  "last_verified_repo_head_before_closeout": "6d985993c3cb6fa1078d901e906cca58a2926f64",
   "previous_release_supersession": "V0_1_19_VALID_INTERMEDIATE_SUPERSEDED_BY_V0_1_20_PARITY_CLOSEOUT",
   "source_file_parity": "PASS_23_OF_23_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
   "scope_lifecycle_reference": "references/scope-lifecycle-synthesis.md",
@@ -41,9 +41,9 @@
   },
   "hybrid_snapshot": {
     "status": "VERIFIED",
-    "text_tree_sha": "1934021bb8c277c38db1cf795865c6bc3023f1b3",
-    "provenance": "666clic-plugin/releases/v0.1.16/PROVENANCE.json",
-    "binary_binding": "666clic-plugin/releases/v0.1.16/BINARY_BINDING.json"
+    "text_tree_sha": "e415a0548c0a81ad754205479529bb0816e8365b",
+    "provenance": "666clic-plugin/releases/v0.1.20/PROVENANCE.json",
+    "binary_binding": "666clic-plugin/releases/v0.1.20/BINARY_BINDING.json"
   },
   "approval_freshness_model": "RUNTIME_PLUGIN_STATE_FINGERPRINT"
 }
