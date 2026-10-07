@@ -709,5 +709,28 @@
     ],
     "plugin_version": "0.1.7",
     "plugin_readback": "VERIFIED"
+  },
+  "clic_plugin_backup_approval_2026_10_07": {
+    "status": "NATIVE_GOVERNANCE_REPAIRED_PENDING_PLUGIN_PARITY_AND_REISSUE",
+    "source_notice": {
+      "system": "LYVRA",
+      "schema": "LYVRA_TO_CLIC_COUPLED_PLUGIN_BACKUP_NOTICE_v2",
+      "source_head": "d3ea7301555099e8e8f885eb91d6d927d400cf2d"
+    },
+    "contract": "../666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CONTRACT.md",
+    "approval": "../666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CURRENT.json",
+    "exact_release": {
+      "version": "0.1.7",
+      "release_id": "pluginrel_6ac65a350e9481919591e60b91bdca70"
+    },
+    "semantic_authority_head_rule": "LAST_VERIFIED_RUNTIME_BODY_HEAD_BEFORE_APPROVAL_PUBLICATION",
+    "transaction_tail_writes": [
+      "APPROVAL_CARRIER",
+      "ROOT_POINTER"
+    ],
+    "pfs_execution": "PENDING",
+    "receipt_creation": "ONLY_AFTER_REAL_PFS_EXECUTION_EVIDENCE",
+    "restore_candidate_only": true,
+    "foreign_mutation": false
   }
 }
