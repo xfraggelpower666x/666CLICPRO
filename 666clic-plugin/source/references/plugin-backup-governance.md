@@ -7,3 +7,5 @@ FOUND_RELEASE != AUTHORIZED_RELEASE; LATEST_RELEASE != AUTHORIZED_RELEASE.
 APPROVAL != BACKUP_WRITE; BACKUP_WRITE != READBACK; ONE_LEG_PASS != ROUND_COMPLETE.
 Receipt carrier is created only after real executor evidence exists.
 Restore bytes enter RECOVERY_CANDIDATE only and require current runtime impact/parity validation. NO_SILENT_PLUGIN_ROLLBACK=true.
+
+Binary assets that cannot be repo-copied may use VERIFIED_CAUSAL_BINARY_BINDING per references/binary-asset-binding.md. Approval may rely on an immutable hybrid snapshot only when text parity is direct, the exact live release tuple is fixed, source SHA-256/size and publication provenance are recorded, and PFS is required to hash the extracted binary during backup readback. VERIFIED_CAUSAL_BINARY_BINDING != DIRECT_LIVE_BINARY_HASH_READBACK and must never be described as repo byte parity.
