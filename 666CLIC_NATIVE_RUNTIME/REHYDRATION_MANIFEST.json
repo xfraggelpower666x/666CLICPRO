@@ -13,6 +13,7 @@
     "current/OPERATIONS_CENTER.md",
     "current/CROSS_SYSTEM_DEVELOPMENT_EXCHANGE_LIVECIRCLE.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
+    "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
     "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
     "relations/CROSS_SYSTEM_RELATIONS.md",
@@ -755,7 +756,7 @@
     "currentness_fingerprint_binding": true
   },
   "current_cross_system_synthesis": "current/CROSS_SYSTEM_ARCHITECTURE_SYNTHESIS_2026-10-07.md",
-  "current_plugin_version": "0.1.15",
-  "current_plugin_release": "pluginrel_6ac69d1c913c81918aca4a6f40113616",
-  "current_plugin_source_parity": "VERIFIED_HYBRID_19_TEXT_PLUS_CAUSAL_BINARY_BINDING"
+  "current_plugin_version": "0.1.16",
+  "current_plugin_release": "pluginrel_6ac69f9432e4819194f58caa66a28271",
+  "current_plugin_source_parity": "VERIFIED_HYBRID_20_TEXT_PLUS_CAUSAL_BINARY_BINDING"
 }
