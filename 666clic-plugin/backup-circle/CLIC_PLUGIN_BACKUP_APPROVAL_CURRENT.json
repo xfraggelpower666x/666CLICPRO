@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "BLOCKED_PENDING_V0_1_12_REPO_BINARY_MIRROR",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-012-PENDING",
+  "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-015",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -12,22 +12,22 @@
   },
   "exact_release": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-    "version": "0.1.12",
-    "release_id": "pluginrel_6ac6988775bc8191b6742f4f873c8967"
+    "version": "0.1.15",
+    "release_id": "pluginrel_6ac69d1c913c81918aca4a6f40113616"
   },
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "6523b0f6ea2a898cbd208275d45ff43d729e72fa"
+    "semantic_authority_head": "5cbab9112c6e355a32042e59ac5b799d9d9e527d"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
-  "immutable_snapshot": "BLOCKED_PENDING_REPO_BINARY_MIRROR",
-  "source_parity": "PARTIAL_TEXT_PASS_16_OF_16_REPO_BINARY_MIRROR_PENDING",
-  "semantic_parity": "VERIFIED_RUNTIME_SEMANTICS_PRESENTATION_ALIGNED",
+  "immutable_snapshot": "666clic-plugin/releases/v0.1.15",
+  "source_parity": "PASS_19_OF_19_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
+  "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
-  "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_CHANGES",
+  "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_OR_BINARY_BINDING_CHANGES",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "BLOCKED_PENDING_FULL_V0_1_12_REPO_SOURCE_PARITY",
+  "pfs_execution_status": "PENDING",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -35,8 +35,8 @@
   "pfs_self_approval": false,
   "authority_transfer": false,
   "foreign_mutation": false,
-  "execution_allowed": false,
-  "reissue_required": true,
+  "execution_allowed": true,
+  "reissue_required": false,
   "transaction_tail_writes": [
     "APPROVAL_CARRIER",
     "ROOT_POINTER"
@@ -58,5 +58,16 @@
     "live_alignment": "VERIFIED_BY_EXACT_UPLOAD_SOURCE_PLUS_POST_UPDATE_SIZE_READBACK",
     "repo_binary_mirror": "PENDING",
     "full_source_parity": "PARTIAL"
-  }
+  },
+  "binary_binding": {
+    "manifest": "666clic-plugin/releases/v0.1.15/BINARY_BINDING.json",
+    "path": "assets/clic-logo.png",
+    "sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "size_bytes": 2929725,
+    "status": "VERIFIED_CAUSAL_BINARY_BINDING",
+    "direct_live_hash_readback": "UNAVAILABLE",
+    "repo_binary_copy": "NOT_PRESENT",
+    "pfs_must_verify_extracted_hash_and_size": true
+  },
+  "hybrid_snapshot_status": "VERIFIED"
 }
