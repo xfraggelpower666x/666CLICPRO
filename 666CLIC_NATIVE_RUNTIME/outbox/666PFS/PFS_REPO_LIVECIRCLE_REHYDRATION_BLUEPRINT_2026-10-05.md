@@ -404,3 +404,36 @@ CLIC_APPROVAL_SOURCE=666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CU
 PFS_MUST_READ_CURRENT_APPROVAL_AT_EXECUTION_TIME=true
 DO_NOT_HARDCODE_PREVIOUS_APPROVAL_ID=true
 PFS_CURRENT_MANAGED_ROUND_REQUIRES_REFRESH=true
+
+
+## External/community evidence candidate quarantine proposal — 2026-10-08
+
+SOURCE_PATTERN=LYVRA_SPEECH_REV96_COMMUNITY_EVIDENCE_GATE
+SOURCE_LYVRA_HEAD=1c53763be46dc908893bea85eff16508ca05a3af
+PROPOSAL_ONLY=true
+PFS_NATIVE_TRIGGER_REQUIRED=true
+
+WHY_RELEVANT=PFS_INGESTS_FOREIGN_PROPOSALS_EXTERNAL_REFERENCES_AND_LOCAL_LEARNING_EVIDENCE
+
+RECOMMENDED_PFS_ADAPTATION:
+- Classify community/external observations as TEST_CANDIDATE or EXTERNAL_REFERENCE evidence, never as a native rule on first ingest.
+- Require provenance, currentness, contradiction tracking and outcome-backed validation before promotion.
+- Keep candidate evidence reachable through daemon/CSM/Child/Temporal LiveCircle rehydration when causally relevant.
+- Preserve stronger verified native relations when a new external signal conflicts; contradiction must not silently overwrite.
+- Distinguish hard limits from risk signals. A reported threshold must not become a universal bound without controlled/native evidence.
+- Foreign proposal or community evidence may inform a PFS-native experiment but never grants write authority or auto-adoption.
+
+PFS_EVIDENCE_FLOW=
+EXTERNAL_OR_COMMUNITY_SIGNAL >
+CLASSIFY_CANDIDATE >
+PROVENANCE_AND_CURRENTNESS_CHECK >
+LOCAL_TEST_OR_OPERATIONAL_EVIDENCE >
+OUTCOME >
+VALIDATE_OR_REJECT >
+PROMOTE_ONLY_IF_PFS_NATIVE_EVIDENCE_SUPPORTS
+
+COMMUNITY_SIGNAL_NE_NATIVE_RULE=true
+CANDIDATE_NE_PRODUCTION_RULE=true
+CONTRADICTION_NE_OVERWRITE=true
+OUTCOME_REQUIRED_FOR_PROMOTION=true
+FOREIGN_SIGNAL_NE_WRITE_AUTHORITY=true
