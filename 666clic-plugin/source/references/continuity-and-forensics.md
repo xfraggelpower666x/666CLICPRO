@@ -11,3 +11,9 @@ REHYDRATED_REACHABLE != FOREGROUND. Valid local scope states include FOREGROUND,
 Rehydration must detect UNDERSTEER and OVERSTEER. COMPLETENESS != MAXIMUM_CONTEXT; stop expansion once sufficient current evidence exists.
 DECLARED_CURRENT != BYTE_CURRENT. Currentness-sensitive carriers should align direct-read fingerprints with the active pointer/manifest epoch.
 Relational cards may carry counterrelations, nonapplicability and supersession; CARD_FOUND != CARD_REHYDRATED.
+
+Shared daemon continuity uses one CLIC-wide state steward plus bounded domain adapters by reference; adapters never become identities or authorities.
+REHYDRATED_REACHABLE != FOREGROUND. Valid local scope states include FOREGROUND, REHYDRATED_IDLE and NOT_REHYDRATED without global last-domain-wins semantics.
+Rehydration must detect UNDERSTEER and OVERSTEER. COMPLETENESS != MAXIMUM_CONTEXT; stop expansion once sufficient current evidence exists.
+DECLARED_CURRENT != BYTE_CURRENT. Currentness-sensitive carriers should align direct-read fingerprints with the active pointer/manifest epoch.
+Relational cards may carry counterrelations, nonapplicability and supersession; CARD_FOUND != CARD_REHYDRATED.
