@@ -1,7 +1,7 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
   "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
-  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-018",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-020",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
   "source_notice": {
@@ -12,17 +12,17 @@
   },
   "exact_release": {
     "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-    "version": "0.1.8",
-    "release_id": "pluginrel_6ac66802da4c8191a5851390825d283e"
+    "version": "0.1.10",
+    "release_id": "pluginrel_6ac68b7c6b9c8191804cc12bf5c0373c"
   },
   "clic_authority": {
     "repository": "xfraggelpower666x/666CLICPRO",
     "branch": "clic-migration-rev79-staging",
-    "semantic_authority_head": "7afdfdb20e509c59b1883e9dbf31502d0e75da94"
+    "semantic_authority_head": "6f04de4b46f5114c9f1e871bdfb0f8fd738a86ff"
   },
   "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
-  "immutable_snapshot": "666clic-plugin/releases/v0.1.8/source",
-  "source_parity": "PASS_15_OF_15",
+  "immutable_snapshot": "666clic-plugin/releases/v0.1.10/source",
+  "source_parity": "PASS_16_OF_16",
   "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_CHANGES",
