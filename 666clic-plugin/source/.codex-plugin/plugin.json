@@ -2,7 +2,7 @@
   "interface": {
     "displayName": "666CLIC Native Runtime",
     "shortDescription": "Repository-native CLIC continuity",
-    "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, relational rehydration, governed plugin parity, self-interest learning sweeps and internal contextual dashboards.",
+    "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, relational rehydration, governed plugin parity, native plugin-backup approval, self-interest learning sweeps and internal contextual dashboards.",
     "developerName": "FRAGGELPOWER666 / 666SOUNDsDESIGn",
     "category": "Productivity",
     "capabilities": [
@@ -15,8 +15,8 @@
   },
   "apps": "./.app.json",
   "name": "666clic-native-runtime",
-  "version": "0.1.7",
-  "description": "Native 666CLIC repository-first runtime with relational rehydration, governed plugin parity, self-interest learning sweeps, continuity, audits and evidence-first dashboards.",
+  "version": "0.1.8",
+  "description": "Native 666CLIC repository-first runtime with relational rehydration, governed plugin parity, native plugin-backup approval, self-interest learning sweeps, continuity, audits and evidence-first dashboards.",
   "author": {
     "name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"
   },
