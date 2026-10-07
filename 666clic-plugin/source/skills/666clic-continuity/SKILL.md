@@ -9,3 +9,6 @@ description: Continue 666CLIC WEITER / NEW CHAT / NEXT CHAT from repository curr
 4. State stewardship may track phase/completed/open/next step but has no decision authority.
 5. NEW/NEXT CHAT preserves verified continuity; handoff creation alone never proves fresh-chat acceptance.
 6. Newest candidate does not automatically win: newer VALID evolution outranks older valid state; later invalid continuity-breaking state may be rejected with provenance.
+
+7. REHYDRATED_REACHABLE != FOREGROUND: previously valid bounded domain context may remain REHYDRATED_IDLE without resetting, merging, or becoming global active state.
+8. Shared daemon continuity keeps one daemon core; domain adapters are loaded/refreshed only when causally relevant and use domain intelligence by reference.
