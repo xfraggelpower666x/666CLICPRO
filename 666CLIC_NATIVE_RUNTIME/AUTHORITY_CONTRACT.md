@@ -36,3 +36,15 @@ FULL_SEMANTIC_COVERAGE=OPEN
 
 # Supersession
 As of the authorized 2026-10-05 CLIC update, the GitHub repository is the sole active CLIC working field and current technical/product authority. The former Google Drive live/current layer is superseded as an active source and remains history, repository backup, provenance, and recovery only. Open runtime gates remain open; authority placement does not fabricate acceptance evidence.
+
+
+# Semantic Visual Intelligence Facet Trigger Extension — 2026-10-08
+DIRECT_TRIGGERS_EXTENDED=666CLIC VISUAL|666CLIC NEW CHAT|666CLIC NEXT CHAT|666CLIC AUDIT
+VISUAL_TRIGGER=666CLIC VISUAL
+VISUAL_TRIGGER_BEHAVIOR=WHOLE_CLIC_FIRST_THEN_SEMANTIC_VISUAL_INTELLIGENCE_FACET_FOREGROUND
+VISUAL_TRIGGER_NE_NEW_SYSTEM=true
+VISUAL_TRIGGER_NE_FOREIGN_ACTIVATION=true
+NEW_CHAT_MUST_PRESERVE_ACTIVE_FACET_RETURN_ANCHOR=true
+NEXT_CHAT_MAY_RESTORE_VISUAL_FACET_FOREGROUND_ONLY_FROM_VALID_NONSUPERSEDED_HANDOFF=true
+UPDATE_MUST_CHECK_VISUAL_FACET_IMPACT=true
+AUDIT_MUST_CHECK_VISUAL_EVIDENCE_CONTRADICTIONS_AND_DEVELOPMENT_POSITION=true
