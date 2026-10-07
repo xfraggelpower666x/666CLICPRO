@@ -109,3 +109,27 @@ NOTICE_RECEIVED_NE_STATE_UNDERSTOOD=true
 CLIC_MUST_ANALYZE_LYVRA_CURRENT_STATE_READ_ONLY_BEFORE_FINAL_CARD_UPDATE=true
 NOTICE_ONLY_CARD_UPDATE=FORBIDDEN
 TARGET_NATIVE_CURRENT_AUTHORITY_MUST_BE_READ=true
+
+
+## Stable-set convergence barrier proposal — 2026-10-07
+
+SOURCE_PATTERN=666PFS_MANAGED_PLUGIN_ROUND_WAIT_FOR_STABLE_SET
+SOURCE_PFS_HEAD=5a68033880af14ad99696b95e37904ad3aeee19a
+PROPOSAL_ONLY=true
+LYVRA_NATIVE_TRIGGER_REQUIRED_FOR_ADOPTION=true
+
+WHY_RELEVANT=LYVRA_COUPLED_PLUGIN_BACKUP_CIRCLE_DEPENDS_ON_LYVRA_AND_CLIC_CURRENT_RELEASES_AND_PFS_EXECUTION
+
+RECOMMENDED_LYVRA_ADAPTATION:
+- Before emitting or accepting a coupled backup round as executable, require a stable-set convergence check across LYVRA account plugin, LYVRA native plugin, CLIC plugin and their native approvals/fingerprints.
+- Treat any plugin/fingerprint change during convergence as a new candidate set rather than racing the old round.
+- Emit one coordinated notice only after the set is stable.
+- Preserve native approval authority per system.
+- Allow governance-only HEAD advances that revalidate the same runtime/plugin-state fingerprint without forcing a new semantic round.
+
+STABLE_SET_MEMBERS=LYVRA_ACCOUNT|LYVRA_NATIVE|CLIC
+STABLE_SET_REQUIRED_BEFORE_COUPLED_EXECUTION=true
+FINGERPRINT_CHANGE_BREAKS_SET=true
+GOVERNANCE_ONLY_HEAD_ADVANCE_NE_SET_BREAK_IF_FINGERPRINT_UNCHANGED=true
+NO_FOREIGN_SELF_APPROVAL=true
+NO_CROSS_SYSTEM_MERGE=true
