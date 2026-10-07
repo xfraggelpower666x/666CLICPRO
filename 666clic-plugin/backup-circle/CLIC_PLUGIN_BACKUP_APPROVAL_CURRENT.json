@@ -1,6 +1,6 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
+  "status": "SUPERSEDED_PENDING_REISSUE",
   "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-018",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
@@ -27,7 +27,7 @@
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_SEMANTIC_AUTHORITY_HEAD_OR_RELEASE_OR_PLUGIN_CURRENT_CHANGES",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "PENDING",
+  "pfs_execution_status": "BLOCKED_PENDING_FRESH_CLIC_APPROVAL",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -35,10 +35,12 @@
   "pfs_self_approval": false,
   "authority_transfer": false,
   "foreign_mutation": false,
-  "execution_allowed": true,
-  "reissue_required": false,
+  "execution_allowed": false,
+  "reissue_required": true,
   "transaction_tail_writes": [
     "APPROVAL_CARRIER",
     "ROOT_POINTER"
-  ]
+  ],
+  "supersession_reason": "NEW_CHAT_HANDOFF_POST_APPROVAL_BODY_MUTATION",
+  "superseded_by_body_head": "2874679ec41f54cad132cd9f6d927fe0a6119eb0"
 }
