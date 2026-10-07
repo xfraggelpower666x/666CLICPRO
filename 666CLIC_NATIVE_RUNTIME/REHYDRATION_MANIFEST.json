@@ -627,5 +627,31 @@
     "foreign_mutation": false,
     "adoption_mode": "GENERALIZED_CLIC_NATIVE_PRINCIPLES_NOT_LYVRA_IDENTITY_COPY",
     "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md"
+  },
+  "lyvra_relational_rehydration_learning_2026_10_07": {
+    "status": "VERIFIED_CLIC_NATIVE_CARD_EVOLUTION",
+    "source_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
+    "source_pointer_sha": "5b65fe80663b2da5ff00acbbe2c19aa3a47c74d4",
+    "source_plugin_surfaces": [
+      "0.13.31",
+      "0.1.31"
+    ],
+    "source_freshness": {
+      "carrier_count": 114,
+      "mismatch_count": 0
+    },
+    "learned_patterns": [
+      "RELATIONAL_REHYDRATION",
+      "REPAIR_PASS_NE_DEVELOPMENT_COMPLETE",
+      "STRUCTURAL_PASS_NE_GOAL_COMPLETE",
+      "DIRECT_OPERATIONAL_EVIDENCE_GT_METADATA_INFERENCE",
+      "STATE_STEWARDSHIP_NE_DECISION_AUTHORITY",
+      "NEWEST_CANDIDATE_NE_BEST_VALID_STATE",
+      "MODE_SPECIFIC_CONTROL_LOGIC",
+      "MINIMAL_EXECUTION_PACKET"
+    ],
+    "interruption_rule": "PAUSE_INGEST_PROCESS_RESUME_FROM_LAST_VERIFIED_STEP",
+    "foreign_mutation": false,
+    "authority_transfer": false
   }
 }
