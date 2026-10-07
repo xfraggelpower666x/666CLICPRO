@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "666clic-native-runtime",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Native 666CLIC repository-first runtime with relational rehydration, shared daemon adapter continuity, understeer/oversteer guards, currentness fingerprints, governed plugin parity, native plugin-backup approval, self-interest learning sweeps, audits and evidence-first dashboards.",
   "author": {"name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"},
   "extensions": {
