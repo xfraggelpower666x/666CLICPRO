@@ -320,3 +320,38 @@ UNDERSTEER_OVERSTEER_REHYDRATION_GUARD=RECOMMENDED
 COMPLETENESS_NE_MAXIMUM_CONTEXT=true
 CURRENTNESS_FINGERPRINT_BINDING=RECOMMENDED_WHERE_BYTE_OR_EPOCH_CURRENTNESS_MATTERS
 CODEFORGE_AVAILABLE_GLOBALLY_BUT_EXECUTION_SCOPED_TO_FOREGROUND=true
+
+
+## Content-addressed plugin binary binding proposal — 2026-10-07
+
+SOURCE_TECHNIQUE=CLIC_VERIFIED_CAUSAL_BINARY_BINDING
+PROPOSAL_ONLY=true
+PFS_NATIVE_TRIGGER_REQUIRED=true
+
+WHY_RELEVANT=PFS_OWNS_PLUGIN_BACKUP_EXECUTION_AND_READBACK
+RECOMMENDED_PFS_ADAPTATION:
+- Accept exact-release binary binding manifests from native systems only when that system explicitly approves the release.
+- Bind each binary asset to plugin_id, version, release_id, path, SHA-256, byte size and publication provenance.
+- Treat repo text source + binary binding manifest + exact immutable plugin release archive as a HYBRID_RELEASE_SNAPSHOT when direct repo binary ingestion is unavailable.
+- During backup, fetch the exact approved plugin archive and verify extracted bound binary SHA-256 and size before any receipt.
+- Never infer binary identity from filename, visuals or size alone.
+- Never self-approve a foreign native system's plugin release.
+
+PFS_BINARY_BACKUP_GATE=
+NATIVE_APPROVAL >
+EXACT_RELEASE_FETCH >
+ARCHIVE_WRITE >
+ARCHIVE_HASH >
+EXTRACT_BOUND_BINARY >
+BINARY_SHA256_VERIFY >
+BINARY_SIZE_VERIFY >
+READBACK >
+RECEIPT
+
+PFS_CSM_RELEVANCE=CSM_MAY_COORDINATE_THE_SEQUENCE_WITHOUT_BECOMING_APPROVAL_AUTHORITY
+REPO_AUTHORITY_PRESERVED=true
+PLUGIN_NE_AUTHORITY=true
+NO_FAKE_REPO_BYTE_PARITY=true
+
+## Automatic proposal cooperation note
+CLIC will automatically prepare CLIC-owned target-specific concepts when later verified CLIC techniques are materially relevant to PFS. This is proposal transport only; PFS remains sole native adoption authority.
