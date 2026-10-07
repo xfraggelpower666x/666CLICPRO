@@ -2,22 +2,22 @@
   "system": "666CLIC",
   "plugin_name": "666clic-native-runtime",
   "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
-  "current_live_version": "0.1.21",
-  "current_live_release_id": "pluginrel_6ac6d737679c8191a2fdf43ff4293b6e",
-  "live_readback": "VERIFIED_METADATA_AND_CHANGED_SKILLS",
+  "current_live_version": "0.1.22",
+  "current_live_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+  "live_readback": "VERIFIED_METADATA_AND_VISUAL_COMPLIANCE_SKILLS",
   "repo_source_path": "666clic-plugin/source",
-  "immutable_release_snapshot": "PENDING_V0_1_21_FREEZE",
+  "immutable_release_snapshot": "PENDING_V0_1_22_FREEZE",
   "source_baseline_class": "VERIFIED_HYBRID_SNAPSHOT",
   "runtime_repo_head_at_architecture_creation": "fa6767dc9d48d8fe00232c62805e5a6c4c0200ec",
-  "repo_plugin_semantic_parity": "VERIFIED_SEMANTIC_VISUAL_INTELLIGENCE_FACET",
+  "repo_plugin_semantic_parity": "VERIFIED_MANAGED_SYSTEM_VISUAL_COMPLIANCE_AND_DASHBOARD",
   "plugin_is_authority": false,
   "repo_current_is_authority": true,
-  "next_required_action": "FREEZE_IMMUTABLE_V0_1_21_SNAPSHOT_BEFORE_NEW_BACKUP_APPROVAL",
+  "next_required_action": "FREEZE_IMMUTABLE_V0_1_22_SNAPSHOT_BEFORE_NEW_BACKUP_APPROVAL",
   "pointer_role": "PLUGIN_SURFACE_POINTER_ONLY_NOT_CLIC_ROOT_POINTER",
-  "last_runtime_semantic_addition": "SEMANTIC_VISUAL_INTELLIGENCE_FACET_V01_4",
+  "last_runtime_semantic_addition": "MANAGED_SYSTEM_VISUAL_COMPLIANCE_AND_UNIVERSAL_GPT_NATIVE_DASHBOARD",
   "last_verified_repo_head_before_closeout": "6d985993c3cb6fa1078d901e906cca58a2926f64",
-  "previous_release_supersession": "V0_1_20_SUPERSEDED_BY_V0_1_21_SEMANTIC_VISUAL_INTELLIGENCE_FACET",
-  "source_file_parity": "PASS_CHANGED_V0_1_21_TEXT_FILES_DIRECT_READBACK",
+  "previous_release_supersession": "V0_1_21_SUPERSEDED_BY_V0_1_22_MANAGED_VISUAL_COMPLIANCE",
+  "source_file_parity": "PASS_CHANGED_V0_1_22_TEXT_FILES_DIRECT_READBACK",
   "scope_lifecycle_reference": "references/scope-lifecycle-synthesis.md",
   "presentation_delta": {
     "display_name": "C.L.I.C.",
@@ -46,5 +46,5 @@
     "binary_binding": "666clic-plugin/releases/v0.1.20/BINARY_BINDING.json"
   },
   "approval_freshness_model": "RUNTIME_PLUGIN_STATE_FINGERPRINT",
-  "backup_approval_status": "SUPERSEDED_BY_PLUGIN_V0_1_21_REQUIRES_REVALIDATION"
+  "backup_approval_status": "SUPERSEDED_BY_PLUGIN_V0_1_22_REQUIRES_REVALIDATION"
 }
