@@ -1,6 +1,6 @@
 {
   "system": "666CLIC",
-  "status": "REPO_NATIVE_CURRENT_RUNTIME_ALL_GATES_VERIFIED_PLUGIN_BACKUP_APPROVAL_V0_1_8_READY",
+  "status": "REPO_NATIVE_CURRENT_RUNTIME_NEW_CHAT_HANDOFF_READY_PLUGIN_BACKUP_APPROVAL_REISSUE_REQUIRED",
   "staging_sync_revision": 91,
   "source_authority": "GITHUB_REPO_CURRENT",
   "source_pointer_id": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "8c801bcb48d71f9fbe01b06b5612ed9a1bfed290",
+  "body_head_before_pointer": "7afdfdb20e509c59b1883e9dbf31502d0e75da94",
   "changed_carriers_readback": "PASS_2_OF_2_PRE_POINTER",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -893,7 +893,7 @@
     "full_native_semantic_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
     "only_open_current_gate": "NONE",
     "p14": "VERIFIED_REAL_EVENT_FOREGROUND_RELEVANCE_2026-10-06",
-    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
+    "return_anchor": "REISSUE_PLUGIN_BACKUP_APPROVAL_IF_STILL_CURRENT_THEN_CONTINUE_NEW_VALID_EVOLUTION",
     "pfs_return_handoff": "READY_FOR_NATIVE_PFS_CONSUMPTION_WITH_REPO_FIRST_FULL_CHILD_TWO_PHASE_CONSUMER_CUTOVER_AND_FAILBACK_CONTRACT",
     "pfs_handoff_path": "outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json",
     "pfs_rehydration_blueprint": "outbox/666PFS/PFS_REPO_LIVECIRCLE_REHYDRATION_BLUEPRINT_2026-10-05.md",
@@ -984,7 +984,7 @@
     "external_learning_pass_2": "CLIC_SELF_INTEREST_ARCHITECTURE_SWEEP",
     "plugin_authority": false,
     "repo_current_authority": true,
-    "clic_plugin_backup_approval_status": "APPROVED_FOR_PFS_EXECUTION_PENDING",
+    "clic_plugin_backup_approval_status": "SUPERSEDED_PENDING_REISSUE",
     "clic_plugin_backup_approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-07-018",
     "clic_plugin_backup_semantic_authority_head": "961f787cb10d9baaa1366639210ea49fa6ad22d7",
     "clic_plugin_backup_approval_commit": "8c801bcb48d71f9fbe01b06b5612ed9a1bfed290",
@@ -992,6 +992,11 @@
     "clic_plugin_backup_write": "PENDING",
     "clic_plugin_backup_readback": "PENDING",
     "clic_plugin_backup_receipt": "PENDING",
-    "transaction_tail_rule": "APPROVAL_CARRIER_THEN_ROOT_POINTER_ONLY"
+    "transaction_tail_rule": "APPROVAL_CARRIER_THEN_ROOT_POINTER_ONLY",
+    "new_chat_handoff": "VERIFIED_READY",
+    "new_chat_handoff_path": "continuity/NEW_CHAT_CURRENT.json",
+    "clic_plugin_backup_approval_execution_allowed": false,
+    "clic_plugin_backup_reissue_required": true,
+    "pfs_plugin_backup_execution": "BLOCKED_PENDING_FRESH_CLIC_APPROVAL"
   }
 }
