@@ -711,7 +711,7 @@
     "plugin_readback": "VERIFIED"
   },
   "clic_plugin_backup_approval_2026_10_07": {
-    "status": "NATIVE_GOVERNANCE_REPAIRED_PENDING_PLUGIN_PARITY_AND_REISSUE",
+    "status": "READY_FOR_NATIVE_APPROVAL_REISSUE",
     "source_notice": {
       "system": "LYVRA",
       "schema": "LYVRA_TO_CLIC_COUPLED_PLUGIN_BACKUP_NOTICE_v2",
@@ -720,9 +720,11 @@
     "contract": "../666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CONTRACT.md",
     "approval": "../666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CURRENT.json",
     "exact_release": {
-      "version": "0.1.7",
-      "release_id": "pluginrel_6ac65a350e9481919591e60b91bdca70"
+      "version": "0.1.8",
+      "release_id": "pluginrel_6ac66802da4c8191a5851390825d283e"
     },
+    "plugin_source_parity": "PASS_15_OF_15",
+    "immutable_snapshot": "666clic-plugin/releases/v0.1.8/source",
     "semantic_authority_head_rule": "LAST_VERIFIED_RUNTIME_BODY_HEAD_BEFORE_APPROVAL_PUBLICATION",
     "transaction_tail_writes": [
       "APPROVAL_CARRIER",
