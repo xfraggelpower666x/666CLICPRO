@@ -12,6 +12,7 @@
     "continuity/LIVE_CIRCLE.md",
     "current/OPERATIONS_CENTER.md",
     "current/CROSS_SYSTEM_DEVELOPMENT_EXCHANGE_LIVECIRCLE.md",
+    "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
     "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
@@ -770,5 +771,20 @@
     "csm": "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
     "stream": "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md"
   },
-  "plugin_impact_for_card_binding": "NO_PLUGIN_CHANGE_REQUIRED_GENERIC_CARD_REHYDRATION_ALREADY_PRESENT_V0_1_16"
+  "plugin_impact_for_card_binding": "NO_PLUGIN_CHANGE_REQUIRED_GENERIC_CARD_REHYDRATION_ALREADY_PRESENT_V0_1_16",
+  "semantic_visual_learning": {
+    "status": "ACTIVE_LOCAL_V1",
+    "semantic_cyber_field_base": "V01.2",
+    "local_adaptive_extension": "V01.3",
+    "carrier": "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
+    "livecircle_integration": true,
+    "peer_visual_notice_required_on_material_additive_change": true,
+    "peer_targets": [
+      "LYVRA",
+      "666PFS"
+    ],
+    "target_native_validation_required": true,
+    "shared_semantics_ne_shared_memory": true,
+    "learning_ne_write_authority": true
+  }
 }
