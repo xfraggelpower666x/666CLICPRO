@@ -15,3 +15,5 @@ description: Perform governed repository-native CLIC writes with plugin impact p
 10. Never fabricate gates, plugin publication, backup execution, readback, receipts or foreign writes.
 
 11. Binary plugin assets may use VERIFIED_CAUSAL_BINARY_BINDING only under references/binary-asset-binding.md when direct live binary hash readback or repo binary ingestion is unavailable. This is never called repo byte parity. Fresh backup approval requires an exact release tuple and immutable hybrid snapshot; PFS must verify the approved binary SHA-256 and size from the extracted exact release archive before a receipt can exist.
+
+12. When CLIC develops or verifies a generalized technique that is materially relevant to another known native system, automatically prepare a target-specific development concept in CLIC-owned handoff/outbox scope per references/cross-system-development-proposals.md. This never authorizes foreign mutation or activation; target adoption remains native.
