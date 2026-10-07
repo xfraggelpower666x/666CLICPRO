@@ -4,3 +4,5 @@ When the user asks CLIC to analyze LYVRA or another external native system for C
 2. CLIC_SELF_INTEREST_ARCHITECTURE_SWEEP.
 The self-interest sweep checks plugin architecture/parity/release governance, runtime triggers, rehydration and relational rehydration, continuity/lineage, daemon/state stewardship, recovery/restore, backup/handoff, freshness/fingerprints, pointer/manifest governance, shared-daemon adapters, bounded domain sub-life-circles, understeer/oversteer rehydration, relational-card counterrelations, workspace/foreground, authority boundaries, evidence precedence, repair-vs-development separation, execution packet design and security/foreign-mutation boundaries.
 CARD_LEARNING != SELF_INTEREST_SWEEP. Domain learning is incomplete until both passes have been considered. Adopt generalized CLIC-native principles only; never copy foreign identity or authority.
+
+For project/workspace/domain/lineage and temporal LiveCircle synthesis, also read references/scope-lifecycle-synthesis.md.
