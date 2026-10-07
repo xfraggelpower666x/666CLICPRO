@@ -22,7 +22,11 @@
     "relations/LYVRA_DEEP_CENSUS_AND_FORENSICS_2026-10-05.md",
     "relations/LYVRA_UNDERSTANDING_CARD_REV80.md",
     "current/REV91_SOURCE_BRIDGE_AND_ACCEPTANCE.md",
-    "current/REV91_SECONDARY_CARRIER_GUARD.md"
+    "current/REV91_SECONDARY_CARRIER_GUARD.md",
+    "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md",
+    "relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -758,5 +762,13 @@
   "current_cross_system_synthesis": "current/CROSS_SYSTEM_ARCHITECTURE_SYNTHESIS_2026-10-07.md",
   "current_plugin_version": "0.1.16",
   "current_plugin_release": "pluginrel_6ac69f9432e4819194f58caa66a28271",
-  "current_plugin_source_parity": "VERIFIED_HYBRID_20_TEXT_PLUS_CAUSAL_BINARY_BINDING"
+  "current_plugin_source_parity": "VERIFIED_HYBRID_20_TEXT_PLUS_CAUSAL_BINARY_BINDING",
+  "current_understanding_cards": {
+    "clic": "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md",
+    "lyvra": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+    "pfs": "relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "csm": "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "stream": "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md"
+  },
+  "plugin_impact_for_card_binding": "NO_PLUGIN_CHANGE_REQUIRED_GENERIC_CARD_REHYDRATION_ALREADY_PRESENT_V0_1_16"
 }
