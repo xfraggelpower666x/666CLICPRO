@@ -1500,5 +1500,26 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "PET_VERIFY_JUNIOR_NATIVE_SOURCE_SIGNED_EVENTS_BUDGET_AND_WORKER_TESTS"
+  },
+  "update_2026_10_09_pet_security_budget_candidate": {
+    "scope": "WHOLE_CLIC_OWNED_PET_CANDIDATE",
+    "status": "REPO_SOURCE_READBACK_VERIFIED_RUNTIME_TESTS_OPEN",
+    "prechange_branch": "backup/clic-pre-pet-security-budget-20261009",
+    "prechange_head": "c630600b3a926e7c1bf836fc2fba2ebd355da194",
+    "body_head_before_pointer": "cd9b5df55dbe84a9e3c29c11f7137995a68c2730",
+    "body_readback": "PASS_9_SELECTED_FILES",
+    "tests": "NOT_EXECUTED_HOST_NO_GITHUB_NETWORK",
+    "event_verifier": "CLIC_PET/worker/src/verified-events.mjs",
+    "signing_producer": "NOT_BOUND",
+    "budget_ledger": "CLIC_PET/worker/src/github-budget.mjs",
+    "budget_runtime": "NOT_DEPLOYED_NOT_ACTIVATED",
+    "junior_current": "UNVERIFIED",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "plugin_parity": "PENDING_BINARY_FINGERPRINT_AND_RELEASE",
+    "pet_original_assets": "UNCHANGED",
+    "foreign_mutation": false,
+    "no_live_deploy": true,
+    "pointer_last": true,
+    "return_anchor": "EXECUTE_PET_WORKER_SECURITY_TESTS_VERIFY_JUNIOR_SOURCE_THEN_GUARDED_WORKER_STAGING"
   }
 }
