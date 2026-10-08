@@ -71,7 +71,9 @@
     "semantic_visual_intelligence": "MANAGED_VISUAL_SUPERVISION_ACTIVE",
     "visual_chat_backup_provenance": "INGESTED_CLASSIFIED_COMPLETE",
     "lyvra_discord_dashboard_visual": "TARGET_SPECIFIC_CONCEPT_PREPARED_AWAITING_LYVRA_NATIVE_ADOPTION",
-    "lingua_visual_runtime_binding": "PARTIAL_R16_CURRENT_POINTER_DIRECT_VERIFICATION_OPEN"
+    "lingua_visual_runtime_binding": "PARTIAL_R16_CURRENT_POINTER_DIRECT_VERIFICATION_OPEN",
+    "pfs_visual_compliance": "PARTIAL_RECURSIVE_CHILD_DASHBOARD_AND_DEVELOPMENT_POSITION_NATIVE_ADOPTION_OPEN",
+    "csm_visual_compliance": "PARTIAL_DEDICATED_PRESENTATION_ADAPTER_AND_DEVELOPMENT_POSITION_NATIVE_ADOPTION_OPEN"
   },
   "continuity": {
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
@@ -104,7 +106,10 @@
       "provenance": "USER_CHAT_EXPORT_INGESTED_CLASSIFIED",
       "lyvra_visual_compliance": "PARTIAL",
       "lingua_visual_compliance": "PARTIAL",
-      "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md"
+      "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md",
+      "pfs_visual_compliance": "PARTIAL",
+      "csm_visual_compliance": "PARTIAL",
+      "last_managed_target_recheck": "666PFS_AND_666CSM"
     }
   }
 }
