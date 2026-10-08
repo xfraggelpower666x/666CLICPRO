@@ -41,6 +41,7 @@
     "facets/relational_memory_intelligence/LEARNING_MEMORY.md",
     "facets/relational_memory_intelligence/VISUAL_DASHBOARD.md",
     "current/PROJECT_CAUSAL_DEVELOPMENT_GUIDANCE.md",
+    "current/SEMANTIC_CAUSAL_REPAIR_STANDARD_PROPOSAL_2026-10-08.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
     "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
@@ -870,6 +871,7 @@
     ],
     "plugin_impact": "REQUIRED_NOT_PASSED",
     "functional_acceptance": "PENDING",
-    "production_pointer": "UNCHANGED"
+    "production_pointer": "UNCHANGED",
+    "repair_standard": "PROPOSAL_ONLY_NOT_INSTALLED_AS_TRIGGER"
   }
 }
