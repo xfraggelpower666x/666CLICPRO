@@ -1521,5 +1521,24 @@
     "no_live_deploy": true,
     "pointer_last": true,
     "return_anchor": "EXECUTE_PET_WORKER_SECURITY_TESTS_VERIFY_JUNIOR_SOURCE_THEN_GUARDED_WORKER_STAGING"
+  },
+  "update_2026_10_09_pet_test_hardening": {
+    "status": "REPO_TESTS_VERIFIED_NOT_LIVE_RELEASE",
+    "prechange_head": "0a83511cd4b96f63d3c8b7cc51ab0b5ec4492200",
+    "prechange_backup": "backup/clic-pre-pet-test-hardening-20261009",
+    "body_head_before_pointer": "e541579cd362e1fb591909e3fb6fc4ee6dac8296",
+    "body_readback": "PASS_5_SELECTED_FILES",
+    "github_check_candidate_test": "SUCCESS",
+    "github_check_repository_native_fixtures": "SUCCESS",
+    "native_signature_verifier": "ACTOR_SCOPE_BOUND_POSITIVE_AND_NEGATIVE_TESTED",
+    "budget_runtime": "NOT_DEPLOYED_RESERVATIONS_NOT_REAL_HTTP_REQUESTS",
+    "worker_deployment": "NOT_PERFORMED",
+    "junior_native_event_producer": "UNVERIFIED",
+    "native_signed_producer": "NOT_BOUND",
+    "plugin_release": "0.1.22_UNCHANGED_CANDIDATE_0.1.23_NOT_RELEASED",
+    "visual_host_readback": "NOT_PERFORMED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "VERIFY_JUNIOR_NATIVE_CURRENT_BIND_SIGNED_PRODUCER_AND_REAL_GITHUB_REQUEST_BUDGET"
   }
 }
