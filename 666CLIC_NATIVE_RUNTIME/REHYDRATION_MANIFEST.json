@@ -870,6 +870,13 @@
     ],
     "plugin_release_unchanged": "0.1.22",
     "visual_host_verified": false,
-    "worker_deployed": false
+    "worker_deployed": false,
+    "security_budget_candidate": {
+      "signed_event_verifier": "CLIC_PET/worker/src/verified-events.mjs",
+      "github_budget_object": "CLIC_PET/worker/src/github-budget.mjs",
+      "gates": "CLIC_PET/worker/BUDGET_AND_EVENTS_GATES.md",
+      "source_status": "PREPARED_NOT_DEPLOYED",
+      "live_release_unchanged": "0.1.22"
+    }
   }
 }

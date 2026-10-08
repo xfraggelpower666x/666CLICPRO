@@ -1,1 +1,7 @@
-{"name":"clic-junior-pet","main":"src/index.js","compatibility_date":"2026-10-08"}
+{
+ "name":"clic-junior-pet",
+ "main":"src/index.js",
+ "compatibility_date":"2026-10-08",
+ "durable_objects":{"bindings":[{"name":"CLIC_PET_GITHUB_BUDGET","class_name":"ClicGithubBudget"}]},
+ "migrations":[{"tag":"v1-budget","new_sqlite_classes":["ClicGithubBudget"]}]
+}
