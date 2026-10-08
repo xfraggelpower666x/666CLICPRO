@@ -1452,5 +1452,28 @@
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
     "pointer_written_last": true,
     "no_post_pointer_mutation": true
+  },
+  "repository_bridge_capability_2026_10_09": {
+    "status": "NATIVE_REGISTERED_REHYDRATED_IDLE_REACHABLE",
+    "scope": "WHOLE_CLIC_REUSABLE_CAPABILITY_NOT_PET",
+    "parent": "666CLIC",
+    "facet": "facets/repository_bridge/FACET_CONTRACT.md",
+    "current": "facets/repository_bridge/CURRENT_STATE.json",
+    "sub_lifecircle": "facets/repository_bridge/SUB_LIFECIRCLE.md",
+    "sub_rehydration": "facets/repository_bridge/SUB_REHYDRATION.md",
+    "transfer_contract": "facets/repository_bridge/TRANSFER_CONTRACT.md",
+    "required_order": "REGISTERED_5_FILES",
+    "body_readback": "PASS_4_OF_4",
+    "body_head_before_pointer": "0983d6e6074c5fab12723baeb6602a6b8bcce5be",
+    "prechange_backup_branch": "backup/clic-pre-repository-bridge-integration-20261009",
+    "prechange_head": "dae411b046d9f00d130c56404df50c57305d9a4a",
+    "pet_assets": "UNCHANGED",
+    "foreign_mutation": false,
+    "plugin_impact": "ASSESSED_RELEASE_PARITY_PENDING",
+    "plugin_binary_fingerprint": "NOT_REVALIDATED",
+    "bridge_remote_byte_attestation": "PENDING_88_OF_88",
+    "automatic_transfer": false,
+    "pointer_written_last": true,
+    "return_anchor": "VERIFY_88_REMOTE_BLOBS_AND_GUARDED_PLUGIN_PARITY"
   }
 }
