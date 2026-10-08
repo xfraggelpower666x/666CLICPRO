@@ -13,6 +13,11 @@
     "current/OPERATIONS_CENTER.md",
     "current/CROSS_SYSTEM_DEVELOPMENT_EXCHANGE_LIVECIRCLE.md",
     "current/SEMANTIC_CYBER_FIELD_LOCAL_ADAPTIVE_VISUAL_CONTRACT.md",
+    "facets/repository_bridge/FACET_CONTRACT.md",
+    "facets/repository_bridge/CURRENT_STATE.json",
+    "facets/repository_bridge/SUB_LIFECIRCLE.md",
+    "facets/repository_bridge/SUB_REHYDRATION.md",
+    "facets/repository_bridge/TRANSFER_CONTRACT.md",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
@@ -838,5 +843,21 @@
     "proposal": "outbox/666LINGUA/CLIC_LINGUA_LIVECIRCLE_REHYDRATION_LIVE_PORTABLE_PROPOSAL_2026-10-08.md",
     "visual_compliance": "PARTIAL_DOCUMENTED_NOT_RUNTIME_VALIDATED",
     "plugin_impact": "NO_RUNTIME_CHANGE_CARD_GENERIC_SUPPORT"
+  },
+  "repository_bridge_capability": {
+    "id": "REPOSITORY_BRIDGE",
+    "parent": "WHOLE_666CLIC",
+    "role": "REUSABLE_NATIVE_CAPABILITY",
+    "rehydration": "AFTER_WHOLE_AUTHORITY_BEFORE_ORDINARY_FACETS",
+    "state": "REHYDRATED_IDLE_REACHABLE",
+    "first_consumer": "CLIC_PET",
+    "no_independent_authority": true,
+    "no_foreign_autoactivation": true,
+    "no_automatic_import": true,
+    "no_pointer_write_by_bridge": true,
+    "bridge_receipt_pending_external_verification": true,
+    "plugin_impact": "ASSESSMENT_REQUIRED_RELEASE_PARITY_PENDING",
+    "remote_evidence": "GITHUB_COMMIT_DAE411B_AND_TREE_READBACK_ONLY",
+    "registration_date": "2026-10-09"
   }
 }
