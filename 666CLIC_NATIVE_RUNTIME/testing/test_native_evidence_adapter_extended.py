@@ -22,4 +22,15 @@ class NativeExtensionTests(unittest.TestCase):
     def test_repair_requires_real_outcome(self):
         self.assertEqual(repair_assessment(True,True,True,False),"PENDING_FUNCTIONAL_REAUDIT")
 
+    def test_junior_rejects_incomplete_semantic_chain(self):
+        proof={"source":"CLIC","head":"sha","pointer":"p","receiver_readback":"r","acknowledgement":"a"}
+        self.assertEqual(junior_review_implementation(proof),"UNVERIFIED_CLAIM")
+    def test_card_without_evidence_cannot_be_reverified(self):
+        card={"verified_head":"same","history":["earlier"]}
+        updated=reconcile_card(card,"same","")
+        self.assertEqual(updated["currentness"],"PENDING_NATIVE_READ")
+        self.assertEqual(updated["history"],["earlier"])
+    def test_repair_cause_without_proportionality_is_blocked(self):
+        self.assertEqual(repair_assessment(True,True,False,True),"BLOCK_CAPABILITY_REGRESSION")
+
 if __name__=="__main__": unittest.main()
