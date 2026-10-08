@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "77519673f1182ecaa7ae7e0ffb6d3f723da76187",
+  "body_head_before_pointer": "9f9467f1d0b5d392d36fb883325ff96d3f52e604",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1220,5 +1220,20 @@
     "lingua_native_writes": false,
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
     "prechange_branch": "clic-pre-lingua-continuity-proposal-20261008-0302"
+  },
+  "lingua_r16_interruption_reconciliation_2026_10_08": {
+    "status": "CLIC_CARD_EVIDENCE_READBACK_VERIFIED_LINGUA_NATIVE_NOT_MUTATED",
+    "lingua_audit_id": "1xDHH9gCCORfCMtg25H4Q2TmBEo0PF4UI",
+    "lingua_audit_version": "v3.4.4_R16",
+    "lingua_current_pointer": "NOT_DIRECTLY_VERIFIED",
+    "lingua_live_portable_integration": "PAUSED_NOT_EXECUTED",
+    "source_card": "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md",
+    "prechange_branch": "clic-pre-lingua-r16-interruption-20261008-0335",
+    "body_readback": "PASS_2_OF_2",
+    "plugin_impact": "NONE_RUNTIME_UNCHANGED",
+    "plugin_version": "0.1.22",
+    "backup_approval": "REVALIDATION_REQUIRED_UNCHANGED",
+    "foreign_writes": false,
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
   }
 }
