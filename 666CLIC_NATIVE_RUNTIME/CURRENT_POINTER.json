@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "9f9467f1d0b5d392d36fb883325ff96d3f52e604",
+  "body_head_before_pointer": "2ec50742d77208349c842319b13c565d18414a7e",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1234,6 +1234,22 @@
     "plugin_version": "0.1.22",
     "backup_approval": "REVALIDATION_REQUIRED_UNCHANGED",
     "foreign_writes": false,
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
+  },
+  "visual_chat_export_provenance_2026_10_08": {
+    "status": "INGESTED_CLASSIFIED_REPO_READBACK_VERIFIED",
+    "source": "USER_SUPPLIED_CHAT_EXPORT_2026_10_08_0334",
+    "reported_messages": 133,
+    "source_status": "INERT_NOT_NATIVE_AUTHORITY",
+    "facet": "facets/semantic_visual_intelligence/CURRENT_STATE.md",
+    "already_adopted": "SEMANTIC_VISUAL_INTELLIGENCE_V01_4",
+    "plugin_version": "0.1.22",
+    "plugin_impact": "NO_NEW_RUNTIME_SEMANTICS",
+    "backup_approval": "REVALIDATION_REQUIRED",
+    "lingua_r16_work": "PRESERVED_OPEN",
+    "readback": "PASS_2_OF_2",
+    "recovery_branch": "clic-pre-visual-chatbackup-ingest-20261008-0337",
+    "foreign_mutation": false,
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
   }
 }
