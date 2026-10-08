@@ -768,8 +768,8 @@
     "currentness_fingerprint_binding": true
   },
   "current_cross_system_synthesis": "current/CROSS_SYSTEM_ARCHITECTURE_SYNTHESIS_2026-10-07.md",
-  "current_plugin_version": "0.1.20",
-  "current_plugin_release": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
+  "current_plugin_version": "0.1.22",
+  "current_plugin_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
   "current_plugin_source_parity": "VERIFIED_HYBRID_23_TEXT_PLUS_CAUSAL_BINARY_BINDING",
   "current_understanding_cards": {
     "clic": "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md",
@@ -823,7 +823,12 @@
     "dashboard_capability_for_managed_systems": "REQUIRED_WITHOUT_PLUGIN_DEPENDENCY",
     "system_card_visual_fields_required": true,
     "compliance_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
-    "compliance_standard": "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md"
+    "compliance_standard": "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md",
+    "current_phase": "MANAGED_VISUAL_SUPERVISION_ACTIVE",
+    "visual_chat_provenance": "INGESTED_CLASSIFIED",
+    "lyvra_visual_compliance": "PARTIAL",
+    "lingua_visual_compliance": "PARTIAL",
+    "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md"
   },
   "lingua_continuity_proposal_2026_10_08": {
     "status": "CLIC_PROPOSAL_READBACK_VERIFIED_NO_FOREIGN_INSTALL",
