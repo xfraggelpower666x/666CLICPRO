@@ -859,5 +859,17 @@
     "plugin_impact": "ASSESSMENT_REQUIRED_RELEASE_PARITY_PENDING",
     "remote_evidence": "GITHUB_COMMIT_DAE411B_AND_TREE_READBACK_ONLY",
     "registration_date": "2026-10-09"
+  },
+  "pet_subcontinuity": {
+    "parent": "WHOLE_666CLIC",
+    "status": "SOURCE_PREPARED_NOT_DEPLOYED",
+    "required_after_whole": [
+      "CLIC_PET/SYSTEM_IDENTITY.md",
+      "CLIC_PET/livecircle/CURRENT_STATE.json",
+      "CLIC_PET/rehydration/REHYDRATION_MANIFEST.json"
+    ],
+    "plugin_release_unchanged": "0.1.22",
+    "visual_host_verified": false,
+    "worker_deployed": false
   }
 }

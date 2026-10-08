@@ -1,0 +1,11 @@
+{
+  "parent": "WHOLE_666CLIC",
+  "whole_clic_first": true,
+  "sequence": [
+    "CLIC_PET/SYSTEM_IDENTITY.md",
+    "CLIC_PET/livecircle/CURRENT_STATE.json",
+    "CLIC_PET/worker/src/index.js"
+  ],
+  "junior_native_source_gate": "PENDING_VERIFICATION",
+  "auto_deploy": false
+}

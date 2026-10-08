@@ -1,0 +1,13 @@
+{
+  "schema": "CLIC_SHARED_PET_CURRENT_V1",
+  "parent": "WHOLE_666CLIC",
+  "identity": "ONE_SHARED_PET_TWO_DISTINCT_NATIVE_PERSPECTIVES",
+  "status": "SOURCE_CANDIDATE_NOT_DEPLOYED",
+  "junior_source": "UNVERIFIED",
+  "signed_events": "NOT_BOUND",
+  "original_assets": "CLIC_PET/assets/duo-v2.1/final",
+  "worker": "CLIC_PET/worker/src/index.js",
+  "budget": "UNAVAILABLE_NO_AUTHORITATIVE_LEDGER",
+  "plugin": "CANDIDATE_NOT_RELEASED",
+  "return_anchor": "VERIFY_JUNIOR_SOURCE_AND_BUILD_SIGNED_NATIVE_EVENT_PRODUCER"
+}
