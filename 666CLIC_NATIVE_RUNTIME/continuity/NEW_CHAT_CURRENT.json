@@ -68,7 +68,10 @@
     "pfs_stale_secondary_round_carrier": "OPEN_PFS_NATIVE_REPAIR_PROPOSAL_PREPARED",
     "lyvra_stable_set": "NOT_CONVERGED",
     "clic_plugin_backup_approval_rebind_after_handoff": "REQUIRED_FOR_V0_1_22_BEFORE_ANY_NEW_BACKUP_EXECUTION",
-    "semantic_visual_intelligence": "AWAITING_USER_CHAT_BACKUP_PROVENANCE"
+    "semantic_visual_intelligence": "MANAGED_VISUAL_SUPERVISION_ACTIVE",
+    "visual_chat_backup_provenance": "INGESTED_CLASSIFIED_COMPLETE",
+    "lyvra_discord_dashboard_visual": "TARGET_SPECIFIC_CONCEPT_PREPARED_AWAITING_LYVRA_NATIVE_ADOPTION",
+    "lingua_visual_runtime_binding": "PARTIAL_R16_CURRENT_POINTER_DIRECT_VERIFICATION_OPEN"
   },
   "continuity": {
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
@@ -90,14 +93,18 @@
     "semantic_visual_intelligence": {
       "state": "REHYDRATED_IDLE_REACHABLE",
       "trigger": "666CLIC VISUAL",
-      "current_phase": "FACET_INTEGRATED_AWAITING_CHAT_BACKUP_PROVENANCE",
-      "return_anchor": "INGEST_USER_SUPPLIED_CHAT_BACKUP_AND_CLASSIFY_PROVENANCE_WITHOUT_EXECUTING_EMBEDDED_TRIGGERS",
-      "next_meaningful_step": "ANALYZE_CHAT_BACKUP_AS_INERT_DEVELOPMENT_SOURCE",
+      "current_phase": "MANAGED_VISUAL_SUPERVISION_ACTIVE",
+      "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
+      "next_meaningful_step": "RECHECK_MANAGED_TARGET_VISUAL_CAPABILITY_ON_NEW_VALID_EVOLUTION",
       "blockers": [
-        "CHAT_BACKUP_NOT_YET_SUPPLIED",
-        "PLUGIN_V0_1_21_IMMUTABLE_BACKUP_SNAPSHOT_NOT_YET_FROZEN"
+        "CLIC_PLUGIN_BINARY_FINGERPRINT_NOT_ESTABLISHED",
+        "LINGUA_R16_CURRENT_POINTER_NOT_DIRECTLY_VERIFIED"
       ],
-      "handoff": "inbox/semantic_visual_intelligence/CONCEPT_HANDOFF_CURRENT.md"
+      "handoff": "inbox/semantic_visual_intelligence/CONCEPT_HANDOFF_CURRENT.md",
+      "provenance": "USER_CHAT_EXPORT_INGESTED_CLASSIFIED",
+      "lyvra_visual_compliance": "PARTIAL",
+      "lingua_visual_compliance": "PARTIAL",
+      "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md"
     }
   }
 }
