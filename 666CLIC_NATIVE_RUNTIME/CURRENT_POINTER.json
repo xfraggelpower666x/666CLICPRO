@@ -1475,5 +1475,30 @@
     "automatic_transfer": false,
     "pointer_written_last": true,
     "return_anchor": "VERIFY_88_REMOTE_BLOBS_AND_GUARDED_PLUGIN_PARITY"
+  },
+  "update_2026_10_09_shared_pet_and_bridge_candidate": {
+    "status": "VERIFIED_REPO_SOURCE_BODY_NOT_OPERATIONAL_RELEASE",
+    "body_head_before_pointer": "13ff001ac1b8f09552ec1d70ca4b32908d2e0d7c",
+    "prechange_head": "0261d2812f8d655c1ef00c052cb1fb8e0b49e258",
+    "prechange_backup": "backup/clic-pre-pet-runtime-and-bridge-parity-20261009",
+    "repository_bridge_metadata": "REPAIRED_NATIVE_POINTER_UPDATED",
+    "pet_identity": "ONE_SHARED_CLIC_JUNIOR_PET_NOT_NEW_ROOT",
+    "pet_runtime_source": "CLIC_PET/worker/src/index.js",
+    "pet_sub_lifecircle": "CLIC_PET/livecircle/CURRENT_STATE.json",
+    "pet_rehydration": "CLIC_PET/rehydration/REHYDRATION_MANIFEST.json",
+    "worker_deployment": "NOT_PERFORMED",
+    "junior_native_event_source": "UNVERIFIED",
+    "signed_event_producer": "NOT_BOUND",
+    "github_budget_ledger": "UNAVAILABLE",
+    "assets": "ORIGINAL_UNCHANGED_WORKER_NOT_BOUND",
+    "plugin_candidate": "666clic-plugin/candidates/repository-bridge-pet-v0.1.23/",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "plugin_release_parity": "PENDING_BINARY_FINGERPRINT_AND_RELEASE",
+    "repository_body_readback": "PASS_7_OF_7_SELECTED",
+    "test_execution": "NOT_EXECUTED",
+    "visual_compliance": "SOURCE_PREPARED_HOST_NOT_VERIFIED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "PET_VERIFY_JUNIOR_NATIVE_SOURCE_SIGNED_EVENTS_BUDGET_AND_WORKER_TESTS"
   }
 }
