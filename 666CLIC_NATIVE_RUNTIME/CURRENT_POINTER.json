@@ -8,8 +8,8 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "58b437f3f9aaa015b2a61285dae134bf24b7680c",
-  "changed_carriers_readback": "PASS_MANAGED_SYSTEM_VISUAL_COMPLIANCE_DASHBOARD_PLUGIN_AND_CARD_READBACK",
+  "body_head_before_pointer": "77519673f1182ecaa7ae7e0ffb6d3f723da76187",
+  "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
   "live_circle_functional_test": "VERIFIED_KEEP_ACTIVE_KEEP_REACHABLE_SUPERSEDE_AND_REPO_HANDOFF",
@@ -1206,5 +1206,19 @@
     "prechange_recovery_branch": "clic-pre-managed-system-visual-compliance-20261008-0144",
     "pointer_written_last": true,
     "no_post_pointer_mutation": true
+  },
+  "lingua_continuity_proposal_2026_10_08": {
+    "status": "VERIFIED_CLIC_REPO_READBACK_PROPOSED_NOT_LINGUA_INSTALLED",
+    "source": "GOOGLE_DRIVE_LINGUA_VISUAL_V01_4_READBACK",
+    "card": "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md",
+    "handoff": "outbox/666LINGUA/CLIC_LINGUA_LIVECIRCLE_REHYDRATION_LIVE_PORTABLE_PROPOSAL_2026-10-08.md",
+    "manifest_required_order": "UPDATED_32_ENTRIES",
+    "visual_compliance": "PARTIAL_DOCUMENTED",
+    "plugin_impact": "NO_RUNTIME_SEMANTIC_CHANGE",
+    "clic_plugin": "0.1.22_NO_CHANGE",
+    "backup_approval": "REVALIDATION_REQUIRED_UNCHANGED",
+    "lingua_native_writes": false,
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
+    "prechange_branch": "clic-pre-lingua-continuity-proposal-20261008-0302"
   }
 }
