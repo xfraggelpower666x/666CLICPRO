@@ -33,7 +33,8 @@
     "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md",
     "relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
     "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
-    "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md"
+    "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -775,7 +776,8 @@
     "lyvra": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
     "pfs": "relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
     "csm": "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
-    "stream": "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md"
+    "stream": "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+    "lingua": "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md"
   },
   "plugin_impact_for_card_binding": "NO_PLUGIN_CHANGE_REQUIRED_GENERIC_CARD_REHYDRATION_ALREADY_PRESENT_V0_1_16",
   "semantic_visual_learning": {
@@ -822,5 +824,12 @@
     "system_card_visual_fields_required": true,
     "compliance_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
     "compliance_standard": "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md"
+  },
+  "lingua_continuity_proposal_2026_10_08": {
+    "status": "CLIC_PROPOSAL_READBACK_VERIFIED_NO_FOREIGN_INSTALL",
+    "card": "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md",
+    "proposal": "outbox/666LINGUA/CLIC_LINGUA_LIVECIRCLE_REHYDRATION_LIVE_PORTABLE_PROPOSAL_2026-10-08.md",
+    "visual_compliance": "PARTIAL_DOCUMENTED_NOT_RUNTIME_VALIDATED",
+    "plugin_impact": "NO_RUNTIME_CHANGE_CARD_GENERIC_SUPPORT"
   }
 }
