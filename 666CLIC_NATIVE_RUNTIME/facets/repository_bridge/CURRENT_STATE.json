@@ -1,0 +1,14 @@
+{
+  "schema": "CLIC_REPOSITORY_BRIDGE_CAPABILITY_V1",
+  "system": "666CLIC",
+  "facet": "REPOSITORY_BRIDGE",
+  "status": "PREPARED_NOT_NATIVE_REGISTERED",
+  "scope": "REUSABLE_CAPABILITY_NOT_PET",
+  "first_consumer": "CLIC_PET",
+  "worker_required": false,
+  "remote_readback": "PENDING",
+  "native_pointer_updated": false,
+  "plugin_integration": "PENDING_NATIVE_UPDATE",
+  "return_anchor": "VERIFY_REMOTE_BRIDGE_RECEIPT_THEN_NATIVE_INTEGRATION",
+  "foreign_mutation": false
+}
