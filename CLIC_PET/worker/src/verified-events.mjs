@@ -9,17 +9,18 @@ export function canonicalEvent(event) {
  if(!/^[a-f0-9]{40}$/.test(event.source_revision)|| !/^[a-f0-9]{40}$/.test(event.parent_commit))throw Error("REVISION_INVALID");
  return JSON.stringify(Object.fromEntries(fields.map(k=>[k,event[k]])));
 }
-export async function verifyNativeEvent(envelope,{keys,expectedSourceRevision,expectedParentCommit,now=Date.now(),cryptoApi=crypto}={}) {
+export async function verifyNativeEvent(envelope,{keys,expectedSourceRevision,expectedParentCommit,now=Date.now(),cryptoApi=globalThis.crypto}={}) {
  try{
   if(!keys||!(keys instanceof Map)||!envelope||envelope.algorithm!=="Ed25519"||typeof envelope.key_id!=="string"||typeof envelope.signature!=="string")return false;
-  const key=keys.get(envelope.key_id);if(!key)return false;
+  const record=keys.get(envelope.key_id);if(!record||typeof record!=="object"||!record.key||!["CLIC","JUNIOR","JOINT"].includes(record.actor))return false;
   const bytes=new TextEncoder().encode(canonicalEvent(envelope.event));
   const evt=envelope.event;
+  if(evt.actor!==record.actor||evt.scope!==record.scope||record.scope!=="CLIC")return false;
   if(!expectedSourceRevision||!expectedParentCommit||evt.source_revision!==expectedSourceRevision||evt.parent_commit!==expectedParentCommit)return false;
   const from=Date.parse(evt.observed_at),until=Date.parse(evt.expires_at);
   if(!Number.isFinite(from)||!Number.isFinite(until)||from>now||until<=now||until-from>60000)return false;
   const sig=Uint8Array.from(atob(envelope.signature),c=>c.charCodeAt(0));
   if(sig.length!==64)return false;
-  return await cryptoApi.subtle.verify("Ed25519",key,sig,bytes);
+  return await cryptoApi.subtle.verify("Ed25519",record.key,sig,bytes);
  }catch{return false;}
 }

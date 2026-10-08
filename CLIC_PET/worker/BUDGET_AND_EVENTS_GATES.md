@@ -23,3 +23,12 @@ Native CLIC and Junior event producers, their authority/relationship, and the Cl
 and bound Durable Object require separate acceptance before enabling the budget or verified
 events. This module does not by itself count real GitHub calls, does not sign events,
 does not offer a public ingestion endpoint and does not attest live host behavior.
+
+## 2026-10-09 evidence hardening
+KEY_RECORDS_MUST_BIND_ACTOR_AND_SCOPE=true
+NO_ARBITRARY_JUNIOR_SIGNER_AS_CLIC=true
+TESTS=POSITIVE_ED25519|TAMPER|EXPIRED|PARENT_COMMIT|ACTOR_ISOLATION|UNAVAILABLE_BUDGET
+BUDGET_RESERVATIONS_NOT_EQ_PROVEN_HTTP_REQUESTS=true
+CONNECTION_OF_BUDGET_TO_REAL_GITHUB_CALLS=BLOCKED_UNTIL_NATIVE_PRODUCER
+RELEASE_PARITY=UNVERIFIED_V0_1_22_CURRENT
+CANDIDATE_VERSION_NE_RELEASE=true

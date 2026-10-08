@@ -876,7 +876,9 @@
       "github_budget_object": "CLIC_PET/worker/src/github-budget.mjs",
       "gates": "CLIC_PET/worker/BUDGET_AND_EVENTS_GATES.md",
       "source_status": "PREPARED_NOT_DEPLOYED",
-      "live_release_unchanged": "0.1.22"
+      "live_release_unchanged": "0.1.22",
+      "signer_actor_isolation": "CLIC_JUNIOR_JOINT_SCOPED_BY_NATIVE_KEYS",
+      "worker_tests": "CI_EXECUTION_PENDING"
     }
   }
 }
