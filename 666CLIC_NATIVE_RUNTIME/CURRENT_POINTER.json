@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "cb1296c8715bd8d0dd8a81360d1d88c35ac9cbfd",
+  "body_head_before_pointer": "bedc7f7f09b5c2e0f8ada1772fc6c4aeeb31aa88",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1297,5 +1297,18 @@
     "lingua_r16": "PRESERVED",
     "prechange_branch": "clic-pre-lyvra-deep-parity-20261008-0542",
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
+  },
+  "lyvra_pet_parity_update_2026_10_08": {
+    "status": "VERIFIED_CLIC_REPO_READBACK",
+    "native_release": "pluginrel_6ac70d23233481919f22624348351154",
+    "account_release": "pluginrel_6ac70d31145c81918386ef96b49aeab4",
+    "shared_pet_authority_file": "DIRECT_LIVE_CONTENT_MATCH",
+    "full_dual_plugin_parity": "PARTIAL_NOT_VERIFIED",
+    "clic_binary_hash": "UNAVAILABLE",
+    "clic_fingerprint": "PARTIAL_REVALIDATION_PENDING",
+    "backup_approval": "WRITE_BLOCKED_UNCHANGED",
+    "prechange_branch": "clic-pre-pet-parity-readback-20261008-0545",
+    "foreign_mutations": false,
+    "lingua_r16": "PRESERVED_OPEN"
   }
 }
