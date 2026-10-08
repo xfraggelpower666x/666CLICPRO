@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "0dceff8dc678fc20e5357c79acc4c39ad452c73e",
+  "body_head_before_pointer": "6bd65f8302b71c746817a12932ab20db4c9d7d24",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1267,5 +1267,19 @@
     "lingua_r16_open_work": "PRESERVED",
     "foreign_mutation": false,
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
+  },
+  "plugin_release_reconciliation_and_lyvra_pet_2026_10_08": {
+    "status": "CLIC_REPO_READBACK_VERIFIED_BACKUP_GATE_BLOCKED",
+    "plugin_current_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "plugin_text_parity": "27_OF_27_DIRECT_COMPARISON",
+    "plugin_binary_hash": "UNAVAILABLE",
+    "plugin_fingerprint": "REVALIDATION_PENDING",
+    "backup_approval": "NOT_ISSUED",
+    "lyvra_target_head": "e6ebde2bad1d47f3213c45e1ad2b0a3f15aaeb34",
+    "lyvra_pet": "DIRECT_REPO_READ_ANALYSIS",
+    "lyvra_visual_compliance": "PARTIAL",
+    "foreign_writes": false,
+    "lingua_r16": "PRESERVED_OPEN",
+    "recovery_branch": "clic-pre-plugin-live-parity-lyvra-pet-20261008-0540"
   }
 }
