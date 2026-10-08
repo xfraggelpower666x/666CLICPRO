@@ -34,3 +34,20 @@ NO_FOREIGN_MUTATION=true
 NO_PET_WORK_IN_THIS_SCOPE=true
 
 NEXT=Execute exact repository sources, add native I/O adapters through safe CLIC-owned interfaces, verify actual repo receipts, preserve valid newer states; synchronize plugin under fresh authority and binary gates before any promotion.
+
+## Continuation 2026-10-08T20:56Z — user native staging approval
+USER_APPROVAL=CLIC_OWNED_STAGING_WORK_ONLY
+PET_SCOPE=EXCLUDED
+UPDATED_TEST=testing/test_native_evidence_adapter_extended.py
+NEW_NEGATIVE_TESTS=3
+EXTENDED_TEST_METHODS=10
+TOTAL_DEFINED_UNIT_TESTS=42
+NEW_TESTS_EXECUTION=NOT_VERIFIED
+NEW_TEST_FILE_GITHUB_READBACK=PASS
+IMPORTANT_UNIT_TEST_LIMIT=BOOLEANS_AND_STRINGS_NE_ACTUAL_RECEIVER_READBACK
+PLUGIN_LIVE_PARITY=NOT_VERIFIED
+REAL_DAEMON_INTEGRATION=NOT_VERIFIED
+FRESH_CHAT_REHYDRATION=OPEN
+BACKUP_APPROVAL=BLOCKED
+PRODUCTION_POINTER=UNCHANGED
+NEXT=Execute exact current test suite and compare source-backed evidence refs against actual readback; do not promote mock-proof to live-proof.
