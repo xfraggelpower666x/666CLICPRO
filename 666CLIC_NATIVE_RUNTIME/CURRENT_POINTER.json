@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "2ec50742d77208349c842319b13c565d18414a7e",
+  "body_head_before_pointer": "0dceff8dc678fc20e5357c79acc4c39ad452c73e",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1249,6 +1249,22 @@
     "lingua_r16_work": "PRESERVED_OPEN",
     "readback": "PASS_2_OF_2",
     "recovery_branch": "clic-pre-visual-chatbackup-ingest-20261008-0337",
+    "foreign_mutation": false,
+    "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
+  },
+  "clic_plugin_v0122_snapshot_2026_10_08": {
+    "status": "VERIFIED_HYBRID_GIT_SNAPSHOT_BACKUP_APPROVAL_BLOCKED",
+    "source_version": "0.1.22",
+    "source_tree_sha": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "source_git_blobs_verified": "27_OF_27",
+    "snapshot_file_count": 29,
+    "immutable_snapshot": "666clic-plugin/releases/v0.1.22",
+    "binary_binding": "CAUSAL_ONLY_NOT_REPO_BINARY_BYTE_PARITY",
+    "direct_live_plugin_revalidation": "NOT_PERFORMED",
+    "backup_approval": "WRITE_BLOCKED_PENDING_LIVE_RELEASE_AND_FINGERPRINT",
+    "pfs_execution": "NOT_AUTHORIZED",
+    "recovery_branch": "clic-pre-v0122-snapshot-freeze-20261008-0505",
+    "lingua_r16_open_work": "PRESERVED",
     "foreign_mutation": false,
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION"
   }
