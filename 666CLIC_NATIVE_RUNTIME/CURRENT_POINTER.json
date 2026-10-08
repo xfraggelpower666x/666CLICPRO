@@ -1540,5 +1540,28 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "VERIFY_JUNIOR_NATIVE_CURRENT_BIND_SIGNED_PRODUCER_AND_REAL_GITHUB_REQUEST_BUDGET"
+  },
+  "update_2026_10_09_tdh_visual_cards": {
+    "status": "VERIFIED_CLIC_REPO_READBACK",
+    "scope": "CLIC_OWNED_TDH_UNDERSTANDING_CARD_VISUAL_REGISTER_AND_NATIVE_CONCEPT",
+    "target": "666TRACKHUB-001",
+    "target_live_version": "v1.13.0",
+    "target_child_count": 5,
+    "tdh_native_visual_adoption": "NOT_VERIFIED_NOT_PERFORMED",
+    "understanding_card": "relations/TDH_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+    "visual_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "target_concept": "outbox/666TDH/CLIC-TDH-NATIVE-VISUAL-FACETS-DEVELOPMENT-CONCEPT-20261009.md",
+    "visual_compliance": "UNKNOWN",
+    "prechange_head": "835b17d27bb140d44a38bbc90fbefc9c03f3f170",
+    "prechange_backup": "backup/clic-pre-tdh-visual-cards-20261009-0141",
+    "body_head_before_pointer": "51b6440658001bcda6afb4bfcd51fa6c78b4f97f",
+    "body_readback": "PASS_3_OF_3_SELECTED",
+    "plugin_impact": "CLIC_EVIDENCE_AND_CARDS_ONLY_NO_PLUGIN_RUNTIME_SEMANTIC_CHANGE",
+    "clic_live_plugin": "0.1.22_UNCHANGED",
+    "pet_security_test_hardening": "PRESERVED",
+    "pet_worker": "NOT_DEPLOYED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "WAIT_NATIVE_TDH_VISUAL_UPDATE_AND_DIRECT_RETURN_HANDOFF_THEN_REAUDIT_UPDATE_CHILD_CARDS"
   }
 }
