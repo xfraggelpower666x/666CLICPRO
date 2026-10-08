@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "e6d482274f44bdb854472e3852abfee455a3e64a",
+  "body_head_before_pointer": "1985b90006ff5981f5a3ff81b193698f3027905b",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1349,5 +1349,21 @@
     "foreign_mutation": false,
     "recovery_branch": "clic-pre-approval-045-023-context-20261008-0840",
     "lingua_r16": "PRESERVED_OPEN"
+  },
+  "release_publication_audit_2026_10_08": {
+    "status": "VERIFIED_CLIC_REPO_READBACK_PARTIAL_CAUSAL_CHAIN",
+    "evidence": "recovery/PLUGIN_RELEASE_PUBLICATION_AUDIT_2026-10-08.md",
+    "historical_release": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "current_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "generic_overlay_preservation": "VERIFIED",
+    "specific_payload": "NOT_VERIFIED",
+    "live_binary_hash": "UNKNOWN",
+    "fingerprint": "NOT_ESTABLISHED",
+    "backup_approval": "WRITE_BLOCKED_UNCHANGED",
+    "pfs_execution": "NOT_AUTHORIZED",
+    "prechange_branch": "clic-pre-release-publication-audit-20261008-0843",
+    "foreign_mutation": false,
+    "lingua_r16": "PRESERVED_OPEN",
+    "return_anchor": "EXACT_PUBLICATION_PAYLOAD_OR_ORIGINAL_ARCHIVE_BYTE_READBACK"
   }
 }
