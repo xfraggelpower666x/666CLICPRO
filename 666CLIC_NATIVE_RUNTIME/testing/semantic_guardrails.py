@@ -7,7 +7,9 @@ def message_state(want, received=False, acknowledged=False, outcome=False, seman
     i=stages.index(want)
     if i>=2 and not received: return "PUBLISHED"
     if i>=3 and not acknowledged: return "DELIVERED_VERIFIED"
-    if i>=4 and not semantically_processed: return "ACKNOWLEDGED"\n    if i>=5 and not action_classified: return "SEMANTICALLY_RECONCILED"\n    if i==6 and not outcome: return "ACTION_CLASSIFIED"
+    if i>=4 and not semantically_processed: return "ACKNOWLEDGED"
+    if i>=5 and not action_classified: return "SEMANTICALLY_RECONCILED"
+    if i==6 and not outcome: return "ACTION_CLASSIFIED"
     return want
 
 def junior_claim(claim, readback=False, functional=False):
