@@ -12,10 +12,10 @@
     "all_current_native_runtime_gates": "VERIFIED",
     "repo_current_authority": true,
     "plugin_live_version": "0.1.22",
-    "plugin_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "plugin_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
     "plugin_source_parity": "V0_1_21_CHANGED_TEXT_FILES_DIRECT_READBACK_VERIFIED",
     "plugin_semantic_parity": "MANAGED_SYSTEM_VISUAL_COMPLIANCE_AND_DASHBOARD_VERIFIED",
-    "plugin_snapshot": "666clic-plugin/releases/v0.1.20",
+    "plugin_snapshot": "666clic-plugin/releases/v0.1.22",
     "plugin_binary_binding": "VERIFIED_CAUSAL_BINARY_BINDING",
     "semantic_cyber_field_base": "V01.2",
     "local_adaptive_visual_extension": "V01.3",
@@ -73,7 +73,8 @@
     "lyvra_discord_dashboard_visual": "TARGET_SPECIFIC_CONCEPT_PREPARED_AWAITING_LYVRA_NATIVE_ADOPTION",
     "lingua_visual_runtime_binding": "PARTIAL_R16_CURRENT_POINTER_DIRECT_VERIFICATION_OPEN",
     "pfs_visual_compliance": "PARTIAL_RECURSIVE_CHILD_DASHBOARD_AND_DEVELOPMENT_POSITION_NATIVE_ADOPTION_OPEN",
-    "csm_visual_compliance": "PARTIAL_DEDICATED_PRESENTATION_ADAPTER_AND_DEVELOPMENT_POSITION_NATIVE_ADOPTION_OPEN"
+    "csm_visual_compliance": "PARTIAL_DEDICATED_PRESENTATION_ADAPTER_AND_DEVELOPMENT_POSITION_NATIVE_ADOPTION_OPEN",
+    "stream_visual_compliance": "PARTIAL_PROJECT_LOCAL_VISUAL_ADAPTERS_OPEN"
   },
   "continuity": {
     "return_anchor": "CONTINUE_NEW_VALID_EVOLUTION",
@@ -109,7 +110,8 @@
       "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md",
       "pfs_visual_compliance": "PARTIAL",
       "csm_visual_compliance": "PARTIAL",
-      "last_managed_target_recheck": "666PFS_AND_666CSM"
+      "last_managed_target_recheck": "666STREAM",
+      "stream_visual_compliance": "PARTIAL"
     }
   }
 }
