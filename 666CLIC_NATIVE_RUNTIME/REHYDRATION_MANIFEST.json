@@ -828,7 +828,9 @@
     "visual_chat_provenance": "INGESTED_CLASSIFIED",
     "lyvra_visual_compliance": "PARTIAL",
     "lingua_visual_compliance": "PARTIAL",
-    "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md"
+    "lyvra_discord_dashboard_concept": "outbox/LYVRA/CLIC-LYVRA-DISCORD-DASHBOARD-VISUAL-INTELLIGENCE-CONCEPT-20261008.md",
+    "last_managed_target_recheck": "666STREAM",
+    "stream_visual_compliance": "PARTIAL"
   },
   "lingua_continuity_proposal_2026_10_08": {
     "status": "CLIC_PROPOSAL_READBACK_VERIFIED_NO_FOREIGN_INSTALL",
