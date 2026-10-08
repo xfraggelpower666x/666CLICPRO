@@ -1,6 +1,6 @@
 {
   "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
-  "status": "REVALIDATION_REQUIRED_AFTER_CLIC_RUNTIME_BODY_EVOLUTION",
+  "status": "SUPERSEDED_BY_V0_1_22_SNAPSHOT_APPROVAL_PENDING_LIVE_REVALIDATION",
   "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-023",
   "owner_system": "666CLIC",
   "target_executor": "666PFS",
@@ -27,7 +27,7 @@
   "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
   "freshness_race_guard": "SUPERSEDED_IF_RUNTIME_PLUGIN_STATE_FINGERPRINT_CHANGES_OR_CANNOT_BE_REVERIFIED",
   "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
-  "pfs_execution_status": "BLOCKED_PENDING_REVALIDATION_AND_NATIVE_PFS_BINDING_REFRESH",
+  "pfs_execution_status": "BLOCKED_PENDING_DIRECT_LIVE_RELEASE_READBACK_AND_NEW_FINGERPRINT",
   "backup_write_status": "PENDING",
   "backup_readback_status": "PENDING",
   "receipt_status": "PENDING",
@@ -107,5 +107,15 @@
     "backup_written": false,
     "readback": false,
     "receipt": false
+  },
+  "latest_snapshot_2026_10_08": {
+    "snapshot": "666clic-plugin/releases/v0.1.22",
+    "source_git_tree_sha": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "source_blob_parity": "PASS_27_OF_27",
+    "snapshot_files": 29,
+    "binary_parity": "VERIFIED_CAUSAL_BINARY_BINDING_ONLY",
+    "direct_live_release_readback": "NOT_PERFORMED",
+    "new_approval": "NOT_ISSUED",
+    "prior_approval": "023_FOR_V0_1_20_SUPERSEDED"
   }
 }
