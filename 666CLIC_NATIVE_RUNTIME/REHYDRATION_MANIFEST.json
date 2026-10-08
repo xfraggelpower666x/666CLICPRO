@@ -19,6 +19,28 @@
     "facets/semantic_visual_intelligence/CURRENT_STATE.md",
     "facets/semantic_visual_intelligence/MANAGED_SYSTEM_VISUAL_COMPLIANCE.md",
     "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "facets/semantic_communication_starbridge/FACET_CONTRACT.md",
+    "facets/semantic_communication_starbridge/MESSAGE_PROTOCOL.md",
+    "facets/semantic_communication_starbridge/SUB_LIFECIRCLE.md",
+    "facets/semantic_communication_starbridge/SUB_REHYDRATION.md",
+    "facets/semantic_communication_starbridge/DAEMON_CONTRACT.md",
+    "facets/semantic_communication_starbridge/VISUAL_DASHBOARD.md",
+    "facets/semantic_communication_starbridge/LEARNING_AND_CONTRADICTIONS.md",
+    "facets/semantic_communication_starbridge/LEGACY_COMMUNICATION_INVENTORY_AND_MIGRATION.md",
+    "facets/junior_clic_self_reflection/FACET_CONTRACT.md",
+    "facets/junior_clic_self_reflection/SUB_LIFECIRCLE.md",
+    "facets/junior_clic_self_reflection/SUB_REHYDRATION.md",
+    "facets/junior_clic_self_reflection/DAEMON_CONTRACT.md",
+    "facets/junior_clic_self_reflection/VISUAL_DASHBOARD.md",
+    "facets/relational_memory_intelligence/FACET_CONTRACT.md",
+    "facets/relational_memory_intelligence/RELATIONSHIP_GRAPH_CONTRACT.md",
+    "facets/relational_memory_intelligence/CARD_CURRENTNESS_PROTOCOL.md",
+    "facets/relational_memory_intelligence/SUB_LIFECIRCLE.md",
+    "facets/relational_memory_intelligence/SUB_REHYDRATION.md",
+    "facets/relational_memory_intelligence/DAEMON_CONTRACT.md",
+    "facets/relational_memory_intelligence/LEARNING_MEMORY.md",
+    "facets/relational_memory_intelligence/VISUAL_DASHBOARD.md",
+    "current/PROJECT_CAUSAL_DEVELOPMENT_GUIDANCE.md",
     "current/PLUGIN_BINARY_ASSET_BINDING_GOVERNANCE.md",
     "current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
     "current/EXTERNAL_LEARNING_SELF_INTEREST_SWEEP.md",
@@ -838,5 +860,16 @@
     "proposal": "outbox/666LINGUA/CLIC_LINGUA_LIVECIRCLE_REHYDRATION_LIVE_PORTABLE_PROPOSAL_2026-10-08.md",
     "visual_compliance": "PARTIAL_DOCUMENTED_NOT_RUNTIME_VALIDATED",
     "plugin_impact": "NO_RUNTIME_CHANGE_CARD_GENERIC_SUPPORT"
+  },
+  "staging_additive_facets": {
+    "status": "STAGING_ONLY_NOT_PRODUCTIVE",
+    "families": [
+      "SEMANTIC_COMMUNICATION_STARBRIDGE",
+      "JUNIOR_CLIC_SELF_REFLECTION",
+      "RELATIONAL_MEMORY_INTELLIGENCE"
+    ],
+    "plugin_impact": "REQUIRED_NOT_PASSED",
+    "functional_acceptance": "PENDING",
+    "production_pointer": "UNCHANGED"
   }
 }
