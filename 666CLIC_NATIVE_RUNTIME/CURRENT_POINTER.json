@@ -8,7 +8,7 @@
   "last_verified_lyvra_head": "8a88575e1a0d160416d2e79ec0eb6410dc9caa62",
   "staging_branch": "clic-migration-rev79-staging",
   "prechange_backup_branch": "clic-pre-rev91-delta-20261002-1323z",
-  "body_head_before_pointer": "1985b90006ff5981f5a3ff81b193698f3027905b",
+  "body_head_before_pointer": "66ca89834d0160a18591c5604a4c2ea428d6ce57",
   "changed_carriers_readback": "PASS_3_OF_3_LINGUA_CARD_PROPOSAL_MANIFEST",
   "full_native_coverage": "VERIFIED_CURRENT_NATIVE_RUNTIME_SCOPE",
   "full_fresh_rehydration": "VERIFIED_2026-10-05",
@@ -1365,5 +1365,21 @@
     "foreign_mutation": false,
     "lingua_r16": "PRESERVED_OPEN",
     "return_anchor": "EXACT_PUBLICATION_PAYLOAD_OR_ORIGINAL_ARCHIVE_BYTE_READBACK"
+  },
+  "binary_binding_minimal_repair_2026_10_08": {
+    "status": "REPAIR_CANDIDATE_REPO_READBACK_VERIFIED_BACKUP_BLOCKED",
+    "carrier": "recovery/PLUGIN_BINARY_BINDING_REPAIR_CURRENT_2026-10-08.json",
+    "current_live_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "historical_binding_release": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "historical_binding": "UNCHANGED",
+    "current_binding": "NOT_VERIFIED",
+    "live_binary_hash": "UNKNOWN",
+    "fingerprint": "NOT_ESTABLISHED",
+    "backup_approval": "WRITE_BLOCKED",
+    "pfs_execution": "NOT_AUTHORIZED",
+    "recovery_branch": "clic-pre-binary-binding-minimal-repair-20261008-0853",
+    "foreign_mutation": false,
+    "lingua_r16": "PRESERVED_OPEN",
+    "return_anchor": "OBTAIN_EXACT_RELEASE_BINARY_OR_TRANSITION_PAYLOAD"
   }
 }
