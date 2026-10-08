@@ -1,13 +1,13 @@
 """Bounded CLIC staging evidence guardrails. Not a production transport."""
 from dataclasses import dataclass
 
-def message_state(want, received=False, acknowledged=False, outcome=False):
+def message_state(want, received=False, acknowledged=False, outcome=False, semantically_processed=False, action_classified=False):
     stages = ["CREATED","PUBLISHED","DELIVERED_VERIFIED","ACKNOWLEDGED","SEMANTICALLY_RECONCILED","ACTION_CLASSIFIED","IMPLEMENTED_VERIFIED"]
     if want not in stages: raise ValueError("unknown state")
     i=stages.index(want)
     if i>=2 and not received: return "PUBLISHED"
     if i>=3 and not acknowledged: return "DELIVERED_VERIFIED"
-    if i==6 and not outcome: return "ACTION_CLASSIFIED"
+    if i>=4 and not semantically_processed: return "ACKNOWLEDGED"\n    if i>=5 and not action_classified: return "SEMANTICALLY_RECONCILED"\n    if i==6 and not outcome: return "ACTION_CLASSIFIED"
     return want
 
 def junior_claim(claim, readback=False, functional=False):
