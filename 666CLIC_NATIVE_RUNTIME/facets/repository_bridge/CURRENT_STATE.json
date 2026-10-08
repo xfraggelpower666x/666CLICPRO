@@ -1,0 +1,18 @@
+{
+  "schema": "CLIC_REPOSITORY_BRIDGE_CAPABILITY_V1",
+  "system": "666CLIC",
+  "facet": "REPOSITORY_BRIDGE",
+  "status": "NATIVE_REGISTERED_REHYDRATED_IDLE_REACHABLE",
+  "scope": "REUSABLE_CAPABILITY_NOT_PET",
+  "first_consumer": "CLIC_PET",
+  "worker_required": false,
+  "remote_readback": "PREVIOUS_87_BLOBS_UNCHANGED_AND_CURRENT_STATE_VALID_SUPERSESSION",
+  "native_pointer_updated": true,
+  "plugin_integration": "REPO_CANDIDATE_ADAPTER_NOT_LIVE_RELEASE",
+  "return_anchor": "PET_NATIVE_JUNIOR_EVIDENCE_AND_WORKER_DEPLOYMENT_GATES",
+  "foreign_mutation": false,
+  "native_manifest_registered": true,
+  "registration_scope": "CLIC_OWNED_ONLY",
+  "pet_identity_mutation": false,
+  "pfs_lyvra_foreign_mutation": false
+}
