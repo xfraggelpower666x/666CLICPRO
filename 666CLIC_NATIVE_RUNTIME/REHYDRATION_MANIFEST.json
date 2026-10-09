@@ -70,7 +70,19 @@
     "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json",
     "current/NONPET_COMPLETION_AUDIT_2026-10-09.json",
     "dashboard/NONPET_RELEASE_AND_VISUAL_GATES.md",
-    "dashboard/nonpet-completion.test.mjs"
+    "dashboard/nonpet-completion.test.mjs",
+    "facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md",
+    "facets/semantic_visual_intelligence/NEON_VISUAL_DISTRIBUTION_LIVECIRCLE.md",
+    "dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md",
+    "dashboard/CLIC_JUNIOR_FOREGROUND_CONTRACT.md",
+    "dashboard/unified-visual-header.mjs",
+    "outbox/LYVRA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666PFS_CSM/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666STREAM/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666LINGUA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666TDH/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666CLS/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+    "outbox/666MIRA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1077,5 +1089,27 @@
     "plugin_release": "NOT_PUBLISHED",
     "foreign_mutation": false,
     "return_anchor": "RETRIEVE_BYTE_EXACT_PROVIDER_ARCHIVE_AND_HOST_BINARY_PARITY; LIVE_DASHBOARD_RENDER; FRESH_TARGET_NATIVE_CARD_ACCEPTANCE; PET_REMAINS_PAUSED"
+  },
+  "unified_neon_visual_2026_10_09": {
+    "status": "CLIC_SOURCE_CONTRACTS_AND_7_PROPOSALS_CREATED_PLUGIN_AND_HOST_PARITY_PENDING",
+    "pet": "PAUSED_UNCHANGED",
+    "junior": "PINNED_FOREGROUND_COMPANION_VISUAL_WITH_EVIDENCE_STATUS",
+    "native_header": "dashboard/unified-visual-header.mjs",
+    "visual_contract": "facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md",
+    "developer_dashboard": "dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md",
+    "junior_foreground": "dashboard/CLIC_JUNIOR_FOREGROUND_CONTRACT.md",
+    "target_proposals": [
+      "LYVRA",
+      "666PFS",
+      "666STREAM",
+      "666LINGUA",
+      "666TDH",
+      "666CLS",
+      "666MIRA"
+    ],
+    "delivery": "OUTBOX_PREPARED_NOT_TARGET_ADOPTED",
+    "plugin_live": "0.1.22_NOT_UPDATED",
+    "host_visual_acceptance": "PENDING",
+    "foreign_mutation": false
   }
 }
