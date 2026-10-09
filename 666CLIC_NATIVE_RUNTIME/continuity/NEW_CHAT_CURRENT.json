@@ -245,5 +245,60 @@
     "foreign_mutations": false,
     "return_anchor": "FRESH_SYSTEMSTART_READBACK_ALL_FIVE_FACETS_AND_NEW_CHAT_NEXT_CHAT_ACCEPTANCE; VERIFY_HOST_TRIGGER_AND_PLUGIN_PARITY_SEPARATELY; PET_PAUSED",
     "supersession": "THIS_OVERLAY_SUPERSEDES_STALE_HEAD_AS_CURRENT_AUTHORITY_NOT_HISTORICAL_ORIGINAL_CONTENT"
+  },
+  "current_recovery_overlay_2026_10_09": {
+    "schema": "CLIC_NEW_CHAT_WHOLE_RELATIONAL_RECOVERY_OVERLAY_V1",
+    "status": "ROOT_CURRENT_FIRST_RELATIONAL_RECOVERY_SOURCE_REGISTERED_FRESH_HOST_PENDING",
+    "authority": "GITHUB_BRANCH_LIVE_HEAD_AND_CURRENT_POINTER",
+    "historical_fields_unchanged": true,
+    "historical_open_work_ne_active_current": true,
+    "historical_plugin_binary_missing": "SUPERSEDED_BY_VERIFIED_PROVIDER_TARGZ_SHA256_AND_28_OF_28_CONTENT_PARITY",
+    "historical_handoff_head": "PROVENANCE_ONLY",
+    "current_handoff_resolution": [
+      "READ_BRANCH_LIVE_HEAD",
+      "READ_ROOT_POINTER_LAST_VERIFIED",
+      "READ_MANIFEST_92_REQUIRED_REFERENCES",
+      "READ_RECURSIVE_FACET_REGISTRY_ALL_FIVE",
+      "READ_HOST_DRIFT_RELATIONAL_RECOVERY_OVERLAY",
+      "READ_FACET_LOCAL_LIFECIRCLE_REHYDRATION_AND_RELEVANT_CURRENT_RECEIPTS",
+      "RESOLVE_LATEST_VALID_SYSTEM_CARDS_AND_PEER_RETURN_EVIDENCE",
+      "RESUME_LATEST_VERIFIED_WORK_POSITION"
+    ],
+    "source_of_recency": "CURRENT_POINTER_AND_RELEVANT_DIRECT_NATIVE_EVIDENCE_NOT_THIS_HANDOFF_WRITE_COMMIT",
+    "whole_relational_recovery": "continuity/WHOLE_CLIC_HOST_DRIFT_RELATIONAL_RECOVERY_CURRENT_2026-10-09.json",
+    "native_facets": [
+      "repository_bridge",
+      "semantic_visual_intelligence",
+      "card_intelligence",
+      "semantic_force_decision",
+      "cross_surface_learning"
+    ],
+    "peer_cards": [
+      "LYVRA",
+      "666PFS",
+      "666CSM",
+      "666STREAM",
+      "666LINGUA",
+      "666CLS",
+      "666TDH",
+      "666MIRA"
+    ],
+    "outbox_current": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "cross_system": "PREPARED_7_NOTICES_ZERO_VERIFIED_DELIVERY_OR_NATIVE_ADOPTION_CURRENT_REPO_EVIDENCE",
+    "newer_target_cards": "CLS_V1_23|TDH_V1_14|MIRA_V1_0_17_SOURCE_EVIDENCE",
+    "current_provider_tar_gz_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "plugin_archive_file_on_github": "NOT_MIRRORED",
+    "plugin_release": "0.1.22_CURRENT_NO_NEW_RELEASE",
+    "fingerprint": "PARTIAL_NOT_APPROVED",
+    "host_fresh_boot": "NOT_TESTED",
+    "dev_dashboard_sensor": "NOT_DEPLOYED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "pet": "PAUSED_UNMODIFIED",
+    "fuck_horst_trigger": "UNVERIFIED_NATIVE_DEFINITION_NO_NEW_TRIGGER_CREATED",
+    "plugin_impact": "SEMANTIC_CONTINUITY_CHANGED_SOURCE_AHEAD_PREPUBLISH_AND_HOST_PARITY_PENDING",
+    "no_foreign_activation": true,
+    "no_foreign_mutation": true,
+    "no_auto_router": true,
+    "return_anchor": "REHYDRATE_AND_AUDIT_WHOLE_CLIC_RELATIONAL_CURRENT_FIRST; DO_NOT_REPEAT_ARCHIVE_FETCH_OR_FLATTEN_TO_PLUGIN_FINGERPRINT; COMPLETE_FRESH_HOST_AND_PEER_RECEIPTS; PET_PAUSED"
   }
 }
