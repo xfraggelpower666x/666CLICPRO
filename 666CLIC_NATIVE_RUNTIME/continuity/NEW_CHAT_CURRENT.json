@@ -156,5 +156,94 @@
     "delivered_verified": 0,
     "adopted_verified": 0,
     "scope": "CLIC_OUTBOX_ONLY_NO_FOREIGN_MUTATION"
+  },
+  "current_binding_2026_10_09": {
+    "schema": "CLIC_NEW_CHAT_CURRENTNESS_OVERLAY_V1",
+    "status": "GITHUB_CURRENT_BOUND_FACET_SOURCE_ONLY_FRESH_HOST_UNTESTED",
+    "authority": "GITHUB_REPO_CURRENT",
+    "valid_start_head": "7128d8a53a7a13bf4c4348d419ae5ebbda42dd70",
+    "head_resolution": "RE_READ_LIVE_BRANCH_HEAD_AND_ROOT_POINTER_ON_NEW_CHAT_AND_NEXT_CHAT_DO_NOT_TREAT_VALID_START_HEAD_AS_PINNED_FINAL_CURRENT",
+    "historical_handoff_origin_head": "a7e95b99529edf636f51e09226ed5d5e0cae3af6",
+    "historical_origin_preserved": true,
+    "root_pointer": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
+    "manifest": "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json",
+    "manifest_blob_at_prechange": "00172d5e49037edd107c4301a95a039a0f0e0839",
+    "manifest_required_order": 92,
+    "registry": "666CLIC_NATIVE_RUNTIME/continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "registry_blob_at_prechange": "161748f6fd2d0cd731158a9f99a82871616766e1",
+    "facet_state_resolution": "WHOLE_CLIC_FIRST_THEN_RECURSIVE_REGISTRY_WITH_CURRENT_HEAD_SUPERSESSION_AND_CAUSAL_RECEIPTS",
+    "facets": [
+      {
+        "id": "repository_bridge",
+        "parent": "WHOLE_666CLIC",
+        "contract": "facets/repository_bridge/FACET_CONTRACT.md",
+        "sub_lifecircle": "facets/repository_bridge/SUB_LIFECIRCLE.md",
+        "sub_rehydration": "facets/repository_bridge/SUB_REHYDRATION.md",
+        "load_default": "REHYDRATED_IDLE_REACHABLE",
+        "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY"
+      },
+      {
+        "id": "semantic_visual_intelligence",
+        "parent": "WHOLE_666CLIC",
+        "contract": "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
+        "sub_lifecircle": "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+        "sub_rehydration": "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+        "load_default": "REHYDRATED_IDLE_REACHABLE",
+        "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY"
+      },
+      {
+        "id": "card_intelligence",
+        "parent": "WHOLE_666CLIC",
+        "contract": "facets/card_intelligence/FACET_CONTRACT.md",
+        "sub_lifecircle": "facets/card_intelligence/SUB_LIFECIRCLE.md",
+        "sub_rehydration": "facets/card_intelligence/SUB_REHYDRATION.md",
+        "load_default": "REHYDRATED_IDLE_REACHABLE",
+        "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY"
+      },
+      {
+        "id": "semantic_force_decision",
+        "parent": "WHOLE_666CLIC",
+        "contract": "facets/semantic_force_decision/FACET_CONTRACT.md",
+        "sub_lifecircle": "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
+        "sub_rehydration": "facets/semantic_force_decision/SUB_REHYDRATION.md",
+        "load_default": "REHYDRATED_IDLE_REACHABLE",
+        "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY"
+      },
+      {
+        "id": "cross_surface_learning",
+        "parent": "WHOLE_666CLIC",
+        "contract": "facets/cross_surface_learning/FACET_CONTRACT.md",
+        "sub_lifecircle": "facets/cross_surface_learning/SUB_LIFECIRCLE.md",
+        "sub_rehydration": "facets/cross_surface_learning/SUB_REHYDRATION.md",
+        "load_default": "REHYDRATED_IDLE_REACHABLE",
+        "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY"
+      }
+    ],
+    "triggers": [
+      "666CLIC SYSTEMSTART",
+      "666CLIC WEITER",
+      "666CLIC UPDATE",
+      "666CLIC NEW CHAT",
+      "666CLIC NEXT CHAT",
+      "666CLIC INTEGRATION AUDIT",
+      "666CLIC DASHBOARD"
+    ],
+    "bridge": {
+      "source_zip_and_logo_repository_verified": true,
+      "bridge_commit": "4392de07191ac7ee3e2b60b96efc25a57999a389",
+      "provider_tar_gz_exact_current_release_bytes": "UNKNOWN",
+      "plugin_live": "0.1.22_UNCHANGED",
+      "plugin_prepublish": "WRITE_BLOCKED"
+    },
+    "fresh_host": {
+      "systemstart": "NOT_TESTED_IN_FRESH_CHAT",
+      "next_chat": "NOT_TESTED_IN_FRESH_CHAT",
+      "plugin_trigger_dispatch": "NOT_VERIFIED"
+    },
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false,
+    "return_anchor": "FRESH_SYSTEMSTART_READBACK_ALL_FIVE_FACETS_AND_NEW_CHAT_NEXT_CHAT_ACCEPTANCE; VERIFY_HOST_TRIGGER_AND_PLUGIN_PARITY_SEPARATELY; PET_PAUSED",
+    "supersession": "THIS_OVERLAY_SUPERSEDES_STALE_HEAD_AS_CURRENT_AUTHORITY_NOT_HISTORICAL_ORIGINAL_CONTENT"
   }
 }
