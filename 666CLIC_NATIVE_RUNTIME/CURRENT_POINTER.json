@@ -1569,5 +1569,32 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "CONTINUE_PLUGIN_BINARY_AND_CARD_FORCE_HOST_RELEASE_GATES_AFTER_RECHECKING_STABLE_HEAD_AND_PET_NATIVE_JUNIOR_PRODUCER"
+  },
+  "update_2026_10_09_pet_native_junior_producer_preflight": {
+    "status": "REPO_SOURCE_VERIFIED_CI_PASS_LIVE_PRODUCER_UNBOUND",
+    "prechange_head": "07ce82e85c2564eaae6277cc26ccd249d06c7400",
+    "prechange_backup": "backup/clic-pre-pet-junior-producer-gate-20261009",
+    "body_head_before_pointer": "e45c6fc8fd1c1999854a3d77d5c110ebc0eb0ec1",
+    "previous_recovery": "VERIFIED_49_OF_49_EXACT_UNCHANGED",
+    "required_manifest_paths_missing": 0,
+    "source": "CLIC_PET/worker/src/native-producer-gate.mjs",
+    "test": "CLIC_PET/worker/tests/native-producer-gate.test.mjs",
+    "ci_result": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37952980914/job/113896261977",
+    "pet_lifecircle": "CLIC_PET/livecircle/CURRENT_STATE.json",
+    "pet_rehydration": "CLIC_PET/rehydration/REHYDRATION_MANIFEST.json",
+    "junior_current": "UNVERIFIED",
+    "native_signed_producer": "NOT_BOUND",
+    "trusted_live_production_keys": "NOT_BOUND",
+    "worker": "NOT_DEPLOYED",
+    "visual_host": "NOT_VERIFIED",
+    "plugin_release": "0.1.22_UNCHANGED",
+    "plugin_binary_sha256": "UNAVAILABLE",
+    "card_force_skills_live": "NOT_INSTALLED",
+    "plugin_new_release": "NOT_PUBLISHED",
+    "pet_bridge_and_lyvra_learning": "PRESERVED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "REQUIRE_NATIVE_JUNIOR_CURRENT_EVIDENCE_AND_SIGNED_PRODUCER_THEN_AUTHORITATIVE_DURABLE_BUDGET_AND_WORKER_HOST_READBACK; CARD_FORCE_PLUGIN_RELEASE_REMAINS_BINARY_GATED"
   }
 }
