@@ -1523,5 +1523,28 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "VERIFY_NATIVE_JUNIOR_SIGNED_PRODUCER_AND_ACTUAL_BUDGET_DO_RUNTIME_THEN_PLUGIN_BINARY_PARITY"
+  },
+  "update_2026_10_09_pet_durable_object_mock_acceptance": {
+    "status": "REPO_SOURCE_READBACK_VERIFIED_CI_NOT_OBSERVED",
+    "prechange_head": "c3b0ec798257d94bad14eef3944cb26692297ed2",
+    "backup": "backup/clic-pre-pet-durable-object-tests-20261009",
+    "body_head_before_pointer": "2200b5b1a19b4022dd8bf42558260cac03233f3a",
+    "source_files": [
+      "CLIC_PET/worker/tests/durable-object.test.mjs",
+      "CLIC_PET/worker/DURABLE_OBJECT_TEST_GATE.md"
+    ],
+    "body_readback": "PASS_2_FILES",
+    "tests_defined": 6,
+    "ci_checks_seen": 0,
+    "ci_result": "NOT_YET_AVAILABLE",
+    "test_execution": "NOT_VERIFIED",
+    "real_cloudflare_do": "NOT_DEPLOYED_NOT_VERIFIED",
+    "github_budget_count": "RESERVATION_ATTEMPTS_ONLY",
+    "native_junior_source": "UNVERIFIED",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "plugin_archive_binary": "NOT_OBTAINED",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "return_anchor": "VERIFY_DURABLE_OBJECT_CI_THEN_ACTUAL_CLOUDFLARE_STAGING_AND_NATIVE_JUNIOR_SOURCE"
   }
 }
