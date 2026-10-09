@@ -1,0 +1,142 @@
+{
+  "schema": "CLIC_WHOLE_HOST_DRIFT_RELATIONAL_RECOVERY_V1",
+  "date": "2026-10-09",
+  "owner": "666CLIC",
+  "authority": "GITHUB_REPO_CURRENT_ONLY",
+  "status": "SOURCE_RELATIONAL_RECOVERY_REGISTERED_FRESH_HOST_RUNTIME_PENDING",
+  "prechange_head": "6ba3475f2a82a83578c7d687b2c88efe2ae64fc4",
+  "prechange_backup": "backup/clic-pre-whole-host-drift-rehydration-repair-20261009-2336",
+  "source_hierarchy": [
+    "VERIFY_LIVE_GITHUB_BRANCH_HEAD_AND_CURRENT_POINTER",
+    "VERIFY_MANIFEST_AND_RECURSIVE_FACET_REGISTRY",
+    "READ_NEWEST_VALID_CLIC_NATIVE_EVIDENCE_AND_SUPERSESSION",
+    "REHYDRATE_RELATIONS_SUB_LIFECIRCLES_AND_RETURN_ANCHORS",
+    "TREAT_UNSUPERSEDED_HISTORICAL_HANDOFF_AS_PROVENANCE_ONLY",
+    "RECONCILE_EXTERNAL_TARGET_CURRENT_ONLY_ON_DIRECT_READBACK",
+    "RESUME_LAST_VERIFIED_WORK_STEP_WITHOUT_FOREIGN_ACTIVATION"
+  ],
+  "host_drift_recovery": {
+    "classification": [
+      "STALE_HANDOFF_WORK_ANCHOR",
+      "RELATIONAL_FLATTENING_RISK",
+      "FRESH_FACET_RUNTIME_UNTESTED",
+      "CROSS_SYSTEM_RETURN_RECEIPTS_NOT_CLOSED"
+    ],
+    "fresh_host_behavior": "READ_CURRENT_NOT_HISTORICAL_PINNED_HEAD",
+    "preserve_valid_newer_evolution": true,
+    "no_silent_rollback": true,
+    "no_auto_router": true,
+    "mode_scope": "REPAIR_AND_REHYDRATION_DO_NOT_ASSUME_MIGRATION_OR_RESTORE_DEFAULTS",
+    "fork_lock_and_conflict": "CONFLICT_QUARANTINE_IF_HEAD_POINTER_OR_SUPERSESSION_MISMATCH"
+  },
+  "facets": [
+    {
+      "id": "repository_bridge",
+      "relation": "SOURCE_ARCHIVE_TRANSPORT_AND_RECOVERY",
+      "subcircle": "facets/repository_bridge/SUB_LIFECIRCLE.md",
+      "rehydration": "facets/repository_bridge/SUB_REHYDRATION.md",
+      "current_evidence": "recovery/PLUGIN_V0122_PROVIDER_TARGZ_EXACT_CONTENT_PARITY_2026-10-09.json",
+      "state": "SOURCE_PARITY_VERIFIED_PROVIDER_TARGZ_NOT_REPO_MIRRORED"
+    },
+    {
+      "id": "semantic_visual_intelligence",
+      "relation": "TARGET_VISUAL_COMPLIANCE_AND_DASHBOARD",
+      "subcircle": "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+      "rehydration": "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+      "state": "REPO_SOURCE_PRESENT_HOST_NOT_ACCEPTED"
+    },
+    {
+      "id": "card_intelligence",
+      "relation": "NATIVE_TARGET_CARD_PROVENANCE_AND_SUPERSESSION",
+      "subcircle": "facets/card_intelligence/SUB_LIFECIRCLE.md",
+      "rehydration": "facets/card_intelligence/SUB_REHYDRATION.md",
+      "state": "REGISTRY_PRESENT_TARGET_AUTO_REFRESH_NOT_VERIFIED"
+    },
+    {
+      "id": "semantic_force_decision",
+      "relation": "EVIDENCE_WEIGHTED_CAUSAL_DECISIONS_NO_DECISION_AUTHORITY",
+      "subcircle": "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
+      "rehydration": "facets/semantic_force_decision/SUB_REHYDRATION.md",
+      "state": "REPO_SOURCE_PRESENT_HOST_PLUGIN_PARITY_PENDING"
+    },
+    {
+      "id": "cross_surface_learning",
+      "relation": "PEER_CAUSAL_LEARNING_NATIVE_HANDOFF_AND_OUTCOME",
+      "subcircle": "facets/cross_surface_learning/SUB_LIFECIRCLE.md",
+      "rehydration": "facets/cross_surface_learning/SUB_REHYDRATION.md",
+      "state": "PROTOCOL_PRESENT_RETURN_RECEIPTS_NOT_COMPLETE"
+    }
+  ],
+  "cross_system": {
+    "cards": [
+      "LYVRA",
+      "666PFS",
+      "666CSM",
+      "666STREAM",
+      "666LINGUA",
+      "666CLS",
+      "666TDH",
+      "666MIRA"
+    ],
+    "registry": "facets/card_intelligence/REGISTRY.json",
+    "visual_notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "visual_notices_prepared": 7,
+    "visual_notices_delivered_verified": 0,
+    "visual_notices_native_adopted_verified": 0,
+    "cls": "V1_23_NATIVE_VISUAL_STRUCTURAL_SOURCE_PRESENT_GUI_HOST_PENDING",
+    "tdh": "V1_14_NEWER_VALID_VISUAL_STRUCTURAL_SOURCE_PRESENT_RENDER_PENDING",
+    "mira": "V1_0_17_CURRENT_NATIVE_VISUAL_NOT_VERIFIED",
+    "foreign_changes": "NONE",
+    "outcome_rule": "DIRECT_TARGET_CURRENT_READBACK_BEFORE_CARD_AND_CLIC_LOCAL_LEARNING_UPDATE"
+  },
+  "currentness": {
+    "historical_new_chat_origin": "a7e95b99529edf636f51e09226ed5d5e0cae3af6",
+    "new_chat_current": "continuity/NEW_CHAT_CURRENT.json",
+    "registered_facet_registry": "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "current_manifest": "REHYDRATION_MANIFEST.json",
+    "source_zip_repo": "VERIFIED",
+    "provider_tar_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "archive_contents": "28_OF_28_VERIFIED_PREVIOUSLY",
+    "provider_original_tar_file_repo": "NOT_MIRRORED",
+    "fingerprint_audit": "plugin_governance/CURRENT_V0122_FINGERPRINT_BOUNDARY_AUDIT_2026-10-09.json",
+    "fingerprint": "PARTIAL",
+    "approval": "NOT_ISSUED",
+    "plugin_release": "0.1.22_UNCHANGED",
+    "host": "NOT_TESTED",
+    "development_sensor": "NOT_DEPLOYED"
+  },
+  "trigger_provenance": {
+    "requested_alias": "FUCK HORST",
+    "github_repo_search_exact": "NO_RESULTS_ON_CODE_SEARCH_DEFAULT_BRANCH_LIMITATION",
+    "checked_clic_native_trigger_contract": "NOT_LISTED",
+    "authority": "UNVERIFIED_NATIVE_BINDING",
+    "resolution": "DO_NOT_REGISTER_OR_CLAIM_HOST_DISPATCH_WITHOUT_AUTHORITATIVE_SOURCE",
+    "user_current_phrase": "AUTHORIZED_AS_AUDIT_REQUEST_IN_THIS_CHAT_NOT_PERSISTENT_NATIVE_TRIGGER"
+  },
+  "visual_impact": {
+    "assessed": true,
+    "visual_facets_semantics": "UNCHANGED",
+    "visual_compliance_register": "PRESERVED",
+    "host_acceptance": "NOT_VERIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY"
+  },
+  "continuity": {
+    "facets_registered": 5,
+    "manifest_required": 92,
+    "trigger_set": [
+      "SYSTEMSTART",
+      "WEITER",
+      "UPDATE",
+      "NEW CHAT",
+      "NEXT CHAT",
+      "INTEGRATION AUDIT",
+      "DASHBOARD"
+    ],
+    "status": "SOURCE_REPAIRED_NOT_FRESH_HOST_TESTED",
+    "nested_facets": "DISCOVER_AND_HOLD_UNKNOWN_IF_UNVERIFIED",
+    "pet": "PAUSED_UNMODIFIED",
+    "no_background_execution": true,
+    "foreign_mutation": false
+  },
+  "return_anchor": "FIRST_VALIDATE_LIVE_ROOT_AND_THIS_RECOVERY_OVERLAY; FOLLOW_ALL_5_FACET_CAUSAL_RECEIPTS_AND_PEER_HANDBACKS; COMPLETE_FRESH_SYSTEMSTART_NEXT_CHAT_HOST_ACCEPTANCE; RESOLVE_FUCK_HORST_AUTHORITATIVE_TRIGGER_PROVENANCE; PET_PAUSED"
+}
