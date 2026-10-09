@@ -11,3 +11,8 @@ description: Render the verified Whole-CLIC dashboard and managed-system visual 
 6. Compliance is not target-system health. UNKNOWN stays unknown. PARTIAL and LEGACY are not failure.
 7. Systems without plugins remain eligible for FULL visual compliance through repository-native contracts, rehydration and GPT-native rendering.
 8. Never mutate or activate a foreign system from the dashboard.
+
+## Recursive neon dashboard source-candidate contract (not yet live in plugin v0.1.22)
+Read from verified repo Current: `666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md`, `666CLIC_NATIVE_RUNTIME/dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md`, `666CLIC_NATIVE_RUNTIME/dashboard/CLIC_JUNIOR_FOREGROUND_CONTRACT.md` and `666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.mjs`. Show the native approved logo only if verified; otherwise label placeholder. Required header: system name, identity/type, creation/last-modified provenance (UNKNOWN when absent), version, short description, status, authority/source and approved copyright. Neon preference Pink #FF2DAA, Cyan #00E5FF, Lila #A855F7, Rosa #FF8ACD with readable contrast.
+JUNIOR_FOREGROUND_ALWAYS_VISIBLE=true; Junior companion is never hidden by the conditional development panel. Junior's worker activity is UNKNOWN/NOT_VERIFIED unless live evidence proves otherwise. PET_DEVELOPMENT=PAUSED; don't auto-resume.
+Show progress only from task registry, valid revision and completion evidence, otherwise no fake percentage. Seven native-target concepts are only PREPARED in CLIC outbox until real receipts. Never mark them DELIVERED or ADOPTED from source alone. Actual live plugin rendering and release parity remain unverified until host test and binary audit.
