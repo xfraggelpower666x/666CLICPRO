@@ -1,0 +1,57 @@
+{
+  "schema": "CLIC_NONPET_COMPLETION_AUDIT_V1",
+  "status": "PARTIAL_LIVE_RELEASE_GATED_SOURCE_AND_RECOVERY_VERIFIED",
+  "base_head": "412db4365f5b799eb2572e20de6aebfb38e02d40",
+  "scope": [
+    "CARD_INTELLIGENCE",
+    "SEMANTIC_FORCE",
+    "CROSS_SURFACE_LEARNING",
+    "CLS_MIRA_TDH_SYSTEM_CARDS",
+    "WHOLE_CLIC_DASHBOARD",
+    "SEMANTIC_VISUAL_INTELLIGENCE",
+    "PLUGIN_RELEASE_PARITY"
+  ],
+  "scope_excluded": [
+    "CLIC_PET",
+    "PET_APP",
+    "PET_WORKER",
+    "PET_LIVECIRCLE",
+    "PET_REHYDRATION"
+  ],
+  "pet_status": "PAUSED_BY_DIRECT_USER_REQUEST",
+  "pet_mutation": false,
+  "plugin": {
+    "active_version": "0.1.22",
+    "active_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "source_card_skill": "REPO_PRESENT",
+    "source_force_skill": "REPO_PRESENT",
+    "live_card_skill": false,
+    "live_force_skill": false,
+    "logo_provider_reported_bytes": 2929725,
+    "logo_live_sha256": "NOT_VERIFIED",
+    "archive_bytes": "UNAVAILABLE",
+    "release_gate": "BLOCKED",
+    "new_release": "NOT_PUBLISHED",
+    "host_trigger_test": "NOT_EXECUTED",
+    "inbox_transport": "SOURCE_ONLY"
+  },
+  "recovery": {
+    "restored_blobs": 49,
+    "exact_git_blob_parity": "VERIFIED_PRIOR_AND_CURRENT_TREE_PRESENT",
+    "required_manifest_missing": 0
+  },
+  "cards": {
+    "CLS": "PARTIAL_NATIVE_VISUAL_SOURCE_FUNCTIONAL_RENDER_OPEN",
+    "MIRA": "UNKNOWN_NATIVE_VISUAL_PARENT_BASIC_CARD_ONLY",
+    "TDH": "PARTIAL_V1_14_VISUAL_SOURCE_CHILD_ADAPTERS_RENDER_OPEN"
+  },
+  "dashboard": {
+    "whole_clic": "NATIVE_CONTRACT_PRESENT",
+    "development_progress": "SOURCE_ONLY_ACTIVE_PRODUCER_NOT_DEPLOYED",
+    "live_render": "NOT_VERIFIED"
+  },
+  "cross_surface_learning": "REPO_SOURCE_ONLY_AUTOMATIC_EXTERNAL_RUNTIME_SYNC_NOT_VERIFIED",
+  "visual_register": "CURRENT_CARDS_RECONCILED_SOURCE_ONLY",
+  "foreign_mutation": false,
+  "return_anchor": "RETRIEVE_EXACT_PLUGIN_ARCHIVE_BINARY_HASH_AND_GUARDED_CARD_FORCE_RELEASE; VERIFY_HOST_AND_DASHBOARD_RENDER; CLIC_PEER_NOTICES_ONLY_AFTER_CURRENT_READBACK"
+}
