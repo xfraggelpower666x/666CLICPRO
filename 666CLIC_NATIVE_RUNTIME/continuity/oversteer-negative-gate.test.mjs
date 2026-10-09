@@ -1,0 +1,10 @@
+import test from "node:test";import assert from "node:assert/strict";import {inspectOversteer,classifySemanticTransfer} from "./oversteer-negative-gate.mjs";
+const valid={clic_current:{head:"a".repeat(40),direct_readback:true},pet_development:"PAUSED"};
+test("clean source input is not misreported as functional host acceptance",()=>{const x=inspectOversteer(valid);assert.equal(x.status,"SOURCE_GUARD_PASS_NOT_HOST_ACCEPTANCE");assert.equal(x.host_interception,false)});
+for(const gate of ["HOST_ASSUMPTION_AS_AUTHORITY","HISTORICAL_HANDOFF_PROMOTION","FOREIGN_NATIVE_AUTOACTIVATION","FACET_SCOPE_BLEED","RELATIONAL_FLATTENING","NEWER_VALID_EVOLUTION_LOSS","WORKSPACE_INHERITANCE","UNSUPPORTED_AUTO_FOREGROUND"]){
+ test(gate+" triggers read-only revalidation",()=>{const x=inspectOversteer({...valid,[gate]:true});assert.equal(x.status,"REVALIDATE_CURRENT_READ_ONLY");assert.ok(x.violations.includes(gate));assert.equal(x.foreign_write_allowed,false)});
+}
+test("stale current and unverified PET pause fail closed",()=>{assert.ok(inspectOversteer({clic_current:{head:"a".repeat(40),direct_readback:false},pet_development:"ACTIVE"}).violations.includes("CURRENT_NOT_DIRECTLY_VERIFIED"));assert.ok(inspectOversteer({...valid,pet_development:"ACTIVE"}).violations.includes("PET_PAUSE_UNVERIFIED"))});
+test("LYVRA informative input never transfers its authority",()=>{const x=classifySemanticTransfer({source_system:"LYVRA",decision_authority:"LYVRA",source_currentness:true,semantic_understanding:true,causal_applicability:true,execution_verification:true});assert.equal(x.authority_transferred,false);assert.equal(x.status,"ELIGIBLE_FOR_CLIC_NATIVE_ANALYSIS_ONLY")});
+test("semantic source missing causal or execution evidence never passes",()=>assert.equal(classifySemanticTransfer({source_system:"LYVRA",decision_authority:"LYVRA",source_currentness:true,semantic_understanding:true}).status,"INFORMATIONAL_ONLY"));
+test("unknown source authority is quarantined",()=>assert.equal(classifySemanticTransfer({source_system:"UNKNOWN"}).status,"QUARANTINE_UNBOUND_SOURCE_AUTHORITY"));
