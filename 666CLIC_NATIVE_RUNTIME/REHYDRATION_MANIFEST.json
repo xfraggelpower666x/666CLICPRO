@@ -39,7 +39,18 @@
     "relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
     "relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
     "relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
-    "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md"
+    "relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md",
+    "facets/card_intelligence/FACET_CONTRACT.md",
+    "facets/card_intelligence/CARD_CONTRACT.json",
+    "facets/card_intelligence/REGISTRY.json",
+    "facets/card_intelligence/SUB_LIFECIRCLE.md",
+    "facets/card_intelligence/SUB_REHYDRATION.md",
+    "facets/card_intelligence/TRANSPORT_AND_ACCEPTANCE.md",
+    "facets/card_intelligence/src/card-scan.mjs",
+    "facets/semantic_force_decision/FACET_CONTRACT.md",
+    "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
+    "facets/semantic_force_decision/SUB_REHYDRATION.md",
+    "facets/semantic_force_decision/src/force-decide.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -880,5 +891,22 @@
       "signer_actor_isolation": "CLIC_JUNIOR_JOINT_SCOPED_BY_NATIVE_KEYS",
       "worker_tests": "CI_EXECUTION_PENDING"
     }
+  },
+  "card_and_force_facets": {
+    "status": "SOURCE_PREPARED_REPO_NATIVE",
+    "owner": "WHOLE_666CLIC",
+    "card_root": "facets/card_intelligence",
+    "force_root": "facets/semantic_force_decision",
+    "plugin_adapters": [
+      "666clic-plugin/source/skills/666clic-card/SKILL.md",
+      "666clic-plugin/source/skills/666clic-force/SKILL.md"
+    ],
+    "source_tests": "PENDING_EXECUTION",
+    "live_plugin": "0.1.22_UNCHANGED",
+    "remote_card_transport": "NOT_DEPLOYED",
+    "native_force_decision_authority": "NONE",
+    "foreign_mutation": false,
+    "readback": "PENDING",
+    "recovery": "WHOLE_CLIC_FIRST_SUBFACETS_IDLE_REACHABLE"
   }
 }
