@@ -111,5 +111,28 @@
     "registry_ne_fresh_runtime_proof": true,
     "registry_ne_live_plugin_release": true
   },
-  "return_anchor": "RUN_FRESH_SYSTEMSTART_AND_NEXT_CHAT_WITH_DIRECT_CONTRACT_READBACK_THEN_COMPARE_ALL_5_FACET_STATES; LIVE_PLUGIN_TRIGGER_PARITY_SEPARATE; PET_PAUSED"
+  "return_anchor": "RUN_FRESH_SYSTEMSTART_AND_NEXT_CHAT_WITH_DIRECT_CONTRACT_READBACK_THEN_COMPARE_ALL_5_FACET_STATES; LIVE_PLUGIN_TRIGGER_PARITY_SEPARATE; PET_PAUSED",
+  "whole_relational_recovery_binding_2026_10_09": {
+    "schema": "CLIC_RECURSIVE_FACET_RELATIONAL_RECOVERY_BINDING_V1",
+    "status": "SOURCE_BOUND_FRESH_HOST_PENDING",
+    "whole_first": true,
+    "currentness_order": "LIVE_BRANCH_HEAD_ROOT_POINTER_MANIFEST_RECURSIVE_REGISTRY_CAUSAL_RECEIPTS",
+    "recovery": "continuity/WHOLE_CLIC_HOST_DRIFT_RELATIONAL_RECOVERY_CURRENT_2026-10-09.json",
+    "new_chat": "continuity/NEW_CHAT_CURRENT.json",
+    "facet_count": 5,
+    "each_facet_subcircle_preserved": true,
+    "states": "REHYDRATED_IDLE_REACHABLE_NOT_AUTO_FOREGROUND",
+    "peer_cards": "FACET_CARD_REGISTRY_PLUS_RELATIONS_DIRECT_CURRENT_RECHECK",
+    "peer_notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "peer_adoption": "NATIVE_TARGET_READBACK_REQUIRED",
+    "provider_archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "archive_content_parity": "28_OF_28_PREVIOUSLY_VERIFIED",
+    "old_registry_provider_archive_unknown": "SUPERSEDED_BY_NEWER_ROOT_CURRENT_EVIDENCE_NOT_REWRITTEN",
+    "plugin_source_impact": "PLUGIN_SEMANTIC_CONTINUITY_IMPACT_PENDING_GUARDED_RELEASE",
+    "host_trigger_provenance_fuck_horst": "UNVERIFIED_NO_REGISTRATION",
+    "new_chat_next_chat_host_acceptance": "NOT_TESTED",
+    "foreign_mutation": false,
+    "pet": "PAUSED_UNMODIFIED",
+    "return_anchor": "LIVE_ROOT_FIRST_RESTORE_FIVE_FACET_RELATIONAL_STATES_THEN_PEER_RECEIPTS_AND_VERIFIED_OPEN_WORK"
+  }
 }
