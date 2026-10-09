@@ -19,3 +19,22 @@ export function gateHostAcceptance(p={}){
  if(p.pet_mutated===true)missing.push("PET_MUTATION_FORBIDDEN");
  return {status:missing.length?"WRITE_BLOCKED":"ELIGIBLE_FOR_NATIVE_RELEASE_REVIEW",missing,automatic_publication:false};
 }
+
+export function prepublishEvidence(p={}){
+ const missing=[];
+ for(const k of ["source_current_sha","original_archive_sha256","live_logo_sha256","candidate_archive_sha256","candidate_logo_sha256","prechange_backup_sha","authority_approval"]){
+  if(typeof p[k]!=="string"||!p[k].trim())missing.push(k);
+ }
+ if(p.pet_mutated===true)missing.push("PET_MUTATION_FORBIDDEN");
+ if(p.foreign_mutated===true)missing.push("FOREIGN_MUTATION_FORBIDDEN");
+ if(p.source_current_sha&&p.prechange_backup_sha&&p.source_current_sha!==p.prechange_backup_sha)missing.push("BACKUP_HEAD_MISMATCH");
+ return {stage:"PREPUBLISH",status:missing.length?"WRITE_BLOCKED":"ELIGIBLE_FOR_NATIVE_PUBLICATION_REVIEW",missing,may_publish_automatically:false};
+}
+export function postpublishEvidence(p={}){
+ const missing=[];
+ for(const k of ["published_release_id","published_archive_sha256","host_render_receipt","card_host_trigger_receipt","force_host_trigger_receipt","current_readback_sha"]){
+  if(typeof p[k]!=="string"||!p[k].trim())missing.push(k);
+ }
+ if(p.foreign_mutated===true)missing.push("FOREIGN_MUTATION_FORBIDDEN");
+ return {stage:"POSTPUBLISH",status:missing.length?"READBACK_PENDING":"ELIGIBLE_FOR_HOST_ACCEPTANCE_REVIEW",missing,live_accepted:false};
+}
