@@ -1020,5 +1020,20 @@
     "foreign_mutation": false,
     "readback_report": "facets/card_intelligence/RECOVERY_REAUDIT_2026-10-09.md",
     "return_anchor": "VERIFY_LAST_SELECTED_BODY_AND_POINTER_LAST_THEN_PLUGIN_BINARY_AND_PET_PRODUCER_GATES"
+  },
+  "pet_native_producer_gate_2026_10_09": {
+    "status": "SOURCE_TEST_PASS_LIVE_UNBOUND",
+    "source": "CLIC_PET/worker/src/native-producer-gate.mjs",
+    "tests": "CLIC_PET/worker/tests/native-producer-gate.test.mjs",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37952980914/job/113896261977",
+    "pet_sub_lifecircle": "CLIC_PET/livecircle/CURRENT_STATE.json",
+    "pet_sub_rehydration": "CLIC_PET/rehydration/REHYDRATION_MANIFEST.json",
+    "junior_native_source": "NOT_VERIFIED",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "card_force_host": "NOT_INSTALLED",
+    "plugin_binary_sha256": "UNAVAILABLE",
+    "worker_deployed": false,
+    "pet_visual_host": "NOT_VERIFIED",
+    "foreign_mutation": false
   }
 }
