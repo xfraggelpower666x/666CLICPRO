@@ -84,7 +84,10 @@
     "outbox/666CLS/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
     "outbox/666MIRA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
     "dashboard/GPT_NATIVE_VISUAL_HOST_ACCEPTANCE_2026-10-09.md",
-    "dashboard/unified-visual-header.test.mjs"
+    "dashboard/unified-visual-header.test.mjs",
+    "dashboard/verified-visual-presenter.mjs",
+    "dashboard/verified-visual-presenter.test.mjs",
+    "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1128,5 +1131,22 @@
     "plugin_binary_gate": "BLOCKED",
     "host_native_render": "NOT_ACCEPTED",
     "foreign_mutation": false
+  },
+  "evidence_led_visual_distribution_2026_10_09": {
+    "status": "SOURCE_CI_VERIFIED_OUTBOX_PREPARED_ONLY",
+    "presentation": "dashboard/verified-visual-presenter.mjs",
+    "developer_task_source": "dashboard/development_progress/progress-evidence.mjs",
+    "outbound_notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "registered_notices": 7,
+    "delivery_confirmed": 0,
+    "adoption_confirmed": 0,
+    "plugin_version": "0.1.22_UNCHANGED",
+    "plugin_source_live_parity": "BLOCKED_ORIGINAL_BINARY_UNAVAILABLE",
+    "pet": "PAUSED_UNMUTATED",
+    "junior": "PERMANENT_FOREGROUND_SOURCE_ONLY",
+    "host_render": "NOT_VERIFIED",
+    "visual_compliance": "REQUIRED_FOR_EVERY_TARGET",
+    "cross_system_writes": false,
+    "return_anchor": "PLUGIN_ORIGINAL_BINARY_PROVENANCE_THEN_HOST_VISUAL_ACCEPTANCE; TARGET_NATIVE_HANDOFF_ACK_READBACK_AFTER_OWN_DIRECT_TRIGGERS"
   }
 }
