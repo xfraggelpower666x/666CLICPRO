@@ -20,7 +20,7 @@ jobs:
           node-version: "22"
       - name: Node tests — CARD and FORCE
         run: |
-          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/card-scan.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/force-decide.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/*.test.mjs
       - name: Structural native contract and plugin adapter checks
         run: |
           node --input-type=module <<'NODE'
