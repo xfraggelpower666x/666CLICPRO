@@ -1771,5 +1771,29 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "OBTAIN_EXACT_PROVIDER_ARCHIVE_BYTES_VERIFY_SHA256_THEN_PLUGIN_RELEASE_AND_HOST_READBACK_WITH_VALID_GATES"
+  },
+  "update_2026_10_09_pet_github_transport_gated": {
+    "status": "REPO_SOURCE_CI_VERIFIED_NO_LIVE_DEPLOYMENT",
+    "scope": "CLIC_PET_NATIVE_GITHUB_TRANSPORT_CANDIDATE",
+    "previous_current": "f0434c5acb4d5444cbeeb11c57b29a5d58327d2e",
+    "prechange_backup": "backup/clic-pre-pet-github-transport-20261009-am",
+    "body_head_before_pointer": "cca8205bc2bc58aeccfc3e0c8b008c97adc37f28",
+    "body_readback": "PASS_4_SELECTED",
+    "github_ci_candidate_test": "SUCCESS",
+    "github_ci_repository_native_fixture": "SUCCESS",
+    "source": "CLIC_PET/worker/src/github-transport.mjs",
+    "tests": "CLIC_PET/worker/tests/github-transport.test.mjs",
+    "request_guard": "GITHUB_HTTPS_REPOSITORY_ALLOWLIST_BUDGET_RESERVATION_FIRST",
+    "usage_semantics": "ATTEMPT_RESERVATIONS_NOT_PROVEN_HTTP_COMPLETIONS",
+    "live_plugin": "0.1.22_UNCHANGED",
+    "provider_archive_bytes": "NOT_OBTAINED",
+    "plugin_release": "WRITE_BLOCKED_PENDING_BINARY_PROVENANCE",
+    "native_junior_current": "UNVERIFIED",
+    "signed_native_event_producer": "NOT_BOUND",
+    "live_worker": "NOT_DEPLOYED",
+    "visual_host_parity": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "RESOLVE_PROVIDER_BINARY_ARCHIVE_AND_NATIVE_JUNIOR_SOURCE_THEN_GUARDED_WORKER_STAGING"
   }
 }
