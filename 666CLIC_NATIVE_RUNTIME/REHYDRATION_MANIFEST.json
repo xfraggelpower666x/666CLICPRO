@@ -50,7 +50,8 @@
     "facets/semantic_force_decision/FACET_CONTRACT.md",
     "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
     "facets/semantic_force_decision/SUB_REHYDRATION.md",
-    "facets/semantic_force_decision/src/force-decide.mjs"
+    "facets/semantic_force_decision/src/force-decide.mjs",
+    "facets/card_intelligence/src/inbox-transport.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -901,12 +902,12 @@
       "666clic-plugin/source/skills/666clic-card/SKILL.md",
       "666clic-plugin/source/skills/666clic-force/SKILL.md"
     ],
-    "source_tests": "PENDING_EXECUTION",
+    "source_tests": "GITHUB_CI_RERUN_PENDING",
     "live_plugin": "0.1.22_UNCHANGED",
-    "remote_card_transport": "NOT_DEPLOYED",
+    "remote_card_transport": "INJECTED_ADAPTER_SOURCE_ONLY_NOT_LIVE_CONNECTED",
     "native_force_decision_authority": "NONE",
     "foreign_mutation": false,
-    "readback": "PENDING",
+    "readback": "BODY_READBACK_PENDING",
     "recovery": "WHOLE_CLIC_FIRST_SUBFACETS_IDLE_REACHABLE"
   }
 }
