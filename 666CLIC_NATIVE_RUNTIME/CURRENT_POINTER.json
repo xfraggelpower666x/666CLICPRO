@@ -1931,5 +1931,40 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "SOURCE_ZIP_AND_LOGO_REMOTE_BYTES_VERIFIED; OBTAIN_PROVIDER_CURRENT_RELEASE_ORIGINAL_TAR_GZ_BYTES_OR_POLICY_COMPLETE_CAUSAL_EVIDENCE; RECHECK_EXACT_LIVE_PARITY_AND_APPROVAL_SEPARATELY; PET_PAUSED"
+  },
+  "update_2026_10_09_recursive_facet_lifecircle_rehydration": {
+    "status": "VERIFIED_REPO_SOURCE_RECURSIVE_REGISTRY_FRESH_BOOT_AND_PLUGIN_HOST_PENDING",
+    "prechange_head": "b4a30dc397fac7d81eda7e58a2c0dc2b20b4c462",
+    "prechange_backup": "backup/clic-pre-recursive-facet-lifecircle-rehydration-20261009-2304",
+    "body_head_before_pointer": "10a568b2cd3102dc9181156fd986ff6b3ff99ace",
+    "registry": "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "registry_blob_sha": "161748f6fd2d0cd731158a9f99a82871616766e1",
+    "manifest_blob_sha": "00172d5e49037edd107c4301a95a039a0f0e0839",
+    "manifest_paths": "92_OF_92_PRESENT",
+    "native_root_facets": "5_OF_5_CONTRACTS_PRESENT",
+    "sub_lifecircles": "5_OF_5",
+    "sub_rehydrations": "5_OF_5",
+    "trigger_contracts": [
+      "SYSTEMSTART",
+      "WEITER",
+      "UPDATE",
+      "NEW_CHAT",
+      "NEXT_CHAT",
+      "INTEGRATION_AUDIT",
+      "DASHBOARD"
+    ],
+    "fresh_chat_runtime": "NOT_VERIFIED",
+    "host_trigger_dispatch": "NOT_VERIFIED",
+    "plugin_runtime_parity": "SOURCE_AHEAD_PENDING_GOVERNED_PLUGIN_RELEASE",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "source_zip_logo_remote": "VERIFIED",
+    "provider_tar_gz": "UNKNOWN",
+    "visual_impact": "ASSESSED_REACHABILITY_AND_DASHBOARD_EVIDENCE_NO_VISUAL_ASSET_CHANGE",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "FRESH_SYSTEMSTART_READBACK_ALL_FIVE_FACETS_AND_NEW_CHAT_NEXT_CHAT_ACCEPTANCE; VERIFY_HOST_TRIGGER_AND_PLUGIN_PARITY_SEPARATELY; PET_PAUSED"
   }
 }
