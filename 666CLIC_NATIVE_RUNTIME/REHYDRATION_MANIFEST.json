@@ -956,7 +956,8 @@
     "plugin_release": "BLOCKED_BINARY_LIVE_HASH_HOST_ACCEPTANCE",
     "new_plugin_release": "NOT_PUBLISHED",
     "plugin_skill_host_triggers": "UNAVAILABLE_IN_V0_1_22",
-    "tests": "PENDING_GITHUB_ACTIONS",
-    "foreign_mutation": false
+    "tests": "GITHUB_CI_PASS_COMMIT_f1570d18db5860fa06b3a8dcda804bb20aa72cef",
+    "foreign_mutation": false,
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37874191143/job/113638854388"
   }
 }
