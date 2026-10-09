@@ -4,8 +4,17 @@
   "sequence": [
     "CLIC_PET/SYSTEM_IDENTITY.md",
     "CLIC_PET/livecircle/CURRENT_STATE.json",
-    "CLIC_PET/worker/src/index.js"
+    "CLIC_PET/worker/src/index.js",
+    "CLIC_PET/worker/NATIVE_PRODUCER_ACCEPTANCE.md"
   ],
   "junior_native_source_gate": "PENDING_VERIFICATION",
-  "auto_deploy": false
+  "auto_deploy": false,
+  "native_producer_acceptance": {
+    "status": "SOURCE_VERIFIED_NON_DEPLOYED",
+    "gate": "CLIC_PET/worker/src/native-producer-gate.mjs",
+    "test": "CLIC_PET/worker/tests/native-producer-gate.test.mjs",
+    "ci": "PASS",
+    "native_junior": "PENDING_VERIFICATION",
+    "signed_event_producer": "UNBOUND"
+  }
 }
