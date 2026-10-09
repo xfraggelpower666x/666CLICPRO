@@ -94,7 +94,10 @@
     "plugin_governance/PLUGIN_ARCHIVE_STAGE_GATES_2026-10-09.json",
     "plugin_governance/PLUGIN_V0122_EXACT_TEXT_PARITY_READBACK_2026-10-09.json",
     "plugin_governance/plugin-text-parity-readback.test.mjs",
-    "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json"
+    "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "continuity/NEW_CHAT_CURRENT.json",
+    "continuity/NEW_CHAT_HISTORICAL_SNAPSHOT_2026-10-10.json",
+    "continuity/new-chat-freshness.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1239,5 +1242,19 @@
     "plugin_live_parity": "NOT_VERIFIED",
     "no_foreign_autoactivation": true,
     "no_new_router": true
+  },
+  "new_chat_freshness_2026_10_10": {
+    "status": "SOURCE_CI_SUCCESS_FRESH_HOST_ACCEPTANCE_PENDING",
+    "old_handoff": "continuity/NEW_CHAT_HISTORICAL_SNAPSHOT_2026-10-10.json",
+    "current_handoff": "continuity/NEW_CHAT_CURRENT.json",
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/38002985513/job/114065222889",
+    "latest_lyvra_semantic_oversteer": "PRESERVED",
+    "negative_case_tests": "SOURCE_TESTS_PASS_NOT_FRESH_HOST",
+    "plugin": "0.1.22_LIVE_TEXT_27_27_BINARY_UNVERIFIED",
+    "junior": "FOREGROUND",
+    "pet": "PAUSED",
+    "seven_notices": "PREPARED_ZERO_RECEIPTS",
+    "foreign_mutation": false
   }
 }
