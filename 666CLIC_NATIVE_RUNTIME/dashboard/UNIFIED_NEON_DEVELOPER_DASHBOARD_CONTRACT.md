@@ -24,3 +24,13 @@ Color: Neon Pink=current work; Neon Cyan=verified evidence; Neon Lila=hierarchy/
 Stages: DISCOVER|ANALYZE|DESIGN|IMPLEMENT|TEST|HOST_ACCEPT|READBACK|CLOSE|BLOCKED|PAUSED. A pause may freeze one project (PET) without stopping unrelated active development.
 Semantic reasoning: what changed, why it matters, evidence/contradiction, affected surfaces, who has authority, minimal next action, observed result.
 No automatic daemon mutation or fabricated live sensor. SOURCE_NOT_RUNTIME until actual host readback.
+
+## Persistent Junior companion slot (explicit user priority)
+JUNIOR_FOREGROUND_CONTRACT=CLIC_JUNIOR_FOREGROUND_CONTRACT.md
+PIN_JUNIOR_IN_WHOLE_DASHBOARD=true
+PIN_JUNIOR_IN_DEVELOPMENT_DASHBOARD=true
+JUNIOR_PERSONAL_COMPANION=VISIBLE_WITH_SOURCE_BOUND_STATUS
+JUNIOR_DEVELOPMENT_NE_PET_RESTART=true
+JUNIOR_PET_DEVELOPMENT=PAUSED
+VISIBLE_JUNIOR_NE_PROVEN_LIVE_WORKER=true
+JUNIOR_NO_SECOND_AUTHORITY=true
