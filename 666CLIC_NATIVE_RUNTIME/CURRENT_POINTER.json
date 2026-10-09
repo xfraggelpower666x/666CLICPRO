@@ -2020,5 +2020,30 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "CONTENT_PARITY_CLOSED; COMPLETE_NATIVE_RUNTIME_PLUGIN_FINGERPRINT_APPROVAL_AND_FRESH_HOST_TESTS; NO_AUTOPUBLISH; PET_PAUSED"
+  },
+  "update_2026_10_09_fingerprint_semantic_boundary_preapproval": {
+    "status": "VERIFIED_BOUNDARY_AUDIT_PENDING_COMPLETE_FINGERPRINT_AND_APPROVAL",
+    "prechange_head": "6aff234e7b2ff2e3b6ae313fc3168b5429af7a90",
+    "prechange_backup": "backup/clic-pre-fingerprint-semantic-boundary-20261009-2325",
+    "body_head_before_pointer": "dd1a047e2a9be858b183b55e15589e5f85b0a67f",
+    "audit": "plugin_governance/CURRENT_V0122_FINGERPRINT_BOUNDARY_AUDIT_2026-10-09.json",
+    "audit_blob_sha": "b9ec4c440f40ddc1d0160c793ce10838be48bba9",
+    "semantic_boundary_candidate": "90e0253f216d62560c1a3d6d03c3f2d88be40d96",
+    "source_tree_current": "611367a33be2e8f59f119c86832214952ad0f342",
+    "source_tree_historical": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "exact_provider_targz_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "archive_parity": "28_OF_28_PASS_PRESERVED",
+    "fingerprint": "NOT_COMPUTED_UNRESOLVED_INPUTS",
+    "new_approval": "NOT_ISSUED",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "plugin_release": "NOT_PUBLISHED",
+    "host": "NOT_TESTED",
+    "manifest": "92_UNCHANGED",
+    "visual_impact": "ASSESSED_EVIDENCE_ONLY",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "RECONCILE_LIVE_VS_DEV_TEXT_TREE_AND_CURRENT_BINARY_BINDING_THEN_REVALIDATE_SEMANTIC_BODY_FOR_FINGERPRINT; PET_PAUSED"
   }
 }
