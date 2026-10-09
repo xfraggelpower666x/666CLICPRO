@@ -1546,5 +1546,28 @@
     "foreign_mutation": false,
     "pointer_last": true,
     "return_anchor": "VERIFY_DURABLE_OBJECT_CI_THEN_ACTUAL_CLOUDFLARE_STAGING_AND_NATIVE_JUNIOR_SOURCE"
+  },
+  "update_2026_10_09_selective_49_blob_recovery": {
+    "status": "VERIFIED_EXACT_49_OF_49_BLOBS_RESTORED",
+    "scope": "CLIC_OWNED_CARD_FORCE_CROSS_SURFACE_RELATIONS_PLUGIN_SOURCE_AND_PET_TEST_RECOVERY",
+    "prechange_head": "e4a7f1fafd6112f91053883994f7844dcc2c2226",
+    "prechange_backup": "backup/clic-pre-49-file-selective-recovery-20261009",
+    "source_valid_ancestor": "503961d3250547641c2f32265362485bdeaeeddd",
+    "regression_commit": "a3cba567b966fe2dca87ede86e5d04f2020738c1",
+    "body_head_before_pointer": "279e0b646df0149f68d19a544d97727916b5fc53",
+    "restored_blob_sha_readback": "PASS_49_OF_49_EXACT",
+    "rehydration_required_missing": 0,
+    "card_force_ci": "SUCCESS",
+    "card_force_ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37898371240/job/113714895554",
+    "pet_candidate_ci": "SUCCESS",
+    "newer_pet_evolution": "PRESERVED_NO_WORKER_ROLLBACK",
+    "managed_cards": "CLS_MIRA_TDH_RESTORED",
+    "plugin_card_force_source": "RESTORED",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_release": "NOT_PERFORMED_BINARY_AND_HOST_GATED",
+    "lyvra_peer_learning": "RESTORED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "CONTINUE_PLUGIN_BINARY_AND_CARD_FORCE_HOST_RELEASE_GATES_AFTER_RECHECKING_STABLE_HEAD_AND_PET_NATIVE_JUNIOR_PRODUCER"
   }
 }
