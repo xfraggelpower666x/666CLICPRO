@@ -62,7 +62,10 @@
     "dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
     "dashboard/development_progress/progress-evidence.mjs",
     "learning/LYVRA_READ_ONLY_PEER_ANALYSIS_2026-10-09.md",
-    "plugin_governance/RELEASE_ID_SUPERSESSION_AND_BINARY_GATES_2026-10-09.json"
+    "plugin_governance/RELEASE_ID_SUPERSESSION_AND_BINARY_GATES_2026-10-09.json",
+    "plugin_governance/CARD_FORCE_LIVE_RELEASE_PREFLIGHT_2026-10-09.json",
+    "plugin_governance/CARD_FORCE_RELEASE_GATES.md",
+    "plugin_governance/release-gate-check.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -959,5 +962,24 @@
     "tests": "GITHUB_CI_PASS_COMMIT_f1570d18db5860fa06b3a8dcda804bb20aa72cef",
     "foreign_mutation": false,
     "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37874191143/job/113638854388"
+  },
+  "card_force_plugin_release_preflight_2026_10_09": {
+    "status": "WRITE_BLOCKED_BINARY_ARCHIVE_BYTES_UNAVAILABLE",
+    "provider_current_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "version": "0.1.22",
+    "plugin_live_unchanged": true,
+    "live_text_parity": "26_OF_27_MATCH_README_SOURCE_AHEAD",
+    "live_logo_size_bytes": 2929725,
+    "live_logo_sha256": "NOT_VERIFIED",
+    "download_attempt": "FAILED_SIGNED_ARCHIVE_BYTES_UNAVAILABLE",
+    "prechange_backup": "backup/clic-pre-card-force-plugin-release-20261009",
+    "source": "plugin_governance/CARD_FORCE_LIVE_RELEASE_PREFLIGHT_2026-10-09.json",
+    "release_gate_contract": "plugin_governance/CARD_FORCE_RELEASE_GATES.md",
+    "host_card_skill": "NOT_INSTALLED_IN_0.1.22",
+    "host_force_skill": "NOT_INSTALLED_IN_0.1.22",
+    "remote_inbox": "NOT_LIVE_CONNECTED",
+    "ci": "PENDING_EXPANDED_GATES",
+    "return_anchor": "RETRIEVE_BYTE_EXACT_PLUGIN_ARCHIVE_VERIFY_LOGO_SOURCE_PARITY_BUILD_SIGNED_OVERLAY_RELEASE_HOST_ACCEPTANCE",
+    "no_foreign_mutation": true
   }
 }
