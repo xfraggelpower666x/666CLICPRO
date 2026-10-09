@@ -21,3 +21,7 @@ Offer only native actions valid in the current state, with `666CLIC WEITER` as c
 Frozen-state rendering is descriptive: show last verified checkpoint, stop reason, unresolved obligations, write/lock state and exact next valid continuation. It cannot change CLIC state or promote incomplete work.
 
 Never expose secrets/private recovery material.
+
+## Neon causal visual presentation source-candidate
+Prefer GPT-native UI (not ASCII) with compact neon Pink/Cyan/Lila/Rosa hierarchy, a verified native logo/header and evidence-labelled state. When useful choose a source/effect trace, authority boundary, relation graph, diagnostic flow, measured work progress, LifeCircle map or status decision diagram. Diagrams are interpretation, not proofs. All elements are presentation-only. Copyright only where ownership/provenance warrants it.
+Read `666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md` and `666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.mjs` from latest CLIC Current. Junior is always a visible foreground companion independent of the conditional developer dashboard. PET development remains paused. No false system creation date, progress %, live deployment or auto-delivery. Native plugin v0.1.22 does NOT contain this candidate until a governed binary-verified release.
