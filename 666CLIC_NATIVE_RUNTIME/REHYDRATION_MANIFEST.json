@@ -1035,5 +1035,21 @@
     "worker_deployed": false,
     "pet_visual_host": "NOT_VERIFIED",
     "foreign_mutation": false
+  },
+  "live_pet_plugin_audit_2026_10_09": {
+    "status": "READ_ONLY_LIVE_INVENTORY_VERIFIED_DEPLOYMENT_AND_RELEASE_GATED",
+    "cloudflare_evidence": "CLIC_PET/worker/CLOUDFLARE_NATIVE_LIVE_READBACK_2026-10-09.json",
+    "plugin_evidence": "plugin_governance/CARD_FORCE_HOST_RELEASE_READBACK_2026-10-09.json",
+    "signed_native_producer": "NOT_BOUND",
+    "junior_native_current": "NOT_VERIFIED",
+    "worker_clic_pet": "NOT_FOUND",
+    "durable_object_clic_pet": "NOT_FOUND",
+    "pet_visual_compliance": "UNKNOWN",
+    "card_force_live_skills": "NOT_INSTALLED",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "logo_sha256": "NOT_VERIFIED",
+    "ci_pet": "SOURCE_TEST_PASS",
+    "foreign_mutation": false,
+    "return_anchor": "NATIVE_JUNIOR_CURRENT_AND_OWNER_SIGNER_AUTHORITY_BEFORE_CLIC_CLOUDFLARE_STAGING; BINARY_VERIFIED_PLUGIN_RELEASE_SEPARATE"
   }
 }
