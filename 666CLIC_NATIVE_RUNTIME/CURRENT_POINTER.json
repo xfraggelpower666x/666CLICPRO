@@ -1966,5 +1966,30 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "FRESH_SYSTEMSTART_READBACK_ALL_FIVE_FACETS_AND_NEW_CHAT_NEXT_CHAT_ACCEPTANCE; VERIFY_HOST_TRIGGER_AND_PLUGIN_PARITY_SEPARATELY; PET_PAUSED"
+  },
+  "update_2026_10_09_new_chat_recursive_facet_stale_state_repair": {
+    "status": "VERIFIED_NEW_CHAT_CURRENT_BINDING_SOURCE_FRESH_HOST_PENDING",
+    "prechange_head": "7128d8a53a7a13bf4c4348d419ae5ebbda42dd70",
+    "prechange_backup": "backup/clic-pre-newchat-facet-current-repair-20261009-2308",
+    "body_head_before_pointer": "90e0253f216d62560c1a3d6d03c3f2d88be40d96",
+    "handoff": "continuity/NEW_CHAT_CURRENT.json",
+    "handoff_blob_sha": "ccd1da5b8cf9c43c293733a7b06695515929aa44",
+    "manifest_blob_sha": "00172d5e49037edd107c4301a95a039a0f0e0839",
+    "registry_blob_sha": "161748f6fd2d0cd731158a9f99a82871616766e1",
+    "facets": "5_OF_5_REFERENCED",
+    "manifest": "92_OF_92_UNCHANGED",
+    "historical_handoff_origin": "a7e95b99529edf636f51e09226ed5d5e0cae3af6_PRESERVED_AS_HISTORY",
+    "new_chat_resolution": "LIVE_ROOT_CURRENT_OVER_HISTORICAL_HEAD",
+    "fresh_chat_host": "NOT_TESTED",
+    "plugin_provider_tar_gz": "UNKNOWN_ORIGINAL_BYTES",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "plugin_prepublish": "WRITE_BLOCKED",
+    "visual_impact": "ASSESSED_EXISTING_VISUAL_FACET_CONTINUITY_PRESERVED_NO_VISUAL_ASSET_MUTATION",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "FRESH_CHAT_SYSTEMSTART_AND_NEXT_CHAT_ACCEPTANCE_FOR_ALL_FIVE_FACETS; VERIFY_HOST_PLUGIN_PARITY_SEPARATELY; PROVIDER_TAR_GZ_GATE_REMAINS_BLOCKED; PET_PAUSED"
   }
 }
