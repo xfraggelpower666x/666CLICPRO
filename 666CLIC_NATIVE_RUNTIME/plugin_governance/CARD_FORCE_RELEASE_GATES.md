@@ -25,3 +25,8 @@ PLUGIN_HOST_TRIGGER_SOURCE_FILE_NE_FUNCTIONAL_ACCEPTANCE=true
 CI_PASS_NE_PLUGIN_PUBLICATION=true
 PLUGIN_SOURCE_NE_LIVE_CURRENT=true
 NO_FOREIGN_MUTATION=true
+
+## Two-stage host gate clarification
+PREPUBLISH requires a verified archive backup, source/logo hash evidence, manifest validity, pinned active release and host compatibility preflight.
+POSTPUBLISH requires new exact release readback and real host CARD/FORCE acceptance. Actual post-release host acceptance is not falsely required before publication; failure at that stage mandates HOLD/rollback governance, not a success claim.
+CURRENT_GATE=PREPUBLISH_WRITE_BLOCKED_MISSING_BINARY_BYTES
