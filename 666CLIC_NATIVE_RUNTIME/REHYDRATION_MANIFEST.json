@@ -55,7 +55,14 @@
     "facets/cross_surface_learning/FACET_CONTRACT.md",
     "facets/cross_surface_learning/SUB_LIFECIRCLE.md",
     "facets/cross_surface_learning/SUB_REHYDRATION.md",
-    "facets/cross_surface_learning/PEER_NOTICE_SCHEMA.json"
+    "facets/cross_surface_learning/PEER_NOTICE_SCHEMA.json",
+    "facets/semantic_force_decision/QUALITATIVE_DECISION_GOVERNANCE.md",
+    "facets/semantic_force_decision/src/contextual-outcome.mjs",
+    "dashboard/development_progress/DEVELOPMENT_PROGRESS_CONTRACT.md",
+    "dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
+    "dashboard/development_progress/progress-evidence.mjs",
+    "learning/LYVRA_READ_ONLY_PEER_ANALYSIS_2026-10-09.md",
+    "plugin_governance/RELEASE_ID_SUPERSESSION_AND_BINARY_GATES_2026-10-09.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -934,6 +941,22 @@
     "plugin_live": "0.1.22_UNCHANGED",
     "host_acceptance": "NOT_TESTED",
     "cross_project_auto_processing": "NOT_DEPLOYED",
+    "foreign_mutation": false
+  },
+  "lyvra_peer_learning_2026_10_09": {
+    "status": "EVIDENCE_READ_NATIVE_CLIC_ADAPTATIONS_SOURCE_CANDIDATE",
+    "lyvra_source_head": "640a62079283d1f41b57c6aa430c515da9afbc7e",
+    "read_only": true,
+    "evidence": "learning/LYVRA_READ_ONLY_PEER_ANALYSIS_2026-10-09.md",
+    "force_qualitative": "facets/semantic_force_decision/QUALITATIVE_DECISION_GOVERNANCE.md",
+    "progress": "dashboard/development_progress/DEVELOPMENT_PROGRESS_CONTRACT.md",
+    "progress_live_sensor": "NOT_DEPLOYED",
+    "plugin_current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "immutable_v0122_historical_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "plugin_release": "BLOCKED_BINARY_LIVE_HASH_HOST_ACCEPTANCE",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "plugin_skill_host_triggers": "UNAVAILABLE_IN_V0_1_22",
+    "tests": "PENDING_GITHUB_ACTIONS",
     "foreign_mutation": false
   }
 }
