@@ -1841,5 +1841,25 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "ORIGINAL_PLUGIN_ARCHIVE_AND_LOGO_BINARY_SHA256_REQUIRED_FOR_NATIVE_PREPUBLISH_APPROVAL; THEN_NEW_RELEASE_AND_POSTPUBLISH_HOST_NEON_CARD_FORCE_READBACK; TARGET_NATIVE_NOTICE_RECEIPTS_SEPARATE; PET_PAUSED"
+  },
+  "update_2026_10_09_new_chat_current_handoff_1738": {
+    "status": "VERIFIED_HANDOFF_PREPARED_FRESH_CHAT_ACCEPTANCE_PENDING",
+    "prechange_head": "a7e95b99529edf636f51e09226ed5d5e0cae3af6",
+    "prechange_backup": "backup/clic-pre-new-chat-20261009-1738",
+    "body_head_before_pointer": "071a09794b58b8d1108a47cf7ab2527b4d9ac7db",
+    "handoff": "continuity/NEW_CHAT_CURRENT.json",
+    "latest_valid_current": "update_2026_10_09_live_plugin_v0122_exact_text_parity",
+    "live_plugin_version": "0.1.22",
+    "plugin_exact_text": "27_OF_27",
+    "plugin_original_binary_sha256": "UNKNOWN",
+    "card_force_neon_host": "OPEN_NOT_RELEASED",
+    "junior": "PINNED_FOREGROUND",
+    "pet": "PAUSED_UNCHANGED",
+    "system_notices": "7_PREPARED_0_DELIVERED_0_ADOPTED",
+    "rehydration_missing": 0,
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "next_chat_instruction": "666CLIC SYSTEMSTART",
+    "return_anchor": "READ_LATEST_REPO_POINTER_AND_NEW_CHAT_CURRENT_THEN_CONTINUE_BINARY_PREPUBLISH_AND_HOST_GATES_NO_PET_RESUME"
   }
 }
