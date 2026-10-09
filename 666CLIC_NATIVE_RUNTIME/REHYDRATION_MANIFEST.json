@@ -90,7 +90,8 @@
     "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
     "plugin_governance/NEON_CARD_FORCE_HOST_PARITY_READBACK_2026-10-09.json",
     "plugin_governance/neon-host-parity.mjs",
-    "plugin_governance/neon-host-parity.test.mjs"
+    "plugin_governance/neon-host-parity.test.mjs",
+    "plugin_governance/PLUGIN_ARCHIVE_STAGE_GATES_2026-10-09.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1173,5 +1174,23 @@
     "real_host_render": "NOT_VERIFIED",
     "foreign_mutation": false,
     "return_anchor": "BLOCK_RELEASE_UNTIL_BINARY_READBACK_AND_HOST_ACCEPTANCE; NATIVE_NOTICE_RECEIPTS_REQUIRED"
+  },
+  "plugin_archive_prepost_gate_repair_2026_10_09": {
+    "status": "CI_PASS_PREPUBLISH_BLOCKED_ACTUAL_BINARY_UNAVAILABLE",
+    "audit": "plugin_governance/PLUGIN_ARCHIVE_STAGE_GATES_2026-10-09.json",
+    "source": "plugin_governance/neon-host-parity.mjs",
+    "tests": "plugin_governance/neon-host-parity.test.mjs",
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37966258732/job/113941246435",
+    "prepublish": "BINARY_ORIGINAL_AND_NATIVE_APPROVAL_MISSING",
+    "postpublish": "NOT_STARTED",
+    "plugin": "0.1.22_UNCHANGED",
+    "pet": "PAUSED_NO_MUTATION",
+    "junior": "VISIBLE_FOREGROUND_SOURCE",
+    "notices": {
+      "prepared": 7,
+      "delivered": 0
+    },
+    "foreign_mutation": false
   }
 }
