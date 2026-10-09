@@ -1003,5 +1003,22 @@
     "card_force_live_host_acceptance": false,
     "pet_bridge_lyvra_learning_preserved": true,
     "return_anchor": "FETCH_EXACT_ARCHIVE_BINARY_VERIFY_LOGO_HASH_BUILD_OVERLAY_PLUGIN_RELEASE_THEN_HOST_READBACK"
+  },
+  "selective_recovery_2026_10_09": {
+    "status": "EXACT_49_OF_49_RESTORED_REAUDIT_PENDING_POINTER",
+    "recovery_source_head": "503961d3250547641c2f32265362485bdeaeeddd",
+    "prechange_head": "e4a7f1fafd6112f91053883994f7844dcc2c2226",
+    "prechange_backup": "backup/clic-pre-49-file-selective-recovery-20261009",
+    "restored_files": 49,
+    "blob_sha_equal_count": 49,
+    "required_order_missing": 0,
+    "card_force_ci": "PASS",
+    "pet_ci": "PASS",
+    "pet_newer_evolution": "PRESERVED",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_release": "NOT_PERFORMED",
+    "foreign_mutation": false,
+    "readback_report": "facets/card_intelligence/RECOVERY_REAUDIT_2026-10-09.md",
+    "return_anchor": "VERIFY_LAST_SELECTED_BODY_AND_POINTER_LAST_THEN_PLUGIN_BINARY_AND_PET_PRODUCER_GATES"
   }
 }
