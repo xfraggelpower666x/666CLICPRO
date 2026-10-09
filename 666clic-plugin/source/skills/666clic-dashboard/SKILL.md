@@ -18,3 +18,7 @@ JUNIOR_FOREGROUND_ALWAYS_VISIBLE=true; Junior companion is never hidden by the c
 Show progress only from task registry, valid revision and completion evidence, otherwise no fake percentage. Seven native-target concepts are only PREPARED in CLIC outbox until real receipts. Never mark them DELIVERED or ADOPTED from source alone. Actual live plugin rendering and release parity remain unverified until host test and binary audit.
 
 NEON_PINK=#FF2DAA; NEON_CYAN=#00E5FF; NEON_LILA=#A855F7; NEON_ROSA=#FF8ACD; JUNIOR_FOREGROUND=ALWAYS; PET_DEVELOPMENT=PAUSED; SOURCE_ONLY=true.
+
+## 2026-10-10 Whole-CLIC recursive visual facet binding (source only)
+The Whole-CLIC Dashboard MUST read the current visual facet's FACET_CONTRACT.md, SUB_LIFECIRCLE.md, SUB_REHYDRATION.md, current Neon Visual contract, verified-visual-presenter and active progress ledger after root HEAD/pointer/manifest. Display bounded nested facet / managed-system return positions from current evidence; unknown children remain UNKNOWN instead of being silently omitted or invented.
+Keep CLIC Junior independently pinned when development is inactive or no task total is evidenced; PET development stays paused. Trigger-scoped visual inheritance applies to normal CLIC commands via the visual-interface source contract; the Dashboard trigger is not the sole way to present contextual visual evidence. Distinguish integrated, connected and functionally accepted, and do not claim plugin/host live acceptance before real test. No foreign activation or mutation.
