@@ -1,0 +1,11 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {decideForce} from "../src/force-decide.mjs";
+const request={direct_trigger:true,system:"666CLIC",authorized_update:true};
+const current={head:"abc",pointer:"CURRENT_POINTER.json",readback:"PASS"};
+test("direct native trigger is required",()=>assert.equal(decideForce({request:{},current}).status,"HOLD"));
+test("current must be verified",()=>assert.equal(decideForce({request,current:{head:"abc"}}).status,"HOLD"));
+test("foreign mutation remains blocked under FORCE",()=>{const r=decideForce({request,current,candidates:[{id:"foreign",foreign_mutation:true,source_verified:true}]});assert.equal(r.blocked[0].reasons[0],"FOREIGN_MUTATION_FORBIDDEN");});
+test("a write requires lock, permission and backup",()=>{const r=decideForce({request,current,candidates:[{id:"write",write:true,source_verified:true}]});assert.equal(r.steps.length,0);});
+test("newer valid evolution cannot silently rollback",()=>{const r=decideForce({request,current,candidates:[{id:"old",source_verified:true,superseded_valid_evolution:true}]});assert.equal(r.blocked[0].reasons[0],"NO_SILENT_ROLLBACK");});
+test("safe strongly evidenced work ranks before weaker work",()=>{const r=decideForce({request,current,candidates:[{id:"weak",source_verified:true,evidence_strength:3,causal_impact:3,risk:2},{id:"strong",source_verified:true,evidence_strength:9,causal_impact:9,risk:1}]});assert.equal(r.steps[0].id,"strong");assert.equal(r.execution_authority,"NONE");});
