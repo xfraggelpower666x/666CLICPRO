@@ -2076,5 +2076,32 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "ON_FRESH_SYSTEMSTART_READ_LIVE_ROOT_REHYDRATE_ALL_FIVE_WITH_RELATIONS_PEER_RECEIPTS; VERIFY_HOST_AND_PLUGIN_IMPACT_SEPARATELY; RESOLVE_FUCK_HORST_PROVENANCE; PET_PAUSED"
+  },
+  "update_2026_10_09_bridge_card_peer_registry_alignment": {
+    "status": "VERIFIED_CLIC_SOURCE_BRIDGE_CARD_REGISTRY_ALIGNED_PEER_AND_HOST_PENDING",
+    "prechange_head": "2fbe17c07d34b28cac3ef3dcacaba324c5804b06",
+    "prechange_backup": "backup/clic-pre-bridge-card-registry-align-20261009-2205",
+    "body_head_before_pointer": "801e0c4013b38817fbc69166f62c21cecec60828",
+    "bridge_contract": "facets/repository_bridge/FACET_CONTRACT.md",
+    "bridge_blob_sha": "3229f39dbb7c4f6836c9b87f427f85271f2e6492",
+    "card_registry": "facets/card_intelligence/REGISTRY.json",
+    "card_registry_blob_sha": "58132bf4cded7704c3029349bdbc067a76d3fe80",
+    "card_index": "8_EXISTING_PEER_RELATION_CARDS_NO_NEW_TARGET_SCAN",
+    "reconciliation": "continuity/BRIDGE_CARD_PEER_RECONCILIATION_2026-10-09.json",
+    "reconciliation_blob_sha": "e1812639a3e1ab5e35bd219bbb1274b062bb4704",
+    "notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "notice_registry_blob_unchanged": "f6907ffb2f6d1480c7208db11ea9f1194ca52bc9",
+    "peer_notices": "7_PREPARED_0_DELIVERY_0_NATIVE_ADOPTION",
+    "manifest": "92_OF_92_UNCHANGED",
+    "facets": "5_OF_5_UNCHANGED",
+    "fresh_host": "NOT_TESTED",
+    "plugin_impact": "SEMANTIC_SOURCE_DELTA_REQUIRES_SEPARATE_GUARDED_PLUGIN_PARITY_CHECK",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "visual_impact": "PRESERVED_EXISTING_TARGET_COMPLIANCE_PARTIAL_OR_UNKNOWN_NO_LIVE_HOST_PASS",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "REVALIDATE_PEER_NATIVE_CURRENT_BEFORE_CARD_EVOLUTION; RESOLVE_SEVEN_NOTICES_WITH_REAL_RECEIPTS; TEST_FRESH_HOST_AND_GOVERNED_PLUGIN_PARITY; PET_PAUSED"
   }
 }
