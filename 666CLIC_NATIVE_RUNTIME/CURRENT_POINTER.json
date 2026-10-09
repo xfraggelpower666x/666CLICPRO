@@ -1587,5 +1587,31 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "VALIDATE_CLS_NATIVE_FUNCTIONAL_VISUAL_GUI_ACCEPTANCE_AND_REFRESH_ON_NEW_HANDOFF"
+  },
+  "update_2026_10_09_mira_tdh_native_card_reconcile": {
+    "status": "VERIFIED_CLIC_REPO_READBACK",
+    "scope": "CLIC_OWNED_MIRA_CARD_TDH_CARD_VISUAL_REGISTER",
+    "prechange_backup": "backup/clic-pre-mira-tdh-card-reconcile-20261009",
+    "prechange_head": "30486d8edd0295df76a0bface3f9dfef8345a6f0",
+    "body_head_before_pointer": "08e97c320db50f56a964328deb87d66ddb761c5b",
+    "body_readback": "PASS_3_OF_3_SELECTED",
+    "mira_repo": "xfraggelpower666x/666PFS_CSM",
+    "mira_repo_head": "9022891a6de7b78f6c59c80b19593c60210f8a13",
+    "mira_native_version": "1.0.17_VERIFIED_READY",
+    "mira_visual_compliance": "UNKNOWN_NOT_VERIFIED",
+    "mira_card": "relations/MIRA_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+    "tdh_native_version": "1.14.0_COMPLETE_VERIFIED_NATIVE_SVI_V01_4",
+    "tdh_visual_adapters": "5_OF_5_NATIVE_BUNDLE",
+    "tdh_visual_compliance": "PARTIAL_RUNTIME_FUNCTIONAL_ACCEPTANCE_OPEN",
+    "tdh_card": "relations/TDH_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+    "visual_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "visual_impact": "CLIC_TARGET_CARDS_AND_REGISTER_ONLY",
+    "plugin_impact": "NO_CLIC_PLUGIN_RUNTIME_SEMANTIC_CHANGE",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "cls_card": "PRESERVED",
+    "pet_bridging": "PRESERVED_NO_DEPLOY",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "VERIFY_MIRA_NATIVE_VISUAL_CURRENT_AND_TDH_GUI_CHILD_ADAPTER_RUNTIME_ACCEPTANCE_THEN_REAUDIT"
   }
 }
