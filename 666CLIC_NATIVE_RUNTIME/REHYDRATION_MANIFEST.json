@@ -87,7 +87,10 @@
     "dashboard/unified-visual-header.test.mjs",
     "dashboard/verified-visual-presenter.mjs",
     "dashboard/verified-visual-presenter.test.mjs",
-    "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json"
+    "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "plugin_governance/NEON_CARD_FORCE_HOST_PARITY_READBACK_2026-10-09.json",
+    "plugin_governance/neon-host-parity.mjs",
+    "plugin_governance/neon-host-parity.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1148,5 +1151,27 @@
     "visual_compliance": "REQUIRED_FOR_EVERY_TARGET",
     "cross_system_writes": false,
     "return_anchor": "PLUGIN_ORIGINAL_BINARY_PROVENANCE_THEN_HOST_VISUAL_ACCEPTANCE; TARGET_NATIVE_HANDOFF_ACK_READBACK_AFTER_OWN_DIRECT_TRIGGERS"
+  },
+  "force_neon_host_parity_2026_10_09": {
+    "status": "SOURCE_TESTS_PASS_LIVE_PLUGIN_BINARY_AND_HOST_BLOCKED",
+    "audit": "plugin_governance/NEON_CARD_FORCE_HOST_PARITY_READBACK_2026-10-09.json",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "candidate_skills": [
+      "666clic-dashboard",
+      "666clic-visual-interface",
+      "666clic-card",
+      "666clic-force"
+    ],
+    "original_archive_bytes": "UNAVAILABLE",
+    "actual_live_logo_sha256": "UNKNOWN",
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37964000398/job/113933642089",
+    "junior": "PINNED_FOREGROUND",
+    "pet": "PAUSED_UNMODIFIED",
+    "handoffs_prepared": 7,
+    "handoffs_delivered": 0,
+    "real_host_render": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "return_anchor": "BLOCK_RELEASE_UNTIL_BINARY_READBACK_AND_HOST_ACCEPTANCE; NATIVE_NOTICE_RECEIPTS_REQUIRED"
   }
 }
