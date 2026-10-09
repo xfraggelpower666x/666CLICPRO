@@ -1,0 +1,10 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {evaluateReleaseGates} from "./release-gate-check.mjs";
+const good={pluginProviderReleaseId:"rid",repoCurrentReleaseId:"rid",archiveHash:"archive",logoHash:"logo",expectedLogoHash:"logo",binaryBackupVerified:true,sourceParityVerified:true,manifestValidated:true,hostAcceptance:true};
+test("all gates exact pass allowed",()=>assert.equal(evaluateReleaseGates(good).decision,"READY_FOR_GOVERNED_RELEASE"));
+test("missing archive blocks",()=>assert.equal(evaluateReleaseGates({...good,archiveHash:null}).decision,"WRITE_BLOCKED"));
+test("logo mismatch blocks",()=>assert.equal(evaluateReleaseGates({...good,logoHash:"wrong"}).allowed,false));
+test("host acceptance blocks if not verified",()=>assert.equal(evaluateReleaseGates({...good,hostAcceptance:false}).allowed,false));
+test("release id mismatch blocks",()=>assert.equal(evaluateReleaseGates({...good,repoCurrentReleaseId:"old"}).allowed,false));
+test("foreign mutation blocked",()=>assert.equal(evaluateReleaseGates({...good,foreignMutation:true}).allowed,false));
