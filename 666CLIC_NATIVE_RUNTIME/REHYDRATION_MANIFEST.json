@@ -67,7 +67,10 @@
     "plugin_governance/CARD_FORCE_RELEASE_GATES.md",
     "plugin_governance/release-gate-check.mjs",
     "plugin_governance/archive-preflight.mjs",
-    "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json"
+    "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json",
+    "current/NONPET_COMPLETION_AUDIT_2026-10-09.json",
+    "dashboard/NONPET_RELEASE_AND_VISUAL_GATES.md",
+    "dashboard/nonpet-completion.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1051,5 +1054,28 @@
     "ci_pet": "SOURCE_TEST_PASS",
     "foreign_mutation": false,
     "return_anchor": "NATIVE_JUNIOR_CURRENT_AND_OWNER_SIGNER_AUTHORITY_BEFORE_CLIC_CLOUDFLARE_STAGING; BINARY_VERIFIED_PLUGIN_RELEASE_SEPARATE"
+  },
+  "nonpet_completion_2026_10_09": {
+    "status": "SOURCE_AUDIT_CI_PASS_LIVE_RELEASE_AND_HOST_GATED",
+    "pet": "PAUSED_NO_MUTATION",
+    "prechange_backup": "backup/clic-pre-nonpet-completion-20261009",
+    "audit": "current/NONPET_COMPLETION_AUDIT_2026-10-09.json",
+    "dashboard_gates": "dashboard/NONPET_RELEASE_AND_VISUAL_GATES.md",
+    "visual_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "visual_card_states": {
+      "CLS": "PARTIAL",
+      "MIRA": "UNKNOWN",
+      "TDH": "PARTIAL"
+    },
+    "card_force_ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37958750850/job/113915876521",
+    "progress_producer": "INACTIVE_SOURCE_ONLY",
+    "host_dashboard_render": "NOT_TESTED",
+    "plugin_live": "0.1.22",
+    "card_force_host": "NOT_INSTALLED",
+    "logo_actual_sha256": "UNAVAILABLE",
+    "plugin_release": "NOT_PUBLISHED",
+    "foreign_mutation": false,
+    "return_anchor": "RETRIEVE_BYTE_EXACT_PROVIDER_ARCHIVE_AND_HOST_BINARY_PARITY; LIVE_DASHBOARD_RENDER; FRESH_TARGET_NATIVE_CARD_ACCEPTANCE; PET_REMAINS_PAUSED"
   }
 }
