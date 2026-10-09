@@ -1,0 +1,10 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {suggestOutcome} from "../src/contextual-outcome.mjs";
+const base={nativeAuthorityVerified:true,currentReadback:"PASS"};
+test("unverified authority is HOLD",()=>assert.equal(suggestOutcome({...base,nativeAuthorityVerified:false}).outcome,"HOLD"));
+test("verified no-op is valid progress",()=>assert.equal(suggestOutcome({...base,goalAlreadySatisfied:true,materialDeltaVerified:false}).outcome,"COMPLETE_NO_CHANGE"));
+test("uncertain evidence requires VERIFY",()=>assert.equal(suggestOutcome({...base,currentReadback:"PENDING"}).outcome,"VERIFY"));
+test("verified regression produces advisory REPAIR only",()=>{const r=suggestOutcome({...base,regressionVerified:true,recoveryVerified:true});assert.equal(r.outcome,"REPAIR");assert.equal(r.execute,false)});
+test("unverified hypothesis remains EXPLORE",()=>assert.equal(suggestOutcome({...base,changeHypothesis:true}).outcome,"EXPLORE"));
+test("write candidate cannot bypass missing backup",()=>assert.equal(suggestOutcome({...base,writeRequested:true,userAuthorizedUpdate:true,lockVerified:true}).outcome,"HOLD"));
