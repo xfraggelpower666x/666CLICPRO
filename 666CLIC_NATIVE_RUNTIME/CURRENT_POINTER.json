@@ -1861,5 +1861,27 @@
     "pointer_written_last": true,
     "next_chat_instruction": "666CLIC SYSTEMSTART",
     "return_anchor": "READ_LATEST_REPO_POINTER_AND_NEW_CHAT_CURRENT_THEN_CONTINUE_BINARY_PREPUBLISH_AND_HOST_GATES_NO_PET_RESUME"
+  },
+  "update_2026_10_09_force_binary_source_recovery_stewardship": {
+    "status": "VERIFIED_CLIC_OWNED_AUDIT_READBACK_PLUGIN_PREPUBLISH_BLOCKED",
+    "prechange_head": "c7bd2a22dc5c8514799ab249075093567af2b1da",
+    "prechange_backup": "backup/clic-pre-force-binary-gate-stewardship-20261009-2040",
+    "body_head_before_pointer": "83ed19a9b105744a2394c79d2c895ec60d5edc91",
+    "audit": "plugin_governance/FORCE_BINARY_SOURCE_RECOVERY_AUDIT_2026-10-09.json",
+    "audit_blob_sha": "ee2c3bd4e04c392a2543314fe6a6e4cfa15f68c1",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_current_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "plugin_binary_archive_sha256": "UNKNOWN_BYTES_NOT_RECEIVED",
+    "plugin_live_logo_sha256": "UNKNOWN_BYTES_NOT_RECEIVED",
+    "plugin_release": "WRITE_BLOCKED_NO_PUBLICATION",
+    "host_render": "NOT_VERIFIED",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "notices": "7_PREPARED_ZERO_RECEIPTS",
+    "visual_impact": "ASSESSED_SOURCE_ONLY_NO_RUNTIME_CHANGE",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "OBTAIN_AUTHORIZED_PROVIDER_ARCHIVE_BYTES_THEN_SHA256_AND_PREPUBLISH_NATIVE_APPROVAL; NO_PLUGIN_RELEASE_UNTIL_BINARY_GATE; PET_PAUSED"
   }
 }
