@@ -7,8 +7,11 @@
   "signed_events": "VERIFIER_HARDENED_SOURCE_CANDIDATE_SIGNED_PRODUCER_UNBOUND",
   "original_assets": "CLIC_PET/assets/duo-v2.1/final",
   "worker": "CLIC_PET/worker/src/index.js",
-  "budget": "LEDGER_SOURCE_CANDIDATE_RESERVATIONS_NOT_REAL_HTTP_CALLS",
+  "budget": "GITHUB_REQUEST_TRANSPORT_GATED_SOURCE_ONLY_NOT_DEPLOYED",
   "plugin": "CANDIDATE_NOT_RELEASED",
   "return_anchor": "VERIFY_CI_TESTS_AND_JUNIOR_NATIVE_PRODUCER_BEFORE_WORKER_DEPLOYMENT",
-  "worker_tests": "CI_WORKFLOW_PREPARED_EXECUTION_PENDING"
+  "worker_tests": "CI_WORKFLOW_PREPARED_EXECUTION_PENDING",
+  "github_request_transport": "CLIC_PET/worker/src/github-transport.mjs",
+  "native_producer": "NOT_BOUND",
+  "next_step": "CI_GITHUB_REQUEST_TRANSPORT_TESTS_THEN_NATIVE_PRODUCER_AUTHORITY"
 }
