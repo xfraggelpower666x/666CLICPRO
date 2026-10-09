@@ -1660,5 +1660,40 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "BYTE_EXACT_PLUGIN_ARCHIVE_PROOF_THEN_GUARDED_CARD_FORCE_PLUGIN_RELEASE_AND_HOST_ACCEPTANCE; DASHBOARD_RENDER_AND_TARGET_NATIVE_VISUAL_READBACK; PET_REMAINS_PAUSED"
+  },
+  "update_2026_10_09_unified_neon_visual_junior_foreground_distribution": {
+    "status": "CLIC_SOURCE_VERIFIED_CI_PASS_TARGET_ADOPTION_PENDING",
+    "prechange_backup": "backup/clic-pre-unified-neon-visual-20261009",
+    "prechange_head": "32f3f1f51dd94a93d1e88377ccef9f56649c4c04",
+    "body_head_before_pointer": "3932360f89be4b05d22321cbebfbdde3fe0b5cb5",
+    "scope": "WHOLE_CLIC_NEON_VISUAL_SYSTEM_HEADERS_CONTEXTUAL_DEVELOPMENT_DASHBOARD_JUNIOR_FOREGROUND_MANAGED_PROPOSALS",
+    "visual_contract": "facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md",
+    "development_dashboard": "dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md",
+    "junior": "PINNED_VISIBLE_FOREGROUND_COMPANION_EVIDENCE_BOUND",
+    "junior_foreground_contract": "dashboard/CLIC_JUNIOR_FOREGROUND_CONTRACT.md",
+    "junior_visual_subrehydration": "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+    "pet": "PAUSED_AND_UNMUTATED",
+    "pet_paths_verified": 127,
+    "pet_paths_changed": 0,
+    "outbox_proposals": 7,
+    "outbox_status": "PREPARED_NOT_DELIVERED_OR_ADOPTED",
+    "managed_targets": [
+      "LYVRA",
+      "666PFS_CSM",
+      "666STREAM",
+      "666LINGUA",
+      "666TDH",
+      "666CLS",
+      "666MIRA"
+    ],
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37960983699/job/113923442997",
+    "required_missing": 0,
+    "plugin_live_release": "0.1.22_UNCHANGED",
+    "plugin_sync": "IMPACT_PENDING_BINARY_RELEASE_GATES",
+    "live_dashboard": "NOT_DEPLOYED_OR_HOST_RENDER_ACCEPTED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "APPLY_NATIVE_CLIC_VISUAL_RENDER_ACCEPTANCE_AND_PLUGIN_IMPACT_GATES; TARGETS_ADOPT_OUTBOX_CONCEPTS_ONLY_BY_OWN_NATIVE_TRIGGERS; JUNIOR_FOREGROUND_PERSISTENT; PET_PAUSED"
   }
 }
