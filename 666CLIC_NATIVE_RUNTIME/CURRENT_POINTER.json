@@ -1563,5 +1563,29 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "WAIT_NATIVE_TDH_VISUAL_UPDATE_AND_DIRECT_RETURN_HANDOFF_THEN_REAUDIT_UPDATE_CHILD_CARDS"
+  },
+  "update_2026_10_09_cls_v123_native_visual_return": {
+    "status": "CLIC_NATIVE_CARD_AND_VISUAL_REGISTER_READBACK_VERIFIED",
+    "scope": "CLIC_OWNED_CLS_UNDERSTANDING_CARD_AND_VISUAL_COMPLIANCE_ONLY",
+    "cls_native_system": "666CLS-CORE-001",
+    "cls_provider_current": "1.23.0_FROZEN_LIVE_COMPLETE_VERIFIED",
+    "cls_provider_pointer_id": "1wobeCgpXgO4ifUxkE9ld-S6VCqEn6JBA",
+    "cls_return_handoff": "666CLS_RETURN_HANDOFF_TO_666CLIC_v1.23.0_R2_PREPOINTER.json",
+    "cls_handoff_status": "PREPOINTER_INERT_SUPERSEDED_BY_DIRECT_PROVIDER_POINTER_FOR_RELEASE_TRUTH",
+    "cls_visual": "PARTIAL_NATIVE_SOURCE_AND_PROVIDER_STRUCTURAL_READBACK_VERIFIED_FUNCTIONAL_GUI_TEST_OPEN",
+    "cls_capabilities": "SEMANTIC_VISUAL_INTELLIGENCE|FACET_INTELLIGENCE|LIMITED_SUB_LIFECIRCLE|SUB_REHYDRATION_AFTER_VERIFIED_CURRENT|NATIVE_DASHBOARD",
+    "cls_card": "relations/CLS_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+    "visual_register": "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+    "prechange_backup": "backup/clic-pre-cls-v123-return-20261009",
+    "prechange_head": "157a4841fd3004456e2040db61f5f10490a732c8",
+    "body_head_before_pointer": "15792ec516c927886450d8a1ce2249a143ab2c68",
+    "body_readback": "PASS_2_OF_2_SELECTED",
+    "plugin_impact": "NO_CLIC_PLUGIN_RUNTIME_SEMANTIC_CHANGE_CARD_EVIDENCE_ONLY",
+    "clic_plugin_live": "0.1.22_UNCHANGED",
+    "tdh_card_update": "PRESERVED",
+    "pet_update": "PRESERVED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "VALIDATE_CLS_NATIVE_FUNCTIONAL_VISUAL_GUI_ACCEPTANCE_AND_REFRESH_ON_NEW_HANDOFF"
   }
 }
