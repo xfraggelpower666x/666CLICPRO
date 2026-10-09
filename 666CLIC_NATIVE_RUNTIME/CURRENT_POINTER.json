@@ -1905,5 +1905,31 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "EXECUTE_EXISTING_HEAD_PINNED_USER_LOCAL_BRIDGE_THEN VERIFY REMOTE_ZIP_LOGO_SHA256_AND_RECEIPT; PERFORM_CLIC_NATIVE_UPDATE_AFTER_RECEIPT; PROVIDER_TAR_GZ_BYTE_PROOF_SEPARATE; PET_PAUSED"
+  },
+  "update_2026_10_09_plugin_bridge_binary_recovery_ingest": {
+    "status": "VERIFIED_SOURCE_ZIP_AND_LOGO_REMOTE_BYTES_RECOVERY_CURRENT_PROVIDER_ARCHIVE_PARITY_OPEN",
+    "prechange_head": "4392de07191ac7ee3e2b60b96efc25a57999a389",
+    "prechange_backup": "backup/clic-pre-v0122-binary-bridge-ingest-20261009-2301",
+    "verified_bridge_commit": "4392de07191ac7ee3e2b60b96efc25a57999a389",
+    "body_head_before_pointer": "0d18f4cf56d41df21e50b7e401525302ecf93adf",
+    "recovery": "recovery/PLUGIN_V0122_SOURCE_ZIP_REMOTE_BINARY_BINDING_CURRENT_2026-10-09.json",
+    "recovery_blob_sha": "820b83db05721ccda5bb1e44b7b52e8a24fa7f77",
+    "source_zip_sha256": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+    "source_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "source_zip_logo_remote_git_blob_identity": "VERIFIED",
+    "provider_original_tar_gz_sha256": "UNKNOWN_PROVIDER_BYTES_NOT_RECEIVED",
+    "provider_live_logo_sha256": "UNKNOWN",
+    "provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_release": "WRITE_BLOCKED_NO_PUBLICATION",
+    "historical_release_snapshot": "PRESERVED_UNMODIFIED",
+    "manifest_required_order": "91_UNCHANGED",
+    "visual_impact": "ASSESSED_RECOVERY_EVIDENCE_ONLY_NO_RUNTIME_SEMANTIC_CHANGE",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "SOURCE_ZIP_AND_LOGO_REMOTE_BYTES_VERIFIED; OBTAIN_PROVIDER_CURRENT_RELEASE_ORIGINAL_TAR_GZ_BYTES_OR_POLICY_COMPLETE_CAUSAL_EVIDENCE; RECHECK_EXACT_LIVE_PARITY_AND_APPROVAL_SEPARATELY; PET_PAUSED"
   }
 }
