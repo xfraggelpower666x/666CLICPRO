@@ -6,6 +6,7 @@ on:
     paths:
       - "666CLIC_NATIVE_RUNTIME/facets/card_intelligence/**"
       - "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/**"
+      - "666CLIC_NATIVE_RUNTIME/facets/cross_surface_learning/**"
       - ".github/workflows/clic-card-force-candidate-tests.yml"
   workflow_dispatch:
 jobs:
@@ -36,5 +37,9 @@ jobs:
           for (const p of m.required_order.filter(p=>p.startsWith('facets/card_intelligence/')||p.startsWith('facets/semantic_force_decision/'))) assert.ok(fs.existsSync(root+p),p);
           assert.equal(m.card_and_force_facets.native_force_decision_authority,'NONE');
           assert.equal(m.card_and_force_facets.foreign_mutation,false);
+          const peer=JSON.parse(fs.readFileSync(root+'facets/cross_surface_learning/PEER_NOTICE_SCHEMA.json','utf8'));
+          assert.equal(peer.schema,'666CLIC_PEER_DEVELOPMENT_NOTICE_V1');
+          assert.equal(peer.hard_rules.foreign_mutation,false);
+          for(const p of m.required_order.filter(p=>p.startsWith('facets/cross_surface_learning/')))assert.ok(fs.existsSync(root+p),p);
           console.log('Structural native CARD/FORCE contract checks PASS');
           NODE
