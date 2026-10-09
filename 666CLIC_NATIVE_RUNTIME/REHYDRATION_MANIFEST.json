@@ -902,12 +902,14 @@
       "666clic-plugin/source/skills/666clic-card/SKILL.md",
       "666clic-plugin/source/skills/666clic-force/SKILL.md"
     ],
-    "source_tests": "GITHUB_CI_RERUN_PENDING",
+    "source_tests": "GITHUB_CARD_FORCE_CI_SUCCESS_COMMIT_2e9295378f5f52cca309d7fc86f653cd538f7dd5",
     "live_plugin": "0.1.22_UNCHANGED",
     "remote_card_transport": "INJECTED_ADAPTER_SOURCE_ONLY_NOT_LIVE_CONNECTED",
     "native_force_decision_authority": "NONE",
     "foreign_mutation": false,
-    "readback": "BODY_READBACK_PENDING",
-    "recovery": "WHOLE_CLIC_FIRST_SUBFACETS_IDLE_REACHABLE"
+    "readback": "REQUIRED_DIRECT_SELECTED_BODY_READBACK_BEFORE_POINTER",
+    "recovery": "WHOLE_CLIC_FIRST_SUBFACETS_IDLE_REACHABLE",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37872064508/job/113632192804",
+    "plugin_release_gate": "NOT_RELEASED_BINARY_PARITY_AND_HOST_ACCEPTANCE_OPEN"
   }
 }
