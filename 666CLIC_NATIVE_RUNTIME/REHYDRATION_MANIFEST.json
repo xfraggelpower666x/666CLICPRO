@@ -978,8 +978,9 @@
     "host_card_skill": "NOT_INSTALLED_IN_0.1.22",
     "host_force_skill": "NOT_INSTALLED_IN_0.1.22",
     "remote_inbox": "NOT_LIVE_CONNECTED",
-    "ci": "PENDING_EXPANDED_GATES",
+    "ci": "PASS_GITHUB_CARD_FORCE_EXPANDED_GATES_295deb9b3807f23614394a0dc54e3d64b2bc3a62",
     "return_anchor": "RETRIEVE_BYTE_EXACT_PLUGIN_ARCHIVE_VERIFY_LOGO_SOURCE_PARITY_BUILD_SIGNED_OVERLAY_RELEASE_HOST_ACCEPTANCE",
-    "no_foreign_mutation": true
+    "no_foreign_mutation": true,
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37875123484/job/113641832090"
   }
 }
