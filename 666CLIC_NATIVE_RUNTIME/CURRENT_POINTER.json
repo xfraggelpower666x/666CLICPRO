@@ -1883,5 +1883,27 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "OBTAIN_AUTHORIZED_PROVIDER_ARCHIVE_BYTES_THEN_SHA256_AND_PREPUBLISH_NATIVE_APPROVAL; NO_PLUGIN_RELEASE_UNTIL_BINARY_GATE; PET_PAUSED"
+  },
+  "update_2026_10_09_force_user_zip_binary_bridge_evidence": {
+    "status": "VERIFIED_USER_ZIP_LOCAL_BYTES_REPO_BRIDGE_REMOTE_PENDING",
+    "prechange_head": "2c5901fe7f0dd348db4223cfdc536661009589c2",
+    "prechange_backup": "backup/clic-pre-user-plugin-zip-proof-20261009-2244",
+    "body_head_before_pointer": "442847afccb236c93c74c723f0f908329940367c",
+    "audit": "plugin_governance/USER_SUPPLIED_V0122_BINARY_BRIDGE_EVIDENCE_2026-10-09.json",
+    "audit_sha": "717b80b357f8fbb72776dae6a17ce5771c525c95",
+    "zip_sha256": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+    "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "local_bridge_preflight": "PASS",
+    "remote_zip_logo_binary_mirror": "NOT_UPLOADED",
+    "provider_original_tar_gz_byte_parity": "UNKNOWN",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "plugin_publish": "BLOCKED",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false,
+    "visual_impact": "NO_RUNTIME_CHANGE_SOURCE_EVIDENCE_ONLY",
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "EXECUTE_EXISTING_HEAD_PINNED_USER_LOCAL_BRIDGE_THEN VERIFY REMOTE_ZIP_LOGO_SHA256_AND_RECEIPT; PERFORM_CLIC_NATIVE_UPDATE_AFTER_RECEIPT; PROVIDER_TAR_GZ_BYTE_PROOF_SEPARATE; PET_PAUSED"
   }
 }
