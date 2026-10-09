@@ -13,3 +13,5 @@ test("even complete inputs do not grant auto publication",()=>{
  const x=gateHostAcceptance(v);assert.equal(x.status,"ELIGIBLE_FOR_NATIVE_RELEASE_REVIEW");assert.equal(x.automatic_publication,false);
 });
 test("PET mutation blocks",()=>assert.equal(gateHostAcceptance({pet_mutated:true}).status,"WRITE_BLOCKED"));
+
+test("visual source does not prove live release or render acceptance",()=>{const p=evaluateNeonSourceParity({dashboard:"666clic-plugin/source/skills/666clic-dashboard/SKILL.md",visual:"666clic-plugin/source/skills/666clic-visual-interface/SKILL.md",reference:"666clic-plugin/source/references/visual-interface-contract.md"});assert.equal(p.host_tested,false);assert.equal(p.binary_verified,false);assert.equal(p.plugin_live_release,"0.1.22_UNCHANGED")});
