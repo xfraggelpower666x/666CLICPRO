@@ -1,5 +1,8 @@
-import test from "node:test";import assert from "node:assert/strict";import{systemHeader,developerPanel}from"./unified-visual-header.mjs";
+import test from "node:test";import assert from "node:assert/strict";import{systemHeader,developerPanel,juniorForeground}from"./unified-visual-header.mjs";
 test("unknown metadata not fabricated",()=>{const x=systemHeader({system_id:"666CLIC",name:"CLIC",type:"SYSTEM",status:"PARTIAL",authority:"GITHUB",evidence:"readback"});assert.equal(x.ready,true);assert.equal(x.created_at,"UNKNOWN");assert.equal(x.logo,null)});
-test("not active means no progress panel",()=>assert.equal(developerPanel({active:false}).visible,false));
+test("not active means no progress panel",()=>assert.equal(developerPanel({active:false}).visible,false);assert.equal(developerPanel({active:false}).junior.pinned,true));
 test("no fake task progress",()=>assert.equal(developerPanel({active:true,tasks:[{id:"a",state:"DONE"}]}).progress,null));
-test("measured task progress only",()=>{const x=developerPanel({active:true,tasks:[{id:"a",state:"DONE",evidence:"commit"},{id:"b",state:"OPEN"}]});assert.equal(x.progress.percent,50);assert.equal(x.junior.foreground,true);assert.equal(x.junior.pet_development,"PAUSED")});
+test("measured task progress only",()=>{const x=developerPanel({active:true,tasks:[{id:"a",state:"DONE",evidence:"commit"},{id:"b",state:"OPEN"}]});assert.equal(x.progress.percent,50);assert.equal(x.junior.visible,true);assert.equal(x.junior.pinned,true);assert.equal(x.junior.pet_development,"PAUSED")});
+
+test("Junior remains foreground even in inactive and unmeasured developer panels",()=>{for(const p of [{active:false},{active:true},{active:true,tasks:[{id:"x",state:"DONE"}]}]){const r=developerPanel(p);assert.equal(r.junior.visible,true);assert.equal(r.junior.pinned,true);assert.equal(r.junior.pet_development,"PAUSED");assert.equal(r.junior.worker_execution,"NOT_AUTO_ACTIVATED")}});
+test("Junior source and status remain unknown without verified input",()=>{const j=juniorForeground();assert.equal(j.status,"UNKNOWN");assert.equal(j.write_authority,"NONE");assert.equal(j.evidence,"NOT_VERIFIED")});
