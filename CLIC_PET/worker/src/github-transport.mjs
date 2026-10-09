@@ -1,6 +1,6 @@
 // Only outbound REST boundary for a future native PET Github producer.
 // Source-only candidate. No worker route calls this until owner-approved authority binding.
-import {reserveBudgetedGitHubCall} from "./github-budget.mjs";
+import {reserveBudgetedGitHubCall,recordGitHubCooldown} from "./github-budget.mjs";
 export async function budgetedGitHubRead(env, resource, {fetchImpl=fetch, headers={}}={}) {
  if(!env||env.CLIC_PET_BUDGET_ACTIVE!=="true")throw Error("NATIVE_PRODUCER_NOT_CONNECTED");
  if(typeof resource!=="string")throw Error("INVALID_RESOURCE");
@@ -15,6 +15,7 @@ export async function budgetedGitHubRead(env, resource, {fetchImpl=fetch, header
  if(typeof fetchImpl!=="function")throw Error("FETCH_PROVIDER_MISSING");
  await reserveBudgetedGitHubCall(env); // A reservation is a request attempt, not proof of an HTTP response.
  const response=await fetchImpl(url.toString(),{method:"GET",headers,redirect:"manual"});
+ await recordGitHubCooldown(env,response); // Fail closed if remote rate-limit cooldown cannot be recorded.
  // No automatic redirects to another origin; caller evaluates status 3xx.
  return response;
 }

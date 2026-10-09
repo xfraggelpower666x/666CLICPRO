@@ -4,13 +4,8 @@
   "sequence": [
     "CLIC_PET/SYSTEM_IDENTITY.md",
     "CLIC_PET/livecircle/CURRENT_STATE.json",
-    "CLIC_PET/worker/src/index.js",
-    "CLIC_PET/worker/src/verified-events.mjs",
-    "CLIC_PET/worker/src/github-budget.mjs",
-    "CLIC_PET/worker/BUDGET_AND_EVENTS_GATES.md"
+    "CLIC_PET/worker/src/index.js"
   ],
   "junior_native_source_gate": "PENDING_VERIFICATION",
-  "auto_deploy": false,
-  "signed_native_events_status": "PRODUCER_PENDING",
-  "budget_status": "PERSISTENT_LEDGER_CANDIDATE_NOT_BOUND"
+  "auto_deploy": false
 }

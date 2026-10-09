@@ -18,6 +18,15 @@ export class ClicGithubBudget {
     return Response.json({status:"OK",used:count,limit,remaining:Math.max(0,limit-count),cooldown_until:cooldown>now?new Date(cooldown).toISOString():null},{headers:{"Cache-Control":"no-store"}});
    }catch{return Response.json({status:"UNAVAILABLE",used:null,limit:null,remaining:null},{status:503,headers:{"Cache-Control":"no-store"}});}
   }
+  if(path==="/cooldown"&&request.method==="POST"&&this.env.CLIC_PET_BUDGET_ACTIVE==="true"){
+   try{
+    const data=await request.json();
+    const until=Number(data.until_ms);
+    if(!Number.isSafeInteger(until)||until<=now||until>now+3600000)return Response.json({accepted:false,reason:"INVALID_COOLDOWN"},{status:400});
+    sql.exec("INSERT INTO github_cooldown(id,until_ms) VALUES (1,?) ON CONFLICT(id) DO UPDATE SET until_ms=MAX(github_cooldown.until_ms,excluded.until_ms)",until);
+    return Response.json({accepted:true,cooldown_until:new Date(until).toISOString()},{headers:{"Cache-Control":"no-store"}});
+   }catch{return Response.json({accepted:false,reason:"INVALID_COOLDOWN"},{status:400});}
+  }
   if(path!=="/reserve"||request.method!=="POST"||this.env.CLIC_PET_BUDGET_ACTIVE!=="true")return new Response("Forbidden",{status:403});
   // Internal binding only, never routed from the external worker.
   try{
@@ -38,4 +47,20 @@ export async function reserveBudgetedGitHubCall(env){
  const ns=env.CLIC_PET_GITHUB_BUDGET;
  const r=await ns.get(ns.idFromName("whole-clic-pet-github-v1")).fetch("https://budget.internal/reserve",{method:"POST"});
  if(!r.ok||(await r.json()).allowed!==true)throw Error("BUDGET_DENIED");
+}
+
+export async function recordGitHubCooldown(env, response, {now=Date.now()}={}) {
+ if(!env?.CLIC_PET_GITHUB_BUDGET||env.CLIC_PET_BUDGET_ACTIVE!=="true")throw Error("BUDGET_NOT_READY");
+ const limited=response.status===429||(response.status===403&&(response.headers.get("x-ratelimit-remaining")==="0"||response.headers.has("retry-after")));
+ if(!limited)return false;
+ const retry=response.headers.get("retry-after"),reset=response.headers.get("x-ratelimit-reset");
+ let until=now+60000;
+ if(retry&&/^\d+$/.test(retry))until=now+Number(retry)*1000;
+ else if(reset&&/^\d+$/.test(reset))until=Number(reset)*1000;
+ if(!Number.isSafeInteger(until)||until<=now)until=now+60000;
+ until=Math.min(until,now+3600000);
+ const ns=env.CLIC_PET_GITHUB_BUDGET;
+ const r=await ns.get(ns.idFromName("whole-clic-pet-github-v1")).fetch("https://budget.internal/cooldown",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({until_ms:until})});
+ if(!r.ok||(await r.json()).accepted!==true)throw Error("COOLDOWN_WRITE_NOT_VERIFIED");
+ return true;
 }
