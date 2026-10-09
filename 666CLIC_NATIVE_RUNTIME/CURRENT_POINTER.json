@@ -1626,5 +1626,39 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "VERIFY_NATIVE_JUNIOR_CURRENT_AND_OWNER_SIGNED_PRODUCER_BEFORE_AUTHORIZED_CLIC_PET_WORKER_AND_BUDGET_STAGING; BYTE_EXACT_PLUGIN_ARCHIVE_BEFORE_CARD_FORCE_RELEASE"
+  },
+  "update_2026_10_09_nonpet_force_visual_cards_dashboard_closure": {
+    "status": "REPOSITORY_SOURCE_CI_PASS_NONPET_SCOPE_LIVE_PLUGIN_AND_RENDER_GATED",
+    "prechange_head": "412db4365f5b799eb2572e20de6aebfb38e02d40",
+    "prechange_backup": "backup/clic-pre-nonpet-completion-20261009",
+    "body_head_before_pointer": "a94addfc47e3ac59d5271d0cef504add0ebfc3e6",
+    "scope": "CARD_FORCE_CROSS_SURFACE_SYSTEM_CARDS_VISUAL_INTELLIGENCE_WHOLE_DASHBOARD_PLUGIN_PARITY",
+    "pet": "PAUSED_UNMODIFIED",
+    "pet_paths_checked": 127,
+    "pet_path_blob_changes": 0,
+    "original_recovery_files_present": 49,
+    "recovery_blobs_identical_to_ancestor": 48,
+    "one_intentional_recovery_file_update": ".github/workflows/clic-card-force-candidate-tests.yml",
+    "rehydration_missing": 0,
+    "visual_register": {
+      "CLS": "PARTIAL_STRUCTURAL",
+      "MIRA": "UNKNOWN",
+      "TDH": "PARTIAL_STRUCTURAL_V1_14"
+    },
+    "nonpet_audit": "current/NONPET_COMPLETION_AUDIT_2026-10-09.json",
+    "dashboard_gates": "dashboard/NONPET_RELEASE_AND_VISUAL_GATES.md",
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37958750850/job/113915876521",
+    "dashboard_runtime_render": "NOT_VERIFIED",
+    "development_progress_producer": "INACTIVE_NOT_DEPLOYED",
+    "plugin_live_version": "0.1.22",
+    "plugin_card_force_host": "NOT_INSTALLED",
+    "plugin_live_logo_sha256": "NOT_VERIFIED",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "plugin_archive_download": "FAILED_ORIGINAL_BYTES_UNAVAILABLE",
+    "cross_surface_auto_runtime": "NOT_DEPLOYED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "BYTE_EXACT_PLUGIN_ARCHIVE_PROOF_THEN_GUARDED_CARD_FORCE_PLUGIN_RELEASE_AND_HOST_ACCEPTANCE; DASHBOARD_RENDER_AND_TARGET_NATIVE_VISUAL_READBACK; PET_REMAINS_PAUSED"
   }
 }
