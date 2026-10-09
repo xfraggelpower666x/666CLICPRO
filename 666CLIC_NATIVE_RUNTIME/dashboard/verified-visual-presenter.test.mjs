@@ -1,4 +1,4 @@
-import test from "node:test";import assert from "node:assert/strict";
+import test from "node:test";import fs from "node:fs";import assert from "node:assert/strict";
 import{presentWholeClic,checkNoticeRegistry}from "./verified-visual-presenter.mjs";
 const identity={system_id:"666CLIC",name:"C.L.I.C.",type:"SYSTEM",status:"VERIFIED",authority:"GITHUB_CURRENT",evidence:"commit"};
 test("Junior foreground independently of developer visibility",()=>{for(const development of [undefined,{status:"INACTIVE"},{status:"ACTIVE",authority:"UNKNOWN",tasks:[]}]){const r=presentWholeClic({identity,development});assert.equal(r.junior.visible,true);assert.equal(r.junior.pinned,true);assert.equal(r.developer.visible,false);assert.equal(r.junior.pet_development,"PAUSED")}});
@@ -6,3 +6,5 @@ test("verified task ledger required for numeric progress",()=>{const r=presentWh
 test("source revision missing means no progress",()=>{const r=presentWholeClic({identity,development:{status:"ACTIVE",authority:"666CLIC_REPO_CURRENT",tasks:[{id:"1",status:"DONE",evidence:["readback"]}]}});assert.equal(r.developer.progress,null)});
 test("notice registry requires authentic receipts and host evidence",()=>{assert.equal(checkNoticeRegistry({notices:[{id:"A",state:"PREPARED"}]}).valid,true);assert.equal(checkNoticeRegistry({notices:[{id:"A",state:"DELIVERED"}]}).valid,false);assert.equal(checkNoticeRegistry({notices:[{id:"A",state:"HOST_VERIFIED",receipts:["ack"],native_authority_ref:"native",target_readback_ref:"commit"}]}).valid,false)});
 test("duplicate notice IDs rejected",()=>assert.equal(checkNoticeRegistry({notices:[{id:"A",state:"PREPARED"},{id:"A",state:"PREPARED"}]}).valid,false));
+
+test("real CLIC visual outbox registry has seven valid prepared notices",()=>{const registry=JSON.parse(fs.readFileSync("666CLIC_NATIVE_RUNTIME/outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json","utf8"));const v=checkNoticeRegistry(registry);assert.equal(v.valid,true);assert.equal(v.total,7);assert.equal(v.prepared,7);assert.equal(v.delivery_confirmed,0);for(const n of registry.notices)assert.equal(fs.existsSync(n.source_path),true)});
