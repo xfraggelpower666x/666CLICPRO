@@ -1721,5 +1721,32 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "VERIFY_LIVE_PLUGIN_HOST_VISUAL_AUTO_RENDER_AND_BINARY_RELEASE_PARITY; TARGET_NATIVE_CONCEPT_ADOPTION_ONLY_WITH_OWN_TRIGGERS; JUNIOR_FOREGROUND_ALWAYS_PRESENT; PET_PAUSED"
+  },
+  "update_2026_10_09_force_neon_visual_evidence_native_notice_governance": {
+    "status": "SOURCE_TEST_PASS_NATIVE_REHYDRATION_ALIGNED_TARGET_DELIVERY_NOT_VERIFIED",
+    "prechange_head": "7699cc3a30bad7f314218c9be3f2366e596bb10a",
+    "prechange_backup": "backup/clic-pre-force-visual-delivery-governance-20261009",
+    "body_head_before_pointer": "a428788c3dee169fd884baa7645c7f2396b54e6d",
+    "visual_presenter": "dashboard/verified-visual-presenter.mjs",
+    "developer_evidence": "dashboard/development_progress/progress-evidence.mjs",
+    "junior_foreground": "PERMANENTLY_VISIBLE_SOURCE_AND_DAEMON_REHYDRATION",
+    "pet": "PAUSED_UNMODIFIED",
+    "pet_file_count": 127,
+    "pet_file_changes": 0,
+    "manifest_missing_required": 0,
+    "notices_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "notices_prepared": 7,
+    "notices_delivered_verified": 0,
+    "notices_adopted_verified": 0,
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37962613934/job/113928988853",
+    "gpt_native_host_visual": "SOURCE_CANDIDATE_NOT_AUTOMATIC_RENDERER_ACCEPTED",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_card_force_and_neon_host": "NOT_RELEASED",
+    "plugin_original_binary": "NOT_VERIFIED",
+    "plugin_release": "NOT_PUBLISHED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "PET_PAUSED_JUNIOR_PINNED; REQUIRE_PLUGIN_BINARY_PROVENANCE_AND_HOST_ACCEPTANCE; SYSTEMS_ADOPT_CLIC_NEON_VISUAL_NOTICES_ONLY_UNDER_NATIVE_TRIGGER_AND_RECEIPTS"
   }
 }
