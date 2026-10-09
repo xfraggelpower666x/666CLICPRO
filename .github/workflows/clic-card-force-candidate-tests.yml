@@ -1,0 +1,40 @@
+name: CLIC CARD and Semantic FORCE candidate tests
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - "666CLIC_NATIVE_RUNTIME/facets/card_intelligence/**"
+      - "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/**"
+      - ".github/workflows/clic-card-force-candidate-tests.yml"
+  workflow_dispatch:
+jobs:
+  card_force:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node tests — CARD and FORCE
+        run: |
+          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/card-scan.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/force-decide.test.mjs
+      - name: Structural native contract and plugin adapter checks
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const root='666CLIC_NATIVE_RUNTIME/';
+          const m=JSON.parse(fs.readFileSync(root+'REHYDRATION_MANIFEST.json','utf8'));
+          const c=JSON.parse(fs.readFileSync(root+'facets/card_intelligence/CARD_CONTRACT.json','utf8'));
+          const reg=JSON.parse(fs.readFileSync(root+'facets/card_intelligence/REGISTRY.json','utf8'));
+          assert.equal(c.schema,'666CLIC_CARD_V1');
+          assert.equal(reg.owner,'666CLIC');
+          for (const p of m.card_and_force_facets.plugin_adapters) assert.ok(fs.existsSync(p),p);
+          for (const p of m.required_order.filter(p=>p.startsWith('facets/card_intelligence/')||p.startsWith('facets/semantic_force_decision/'))) assert.ok(fs.existsSync(root+p),p);
+          assert.equal(m.card_and_force_facets.native_force_decision_authority,'NONE');
+          assert.equal(m.card_and_force_facets.foreign_mutation,false);
+          console.log('Structural native CARD/FORCE contract checks PASS');
+          NODE
