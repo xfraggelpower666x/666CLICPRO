@@ -1783,5 +1783,33 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "REQUIRE_BYTE_EXACT_PLUGIN_ARCHIVE_AND_HOST_TRIGGER_VISUAL_READBACK_BEFORE_RELEASE; REAL_EXTERNAL_RECEIPT_BEFORE_NATIVE_NOTICE_DELIVERY; JUNIOR_PINNED_PET_PAUSED"
+  },
+  "update_2026_10_09_plugin_original_binary_prepost_gate_fix": {
+    "status": "SOURCE_CI_VERIFIED_PREPUBLISH_BINARY_BLOCKED_POSTPUBLISH_PENDING",
+    "prechange_head": "971dfa683bc92cbfec69e8b02d822da232e6c3a1",
+    "prechange_backup": "backup/clic-pre-archive-gate-review-20261009",
+    "body_head_before_pointer": "5cfaca0a21b8062bd6d7e10a2b03fdf64ff37ce8",
+    "audit": "plugin_governance/PLUGIN_ARCHIVE_STAGE_GATES_2026-10-09.json",
+    "ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37966258732/job/113941246435",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "archive_download": "PROVIDER_URL_AVAILABLE_CONTAINER_ACCESS_BLOCKED",
+    "actual_archive_sha256": "UNKNOWN",
+    "logo_live_sha256": "UNKNOWN",
+    "prepublish": "WRITE_BLOCKED_ORIGINAL_BINARY_AND_NATIVE_APPROVAL",
+    "postpublish": "NOT_STARTED",
+    "host_render": "NOT_VERIFIED",
+    "card_force_live_skill": "NOT_INSTALLED",
+    "junior": "PINNED_FOREGROUND",
+    "pet": "PAUSED_AND_UNMODIFIED",
+    "pet_files_checked": 127,
+    "pet_files_changed": 0,
+    "rehydration_required_missing": 0,
+    "notices_prepared": 7,
+    "notices_delivered": 0,
+    "notices_adopted": 0,
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "OBTAIN_AUTHORIZED_ACCESS_TO_ORIGINAL_CURRENT_PLUGIN_ARCHIVE_BYTES_THEN_SHA256_AND_NATIVE_PREPUBLISH_APPROVAL; POSTPUBLISH_HOST_ACCEPTANCE_SEPARATE; PET_PAUSED_JUNIOR_PINNED"
   }
 }
