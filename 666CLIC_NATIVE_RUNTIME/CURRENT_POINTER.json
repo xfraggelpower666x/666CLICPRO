@@ -1745,5 +1745,31 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "RETRIEVE_EXACT_PLUGIN_ARCHIVE_BYTES_AND_VERIFY_LOGO_SHA256_THEN_PACKAGE_AND_GUARD_RELEASE_WITH_HOST_ACCEPTANCE"
+  },
+  "update_2026_10_09_card_force_archive_binary_retrieval_retry": {
+    "status": "CLIC_REPO_SOURCE_VERIFIED_PLUGIN_RELEASE_WRITE_BLOCKED_MISSING_ARCHIVE_BYTES",
+    "scope": "NATIVE_CLIC_PLUGIN_ARCHIVE_RETRIEVAL_BINARY_CHECKS_AND_RECOVERY",
+    "prechange_backup": "backup/clic-pre-card-force-archive-byte-20261009",
+    "prechange_head": "e7541cd0fa026fcbf2aaaaaea577050ac68d1141",
+    "body_head_before_pointer": "ca989ca695c6711b333194c09af89ec22986d08e",
+    "body_readback": "PASS_6_OF_6_SELECTED",
+    "provider_live_version": "0.1.22",
+    "provider_live_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "archive_metadata": "RETRIEVED",
+    "archive_bytes": "NOT_OBTAINED",
+    "logo_actual_sha256": "NOT_VERIFIED",
+    "logo_provider_size": 2929725,
+    "logo_reference_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "archive_evidence": "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json",
+    "binary_preflight": "plugin_governance/archive-preflight.mjs",
+    "source_CI": "PASS_CARD_FORCE_ARCHIVE_TESTS",
+    "source_ci_commit": "721fa12f646d1893fc073e9620aeed825434ac1d",
+    "live_plugin_release": "NOT_PUBLISHED",
+    "host_card_force": "NOT_LIVE_VERIFIED",
+    "inbox_delivery": "NOT_LIVE_VERIFIED",
+    "existing_pet_bridge_cross_surface_lyvra_cards": "PRESERVED",
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "OBTAIN_EXACT_PROVIDER_ARCHIVE_BYTES_VERIFY_SHA256_THEN_PLUGIN_RELEASE_AND_HOST_READBACK_WITH_VALID_GATES"
   }
 }
