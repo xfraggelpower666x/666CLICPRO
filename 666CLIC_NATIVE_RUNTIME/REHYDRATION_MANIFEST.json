@@ -51,7 +51,11 @@
     "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
     "facets/semantic_force_decision/SUB_REHYDRATION.md",
     "facets/semantic_force_decision/src/force-decide.mjs",
-    "facets/card_intelligence/src/inbox-transport.mjs"
+    "facets/card_intelligence/src/inbox-transport.mjs",
+    "facets/cross_surface_learning/FACET_CONTRACT.md",
+    "facets/cross_surface_learning/SUB_LIFECIRCLE.md",
+    "facets/cross_surface_learning/SUB_REHYDRATION.md",
+    "facets/cross_surface_learning/PEER_NOTICE_SCHEMA.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -911,5 +915,25 @@
     "recovery": "WHOLE_CLIC_FIRST_SUBFACETS_IDLE_REACHABLE",
     "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37872064508/job/113632192804",
     "plugin_release_gate": "NOT_RELEASED_BINARY_PARITY_AND_HOST_ACCEPTANCE_OPEN"
+  },
+  "cross_surface_semantic_learning": {
+    "status": "SOURCE_REGISTERED_REPO_ONLY",
+    "owner": "WHOLE_666CLIC",
+    "contract": "facets/cross_surface_learning/FACET_CONTRACT.md",
+    "notice_schema": "facets/cross_surface_learning/PEER_NOTICE_SCHEMA.json",
+    "affected_surfaces": [
+      "WHOLE_CLIC",
+      "PLUGIN",
+      "PET",
+      "PET_APP",
+      "FACET",
+      "WORKER"
+    ],
+    "source_current_authority": "CLIC_GITHUB_ONLY_FOR_CLIC_OWNED",
+    "native_foreign_authority": "PRESERVED",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "host_acceptance": "NOT_TESTED",
+    "cross_project_auto_processing": "NOT_DEPLOYED",
+    "foreign_mutation": false
   }
 }
