@@ -93,7 +93,8 @@
     "plugin_governance/neon-host-parity.test.mjs",
     "plugin_governance/PLUGIN_ARCHIVE_STAGE_GATES_2026-10-09.json",
     "plugin_governance/PLUGIN_V0122_EXACT_TEXT_PARITY_READBACK_2026-10-09.json",
-    "plugin_governance/plugin-text-parity-readback.test.mjs"
+    "plugin_governance/plugin-text-parity-readback.test.mjs",
+    "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1209,5 +1210,34 @@
     "junior": "PINNED_FOREGROUND",
     "handoffs": "7_PREPARED_0_DELIVERED",
     "foreign_mutation": false
+  },
+  "recursive_facet_rehydration_2026_10_09": {
+    "status": "SOURCE_REGISTERED_FRESH_BOOT_PENDING",
+    "registry": "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "discovered_root_facets": 5,
+    "mandatory_keys": [
+      "FACET_CONTRACT.md",
+      "SUB_LIFECIRCLE.md",
+      "SUB_REHYDRATION.md"
+    ],
+    "whole_clic_first": true,
+    "trigger_consistency": [
+      "SYSTEMSTART",
+      "WEITER",
+      "UPDATE",
+      "NEW_CHAT",
+      "NEXT_CHAT",
+      "INTEGRATION_AUDIT",
+      "DASHBOARD"
+    ],
+    "recursive_depth": "REPO_DISCOVERY_PRESERVE_PARENT_RELATION",
+    "refresh_evidence": "HEAD_POINTER_MANIFEST_SUPERSESSION_RECEIPTS_READBACK",
+    "repository_bridge_binary_receipt": "VERIFIED_SOURCE_ZIP_LOGO_REMOTE_NOT_PROVIDER_TAR_GZ",
+    "foregound": "IDLE_REACHABLE_UNLESS_DIRECT_TRIGGER_OR_VALID_ANCHOR",
+    "pet": "PAUSED",
+    "host_fresh_boot": "NOT_TESTED",
+    "plugin_live_parity": "NOT_VERIFIED",
+    "no_foreign_autoactivation": true,
+    "no_new_router": true
   }
 }
