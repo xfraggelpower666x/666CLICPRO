@@ -9,9 +9,21 @@
   "worker": "CLIC_PET/worker/src/index.js",
   "budget": "PERSISTENT_RESERVATIONS_AND_COOLDOWN_SOURCE_CANDIDATE_NO_LIVE_LEDGER",
   "plugin": "CANDIDATE_NOT_RELEASED",
-  "return_anchor": "VERIFY_COOLDOWN_CI_THEN_JUNIOR_AUTHORITY_AND_PROVIDER_BINARY",
+  "return_anchor": "VERIFY_NATIVE_JUNIOR_CURRENT_AND_SIGNED_PRODUCER_THEN_CLOUDFLARE_WORKER_AND_APP_HOST_ACCEPTANCE",
   "worker_tests": "CI_WORKFLOW_PREPARED_EXECUTION_PENDING",
   "github_request_transport": "GATED_WITH_HTTP_RATE_LIMIT_COOLDOWN_SOURCE_ONLY",
   "native_producer": "NOT_BOUND",
-  "next_step": "CI_GITHUB_REQUEST_TRANSPORT_TESTS_THEN_NATIVE_PRODUCER_AUTHORITY"
+  "next_step": "CI_GITHUB_REQUEST_TRANSPORT_TESTS_THEN_NATIVE_PRODUCER_AUTHORITY",
+  "native_producer_acceptance": {
+    "status": "SOURCE_GATE_TESTED_NO_REAL_PRODUCER",
+    "source": "CLIC_PET/worker/src/native-producer-gate.mjs",
+    "tests": "CLIC_PET/worker/tests/native-producer-gate.test.mjs",
+    "ci": "SUCCESS_37952980914",
+    "junior_current": "UNVERIFIED",
+    "signed_producer": "NOT_BOUND",
+    "real_worker": "NOT_DEPLOYED",
+    "pet_app_host": "NOT_VERIFIED",
+    "native_authority": "CLIC_OWNER_ONLY",
+    "foreign_mutation": false
+  }
 }
