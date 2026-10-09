@@ -13,7 +13,7 @@
   "worker_tests": "CI_WORKFLOW_PREPARED_EXECUTION_PENDING",
   "github_request_transport": "GATED_WITH_HTTP_RATE_LIMIT_COOLDOWN_SOURCE_ONLY",
   "native_producer": "NOT_BOUND",
-  "next_step": "CI_GITHUB_REQUEST_TRANSPORT_TESTS_THEN_NATIVE_PRODUCER_AUTHORITY",
+  "next_step": "VERIFY_NATIVE_JUNIOR_SOURCE_THEN_CLIC_OWNED_WORKER_DO_STAGING_WITH_EXPLICIT_AUTHORITY",
   "native_producer_acceptance": {
     "status": "SOURCE_GATE_TESTED_NO_REAL_PRODUCER",
     "source": "CLIC_PET/worker/src/native-producer-gate.mjs",
@@ -25,5 +25,15 @@
     "pet_app_host": "NOT_VERIFIED",
     "native_authority": "CLIC_OWNER_ONLY",
     "foreign_mutation": false
+  },
+  "cloudflare_live_evidence": {
+    "status": "CLIC_WORKER_AND_DURABLE_OBJECT_NOT_FOUND_IN_AUTHORIZED_ACCOUNT",
+    "evidence": "CLIC_PET/worker/CLOUDFLARE_NATIVE_LIVE_READBACK_2026-10-09.json",
+    "actual_worker": "NOT_DEPLOYED",
+    "real_budget": "NOT_BOUND",
+    "signed_producer": "UNBOUND",
+    "junior_native_current": "UNVERIFIED",
+    "visual_app_host": "UNKNOWN",
+    "no_foreign_mutation": true
   }
 }
