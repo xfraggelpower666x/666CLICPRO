@@ -1,0 +1,88 @@
+{
+  "schema": "CLIC_PROVIDER_ARCHIVE_EXACT_CONTENT_EVIDENCE_V1",
+  "date": "2026-10-09",
+  "status": "VERIFIED_OWNER_UPLOADED_PROVIDER_TARGZ_28_OF_28_CONTENT_PARITY_NOT_HOST_RELEASE_ACCEPTANCE",
+  "scope": "CLIC_OWNED_RECOVERY_AND_PLUGIN_GOVERNANCE",
+  "current_source_head_before_update": "8c67554669d2afef721d0a7af89ae764279350b3",
+  "prechange_backup": "backup/clic-pre-provider-targz-evidence-20261009-2316",
+  "plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "current_provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "provider_release_verified_by": "DIRECT_PLUGIN_CREATOR_RELEASE_LIST",
+    "historical_snapshot_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "historical_provenance_mutated": false
+  },
+  "provider_archive": {
+    "filename": "workspace-plugin-p0fda2cg.tar.gz",
+    "byte_source": "USER_UPLOADED_AFTER_PLUGIN_CREATOR_OWNED_ARCHIVE_URL_REQUEST",
+    "sha256_actual_bytes": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "size_bytes": 2941803,
+    "regular_file_count": 28,
+    "integrity": "PASS_TAR_GZIP_READ",
+    "cryptographic_provider_signed_checksum": "NOT_PROVIDED",
+    "uploaded_bytes_to_provider_link_cryptographic_identity": "NOT_INDEPENDENTLY_ATTESTED"
+  },
+  "source_zip": {
+    "filename": "CLIC plugin.zip",
+    "sha256_actual_bytes": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+    "size_bytes": 2949853,
+    "repo_path": "666clic-plugin/binary-backups/v0.1.22/CLIC-plugin-v0.1.22-verified-source.zip",
+    "repo_git_blob_sha": "9a7967fad75ae76a8af22203da31b728e8beddaf"
+  },
+  "parity": {
+    "tar_regular_files": 28,
+    "zip_regular_files": 28,
+    "byte_identical_files": 28,
+    "missing": 0,
+    "mismatched": 0,
+    "text": "27_OF_27_PASS",
+    "logo": "1_OF_1_PASS",
+    "method": "PYTHON_TARFILE_AND_ZIPFILE_EXTRACTED_BYTES_DIRECT_COMPARE",
+    "source_and_tar_outer_archive_sha256_expected_different": true
+  },
+  "logo": {
+    "path": "assets/clic-logo.png",
+    "size_bytes": 2929725,
+    "measured_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "measured_git_blob_sha1": "1bcc00bdadacb09a200cf765ba762ca6ab090ab5",
+    "repo_path": "666clic-plugin/releases/v0.1.22/assets/clic-logo.png",
+    "repo_identity": "PASS"
+  },
+  "recovery": {
+    "source_zip_and_logo_in_github": "PASS",
+    "original_provider_tar_gz_in_github": "NOT_MIRRORED",
+    "tar_gz_digest_as_evidence": "PASS",
+    "complete_provider_original_archive_backup": "NOT_CLAIMED",
+    "source_zip_backup": "PASS",
+    "restore_from_provider_archive": "NOT_TESTED"
+  },
+  "approval": {
+    "exact_file_content_gate": "PASS",
+    "provider_signed_archive_provenance": "UNATTESTED",
+    "native_approval_carrier": "NOT_ISSUED",
+    "complete_runtime_plugin_fingerprint": "NOT_ESTABLISHED",
+    "live_plugin_release": "UNCHANGED_0.1.22",
+    "new_release": "NOT_AUTHORIZED_NOT_PUBLISHED",
+    "host_runtime_fresh_boot": "NOT_TESTED",
+    "host_visual_card_force": "NOT_VERIFIED",
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY"
+  },
+  "visual_impact": {
+    "assessed": true,
+    "visual_source_change": false,
+    "visual_host_test": "NOT_EXECUTED",
+    "semantic_runtime_evolution": false,
+    "plugin_impact": "EVIDENCE_ONLY_NO_PLUGIN_RELEASE"
+  },
+  "continuity": {
+    "current_manifest_required": 92,
+    "facets": 5,
+    "manifest_mutation": "NONE",
+    "rehydration_impact": "EVIDENCE_CURRENT_POINTER_REFERENCE_ONLY",
+    "historical_snapshots_preserved": true,
+    "foreign_mutation": false
+  },
+  "return_anchor": "PROVIDER_TARGZ_28_28_SOURCE_CONTENT_PARITY_VERIFIED; COMPLETE_RUNTIME_PLUGIN_FINGERPRINT_AND_NATIVE_APPROVAL_PENDING; NO_HOST_PASS_OR_PLUGIN_PUBLICATION; PET_PAUSED"
+}
