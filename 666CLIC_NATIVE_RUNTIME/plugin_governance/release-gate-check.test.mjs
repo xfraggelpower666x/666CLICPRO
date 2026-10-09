@@ -1,10 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {evaluateReleaseGates} from "./release-gate-check.mjs";
-const good={pluginProviderReleaseId:"rid",repoCurrentReleaseId:"rid",archiveHash:"archive",logoHash:"logo",expectedLogoHash:"logo",binaryBackupVerified:true,sourceParityVerified:true,manifestValidated:true,hostAcceptance:true};
-test("all gates exact pass allowed",()=>assert.equal(evaluateReleaseGates(good).decision,"READY_FOR_GOVERNED_RELEASE"));
-test("missing archive blocks",()=>assert.equal(evaluateReleaseGates({...good,archiveHash:null}).decision,"WRITE_BLOCKED"));
-test("logo mismatch blocks",()=>assert.equal(evaluateReleaseGates({...good,logoHash:"wrong"}).allowed,false));
-test("host acceptance blocks if not verified",()=>assert.equal(evaluateReleaseGates({...good,hostAcceptance:false}).allowed,false));
-test("release id mismatch blocks",()=>assert.equal(evaluateReleaseGates({...good,repoCurrentReleaseId:"old"}).allowed,false));
-test("foreign mutation blocked",()=>assert.equal(evaluateReleaseGates({...good,foreignMutation:true}).allowed,false));
+const base={pluginProviderReleaseId:"rid",repoCurrentReleaseId:"rid",archiveHash:"archive",logoHash:"logo",expectedLogoHash:"logo",binaryBackupVerified:true,sourceParityVerified:true,manifestValidated:true,hostCompatibilityPreflight:true};
+test("prepublish requires actual binary proofs and compatible host",()=>assert.equal(evaluateReleaseGates(base).decision,"GATE_PASS"));
+test("postpublish host acceptance and release readback are separately required",()=>{assert.equal(evaluateReleaseGates(base,"POSTPUBLISH").decision,"WRITE_BLOCKED");assert.equal(evaluateReleaseGates({...base,hostAcceptance:true,publishedReleaseReadback:true},"POSTPUBLISH").decision,"GATE_PASS")});
+test("missing archive blocks",()=>assert.equal(evaluateReleaseGates({...base,archiveHash:null}).decision,"WRITE_BLOCKED"));
+test("logo mismatch blocks",()=>assert.equal(evaluateReleaseGates({...base,logoHash:"wrong"}).allowed,false));
+test("host preflight blocks",()=>assert.equal(evaluateReleaseGates({...base,hostCompatibilityPreflight:false}).allowed,false));
+test("release id mismatch blocks",()=>assert.equal(evaluateReleaseGates({...base,repoCurrentReleaseId:"old"}).allowed,false));
+test("foreign mutation blocked",()=>assert.equal(evaluateReleaseGates({...base,foreignMutation:true}).allowed,false));
