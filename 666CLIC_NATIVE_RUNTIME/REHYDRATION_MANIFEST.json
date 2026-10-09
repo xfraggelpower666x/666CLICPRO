@@ -65,7 +65,9 @@
     "plugin_governance/RELEASE_ID_SUPERSESSION_AND_BINARY_GATES_2026-10-09.json",
     "plugin_governance/CARD_FORCE_LIVE_RELEASE_PREFLIGHT_2026-10-09.json",
     "plugin_governance/CARD_FORCE_RELEASE_GATES.md",
-    "plugin_governance/release-gate-check.mjs"
+    "plugin_governance/release-gate-check.mjs",
+    "plugin_governance/archive-preflight.mjs",
+    "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -982,5 +984,18 @@
     "return_anchor": "RETRIEVE_BYTE_EXACT_PLUGIN_ARCHIVE_VERIFY_LOGO_SOURCE_PARITY_BUILD_SIGNED_OVERLAY_RELEASE_HOST_ACCEPTANCE",
     "no_foreign_mutation": true,
     "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37875123484/job/113641832090"
+  },
+  "card_force_archive_retry_2026_10_09": {
+    "status": "ARCHIVE_BYTES_UNAVAILABLE_RELEASE_BLOCKED",
+    "owner": "666CLIC",
+    "provider_live_version": "0.1.22",
+    "provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "attempt_evidence": "plugin_governance/CARD_FORCE_ARCHIVE_RETRIEVAL_READBACK_2026-10-09.json",
+    "preflight": "plugin_governance/archive-preflight.mjs",
+    "prechange_backup": "backup/clic-pre-card-force-archive-byte-20261009",
+    "plugin_live_mutation": false,
+    "card_force_live_host_acceptance": false,
+    "pet_bridge_lyvra_learning_preserved": true,
+    "return_anchor": "FETCH_EXACT_ARCHIVE_BINARY_VERIFY_LOGO_HASH_BUILD_OVERLAY_PLUGIN_RELEASE_THEN_HOST_READBACK"
   }
 }
