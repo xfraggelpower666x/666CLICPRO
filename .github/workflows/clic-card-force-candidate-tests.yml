@@ -9,6 +9,9 @@ on:
       - "666CLIC_NATIVE_RUNTIME/facets/cross_surface_learning/**"
       - "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/**"
       - "666CLIC_NATIVE_RUNTIME/plugin_governance/**"
+      - "666CLIC_NATIVE_RUNTIME/dashboard/nonpet-completion.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md"
+      - "666CLIC_NATIVE_RUNTIME/current/NONPET_COMPLETION_AUDIT_2026-10-09.json"
       - ".github/workflows/clic-card-force-candidate-tests.yml"
   workflow_dispatch:
 jobs:
@@ -23,7 +26,7 @@ jobs:
           node-version: "22"
       - name: Node tests — CARD and FORCE
         run: |
-          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/*.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/*.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/*.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/nonpet-completion.test.mjs
       - name: Structural native contract and plugin adapter checks
         run: |
           node --input-type=module <<'NODE'
