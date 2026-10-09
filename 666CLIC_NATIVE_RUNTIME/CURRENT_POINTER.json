@@ -1748,5 +1748,40 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "PET_PAUSED_JUNIOR_PINNED; REQUIRE_PLUGIN_BINARY_PROVENANCE_AND_HOST_ACCEPTANCE; SYSTEMS_ADOPT_CLIC_NEON_VISUAL_NOTICES_ONLY_UNDER_NATIVE_TRIGGER_AND_RECEIPTS"
+  },
+  "update_2026_10_09_force_plugin_neon_card_force_host_gates": {
+    "status": "SOURCE_CI_PASS_PLUGIN_HOST_AND_BINARY_RELEASE_BLOCKED",
+    "prechange_head": "34322f80f5c892e98967b5634870f0433865a780",
+    "prechange_backup": "backup/clic-pre-host-parity-gates-20261009",
+    "body_head_before_pointer": "d7f94af7b95a6ebbf9162cdb88fe5c77639d32f1",
+    "plugin_source": [
+      "666clic-dashboard",
+      "666clic-visual-interface",
+      "666clic-card",
+      "666clic-force"
+    ],
+    "source_audit": "plugin_governance/NEON_CARD_FORCE_HOST_PARITY_READBACK_2026-10-09.json",
+    "source_ci": "SUCCESS",
+    "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37964000398/job/113933642089",
+    "prior_ci": "FAILED_NEON_SOURCE_TOKENS_THEN_REPAIRED",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "plugin_archive_link": "AVAILABLE_ONLY_NOT_BYTES_VERIFIED",
+    "archive_binary_sha256": "UNKNOWN",
+    "logo_live_sha256": "UNKNOWN",
+    "card_force_host_trigger": "NOT_INSTALLED",
+    "neon_host_visual_render": "NOT_VERIFIED",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "notices_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "notices_prepared": 7,
+    "notices_delivered": 0,
+    "notices_adopted": 0,
+    "junior": "PINNED_FOREGROUND",
+    "pet": "PAUSED_UNMUTATED",
+    "pet_paths_verified": 127,
+    "pet_changes": 0,
+    "manifest_missing": 0,
+    "foreign_mutation": false,
+    "pointer_written_last": true,
+    "return_anchor": "REQUIRE_BYTE_EXACT_PLUGIN_ARCHIVE_AND_HOST_TRIGGER_VISUAL_READBACK_BEFORE_RELEASE; REAL_EXTERNAL_RECEIPT_BEFORE_NATIVE_NOTICE_DELIVERY; JUNIOR_PINNED_PET_PAUSED"
   }
 }
