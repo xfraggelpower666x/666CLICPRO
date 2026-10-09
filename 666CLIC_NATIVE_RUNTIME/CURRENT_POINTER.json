@@ -1500,5 +1500,28 @@
     "foreign_mutation": false,
     "pointer_written_last": true,
     "return_anchor": "PET_VERIFY_JUNIOR_NATIVE_SOURCE_SIGNED_EVENTS_BUDGET_AND_WORKER_TESTS"
+  },
+  "update_2026_10_09_pet_github_cooldown_hardening": {
+    "status": "REPOSITORY_SOURCE_CI_VERIFIED_NO_LIVE_DEPLOYMENT",
+    "prechange_head": "503961d3250547641c2f32265362485bdeaeeddd",
+    "prechange_backup": "backup/clic-pre-pet-rate-limit-cooldown-20261009",
+    "body_head_before_pointer": "a3cba567b966fe2dca87ede86e5d04f2020738c1",
+    "readback": "PASS_6_OF_6",
+    "ci_repository_fixtures": "SUCCESS",
+    "transport": "CLIC_PET/worker/src/github-transport.mjs",
+    "budget": "CLIC_PET/worker/src/github-budget.mjs",
+    "cooldown_contract": "CLIC_PET/worker/COOLDOWN_GOVERNANCE.md",
+    "behavior": "429_OR_403_RATE_LIMIT_PERSISTENT_COOLDOWN_FAIL_CLOSED",
+    "github_budget_count_semantics": "RESERVATIONS_ARE_ATTEMPTS_NOT_PROVEN_COMPLETIONS",
+    "plugin_live_version": "0.1.22_UNCHANGED",
+    "plugin_archive": "METADATA_OBTAINED_BINARY_UNAVAILABLE",
+    "plugin_release": "WRITE_BLOCKED",
+    "junior_source": "UNVERIFIED",
+    "worker_deployed": false,
+    "visual_host_test": "NOT_PERFORMED",
+    "foreign_mutations": false,
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "VERIFY_NATIVE_JUNIOR_SIGNED_PRODUCER_AND_ACTUAL_BUDGET_DO_RUNTIME_THEN_PLUGIN_BINARY_PARITY"
   }
 }
