@@ -1,0 +1,7 @@
+import test from "node:test";import assert from "node:assert/strict";import fs from "node:fs";
+const h=JSON.parse(fs.readFileSync("666CLIC_NATIVE_RUNTIME/continuity/NEW_CHAT_CURRENT.json","utf8"));
+test("new-chat source uses live pointer instead of superseded handoff",()=>{assert.equal(h.authority,"GITHUB_REPO_CURRENT");assert.equal(h.pointer_path,"666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json");assert.equal(h.previous_handoff_classification,"HISTORICAL_NOT_AUTHORITY");assert.equal(h.no_claim_of_fresh_chat_acceptance,true)});
+test("plugin binary and host gates cannot be promoted from text parity",()=>{assert.equal(h.plugin.text_parity,"27_OF_27_DIRECT_PROVIDER_VS_RELEASE_SNAPSHOT");assert.match(h.plugin.binary_parity,/UNVERIFIED/);assert.equal(h.plugin.host_render,"NOT_VERIFIED")});
+test("newer native evolution and identity boundaries preserved",()=>{assert.equal(h.managed_systems.tdh_native_evolution,"V1.14_PRESERVED");assert.equal(h.authority_boundaries.no_foreign_mutation,true);assert.equal(h.authority_boundaries.no_second_junior_identity,true)});
+test("Junior foreground never resumes paused PET",()=>{assert.match(h.visual.junior,/FOREGROUND/);assert.equal(h.pet,"PAUSED_NO_DEVELOPMENT_OR_DEPLOYMENT")});
+test("no false peer receipt or target adoption",()=>{assert.equal(h.managed_systems.delivery_receipts_verified,0);assert.equal(h.managed_systems.native_adoption_receipts_verified,0)});
