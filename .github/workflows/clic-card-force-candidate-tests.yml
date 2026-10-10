@@ -18,6 +18,11 @@ on:
       - "666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter*.mjs"
       - "666CLIC_NATIVE_RUNTIME/outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json"
       - "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md"
+      - "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/**"
+      - "666CLIC_NATIVE_RUNTIME/dashboard/visual-lifecycle-continuity.test.mjs"
+      - "666clic-plugin/source/skills/666clic-visual-interface/SKILL.md"
+      - "666clic-plugin/source/skills/666clic-dashboard/SKILL.md"
+      - "666clic-plugin/source/skills/666clic-visual/SKILL.md"
       - "666CLIC_NATIVE_RUNTIME/current/NONPET_COMPLETION_AUDIT_2026-10-09.json"
       - ".github/workflows/clic-card-force-candidate-tests.yml"
   workflow_dispatch:
@@ -33,7 +38,7 @@ jobs:
           node-version: "22"
       - name: Node tests — CARD and FORCE
         run: |
-          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/*.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/nonpet-completion.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/unified-visual-header.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/oversteer-negative-gate.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/new-chat-freshness.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/card_intelligence/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/*.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/*.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/nonpet-completion.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/unified-visual-header.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs 666CLIC_NATIVE_RUNTIME/dashboard/visual-lifecycle-continuity.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/oversteer-negative-gate.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/new-chat-freshness.test.mjs
       - name: Structural native contract and plugin adapter checks
         run: |
           node --input-type=module <<'NODE'
