@@ -2406,5 +2406,31 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "AWAIT_LYVRA_R02_NATIVE_READBACK_RECEIPT; CONTINUE_CLIC_RUNTIME_EVENT_SENSOR_AND_HOST_VISUAL_ACCEPTANCE"
+  },
+  "update_2026_10_10_event_ingest_replay_visual_repair": {
+    "status": "SOURCE_REPAIR_READBACK_VERIFIED_CI_AND_LIVE_HOST_OPEN",
+    "prechange_head": "80a8d7677bb193223090bd61a3c3d86beebddd73",
+    "prechange_backup": "backup/clic-pre-event-ingest-host-repair-20261010-0649",
+    "body_head_before_pointer": "99646fe25c6af5b439701793636e96065d3e9455",
+    "adapter": "dashboard/development_progress/development-event-adapter.mjs",
+    "adapter_blob": "2074c84f8ee7a796bc6c50cf24a7ceba70d017c8",
+    "presenter": "dashboard/verified-visual-presenter.mjs",
+    "presenter_blob": "UNREPORTED_IN_POINTER_READBACK_CONFIRMED",
+    "tests": "dashboard/verified-visual-presenter.test.mjs",
+    "source_writes_readback": "PASS_3_OF_3",
+    "regression_cases_added": 2,
+    "regression_execution": "NOT_RUN",
+    "provider_runtime_sensor": "NOT_DEPLOYED",
+    "host_dispatch": "NOT_VERIFIED",
+    "durable_ledger_storage": "NOT_IMPLEMENTED_EVENT_IDS_CARRIED_IN_LEDGER_OBJECT_ONLY",
+    "plugin_impact": "SEMANTIC_DASHBOARD_DELTA_GUARDED_PLUGIN_PARITY_REQUIRED",
+    "plugin_publish": "NOT_ATTEMPTED",
+    "manifest": "95_OF_95_UNCHANGED",
+    "lyvra_r02_receipt": "DIRECT_NATIVE_SOURCE_READBACK_VERIFIED_NOT_PERSISTED_IN_CLIC_CARD",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "RUN_CI_AND_HOST_ACCEPTANCE; IMPLEMENT_ATOMIC_LEDGER_PERSISTENCE_AND_REAL_PROVIDER_EVENT_SENSOR_WHEN_AUTHORIZED; REVALIDATE_PLUGIN_PARITY; PET_PAUSED"
   }
 }
