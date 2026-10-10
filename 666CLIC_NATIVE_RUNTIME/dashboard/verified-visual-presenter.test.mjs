@@ -61,3 +61,14 @@ test("development handoff remains PREPARED until verified receipt",()=>{
  assert.equal(assessHandoffState({...p.handoff,status:"DELIVERED",delivery_receipt:"target-receipt"}).valid,true);
  assert.equal(assessHandoffState({...p.handoff,status:"ADOPTED",delivery_receipt:"receipt"}).valid,false);
 });
+
+import {validatePeerEnvelope,reconcilePeerReceipt,peerExchangeNextStep,CLIC_LYVRA_CHANNEL} from "../continuity/repo-peer-channel.mjs";
+test("peer channel blocks false delivery and accepts only verified target-native receipt",()=>{
+ const envelope={handoff_id:"CLIC-LYVRA-CHANNEL-ADOPTION-20261010-R01",source_system:"666CLIC",target_system:"LYVRA",source_head:"7de801e76502b351b4b3483b4d416541b7d9f34f",source_path:CLIC_LYVRA_CHANNEL.producer.outbox+"/CLIC-LYVRA-CHANNEL-ADOPTION-20261010-R01.json",status:"PREPARED"};
+ assert.equal(validatePeerEnvelope(envelope).valid,true);
+ assert.equal(peerExchangeNextStep(envelope).status,"AWAIT_RECEIPT");
+ const receipt={handoff_id:envelope.handoff_id,sender:"LYVRA",recipient:"666CLIC",lyvra_head:"03dfabb12254cc9c7ca6c4ca048c5fe2d72f06ab",receipt_id:"LYVRA-ACK-20261010-R01",source_path:envelope.source_path};
+ assert.equal(reconcilePeerReceipt(envelope,receipt).status,"AWAIT_RECEIPT");
+ assert.equal(reconcilePeerReceipt(envelope,{...receipt,recipient_repository_readback_verified:true}).status,"DELIVERED_EVIDENCED");
+ assert.equal(validatePeerEnvelope({...envelope,status:"DELIVERED"}).valid,false);
+});
