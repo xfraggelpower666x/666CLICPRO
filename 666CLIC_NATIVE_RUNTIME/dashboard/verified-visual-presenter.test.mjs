@@ -94,3 +94,18 @@ test("unverified development event cannot create invented dashboard progress",()
  assert.equal(result.developer.visible,false);assert.equal(result.junior.visible,true);
  assert.ok(result.development_event_error);
 });
+
+// Native source regression: ledger carries replay evidence across a new caller context.
+test("persisted event IDs reject replay across reconstructed caller context",()=>{
+ const rev="f9a3b3e1acf3345b9945cc6b24c2523f834b1992";
+ const e={type:"START",source_revision:rev,event_id:"persist-replay-1",evidence_ref:"verified-source",title:"Audit",tasks:[{id:"task-1",status:"OPEN",evidence:["verified-task-source"]}]};
+ const ledger=applyClicDevelopmentEvent(null,e,{source_readback_verified:true,seen_event_ids:new Set()});
+ assert.deepEqual(ledger.processed_event_ids,["persist-replay-1"]);
+ assert.throws(()=>applyClicDevelopmentEvent(ledger,{...e,type:"TASK_STATUS",task_id:"task-1",task_status:"DONE",completion_verified:true},{source_readback_verified:true,seen_event_ids:new Set()}),/EVENT_REPLAY_OR_SOURCE_UNVERIFIED/);
+});
+test("active verified tasks select DEVELOPMENT_POSITION visual",()=>{
+ const rev="f9a3b3e1acf3345b9945cc6b24c2523f834b1992";
+ const e={type:"START",source_revision:rev,event_id:"visual-milestone-1",evidence_ref:"verified-source",title:"Audit",tasks:[{id:"task-1",status:"DONE",completion_verified:true,evidence:["readback"]},{id:"task-2",status:"OPEN",evidence:["pending-host"]}]};
+ const r=presentWholeClic({identity,development_event:e,development_event_context:{source_readback_verified:true,seen_event_ids:new Set()}});
+ assert.equal(r.visual.type,"DEVELOPMENT_POSITION");assert.equal(r.visual.entries.length,2);assert.equal(r.developer.progress.percent,50);
+});
