@@ -2458,5 +2458,31 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "NATIVE_EVENT_PERSISTENCE_AND_LIVE_HOST_DISPATCH; LYVRA_NATIVE_VISUAL_DECISION_WAITING"
+  },
+  "update_2026_10_10_native_ledger_cas_boundary": {
+    "status": "SOURCE_CAS_LEDGER_BOUNDARY_TESTED_HOST_RUNTIME_NOT_DEPLOYED",
+    "prechange_head": "ccbef3f1632fffeeac3ab1df311e557cf9912b8a",
+    "backup": "backup/clic-pre-native-ledger-cas-20261010-1831",
+    "body_head_before_pointer": "80377fe820b4d7e07b06e4a088736f9711a2a91f",
+    "source_adapter": "dashboard/development_progress/development-ledger-store.mjs",
+    "adapter_blob": "45bfe67ba2a01dbee76d5705125dea7237dace2e",
+    "test_file": "dashboard/verified-visual-presenter.test.mjs",
+    "test_blob": "0989a12c7770fd83726bfb32c120ee5cf2888f1d",
+    "contract": "dashboard/development_progress/DEVELOPMENT_PROGRESS_CONTRACT.md",
+    "contract_blob": "46688a964419c807f673e4cb07b78f30714d60eb",
+    "ci_run": 38068194381,
+    "ci_result": "SUCCESS",
+    "manifest": "95_OF_95",
+    "lyvra_r02_receipt": "PREVIOUSLY_VERIFIED_NO_DUPLICATE_WRITE",
+    "lyvra_visual_adoption": "OPEN_NATIVE_LYVRA_AUTHORITY",
+    "source_runtime_sensor": "NOT_DEPLOYED",
+    "authenticated_repository_adapter": "NOT_BOUND",
+    "host_visual_dispatch": "NOT_VERIFIED",
+    "plugin_impact": "SOURCE_SKILL_UNCHANGED_LIVE_PLUGIN_PUBLISH_NOT_ATTEMPTED",
+    "foreign_mutation": false,
+    "pet": "PAUSED_UNMODIFIED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "BIND_AUTHENTICATED_NATIVE_REPO_ADAPTER_AND_REAL_EVENT_PROVIDER; ACCEPT_LIVE_HOST_VISUAL_DISPATCH; WAIT_LYVRA_NATIVE_VISUAL_ADOPTION"
   }
 }
