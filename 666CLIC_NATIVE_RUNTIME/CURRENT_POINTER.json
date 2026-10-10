@@ -2331,5 +2331,32 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "AWAIT_LYVRA_NATIVE_CONSUMER_RECEIPT; CONTINUE_CLIC_HOST_VISUAL_AND_DEVELOPMENT_PROGRESS_PRODUCER; NO_CROSS_SYSTEM_AUTOWRITES"
+  },
+  "update_2026_10_10_fixed_duplex_lyvra_channel": {
+    "status": "CLIC_CHANNEL_SOURCE_IMPLEMENTED_CI_SUCCESS_LYVRA_RECEIPT_PENDING",
+    "prechange_head": "7de801e76502b351b4b3483b4d416541b7d9f34f",
+    "backup": "backup/clic-pre-duplex-channel-20261010-0456",
+    "body_head_before_pointer": "78daadb4b51386e09b7935aece0dd014c1674b20",
+    "channel_module": "continuity/repo-peer-channel.mjs",
+    "channel_module_blob": "e0027d3be2966fa1298392bcfcc0bc8edc9da406",
+    "channel_contract": "continuity/REPO_TO_REPO_HANDOFF_PROTOCOL.md",
+    "contract_blob": "bea05f4218405720f34e9143a531ce2b282faa60",
+    "lyvra_adoption_handoff": "outbox/LYVRA/CLIC-LYVRA-CHANNEL-ADOPTION-20261010-R01.json",
+    "handoff_blob": "371b49d3a491ea79300c208ad85e9d0b029a9d45",
+    "livecircle_blob": "b1770c09374a419f76ab5bd2d650600a6a1a7d35",
+    "regression_blob": "2092390db4935bac925b11238a907efc1bd6992b",
+    "ci_run": 38018891647,
+    "ci_result": "SUCCESS",
+    "manifest": "95_OF_95",
+    "target_consumer": "NOT_FOUND_IN_LYVRA_REPO",
+    "handoff_state": "PREPARED_NOT_DELIVERED",
+    "channel_end_to_end": "NOT_VERIFIED",
+    "lyvra_design_authority": "LYVRA_ONLY",
+    "foreign_mutation": false,
+    "plugin_publish": "NOT_ATTEMPTED",
+    "pet": "PAUSED_UNMODIFIED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "LYVRA_NATIVE_RECEIVER_ADOPTION_AND_REAL_RECEIPT_OPEN; CONTINUE_CLIC_VISUAL_HOST_AND_DEVELOPMENT_PRODUCER_FUNCTIONAL_WORK"
   }
 }
