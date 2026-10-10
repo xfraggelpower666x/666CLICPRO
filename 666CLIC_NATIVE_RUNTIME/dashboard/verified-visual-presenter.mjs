@@ -60,7 +60,9 @@ export function presentWholeClic(x={}){
    development_event_error=String(err.message??err);
   }
  }
- const contextual={...x,development};
+ // Project evidenced tasks into the visual milestone shape without inventing completion.
+ const milestones=development?.status==="ACTIVE"&&Array.isArray(development.tasks)?development.tasks.filter(t=>t&&typeof t.id==="string"&&Array.isArray(t.evidence)&&t.evidence.length>0).map(t=>({label:t.id,status:t.status,evidence:t.evidence.join("; ")})):[];
+ const contextual={...x,development:development?.status==="ACTIVE"?{...development,milestones}:development};
  const visual=selectVisualView(contextual,trigger);
  const foreground=trigger.foreground_recovery?recoverForeground(x):null;
  const host_recovery=trigger.action==="HOST_RECOVERY"?evaluateHostRecovery(x):null;
