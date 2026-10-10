@@ -72,3 +72,25 @@ test("peer channel blocks false delivery and accepts only verified target-native
  assert.equal(reconcilePeerReceipt(envelope,{...receipt,recipient_repository_readback_verified:true}).status,"DELIVERED_EVIDENCED");
  assert.equal(validatePeerEnvelope({...envelope,status:"DELIVERED"}).valid,false);
 });
+
+import {applyClicDevelopmentEvent} from "./development_progress/development-event-adapter.mjs";
+test("verified development event feeds real progress and pinned Junior",()=>{
+ const rev="f9a3b3e1acf3345b9945cc6b24c2523f834b1992";
+ const e={type:"START",source_revision:rev,event_id:"clic-evt-start-1",evidence_ref:"commit-readback",title:"Visual presenter",tasks:[{id:"implement",status:"DONE",evidence:["source-readback"],completion_verified:true},{id:"host",status:"OPEN",evidence:["host-open-gate"]}]};
+ const context={source_readback_verified:true,seen_event_ids:new Set()};
+ const result=presentWholeClic({identity,direct_command:"666CLIC UPDATE",development_event:e,development_event_context:context});
+ assert.equal(result.developer.visible,true);assert.equal(result.developer.progress.percent,50);assert.equal(result.junior.visible,true);
+ assert.equal(result.development_event_error,null);
+ assert.throws(()=>applyClicDevelopmentEvent(null,e,{source_readback_verified:false,seen_event_ids:new Set()}));
+ const previous=applyClicDevelopmentEvent(null,e,context);
+ const change={type:"TASK_STATUS",source_revision:rev,event_id:"clic-evt-done-2",evidence_ref:"host-pass",task_id:"host",task_status:"DONE",completion_verified:true};
+ const updated=applyClicDevelopmentEvent(previous,change,context);
+ assert.equal(updated.tasks.filter(x=>x.status==="DONE").length,2);
+ assert.throws(()=>applyClicDevelopmentEvent(previous,{...change,event_id:e.event_id}, {source_readback_verified:true,seen_event_ids:new Set([e.event_id])}));
+});
+test("unverified development event cannot create invented dashboard progress",()=>{
+ const e={type:"START",source_revision:"invalid",event_id:"event",evidence_ref:"evidence",title:"Bad",tasks:[]};
+ const result=presentWholeClic({identity,development_event:e,development_event_context:{source_readback_verified:true,seen_event_ids:new Set()}});
+ assert.equal(result.developer.visible,false);assert.equal(result.junior.visible,true);
+ assert.ok(result.development_event_error);
+});
