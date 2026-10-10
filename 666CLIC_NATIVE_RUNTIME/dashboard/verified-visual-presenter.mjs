@@ -2,16 +2,36 @@ import {renderProgress} from "./development_progress/progress-evidence.mjs";
 import {systemHeader,juniorForeground} from "./unified-visual-header.mjs";
 const STATES=new Set(["PREPARED","DELIVERED","ACKNOWLEDGED","ADOPTED","HOST_VERIFIED"]);
 
-const TRIGGER_ACTIONS=new Set(["SYSTEMSTART","UPDATE","WEITER","NEW_CHAT","NEXT_CHAT","DASHBOARD","CARD","VISUAL","INTEGRATION_AUDIT"]);
+const TRIGGER_ACTIONS=new Set(["SYSTEMSTART","UPDATE","WEITER","VORNE","HOST_RECOVERY","NEW_CHAT","NEXT_CHAT","DASHBOARD","CARD","VISUAL","INTEGRATION_AUDIT"]);
 export function classifyClicTrigger(raw=""){
  if(typeof raw!=="string")return {recognized:false,reason:"NOT_A_DIRECT_COMMAND",write_authority:false};
  const normalized=raw.trim().toUpperCase().replace(/\s+/g," ");
- const match=/^666CLIC(?:\s+FORCE)?\s+(SYSTEMSTART|UPDATE|WEITER|NEW\s+CHAT|NEXT\s+CHAT|DASHBOARD|CARD|VISUAL|INTEGRATION\s+AUDIT)(?:\b|$)/.exec(normalized);
+ // Recovery is an explicit direct phrase, not an inferred FORCE or ordinary chat remark.
+ if(normalized==="FUCK HORST"||normalized==="666CLIC FUCK HORST")
+  return {recognized:true,action:"HOST_RECOVERY",force:false,continuation:false,write_authority:false,requires_current_readback:true,presentation_only:true};
+ const match=/^666CLIC(?:\s+FORCE)?\s+(INTEGRATION\s+AUDIT|SYSTEMSTART|UPDATE|WEITER|VORNE|NEW\s+CHAT|NEXT\s+CHAT|DASHBOARD|CARD|VISUAL)(?:\b|$)/.exec(normalized);
  if(!match)return {recognized:false,reason:"NOT_A_DIRECT_CLIC_TRIGGER",write_authority:false};
  const action=match[1].replace(/\s+/g,"_");
  const force=normalized.startsWith("666CLIC FORCE ");
  if(!TRIGGER_ACTIONS.has(action))return {recognized:false,reason:"UNKNOWN_ACTION",write_authority:false};
- return {recognized:true,action,force,continuation:action==="WEITER",write_authority:action==="UPDATE",presentation_only:true};
+ return {recognized:true,action,force,continuation:action==="WEITER"||action==="VORNE",foreground_recovery:action==="VORNE",write_authority:action==="UPDATE",presentation_only:true};
+}
+export function evaluateHostRecovery(x={}){
+ // A signal requests an investigation; it never establishes drift without evidence.
+ const current=x.current;
+ const verified=typeof current?.head==="string"&&current.head.length>0
+  &&typeof current?.pointer_ref==="string"&&current.pointer_ref.length>0
+  &&current.manifest_verified===true;
+ if(!verified)return {status:"PARTIAL",drift_confirmed:false,reason:"CURRENT_HEAD_POINTER_MANIFEST_READBACK_REQUIRED",repairs:[],write_authority:false};
+ const findings=Array.isArray(x.host_findings)?x.host_findings.filter(f=>f&&f.verified===true&&typeof f.evidence==="string"&&f.evidence.trim()&&typeof f.kind==="string"):[];
+ const drift=findings.filter(f=>["STALE_STATE","HOST_OVERSTEER","RELATIONAL_FLATTENING","AUTHORITY_CONFLICT","UNSUPPORTED_FOREGROUND"].includes(f.kind));
+ return {status:drift.length?"VERIFIED_DRIFT":"NO_VERIFIED_DRIFT",drift_confirmed:drift.length>0,findings:drift,repairs:drift.length?["DISCARD_UNVERIFIED_CHAT_ASSUMPTIONS","REHYDRATE_FROM_CURRENT_READ_ONLY","PRESERVE_VALID_NEWER_EVOLUTION"]:[],write_authority:false};
+}
+export function recoverForeground(x={}){
+ const current=x.current;
+ const verified=typeof current?.head==="string"&&current.head.length>0&&typeof current?.pointer_ref==="string"&&current.pointer_ref.length>0&&current.manifest_verified===true;
+ if(!verified)return {status:"PARTIAL",foreground:"UNVERIFIED",reason:"CURRENT_HEAD_POINTER_MANIFEST_READBACK_REQUIRED",write_authority:false};
+ return {status:"VERIFIED_CURRENT_BOUND",foreground:"WHOLE_CLIC",current_head:current.head,return_anchor:typeof x.return_anchor==="string"?x.return_anchor:null,relations_preserved:true,facets_not_reset:true,write_authority:false};
 }
 export function selectVisualView(x={},trigger={}){
  const action=trigger.action??"";
@@ -29,13 +49,15 @@ export function selectVisualView(x={},trigger={}){
 export function presentWholeClic(x={}){
  const trigger=classifyClicTrigger(x.direct_command);
  const visual=selectVisualView(x,trigger);
+ const foreground=trigger.foreground_recovery?recoverForeground(x):null;
+ const host_recovery=trigger.action==="HOST_RECOVERY"?evaluateHostRecovery(x):null;
  const junior=juniorForeground({...x.junior,next_action:x.junior?.next_action??(trigger.continuation?"CONTINUE_VERIFIED_WORK":"VERIFY_CURRENT")});
  const header=systemHeader(x.identity);
  const led=x.development;
  const active=led?.status==="ACTIVE"&&led?.authority==="666CLIC_REPO_CURRENT";
  const verified=active?renderProgress(led):{visible:false,reason:"NO_VERIFIED_ACTIVE_CLIC_WORK"};
  const dev=active?{visible:true,progress:verified.visible?{done:verified.done,total:verified.total,percent:verified.percent}:null,reason:verified.visible?null:verified.reason,source_revision:verified.source_revision??null}:{visible:false,progress:null,reason:"NO_VERIFIED_ACTIVE_CLIC_WORK"};
- return {header,junior,developer:dev,trigger,visual,presentation_only:true,authority:"NONE",
+ return {header,junior,developer:dev,trigger,visual,foreground,host_recovery,presentation_only:true,authority:"NONE",
  diagram_policy:"EVIDENCE_FIRST_NO_CAUSATION_FROM_ARROW",live_host_acceptance:false};
 }
 export function checkNoticeRegistry(registry={}){
