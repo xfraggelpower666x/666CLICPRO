@@ -32,3 +32,21 @@ test("visual selection prefers grounded recovery, card, progress and conflicts",
  assert.equal(selectVisualView({conflict:{verified:true,entries:[entry]}}).type,"CONTRADICTION_MAP");
  assert.equal(selectVisualView({relations:{edges:[{from:"A",to:"B"}]}}).type,"COMPACT_STATUS");
 });
+
+import {recoverForeground,evaluateHostRecovery} from "./verified-visual-presenter.mjs";
+test("VORNE remains nonmutating and requires current",()=>{
+ const t=classifyClicTrigger("666CLIC VORNE");
+ assert.equal(t.action,"VORNE");assert.equal(t.write_authority,false);
+ assert.equal(recoverForeground({}).status,"PARTIAL");
+ const r=presentWholeClic({identity,direct_command:"666CLIC VORNE",current:{head:"sha",pointer_ref:"pointer",manifest_verified:true}});
+ assert.equal(r.foreground.foreground,"WHOLE_CLIC");assert.equal(r.junior.visible,true);
+});
+test("host recovery alarm is not drift proof",()=>{
+ const command=["FUCK","HORST"].join(" ");
+ assert.equal(classifyClicTrigger(command).action,"HOST_RECOVERY");
+ assert.equal(classifyClicTrigger(command).write_authority,false);
+ assert.equal(evaluateHostRecovery({}).status,"PARTIAL");
+ const r=evaluateHostRecovery({current:{head:"sha",pointer_ref:"pointer",manifest_verified:true}});
+ assert.equal(r.status,"NO_VERIFIED_DRIFT");
+ assert.equal(r.drift_confirmed,false);
+});
