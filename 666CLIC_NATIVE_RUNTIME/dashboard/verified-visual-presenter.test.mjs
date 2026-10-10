@@ -109,3 +109,21 @@ test("active verified tasks select DEVELOPMENT_POSITION visual",()=>{
  const r=presentWholeClic({identity,development_event:e,development_event_context:{source_readback_verified:true,seen_event_ids:new Set()}});
  assert.equal(r.visual.type,"DEVELOPMENT_POSITION");assert.equal(r.visual.entries.length,2);assert.equal(r.developer.progress.percent,50);
 });
+
+import {persistClicDevelopmentEvent,CLIC_LEDGER_PATH} from "./development_progress/development-ledger-store.mjs";
+test("native ledger store requires authenticated CAS transport and verified source",async()=>{
+ const rev="ccbef3f1632fffeeac3ab1df311e557cf9912b8a";
+ const event={type:"START",event_id:"clic-real-event-001",source_revision:rev,evidence_ref:"repo:evidence",title:"Visual native ingestion",tasks:[{id:"task-1",status:"OPEN",evidence:["source:task-1"]}]};
+ const initial={schema:"666CLIC_DEVELOPMENT_PROGRESS_V1",status:"INACTIVE",authority:"666CLIC_REPO_CURRENT",current_work:null};
+ assert.equal((await persistClicDevelopmentEvent(event)).status,"WRITE_BLOCKED");
+ const transport={readCurrent:async p=>({blob_sha:"a".repeat(40),ledger:initial,version_locked:true}),compareAndSwap:async(p,expected,ledger)=>({cas_accepted:true,new_blob_sha:"b".repeat(40)}),readBack:async()=>({blob_sha:"b".repeat(40),ledger:initial}),verifyEventSource:async()=>({verified:true,source_revision:rev,evidence_ref_verified:true})};
+ assert.equal((await persistClicDevelopmentEvent(event,{...transport,verifyEventSource:async()=>({verified:false})})).status,"WRITE_BLOCKED");
+ assert.equal((await persistClicDevelopmentEvent(event,{...transport,compareAndSwap:async()=>({cas_accepted:false})})).status,"CONFLICT_QUARANTINE");
+ assert.equal((await persistClicDevelopmentEvent(event,transport)).status,"READBACK_PENDING");
+ let saved;
+ const verified={...transport,compareAndSwap:async(p,sha,next)=>{assert.equal(p,CLIC_LEDGER_PATH);assert.equal(sha,"a".repeat(40));saved=next;return {cas_accepted:true,new_blob_sha:"b".repeat(40)}},readBack:async()=>({blob_sha:"b".repeat(40),ledger:saved})};
+ const result=await persistClicDevelopmentEvent(event,verified);
+ assert.equal(result.status,"LEDGER_READBACK_VERIFIED");assert.equal(result.persisted,true);
+ assert.equal(result.host_dispatch_verified,false);assert.equal(result.pointer_published,false);
+ assert.equal((await persistClicDevelopmentEvent(event,{...verified,readCurrent:async()=>({blob_sha:"b".repeat(40),ledger:saved,version_locked:true})})).status,"WRITE_BLOCKED");
+});
