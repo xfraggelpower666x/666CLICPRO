@@ -1,4 +1,5 @@
 import {renderProgress} from "./development_progress/progress-evidence.mjs";
+import {applyClicDevelopmentEvent,preparePresenterDevelopment} from "./development_progress/development-event-adapter.mjs";
 import {systemHeader,juniorForeground} from "./unified-visual-header.mjs";
 const STATES=new Set(["PREPARED","DELIVERED","ACKNOWLEDGED","ADOPTED","HOST_VERIFIED"]);
 
@@ -48,16 +49,28 @@ export function selectVisualView(x={},trigger={}){
 
 export function presentWholeClic(x={}){
  const trigger=classifyClicTrigger(x.direct_command);
- const visual=selectVisualView(x,trigger);
+ let development=x.development;
+ let development_event_error=null;
+ if(x.development_event!==undefined){
+  try{
+   const ledger=applyClicDevelopmentEvent(x.development_previous,x.development_event,x.development_event_context);
+   development=preparePresenterDevelopment(ledger);
+  }catch(err){
+   development={status:"INACTIVE",authority:"666CLIC_REPO_CURRENT"};
+   development_event_error=String(err.message??err);
+  }
+ }
+ const contextual={...x,development};
+ const visual=selectVisualView(contextual,trigger);
  const foreground=trigger.foreground_recovery?recoverForeground(x):null;
  const host_recovery=trigger.action==="HOST_RECOVERY"?evaluateHostRecovery(x):null;
  const junior=juniorForeground({...x.junior,next_action:x.junior?.next_action??(trigger.continuation?"CONTINUE_VERIFIED_WORK":"VERIFY_CURRENT")});
  const header=systemHeader(x.identity);
- const led=x.development;
+ const led=development;
  const active=led?.status==="ACTIVE"&&led?.authority==="666CLIC_REPO_CURRENT";
  const verified=active?renderProgress(led):{visible:false,reason:"NO_VERIFIED_ACTIVE_CLIC_WORK"};
  const dev=active?{visible:true,progress:verified.visible?{done:verified.done,total:verified.total,percent:verified.percent}:null,reason:verified.visible?null:verified.reason,source_revision:verified.source_revision??null}:{visible:false,progress:null,reason:"NO_VERIFIED_ACTIVE_CLIC_WORK"};
- return {header,junior,developer:dev,trigger,visual,foreground,host_recovery,presentation_only:true,authority:"NONE",
+ return {header,junior,developer:dev,development_event_error,trigger,visual,foreground,host_recovery,presentation_only:true,authority:"NONE",
  diagram_policy:"EVIDENCE_FIRST_NO_CAUSATION_FROM_ARROW",live_host_acceptance:false};
 }
 export function checkNoticeRegistry(registry={}){
