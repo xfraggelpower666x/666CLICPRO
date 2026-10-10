@@ -50,3 +50,14 @@ test("host recovery alarm is not drift proof",()=>{
  assert.equal(r.status,"NO_VERIFIED_DRIFT");
  assert.equal(r.drift_confirmed,false);
 });
+
+import {makeDevelopmentHandoff,assessHandoffState,nextDevelopmentExchange} from "../continuity/development-handoff.mjs";
+test("development handoff remains PREPARED until verified receipt",()=>{
+ const p=makeDevelopmentHandoff({handoff_id:"CLIC-LYVRA-SAMPLE",target:"LYVRA",source:{head:"source-sha"},source_refs:["outbox/LYVRA/source"]});
+ assert.equal(p.valid,true);
+ assert.equal(p.handoff.status,"PREPARED");
+ assert.equal(nextDevelopmentExchange({handoff:p.handoff}).status,"AWAITING_NATIVE_CONSUMER_OR_RECEIPT");
+ assert.equal(assessHandoffState({...p.handoff,status:"DELIVERED"}).valid,false);
+ assert.equal(assessHandoffState({...p.handoff,status:"DELIVERED",delivery_receipt:"target-receipt"}).valid,true);
+ assert.equal(assessHandoffState({...p.handoff,status:"ADOPTED",delivery_receipt:"receipt"}).valid,false);
+});
