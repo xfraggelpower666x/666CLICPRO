@@ -127,3 +127,14 @@ test("native ledger store requires authenticated CAS transport and verified sour
  assert.equal(result.host_dispatch_verified,false);assert.equal(result.pointer_published,false);
  assert.equal((await persistClicDevelopmentEvent(event,{...verified,readCurrent:async()=>({blob_sha:"b".repeat(40),ledger:saved,version_locked:true})})).status,"WRITE_BLOCKED");
 });
+
+// Regression: new native CAS store must be an explicit Whole-CLIC rehydration carrier.
+test("native ledger CAS module is in required rehydration order",()=>{
+ const manifest=JSON.parse(fs.readFileSync("666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json","utf8"));
+ const required="dashboard/development_progress/development-ledger-store.mjs";
+ const index=manifest.required_order.indexOf(required);
+ assert.ok(index>=0,"native CAS store absent from required_order");
+ assert.ok(index>manifest.required_order.indexOf("dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json"));
+ assert.equal(manifest.required_order.filter(p=>p===required).length,1);
+ assert.equal(fs.existsSync("666CLIC_NATIVE_RUNTIME/"+required),true);
+});
