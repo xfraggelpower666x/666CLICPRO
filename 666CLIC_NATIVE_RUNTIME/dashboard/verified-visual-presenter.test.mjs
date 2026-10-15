@@ -138,3 +138,16 @@ test("native ledger CAS module is in required rehydration order",()=>{
  assert.equal(manifest.required_order.filter(p=>p===required).length,1);
  assert.equal(fs.existsSync("666CLIC_NATIVE_RUNTIME/"+required),true);
 });
+
+import {verifyClicCheckout,classifyPeerReceiptProvenance} from "../continuity/checkout-source-verifier.mjs";
+test("checkout verifier rejects absent expected HEAD fail-closed",()=>{
+ assert.equal(verifyClicCheckout({expectedHead:"invalid"}).verified,false);
+});
+test("peer receipt source and recipient proofs are independent of caller flags",()=>{
+ const receipt={source_head:"a".repeat(40),recipient_head:"b".repeat(40),source_blob_sha:"c".repeat(40),recipient_repository_readback_verified:true};
+ assert.equal(classifyPeerReceiptProvenance({receipt}).status,"SOURCE_PROOF_PENDING");
+ const source={head:"a".repeat(40),blob_sha:"c".repeat(40),provider_origin:"INDEPENDENT_GIT_READBACK",committed_bytes_match:true};
+ const recipient={head:"b".repeat(40),blob_sha:"d".repeat(40),provider_origin:"INDEPENDENT_GIT_READBACK",committed_bytes_match:true};
+ assert.equal(classifyPeerReceiptProvenance({receipt,source,recipient}).status,"SOURCE_RECEIPT_CORRELATED");
+ assert.equal(classifyPeerReceiptProvenance({receipt:{...receipt,source_head:"f".repeat(40)},source,recipient}).status,"CONFLICT_QUARANTINE");
+});
