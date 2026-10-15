@@ -60,6 +60,7 @@
     "facets/semantic_force_decision/src/contextual-outcome.mjs",
     "dashboard/development_progress/DEVELOPMENT_PROGRESS_CONTRACT.md",
     "dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
+    "dashboard/development_progress/development-ledger-store.mjs",
     "dashboard/development_progress/progress-evidence.mjs",
     "learning/LYVRA_READ_ONLY_PEER_ANALYSIS_2026-10-09.md",
     "plugin_governance/RELEASE_ID_SUPERSESSION_AND_BINARY_GATES_2026-10-09.json",
