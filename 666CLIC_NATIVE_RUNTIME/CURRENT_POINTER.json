@@ -2545,5 +2545,32 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "COMPLETE_VERIFIED_PROVIDER_ARCHIVE_BINARY_BINDING_THEN_GOVERNED_PLUGIN_RELEASE_AND_HOST_ACCEPTANCE; BIND_AUTHENTICATED_CLIC_EVENT_PROVIDER_CAS_AND_REAL_VISUAL_DISPATCH_WHEN_EVIDENCED"
+  },
+  "update_2026_10_15_linked_lineage_plugin_transport": {
+    "status": "SOURCE_UPDATE_VERIFIED_PLUGIN_HOST_ARCHIVE_TRANSPORT_BLOCKED",
+    "prechange_head": "957e11f94016e20742701edec152b986924ccab2",
+    "backup_branch": "backup/clic-pre-linked-lineage-transfer-20261015",
+    "body_head_before_pointer": "c80e92042c4e9c27bcadb11d71c814a689cad6b4",
+    "lyvra_readonly_head": "3c1f92016a9d382a7018d278e3c99d9bd224d9aa",
+    "lyvra_cross_project_contract": "LYVRA_NATIVE_RUNTIME/continuity/WORKSPACE_HANDOFF_CONTRACT.md",
+    "lyvra_host_two_project_acceptance": "NOT_TESTED",
+    "clic_continuity_blob": "1dd1ac677fec35cdb7e9b3abdc20650a412686e1",
+    "lyvra_card_blob": "4db4894f7bb83448440aa41974ba79efb4ff370c",
+    "plugin_continuity_source_blob": "a90738e57be6368cd5e50cc92eaaa979752e4c62",
+    "manifest_required": "97_OF_97_UNCHANGED",
+    "source_ci_run": 38776218399,
+    "source_ci_scope": "CARD_CHANGE_PASS_NOT_LATEST_PLUGIN_SKILL_COMMIT",
+    "source_readback": "ALL_THREE_BLOBS_VERIFIED",
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "live_plugin_version": "0.1.22_UNCHANGED",
+    "provider_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "host_archive_upload": "WRITE_BLOCKED_NO_VALID_HOST_UPLOADED_ARCHIVE_TOKEN",
+    "plugin_source_parity": "PARTIAL",
+    "fresh_host_plugin_acceptance": "NOT_TESTED",
+    "foreign_mutation": false,
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "RESOLVE_HOST_UPLOADED_PLUGIN_ARCHIVE_TRANSPORT_AND_SYNCHRONIZE_CLIC_CONTINUITY_DASHBOARD_VISUAL_SKILLS_WITH_PROVIDER_READBACK; SEPARATE_CROSS_PROJECT_TWO_CHAT_HOST_ACCEPTANCE"
   }
 }
