@@ -2484,5 +2484,31 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "BIND_AUTHENTICATED_NATIVE_REPO_ADAPTER_AND_REAL_EVENT_PROVIDER; ACCEPT_LIVE_HOST_VISUAL_DISPATCH; WAIT_LYVRA_NATIVE_VISUAL_ADOPTION"
+  },
+  "update_2026_10_15_ledger_rehydration_coverage": {
+    "status": "SOURCE_REHYDRATION_COVERAGE_REPAIRED_CI_PASS_LIVE_RUNTIME_OPEN",
+    "prechange_head": "b4bb79ab896cb876f5355c63e4514d4ba334bab1",
+    "prechange_backup": "backup/clic-pre-ledger-manifest-host-gates-20261015",
+    "body_head_before_pointer": "01f3a8c90494368291f2b63dbc91069910cfd7a4",
+    "manifest": "96_OF_96",
+    "manifest_blob": "70dc7973fe5178bd4857db418d6d34539706cb5e",
+    "regression_blob": "1528a0301c0120ac249255599d5179285f6d1a9f",
+    "contract_blob": "84fa64e69a5bfff6dbec617f577d7916f4049b68",
+    "existing_ledger_store_blob": "45bfe67ba2a01dbee76d5705125dea7237dace2e",
+    "ci_run": 38765036515,
+    "ci_result": "SUCCESS",
+    "initial_negative_regression_run": 38764977821,
+    "initial_negative_regression_result": "FAIL_BEFORE_MANIFEST_FIX",
+    "real_event_provider": "NOT_DEPLOYED",
+    "authenticated_cas_transport": "NOT_BOUND",
+    "runtime_ledger_persistence": "NOT_VERIFIED",
+    "host_visual_dispatch": "NOT_VERIFIED",
+    "plugin_impact": "CHECKED_SOURCE_COVERAGE_ONLY_NO_LIVE_PLUGIN_RELEASE",
+    "plugin_live_release": "UNCHANGED_LAST_OBSERVED_0.1.22",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "BIND_AUTHENTICATED_CLIC_REPOSITORY_CAS_TRANSPORT_AND_EVENT_PROVIDER_WITH_REAL_SOURCE_PROOFS_THEN_LIVE_HOST_VISUAL_DISPATCH_AND_PLUGIN_PARITY"
   }
 }
