@@ -91,3 +91,30 @@ export function checkNoticeRegistry(registry={}){
  }
  return {valid:errors.length===0,errors,prepared:notices.filter(n=>n.state==="PREPARED").length,total:notices.length,delivery_confirmed:notices.filter(n=>n.state!=="PREPARED"&&!errors.some(e=>e.endsWith(":"+n.id))).length};
 }
+
+/**
+ * V01.4 optional GPT-native UI projection. Pure presentation: no dispatch, writes or
+ * host assumptions. Existing presentWholeClic and selectVisualView outputs remain unchanged.
+ */
+const IVI_TYPES=new Set(["EVIDENCE_GRAPH","DECISION_GATE","DEVELOPMENT_POSITION","CONTRADICTION_MAP","REHYDRATION_TRACE","HANDOFF_CHAIN","VISUAL_COMPLIANCE","COMPACT_STATUS"]);
+const IVI_CLASSES=new Set(["MEASURED","CALCULATED","OBSERVED","INFERRED","PREDICTED","UNKNOWN"]);
+const IVI_ACTIONS=new Set(["SYSTEMSTART","UPDATE","WEITER","DASHBOARD","CARD","VISUAL","INTEGRATION_AUDIT"]);
+const SHA40=/^[0-9a-f]{40}$/i;
+export function projectInteractiveVisual(snapshot={},selection={}){
+ const sourceVerified=SHA40.test(snapshot.source_commit??"")&&Array.isArray(snapshot.source_paths)&&snapshot.source_paths.length>0&&snapshot.source_paths.every(p=>typeof p==="string"&&p.trim()&&!p.startsWith("/")&&!p.split("/").includes(".."));
+ const type=IVI_TYPES.has(snapshot.visual_type)?snapshot.visual_type:"COMPACT_STATUS";
+ const entries=Array.isArray(snapshot.nodes)?snapshot.nodes:[];
+ const nodes=sourceVerified?entries.filter(n=>n&&typeof n.id==="string"&&n.id.trim()&&IVI_CLASSES.has(n.evidence_class)&&typeof n.origin==="string"&&n.origin.trim()&&Array.isArray(n.evidence_refs)&&n.evidence_refs.length>0).map(n=>({...n})): [];
+ const ids=new Set(nodes.map(n=>n.id));
+ const edges=sourceVerified&&Array.isArray(snapshot.edges)?snapshot.edges.filter(e=>e&&ids.has(e.from)&&ids.has(e.to)&&IVI_CLASSES.has(e.evidence_class)&&typeof e.origin==="string"&&e.origin.trim()&&Array.isArray(e.evidence_refs)&&e.evidence_refs.length>0).map(e=>({...e,causal_claim_verified:e.causal_claim_verified===true&&e.evidence_class!=="INFERRED"&&e.evidence_class!=="PREDICTED"&&e.evidence_class!=="UNKNOWN"})):[];
+ const unknowns=Array.isArray(snapshot.unknowns)?snapshot.unknowns.filter(x=>typeof x==="string"&&x.trim()):[];
+ const selected=typeof selection.node_id==="string"&&ids.has(selection.node_id)?selection.node_id:null;
+ const selectedNode=selected?nodes.find(n=>n.id===selected):null;
+ const gates=Array.isArray(snapshot.decision_gates)?snapshot.decision_gates.filter(g=>g&&typeof g.id==="string"&&g.evidence_verified===true&&typeof g.evidence_ref==="string"&&g.evidence_ref.trim()).map(g=>({...g})): [];
+ const validActions=Array.isArray(snapshot.valid_actions)?snapshot.valid_actions.filter(a=>a&&IVI_ACTIONS.has(a.action)&&a.native_system==="666CLIC"&&a.authorized_direct_trigger===true&&a.evidence_verified===true&&typeof a.evidence_ref==="string"&&a.evidence_ref.trim()).map(a=>({action:a.action,native_system:"666CLIC",evidence_ref:a.evidence_ref,requires_direct_user_action:true,executed:false})):[];
+ const progress=snapshot.development_position;
+ const scopedProgress=progress?.verified===true&&Number.isSafeInteger(progress.done)&&Number.isSafeInteger(progress.total)&&progress.total>0&&progress.done>=0&&progress.done<=progress.total&&typeof progress.source_revision==="string"&&SHA40.test(progress.source_revision)?{done:progress.done,total:progress.total,percent:Math.round(progress.done/progress.total*100),source_revision:progress.source_revision}:null;
+ const receipt=snapshot.handoff;
+ const handoff=receipt&&typeof receipt.handoff_id==="string"?{handoff_id:receipt.handoff_id,source_readback:receipt.source_readback_verified===true,receipt_readback:receipt.recipient_receipt_readback_verified===true,delivery_verified:receipt.transport_receipt_verified===true&&receipt.recipient_receipt_readback_verified===true,adopted:receipt.native_adoption_verified===true&&receipt.native_readback_verified===true,host_verified:receipt.host_verified===true&&receipt.host_evidence_verified===true&&receipt.native_adoption_verified===true&&receipt.native_readback_verified===true}:null;
+ return {schema:"CLIC_GPT6_INTERACTIVE_VISUAL_V01_4",type:sourceVerified?type:"COMPACT_STATUS",source_verified:sourceVerified,source_commit:sourceVerified?snapshot.source_commit:null,entity_scope:sourceVerified?snapshot.entity_scope??"666CLIC":null,facet_scope:sourceVerified?snapshot.facet_scope??null:null,nodes,edges,selected_node:selectedNode,unknowns,decision_gates:gates,development_position:scopedProgress,handoff,valid_actions:validActions,return_anchor:typeof snapshot.return_anchor==="string"?snapshot.return_anchor:null,interaction:"LOCAL_SELECTION_ONLY",no_automatic_dispatch:true,no_foreign_mutation:true,no_host_acceptance_claim:true,presentation_only:true,missing_evidence_reason:sourceVerified?null:"SOURCE_HEAD_AND_PATH_READBACK_REQUIRED"};
+}
