@@ -2804,5 +2804,42 @@
     },
     "pointer_last": true,
     "return_anchor": "IVI08A_SOURCE_VERIFIER_READY_TRUSTED_HOST_CONNECTOR_INJECTION_AND_RENDER_PENDING;SB04_SB05_PRESERVED"
+  },
+  "update_2026_10_16_ivi08ab_gpt_native_binding": {
+    "status": "SOURCE_AND_CI_PASS_REAL_GPT_HOST_AND_PLUGIN_RELEASE_OPEN",
+    "base_head": "1d6790385bfa3300d593b181d67b725f8e4c256c",
+    "recovery_branch": "backup/clic-pre-ivi08ab-gpt-host-20261016",
+    "body_head_before_pointer": "43470ac0513df0d5f47b95b2d882e535a9391569",
+    "implementation": "666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.mjs",
+    "implementation_blob": "3db3af140b0d69005c1f5de1a2442f46de3ea420",
+    "regression_blob": "c54ec6ab0d203cacb99e0f9eac5ad1cf304c6a15",
+    "workflow_blob": "90b4ec9e3a7e1065dfef69045ed1a9175d0b83e7",
+    "acceptance_blob": "d9bcc67fc39c5be4f3d5f32f40d0163b31149a4c",
+    "operations_center_blob": "1caec1023a5874251766b661531eb07a5c5a264f",
+    "ci_run_id": 38912842681,
+    "ci_status": "SUCCESS",
+    "new_tests": 5,
+    "manifest_count": 97,
+    "manifest_unchanged": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "source_pass": true,
+    "connector_runtime_e2e": "NOT_VERIFIED",
+    "host_render": "NOT_VERIFIED",
+    "host_selection": "NOT_VERIFIED",
+    "release_metadata": "0.1.22",
+    "plugin_release_this_update": "NONE",
+    "plugin_patch_first": "PARITY_AND_PROVIDER_ARCHIVE_GATES_OPEN",
+    "delivery": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "sb04_sb05": "OPEN_PRESERVED",
+    "no_new_router": true,
+    "triple_check": {
+      "structure": "PASS_SOURCE_READBACK_CI",
+      "causal_semantics": "PASS_SOURCE_NEGATIVE_REGRESSIONS",
+      "rehydration_recovery": "PARTIAL_BACKUP_MANIFEST_PASS_FRESH_HOST_OPEN"
+    },
+    "pointer_last": true,
+    "return_anchor": "IVI08AB_NATIVE_GPT_UI_RECIPE_READY_REAL_HOST_AND_PLUGIN_PATCH_FIRST_OPEN;SB04_SB05_OPEN"
   }
 }
