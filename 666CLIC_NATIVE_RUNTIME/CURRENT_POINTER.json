@@ -2691,5 +2691,42 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "CLIC_GPT6_VISUAL_PROPOSAL_NATIVE_REVIEW_AND_HOST_GATES"
+  },
+  "update_2026_10_16_gpt6_ivi_v014_source_implementation": {
+    "status": "SOURCE_CI_VERIFIED_HOST_AND_PLUGIN_PARITY_OPEN",
+    "previous_head": "02c60d2a77c7cba94351966fce258fcade094750",
+    "backup_branch": "backup/clic-pre-ivi-v014-20261016",
+    "body_head_before_pointer": "18817b2fbde27593f86e45371412638f1f9f2727",
+    "presenter_blob": "4a03146a5579e9b3ceab2c5b71280fba79332b93",
+    "regression_blob": "31e4eaed1ea0e841fd460c8586c4b8a1c0e2db0f",
+    "workflow_blob": "e8f941a7cf00de7153c169f4fc4002b9072c53b1",
+    "acceptance_blob": "35d487f88143387d662ee4c469d61a03f82d301a",
+    "operations_center_blob": "8ff4150f8b239e3fc7600184a2381d79f1bf8c01",
+    "ci_run": 38834171423,
+    "ci_status": "SUCCESS",
+    "new_regression_tests": 8,
+    "legacy_presenter_tests": "EXECUTED_IN_SAME_SUCCESSFUL_WORKFLOW",
+    "manifest_required": 97,
+    "manifest_blob": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "source_pass": true,
+    "host_render": "NOT_TESTED",
+    "host_dispatch": "NOT_TESTED",
+    "plugin_live_version": "0.1.22",
+    "plugin_release_this_update": "NOT_PUBLISHED",
+    "plugin_patchfirst": "WRITE_BLOCKED_HOST_UPLOADED_ARCHIVE_TOKEN_NOT_AVAILABLE",
+    "existing_three_skill_deltas": "STILL_OPEN",
+    "managed_notices": "SEVEN_PREPARED_NO_DELIVERY_CLAIM",
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "foreign_mutation": false,
+    "no_new_router": true,
+    "triple_check": {
+      "structure": "SOURCE_READBACK_CI_PASS",
+      "causal_semantic": "LEGACY_AND_NEGATIVE_REGRESSION_PASS",
+      "rehydration_recovery": "PARTIAL_MANIFEST_BACKUP_VERIFIED_FRESH_HOST_OPEN"
+    },
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "STARBRIDGE_SB04_SB05_AND_V014_INTERACTIVE_HOST_PLUGIN_PARITY_OPEN"
   }
 }
