@@ -2626,5 +2626,47 @@
     "return_anchor": "AFTER_CLIC_POINTER_READBACK_AUDIT_PFS_CSM_CURRENT_CHILD_MENU_VISUAL_INTELLIGENCE_AND_CLIC_WORKFLOW_REUSE_READ_ONLY; PREPARE_PFS_NATIVE_ADOPTION_CONCEPT_WITHOUT_FOREIGN_WRITE; CLIC_PROVIDER_PLUGIN_UPLOAD_REMAINS_OPEN",
     "pointer_last": true,
     "no_post_pointer_mutation": true
+  },
+  "update_2026_10_16_starbridge_sb01_sb03": {
+    "status": "CLIC_SOURCE_AND_OFFLINE_CI_VERIFIED_EXTERNAL_END_TO_END_OPEN",
+    "base_head": "3ca6081af5aa25479e32b9cc4c20a49603032604",
+    "prechange_backup": "backup/clic-pre-starbridge-sb01-sb03-20261016",
+    "body_head_before_pointer": "84e106d5636808f416b05e67ad0d1d0dbdf9084f",
+    "sb01": "PEER_CHANNEL_CENSUS_WITH_LYVRA_AND_PFS_NATIVE_BOUNDARIES",
+    "sb02": "PURE_RECEIPT_PROVENANCE_IDEMPOTENCY_AND_CONFLICT_GATES",
+    "sb03": "VERIFIED_WORK_RETURN_ANCHOR_PRESERVATION",
+    "source_paths": [
+      "666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.mjs",
+      "666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs",
+      "666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_SB01_SB03_CHANNEL_INVENTORY_2026-10-16.md",
+      "666CLIC_NATIVE_RUNTIME/current/OPERATIONS_CENTER.md",
+      ".github/workflows/clic-starbridge-evidence-tests.yml"
+    ],
+    "readback_blob_shas": [
+      "f63ff737f1d12636e312a39c61de98209a392f21",
+      "dcc975e0a3ee0d35318f5ffc9c19c6f27ac54574",
+      "ebbb01a5a012c71c3d20ba928de0eaca7c023343",
+      "678bd95238c3179b1afeb47c41aac26adaec2364",
+      "e317d14bcad7b524aafa593ca22a04973c9a28b3"
+    ],
+    "offline_ci_run_id": 38829461442,
+    "offline_ci_status": "SUCCESS",
+    "offline_test_cases": 6,
+    "manifest_required": 97,
+    "manifest_blob_unchanged": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "existing_r02_receipt_blob_unchanged": "0d9ca09c2150fa2d2057236ee6892045af3479dc",
+    "triple_check": {
+      "structure": "PASS_FILES_READBACK_AND_OFFLINE_CI",
+      "causal_semantics": "PASS_SOURCE_CONTRACT_BOUNDARY_AND_CONFLICT_NEGATIVE_TESTS",
+      "rehydration_recovery": "PARTIAL_BACKUP_BRANCH_AND_MANIFEST_VERIFIED_FRESH_HOST_NOT_TESTED"
+    },
+    "native_host_delivery": "NOT_VERIFIED",
+    "native_plugin_impact": "CONTINUITY_EVIDENCE_CHANGE_REQUIRES_SKILL_IMPACT_EVALUATION_LIVE_PROVIDER_0.1.22_STILL_PENDING_THREE_SKILL_DELTA",
+    "plugin_release_this_update": "NOT_PUBLISHED",
+    "foreign_mutation": false,
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "return_anchor": "NEXT SB04 SB05 NATIVE_PEER_CONSUMER_AND_RECEIPT_ROUNDTRIP_TEST_WITH_TARGET_NATIVE_TRIGGERS; CLIC_PLUGIN_HOST_ARCHIVE_TRANSPORT_PENDING"
   }
 }
