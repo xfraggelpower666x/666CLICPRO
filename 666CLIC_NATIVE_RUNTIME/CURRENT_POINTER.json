@@ -2768,5 +2768,41 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "return_anchor": "IVI08_TRUSTED_VIEW_MODEL_SOURCE_READY_HOST_RUNTIME_AND_PLUGIN_PARITY_OPEN;STARBRIDGE_SB04_SB05_OPEN"
+  },
+  "update_2026_10_16_ivi08a_connector_binding": {
+    "status": "CONNECTOR_ADAPTER_SOURCE_CI_PASS_HOST_E2E_PENDING",
+    "base_head": "9e6fe5a56f646972579e9f5f59a1ae8bb0010ba1",
+    "prechange_recovery": "backup/clic-pre-ivi08a-connector-20261016",
+    "body_head_before_pointer": "ae26f3eedb33fd34e276f971b98c4320cc08c3ec",
+    "connector_adapter": "666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-github-connector.mjs",
+    "connector_adapter_blob": "9d9f8a6e3d5177e76325e098ce2f4854f6eff1ca",
+    "regression_blob": "7a9cab834f668a8eed5e15c44ec688a7a92b6716",
+    "workflow_blob": "51fdf12dc23307e4cbc3cc8c3a17f826c6d22a31",
+    "acceptance_blob": "e2e0034d05aed541038fb5fff8dcf6afa66c8db6",
+    "operations_center_blob": "7d049c3e92a128b294c91a1c758e3c5079c3effd",
+    "ci_run": 38851758536,
+    "ci_status": "SUCCESS",
+    "new_tests": 4,
+    "legacy_tests": "EXECUTED_SUCCESS",
+    "manifest_count": 97,
+    "manifest_unchanged_blob": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "source_pass": true,
+    "host_provider_connector_injected_live": "NOT_VERIFIED",
+    "host_renderer": "NOT_VERIFIED",
+    "plugin_version": "0.1.22",
+    "plugin_new_release": false,
+    "plugin_patch_first": "OPEN_PREEXISTING_THREE_SKILL_DELTAS",
+    "delivery_pass": false,
+    "foreign_mutation": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "no_new_router": true,
+    "triple_check": {
+      "structure": "SOURCE_READBACK_PASS",
+      "causal_semantics": "NEGATIVE_CI_PASS",
+      "rehydration_recovery": "PARTIAL_RECOVERY_AND_MANIFEST_PASS_HOST_OPEN"
+    },
+    "pointer_last": true,
+    "return_anchor": "IVI08A_SOURCE_VERIFIER_READY_TRUSTED_HOST_CONNECTOR_INJECTION_AND_RENDER_PENDING;SB04_SB05_PRESERVED"
   }
 }
