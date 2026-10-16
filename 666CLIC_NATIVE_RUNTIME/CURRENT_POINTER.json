@@ -2841,5 +2841,42 @@
     },
     "pointer_last": true,
     "return_anchor": "IVI08AB_NATIVE_GPT_UI_RECIPE_READY_REAL_HOST_AND_PLUGIN_PATCH_FIRST_OPEN;SB04_SB05_OPEN"
+  },
+  "update_2026_10_16_ivi08ab_native_host_presentation": {
+    "status": "SOURCE_CI_VERIFIED_REAL_REPOSITORY_HOST_EXECUTION_OPEN",
+    "base_head": "e65deb50dd22910e0c131c3a8fd303423f8aff20",
+    "backup": "backup/clic-pre-ivi08ab-hostbinding-20261016",
+    "body_head_before_pointer": "ec408eead115f950dce262e4bd2e92d5a48b1472",
+    "presenter": "666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-presentation.mjs",
+    "presenter_blob": "71520999713ef652d82c487d7c17b3b578b0abdb",
+    "test_blob": "9f9dc2bf6e3b17d4779d613bb9ff71af5afe57c0",
+    "workflow_blob": "e8d70217faa8c9eaf1e84ae01d7219dd772f26d7",
+    "acceptance_blob": "abf326d0512b05240f4e8f6d4f5e796de3c2b4f9",
+    "operations_center_blob": "ce2903336b530152d8b0c542308c1b2298cc23e8",
+    "manifest_blob": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "manifest_required": 97,
+    "ci_run_id": 38958909055,
+    "ci_status": "SUCCESS",
+    "new_tests": 5,
+    "source_pass": true,
+    "actual_host_execution": "NOT_VERIFIED",
+    "host_connector_injection": "NOT_VERIFIED",
+    "native_control_types": "SEGMENTED_CONTROL_AND_SELECT_SUPPORTED_AS_PRESENTATION",
+    "plugin_live": "0.1.22",
+    "plugin_new_release": false,
+    "plugin_patch_first": "OPEN_EXISTING_SKILL_DELTAS_AND_BINARY_PARITY",
+    "delivery": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "starbridge_sb04_sb05": "OPEN_PRESERVED",
+    "no_new_router": true,
+    "triple_check": {
+      "structure": "CI_AND_READBACK_PASS",
+      "causal_semantics": "NEGATIVE_SELECTION_TESTS_PASS",
+      "recovery": "BACKUP_MANIFEST_VERIFIED_FRESH_HOST_OPEN"
+    },
+    "pointer_last": true,
+    "return_anchor": "IVI08AB_HOST_PRESENTATION_CONTRACT_SOURCE_READY_FRESH_HOST_AND_PLUGIN_PARITY_OPEN;SB04_SB05_PRESERVED"
   }
 }
