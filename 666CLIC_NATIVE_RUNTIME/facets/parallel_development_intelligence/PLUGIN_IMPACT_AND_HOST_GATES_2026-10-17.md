@@ -21,3 +21,18 @@ PET=PAUSED
 JUNIOR=PRESERVED
 
 Existing patch-first candidate must be revalidated after exact provider binary/release approval gates. This source integration alone cannot be called installed host functionality. Do not silently advance the live plugin or create an unapproved release. Existing Visual Intelligence V01.4 and event-ingestion modules remain independent source references, not duplicate implementations.
+
+## 2026-10-17 · CLIC GitHub CAS + PDI persisted working ledger
+NATIVE_CAS_SOURCE=dashboard/development_progress/github-cas-transport.mjs
+ACTUAL_GITHUB_BINDING_SOURCE=dashboard/development_progress/github-connector-binding.mjs
+PDI_WORKING_LEDGER=facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json
+PDI_RECONCILER=facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs
+LIVE_GITHUB_CONNECTOR_GET_CAPABILITIES=VERIFIED_BY_GITHUB_TOOL_CALLS
+SOURCE_NEGATIVE_TESTS=GITHUB_ACTIONS
+LIVE_CAS_EVENT_WRITE=NOT_RUN_NO_AUTHENTIC_EVENT_SOURCE_PROVIDED
+LIVE_PDI_RECONCILIATION_WRITE=NOT_RUN
+TWO_FILE_ATOMIC_COMMIT=NOT_IMPLEMENTED
+PARTIAL_PERSISTENCE_RECOVERY=SOURCE_TESTED_ONLY
+PLUGIN_RELEASE=0.1.22_UNCHANGED
+FRESH_HOST_ACCEPTANCE=NOT_VERIFIED
+ROOT_POINTER_MUTATION_BY_FACET=FORBIDDEN
