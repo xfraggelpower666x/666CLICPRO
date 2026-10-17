@@ -51,7 +51,7 @@ export async function bindStarbridgeReceipt({fetch,fetchFile,envelope,receipt_pa
   const source=sourceFiles[envelope.source_path],receiptFile=recipientFiles[receipt_path];
   // Receipt is data, not instructions or native approval.
   const receipt=JSON.parse(receiptFile.content);
-  if(receipt.recipient_head!==recipientHead)return denied("RECIPIENT_HEAD_MISMATCH");
+  // A receipt cannot safely embed the commit hash of the commit containing itself.\n  // Validate its declared recipient head as SHA; separately report the observed repository HEAD.\n  if(!SHA.test(receipt.recipient_head??""))return denied("INVALID_DECLARED_RECIPIENT_HEAD");
   const [latestSource,latestRecipient]=await Promise.all([readHead(fetch,CLIC_REPO,CLIC_BRANCH),readHead(fetch,target.repo,target.branch)]);
   if(latestSource!==clicHead||latestRecipient!==recipientHead)return denied("CONCURRENT_HEAD_CHANGE");
   const result=classifyStarbridgeReceipt(envelope,receipt,{
@@ -59,7 +59,7 @@ export async function bindStarbridgeReceipt({fetch,fetchFile,envelope,receipt_pa
   });
   if(result.status!=="DELIVERED_EVIDENCED")return denied(result.reason??"PROVENANCE_MISMATCH");
   return {status:"DELIVERED_EVIDENCED",delivery_verified:true,adoption_verified:false,host_verified:false,may_mutate_foreign:false,
-   handoff_id:envelope.handoff_id,receipt_id:receipt.receipt_id,source_head:clicHead,recipient_head:recipientHead,
+   handoff_id:envelope.handoff_id,receipt_id:receipt.receipt_id,source_head:clicHead,recipient_head:recipientHead,receipt_declared_recipient_head:receipt.recipient_head,
    proof_origin:"INJECTED_GITHUB_CONNECTOR_COMMIT_TREE_AND_RECALCULATED_CONTENT_BLOBS",
    source:{repo:CLIC_REPO,path:envelope.source_path,blob_sha:source.sha},
    recipient:{repo:target.repo,path:receipt_path,blob_sha:receiptFile.sha},
