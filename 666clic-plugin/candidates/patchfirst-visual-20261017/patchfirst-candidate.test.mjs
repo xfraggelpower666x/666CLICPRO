@@ -25,11 +25,25 @@ test("all skill roles preserve native triggers and boundaries",()=>{
  assert.match(continuity,/No reset|No global|never restart|never treat FORCE as implicit UPDATE/i);
 });
 test("candidate is not a release, backup approval, PET launch, or foreign mutation",()=>{
- assert.equal(m.status,"SOURCE_ONLY_BINARY_AND_PROVIDER_RELEASE_BLOCKED");
+ assert.equal(m.status,"SOURCE_CANDIDATE_VISUAL_COMPLETION_SYNC_BINARY_PROVIDER_HOST_GATES_OPEN");
  assert.equal(m.governance.provider_release,"NOT_PUBLISHED");
  assert.equal(m.governance.native_approval,"NOT_ISSUED");
  assert.equal(m.governance.no_write_to_frozen_release,true);
  assert.equal(m.governance.no_foreign_mutation,true);
  assert.equal(m.governance.pet,"PAUSED");
  assert.equal(m.governance.junior,"PRESERVED");
+});
+
+test("five-option CLIC completion keeps all three existing skill surfaces semantically aligned",()=>{
+ const v=read("skills/666clic-visual-interface/SKILL.md"),d=read("skills/666clic-dashboard/SKILL.md"),c=read("skills/666clic-continuity/SKILL.md");
+ for(const text of [v,d,c]){
+  assert.match(text,/visual-completion-guard\.mjs/);
+  assert.match(text,/no auto|never authorizes UPDATE|not a.*UPDATE/i);
+  assert.match(text,/PET/i);
+  assert.match(text,/Junior/i);
+ }
+ assert.equal(m.visual_completion_2026_10_17.five_options_preserved,true);
+ assert.equal(m.visual_completion_2026_10_17.plugin_update,"NOT_PUBLISHED");
+ assert.equal(m.visual_completion_2026_10_17.fresh_host,"NOT_TESTED");
+ assert.equal(m.visual_completion_2026_10_17.second_provider_plugin,"NOT_VERIFIED");
 });
