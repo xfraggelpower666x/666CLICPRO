@@ -1,5 +1,5 @@
 import test from "node:test";import assert from "node:assert/strict";import {createHash} from "node:crypto";
-import {bindStarbridgeReceipt} from "./starbridge-receipt-readback.mjs";
+import {bindStarbridgeReceipt,inspectPfsSb05NativeReceipts} from "./starbridge-receipt-readback.mjs";
 const SOURCE="xfraggelpower666x/666CLICPRO",SRC_HEAD="a".repeat(40),DEST_HEAD="b".repeat(40),RECEIPT_HEAD="c".repeat(40);
 const path="666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-R02.json",receiptPath="LYVRA_NATIVE_RUNTIME/handoffs/666CLIC/CLIC-LYVRA-R02-RECEIPT.json";
 const envelope={handoff_id:"CLIC-LYVRA-R02",source_system:"666CLIC",target_system:"LYVRA",source_repository:SOURCE,source_head:SRC_HEAD,source_path:path,status:"PREPARED"};
@@ -55,4 +55,56 @@ test("persisted SB04 reconciliation pins independent receiver receipt without au
  assert.equal(evidence.host_verified,false);
  assert.equal(evidence.automatic_transport_verified,false);
  assert.equal(evidence.other_peer_sb05,"NOT_VERIFIED");
+});
+
+const PFS_REPO="xfraggelpower666x/666PFS_CSM";
+const SB05_CONTEXT="666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json";
+const SB05_ENVELOPE="666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json";
+const SB05_READ="handoff/receipts/CLIC-STARBRIDGE-SB05-20261017-01_PFS_READBACK.json";
+const SB05_ADD="handoff/receipts/CLIC-STARBRIDGE-SB05-20261017-01_PFS_ADDITIVE_RECEIPT.json";
+function nativePfsFixture({tamper=false,wrongTarget=false,changed=false,promote=false}={}){
+ const context=JSON.stringify({kind:"historical-context"});
+ const e={handoff_id:"CLIC-STARBRIDGE-SB05-20261017-01",source_system:"666CLIC",target_system:"666PFS",
+  source_repository:SOURCE,source_head:SRC_HEAD,source_path:SB05_CONTEXT,status:"PREPARED"};
+ const storedEnvelope=JSON.stringify(e);
+ const rb={schema:"PFS_NATIVE_STARBRIDGE_READBACK_RECEIPT_V1",handoff_id:e.handoff_id,source_system:"666CLIC",
+  receiver_system:wrongTarget?"666LYVRA":"666PFS-CORE-001",source_repository:SOURCE,
+  source_origin_commit:SRC_HEAD,source_current_head:SRC_HEAD,source_context_path:SB05_CONTEXT,
+  source_context_blob:gitHash(context),source_envelope_path:SB05_ENVELOPE,source_envelope_blob:gitHash(storedEnvelope),
+  delivery_verified:false,adoption_verified:false,host_verified:false};
+ const raw=JSON.stringify(rb);
+ const ad={schema:"PFS_NATIVE_STARBRIDGE_ADDITIVE_RECEIPT_V1",handoff_id:e.handoff_id,
+  source_system:"666CLIC",target_system:"666PFS-CORE-001",source_head:SRC_HEAD,
+  source_path:SB05_CONTEXT,source_blob:gitHash(context),envelope_path:SB05_ENVELOPE,
+  envelope_blob:gitHash(storedEnvelope),previous_receipt_path:SB05_READ,
+  previous_receipt_blob:tamper?"f".repeat(40):gitHash(raw),recipient_head:DEST_HEAD,
+  delivery_verified:promote,adoption_verified:false,host_verified:false};
+ const files={[SOURCE]:{[SB05_CONTEXT]:context,[SB05_ENVELOPE]:storedEnvelope},
+  [PFS_REPO]:{[SB05_READ]:raw,[SB05_ADD]:JSON.stringify(ad)}};
+ let c=0;
+ const fetch=async({url})=>{
+  const r=url.includes("/"+PFS_REPO+"/")?PFS_REPO:SOURCE;
+  if(url.includes("/branches/")){c++;return {result:{content:JSON.stringify({commit:{sha:changed&&c>2?"d".repeat(40):r===SOURCE?SRC_HEAD:DEST_HEAD}})}}}
+  return {result:{content:JSON.stringify({truncated:false,tree:Object.entries(files[r]).map(([path,value])=>({path,type:"blob",sha:gitHash(value)}))})}};
+ };
+ const fetchFile=async({repository_full_name,path})=>({result:{content:files[repository_full_name][path],sha:gitHash(files[repository_full_name][path])}});
+ return {fetch,fetchFile,envelope:e};
+}
+test("PFS native dual-receipt readback yields independent evidence but never delivery/adoption/host",async()=>{
+ const x=await inspectPfsSb05NativeReceipts(nativePfsFixture());
+ assert.equal(x.status,"NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING");
+ assert.equal(x.native_receipts_verified,true);assert.equal(x.delivery_verified,false);
+ assert.equal(x.adoption_verified,false);assert.equal(x.host_verified,false);assert.equal(x.may_mutate_foreign,false);
+});
+test("PFS additive receipt cannot replace or forge preceding readback blob",async()=>{
+ const x=await inspectPfsSb05NativeReceipts(nativePfsFixture({tamper:true}));
+ assert.equal(x.reason,"SB05_NATIVE_RECEIPT_PROVENANCE_MISMATCH");
+});
+test("PFS native receiver mismatch and artificial promotion fail closed",async()=>{
+ assert.equal((await inspectPfsSb05NativeReceipts(nativePfsFixture({wrongTarget:true}))).status,"AWAIT_RECEIPT");
+ assert.equal((await inspectPfsSb05NativeReceipts(nativePfsFixture({promote:true}))).reason,"UNSUPPORTED_NATIVE_PROMOTION_CLAIM");
+});
+test("SB05 native receipts fail on racing heads or absent trusted connector",async()=>{
+ assert.equal((await inspectPfsSb05NativeReceipts(nativePfsFixture({changed:true}))).reason,"CONCURRENT_HEAD_CHANGE");
+ assert.equal((await inspectPfsSb05NativeReceipts({envelope:nativePfsFixture().envelope})).reason,"TRUSTED_CONNECTOR_REQUIRED");
 });
