@@ -3534,5 +3534,39 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "PDI_PRIORITY_PERSISTED_AUTHENTIC_EVENT_HOST_CAS_PROOF_NEXT_THEN_STARBRIDGE"
+  },
+  "update_2026_10_17_sb05_pfs_dual_native_receipt_binding": {
+    "status": "SB05_PFS_NATIVE_RECEIPTS_GIT_VERIFIED_SOURCE_CI_PASS_DELIVERY_ADOPTION_HOST_OPEN",
+    "base_head": "cf4e70569a3c2649fe36b227b3b866cb54fc0a6d",
+    "prechange_backup": "backup/clic-pre-sb05-native-dual-receipt-binding-20261017",
+    "body_head_before_pointer": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+    "source_blob": "e7c40d3252a2f2b8b3af89790a121c58e814f945",
+    "test_blob": "9e93812ad21a8733996d5c031cb9a8a47beeb452",
+    "evidence_blob": "ba0f078d9fa680b93e000c23dfa351208dcca4ff",
+    "ci_run": 39075562199,
+    "ci_conclusion": "SUCCESS",
+    "pdi_priority_1": "PARTIAL_AUTHENTIC_EVENT_CAS_AND_HOST_OPEN",
+    "starbridge_priority_2": "PFS_SB05_DUAL_RECEIPTS_EVIDENCED_NOT_DELIVERY",
+    "pfs_receipts": [
+      "4033565921f051bac0a0d80391544afd9d0cb355",
+      "3816086f09935cb54450174ad2f2718932114421"
+    ],
+    "real_live_binder_execution": false,
+    "delivery_verified": false,
+    "adoption_verified": false,
+    "host_verified": false,
+    "persistent_priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "plugin_impact": "FUTURE_PARITY_REVIEW_REQUIRED",
+    "plugin_release": "0.1.22_UNCHANGED",
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING_THEN_PRIVATE_BINARY"
   }
 }
