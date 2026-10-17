@@ -38,7 +38,7 @@ test("five-option CLIC completion keeps all three existing skill surfaces semant
  const v=read("skills/666clic-visual-interface/SKILL.md"),d=read("skills/666clic-dashboard/SKILL.md"),c=read("skills/666clic-continuity/SKILL.md");
  for(const text of [v,d,c]){
   assert.match(text,/visual-completion-guard\.mjs/);
-  assert.match(text,/no auto|never authorizes UPDATE|not a.*UPDATE/i);
+  assert.match(text,/no auto|never authorizes UPDATE|not a.*UPDATE|no implicit UPDATE/i);
   assert.match(text,/PET/i);
   assert.match(text,/Junior/i);
  }
