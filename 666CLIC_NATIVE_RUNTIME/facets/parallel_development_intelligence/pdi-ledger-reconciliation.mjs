@@ -28,9 +28,15 @@ export async function reconcilePdiLedger({event_id,ledger_commit,ledger_blob,pdi
  };
  try{
   const head=await readHead();
-  const origin=await verifyOrigin({ledger_commit,ledger_blob,observed_head:head,event_id});
-  if(origin?.verified!==true||origin?.ledger_event_verified!==true||origin?.lineage_verified!==true)
-   return halt("READBACK_PENDING","LEDGER_COMMIT_AND_EVENT_LINEAGE_NOT_INDEPENDENTLY_VERIFIED",anchor);
+  const [origin,ledgerTree]=await Promise.all([
+   verifyOrigin({ledger_commit,ledger_blob,observed_head:head,event_id}),
+   github.fetchTree({repository,ref:ledger_commit,recursive:true})
+  ]);
+  const anchored=pick(ledgerTree);
+  if(origin?.verified!==true||origin?.ledger_event_verified!==true||origin?.lineage_verified!==true||
+   anchored?.truncated===true||!Array.isArray(anchored?.tree)||
+   !anchored.tree.some(z=>z.path===CLIC_LEDGER_PATH&&z.sha===ledger_blob))
+   return halt("READBACK_PENDING","LEDGER_COMMIT_TREE_BLOB_AND_EVENT_LINEAGE_NOT_VERIFIED",anchor);
   // Read both ledger and PDI with explicit blob identity; never reconstruct the event by rerunning CAS.
   const ledger=pick(await github.fetchFile({repository,path:CLIC_LEDGER_PATH,ref:branch}));
   const pdi=pick(await github.fetchFile({repository,path:PDI_LEDGER_PATH,ref:branch}));
