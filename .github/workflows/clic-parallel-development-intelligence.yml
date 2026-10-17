@@ -25,3 +25,4 @@ jobs:
         run: |
           node --check 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.mjs
           node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/core-ledger-evidence-binding.test.mjs
