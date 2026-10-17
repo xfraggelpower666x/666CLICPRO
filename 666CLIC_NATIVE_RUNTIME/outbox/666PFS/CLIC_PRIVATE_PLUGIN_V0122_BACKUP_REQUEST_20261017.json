@@ -44,9 +44,9 @@
     "RETURN_NATIVE_PER_LEG_RECEIPT"
   ],
   "gates": {
-    "clic_approval": "PENDING",
-    "semantic_parity": "UNRESOLVED",
-    "fingerprint": "NOT_APPROVED",
+    "clic_approval": "PENDING_NO_EXACT_NATIVE_APPROVAL",
+    "semantic_parity": "LIVE_V0122_VS_NEWER_REPO_SOURCE_NOT_EQUAL",
+    "fingerprint": "UNRESOLVED_NO_CANONICAL_DIGEST",
     "pfs_native_intake": "NOT_EXECUTED",
     "vault_write": "NOT_PERFORMED",
     "delivery": "NOT_EVIDENCED",
@@ -63,5 +63,22 @@
     "pet": "PAUSED",
     "junior": "PRESERVED"
   },
-  "return_anchor": "AWAIT_CLIC_FINGERPRINT_APPROVAL_AND_INDEPENDENT_PFS_NATIVE_BACKUP_EXECUTION"
+  "return_anchor": "AWAIT_CLIC_FINGERPRINT_APPROVAL_AND_INDEPENDENT_PFS_NATIVE_BACKUP_EXECUTION",
+  "fingerprint_reconciliation_2026_10_17": {
+    "status": "CURRENT_RUNTIME_PLUGIN_FINGERPRINT_NOT_ISSUED",
+    "carrier": "666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_RUNTIME_PLUGIN_FINGERPRINT_RECONCILIATION_2026-10-17.json",
+    "release_original_content_parity": "28_OF_28_HISTORICAL_RELEASE_ONLY",
+    "current_source_parity": "DIFFERENT_NEWER_VALID_DEV_SOURCE",
+    "unresolved_inputs": [
+      "repo_text_source_tree_sha",
+      "binary_binding_manifest_sha",
+      "runtime_semantic_body_head",
+      "plugin_current_semantic_class"
+    ],
+    "fingerprint_value": null,
+    "native_approval_issued": false,
+    "pfs_write_allowed": false,
+    "delivery_not_evidenced": true,
+    "backups_not_executed": true
+  }
 }
