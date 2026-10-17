@@ -57,5 +57,15 @@
     "pet": "PAUSED",
     "junior": "PRESERVED"
   },
-  "next": "CURRENT_PARITY_AND_CANONICAL_FINGERPRINT_THEN_CLIC_NATIVE_EXACT_APPROVAL_THEN_PFS_NATIVE_BACKUP_AND_READBACK"
+  "next": "CURRENT_PARITY_AND_CANONICAL_FINGERPRINT_THEN_CLIC_NATIVE_EXACT_APPROVAL_THEN_PFS_NATIVE_BACKUP_AND_READBACK",
+  "fingerprint_reconciliation_2026_10_17": {
+    "carrier": "666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_RUNTIME_PLUGIN_FINGERPRINT_RECONCILIATION_2026-10-17.json",
+    "verified_id_version_release": true,
+    "verified_archive_and_logo_hash": true,
+    "unresolved_four_fingerprint_inputs": true,
+    "semantic_source_current_not_live_release": true,
+    "fingerprint_sha256": null,
+    "exact_native_approval": null,
+    "write_blocked": true
+  }
 }
