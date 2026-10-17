@@ -3258,5 +3258,35 @@
     "junior": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "VISUAL_COMPLETION_GUARD_SOURCE_CI_PASS_HOST_AND_PLUGIN_PARITY_PENDING"
+  },
+  "update_2026_10_17_visual_completion_patchfirst_source_parity": {
+    "status": "SOURCE_CANDIDATE_PARITY_CI_PASS_LIVE_PLUGIN_HOST_GATES_OPEN",
+    "base_head": "fc85f551603ae505a3c18962ad477f518ca5c774",
+    "prechange_backup": "backup/clic-pre-visual-completion-plugin-parity-20261017",
+    "body_head_before_pointer": "3717684a346aad8b37495beb620fdeedc2677505",
+    "skills": {
+      "dashboard": "acc66f8a063648e0af73acccf58fded5680f0805",
+      "continuity": "b65f1cfc5365b45b99cb4797113a9eeef35f115e",
+      "visual_interface": "543448ea6c80119f085b115f8964f5e17bfe6485"
+    },
+    "plugin_impact_evidence_blob": "3f25ff049a87bdf6c2341e33656233b301946fd1",
+    "candidate_ci_run": 38994907223,
+    "candidate_ci": "SUCCESS",
+    "native_visual_completion_guard_preserved": true,
+    "manifest_unchanged_blob": "c72a6d58532625b726ad754955f538f46475e672",
+    "live_plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "live_plugin_version": "0.1.22",
+    "live_plugin_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "live_plugin_updated": false,
+    "source_candidate_ne_provider_release": true,
+    "original_binary_bytes_verified": false,
+    "fresh_host_pass": false,
+    "second_clic_provider_plugin": "NOT_VERIFIED",
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "no_new_visual_engine": true,
+    "no_foreign_writes": true,
+    "pointer_last": true,
+    "return_anchor": "VISUAL_COMPLETION_PATCHFIRST_SOURCE_PARITY_PASS_PROVIDER_BINARY_AND_HOST_ACCEPTANCE_OPEN"
   }
 }
