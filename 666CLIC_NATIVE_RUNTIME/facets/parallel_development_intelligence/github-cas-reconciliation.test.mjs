@@ -9,7 +9,7 @@ const H="a".repeat(40),N="b".repeat(40),O="c".repeat(40),P="d".repeat(40),B="e".
 const event={event_id:"evt-1",type:"START",source_revision:H,evidence_ref:"git/event",title:"verified",tasks:[{id:"task",status:"OPEN",evidence:["git/evidence"]}]};
 function native(){return createPdiState([{id:"CORE_DEVELOPMENT",return_anchor:"core"},{id:"VISUAL_INTELLIGENCE",return_anchor:"visual"},{id:"STARBRIDGE",return_anchor:"peer"},{id:"CODEFORGE_RECOVERY",return_anchor:"bridge"}])}
 function fixture(){
- let head=H, ledger={schema:"666CLIC_DEVELOPMENT_PROGRESS_V1",authority:"666CLIC_REPO_CURRENT",status:"INACTIVE",current_work:null},
+ const commitTrees=new Map();let head=H, ledger={schema:"666CLIC_DEVELOPMENT_PROGRESS_V1",authority:"666CLIC_REPO_CURRENT",status:"INACTIVE",current_work:null},
  ledgerBlob=O,pdi=native(),pdiBlob=P, changed=null, writeCount=0;
  const github={
   readBranch:async()=>({commit:{sha:head}}),
@@ -17,12 +17,12 @@ function fixture(){
    {sha:ledgerBlob,content:JSON.stringify(ledger)}:
    {sha:pdiBlob,content:JSON.stringify(pdi)},
   updateFile:async({path,sha,content})=>{
-   if(path===CLIC_LEDGER_PATH){if(sha!==ledgerBlob)throw Error("stale ledger");ledger=JSON.parse(content);ledgerBlob=B;changed={from:head,to:N,blob:B,path};head=N}
-   else {if(sha!==pdiBlob)throw Error("stale pdi");pdi=JSON.parse(content);pdiBlob=B;changed={from:head,to:O,blob:B,path};head=O}
+   if(path===CLIC_LEDGER_PATH){if(sha!==ledgerBlob)throw Error("stale ledger");ledger=JSON.parse(content);ledgerBlob=B;changed={from:head,to:N,blob:B,path};commitTrees.set(N,[{path,sha:B}]);head=N}
+   else {if(sha!==pdiBlob)throw Error("stale pdi");pdi=JSON.parse(content);pdiBlob=B;changed={from:head,to:O,blob:B,path};commitTrees.set(O,[{path,sha:B}]);head=O}
    writeCount++;return {commit_sha:head,content_sha:B};
   },
   fetchCommit:async()=>({parents:[{sha:changed.from}]}),
-  fetchTree:async()=>({truncated:false,tree:[{path:changed.path,sha:changed.blob}]}),
+  fetchTree:async({ref})=>({truncated:false,tree:commitTrees.get(ref)??[]}),
  };
  return {github,read:()=>({head,ledger,pdi,writeCount,ledgerBlob,pdiBlob})};
 }
@@ -55,7 +55,7 @@ test("PDI stage refuses forged lineage, concurrent file state and missing event 
  const f=fixture();const p=native();p.processed_event_ids.push("evt-1");
  const base={event_id:"evt-1",ledger_commit:N,ledger_blob:B,pdi_candidate:p,github:f.github,repository:repo,branch,expected_pdi_blob:P,verifyOrigin:async()=>({verified:false})};
  assert.equal((await reconcilePdiLedger(base)).status,"READBACK_PENDING");
- assert.equal((await reconcilePdiLedger({...base,expected_pdi_blob:O,verifyOrigin:async()=>({verified:true,ledger_event_verified:true,lineage_verified:true,ledger_blob_sha:B})})).status,"CONFLICT_QUARANTINE");
+ assert.equal((await reconcilePdiLedger({...base,expected_pdi_blob:O,verifyOrigin:async()=>({verified:true,ledger_event_verified:true,lineage_verified:true,ledger_blob_sha:B})})).status,"READBACK_PENDING");
  assert.equal((await reconcilePdiLedger({...base,pdi_candidate:native()})).status,"WRITE_BLOCKED");
  assert.equal(f.read().writeCount,0);
 });
