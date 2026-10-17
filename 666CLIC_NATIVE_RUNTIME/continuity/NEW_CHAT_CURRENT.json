@@ -4,19 +4,24 @@
   "authority": "GITHUB_REPO_CURRENT",
   "repository": "xfraggelpower666x/666CLICPRO",
   "branch": "clic-migration-rev79-staging",
-  "baseline_verified_before_new_chat_update": "3c86b6c0d97f1875c533d3bad2a0169b27307d5b",
+  "baseline_verified_before_new_chat_update": "ee31c2ccd0f04f0bf9f22583da51797a8f5a0699",
   "pointer_path": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
   "manifest_path": "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json",
   "handoff_status": "PREPARED_FOR_NEXT_FRESH_CHAT_NOT_FRESH_HOST_ACCEPTED",
   "previous_handoff": "continuity/NEW_CHAT_HISTORICAL_SNAPSHOT_2026-10-10.json",
   "previous_handoff_classification": "HISTORICAL_NOT_AUTHORITY",
   "last_proven_work": {
-    "integration": "LYVRA_SEMANTIC_TRANSLATION_OVERSTEER_SOURCE_GUARDS",
-    "audit": "continuity/LYVRA_TRANSLATION_OVERSTEER_INTEGRATION_AUDIT_2026-10-09.json",
-    "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
-    "head": "3c86b6c0d97f1875c533d3bad2a0169b27307d5b",
-    "negative_case_tests": "continuity/oversteer-negative-gate.test.mjs",
-    "candidate_ci": "SUCCESS_ON_VERIFIED_PRECHANGE_HEAD",
+    "integration": "STARBRIDGE_SB04_SB05_GITHUB_BLOB_RECEIPT_BINDING",
+    "head": "ee31c2ccd0f04f0bf9f22583da51797a8f5a0699",
+    "source": "continuity/starbridge-receipt-readback.mjs",
+    "tests": "continuity/starbridge-receipt-readback.test.mjs",
+    "acceptance": "continuity/STARBRIDGE_SB04_SB05_RECEIPT_READBACK_ACCEPTANCE_2026-10-17.md",
+    "ci_run": 38987677806,
+    "ci_status": "SUCCESS",
+    "source_pass": true,
+    "real_peer_receipt_end_to_end": "NOT_VERIFIED",
+    "delivery": "NOT_VERIFIED",
+    "native_adoption": "NOT_VERIFIED",
     "host_acceptance": "NOT_VERIFIED"
   },
   "plugin": {
@@ -50,7 +55,33 @@
     "no_new_controller": true,
     "no_second_junior_identity": true
   },
-  "next_step": "ON_666CLIC_SYSTEMSTART_READ_LIVE_GITHUB_HEAD_POINTER_MANIFEST_THEN_RECOVERY_AND_CROSS_SURFACE_GUARDS; PERFORM_DIRECT_FRESH_HOST_NEGATIVE_CASE_ACCEPTANCE; RECHECK_PLUGIN_BINARY_AND_HOST_PARITY; READ_TARGET_NATIVE_CURRENTS_FOR_RECEIPTS_ONLY_WITHOUT_MUTATION",
-  "return_anchor": "LIVE_POINTER_OUTRANKS_NEW_CHAT_CARRIER; PRESERVE_NEWER_VALID_EVOLUTION; PET_PAUSED_JUNIOR_FOREGROUND",
-  "no_claim_of_fresh_chat_acceptance": true
+  "next_step": "NEXT CHAT: read canonical CLIC HEAD/pointer/manifest before this lineage; continue SB04/SB05 real peer receipt proof when available, otherwise next executable CLIC-native task. No repeat 3-check loop, no foreign writes.",
+  "return_anchor": "SB04_SB05_SOURCE_CI_VERIFIED_REAL_PEER_RECEIPT_OPEN;NEW_CHAT_LINEAGE_PREPARED;NO_FRESH_HOST_CLAIM",
+  "no_claim_of_fresh_chat_acceptance": true,
+  "previous_last_proven_work": {
+    "integration": "LYVRA_SEMANTIC_TRANSLATION_OVERSTEER_SOURCE_GUARDS",
+    "audit": "continuity/LYVRA_TRANSLATION_OVERSTEER_INTEGRATION_AUDIT_2026-10-09.json",
+    "current_card": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+    "head": "3c86b6c0d97f1875c533d3bad2a0169b27307d5b",
+    "negative_case_tests": "continuity/oversteer-negative-gate.test.mjs",
+    "candidate_ci": "SUCCESS_ON_VERIFIED_PRECHANGE_HEAD",
+    "host_acceptance": "NOT_VERIFIED"
+  },
+  "current_chat_lineage": {
+    "status": "PREPARED_NOT_FRESH_HOST_ACCEPTED",
+    "trigger": "666CLIC NEW CHAT",
+    "source_head": "ee31c2ccd0f04f0bf9f22583da51797a8f5a0699",
+    "source_pointer_blob": "18a3a88dac9708e551dd0000deb91fc2bb93194e",
+    "scope": "WHOLE_CLIC_STARBRIDGE_SB04_SB05",
+    "in_progress_cause": "NEW_CHAT_INTERRUPTION_AFTER_VERIFIED_SOURCE_BUILD",
+    "last_completed": "SB04_SB05_SOURCE_CI_PASS",
+    "next": "REAL_TRUSTED_CONNECTOR_PEER_RECEIPT_E2E_WHEN_AVAILABLE_NO_NEW_MOCK_ONLY_LOOP",
+    "check_policy": "MAX_3_CHECKS_THEN_LEARNING_BY_DOING_NO_RESET",
+    "plugin_candidate": "666clic-plugin/candidates/patchfirst-visual-20261017",
+    "plugin_status": "SOURCE_PASS_LIVE_0.1.22_RELEASE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "sb04_sb05": "OPEN_DELIVERY",
+    "no_foreign_mutation": true
+  }
 }
