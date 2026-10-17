@@ -1,0 +1,103 @@
+{
+  "schema": "CLIC_V0122_FINGERPRINT_RECONCILIATION_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "HISTORICAL_PROVIDER_RELEASE_CONTENT_VERIFIED_CURRENT_RUNTIME_PLUGIN_FINGERPRINT_NOT_UNAMBIGUOUS",
+  "base_head": "644c6ee10f4241ed4450eed7eef2075a1807045d",
+  "prechange_backup": "backup/clic-pre-v0122-semantic-fingerprint-reconciliation-20261017",
+  "plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "provider_metadata_readback": true,
+    "live_skill_readback": true
+  },
+  "provider_original": {
+    "archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "archive_bytes": 2941803,
+    "regular_files": 28,
+    "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "historical_contents_equal_28_of_28": true
+  },
+  "seven_inputs": {
+    "plugin_id": {
+      "status": "VERIFIED",
+      "value": "plugins_6abfb2e08fdc8191920dcdc4349c69c8"
+    },
+    "plugin_version": {
+      "status": "VERIFIED",
+      "value": "0.1.22"
+    },
+    "plugin_release_id": {
+      "status": "VERIFIED",
+      "value": "pluginrel_6ac6f4e703288191b8757f336d33e186"
+    },
+    "repo_text_source_tree_sha": {
+      "status": "CONFLICTING_VALID_SCOPES",
+      "current_development_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+      "historical_live_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288"
+    },
+    "binary_binding_manifest_sha": {
+      "status": "HISTORICAL_SNAPSHOT_NOT_CURRENT_RELEASE_BINDING",
+      "historical_blob": "b108d4723714844d13743e388a0bcd394748245c",
+      "historical_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+      "current_reconciled_binding": "NOT_ISSUED"
+    },
+    "runtime_semantic_body_head": {
+      "status": "UNRESOLVED_FULL_SEMANTIC_DIFF_REVIEW_REQUIRED",
+      "earlier_candidate": "90e0253f216d62560c1a3d6d03c3f2d88be40d96",
+      "later_runtime_semantics": [
+        "105651c5f1fb",
+        "127ca372268f",
+        "9d6287912286"
+      ],
+      "recent_gov_pointer_head": "644c6ee10f4241ed4450eed7eef2075a1807045d",
+      "cannot_infer_boundary_from_commit_message": true
+    },
+    "plugin_current_semantic_class": {
+      "status": "HISTORICAL_DECLARATION_NOT_REVALIDATED_FOR_NEW_DEV",
+      "historical": "VERIFIED_HYBRID_SNAPSHOT",
+      "current": "SOURCE_NEWER_THAN_LIVE_PLUGIN_UNRELEASED"
+    }
+  },
+  "skill_diff": [
+    {
+      "name": "666clic-dashboard",
+      "source_blob": "acc66f8a063648e0af73acccf58fded5680f0805",
+      "frozen_blob": "01885e83676a21194c46d79a5efa0ed7698d552c"
+    },
+    {
+      "name": "666clic-continuity",
+      "source_blob": "b65f1cfc5365b45b99cb4797113a9eeef35f115e",
+      "frozen_blob": "15527dca4c215a336f2f36e0a698c58a4a790d94"
+    },
+    {
+      "name": "666clic-visual-interface",
+      "source_blob": "543448ea6c80119f085b115f8964f5e17bfe6485",
+      "frozen_blob": "e7cf4ba14ca89d359f3309d06216357fcd05a0f0"
+    }
+  ],
+  "decision": {
+    "historical_provider_archive_recovery_eligible": "YES_AS_RELEASE_ARTIFACT_WITHOUT_CURRENT_SEMANTIC_ADOPTION",
+    "current_runtime_full_parity": "NOT_VERIFIED",
+    "canonical_fingerprint_sha256": null,
+    "canonical_fingerprint_issued": false,
+    "backup_approval_issued": false,
+    "pfs_execution_authorized": false,
+    "reason": "PFS_CONTRACT_REQUIRES_CURRENT_LIVE_SOURCE_SEMANTIC_PARITY_AND_UNAMBIGUOUS_CANONICAL_INPUTS",
+    "no_silent_rollback": true
+  },
+  "pfs": {
+    "handoff_path": "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_PRIVATE_PLUGIN_V0122_BACKUP_REQUEST_20261017.json",
+    "status": "PREPARED_NOT_DELIVERED",
+    "remote_private_vault_write": false
+  },
+  "visual_impact": {
+    "source_newer_valid": true,
+    "live_visual_completion_host_acceptance": "NOT_VERIFIED",
+    "no_new_plugin_release": true
+  },
+  "pet": "PAUSED",
+  "junior": "PRESERVED",
+  "foreign_writes": false,
+  "return_anchor": "FINGERPRINT_4_UNRESOLVED_INPUTS_REQUIRE_NATIVE_SEMANTIC_BOUNDARY_REVIEW_AND_EXACT_LIVE_BINDING_BEFORE_APPROVAL"
+}
