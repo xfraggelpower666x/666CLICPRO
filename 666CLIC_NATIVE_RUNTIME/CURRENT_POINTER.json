@@ -3477,5 +3477,29 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "SEMANTIC_BOUNDARY_REPAIR_TARGET_CI_PASS_LEGACY_6_VS_5_FACET_TEST_AND_PROVIDER_PARITY_OPEN"
+  },
+  "update_2026_10_17_registry_driven_facet_test_repair": {
+    "status": "SIX_FACET_REGISTRY_DRIVEN_SOURCE_CI_PASS_LIVE_PLUGIN_HOST_OPEN",
+    "base_head": "be9d685f812a0c4656005f42cda7cb7051c2f7fb",
+    "prechange_backup": "backup/clic-pre-facet-registry-test-repair-20261017",
+    "body_head_before_pointer": "ba2acc9232b2de523458f5e3326c9e60ec7fde29",
+    "test_path": "666CLIC_NATIVE_RUNTIME/dashboard/visual-lifecycle-continuity.test.mjs",
+    "test_blob": "1c939e811f9aa5e18aa2fc2a2a5df8a7514c6f5e",
+    "facet_registry": "666CLIC_NATIVE_RUNTIME/continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
+    "registry_blob": "f570e3d524a0432d32538f6de2c893bf9c445880",
+    "registered_facets": 6,
+    "registry_contracts_lifecircle_rehydration": "SIX_OF_SIX_CHECKED_BY_SOURCE_TEST",
+    "card_force_ci_run": 39037963687,
+    "card_force_ci_conclusion": "SUCCESS",
+    "pdi_new_valid_evolution": "PRESERVED",
+    "plugin_version": "0.1.22_UNCHANGED",
+    "plugin_published": false,
+    "host_pass": false,
+    "canonical_fingerprint": null,
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "FACET_REGISTRY_TEST_CI_PASS_FINGERPRINT_AND_PROVIDER_HOST_PARITY_PENDING"
   }
 }
