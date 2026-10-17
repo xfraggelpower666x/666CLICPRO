@@ -3421,5 +3421,32 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "CURRENT_SOURCE_VS_LIVE_PLUGIN_SEMANTIC_BOUNDARY_AND_BINDING_UNRESOLVED_NO_BACKUP_APPROVAL"
+  },
+  "update_2026_10_17_semantic_body_boundary": {
+    "status": "DETERMINISTIC_BOUNDARY_CLASSIFIER_SOURCE_CI_PASS_FULL_REAL_HISTORY_PENDING",
+    "base_head": "388def78bf1dc2353dbb4b4e0f118d24cf820706",
+    "body_head_before_pointer": "3971514cc6fa9d771fe58bb5ed433f07c3045a44",
+    "prechange_recovery_branch": "backup/clic-pre-semantic-body-boundary-20261017",
+    "implementation_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs",
+    "implementation_blob": "1630a1dd06a67ec6a2dd65ecbe1aea365e3e0dcf",
+    "test_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs",
+    "test_blob": "e65976aa1becff08c84391ea9f1043eeae477704",
+    "evidence_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BODY_BOUNDARY_CURRENT_2026-10-17.json",
+    "evidence_blob": "c485a3ebac4fccdefaeccce735ed7f60bc6678e4",
+    "governance_blob": "82204a581c64c3ef9e5a6161c50db24a02dc4df2",
+    "ci_run": 39006746090,
+    "ci_conclusion": "SUCCESS",
+    "actual_semantic_body_head": null,
+    "full_history_contiguous_readback": false,
+    "current_runtime_plugin_fingerprint": null,
+    "live_plugin_release": "0.1.22_UNCHANGED",
+    "private_vault_write": false,
+    "pfs_handoff_delivery": "NOT_EVIDENCED",
+    "native_approval": false,
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "FULL_COMMIT_PARENT_PATH_HISTORY_THEN_SEMANTIC_BOUNDARY_AND_SEPARATE_PROVIDER_PARITY"
   }
 }
