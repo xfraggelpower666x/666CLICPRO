@@ -1,0 +1,72 @@
+{
+  "schema": "CLIC_VISUAL_COMPLETION_PROVIDER_PREFLIGHT_CURRENT_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_CI_VERIFIED_RELEASE_WRITE_BLOCKED",
+  "base_head": "0350250ff60c593d6819d1d5f6237b4873ed369d",
+  "prechange_backup": "backup/clic-pre-provider-visual-completion-preflight-20261017",
+  "owner_plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "provider_version": "0.1.22",
+    "provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "release_is_current": true,
+    "metadata_direct_readback": true,
+    "file_list_direct_readback": true,
+    "provider_file_count": 28,
+    "logo_path": "assets/clic-logo.png",
+    "logo_size": 2929725
+  },
+  "archive": {
+    "original_archive_download_url_provided_by_creator": true,
+    "current_archive_bytes_downloaded": false,
+    "current_archive_sha256": "NOT_MEASURED",
+    "current_logo_sha256": "NOT_MEASURED",
+    "historical_archive_evidence": "666CLIC_NATIVE_RUNTIME/recovery/PLUGIN_V0122_PROVIDER_TARGZ_EXACT_CONTENT_PARITY_2026-10-09.json",
+    "historical_source_tar_28_of_28": "PASS_HISTORICAL_ONLY",
+    "historical_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "historical_tar_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "current_identity_to_historical_bytes": "NOT_ATTESTED",
+    "signed_url_persisted": false
+  },
+  "source": {
+    "candidate": "666clic-plugin/candidates/patchfirst-visual-20261017",
+    "existing_guard": "666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.mjs",
+    "preflight": "666CLIC_NATIVE_RUNTIME/plugin_governance/visual-completion-provider-preflight.mjs",
+    "ci_run": 38998980840,
+    "ci_conclusion": "SUCCESS",
+    "source_and_candidate_parity": "PASS_FROM_EXISTING_CI",
+    "old_live_release_skill_parity": "DIFF_EXPECTED_CANDIDATE_NOT_PUBLISHED"
+  },
+  "publication": {
+    "canonical_fingerprint": "OPEN",
+    "approval": "NOT_ISSUED",
+    "provider_update": "NOT_PERFORMED",
+    "fresh_host": "NOT_TESTED",
+    "postpublish_readback": "NOT_APPLICABLE",
+    "gate": "WRITE_BLOCKED",
+    "reason": [
+      "CURRENT_PROVIDER_BYTES_NOT_AVAILABLE",
+      "CURRENT_LOGO_SHA256_NOT_MEASURED",
+      "CURRENT_28_FILE_ATTESTATION_MISSING",
+      "CANONICAL_RUNTIME_FINGERPRINT_UNRESOLVED",
+      "EXPLICIT_NATIVE_APPROVAL_MISSING",
+      "PREPUBLISH_HOST_COMPATIBILITY_NOT_TESTED"
+    ]
+  },
+  "recovery": {
+    "backup_branch": "backup/clic-pre-provider-visual-completion-preflight-20261017",
+    "original_logo_history_preserved": true,
+    "provider_archive_backup": "HISTORICAL_EVIDENCE_ONLY",
+    "no_release_mutation": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
+  },
+  "other_workstreams": [
+    "CORE_DEVELOPMENT",
+    "VISUAL_INTELLIGENCE",
+    "STARBRIDGE",
+    "CODEFORGE_RECOVERY"
+  ],
+  "false_delivery_or_adoption": false,
+  "foreign_writes": false,
+  "return_anchor": "PROVIDER_VISUAL_COMPLETION_RELEASE_PREFLIGHT_SOURCE_CI_PASS_BYTES_FINGERPRINT_APPROVAL_HOST_OPEN"
+}
