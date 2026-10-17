@@ -3173,5 +3173,58 @@
     "junior": "PRESERVED",
     "root_pointer_last": true,
     "return_anchor": "PDI_CORE_CAS_LEDGER_TO_CANDIDATE_SOURCE_CI_PASS_HOST_ADAPTER_PENDING_PEER_PROPOSALS_PREPARED"
+  },
+  "update_2026_10_17_clic_native_github_cas_pdi_reconciliation": {
+    "status": "NATIVE_GITHUB_CAS_PDI_SOURCE_CI_READBACK_VERIFIED_HOST_EVENT_EXECUTION_PENDING",
+    "base_head": "f21a1c7b87cfcee02529a65b439b8c124f785630",
+    "body_head_before_pointer": "d8ad536f0e4de6bf5e272176d0a4f58d42a52ef7",
+    "prechange_backup": "backup/clic-pre-pdi-github-cas-reconciliation-20261017",
+    "github_cas_transport_blob": "978c0beff3b32b9d59afd21969bbdd91c3d0eb41",
+    "github_connector_binding_blob": "cd4f339fdac0dc55395610321633994b124ae54d",
+    "pdi_reconciliation_blob": "e519b04b95788317533ca5076a5ecbc9583a028b",
+    "pdi_persisted_carrier_blob": "c32d470359184f65ef50adf78021b6059dd30f74",
+    "pdi_initial_event_count": 0,
+    "test_mock_reconciliation_blob": "710e7c08dbed0370b6cb8f3abbc1a0d51271e664",
+    "test_tool_binding_blob": "211c1dfbf3f95f95fc09055b92bc5fb7d1739d1b",
+    "rehydration_manifest_blob": "614f1182eb7b1a632990db7a983df274c5ddf419",
+    "workflow_run": 38993492414,
+    "workflow_conclusion": "SUCCESS",
+    "static_guard_run": 38993492496,
+    "static_guard_conclusion": "SUCCESS",
+    "actual_github_tool_functions_available": true,
+    "native_connector_binding_source_integrated": true,
+    "actual_development_event_live_write": false,
+    "actual_pdi_reconciliation_live_write": false,
+    "two_file_atomicity": false,
+    "partial_ledger_resume_source_tested": true,
+    "independent_git_readback_source_tested": true,
+    "fresh_host_verified": false,
+    "no_new_event_engine": true,
+    "no_new_bridge": true,
+    "no_new_router": true,
+    "no_foreign_writes": true,
+    "preserved_sb04_delivery_receipt_blob": "fcb7e2fa75b89d148c8af06fb97009238c685e8f",
+    "three_pdi_peer_proposals": {
+      "LYVRA": {
+        "blob": "1788fed4c2bbebed07a8df42484ac328b422b28b",
+        "status": "PREPARED_NOT_DELIVERED"
+      },
+      "PFS": {
+        "blob": "8254514c5fa04fed635765937fe4293a0c0eac9b",
+        "status": "PREPARED_NOT_DELIVERED"
+      },
+      "STREAM": {
+        "blob": "94abfbfc275cf67810231b83312ada0eb4e4078c",
+        "status": "PREPARED_NOT_DELIVERED"
+      }
+    },
+    "sb05_delivery": "NOT_RECLASSIFIED_WITHOUT_NEW_VALID_BINDER_PROOF",
+    "plugin_live": "0.1.22_UNCHANGED",
+    "plugin_binary_parity": "OPEN",
+    "plugin_host_acceptance": "OPEN",
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "pointer_last": true,
+    "return_anchor": "CORE_CAS_TRANSPORT_PDI_RECONCILIATION_SOURCE_CI_PASS_REAL_AUTHENTICATED_EVENT_HOST_ACCEPTANCE_PENDING"
   }
 }
