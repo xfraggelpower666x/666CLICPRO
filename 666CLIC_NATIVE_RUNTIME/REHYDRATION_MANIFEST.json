@@ -22,6 +22,7 @@
     "facets/parallel_development_intelligence/CURRENT_STATE.json",
     "facets/parallel_development_intelligence/SUB_LIFECIRCLE.md",
     "facets/parallel_development_intelligence/SUB_REHYDRATION.md",
+    "facets/parallel_development_intelligence/core-ledger-evidence-binding.mjs",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
@@ -1271,6 +1272,8 @@
     "plugin_impact": "SEMANTIC_CONTINUITY_REQUIRES_PATCH_FIRST_PROVIDER_GATE",
     "no_foreign_mutation": true,
     "pet": "PAUSED",
-    "junior": "PRESERVED"
+    "junior": "PRESERVED",
+    "core_ledger_binding": "facets/parallel_development_intelligence/core-ledger-evidence-binding.mjs",
+    "core_ledger_binding_gate": "CAS_AND_EXACT_READBACK_VERIFIED_BEFORE_PDI_CANDIDATE_NO_AUTO_WRITE"
   }
 }
