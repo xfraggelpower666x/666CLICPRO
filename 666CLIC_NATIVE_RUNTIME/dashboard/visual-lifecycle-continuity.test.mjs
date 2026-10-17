@@ -37,10 +37,23 @@ test("all native notices remain evidence-bound, not promoted from PREPARED",()=>
   const n=JSON.parse(read(base+"outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json"));
   const audit=checkNoticeRegistry(n);assert.equal(audit.valid,true);assert.equal(audit.prepared,7);assert.equal(audit.delivery_confirmed,0);
 });
-test("all five old facets retain their own subcircles; no sixth facet created",()=>{
+test("all native facets retain registry-governed contracts, subcircles and rehydration",()=>{
   const r=JSON.parse(read(base+"continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json"));
-  assert.equal(r.facets.length,5);
-  for(const f of r.facets){assert.ok(fs.existsSync(base+f.sub_lifecircle));assert.ok(fs.existsSync(base+f.sub_rehydration));}
+  const facets=r.facets;
+  assert.ok(Array.isArray(facets) && facets.length>0,"native facet registry required");
+  assert.equal(facets.length,r.verification.root_facets_found,"current native count must match registry verification");
+  assert.equal(new Set(facets.map(f=>f.id)).size,facets.length,"duplicate native facet IDs forbidden");
+  for(const id of ["repository_bridge","semantic_visual_intelligence","card_intelligence","semantic_force_decision","cross_surface_learning","parallel_development_intelligence"]){
+    assert.ok(facets.some(f=>f.id===id),"preserve valid native facet "+id);
+  }
+  for(const f of facets){
+    assert.equal(f.parent,"WHOLE_666CLIC",f.id+" must remain CLIC-owned");
+    for(const key of ["contract","sub_lifecircle","sub_rehydration"]){
+      assert.equal(typeof f[key],"string",f.id+" missing "+key);
+      assert.ok(f[key].startsWith("facets/"+f.id+"/"),f.id+" invalid "+key+" scope");
+      assert.ok(fs.existsSync(base+f[key]),f.id+" missing "+key+" file");
+    }
+  }
 });
 test("TDH unaffected and plugin source does not claim host acceptance",()=>{
   assert.ok(fs.existsSync(base+"relations/TDH_UNDERSTANDING_CARD_CURRENT_2026-10-09.md"));
