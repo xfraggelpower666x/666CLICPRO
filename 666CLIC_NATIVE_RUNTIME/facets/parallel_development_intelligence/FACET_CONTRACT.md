@@ -63,3 +63,12 @@ PDI_STATE_NE_ROOT_POINTER=TRUE
 SOURCE_MODULE_CI_NE_LIVE_HOST_PROOF=TRUE
 NO_AUTOMATIC_EVENT_SENSOR=TRUE
 NO_PLUGIN_RELEASE_WITHOUT_BINARY_PARITY=TRUE
+
+## PDI working ledger persisted carrier (2026-10-17)
+PERSISTED_STATE=facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json
+PERSISTED_STATE_IS_NOT_FACET_METADATA_CURRENT_STATE_JSON=true
+CAS_TRANSPORT=dashboard/development_progress/github-cas-transport.mjs
+GH_TOOL_BINDING=dashboard/development_progress/github-connector-binding.mjs
+RECONCILER=facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs
+HOST_CONNECTOR_INJECTION_REQUIRED=true
+NO_LIVE_CAS_CLAIM_FROM_SOURCE_TESTS=true
