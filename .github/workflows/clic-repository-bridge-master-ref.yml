@@ -21,3 +21,4 @@ jobs:
         with:
           node-version: '22'
       - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/master-reference.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/binary-github-input-adapter.test.mjs
