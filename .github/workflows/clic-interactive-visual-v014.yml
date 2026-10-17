@@ -5,6 +5,9 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.mjs'
       - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-v014.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json'
       - '.github/workflows/clic-interactive-visual-v014.yml'
   workflow_dispatch:
 permissions:
@@ -24,4 +27,5 @@ jobs:
         run: |
           node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-v014.test.mjs
           node --test 666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.test.mjs
 # Source tests only, not live plugin host dispatch, renderer or external delivery.
