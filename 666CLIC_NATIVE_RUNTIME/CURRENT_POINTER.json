@@ -3288,5 +3288,31 @@
     "no_foreign_writes": true,
     "pointer_last": true,
     "return_anchor": "VISUAL_COMPLETION_PATCHFIRST_SOURCE_PARITY_PASS_PROVIDER_BINARY_AND_HOST_ACCEPTANCE_OPEN"
+  },
+  "update_2026_10_17_provider_visual_completion_prepublish_preflight": {
+    "status": "SOURCE_CI_AND_RELEASE_METADATA_READBACK_VERIFIED_PROVIDER_PUBLISH_WRITE_BLOCKED",
+    "base_head": "0350250ff60c593d6819d1d5f6237b4873ed369d",
+    "body_head_before_pointer": "e19acd0d0a9bd69316ee90503b161b994e4104e3",
+    "prechange_backup": "backup/clic-pre-provider-visual-completion-preflight-20261017",
+    "preflight_module_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/visual-completion-provider-preflight.mjs",
+    "current_gate_carrier_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/VISUAL_COMPLETION_PROVIDER_PREFLIGHT_CURRENT_2026-10-17.json",
+    "current_gate_carrier_blob": "0dd938737f845cee1fd33df6f7b5d9ef62db8456",
+    "preflight_ci_run": 38998980840,
+    "preflight_ci_conclusion": "SUCCESS",
+    "plugin_version": "0.1.22",
+    "plugin_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "provider_archive_url_obtained": true,
+    "provider_archive_bytes_attested": false,
+    "historical_archive_content_parity": "28_OF_28_HISTORICAL",
+    "canonical_fingerprint_verified": false,
+    "native_release_approval_issued": false,
+    "live_plugin_published": false,
+    "fresh_host_verified": false,
+    "plugin_original_logo_preserved": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "no_foreign_writes": true,
+    "pointer_last": true,
+    "return_anchor": "VISUAL_COMPLETION_PROVIDER_PREFLIGHT_SOURCE_PASS_RELEASE_WRITE_BLOCKED_WAIT_CURRENT_ARCHIVE_BYTES_FINGERPRINT_APPROVAL"
   }
 }
