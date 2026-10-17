@@ -17,7 +17,7 @@ export function prepareClicBridgeBinaryInput({bytes,source,sourceVisibility,targ
  if(approval?.explicit_private_archive_transfer!==true||approval?.exact_target_approved!==true)errors.push("EXPLICIT_TRANSFER_APPROVAL_MISSING");
  if(approval?.current_provider_release!=="pluginrel_6ac6f4e703288191b8757f336d33e186")errors.push("PROVIDER_RELEASE_BINDING_MISSING");
  if(approval?.head_verified!==true||!/^([a-f0-9]{40})$/i.test(approval?.head??""))errors.push("REMOTE_HEAD_NOT_VERIFIED");
- if(!errors.length&&hex(bytes)!=="b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6")errors.push("ORIGINAL_SHA256_MISMATCH");
+ if(Buffer.isBuffer(bytes)&&hex(bytes)!=="b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6")errors.push("ORIGINAL_SHA256_MISMATCH");
  if(errors.length)return {status:"WRITE_BLOCKED",errors,bridge:"CLIC_NATIVE_REPOSITORY_BRIDGE",binary_written:false,base64_exposed:false};
  return {status:"READY_FOR_EXISTING_BRIDGE",bridge:"CLIC_NATIVE_REPOSITORY_BRIDGE",binary_written:false,
   request:{repository:target.repository,branch:target.branch,path:target.path,expected_head:approval.head,
