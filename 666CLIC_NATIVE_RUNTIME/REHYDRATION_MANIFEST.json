@@ -26,6 +26,7 @@
     "facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs",
     "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
     "dashboard/development_progress/github-cas-transport.mjs",
+    "dashboard/development_progress/github-connector-binding.mjs",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
@@ -1281,6 +1282,8 @@
     "github_cas_adapter": "dashboard/development_progress/github-cas-transport.mjs",
     "pdi_ledger": "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
     "pdi_reconciliation": "facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs",
-    "persistence_gate": "LEDGER_AND_PDI_SEPARATE_CAS_RECONCILE_NO_AUTOMATIC_ATOMICITY"
+    "persistence_gate": "LEDGER_AND_PDI_SEPARATE_CAS_RECONCILE_NO_AUTOMATIC_ATOMICITY",
+    "github_tool_binding": "dashboard/development_progress/github-connector-binding.mjs",
+    "host_execution": "NOT_PROVEN_GITHUB_TOOLS_ADAPTER_SOURCE_TESTS_ONLY"
   }
 }
