@@ -27,7 +27,7 @@ test("old approval is superseded; new candidate cannot authorize PFS write",()=>
  assert.equal(approval.approval.approved,false);
  assert.equal(approval.approval.authorization_for_pfs_write,false);
  assert.equal(approval.approval.old_v0_1_20_approval,"SUPERSEDED");
- assert.equal(handoff.gates.clic_approval,"PENDING");
+ assert.equal(handoff.gates.clic_approval,"PENDING_NO_EXACT_NATIVE_APPROVAL");
  assert.equal(handoff.gates.fingerprint,"NOT_APPROVED");
  assert.equal(handoff.gates.semantic_parity,"UNRESOLVED");
 });
