@@ -24,7 +24,7 @@ test('incomplete chain, skipped commits and no changed paths fail closed',()=>{
  const a=args();a.commits.splice(1,1);
  assert.equal(evaluate(a).status,'WRITE_BLOCKED');
  const x=args();x.commits[1].paths=[];
- assert.ok(evaluate(x).failures.some(v=>v.startsWith('MISSING_CHANGED_PATHS')));
+ assert.ok(evaluate(x).failures.some(v=>v.startsWith('EMPTY_PATHS_WITHOUT_INDEPENDENT_TREE_EQUALITY')));
 });
 test('unknown scope and potential foreign mutations never silently become governance',()=>{
  const a=args();a.commits[1].paths=['unknown-project/SKILL.md'];
@@ -47,4 +47,31 @@ test('facets and continuity semantic; approval and pointer are governance',()=>{
  assert.equal(classify('666clic-plugin/backup-circle/CLIC_PLUGIN_BACKUP_APPROVAL_CURRENT.json'),'GOVERNANCE');
  assert.equal(classify('666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'),'GOVERNANCE');
  assert.equal(classify('666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs'),'GOVERNANCE');
+});
+
+test('authenticated no-op requires both parent and commit tree, preserving semantic body',()=>{
+ const a=args(); a.commits[1].paths=[]; a.commits[1].tree=A; a.commits[1].parentTree=A;
+ const x=evaluate(a);assert.equal(x.status,'BOUNDARY_VERIFIED_NOT_APPROVAL');assert.equal(x.semantic_body_head,B);
+ const b=args();b.commits[1].paths=[];b.commits[1].tree=A;b.commits[1].parentTree=B;
+ assert.ok(evaluate(b).failures.some(v=>v.startsWith('EMPTY_PATHS_WITHOUT_INDEPENDENT_TREE_EQUALITY')));
+ const d=args();d.commits[1].paths=[];d.commits[1].tree=A;
+ assert.equal(evaluate(d).status,'WRITE_BLOCKED');
+});
+test('relations and unpublished candidates remain semantic development, never provider parity',()=>{
+ assert.equal(classify('666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md'),'SEMANTIC');
+ assert.equal(classify('666clic-plugin/candidates/patchfirst-visual-20261017/skills/666clic-dashboard/SKILL.md'),'SEMANTIC');
+ assert.equal(classify('666clic-plugin/candidates/patchfirst-visual-20261017/PATCH_FIRST_CANDIDATE.json'),'GOVERNANCE');
+ assert.equal(classify('666clic-plugin/candidates/unknown/skills/foo/SKILL.md'),'UNKNOWN');
+ const a=args();a.commits[1].paths=['666clic-plugin/candidates/patchfirst-visual-20261017/skills/666clic-dashboard/SKILL.md'];
+ a.pluginSourceTree=B;
+ const x=evaluate(a);assert.equal(x.status,'WRITE_BLOCKED');assert.equal(x.semantic_body_candidate,C);
+ assert.ok(x.failures.includes('CURRENT_SOURCE_NE_LIVE_PROVIDER'));assert.equal(x.plugin_published,false);
+});
+test('specific current fingerprint governance is nonsemantic without swallowing real current runtime',()=>{
+ assert.equal(classify('666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md'),'GOVERNANCE');
+ assert.equal(classify('666CLIC_NATIVE_RUNTIME/current/CURRENT_STATE.md'),'SEMANTIC');
+ const a=args();a.commits[1].paths=['666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md'];
+ assert.equal(evaluate(a).semantic_body_head,B);
+ a.commits[1].paths.push('666CLIC_NATIVE_RUNTIME/current/CURRENT_STATE.md');
+ assert.equal(evaluate(a).semantic_body_head,C);
 });
