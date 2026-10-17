@@ -3126,5 +3126,52 @@
     "junior": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "PARALLEL_DEVELOPMENT_CORE_FOREGROUND_PEER_STREAMS_REACHABLE_HOST_PLUGIN_GATES_OPEN"
+  },
+  "update_2026_10_17_core_ledger_pdi_evidence_binding": {
+    "status": "SOURCE_CI_READBACK_PASS_CAS_PDI_CANDIDATE_BINDING_HOST_EXECUTION_PENDING",
+    "base_current": "ec210e2d5ff457045de134ad5b3742799b539e37",
+    "prechange_backup": "backup/clic-pre-pdi-core-ledger-evidence-binding-20261017",
+    "body_head_before_pointer": "ee5a88f1dd0dc3367d5b00aa7e885a6623918eb1",
+    "binding_path": "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/core-ledger-evidence-binding.mjs",
+    "binding_blob": "f0199b684c27cc0810c632460f41733915d7333c",
+    "binding_test_blob": "b50890283f8a8c4513301375f5c9be3643cda8dc",
+    "facet_contract_blob": "66dbf85e5805ea546d5dae2f579e594254f18e3f",
+    "rehydration_manifest_blob": "58907a47593c5cfd8e22b01c27ee506306501f8f",
+    "workflow_blob": "0a7a76ab62a5beed286143a69b9bef3b2a1211de",
+    "acceptance_blob": "73ddb6a456acea890ef68a148ccd7708a6252ac1",
+    "ci_run": 38992342334,
+    "ci_conclusion": "SUCCESS",
+    "preexisting_event_and_cas_modules_reused": true,
+    "parallel_workstreams_preserved": 4,
+    "actual_live_cas_host_run": false,
+    "pdi_candidate_persisted": false,
+    "live_event_sensor": false,
+    "fresh_host_pass": false,
+    "plugin_live_release": "0.1.22_UNCHANGED",
+    "plugin_binary_parity": "OPEN",
+    "peer_proposals": {
+      "LYVRA": {
+        "blob": "1788fed4c2bbebed07a8df42484ac328b422b28b",
+        "status": "PREPARED_NOT_DELIVERED"
+      },
+      "666PFS": {
+        "blob": "8254514c5fa04fed635765937fe4293a0c0eac9b",
+        "status": "PREPARED_NOT_DELIVERED"
+      },
+      "666STREAM": {
+        "blob": "94abfbfc275cf67810231b83312ada0eb4e4078c",
+        "status": "PREPARED_NOT_DELIVERED"
+      }
+    },
+    "stream_master_newer_reference_blob": "3def06e8440bd3816fe00cc23f0c6c8e8319271f",
+    "stream_master_newer_evolution_preserved": true,
+    "clic_offline_original_runner": "NOT_VERIFIED_NO_ORIGINAL_EXECUTABLE_RECEIPT",
+    "no_new_bridge": true,
+    "no_new_router": true,
+    "foreign_writes": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "root_pointer_last": true,
+    "return_anchor": "PDI_CORE_CAS_LEDGER_TO_CANDIDATE_SOURCE_CI_PASS_HOST_ADAPTER_PENDING_PEER_PROPOSALS_PREPARED"
   }
 }
