@@ -4,6 +4,8 @@ on:
     branches: [clic-migration-rev79-staging]
     paths:
       - '666CLIC_NATIVE_RUNTIME/facets/repository_bridge/**'
+      - '666clic-plugin/backup-circle/CLIC_V0122_PRIVATE_VAULT_APPROVAL_CANDIDATE_2026-10-17.json'
+      - '666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_PRIVATE_PLUGIN_V0122_BACKUP_REQUEST_20261017.json'
       - '666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-STREAM-MASTER-BRIDGE-REVIEW-20261017.md'
       - '.github/workflows/clic-repository-bridge-master-ref.yml'
   workflow_dispatch:
@@ -22,3 +24,4 @@ jobs:
           node-version: '22'
       - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/master-reference.test.mjs
       - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/binary-github-input-adapter.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs
