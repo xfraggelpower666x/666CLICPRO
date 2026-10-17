@@ -70,3 +70,64 @@ export async function bindStarbridgeReceipt({fetch,fetchFile,envelope,receipt_pa
  }catch(e){return denied("READBACK_FAILED:"+String(e?.message??e))}
 }
 export const STARBRIDGE_NATIVE_TARGETS=targets;
+
+
+// PFS SB05 uses two native receipts with different schemas from the LYVRA delivery receipt.
+// Their existence and integrity are evidence of native READBACK, not a delivery/adoption grant.
+export async function inspectPfsSb05NativeReceipts({fetch,fetchFile,envelope}={}){
+ const refused=reason=>({...denied(reason),native_receipts_verified:false,readback_verified:false});
+ const pfs=targets["666PFS"];
+ const readbackPath="handoff/receipts/CLIC-STARBRIDGE-SB05-20261017-01_PFS_READBACK.json";
+ const additivePath="handoff/receipts/CLIC-STARBRIDGE-SB05-20261017-01_PFS_ADDITIVE_RECEIPT.json";
+ const envelopePath="666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json";
+ if(typeof fetch!=="function"||typeof fetchFile!=="function")return refused("TRUSTED_CONNECTOR_REQUIRED");
+ if(!validateStarbridgeEnvelope(envelope).valid||envelope.status!=="PREPARED"||
+    envelope.target_system!=="666PFS"||envelope.source_system!=="666CLIC"||
+    envelope.source_repository!==CLIC_REPO||
+    envelope.handoff_id!=="CLIC-STARBRIDGE-SB05-20261017-01"||
+    envelope.source_path!=="666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-PFS-REPO-MIGRATION-CONTEXT-20261005-01.json")
+    return refused("INVALID_SB05_NATIVE_ENVELOPE");
+ try{
+  const [sourceHead,pfsHead]=await Promise.all([
+   readHead(fetch,CLIC_REPO,CLIC_BRANCH),readHead(fetch,pfs.repo,pfs.branch)
+  ]);
+  const [pinned,live,peer]=await Promise.all([
+   readCommitted(fetch,fetchFile,CLIC_REPO,envelope.source_head,[envelope.source_path]),
+   readCommitted(fetch,fetchFile,CLIC_REPO,sourceHead,[envelope.source_path,envelopePath]),
+   readCommitted(fetch,fetchFile,pfs.repo,pfsHead,[readbackPath,additivePath])
+  ]);
+  const context=pinned[envelope.source_path],liveContext=live[envelope.source_path];
+  const env=live[envelopePath],readback=peer[readbackPath],additive=peer[additivePath];
+  if(context.sha!==liveContext.sha)return refused("SOURCE_CONTEXT_SUPERSEDED");
+  const rb=JSON.parse(readback.content),ad=JSON.parse(additive.content);
+  if(rb.schema!=="PFS_NATIVE_STARBRIDGE_READBACK_RECEIPT_V1"||
+     ad.schema!=="PFS_NATIVE_STARBRIDGE_ADDITIVE_RECEIPT_V1"||
+     rb.handoff_id!==envelope.handoff_id||ad.handoff_id!==envelope.handoff_id||
+     rb.source_system!=="666CLIC"||ad.source_system!=="666CLIC"||
+     rb.receiver_system!=="666PFS-CORE-001"||ad.target_system!=="666PFS-CORE-001"||
+     rb.source_repository!==CLIC_REPO||
+     rb.source_origin_commit!==envelope.source_head||ad.source_head!==envelope.source_head||
+     rb.source_context_path!==envelope.source_path||ad.source_path!==envelope.source_path||
+     rb.source_context_blob!==context.sha||ad.source_blob!==context.sha||
+     rb.source_envelope_path!==envelopePath||ad.envelope_path!==envelopePath||
+     rb.source_envelope_blob!==env.sha||ad.envelope_blob!==env.sha||
+     ad.previous_receipt_path!==readbackPath||ad.previous_receipt_blob!==readback.sha||
+     !SHA.test(rb.source_current_head??"")||!SHA.test(ad.recipient_head??""))
+    return refused("SB05_NATIVE_RECEIPT_PROVENANCE_MISMATCH");
+  const [afterSource,afterPfs]=await Promise.all([
+   readHead(fetch,CLIC_REPO,CLIC_BRANCH),readHead(fetch,pfs.repo,pfs.branch)
+  ]);
+  if(afterSource!==sourceHead||afterPfs!==pfsHead)return refused("CONCURRENT_HEAD_CHANGE");
+  if(rb.delivery_verified!==false||ad.delivery_verified!==false||
+     rb.adoption_verified!==false||ad.adoption_verified!==false||
+     rb.host_verified!==false||ad.host_verified!==false)
+    return refused("UNSUPPORTED_NATIVE_PROMOTION_CLAIM");
+  return {status:"NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING",
+   native_receipts_verified:true,readback_verified:true,delivery_verified:false,
+   adoption_verified:false,host_verified:false,may_mutate_foreign:false,
+   handoff_id:envelope.handoff_id,source_head:sourceHead,recipient_head:pfsHead,
+   source_context_blob:context.sha,envelope_blob:env.sha,
+   readback_blob:readback.sha,additive_blob:additive.sha,
+   reason:"PFS_NATIVE_READBACK_RECEIPTS_ARE_NOT_DELIVERY_OR_ADOPTION_PROOF"};
+ }catch(e){return refused("READBACK_FAILED:"+String(e?.message??e))}
+}
