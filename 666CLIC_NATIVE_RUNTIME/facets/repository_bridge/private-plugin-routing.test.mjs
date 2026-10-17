@@ -29,7 +29,7 @@ test("old approval is superseded; new candidate cannot authorize PFS write",()=>
  assert.equal(approval.approval.old_v0_1_20_approval,"SUPERSEDED");
  assert.equal(handoff.gates.clic_approval,"PENDING_NO_EXACT_NATIVE_APPROVAL");
  assert.equal(handoff.gates.fingerprint,"UNRESOLVED_NO_CANONICAL_DIGEST");
- assert.equal(handoff.gates.semantic_parity,"UNRESOLVED");
+ assert.equal(handoff.gates.semantic_parity,"LIVE_V0122_VS_NEWER_REPO_SOURCE_NOT_EQUAL");
 });
 test("handoff cannot fake delivery, storage, host or foreign activation",()=>{
  assert.equal(handoff.status,"PREPARED_NOT_DELIVERED_NOT_APPROVED");
