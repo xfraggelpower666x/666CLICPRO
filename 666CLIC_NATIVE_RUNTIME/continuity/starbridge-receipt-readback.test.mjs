@@ -36,3 +36,23 @@ test("reject missing connector and forged boolean evidence",async()=>{const r=aw
 test("PFS SB05 native channel is recognized but requires independent readback",async()=>{const e={...envelope,handoff_id:"CLIC-PFS-TEST",target_system:"666PFS",source_path:"666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-PFS-TEST.json"};const r=await bindStarbridgeReceipt({...connector(),envelope:e,receipt_path:"handoff/CLIC-PFS-TEST-RECEIPT.json"});assert.equal(r.status,"AWAIT_RECEIPT");assert.equal(r.delivery_verified,false)});
 
 test("accept immutable pinned source across later CLIC commits without claiming adoption",async()=>{const c=connector();const base=c.fetch;c.fetch=async x=>x.url.includes("/branches/"+ "clic-migration-rev79-staging")?{result:{content:JSON.stringify({commit:{sha:"d".repeat(40)}})}}:base(x);const r=await bindStarbridgeReceipt({...c,envelope,receipt_path:receiptPath});assert.equal(r.status,"DELIVERED_EVIDENCED");assert.equal(r.source_head,SRC_HEAD);assert.equal(r.observed_source_head,"d".repeat(40));assert.equal(r.adoption_verified,false)});
+
+test("persisted SB04 reconciliation pins independent receiver receipt without auto-adoption",async()=>{
+ const {readFileSync}=await import("node:fs");
+ const {fileURLToPath}=await import("node:url");
+ const {resolve,dirname}=await import("node:path");
+ const own=dirname(fileURLToPath(import.meta.url));
+ const evidence=JSON.parse(readFileSync(resolve(own,"../inbox/LYVRA/receipts/CLIC-STARBRIDGE-SB04-20261017-01-DELIVERY-READBACK.json"),"utf8"));
+ assert.equal(evidence.classification,"DELIVERED_EVIDENCED");
+ assert.equal(evidence.handoff_id,"CLIC-STARBRIDGE-SB04-20261017-01");
+ assert.equal(evidence.source_blob_sha,"a9490b43dfb2ad38f576210c548c262bf49d821a");
+ assert.equal(evidence.envelope_blob_sha,"2f4bc9374a29c7ec4fe6f73ea224cee616dd7211");
+ assert.equal(evidence.recipient_blob_sha,"498b52951597d4033b803460703349b10d4bcad4");
+ assert.equal(evidence.recipient_observed_head,"4a16d994d06f5b19e61d0fa1bd921fdd8d4e4e2e");
+ assert.equal(evidence.verification.source_tree_blob_equals_live_tree_blob,true);
+ assert.equal(evidence.verification.provenance_fields_match,true);
+ assert.equal(evidence.native_adoption_verified,false);
+ assert.equal(evidence.host_verified,false);
+ assert.equal(evidence.automatic_transport_verified,false);
+ assert.equal(evidence.other_peer_sb05,"NOT_VERIFIED");
+});
