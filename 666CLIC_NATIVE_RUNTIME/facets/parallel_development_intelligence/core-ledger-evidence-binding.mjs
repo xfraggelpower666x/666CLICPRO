@@ -50,6 +50,18 @@ export async function bindVerifiedCoreLedger({event,pdi_state,transport,proof}={
    same_lineage_verified:proof.same_lineage_verified===true,
    valid_newer_evolution:proof.valid_newer_evolution===true,
    completion_readback:completion&&proof.completion_readback===true});
+ // Canonical ledger tasks are readback verified by the existing CAS reducer.
+ // Preserve unrelated PDI work: if a previously tracked core task disappears, fail closed.
+ const canonicalTasks=persisted.ledger.tasks??[];
+ if(!Array.isArray(canonicalTasks)||canonicalTasks.some(t=>!t||!t.id||!Array.isArray(t.evidence)||!t.evidence.length||
+   (t.status==="DONE"&&t.completion_verified!==true)))return fail("LEDGER_TASK_PROVENANCE_UNVERIFIED","READBACK_PENDING");
+ const ids=new Set(canonicalTasks.map(t=>t.id));
+ if(core.tasks.some(t=>!ids.has(t.id)))return fail("CORE_TASK_SUPERSESSION_UNVERIFIED","CONFLICT_QUARANTINE");
+ candidate.streams.find(s=>s.id==="CORE_DEVELOPMENT").tasks=canonicalTasks.map(t=>({
+   id:t.id,status:t.status,completion_verified:t.status==="DONE"&&t.completion_verified===true,
+   evidence_ref:t.evidence.join("; "),source_revision:event.source_revision}));
+ if(action==="COMPLETE"&&canonicalTasks.some(t=>t.status!=="DONE"||t.completion_verified!==true))
+   return fail("UNVERIFIED_LEDGER_TASK_COMPLETION","READBACK_PENDING");
  const present=preparePresenterDevelopment(persisted.ledger);
  const progress=renderProgress(present);
  return {status:"PDI_CANDIDATE_READBACK_BOUND",source_readback:true,ledger_persisted:true,
