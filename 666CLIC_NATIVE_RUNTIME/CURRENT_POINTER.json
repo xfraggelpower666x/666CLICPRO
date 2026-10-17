@@ -3226,5 +3226,37 @@
     "junior": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "CORE_CAS_TRANSPORT_PDI_RECONCILIATION_SOURCE_CI_PASS_REAL_AUTHENTICATED_EVENT_HOST_ACCEPTANCE_PENDING"
+  },
+  "update_2026_10_17_visual_completion_guard": {
+    "status": "CLIC_NATIVE_FIVE_CHOICE_COMPLETION_SOURCE_CI_VERIFIED_FRESH_HOST_PENDING",
+    "base_head": "dc37796d29c3c1be8397594394250165981e7a4a",
+    "body_head_before_pointer": "868e949f9d81ca50d2c3df7284e29c6d44eae947",
+    "backup": "backup/clic-pre-visual-completion-guard-20261017",
+    "guard_blob": "50bf36f64f9064abaf9f8cec2a00a65a1751d9ee",
+    "test_blob": "f7fa747669773edf9d455075e50052c1faf44100",
+    "contract_blob": "84b78566549bd984626cb27e01dbc86da2c9b5c7",
+    "manifest_blob": "c72a6d58532625b726ad754955f538f46475e672",
+    "ci_run": 38994302743,
+    "ci_conclusion": "SUCCESS",
+    "five_options": [
+      "WHOLE_CLIC",
+      "INTEGRATION_AUDIT",
+      "SYSTEM_CARDS",
+      "VISUAL_INTELLIGENCE",
+      "DEVELOPMENT"
+    ],
+    "development_topics": "VERIFIED_READ_ONLY_NO_AUTO_UPDATE",
+    "no_new_visual_engine": true,
+    "no_artificial_revision": true,
+    "live_clic_provider_plugin": "0.1.22_UNCHANGED",
+    "second_clic_provider_plugin": "NOT_VERIFIED",
+    "patchfirst_source_candidate": "NOT_LIVE_RELEASE",
+    "plugin_binary_parity": "OPEN",
+    "fresh_host_pass": false,
+    "foreign_writes": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "pointer_last": true,
+    "return_anchor": "VISUAL_COMPLETION_GUARD_SOURCE_CI_PASS_HOST_AND_PLUGIN_PARITY_PENDING"
   }
 }
