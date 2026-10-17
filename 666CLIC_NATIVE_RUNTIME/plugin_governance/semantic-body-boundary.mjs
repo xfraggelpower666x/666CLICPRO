@@ -1,16 +1,18 @@
 // Existing CLIC runtime/plugin fingerprint governance: deterministic, fail-closed Git history boundary.
 // Does not grant approval or publish a plugin; it classifies an independently fetched contiguous chain.
-import {createHash} from 'node:crypto';
 const SH=/^[a-f0-9]{40}$/i;
 const norm=p=>typeof p==='string'&&!p.startsWith('/')&&!p.includes('..')&&!p.includes('\\\\')?p:null;
 const isGovernance=p=>p==='666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/plugin_governance/')
+ ||p==='666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md'
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/recovery/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/outbox/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/inbox/')
  ||p.startsWith('666clic-plugin/backup-circle/')
  ||p.startsWith('666clic-plugin/binary-backups/')
  ||p.startsWith('666clic-plugin/releases/')
+ ||p==='666clic-plugin/candidates/patchfirst-visual-20261017/PATCH_FIRST_CANDIDATE.json'
+ ||p.startsWith('666clic-plugin/candidates/patchfirst-visual-20261017/')&&p.endsWith('.test.mjs')
  ||p.startsWith('.github/workflows/')
  ||p.startsWith('tests/')
  ||p.endsWith('.test.mjs');
@@ -20,6 +22,8 @@ const isSemantic=p=>p.startsWith('666CLIC_NATIVE_RUNTIME/dashboard/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/current/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/learning/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/events/')
+ ||p.startsWith('666CLIC_NATIVE_RUNTIME/relations/')
+ ||p.startsWith('666clic-plugin/candidates/patchfirst-visual-20261017/skills/')
  ||p.startsWith('666clic-plugin/source/')
  ||p==='666clic-plugin/current/PLUGIN_CURRENT.json'
  ||p==='666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json';
@@ -37,7 +41,12 @@ export function evaluateSemanticBoundary({base,head,commits,pluginSourceTree,liv
  let parent=base,lastSemantic=null,semantic=0,governance=0;
  for(const [i,c] of (Array.isArray(commits)?commits:[]).entries()){
   if(!SH.test(c?.sha??'')||c?.parent!==parent)failures.push('BROKEN_OR_MISSING_PARENT_CHAIN_AT_'+i);
-  if(!Array.isArray(c?.paths)||!c.paths.length)failures.push('MISSING_CHANGED_PATHS_AT_'+i);
+  if(!Array.isArray(c?.paths))failures.push('MISSING_CHANGED_PATHS_AT_'+i);
+  // A no-op needs independent parent/tree equality; an empty API response is never enough.
+  if(Array.isArray(c?.paths)&&c.paths.length===0){
+   if(!SH.test(c?.tree??'')||!SH.test(c?.parentTree??'')||c.tree!==c.parentTree)
+    failures.push('EMPTY_PATHS_WITHOUT_INDEPENDENT_TREE_EQUALITY_AT_'+i);
+  }
   const classes=(Array.isArray(c?.paths)?c.paths:[]).map(classifyClicPath);
   if(classes.includes('UNKNOWN'))failures.push('UNCLASSIFIED_CHANGE_AT_'+i);
   if(classes.includes('SEMANTIC')){lastSemantic=c.sha;semantic++;}else if(classes.length&&!classes.includes('UNKNOWN'))governance++;
