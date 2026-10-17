@@ -23,6 +23,9 @@
     "facets/parallel_development_intelligence/SUB_LIFECIRCLE.md",
     "facets/parallel_development_intelligence/SUB_REHYDRATION.md",
     "facets/parallel_development_intelligence/core-ledger-evidence-binding.mjs",
+    "facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs",
+    "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
+    "dashboard/development_progress/github-cas-transport.mjs",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
@@ -1274,6 +1277,10 @@
     "pet": "PAUSED",
     "junior": "PRESERVED",
     "core_ledger_binding": "facets/parallel_development_intelligence/core-ledger-evidence-binding.mjs",
-    "core_ledger_binding_gate": "CAS_AND_EXACT_READBACK_VERIFIED_BEFORE_PDI_CANDIDATE_NO_AUTO_WRITE"
+    "core_ledger_binding_gate": "CAS_AND_EXACT_READBACK_VERIFIED_BEFORE_PDI_CANDIDATE_NO_AUTO_WRITE",
+    "github_cas_adapter": "dashboard/development_progress/github-cas-transport.mjs",
+    "pdi_ledger": "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
+    "pdi_reconciliation": "facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs",
+    "persistence_gate": "LEDGER_AND_PDI_SEPARATE_CAS_RECONCILE_NO_AUTOMATIC_ATOMICITY"
   }
 }
