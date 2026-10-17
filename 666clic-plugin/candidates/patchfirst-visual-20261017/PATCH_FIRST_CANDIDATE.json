@@ -1,0 +1,42 @@
+{
+  "schema": "CLIC_PATCH_FIRST_VISUAL_CANDIDATE_V1",
+  "status": "SOURCE_ONLY_BINARY_AND_PROVIDER_RELEASE_BLOCKED",
+  "owner": "666CLIC",
+  "base_head": "66bbd8d1ca43c9e2c88dede03ff0b6c31f7c24dd",
+  "prechange_backup": "backup/clic-pre-patchfirst-visual-skills-20261017",
+  "candidate_root": "666clic-plugin/candidates/patchfirst-visual-20261017",
+  "target_plugin": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "observed_live_version": "0.1.22",
+  "observed_live_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "three_source_skills": [
+    {
+      "name": "666clic-visual-interface",
+      "source_blob": "6cb9d1ea84cc5bd569a39e80c7bbbf88813f613b",
+      "frozen_release_blob": "e7cf4ba14ca89d359f3309d06216357fcd05a0f0"
+    },
+    {
+      "name": "666clic-dashboard",
+      "source_blob": "7dff805a88f65e09fbc93495de14a0b76e34aba9",
+      "frozen_release_blob": "01885e83676a21194c46d79a5efa0ed7698d552c"
+    },
+    {
+      "name": "666clic-continuity",
+      "source_blob": "a90738e57be6368cd5e50cc92eaaa979752e4c62",
+      "frozen_release_blob": "15527dca4c215a336f2f36e0a698c58a4a790d94"
+    }
+  ],
+  "governance": {
+    "native_approval": "NOT_ISSUED",
+    "provider_original_binary": "NOT_AVAILABLE",
+    "asset_logo_sha256": "UNKNOWN",
+    "full_plugin_parity": "NOT_PROVEN",
+    "provider_release": "NOT_PUBLISHED",
+    "fresh_host_acceptance": "NOT_TESTED",
+    "no_write_to_frozen_release": true,
+    "no_foreign_mutation": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "sb04_sb05": "OPEN"
+  },
+  "next": "TARGETED_CANDIDATE_TESTS_AND_DIRECT_READBACK_THEN_POINTER_LAST;PROVIDER_PATCH_FIRST_REQUIRES_BINARY_AND_APPROVAL"
+}
