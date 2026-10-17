@@ -14,6 +14,7 @@ export async function bindVerifiedCoreLedger({event,pdi_state,transport,proof}={
  if(proof?.source_commit_verified!==true||proof?.source_evidence_verified!==true||
  !SHA.test(proof?.base_head??"")||!SHA.test(proof?.expected_ledger_blob??""))
   return fail("INDEPENDENT_SOURCE_AND_BASE_PROOF_REQUIRED");
+ try{
  const base=await transport.readHead();
  if(base!==proof.base_head)return fail("CONCURRENT_HEAD_CHANGE","CONFLICT_QUARANTINE");
  const current=await transport.readCurrent(path);
