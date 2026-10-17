@@ -152,7 +152,7 @@ test("peer receipt source and recipient proofs are independent of caller flags",
  assert.equal(classifyPeerReceiptProvenance({receipt:{...receipt,source_head:"f".repeat(40)},source,recipient}).status,"CONFLICT_QUARANTINE");
 });
 
-test("source checkout verifier attests actual 97 committed manifest carriers in GitHub CI",{skip:!process.env.GITHUB_SHA},()=>{
+test("source checkout verifier attests current committed manifest carriers in GitHub CI",{skip:!process.env.GITHUB_SHA},()=>{
  const r=verifyClicCheckout({expectedHead:process.env.GITHUB_SHA});
  assert.equal(r.status,"SOURCE_READBACK_VERIFIED",JSON.stringify(r));
  assert.equal(r.carriers,97);
