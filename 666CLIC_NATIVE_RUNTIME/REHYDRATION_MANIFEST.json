@@ -97,6 +97,7 @@
     "dashboard/GPT_NATIVE_VISUAL_HOST_ACCEPTANCE_2026-10-09.md",
     "dashboard/unified-visual-header.test.mjs",
     "dashboard/verified-visual-presenter.mjs",
+    "dashboard/visual-completion-guard.mjs",
     "dashboard/verified-visual-presenter.test.mjs",
     "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
     "plugin_governance/NEON_CARD_FORCE_HOST_PARITY_READBACK_2026-10-09.json",
@@ -1285,5 +1286,22 @@
     "persistence_gate": "LEDGER_AND_PDI_SEPARATE_CAS_RECONCILE_NO_AUTOMATIC_ATOMICITY",
     "github_tool_binding": "dashboard/development_progress/github-connector-binding.mjs",
     "host_execution": "NOT_PROVEN_GITHUB_TOOLS_ADAPTER_SOURCE_TESTS_ONLY"
+  },
+  "clic_visual_completion_guard_2026_10_17": {
+    "status": "SOURCE_GUARD_CANDIDATE_HOST_ACCEPTANCE_PENDING",
+    "contract": "facets/semantic_visual_intelligence/VISUAL_COMPLETION_CONTRACT.md",
+    "guard": "dashboard/visual-completion-guard.mjs",
+    "choices": [
+      "WHOLE_CLIC",
+      "INTEGRATION_AUDIT",
+      "SYSTEM_CARDS",
+      "VISUAL_INTELLIGENCE",
+      "DEVELOPMENT"
+    ],
+    "post_rehydration_only": true,
+    "fifth_choice_read_only": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "plugin_release": "UNCHANGED"
   }
 }
