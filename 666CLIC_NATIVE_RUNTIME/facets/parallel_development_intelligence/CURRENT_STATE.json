@@ -1,0 +1,52 @@
+{
+  "schema": "CLIC_PDI_NATIVE_FACET_STATE_V1",
+  "facet": "PARALLEL_DEVELOPMENT_INTELLIGENCE",
+  "authority": "WHOLE_666CLIC",
+  "status": "SOURCE_REGISTERED_NOT_FRESH_HOST_ACCEPTED",
+  "streams": [
+    {
+      "id": "CORE_DEVELOPMENT",
+      "status": "READY",
+      "work": "Event ingestion, causal learning, persistent development position",
+      "return_anchor": "CORE_NATIVE_DEVELOPMENT_LAST_VERIFIED",
+      "evidence_refs": [
+        "dashboard/development_progress/development-event-adapter.mjs"
+      ]
+    },
+    {
+      "id": "VISUAL_INTELLIGENCE",
+      "status": "WAITING",
+      "work": "Visual V01.4 host evidence and plugin impact",
+      "return_anchor": "VISUAL_V014_SOURCE_HOST_PARITY_OPEN",
+      "evidence_refs": [
+        "facets/semantic_visual_intelligence/FACET_CONTRACT.md"
+      ]
+    },
+    {
+      "id": "STARBRIDGE",
+      "status": "WAITING",
+      "work": "SB04 delivered evidenced; SB05 peer-native receipt pending",
+      "return_anchor": "SB05_NATIVE_RECEIPT_COMPATIBILITY_OPEN",
+      "evidence_refs": [
+        "inbox/LYVRA/receipts/CLIC-STARBRIDGE-SB04-20261017-01-DELIVERY-READBACK.json",
+        "outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json"
+      ]
+    },
+    {
+      "id": "CODEFORGE_RECOVERY",
+      "status": "WAITING",
+      "work": "Bridge transport original host execution and binary-plugin parity",
+      "return_anchor": "BRIDGE_HOST_AND_PLUGIN_BINARY_PROOF_OPEN",
+      "evidence_refs": [
+        "facets/repository_bridge/FACET_CONTRACT.md"
+      ]
+    }
+  ],
+  "automatic_execution": false,
+  "auto_foreign_mutation": false,
+  "root_pointer_write": false,
+  "pet": "PAUSED",
+  "junior": "PRESERVED",
+  "plugin": "PATCH_FIRST_IMPACT_PENDING_HOST_NOT_VERIFIED",
+  "return_anchor": "PDI_CORE_DEVELOPMENT_FOREGROUND_PEER_WORKSTREAMS_REACHABLE"
+}
