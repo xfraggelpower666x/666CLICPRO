@@ -2981,5 +2981,25 @@
     "no_new_router": true,
     "pointer_last": true,
     "return_anchor": "SB04_SB05_GITHUB_BLOB_READBACK_HELPER_READY_NEXT_REAL_NATIVE_RECEIPT_BINDING_WHEN_AVAILABLE"
+  },
+  "new_chat_2026_10_17_sb04_sb05": {
+    "status": "PREPARED_NOT_FRESH_HOST_ACCEPTED",
+    "verified_source_head": "ee31c2ccd0f04f0bf9f22583da51797a8f5a0699",
+    "body_head_before_pointer": "79a57d7dd32059d72d9ab15f89ad5df760380ee9",
+    "prechange_backup": "backup/clic-pre-newchat-sb04sb05-20261017",
+    "handoff": "666CLIC_NATIVE_RUNTIME/continuity/NEW_CHAT_CURRENT.json",
+    "handoff_blob": "5f3db10c76b93281bd593ea6363b0345b1074d72",
+    "manifest_blob": "efd8c584780a58b60af38ab022d43fc08d133d09",
+    "latest_sb04_sb05_ci": 38987677806,
+    "source_ci": "SUCCESS",
+    "next": "REAL_NATIVE_PEER_RECEIPT_CONNECTOR_E2E_OR_NEXT_EXECUTABLE_CLIC_WORK",
+    "check_policy": "MAX_3_CHECKS_THEN_LEARNING_BY_DOING_NO_RESTART",
+    "plugin": "0.1.22_LIVE_SOURCE_CANDIDATE_RELEASE_BLOCKED",
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "starbridge": "SB04_SB05_DELIVERY_ADOPTION_HOST_OPEN",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "return_anchor": "NEW_CHAT_LATEST_VALID_SB04_SB05_SOURCE_PASS_FRESH_HOST_ACCEPTANCE_PENDING"
   }
 }
