@@ -4,6 +4,8 @@ on:
     branches: [clic-migration-rev79-staging]
     paths:
       - '666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLETION_CONTRACT.md'
       - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-v014.test.mjs'
       - '666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.mjs'
       - '666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.test.mjs'
