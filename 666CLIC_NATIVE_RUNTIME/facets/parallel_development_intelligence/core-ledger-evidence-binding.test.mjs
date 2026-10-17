@@ -27,6 +27,8 @@ test("readback-bound Core candidate preserves other streams, anchors and outstan
  assert.equal(result.status,"PDI_CANDIDATE_READBACK_BOUND");
  assert.equal(result.ledger_blob_sha,newBlob);
  assert.equal(result.presenter.status,"ACTIVE");assert.equal(result.progress.percent,0);
+ assert.equal(result.development_position.streams[0].task_count,1);
+ assert.equal(result.pdi_candidate.streams[0].tasks[0].id,"T1");
  assert.equal(result.development_position.streams[0].status,"ACTIVE");
  assert.equal(result.pdi_candidate.streams[0].return_anchor,"RETURN_CORE");
  assert.equal(result.pdi_candidate.streams[0].obligations.length,1);
@@ -60,4 +62,12 @@ test("no arbitrary prewritten completion/foreign workstream promotion",async()=>
  const x=setup();
  const event={...evt,source_revision:"z".repeat(40)};
  assert.equal((await bindVerifiedCoreLedger({event,pdi_state:state(),...x})).status,"WRITE_BLOCKED");
+});
+
+test("ledger cannot silently drop existing PDI Core task",async()=>{
+ const p=state();p.streams[0].tasks.push({id:"OLDER_TASK",status:"OPEN",evidence_ref:"older/evidence"});
+ const x=setup();const r=await bindVerifiedCoreLedger({event:evt,pdi_state:p,...x});
+ assert.equal(r.status,"CONFLICT_QUARANTINE");
+ assert.equal(r.reason,"CORE_TASK_SUPERSESSION_UNVERIFIED");
+ assert.equal(r.pdi_committed,false);
 });
