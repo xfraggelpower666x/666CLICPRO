@@ -1,0 +1,56 @@
+{
+  "schema": "CLIC_PDI_STATE_V1",
+  "authority": "WHOLE_666CLIC",
+  "streams": [
+    {
+      "id": "CORE_DEVELOPMENT",
+      "status": "READY",
+      "return_anchor": "CORE_NATIVE_DEVELOPMENT_LAST_VERIFIED",
+      "evidence_refs": [
+        "dashboard/development_progress/development-event-adapter.mjs"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "VISUAL_INTELLIGENCE",
+      "status": "WAITING",
+      "return_anchor": "VISUAL_V014_SOURCE_HOST_PARITY_OPEN",
+      "evidence_refs": [
+        "facets/semantic_visual_intelligence/FACET_CONTRACT.md"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "STARBRIDGE",
+      "status": "WAITING",
+      "return_anchor": "SB05_NATIVE_RECEIPT_COMPATIBILITY_OPEN",
+      "evidence_refs": [
+        "outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "CODEFORGE_RECOVERY",
+      "status": "WAITING",
+      "return_anchor": "BRIDGE_HOST_AND_PLUGIN_BINARY_PROOF_OPEN",
+      "evidence_refs": [
+        "facets/repository_bridge/FACET_CONTRACT.md"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    }
+  ],
+  "processed_event_ids": [],
+  "no_automatic_foreign_mutation": true
+}
