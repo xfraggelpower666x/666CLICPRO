@@ -1,0 +1,67 @@
+{
+  "schema": "CLIC_PFS_PRIVATE_PLUGIN_BACKUP_HANDOFF_V1",
+  "owner": "666CLIC",
+  "recipient": "666PFS_CSM",
+  "status": "PREPARED_NOT_DELIVERED_NOT_APPROVED",
+  "handoff_class": "EXACT_RELEASE_BACKUP_INTAKE_CANDIDATE",
+  "source_repository": "xfraggelpower666x/666CLICPRO",
+  "source_branch": "clic-migration-rev79-staging",
+  "source_current_at_intake": "3a488bae2321dd54b84238b37eb94adea8cc0ea8",
+  "native_approval_candidate": "666clic-plugin/backup-circle/CLIC_V0122_PRIVATE_VAULT_APPROVAL_CANDIDATE_2026-10-17.json",
+  "source_visibility": "PUBLIC_DEVELOPMENT_EVIDENCE_ONLY",
+  "plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "creator_scope": "PRIVATE"
+  },
+  "archive": {
+    "name": "workspace-plugin-p0fda2cg.tar.gz",
+    "bytes": 2941803,
+    "sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "file_count": 28,
+    "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "original_bytes_stored_in_public_repo": false
+  },
+  "target": {
+    "repo": "xfraggelpower666x/LYVRA-PRIVATE-VAULT",
+    "visibility": "PRIVATE",
+    "branch": "main",
+    "contract": "contracts/666PFS_COUPLED_LYVRA_CLIC_PLUGIN_BACKUP_CIRCLE.md",
+    "contract_blob": "a0ffb68c23443af400dad0f67c970499caf537b3",
+    "path_root": "backups/666PFS/PLUGIN_BACKUP_CIRCLE/artifacts/CLIC/",
+    "executor": "666PFS_ONLY",
+    "vault_head_at_read": "64be51ed9c6683c9165423aaf8747d4d94657ee9"
+  },
+  "pfs_requested_sequence": [
+    "REHYDRATE_OWN_NATIVE_CURRENT",
+    "VERIFY_FRESH_VAULT_CONTRACT_AND_TARGET_SCOPE",
+    "AWAIT_FRESH_EXACT_CLIC_NATIVE_APPROVAL",
+    "RECHECK_LIVE_RELEASE_SNAPSHOT_PARITY_AND_RUNTIME_FINGERPRINT",
+    "VERIFY_REAL_ORIGINAL_BYTES_AND_SHA256",
+    "EXECUTE_PRIVATE_WRITE_ONLY_IF_OWN_NATIVE_TRIGGER_AUTHORIZES",
+    "INDEPENDENT_REMOTE_COMMIT_TREE_BLOB_BYTES_READBACK",
+    "RETURN_NATIVE_PER_LEG_RECEIPT"
+  ],
+  "gates": {
+    "clic_approval": "PENDING",
+    "semantic_parity": "UNRESOLVED",
+    "fingerprint": "NOT_APPROVED",
+    "pfs_native_intake": "NOT_EXECUTED",
+    "vault_write": "NOT_PERFORMED",
+    "delivery": "NOT_EVIDENCED",
+    "adoption": "NOT_EVIDENCED",
+    "fresh_host": "NOT_TESTED"
+  },
+  "separation": {
+    "lyvra_autoactivation": false,
+    "pfs_autoactivation": false,
+    "foreign_writes": false,
+    "private_archive_publication": false,
+    "plugin_provider_publication": false,
+    "new_bridge": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
+  },
+  "return_anchor": "AWAIT_CLIC_FINGERPRINT_APPROVAL_AND_INDEPENDENT_PFS_NATIVE_BACKUP_EXECUTION"
+}
