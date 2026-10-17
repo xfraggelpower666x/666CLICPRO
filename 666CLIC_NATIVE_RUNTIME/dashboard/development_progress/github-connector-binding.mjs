@@ -26,3 +26,37 @@ function parseFile(res){
  if(typeof r?.content!=="string"||typeof r.sha!=="string")throw Error("FILE_READBACK_NOT_AVAILABLE");
  return {content:r.content,sha:r.sha};
 }
+
+/** Read-only host preflight; never claims a CAS write or fresh-host acceptance. */
+export async function verifyClicPdiHostReadiness({github,repository=OWNER,branch=BRANCH}={}){
+ const fail=(reason)=>({status:"READBACK_PENDING",reason,host_persistence_verified:false,host_dispatch_verified:false,writes:0});
+ if(repository!==OWNER||branch!==BRANCH||!github||!["readBranch","fetchFile","fetchTree"].every(k=>typeof github[k]==="function"))
+  return fail("TRUSTED_CLIC_GITHUB_READER_REQUIRED");
+ const paths=["666CLIC_NATIVE_RUNTIME/dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
+              "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json"];
+ try{
+  const first=github.readBranch({repository,branch});
+  const start=(await first)?.result??await first;
+  const head=start?.commit?.sha??start?.sha;
+  if(!/^[a-f0-9]{40}$/i.test(head??""))return fail("INVALID_BRANCH_HEAD");
+  const [treeResponse,...files]=await Promise.all([
+   github.fetchTree({repository,ref:head,recursive:true}),
+   ...paths.map(path=>github.fetchFile({repository,path,ref:head}))
+  ]);
+  const tree=treeResponse?.result??treeResponse;
+  if(tree?.truncated!==false||!Array.isArray(tree?.tree))return fail("TRUNCATED_OR_MISSING_TREE");
+  for(let i=0;i<paths.length;i++){
+   const file=files[i]?.result??files[i];
+   const entry=tree.tree.find(x=>x.path===paths[i]);
+   if(!entry||!/^[a-f0-9]{40}$/i.test(file?.sha??"")||entry.sha!==file.sha||typeof file.content!=="string")
+    return fail("LEDGER_TREE_BLOB_MISMATCH_"+i);
+   JSON.parse(file.content);
+  }
+  const endResponse=await github.readBranch({repository,branch});
+  const end=endResponse?.result??endResponse;
+  if((end?.commit?.sha??end?.sha)!==head)return fail("CONCURRENT_HEAD_CHANGE");
+  return {status:"READ_ONLY_LEDGER_READBACK_VERIFIED",head,ledger_blobs:files.map(x=>(x?.result??x).sha),
+   host_persistence_verified:false,host_dispatch_verified:false,writes:0,
+   return_anchor:"AUTHENTIC_EVENT_ORIGIN_AND_GOVERNED_CAS_WRITE_STILL_REQUIRED"};
+ }catch(e){return fail("READBACK_ERROR_"+String(e?.message??e))}
+}
