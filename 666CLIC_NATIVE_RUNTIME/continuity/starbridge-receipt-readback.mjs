@@ -43,12 +43,15 @@ export async function bindStarbridgeReceipt({fetch,fetchFile,envelope,receipt_pa
  !safe(receipt_path))return denied("INVALID_NATIVE_CHANNEL");
  try{
   const [clicHead,recipientHead]=await Promise.all([readHead(fetch,CLIC_REPO,CLIC_BRANCH),readHead(fetch,target.repo,target.branch)]);
-  if(clicHead!==envelope.source_head)return denied("STALE_SOURCE_HEAD");
-  const [sourceFiles,recipientFiles]=await Promise.all([
+  // An envelope pins a historical immutable source commit. A later pointer/body commit
+  // must not invalidate an unchanged source blob; verify both anchored and live trees.
+  const [sourceFiles,liveSourceFiles,recipientFiles]=await Promise.all([
+   readCommitted(fetch,fetchFile,CLIC_REPO,envelope.source_head,[envelope.source_path]),
    readCommitted(fetch,fetchFile,CLIC_REPO,clicHead,[envelope.source_path]),
    readCommitted(fetch,fetchFile,target.repo,recipientHead,[receipt_path])
   ]);
-  const source=sourceFiles[envelope.source_path],receiptFile=recipientFiles[receipt_path];
+  const source=sourceFiles[envelope.source_path],liveSource=liveSourceFiles[envelope.source_path],receiptFile=recipientFiles[receipt_path];
+  if(source.sha!==liveSource.sha)return denied("STALE_SOURCE_BLOB");
   // Receipt is data, not instructions or native approval.
   const receipt=JSON.parse(receiptFile.content);
   // A receipt cannot safely embed the commit hash of the commit containing itself.\n  // Validate its declared recipient head as SHA; separately report the observed repository HEAD.\n  if(!SHA.test(receipt.recipient_head??""))return denied("INVALID_DECLARED_RECIPIENT_HEAD");
@@ -59,7 +62,7 @@ export async function bindStarbridgeReceipt({fetch,fetchFile,envelope,receipt_pa
   });
   if(result.status!=="DELIVERED_EVIDENCED")return denied(result.reason??"PROVENANCE_MISMATCH");
   return {status:"DELIVERED_EVIDENCED",delivery_verified:true,adoption_verified:false,host_verified:false,may_mutate_foreign:false,
-   handoff_id:envelope.handoff_id,receipt_id:receipt.receipt_id,source_head:clicHead,recipient_head:recipientHead,receipt_declared_recipient_head:receipt.recipient_head,
+   handoff_id:envelope.handoff_id,receipt_id:receipt.receipt_id,source_head:envelope.source_head,observed_source_head:clicHead,recipient_head:recipientHead,receipt_declared_recipient_head:receipt.recipient_head,
    proof_origin:"INJECTED_GITHUB_CONNECTOR_COMMIT_TREE_AND_RECALCULATED_CONTENT_BLOBS",
    source:{repo:CLIC_REPO,path:envelope.source_path,blob_sha:source.sha},
    recipient:{repo:target.repo,path:receipt_path,blob_sha:receiptFile.sha},
