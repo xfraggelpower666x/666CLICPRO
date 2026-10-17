@@ -1,0 +1,23 @@
+name: CLIC Repository Bridge Master Reference
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/facets/repository_bridge/**'
+      - '666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-STREAM-MASTER-BRIDGE-REVIEW-20261017.md'
+      - '.github/workflows/clic-repository-bridge-master-ref.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/master-reference.test.mjs
