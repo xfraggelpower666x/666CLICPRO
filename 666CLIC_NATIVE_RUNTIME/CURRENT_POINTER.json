@@ -3095,5 +3095,36 @@
     "junior": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "CLIC_BRIDGE_REFERENCE_INTEGRATED_WAIT_CLIC_HOST_BINARY_TRANSPORT_VERIFICATION_AND_STREAM_NATIVE_PROPOSAL_REVIEW"
+  },
+  "update_2026_10_17_parallel_development_intelligence": {
+    "status": "NATIVE_PDI_SOURCE_INTEGRATED_CI_PASS_FRESH_HOST_AND_PLUGIN_PENDING",
+    "base_head": "a05a8da3e27ad719d2d8de64eb1eebf73eb40c8f",
+    "prechange_backup": "backup/clic-pre-parallel-development-intelligence-20261017",
+    "body_head_before_pointer": "eb320e1cfbc29d242d8573bbc0ab89dc0ceaa22a",
+    "native_facet": "facets/parallel_development_intelligence/",
+    "manifest_blob": "884543626a53f9f7cb1d83f6fda4688d365e73aa",
+    "recursive_registry_blob": "f570e3d524a0432d32538f6de2c893bf9c445880",
+    "facet_current_state_blob": "c8733f2f79ed8307264914949133f6495db2c123",
+    "reducer_blob": "da9c1737e0b399e38d014c786b110367b28de3cc",
+    "test_blob": "803bdb70d75b5859fa0166e8c59cd8037dd7220f",
+    "plugin_impact_blob": "1d7804a5573b14d438b3cba369f7a46ef666ec5f",
+    "ci_run": 38991767524,
+    "ci_conclusion": "SUCCESS",
+    "workstreams": [
+      "CORE_DEVELOPMENT",
+      "VISUAL_INTELLIGENCE",
+      "STARBRIDGE",
+      "CODEFORGE_RECOVERY"
+    ],
+    "source_and_ci_verified": true,
+    "fresh_host_verified": false,
+    "plugin_release_verified": false,
+    "no_new_router": true,
+    "no_parallel_pointer_writer": true,
+    "no_foreign_mutation": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "pointer_last": true,
+    "return_anchor": "PARALLEL_DEVELOPMENT_CORE_FOREGROUND_PEER_STREAMS_REACHABLE_HOST_PLUGIN_GATES_OPEN"
   }
 }
