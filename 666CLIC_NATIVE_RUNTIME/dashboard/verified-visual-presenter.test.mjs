@@ -155,7 +155,8 @@ test("peer receipt source and recipient proofs are independent of caller flags",
 test("source checkout verifier attests current committed manifest carriers in GitHub CI",{skip:!process.env.GITHUB_SHA},()=>{
  const r=verifyClicCheckout({expectedHead:process.env.GITHUB_SHA});
  assert.equal(r.status,"SOURCE_READBACK_VERIFIED",JSON.stringify(r));
- assert.equal(r.carriers,97);
+ const manifest=JSON.parse(fs.readFileSync(new URL("../REHYDRATION_MANIFEST.json",import.meta.url),"utf8"));
+ assert.equal(r.carriers,manifest.required_order.length);
  assert.equal(r.semantic_rehydration_verified,false);
  assert.equal(r.host_verified,false);
 });
