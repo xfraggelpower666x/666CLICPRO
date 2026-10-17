@@ -26,3 +26,6 @@ jobs:
           node --check 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.mjs
           node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.test.mjs
           node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/core-ledger-evidence-binding.test.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-cas-transport.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-cas-reconciliation.test.mjs
