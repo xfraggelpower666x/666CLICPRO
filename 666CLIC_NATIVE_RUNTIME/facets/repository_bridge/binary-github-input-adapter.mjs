@@ -2,7 +2,7 @@
 // A private provider archive must NEVER be put in a public repository.
 import {createHash} from "node:crypto";
 const hex=x=>createHash("sha256").update(x).digest("hex");
-const blobSha=x=>createHash("sha1").update(Buffer.concat([Buffer.from("blob "+x.length+"\\0"),x])).digest("hex");
+const blobSha=x=>createHash("sha1").update(Buffer.concat([Buffer.concat([Buffer.from("blob "+x.length),Buffer.from([0])]),x])).digest("hex");
 const SHA=/^[a-f0-9]{64}$/i;
 export function prepareClicBridgeBinaryInput({bytes,source,sourceVisibility,target,approval}={}){
  const errors=[];
@@ -12,7 +12,8 @@ export function prepareClicBridgeBinaryInput({bytes,source,sourceVisibility,targ
  if(!target||target.repository!=="xfraggelpower666x/666CLICPRO"||target.branch!=="clic-migration-rev79-staging"||
  target.path!=="666clic-plugin/binary-backups/v0.1.22/provider-original/workspace-plugin-p0fda2cg.tar.gz")errors.push("CLIC_SCOPE_ALLOWLIST_MISMATCH");
  // Current real GitHub visibility for CLICPRO is PUBLIC, so this block is mandatory.
- if(target?.visibility!=="PRIVATE")errors.push("PRIVATE_PLUGIN_ARCHIVE_TO_PUBLIC_REPO_FORBIDDEN");
+ if(target?.visibility!=="PUBLIC")errors.push("TARGET_VISIBILITY_CONFLICT_WITH_VERIFIED_PUBLIC_CLIC_REPO");
+ errors.push("PRIVATE_PLUGIN_ARCHIVE_TO_PUBLIC_REPO_FORBIDDEN");
  if(approval?.explicit_private_archive_transfer!==true||approval?.exact_target_approved!==true)errors.push("EXPLICIT_TRANSFER_APPROVAL_MISSING");
  if(approval?.current_provider_release!=="pluginrel_6ac6f4e703288191b8757f336d33e186")errors.push("PROVIDER_RELEASE_BINDING_MISSING");
  if(approval?.head_verified!==true||!/^([a-f0-9]{40})$/i.test(approval?.head??""))errors.push("REMOTE_HEAD_NOT_VERIFIED");
