@@ -52,5 +52,42 @@
     }
   ],
   "processed_event_ids": [],
-  "no_automatic_foreign_mutation": true
+  "no_automatic_foreign_mutation": true,
+  "development_priority": {
+    "policy": "EXPLICIT_USER_ORDER_2026_10_17_NO_SILENT_REORDER",
+    "items": [
+      {
+        "rank": 1,
+        "id": "PDI_LIVE_PERSISTENCE_HOST",
+        "stream": "CORE_DEVELOPMENT",
+        "status": "READ_ONLY_PREFLIGHT_SOURCE_CANDIDATE",
+        "next": "TRUSTED_CONNECTOR_LEDGER_READBACK_THEN_AUTHENTIC_EVENT_CAS_AND_PDI_RECONCILIATION"
+      },
+      {
+        "rank": 2,
+        "id": "STARBRIDGE_SB01_SB05_RECEIPTS",
+        "stream": "STARBRIDGE",
+        "status": "OPEN_NATIVE_RECEIPTS",
+        "next": "REAL_PEER_DELIVERY_RECEIPTS_AND_ADOPTION_READBACK"
+      },
+      {
+        "rank": 3,
+        "id": "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+        "stream": "CODEFORGE_RECOVERY",
+        "status": "PRIVATE_BYTE_READBACK_BLOCKED",
+        "next": "AUTHORIZED_PRIVATE_ARCHIVE_BYTES_INDEPENDENT_SHA256"
+      },
+      {
+        "rank": 4,
+        "id": "PLUGIN_SOURCE_LIVE_PARITY",
+        "stream": "VISUAL_INTELLIGENCE",
+        "status": "LIVE_0_1_22_BEHIND_SOURCE",
+        "next": "FINGERPRINT_AND_APPROVAL_AFTER_PRIOR_GATES"
+      }
+    ],
+    "blocked_policy": "RETAIN_ANCHOR_ADVANCE_NEXT_EXECUTABLE_THEN_RETURN",
+    "actual_host_events_recorded": 0,
+    "real_cas_write_claim": false,
+    "host_acceptance": false
+  }
 }
