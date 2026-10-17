@@ -1,0 +1,25 @@
+name: CLIC PATCH_FIRST Visual Source Candidate
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666clic-plugin/candidates/patchfirst-visual-20261017/**'
+      - '.github/workflows/clic-patchfirst-visual-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate-source-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact source parity and frozen release separation
+        run: |
+          node --test 666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-candidate.test.mjs
+# SOURCE ONLY: does not build, upload, publish, or claim provider binary/host parity.
