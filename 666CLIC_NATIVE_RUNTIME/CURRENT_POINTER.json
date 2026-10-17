@@ -3314,5 +3314,27 @@
     "no_foreign_writes": true,
     "pointer_last": true,
     "return_anchor": "VISUAL_COMPLETION_PROVIDER_PREFLIGHT_SOURCE_PASS_RELEASE_WRITE_BLOCKED_WAIT_CURRENT_ARCHIVE_BYTES_FINGERPRINT_APPROVAL"
+  },
+  "update_2026_10_17_uploaded_plugin_provider_original_byte_proof": {
+    "status": "LOCAL_ORIGINAL_BYTES_SHA256_VERIFIED_GITHUB_BINARY_TRANSFER_BLOCKED",
+    "base_head": "57d7b3486b482e1ba98a8cbbd97f1bdb5dc976a8",
+    "body_head_before_pointer": "058d6b126dd535e085856d3e3dc90f635364f2d4",
+    "recovery_branch": "backup/clic-pre-uploaded-original-provider-byte-evidence-20261017",
+    "measured_archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "measured_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "archive_file_count": 28,
+    "bridge_receipt_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/PROVIDER_ORIGINAL_UPLOAD_BRIDGE_RECEIPT_2026-10-17.json",
+    "bridge_receipt_blob": "d086c9ae0c5e352ebd1ef2b21bc9cf21705c4910",
+    "existing_repository_bridge_preserved": true,
+    "repository_binary_import_performed": false,
+    "github_binary_blob_readback": false,
+    "host_binary_connector_input": "BLOCKED",
+    "provider_live_release": "0.1.22_UNCHANGED",
+    "no_release_publication": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "ORIGINAL_BYTES_VERIFIED_GITHUB_BINARY_TRANSFER_INPUT_REQUIRED"
   }
 }
