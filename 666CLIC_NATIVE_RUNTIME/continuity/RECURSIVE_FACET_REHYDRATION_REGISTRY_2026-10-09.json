@@ -68,6 +68,20 @@
       "load_default": "REHYDRATED_IDLE_REACHABLE",
       "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
       "writes": "NONE_ON_REHYDRATION"
+    },
+    {
+      "id": "parallel_development_intelligence",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/parallel_development_intelligence/FACET_CONTRACT.md",
+      "current": "facets/parallel_development_intelligence/CURRENT_STATE.json",
+      "sub_lifecircle": "facets/parallel_development_intelligence/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/parallel_development_intelligence/SUB_REHYDRATION.md",
+      "runtime": "facets/parallel_development_intelligence/parallel-development.mjs",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION",
+      "activation": "NONE",
+      "pet": "PAUSED"
     }
   ],
   "trigger_contract": {
@@ -96,11 +110,11 @@
   },
   "verification": {
     "github_tree_complete": true,
-    "root_facets_found": 5,
-    "facets_with_contract_lifecircle_rehydration": 5,
+    "root_facets_found": 6,
+    "facets_with_contract_lifecircle_rehydration": 6,
     "source_registration": "VERIFIED_AFTER_REPO_READBACK_ONLY",
-    "fresh_systemstart_runtime": "NOT_EXECUTED",
-    "fresh_new_chat_runtime": "NOT_EXECUTED",
+    "fresh_systemstart_runtime": "NOT_EXECUTED_NEW_PDI",
+    "fresh_new_chat_runtime": "NOT_EXECUTED_NEW_PDI",
     "trigger_host_dispatch": "NOT_VERIFIED",
     "plugin_current_release": "0.1.22_UNCHANGED",
     "plugin_parity": "SOURCE_AHEAD_HOST_NOT_VERIFIED",
@@ -134,5 +148,6 @@
     "foreign_mutation": false,
     "pet": "PAUSED_UNMODIFIED",
     "return_anchor": "LIVE_ROOT_FIRST_RESTORE_FIVE_FACET_RELATIONAL_STATES_THEN_PEER_RECEIPTS_AND_VERIFIED_OPEN_WORK"
-  }
+  },
+  "parallel_development_intelligence_2026_10_17": "SOURCE_REGISTERED_NO_AUTORUN_NEW_FACET_NO_FOREIGN_AUTHORITY"
 }
