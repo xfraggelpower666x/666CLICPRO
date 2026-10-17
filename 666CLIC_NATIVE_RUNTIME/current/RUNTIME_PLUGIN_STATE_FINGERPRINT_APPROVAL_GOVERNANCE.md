@@ -100,3 +100,23 @@ CURRENT_CLIC_LIVE_PLUGIN=0.1.22|pluginrel_6ac6f4e703288191b8757f336d33e186
 CLIC_HOST_UPLOAD_STATUS=NOT_AVAILABLE_IN_CURRENT_TOOL_CALL_CONTEXT
 CLIC_PROVIDER_RELEASE_THIS_UPDATE=NOT_PUBLISHED
 PET=PAUSED
+
+## 2026-10-17 · Reproduzierbare Semantic-Body-Boundary innerhalb bestehender Governance
+IMPLEMENTATION=666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs
+CLASSIFIER_NOT_NEW_AUTHORITY=true
+HISTORY_SOURCE=INDEPENDENT_GITHUB_COMMIT_PARENT_AND_CHANGED_PATHS
+FULL_CONTIGUOUS_ANCESTRY_REQUIRED=true
+KNOWN_NATIVE_SEMANTIC_SCOPES=DASHBOARD|CONTINUITY|FACETS|CURRENT|PLUGIN_SOURCE|REHYDRATION_MANIFEST
+KNOWN_GOVERNANCE_SCOPES=ROOT_POINTER|PLUGIN_GOVERNANCE|BACKUP_APPROVAL|RELEASE_SNAPSHOT|RECOVERY|OUTBOX|INBOX|CI|TESTS
+MIXED_CHANGE=SEMANTIC
+UNKNOWN_SCOPE=WRITE_BLOCKED
+MISSING_PARENT_OR_DIFF=WRITE_BLOCKED
+SEMANTIC_BODY_HEAD=LATEST_VERIFIED_CHANGE_TO_SEMANTIC_SCOPE_IN_COMPLETE_CHAIN
+CURRENT_SOURCE_NE_LIVE_PLUGIN=WRITE_BLOCKED
+HISTORIC_RELEASE_NE_CURRENT_RUNTIME_PARITY=true
+SEMANTIC_BODY_CANDIDATE_NE_FINGERPRINT=true
+FINGERPRINT_NE_BACKUP_APPROVAL=true
+FRESH_HOST_NE_SOURCE_CI=true
+NO_PLUGIN_PUBLICATION_BY_BOUNDARY=true
+
+Eligibility: do not assert an actual Semantic-Body-HEAD from partial GitHub compare pages, commit messages, or filename similarity alone. An independently complete contiguous commit chain with authoritative path diffs and native scope coverage is required. Preserve the historical 0.1.22 snapshot and later valid runtime evolution separately. Current v0.1.22 candidate remains NOT APPROVED while the four fingerprint bindings are unresolved. Any discovered unknown CLIC path must be reviewed and added to this existing classifier by native CLIC governance only, rather than treated as nonsemantic by default.
