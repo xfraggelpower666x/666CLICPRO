@@ -3336,5 +3336,32 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "ORIGINAL_BYTES_VERIFIED_GITHUB_BINARY_TRANSFER_INPUT_REQUIRED"
+  },
+  "update_2026_10_17_private_provider_binary_bridge_guard": {
+    "status": "CLIC_BRIDGE_SOURCE_CI_VERIFIED_PRIVATE_ARCHIVE_PUBLIC_GITHUB_WRITE_BLOCKED",
+    "base_head": "a0cc4dd944009d893080c3d03e3217b9f3888b94",
+    "body_head_before_pointer": "66e25698b7794c23f44bd3664ec7d831ad3e9233",
+    "prechange_backup": "backup/clic-pre-private-provider-binary-bridge-guard-20261017",
+    "existing_bridge": "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/FACET_CONTRACT.md",
+    "input_adapter": "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/binary-github-input-adapter.mjs",
+    "evidence_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/PRIVATE_PROVIDER_ARCHIVE_BRIDGE_GATE_2026-10-17.json",
+    "evidence_blob": "d76542a4a062f96692dbd2f70505d08e284ad3aa",
+    "source_archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "source_git_blob_sha1": "0f73e4906a96bdf20bfe60d9152e2d03f56a479b",
+    "target_visibility": "PUBLIC",
+    "provider_visibility": "PRIVATE",
+    "bridge_ci_run": 39000865836,
+    "bridge_ci_conclusion": "SUCCESS",
+    "original_archive_binary_transferred": false,
+    "independent_remote_binary_readback": false,
+    "upload_blocker": "PRIVATE_PROVIDER_ARCHIVE_TO_PUBLIC_REPOSITORY_FORBIDDEN",
+    "host_local_file_connector_handoff": "NOT_VERIFIED",
+    "no_new_bridge": true,
+    "plugin_provider_release": "0.1.22_UNCHANGED",
+    "no_foreign_writes": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_EXISTING_BRIDGE_PRIVATE_SOURCE_NEEDS_AUTHORIZED_PRIVATE_TARGET_AND_BYTE_CONNECTOR_BINDING"
   }
 }
