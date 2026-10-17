@@ -3501,5 +3501,38 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "FACET_REGISTRY_TEST_CI_PASS_FINGERPRINT_AND_PROVIDER_HOST_PARITY_PENDING"
+  },
+  "update_2026_10_17_pdi_priority_and_host_readiness": {
+    "status": "PDI_PRIORITY_PERSISTED_SOURCE_CI_PASS_INDEPENDENT_BLOB_READBACK_HOST_CAS_EVENT_OPEN",
+    "base_head": "102c5b001eb62e465a441657076d07fcccdc163f",
+    "prechange_backup": "backup/clic-pre-pdi-priority-host-preflight-20261017",
+    "body_head_before_pointer": "315f5e06fb369493ee74dc401640756ba59a96a4",
+    "priority": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "preflight_source_blob": "d7db7460b48525c8c2a573e6234c9c7ba17ba7df",
+    "preflight_test_blob": "de7a5e07b3e425e7c175fb77cf909bec4ba66b8f",
+    "pdi_state_blob": "d3086fad650d975e8cbc620408a61ecb9476d702",
+    "pdi_ledger_blob": "27f389112cdac4c0bac41a8be84172922b5fcbfc",
+    "ci_run": 39075112690,
+    "ci_conclusion": "SUCCESS",
+    "independent_git_tree_blob_readback": "PASS",
+    "real_host_module_execution": false,
+    "real_event_ingestion": false,
+    "real_event_cas_write": false,
+    "host_readiness_source_only": true,
+    "live_plugin": "0.1.22_UNCHANGED",
+    "plugin_impact": "NEW_READ_ONLY_NATIVE_PDI_HOST_PREFLIGHT_SKILL_PARITY_REVIEW_OPEN",
+    "starbridge_native_receipts": "SEPARATE_NEXT_PRIORITY",
+    "private_binary_readback": "BLOCKED_NOT_PROMOTED",
+    "canonical_fingerprint": null,
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "PDI_PRIORITY_PERSISTED_AUTHENTIC_EVENT_HOST_CAS_PROOF_NEXT_THEN_STARBRIDGE"
   }
 }
