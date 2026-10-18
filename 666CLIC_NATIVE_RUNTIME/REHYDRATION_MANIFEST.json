@@ -1305,9 +1305,9 @@
     "plugin_release": "UNCHANGED"
   },
   "starbridge_pdi_whole_network_supercodeforge_2026_10_18": {
-    "status": "ONE_OF_SEVEN_LYVRA_DELIVERY_EVIDENCED_SIX_PEERS_PENDING",
+    "status": "TWO_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FIVE_PENDING",
     "carrier": "continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json",
-    "carrier_blob": "6ad7a413936e77ac92df7b33eec98334a8972f13",
+    "carrier_blob": "958708acbe22bab78e343ef69d191487034e6452",
     "incoming_lyvra_handoff": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
     "source_intake": "inbox/LYVRA/receipts/LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01-SOURCE-INTAKE.json",
     "prepared_target_count": 7,
@@ -1320,17 +1320,22 @@
       "666MIRA",
       "666TDH"
     ],
-    "delivery_verified": 1,
+    "delivery_verified": 2,
     "adoption_verified": 0,
     "host_verified": 0,
     "originator_host": "BLOCKED",
     "recovery": "backup/clic-pre-whole-network-starbridge-pdi-20261018",
     "pdi_priority_preserved": true,
     "foreign_writes": false,
-    "plugin_release": "UNMODIFIED",
-    "visual_compliance": "EXISTING_REGISTER_STATES_ONLY",
+    "plugin_release": "UNCHANGED",
+    "visual_compliance": "EXISTING_REGISTER_NO_NEW_TARGET_VISUAL_CLAIM",
     "receiver_receipt": "inbox/LYVRA/receipts/CLIC-STARBRIDGE-WHOLE-NET-LYVRA-20261018-R01-DELIVERY-READBACK.json",
     "receiver_receipt_blob": "a247b3d6c857b5ad23e19b883a094fe12904af5b",
-    "previous_sb04_sb05": "PRESERVED"
+    "previous_sb04_sb05": "PRESERVED",
+    "pfs_delivery_receipt": "inbox/666PFS/receipts/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01-DELIVERY-READBACK.json",
+    "pfs_delivery_receipt_blob": "d3929fb54d535f52c778ba9dc6a771dde1d6ead7",
+    "lyvra_delivery": "PRESERVED_EVIDENCED",
+    "sb04_sb05": "PRESERVED",
+    "plugin_impact": "DATA_ONLY_NO_SEMANTIC_RUNTIME_CHANGE"
   }
 }
