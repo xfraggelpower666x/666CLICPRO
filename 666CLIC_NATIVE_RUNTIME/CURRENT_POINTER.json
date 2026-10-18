@@ -3821,5 +3821,43 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "RESUME_PDI_NATIVE_PRIORITY_SIX_NETWORK_PEER_DELIVERIES_OPEN"
+  },
+  "update_2026_10_18_starbridge_pdi_whole_network_pfs_delivery": {
+    "status": "TWO_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FIVE_PENDING",
+    "base_head": "e6c2d706226edc91c67c92de7d8934f225094b3e",
+    "prechange_recovery": "backup/clic-pre-whole-net-pfs-delivery-20261018",
+    "body_head_before_pointer": "2e2464d979e4b9fea56ae46d0829a694f4f05db6",
+    "source_handoff": "CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01",
+    "source_blob": "e524c745cb79f5d2204fd91a1e7ef0697bcba741",
+    "pfs_receipt_commit": "730610610e4645fd51f8bb08d7a2774217fa96f8",
+    "pfs_receipt_blob": "4bb3fde4e95762ae07514b6df2094217dd58117e",
+    "clic_delivery_receipt_blob": "d3929fb54d535f52c778ba9dc6a771dde1d6ead7",
+    "network_index_blob": "958708acbe22bab78e343ef69d191487034e6452",
+    "manifest_blob": "8e8417157bb8cd51382d58d1f1bfa76ac7b9fa96",
+    "source": "PASS",
+    "pfs_delivery": "DELIVERED_EVIDENCED",
+    "lyvra_delivery": "PRESERVED_DELIVERED_EVIDENCED",
+    "network_delivery_count": 2,
+    "network_total": 7,
+    "remaining_peers": [
+      "666STREAM",
+      "666CLS",
+      "666LINGUA",
+      "666MIRA",
+      "666TDH"
+    ],
+    "native_adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "automatic_transport": "NOT_VERIFIED",
+    "supercodeforge_host": "BLOCKED_HANDLE_INJECTION",
+    "sb04_sb05": "PRESERVED",
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "visual_compliance": "EXISTING_REGISTER_UNCHANGED",
+    "plugin_impact": "DATA_ONLY_NO_PLUGIN_RELEASE",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "PDI_NATIVE_PRIORITY_PRESERVED_NEXT_NATIVE_STREAM_RECEIPT_IF_AUTHORIZED"
   }
 }
