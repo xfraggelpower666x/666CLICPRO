@@ -3642,5 +3642,47 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "PATCHFIRST_EXACT_DELTA_SOURCE_PASS_CURRENT_PROVIDER_BINARY_AND_NATIVE_APPROVAL_OPEN"
+  },
+  "update_2026_10_18_pdi_sb05_readonly_host_binding": {
+    "status": "READONLY_HOST_BINDING_SOURCE_CI_AND_CONNECTOR_READBACK_PASS_ACTUAL_CHAT_HOST_AND_CAS_OPEN",
+    "base_head": "c23c7f840e4a08e83c3d02c3588e0224ccf62a36",
+    "prechange_backup": "backup/clic-pre-readonly-host-binding-20261018",
+    "body_head_before_pointer": "1c5f7da50e925666c87952abe3477a28ce6a47ea",
+    "binding_blob": "9ef5cc43eb426a787703a2ba0cff612b0e209732",
+    "pdi_test_blob": "f56a689d9f6c773a820bd9925d0f9c8fd60d20f4",
+    "sb05_source_blob": "b5882093d96f56e0c1e4a28332933728be6eef08",
+    "sb05_test_blob": "47ee6eb52ba58f90a727ee401d4e452efedca80c",
+    "evidence_blob": "33eafcb8f802c3e65498a42ffe1e5cec8ec7bd8f",
+    "ci_runs": [
+      39087757679,
+      39087829167
+    ],
+    "ci_conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "independent_git_tree_blob_readback": "PASS",
+    "actual_chat_host_module_execution": false,
+    "pdi_authentic_event_cas": false,
+    "pdi_processed_events": 0,
+    "sb05_native_receipt_readback": true,
+    "sb05_actual_host_binder_execution": false,
+    "sb05_delivery": false,
+    "sb05_adoption": false,
+    "host_pass": false,
+    "plugin_release": "0.1.22_UNCHANGED",
+    "plugin_published": false,
+    "foreign_writes": false,
+    "priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "private_binary_approval": "BLOCKED_UNCHANGED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "PDI_SB05_READONLY_CONNECTOR_BINDING_SOURCE_PASS_REAL_CHATGPT_HOST_MODULE_DISPATCH_AND_EVENT_CAS_PENDING"
   }
 }
