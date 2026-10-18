@@ -3606,5 +3606,41 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "SEMANTIC_SUFFIX_35_SOURCE_VERIFIED_CANONICAL_PLUGIN_FINGERPRINT_BLOCKED_BY_LIVE_PARITY_AND_CURRENT_BINARY"
+  },
+  "update_2026_10_18_patchfirst_exact_delta": {
+    "status": "PATCHFIRST_EXACT_3_SKILL_DELTA_CI_PASS_PROVIDER_RELEASE_BLOCKED",
+    "base_head": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+    "prechange_backup": "backup/clic-pre-patchfirst-parity-delta-20261018",
+    "body_head_before_pointer": "f3ba988bf9699ceb7c8e77bfb35a62834632d039",
+    "plan_source_blob": "c5eae73b72230c81ea9aa1549bc3a6efdd97619a",
+    "test_blob": "d760b9df200fb81946136c43cbddbac7b995407b",
+    "workflow_blob": "70c3009155a2a4e2e35379ad59c4a67b177c5767",
+    "evidence_blob": "e9ddfa64062358438851492f670b50370f7c7ea4",
+    "ci_run": 39086999390,
+    "ci_conclusion": "SUCCESS",
+    "provider_files": 28,
+    "exact_patch_skills": 3,
+    "untouched_files": 25,
+    "original_logo_preserved_in_plan": true,
+    "provider_version": "0.1.22",
+    "provider_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "provider_binary_current_parity": false,
+    "canonical_fingerprint": null,
+    "plugin_published": false,
+    "host_pass": false,
+    "pdi_return_anchor": "AUTHENTIC_EVENT_CAS_AND_HOST_RECONCILIATION_PENDING",
+    "starbridge_return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING",
+    "private_vault_return_anchor": "PRIVATE_VAULT_VERIFIED_BINARY_TRANSFER_PENDING_NATIVE_APPROVAL",
+    "priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "PATCHFIRST_EXACT_DELTA_SOURCE_PASS_CURRENT_PROVIDER_BINARY_AND_NATIVE_APPROVAL_OPEN"
   }
 }
