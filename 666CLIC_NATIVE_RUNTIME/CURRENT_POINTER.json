@@ -3717,5 +3717,39 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "NATIVE_READONLY_DISPATCH_ACCEPTANCE_SOURCE_PASS_AUTHORIZED_RUNTIME_EXECUTION_RECEIPT_REQUIRED"
+  },
+  "update_2026_10_18_pdi_sb05_real_native_execution": {
+    "status": "NATIVE_NODE_MODULE_EXECUTION_PDI_SB05_PASS_EVENT_CAS_DELIVERY_ADOPTION_CHAT_HOST_OPEN",
+    "base_head": "74a2bfbac815baca7f79a2cc18ad2540739cacc6",
+    "prechange_backup": "backup/clic-pre-actions-readonly-native-execution-20261018",
+    "body_head_before_pointer": "a538ee827947457a078f38400273ae148d6feecd",
+    "runner_blob": "a44be65620f2e4e93a456cabbe9e18b619fb7b93",
+    "workflow_blob": "402229a7d8fba92c2559299c5d53f441502d255b",
+    "execution_receipt_blob": "f50ff87c695c0ca1fb4e80f659edc037f9371260",
+    "github_run_id": 39089455296,
+    "run_conclusion": "SUCCESS",
+    "artifact_id": 12121976894,
+    "artifact_sha256": "231121d44d88798e8a16ecfa629b356b5bd6893e57c6e0b3b704f53564303583",
+    "authenticated_github_read_calls": 20,
+    "pdi_native_module_execution": true,
+    "pdi_ledger_readback": true,
+    "pdi_event_cas": false,
+    "sb05_native_module_execution": true,
+    "sb05_receipts_readback": true,
+    "sb05_delivery": false,
+    "sb05_adoption": false,
+    "chatgpt_fresh_host": false,
+    "plugin_published": false,
+    "foreign_writes": false,
+    "priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "PDI_SB05_NATIVE_NODE_EXECUTION_PASS_AUTHENTIC_EVENT_CAS_AND_DELIVERY_ADOPTION_FRESH_HOST_OPEN"
   }
 }
