@@ -1305,9 +1305,9 @@
     "plugin_release": "UNCHANGED"
   },
   "starbridge_pdi_whole_network_supercodeforge_2026_10_18": {
-    "status": "TWO_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FIVE_PENDING",
+    "status": "THREE_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FOUR_PENDING",
     "carrier": "continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json",
-    "carrier_blob": "958708acbe22bab78e343ef69d191487034e6452",
+    "carrier_blob": "7ec00e0d20e23b9edaeadf3861a235efcfd03363",
     "incoming_lyvra_handoff": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
     "source_intake": "inbox/LYVRA/receipts/LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01-SOURCE-INTAKE.json",
     "prepared_target_count": 7,
@@ -1320,7 +1320,7 @@
       "666MIRA",
       "666TDH"
     ],
-    "delivery_verified": 2,
+    "delivery_verified": 3,
     "adoption_verified": 0,
     "host_verified": 0,
     "originator_host": "BLOCKED",
@@ -1336,6 +1336,9 @@
     "pfs_delivery_receipt_blob": "d3929fb54d535f52c778ba9dc6a771dde1d6ead7",
     "lyvra_delivery": "PRESERVED_EVIDENCED",
     "sb04_sb05": "PRESERVED",
-    "plugin_impact": "DATA_ONLY_NO_SEMANTIC_RUNTIME_CHANGE"
+    "plugin_impact": "DATA_ONLY_NO_SEMANTIC_RUNTIME_CHANGE",
+    "stream_delivery_receipt": "inbox/666STREAM/receipts/CLIC-STARBRIDGE-WHOLE-NET-666STREAM-20261018-R01-DELIVERY-READBACK.json",
+    "stream_delivery_receipt_blob": "265a1d5ed1e35740867e6a17655de6a99e82089d",
+    "pfs_delivery": "PRESERVED_EVIDENCED"
   }
 }
