@@ -1352,5 +1352,30 @@
     "native_cls_write": false,
     "cas_claim": false,
     "plugin_host_parity": "OPEN"
+  },
+  "cls_docs_evidence_adapter_2026_10_18": {
+    "status": "SOURCE_IMPLEMENTED_CI_44_OF_44_RECEIPT_STILL_PENDING",
+    "mode": "CLIC_READ_ONLY_NATIVE_DOCS_INTAKE_EVIDENCE",
+    "reader": "continuity/starbridge-cls-drive-receipt.mjs",
+    "tests": "continuity/starbridge-cls-drive-receipt.test.mjs",
+    "native_cls_intake_file_id": "1OXX4trmZeJLXaEpuVsf2lkIvXy0mlGS1qyIjEAt9ap8",
+    "native_cls_intake_role": "NONAUTHORITATIVE_SOURCE_AND_SCOPED_DECISION",
+    "native_live_authority": "05_LIVE_STATE_ONLY",
+    "source_blob": "a075c30231fcdafd92d0968442c7a7c9c616fc6d",
+    "source_head_before_update": "70ce26a9ee403179244d01776a39062b6ca60f7f",
+    "prechange_recovery_branch": "backup/clic-pre-cls-docs-evidence-20261018",
+    "ci_run": 39137807134,
+    "ci_results": "44_PASS_0_FAIL_MOCK_CONNECTORS",
+    "receipt": "NOT_PUBLISHED_SEPARATE_NATIVE_GATE",
+    "network_delivery": "3_OF_7_UNCHANGED",
+    "provider_cas": "NOT_CLAIMED",
+    "native_cls_writes": false,
+    "new_router": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "sb04_sb05": "PRESERVED",
+    "pdi_priority": "PRESERVED",
+    "plugin_impact": "CLIC_NATIVE_RECEIPT_EVIDENCE_READ_ONLY_PLUGIN_HOST_PARITY_UNVERIFIED"
   }
+
 }
