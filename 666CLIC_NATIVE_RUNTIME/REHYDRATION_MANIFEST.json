@@ -1303,5 +1303,31 @@
     "pet": "PAUSED",
     "junior": "PRESERVED",
     "plugin_release": "UNCHANGED"
+  },
+  "starbridge_pdi_whole_network_supercodeforge_2026_10_18": {
+    "status": "CLIC_NATIVE_SEVEN_SOURCE_PROPOSALS_DIRECT_READBACK_VERIFIED_PEER_DELIVERY_PENDING",
+    "carrier": "continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json",
+    "carrier_blob": "095b6ce017057592d70a0a95f804240ad6b48c0f",
+    "incoming_lyvra_handoff": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
+    "source_intake": "inbox/LYVRA/receipts/LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01-SOURCE-INTAKE.json",
+    "prepared_target_count": 7,
+    "prepared_systems": [
+      "LYVRA",
+      "666PFS_CSM",
+      "666STREAM",
+      "666CLS",
+      "666LINGUA",
+      "666MIRA",
+      "666TDH"
+    ],
+    "delivery_verified": 0,
+    "adoption_verified": 0,
+    "host_verified": 0,
+    "originator_host": "BLOCKED",
+    "recovery": "backup/clic-pre-whole-network-starbridge-pdi-20261018",
+    "pdi_priority_preserved": true,
+    "foreign_writes": false,
+    "plugin_release": "UNMODIFIED",
+    "visual_compliance": "EXISTING_REGISTER_STATES_ONLY"
   }
 }
