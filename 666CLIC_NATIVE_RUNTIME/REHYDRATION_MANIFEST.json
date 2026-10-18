@@ -1400,18 +1400,28 @@
     "cas": false
   },
   "cls_native_host_dispatch_2026_10_18": {
-    "status": "CLIC_SOURCE_CANDIDATE_NATIVE_GITHUB_READONLY_PREFLIGHT",
+    "status": "GITHUB_ONLY_NATIVE_EXECUTION_CI_VERIFIED_DRIVE_DOCS_HOST_BLOCKED",
     "dispatch": "continuity/cls-native-host-dispatch.mjs",
     "runner": "continuity/cls-native-actions-readonly.mjs",
     "workflow": ".github/workflows/clic-cls-native-dispatch-readonly.yml",
     "native_docs_handles": "UNAVAILABLE_IN_GITHUB_ACTIONS_WORKFLOW",
-    "host": "BLOCKED",
-    "delivery": "3_OF_7",
+    "host": "BLOCKED_DRIVE_DOCS_HANDLES",
+    "delivery": "3_OF_7_UNCHANGED",
     "adoption": "NOT_VERIFIED",
     "plugin_release": "NONE",
     "plugin_impact": "CLIC_INTERNAL_EVIDENCE_READONLY_LIVE_PARITY_NOT_VERIFIED",
     "junior": "PRESERVED",
     "pet": "PAUSED",
-    "foreign_writes": false
+    "foreign_writes": false,
+    "source_body_commit": "ea7c2efa91d19cf1a6a5723411feba2f3d8ed950",
+    "workflow_run": 39153469729,
+    "workflow_conclusion": "success",
+    "artifact_id": 12146400632,
+    "artifact_name": "clic-cls-github-only-native-dispatch",
+    "ci_evidence": "GITHUB_ONLY_EXECUTOR_REAL_REST_READBACK_AND_NEGATIVE_TESTS",
+    "original_cls_export_invoked": false,
+    "native_cls_receipt": "NOT_PUBLISHED",
+    "cas": false,
+    "static_visual_pdi_ci": "SUCCESS"
   }
 }
