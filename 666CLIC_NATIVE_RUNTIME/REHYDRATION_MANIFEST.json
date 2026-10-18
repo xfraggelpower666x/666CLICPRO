@@ -109,7 +109,9 @@
     "continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json",
     "continuity/NEW_CHAT_CURRENT.json",
     "continuity/NEW_CHAT_HISTORICAL_SNAPSHOT_2026-10-10.json",
-    "continuity/new-chat-freshness.test.mjs"
+    "continuity/new-chat-freshness.test.mjs",
+    "continuity/starbridge-cls-drive-receipt.mjs",
+    "continuity/starbridge-cls-drive-receipt.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1340,5 +1342,15 @@
     "stream_delivery_receipt": "inbox/666STREAM/receipts/CLIC-STARBRIDGE-WHOLE-NET-666STREAM-20261018-R01-DELIVERY-READBACK.json",
     "stream_delivery_receipt_blob": "265a1d5ed1e35740867e6a17655de6a99e82089d",
     "pfs_delivery": "PRESERVED_EVIDENCED"
+  },
+  "cls_drive_receiver_evidence": {
+    "status": "CLIC_SOURCE_IMPLEMENTED_NATIVE_CLS_RECEIPT_PENDING",
+    "mode": "INJECTED_READ_ONLY_GOOGLE_DRIVE_PROVIDER",
+    "source_blob": "a075c30231fcdafd92d0968442c7a7c9c616fc6d",
+    "legacy_github_receipts": "UNCHANGED",
+    "delivery": "3_OF_7_UNCHANGED",
+    "native_cls_write": false,
+    "cas_claim": false,
+    "plugin_host_parity": "OPEN"
   }
 }
