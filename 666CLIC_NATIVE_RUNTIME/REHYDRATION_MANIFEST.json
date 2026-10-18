@@ -1423,5 +1423,18 @@
     "native_cls_receipt": "NOT_PUBLISHED",
     "cas": false,
     "static_visual_pdi_ci": "SUCCESS"
+  },
+  "cls_native_invocation_guard_repair_2026_10_18": {
+    "status": "SOURCE_REPAIR_CANDIDATE_CI_REQUIRED",
+    "module": "continuity/cls-native-host-dispatch.mjs",
+    "tests": "continuity/cls-native-host-dispatch.test.mjs",
+    "reason": "BOOLEAN_ONLY_NATIVE_EXECUTION_CLAIM_MUST_FAIL_CLOSED",
+    "fresh_host": "BLOCKED",
+    "native_cls_receipt": "NOT_PUBLISHED",
+    "network_delivery": "3_OF_7_UNCHANGED",
+    "foreign_writes": false,
+    "plugin_release": "NONE",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

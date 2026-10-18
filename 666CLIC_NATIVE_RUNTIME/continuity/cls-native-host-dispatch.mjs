@@ -26,9 +26,12 @@ export function evaluateClsNativeInvocation({request={},execution={}}={}){
  if(execution.output?.delivery_verified===true||execution.output?.adoption_verified===true||
     execution.output?.host_verified===true||execution.output?.status!=="NATIVE_DECISION_EVIDENCED_RECEIPT_PENDING")
   return fail("INVALID_OR_PROMOTED_CLS_SOURCE_RESULT");
- return {schema:"CLIC_CLS_NATIVE_DISPATCH_PREFLIGHT_V1",status:"NATIVE_SOURCE_EXECUTION_EVIDENCED_CHAT_FRESH_HOST_PENDING",
- source_verified:true,github_execution_verified:true,cls_export_invoked:true,
- delivery_verified:false,adoption_verified:false,host_verified:false,writes:0,cas_verified:false};
+ // Do not grant an execution PASS from caller-supplied booleans or strings.
+ // Current host provides no independently verified original-export execution receipt.
+ // Reuse of this gate requires a separate genuine provider-backed verifier, not flags.
+ return {...fail("INDEPENDENT_ORIGINAL_EXPORT_EXECUTION_PROOF_UNAVAILABLE"),
+   source_verified:true,github_execution_verified:true,source_head:execution.source_head,
+   source_blob:SOURCE_BLOB,claimed_original_export_invoked:true};
 }
 export function clsDispatchRequest(){return Object.freeze({
  repository:REPO,branch:BRANCH,export_name:EXPORTED,mode:"READ_ONLY",allow_foreign_write:false});}

@@ -5,10 +5,17 @@ const good={runner_kind:"AUTHORIZED_NATIVE_NODE_RUNTIME",github_live:true,module
 github_tree_complete:true,source_head:"a".repeat(40),writes:0,available_handles:[...CLS_DISPATCH_HANDLES],
 original_export_invoked:true,original_export_receipt:true,
 output:{status:"NATIVE_DECISION_EVIDENCED_RECEIPT_PENDING",delivery_verified:false,adoption_verified:false,host_verified:false}};
-test("actual authorized read-only source outcome never promotes delivery or ChatGPT host",()=>{
+test("self-declared complete handle and execution flags cannot mint a native execution PASS",()=>{
  const r=evaluateClsNativeInvocation({request:clsDispatchRequest(),execution:good});
- assert.equal(r.status,"NATIVE_SOURCE_EXECUTION_EVIDENCED_CHAT_FRESH_HOST_PENDING");
+ assert.equal(r.status,"HOST_BLOCKED");
+ assert.equal(r.reason,"INDEPENDENT_ORIGINAL_EXPORT_EXECUTION_PROOF_UNAVAILABLE");
  assert.equal(r.delivery_verified,false);assert.equal(r.host_verified,false);
+ assert.equal(r.cls_export_invoked,false);
+});
+test("declared live-plugin connector dependencies are not executed Node callbacks",()=>{
+ const r=evaluateClsNativeInvocation({request:clsDispatchRequest(),execution:{...good,available_handles:["github","google_drive"]}});
+ assert.equal(r.status,"HOST_BLOCKED");
+ assert.equal(r.reason,"AUTHORIZED_DRIVE_DOCS_HANDLES_AND_ORIGINAL_EXPORT_RECEIPT_REQUIRED");
 });
 for(const [name,payload] of [
  ["missing provider functions",{available_handles:["githubFetch","githubFetchFile"]}],
