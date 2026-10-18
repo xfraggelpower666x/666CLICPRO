@@ -1,7 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
 import {bindClicNativeGithubTools,bindClicReadOnlyHostTools,verifyClicPdiHostReadiness,inspectClicBoundHostReadbacks} from "../../dashboard/development_progress/github-connector-binding.mjs";
 const OWNER="xfraggelpower666x/666CLICPRO",branch="clic-migration-rev79-staging",h="a".repeat(40);
+const fixedText='{"schema":"test"}';
+const digest=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\\0")).update(b).digest("hex")};
+const fixedBlob=digest(fixedText);
 const deps={fetch:async({url})=>({result:{content:JSON.stringify(url.includes("/branches/")?{commit:{sha:h}}:url.includes("/trees/")?{truncated:false,tree:[]}: {sha:h,parents:[{sha:h}]})}}),
  fetch_file:async()=>({result:{sha:h,content:'{"schema":"test"}'}}),
  update_file:async()=>({result:{commit_sha:h,content_sha:h}})};
@@ -22,8 +26,8 @@ test("read-only host preflight verifies both persisted ledger blobs and unchange
  const paths=["666CLIC_NATIVE_RUNTIME/dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
   "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json"];
  let writes=0,heads=0;
- const github={readBranch:async()=>{heads++;return {commit:{sha:h}}},fetchTree:async()=>({truncated:false,tree:paths.map(path=>({path,sha:h}))}),
-  fetchFile:async()=>({sha:h,content:'{"schema":"test"}'}),updateFile:async()=>{writes++;throw Error("NO_WRITE")}};
+ const github={readBranch:async()=>{heads++;return {commit:{sha:h}}},fetchTree:async()=>({truncated:false,tree:paths.map(path=>({path,sha:fixedBlob}))}),
+  fetchFile:async()=>({sha:fixedBlob,content:fixedText}),updateFile:async()=>{writes++;throw Error("NO_WRITE")}};
  const x=await verifyClicPdiHostReadiness({github});
  assert.equal(x.status,"READ_ONLY_LEDGER_READBACK_VERIFIED");
  assert.equal(x.ledger_blobs.length,2);assert.equal(x.host_persistence_verified,false);
@@ -34,8 +38,8 @@ test("read-only host preflight fails closed on tampered tree, racing head and fo
   "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json"];
  let calls=0;
  const github={readBranch:async()=>({commit:{sha:++calls===1?h:"b".repeat(40)}}),
-  fetchTree:async()=>({truncated:false,tree:paths.map(path=>({path,sha:h}))}),
-  fetchFile:async()=>({sha:h,content:'{"schema":"test"}'})};
+  fetchTree:async()=>({truncated:false,tree:paths.map(path=>({path,sha:fixedBlob}))}),
+  fetchFile:async()=>({sha:fixedBlob,content:fixedText})};
  assert.equal((await verifyClicPdiHostReadiness({github})).reason,"CONCURRENT_HEAD_CHANGE");
  assert.equal((await verifyClicPdiHostReadiness({github,repository:"foreign/repo"})).status,"READBACK_PENDING");
  const altered={...github,readBranch:async()=>({commit:{sha:h}}),fetchTree:async()=>({truncated:false,tree:[]})};
@@ -43,8 +47,8 @@ test("read-only host preflight fails closed on tampered tree, racing head and fo
 });
 
 test("native read-only host tool binding accepts real connector-shaped source and forbids all writes",async()=>{
- const {createHash}=await import("node:crypto");
- const blob=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\\0")).update(b).digest("hex")};
+ 
+ const blob=digest;
  const paths=["666CLIC_NATIVE_RUNTIME/dashboard/development_progress/DEVELOPMENT_PROGRESS_CURRENT.json",
   "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json"];
  const files=Object.fromEntries(paths.map(path=>[path,JSON.stringify({schema:"live-fixture",path})]));
