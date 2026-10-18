@@ -4,7 +4,7 @@
   "date": "2026-10-18",
   "authority": "CLIC_NATIVE_REPOSITORY_ONLY",
   "mode": "CLIC_ONLY_SOURCE_PROPOSAL_AND_REVIEW",
-  "status": "ONE_OF_SEVEN_NATIVE_DELIVERY_EVIDENCED_SIX_PENDING",
+  "status": "TWO_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FIVE_PENDING",
   "source": {
     "system": "LYVRA",
     "id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
@@ -43,10 +43,15 @@
       "outbox_blob": "e524c745cb79f5d2204fd91a1e7ef0697bcba741",
       "target_current_class": "CLIC_REGISTER_ONLY",
       "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
-      "delivery": "NOT_VERIFIED",
+      "delivery": "DELIVERED_EVIDENCED",
       "adoption": "NOT_VERIFIED",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+      "receipt": "INDEPENDENT_NATIVE_RECEIPT_VERIFIED",
+      "native_receipt_path": "handoff/receipts/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01_PFS_SOURCE_RECEIPT.json",
+      "native_receipt_blob": "4bb3fde4e95762ae07514b6df2094217dd58117e",
+      "receiver_commit": "730610610e4645fd51f8bb08d7a2774217fa96f8",
+      "clic_delivery_receipt": "666CLIC_NATIVE_RUNTIME/inbox/666PFS/receipts/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01-DELIVERY-READBACK.json",
+      "clic_delivery_receipt_blob": "d3929fb54d535f52c778ba9dc6a771dde1d6ead7"
     },
     {
       "system": "666STREAM",
@@ -134,10 +139,10 @@
     "target_envelopes": "7_OF_7_DIRECT_SOURCE_READBACK_PASS",
     "source_head_and_blob": "LYVRA_DIRECT_READ_PASS",
     "structural_negative_gates": "7_OF_7_NO_FALSE_DELIVERY_ADOPTION_HOST",
-    "real_peer_receipts": "1_NEW_NETWORK_LYVRA_NATIVE_RECEIPT_VERIFIED",
+    "real_peer_receipts": "2_NEW_NETWORK_LYVRA_AND_PFS_NATIVE_RECEIPTS_VERIFIED",
     "plugin_impact": "CLIC_OWNED_HANDOFF_DATA_ONLY_NO_RUNTIME_SKILL_OR_INTERFACE_CHANGE",
     "visual_compliance": "EXISTING_REGISTER_REUSED_NO_TARGET_LIVE_VISUAL_PASS",
-    "real_peer_delivery": "1_OF_7_DELIVERED_EVIDENCED",
+    "real_peer_delivery": "2_OF_7_DELIVERED_EVIDENCED",
     "automatic_transport": "NOT_VERIFIED",
     "native_adoption": "ZERO_VERIFIED",
     "host": "ZERO_VERIFIED"
@@ -152,5 +157,5 @@
     "junior": "PRESERVED",
     "private_vault": "UNTOUCHED"
   },
-  "next": "SIX_OTHER_NATIVE_RECIPIENT_RECEIPTS_PENDING_PRESERVE_CLIC_PDI_PRIORITY"
+  "next": "FIVE_OTHER_NATIVE_RECIPIENT_RECEIPTS_PENDING_PDI_PRIORITY_PRESERVED"
 }
