@@ -3684,5 +3684,38 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "PDI_SB05_READONLY_CONNECTOR_BINDING_SOURCE_PASS_REAL_CHATGPT_HOST_MODULE_DISPATCH_AND_EVENT_CAS_PENDING"
+  },
+  "update_2026_10_18_native_host_dispatch_acceptance": {
+    "status": "READONLY_MODULE_DISPATCH_ACCEPTANCE_CONTRACT_SOURCE_CI_PASS_CHATGPT_HOST_EXECUTION_OPEN",
+    "base_head": "aa448eb64f56cc05ef2e2afba18adbd52240662d",
+    "prechange_backup": "backup/clic-pre-host-dispatch-acceptance-handoff-20261018",
+    "body_head_before_pointer": "78d1615d75fa117ddd992f8ff17571bc8daccfe0",
+    "adapter_blob": "a8d90521318065470ab07f65bec6b214b5129bb1",
+    "test_blob": "7267b719aeddc00cd82fee79b59d418a0fb2efa7",
+    "handoff_blob": "fe16bfd5949d56b0cabe32780d5427eb50df1542",
+    "ci_run": 39088415996,
+    "ci_conclusion": "SUCCESS",
+    "direct_readback": "GIT_TREE_BLOB_PASS",
+    "allowed_export_paths": [
+      "verifyClicPdiHostReadiness",
+      "inspectPfsSb05NativeReceipts"
+    ],
+    "actual_native_module_execution": false,
+    "chatgpt_fresh_host": false,
+    "pdi_authentic_event_cas": false,
+    "sb05_delivery": false,
+    "sb05_adoption": false,
+    "plugin_published": false,
+    "foreign_writes": false,
+    "priorities": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "NATIVE_READONLY_DISPATCH_ACCEPTANCE_SOURCE_PASS_AUTHORIZED_RUNTIME_EXECUTION_RECEIPT_REQUIRED"
   }
 }
