@@ -75,3 +75,34 @@ test('specific current fingerprint governance is nonsemantic without swallowing 
  a.commits[1].paths.push('666CLIC_NATIVE_RUNTIME/current/CURRENT_STATE.md');
  assert.equal(evaluate(a).semantic_body_head,C);
 });
+
+test('independently read 35-commit PDI and SB05 suffix retains newest semantic candidate and blocks plugin fingerprint',async()=>{
+ const fs=await import('node:fs');const {fileURLToPath}=await import('node:url');
+ const {dirname,resolve}=await import('node:path');
+ const p=resolve(dirname(fileURLToPath(import.meta.url)),'SEMANTIC_BOUNDARY_VERIFIED_SUFFIX_35_2026-10-18.json');
+ const e=JSON.parse(fs.readFileSync(p,'utf8'));
+ assert.equal(e.verified_ancestry_count,35);
+ assert.equal(e.commits.length,35);
+ assert.equal(e.commits[0].parent,e.base);
+ assert.equal(e.commits.at(-1).sha,e.head);
+ assert.ok(e.commits.some(c=>c.sha.startsWith('71c919ae')&&c.paths.some(p=>p.includes('parallel_development_intelligence/CURRENT_STATE'))));
+ assert.ok(e.commits.some(c=>c.sha.startsWith('5c7cebdc')&&c.paths.some(p=>p.includes('starbridge-receipt-readback.mjs'))));
+ assert.equal(classify('666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'),'GOVERNANCE');
+ const args={base:e.base,head:e.head,commits:e.commits,pluginSourceTree:e.repo_text_source_tree,
+  liveSourceTree:e.live_text_source_tree,binaryBinding:e.current_binary_binding,
+  pluginSemanticClass:e.plugin_semantic_class};
+ const result=evaluate(args);
+ assert.equal(result.status,'WRITE_BLOCKED');
+ assert.equal(result.semantic_body_candidate,e.latest_semantic_candidate);
+ assert.equal(result.semantic_body_head,null);
+ assert.ok(result.failures.includes('CURRENT_SOURCE_NE_LIVE_PROVIDER'));
+ assert.ok(result.failures.includes('CURRENT_RELEASE_BINARY_BINDING_UNRESOLVED'));
+ assert.equal(result.approval_granted,false);
+ assert.equal(result.plugin_published,false);
+ const broken=structuredClone(args);broken.commits[19].parent='0'.repeat(40);
+ assert.match(evaluate(broken).failures.join(','),/BROKEN_OR_MISSING_PARENT_CHAIN/);
+ const erased=structuredClone(args);erased.commits[33].paths=[];
+ assert.ok(evaluate(erased).failures.some(x=>x.startsWith('EMPTY_PATHS_WITHOUT_INDEPENDENT_TREE_EQUALITY')));
+ const unknown=structuredClone(args);unknown.commits[33].paths=['unclassified/unknown-carrier'];
+ assert.ok(evaluate(unknown).failures.some(x=>x.startsWith('UNCLASSIFIED_CHANGE')));
+});
