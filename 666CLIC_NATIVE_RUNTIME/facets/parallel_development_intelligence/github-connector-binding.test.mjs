@@ -4,7 +4,7 @@ import {createHash} from "node:crypto";
 import {bindClicNativeGithubTools,bindClicReadOnlyHostTools,verifyClicPdiHostReadiness,inspectClicBoundHostReadbacks} from "../../dashboard/development_progress/github-connector-binding.mjs";
 const OWNER="xfraggelpower666x/666CLICPRO",branch="clic-migration-rev79-staging",h="a".repeat(40);
 const fixedText='{"schema":"test"}';
-const digest=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\\0")).update(b).digest("hex")};
+const digest=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.concat([Buffer.from("blob "+b.length),Buffer.from([0])])).update(b).digest("hex")};
 const fixedBlob=digest(fixedText);
 const deps={fetch:async({url})=>({result:{content:JSON.stringify(url.includes("/branches/")?{commit:{sha:h}}:url.includes("/trees/")?{truncated:false,tree:[]}: {sha:h,parents:[{sha:h}]})}}),
  fetch_file:async()=>({result:{sha:h,content:'{"schema":"test"}'}}),
