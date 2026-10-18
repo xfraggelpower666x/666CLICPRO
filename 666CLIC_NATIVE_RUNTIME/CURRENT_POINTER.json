@@ -3568,5 +3568,43 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING_THEN_PRIVATE_BINARY"
+  },
+  "update_2026_10_18_semantic_suffix_35_evidence": {
+    "status": "COMPLETE_35_COMMIT_SUFFIX_SOURCE_TEST_PASS_FINGERPRINT_WRITE_BLOCKED",
+    "base_head": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+    "prechange_backup": "backup/clic-pre-semantic-boundary-full35-20261018",
+    "body_head_before_pointer": "c8ecf915067ab9d661397ec100f187ae120c7989",
+    "historical_anchor": "9d6287912286977ecdbee90acef540563bbb1445",
+    "independent_commit_parent_changed_path_readbacks": 35,
+    "source_evidence": "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BOUNDARY_VERIFIED_SUFFIX_35_2026-10-18.json",
+    "source_evidence_blob": "b83631e770cd71368068b790862d042abc44ff75",
+    "existing_classifier_blob": "875652fa03a15ccc6b7e4050c261c88feffb7cc0",
+    "test_blob": "b48337b06ba3c737d6d43132b87743e04f7d60a1",
+    "ci_runs": [
+      39086630334,
+      39086630329
+    ],
+    "ci_conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "candidate_semantic_body_head": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+    "canonical_semantic_body_head": null,
+    "canonical_fingerprint": null,
+    "reason": "FULL_SUFFIX_CLASSIFIER_CONCLUDES_CANDIDATE_BUT_LIVE_TEXT_SOURCE_NE_REPO_SOURCE_AND_CURRENT_BINARY_BINDING_MISSING",
+    "source_live_text_conflict": true,
+    "current_binary_binding": "OPEN",
+    "plugin_current_semantic_class": "SOURCE_NEWER_THAN_LIVE_PLUGIN_NOT_YET_CANONICAL_FINGERPRINT_INPUT",
+    "backup_approval": false,
+    "plugin_release": "0.1.22_UNCHANGED",
+    "plugin_published": false,
+    "foreign_writes": false,
+    "pdi_return_anchor": "AUTHENTIC_EVENT_CAS_AND_HOST_RECONCILIATION_PENDING",
+    "starbridge_return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING",
+    "private_vault_return_anchor": "PRIVATE_VAULT_VERIFIED_BINARY_TRANSFER_PENDING_NATIVE_APPROVAL",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "SEMANTIC_SUFFIX_35_SOURCE_VERIFIED_CANONICAL_PLUGIN_FINGERPRINT_BLOCKED_BY_LIVE_PARITY_AND_CURRENT_BINARY"
   }
 }
