@@ -99,6 +99,8 @@ export async function inspectPfsSb05NativeReceipts({fetch,fetchFile,envelope}={}
   const context=pinned[envelope.source_path],liveContext=live[envelope.source_path];
   const env=live[envelopePath],readback=peer[readbackPath],additive=peer[additivePath];
   if(context.sha!==liveContext.sha)return refused("SOURCE_CONTEXT_SUPERSEDED");
+  const committedEnvelope=JSON.parse(env.content);
+  if(JSON.stringify(committedEnvelope)!==JSON.stringify(envelope))return refused("ENVELOPE_NE_COMMITTED_SOURCE");
   const rb=JSON.parse(readback.content),ad=JSON.parse(additive.content);
   if(rb.schema!=="PFS_NATIVE_STARBRIDGE_READBACK_RECEIPT_V1"||
      ad.schema!=="PFS_NATIVE_STARBRIDGE_ADDITIVE_RECEIPT_V1"||
