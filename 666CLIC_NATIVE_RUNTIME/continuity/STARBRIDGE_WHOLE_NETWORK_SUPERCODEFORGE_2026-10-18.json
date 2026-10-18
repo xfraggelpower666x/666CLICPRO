@@ -1,0 +1,147 @@
+{
+  "schema": "CLIC_STARBRIDGE_PDI_WHOLE_NETWORK_PREPARATION_V1",
+  "owner": "666CLIC",
+  "date": "2026-10-18",
+  "authority": "CLIC_NATIVE_REPOSITORY_ONLY",
+  "mode": "CLIC_ONLY_SOURCE_PROPOSAL_AND_REVIEW",
+  "status": "SEVEN_TARGET_SPECIFIC_PREPARED_READBACK_VERIFIED",
+  "source": {
+    "system": "LYVRA",
+    "id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
+    "repo": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+    "observed_head": "4db2e54fc294d8b6ab133706f071651eb1c6e2a7",
+    "original_source_head": "a485333c76dfd3420aaf6f98f517203d659cb790",
+    "path": "LYVRA_NATIVE_RUNTIME/continuity/development_exchange/LYVRA_TO_CLIC_SUPERCODEFORGE_STARBRIDGE_20261018_R01.json",
+    "blob": "84b139648074233b058157a05836d60594a7b4ed",
+    "source_readback": "PASS"
+  },
+  "clic_source_intake": {
+    "path": "666CLIC_NATIVE_RUNTIME/inbox/LYVRA/receipts/LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01-SOURCE-INTAKE.json",
+    "blob": "0471c5830465a1036e9303fd5894dd3e2eacc71c",
+    "class": "SOURCE_INTAKE_NOT_DELIVERY"
+  },
+  "targets": [
+    {
+      "system": "LYVRA",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-STARBRIDGE-WHOLE-NET-LYVRA-20261018-R01.json",
+      "outbox_blob": "b686a42ee635e38fe6e5746337af3d04b11baf3d",
+      "target_current_class": "DIRECT_LYVRA_CURRENT_READ",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666PFS_CSM",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666PFS_CSM/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01.json",
+      "outbox_blob": "e524c745cb79f5d2204fd91a1e7ef0697bcba741",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666STREAM",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-STARBRIDGE-WHOLE-NET-666STREAM-20261018-R01.json",
+      "outbox_blob": "4b2f61f064ff4fd239a363749360ba96d595bf12",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666CLS",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-STARBRIDGE-WHOLE-NET-666CLS-20261018-R01.json",
+      "outbox_blob": "a075c30231fcdafd92d0968442c7a7c9c616fc6d",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666LINGUA",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666LINGUA/CLIC-STARBRIDGE-WHOLE-NET-666LINGUA-20261018-R01.json",
+      "outbox_blob": "93ce806e02171064f05b61a2e64797c16d19cab2",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666MIRA",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666MIRA/CLIC-STARBRIDGE-WHOLE-NET-666MIRA-20261018-R01.json",
+      "outbox_blob": "12529efcb87853d8aa821073b97274251fcc2f2a",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    },
+    {
+      "system": "666TDH",
+      "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666TDH/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01.json",
+      "outbox_blob": "924acd02df1b94768d0545ef1fd4e8f606cbf502",
+      "target_current_class": "CLIC_REGISTER_ONLY",
+      "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
+      "delivery": "NOT_VERIFIED",
+      "adoption": "NOT_VERIFIED",
+      "host": "NOT_VERIFIED",
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+    }
+  ],
+  "managed_system_visual_evidence": "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
+  "managed_visual_register_blob": "fe772ba66acaa4b86e900e72c475fe0ce44a85c9",
+  "original_sb04": {
+    "receipt": "666CLIC_NATIVE_RUNTIME/inbox/LYVRA/receipts/CLIC-STARBRIDGE-SB04-20261017-01-DELIVERY-READBACK.json",
+    "blob": "fcb7e2fa75b89d148c8af06fb97009238c685e8f",
+    "historical_delivery": "VERIFIED_BUT_NOT_NEW_NETWORK_DELIVERY",
+    "native_adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED"
+  },
+  "original_sb05": {
+    "envelope": "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json",
+    "blob": "b060c34bd1ce0939c41ec77aa171d6642262e8d0",
+    "delivery": "NOT_VERIFIED"
+  },
+  "pdi": {
+    "facet": "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/CURRENT_STATE.json",
+    "priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ],
+    "priority_order_changed": false,
+    "host": "NOT_VERIFIED",
+    "ledger_event_write": false
+  },
+  "verification": {
+    "target_envelopes": "7_OF_7_DIRECT_SOURCE_READBACK_PASS",
+    "source_head_and_blob": "LYVRA_DIRECT_READ_PASS",
+    "structural_negative_gates": "7_OF_7_NO_FALSE_DELIVERY_ADOPTION_HOST",
+    "real_peer_receipts": "0_FOR_NEW_NETWORK_ENVELOPES",
+    "plugin_impact": "CLIC_OWNED_HANDOFF_DATA_ONLY_NO_RUNTIME_SKILL_OR_INTERFACE_CHANGE",
+    "visual_compliance": "EXISTING_REGISTER_REUSED_NO_TARGET_LIVE_VISUAL_PASS"
+  },
+  "guards": {
+    "recovery": "backup/clic-pre-whole-network-starbridge-pdi-20261018",
+    "foreign_mutation": false,
+    "auto_activation": false,
+    "no_new_router": true,
+    "no_new_controller": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "private_vault": "UNTOUCHED"
+  },
+  "next": "CLIC_NATIVE_SOURCE_DELIVERY_GATE: independently verify each target current and read an actual target-owned receipt before promoting delivery; preserve interrupted PDI priority"
+}
