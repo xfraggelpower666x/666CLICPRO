@@ -1376,6 +1376,19 @@
     "sb04_sb05": "PRESERVED",
     "pdi_priority": "PRESERVED",
     "plugin_impact": "CLIC_NATIVE_RECEIPT_EVIDENCE_READ_ONLY_PLUGIN_HOST_PARITY_UNVERIFIED"
+  },
+  "cls_host_readonly_provider_binding_2026_10_18": {
+    "status": "BODY_CANDIDATE_CI_AND_READBACK_REQUIRED",
+    "adapter": "continuity/starbridge-cls-host-adapter.mjs",
+    "tests": "continuity/starbridge-cls-host-adapter.test.mjs",
+    "mode": "READ_ONLY_PROVIDER_HANDLES",
+    "drive": "RAW_BASE64_PLUS_REVISIONS_NO_CAS",
+    "docs": "REVISION_ID_SEPARATE",
+    "native_cls_receipt": "NOT_PUBLISHED",
+    "delivery": "3_OF_7_UNCHANGED",
+    "plugin_impact": "SOURCE_ADAPTER_ONLY_LIVE_PARITY_NOT_VERIFIED",
+    "foreign_writes": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
   }
-
 }

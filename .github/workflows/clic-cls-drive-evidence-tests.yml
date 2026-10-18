@@ -6,6 +6,8 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.mjs'
       - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.test.mjs'
       - '.github/workflows/clic-cls-drive-evidence-tests.yml'
   workflow_dispatch:
 permissions:
@@ -22,5 +24,5 @@ jobs:
         with:
           node-version: '22'
       - name: Native Drive receipt and anti-fake regression checks (mock connectors)
-        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs
 # No network reads to CLS, no foreign writes and no actual delivery claims.
