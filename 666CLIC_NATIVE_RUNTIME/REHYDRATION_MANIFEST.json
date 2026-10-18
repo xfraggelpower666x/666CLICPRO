@@ -1425,7 +1425,7 @@
     "static_visual_pdi_ci": "SUCCESS"
   },
   "cls_native_invocation_guard_repair_2026_10_18": {
-    "status": "SOURCE_REPAIR_CANDIDATE_CI_REQUIRED",
+    "status": "SOURCE_REPAIR_CI_VERIFIED_HOST_STILL_BLOCKED",
     "module": "continuity/cls-native-host-dispatch.mjs",
     "tests": "continuity/cls-native-host-dispatch.test.mjs",
     "reason": "BOOLEAN_ONLY_NATIVE_EXECUTION_CLAIM_MUST_FAIL_CLOSED",
@@ -1435,6 +1435,20 @@
     "foreign_writes": false,
     "plugin_release": "NONE",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "body_commit": "aeedc608daada1240e601f0c41d19658e1163739",
+    "source_blob": "8a3e56cd7542c63a2cfb176f92d8d7d3fc9526be",
+    "negative_test_blob": "ab2fde375d4cc6aea002f7cfe58b1977e7a5f320",
+    "ci_run": 39159573406,
+    "ci_conclusion": "success",
+    "ci_tests": 14,
+    "ci_fail": 0,
+    "real_github_get_calls": 4,
+    "real_github_writes": 0,
+    "original_cls_export_invoked": false,
+    "drive_docs_host": "BLOCKED_NOT_INJECTED",
+    "pdi_sb05": "PRESERVED",
+    "visual_ci": "SUCCESS",
+    "plugin_impact": "CLIC_ONLY_SECURITY_GUARD_SOURCE_NO_PLUGIN_RELEASE_LIVE_PARITY_OPEN"
   }
 }
