@@ -3896,5 +3896,38 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "PDI_NATIVE_PRIORITY_PRESERVED_FOUR_NETWORK_PEER_DELIVERIES_OPEN"
+  },
+  "cls_drive_receiver_evidence_2026_10_18": {
+    "classification": "CLIC_SOURCE_IMPLEMENTED_TESTED_CLS_NATIVE_DELIVERY_PENDING",
+    "source_body_head": "98e851da3a1e0c05a2751569d0bfd63318272ff6",
+    "recovery_branch": "backup/clic-pre-cls-drive-receiver-20261018",
+    "receiver_module": "continuity/starbridge-cls-drive-receipt.mjs",
+    "receiver_tests": "continuity/starbridge-cls-drive-receipt.test.mjs",
+    "module_blob": "da369796d786d77464846414b4421778bc2ee4f9",
+    "test_blob": "a964a7bf4b38ee786b73b01d1caf3d7583759642",
+    "manifest_blob": "d9922e23b768639de07721c9d2134e94899f0e51",
+    "targeted_ci": {
+      "run_id": 39104606728,
+      "conclusion": "success",
+      "tests": 33,
+      "pass": 33,
+      "fail": 0
+    },
+    "source": "PASS",
+    "cls_native_receipt": "NOT_VERIFIED",
+    "delivery_network": "3_OF_7_UNCHANGED",
+    "adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "auto_transport": "NOT_VERIFIED",
+    "drive_cas": "NOT_CLAIMED_READ_ONLY_DOUBLE_REVISION",
+    "plugin_impact": "OPEN_NO_LIVE_PARITY_CLAIM",
+    "pdi_priorities": "PRESERVED",
+    "sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "supercodeforge_host": "BLOCKED_HANDLE_INJECTION",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "PDI_NATIVE_PRIORITY_PRESERVED_FOUR_NETWORK_PEER_DELIVERIES_OPEN"
   }
 }
