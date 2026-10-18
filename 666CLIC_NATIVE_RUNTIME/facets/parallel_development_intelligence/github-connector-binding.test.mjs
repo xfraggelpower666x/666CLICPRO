@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
-import {bindClicNativeGithubTools,bindClicReadOnlyHostTools,verifyClicPdiHostReadiness,inspectClicBoundHostReadbacks} from "../../dashboard/development_progress/github-connector-binding.mjs";
+import {bindClicNativeGithubTools,bindClicReadOnlyHostTools,verifyClicPdiHostReadiness,inspectClicBoundHostReadbacks,evaluateClicNativeHostDispatchAcceptance} from "../../dashboard/development_progress/github-connector-binding.mjs";
 const OWNER="xfraggelpower666x/666CLICPRO",branch="clic-migration-rev79-staging",h="a".repeat(40);
 const fixedText='{"schema":"test"}';
 const digest=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.concat([Buffer.from("blob "+b.length),Buffer.from([0])])).update(b).digest("hex")};
@@ -81,4 +81,38 @@ test("read-only host orchestrator does not fabricate PDI event-CAS or SB05 deliv
  assert.equal(result.host_accepted,false);
  assert.equal(result.writes,0);
  assert.ok(called.length>0);
+});
+
+test("native module dispatch acceptance is narrow and never grants chat host or event CAS",()=>{
+ const head="a".repeat(40),blob="b".repeat(40);
+ const request={facet:"PDI_READONLY",export_name:"verifyClicPdiHostReadiness",
+  repository:OWNER,branch,mode:"READ_ONLY",allow_foreign_write:false,allow_event_write:false,expected_head:head};
+ const output={status:"READ_ONLY_LEDGER_READBACK_VERIFIED",writes:0,host_dispatch_verified:false};
+ const execution={runner_kind:"AUTHORIZED_NATIVE_NODE_RUNTIME",connector_injected:true,
+  module_loaded_from_verified_head:true,module_git_blob_verified:true,
+  export_invoked:true,real_run_receipt:true,source_head:head,module_blob:blob,writes:0,output};
+ const r=evaluateClicNativeHostDispatchAcceptance({request,execution});
+ assert.equal(r.status,"NATIVE_MODULE_EXECUTION_EVIDENCED_NOT_CHAT_FRESH_HOST");
+ assert.equal(r.module_executed,true);assert.equal(r.fresh_host_verified,false);
+ assert.equal(r.event_cas_verified,false);assert.equal(r.delivery_verified,false);
+ assert.equal(r.writes,0);
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,real_run_receipt:false}}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request:{...request,export_name:"updateFile"},execution}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request:{...request,allow_event_write:true},execution}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,output:{...output,event_cas_verified:true}}}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,writes:1}}).status,"HOST_DISPATCH_PENDING");
+});
+test("SB05 dispatch can attest native module invocation only with receipt and no delivery promotion",()=>{
+ const head="a".repeat(40),blob="b".repeat(40);
+ const request={facet:"SB05_READONLY",export_name:"inspectPfsSb05NativeReceipts",
+  repository:OWNER,branch,mode:"READ_ONLY",allow_foreign_write:false,allow_event_write:false,expected_head:head};
+ const output={status:"NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING",
+  native_receipts_verified:true,delivery_verified:false,adoption_verified:false,host_verified:false,writes:0};
+ const execution={runner_kind:"AUTHORIZED_NATIVE_NODE_RUNTIME",connector_injected:true,
+  module_loaded_from_verified_head:true,module_git_blob_verified:true,export_invoked:true,
+  real_run_receipt:true,source_head:head,module_blob:blob,writes:0,output};
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution}).status,"NATIVE_MODULE_EXECUTION_EVIDENCED_NOT_CHAT_FRESH_HOST");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,output:{...output,delivery_verified:true}}}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,output:{...output,native_receipts_verified:false}}}).status,"HOST_DISPATCH_PENDING");
+ assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,source_head:"c".repeat(40)}}).status,"HOST_DISPATCH_PENDING");
 });
