@@ -108,3 +108,14 @@ test("SB05 native receipts fail on racing heads or absent trusted connector",asy
  assert.equal((await inspectPfsSb05NativeReceipts(nativePfsFixture({changed:true}))).reason,"CONCURRENT_HEAD_CHANGE");
  assert.equal((await inspectPfsSb05NativeReceipts({envelope:nativePfsFixture().envelope})).reason,"TRUSTED_CONNECTOR_REQUIRED");
 });
+
+test("SB05 injected envelope must equal actual committed CLIC envelope, not just match identity fields",async()=>{
+ const f=nativePfsFixture();
+ f.envelope={...f.envelope,purpose:"UNCOMMITTED_FORGED_FIELD"};
+ const r=await inspectPfsSb05NativeReceipts(f);
+ assert.equal(r.status,"AWAIT_RECEIPT");
+ assert.equal(r.reason,"ENVELOPE_NE_COMMITTED_SOURCE");
+ assert.equal(r.delivery_verified,false);
+ assert.equal(r.adoption_verified,false);
+ assert.equal(r.host_verified,false);
+});
