@@ -9,7 +9,7 @@ const CLIC="xfraggelpower666x/666CLICPRO",BRANCH="clic-migration-rev79-staging";
 const SB05_PATH="666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json";
 const modPdi="666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs";
 const modSb05="666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs";
-const hash=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\\0")).update(b).digest("hex")};
+const hash=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.concat([Buffer.from("blob "+b.length),Buffer.from([0])])).update(b).digest("hex")};
 const token=process.env.GITHUB_TOKEN;
 const source=process.env.GITHUB_SHA;
 const outputFile=process.env.CLIC_EXECUTION_RECEIPT_PATH||"clic-native-execution-receipt.json";
@@ -30,7 +30,7 @@ const fetchFile=async ({repository_full_name,path,ref})=>{
  if(!r.ok)throw Error("GITHUB_FILE_READ_FAILED_"+r.status+"_"+repository_full_name);
  const f=await r.json();
  if(f.type!=="file"||f.encoding!=="base64"||typeof f.content!=="string")throw Error("GITHUB_FILE_ENCODING_UNEXPECTED");
- const content=Buffer.from(f.content.replace(/\\s/g,""),"base64").toString("utf8");
+ const content=Buffer.from(f.content.replace(/\s/g,""),"base64").toString("utf8");
  if(hash(content)!==f.sha)throw Error("GITHUB_FILE_CONTENT_SHA_MISMATCH");
  return {result:{content,sha:f.sha}};
 };
@@ -81,7 +81,7 @@ try{
 }finally{
  results.github_api_read_calls=calls;
  mkdirSync(new URL(".", "file://"+process.cwd()+"/"+outputFile),{recursive:true});
- writeFileSync(outputFile,JSON.stringify(results,null,2)+"\\n");
+ writeFileSync(outputFile,JSON.stringify(results,null,2)+"\n");
  console.log("CLIC_NATIVE_EXECUTION_RECEIPT="+JSON.stringify(results));
 }
 if(results.status!=="TWO_NATIVE_MODULE_EXECUTIONS_EVIDENCED")process.exitCode=1;
