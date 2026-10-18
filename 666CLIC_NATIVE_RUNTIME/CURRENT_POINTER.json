@@ -3957,6 +3957,45 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_CLS_DOCS_ADAPTER_SOURCE_44_PASS_NATIVE_RECEIPT_AND_HOST_OPEN"
+  },
+  "update_2026_10_18_cls_readonly_host_adapter": {
+    "status": "SOURCE_IMPLEMENTED_CI_VERIFIED_HOST_NATIVE_RECEIPT_PENDING",
+    "base_head": "fb3e9394debcb631419aedbb3a6c15cb8843d327",
+    "prechange_recovery": "backup/clic-pre-cls-host-binding-20261018",
+    "implementation_body_head": "9b4dce0a33fefc06c33ae0bcbf54c73605cab38e",
+    "body_head_before_pointer": "32ba69203dfc888780d18bdd618c4578f34b06ab",
+    "adapter": "continuity/starbridge-cls-host-adapter.mjs",
+    "adapter_blob": "aa05c767464b7c107846609de5b47f18b6c24bcf",
+    "tests": "continuity/starbridge-cls-host-adapter.test.mjs",
+    "tests_blob": "0de9b7e4aa3714baf0bb84e1d69440a8f41ceeec",
+    "manifest_blob": "d8e17db2558536757224c6ea3065708ab460e2ed",
+    "targeted_ci": {
+      "run_id": 39146536603,
+      "conclusion": "success",
+      "scope": "MOCK_CONNECTOR_TESTS_NOT_FRESH_HOST"
+    },
+    "static_visual_pdi_workflows": "SUCCESS_ON_IMPLEMENTATION_BODY",
+    "source": "PASS",
+    "cls_native_decision": "PRESERVED_SCOPED_SOURCE_ONLY",
+    "cls_native_receipt": "NOT_PUBLISHED",
+    "network_delivery_count": 3,
+    "network_total": 7,
+    "remaining_peers": [
+      "666CLS",
+      "666LINGUA",
+      "666MIRA",
+      "666TDH"
+    ],
+    "adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "automatic_transport": "NOT_VERIFIED",
+    "drive_revision": "READ_ONLY_DOUBLE_PROVIDER_READ_NO_ATOMIC_CAS",
+    "plugin_impact": "SOURCE_ONLY_PLUGIN_LIVE_PARITY_NOT_VERIFIED",
+    "pdi_sb05_native_execution": "PRESERVED_PASS",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_CLS_HOST_ADAPTER_SOURCE_CI_PASS_NATIVE_RECEIPT_AND_FRESH_HOST_PENDING"
   }
-
 }
