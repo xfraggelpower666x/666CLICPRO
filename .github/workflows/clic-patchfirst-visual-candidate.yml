@@ -24,4 +24,5 @@ jobs:
         run: |
           node --test 666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-candidate.test.mjs
           node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/visual-completion-provider-preflight.test.mjs
+          node --test 666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.test.mjs
 # SOURCE ONLY: does not build, upload, publish, or claim provider binary/host parity.
