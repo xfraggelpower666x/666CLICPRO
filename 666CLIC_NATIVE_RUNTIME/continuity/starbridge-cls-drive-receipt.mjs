@@ -24,7 +24,7 @@ function driveFile(x){
  return v;
 }
 function metadata(x){const v=unwrap(x);if(!v||typeof v!=="object")throw Error("DRIVE_METADATA_REQUIRED");return v;}
-function data(x){return parse(x?.content??x);}
+function data(x){const v=unwrap(x);return parse(v?.content??v);}
 function sourceFile(x){
  const v=unwrap(x);if(typeof v?.content!=="string"||!SHA.test(v.sha??""))throw Error("INVALID_GITHUB_FILE");
  if(blobHash(Buffer.from(v.content,"utf8"))!==v.sha)throw Error("SOURCE_CONTENT_BLOB_MISMATCH");
