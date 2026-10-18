@@ -120,3 +120,50 @@ export async function inspectClicBoundHostReadbacks({fetch,fetch_file}={}){
   host_accepted:false,writes:0,foreign_mutations:false,
   return_anchor:"PDI_EVENT_CAS_AND_SB05_DELIVERY_HOST_STILL_OPEN"};
 }
+
+
+// Acceptance handoff inside the existing CLIC connector adapter: this does not execute
+// modules, install a host dispatcher, or treat CI/source checks as fresh-host proof.
+const ACCEPTED_EXPORTS=Object.freeze({
+ PDI_READONLY:"verifyClicPdiHostReadiness",
+ SB05_READONLY:"inspectPfsSb05NativeReceipts"
+});
+export function evaluateClicNativeHostDispatchAcceptance({request,execution}={}){
+ const blocked=reason=>({schema:"CLIC_NATIVE_HOST_DISPATCH_ACCEPTANCE_V1",status:"HOST_DISPATCH_PENDING",reason,
+  module_executed:false,connector_readback_verified:false,event_cas_verified:false,
+  delivery_verified:false,adoption_verified:false,fresh_host_verified:false,writes:0});
+ if(!request||!Object.hasOwn(ACCEPTED_EXPORTS,request.facet)||
+    request.export_name!==ACCEPTED_EXPORTS[request.facet]||
+    request.repository!==OWNER||request.branch!==BRANCH||
+    request.mode!=="READ_ONLY"||request.allow_foreign_write!==false||
+    request.allow_event_write!==false)return blocked("EXACT_NATIVE_READONLY_DISPATCH_SCOPE_REQUIRED");
+ if(execution?.runner_kind!=="AUTHORIZED_NATIVE_NODE_RUNTIME"||
+    execution?.connector_injected!==true||
+    execution?.module_loaded_from_verified_head!==true||
+    execution?.module_git_blob_verified!==true||
+    execution?.export_invoked!==true||
+    execution?.real_run_receipt!==true||
+    !SHA.test(execution?.source_head??"")||
+    execution.source_head!==request.expected_head||
+    !SHA.test(execution?.module_blob??"")||
+    execution?.writes!==0)
+   return blocked("INDEPENDENT_NATIVE_MODULE_EXECUTION_RECEIPT_REQUIRED");
+ const response=execution.output;
+ if(!response||typeof response!=="object"||
+    response.delivery_verified===true||response.adoption_verified===true||
+    response.host_verified===true||response.host_accepted===true||
+    response.event_cas_verified===true||response.writes!==0)
+   return blocked("READONLY_OUTPUT_CANNOT_PROMOTE_WRITE_DELIVERY_OR_HOST");
+ if(request.facet==="PDI_READONLY"&&response.status!=="READ_ONLY_LEDGER_READBACK_VERIFIED")
+   return blocked("PDI_INDEPENDENT_LEDGER_READBACK_REQUIRED");
+ if(request.facet==="SB05_READONLY"&&
+    (response.status!=="NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING"||
+     response.native_receipts_verified!==true))
+   return blocked("SB05_DUAL_NATIVE_RECEIPT_READBACK_REQUIRED");
+ return {schema:"CLIC_NATIVE_HOST_DISPATCH_ACCEPTANCE_V1",status:"NATIVE_MODULE_EXECUTION_EVIDENCED_NOT_CHAT_FRESH_HOST",
+  runner_kind:execution.runner_kind,source_head:execution.source_head,module_blob:execution.module_blob,
+  facet:request.facet,export_name:request.export_name,
+  module_executed:true,connector_readback_verified:true,event_cas_verified:false,
+  delivery_verified:false,adoption_verified:false,fresh_host_verified:false,writes:0,
+  plugin_published:false,return_anchor:"CHATGPT_FRESH_HOST_AND_AUTHENTIC_EVENT_CAS_SEPARATE"};
+}
