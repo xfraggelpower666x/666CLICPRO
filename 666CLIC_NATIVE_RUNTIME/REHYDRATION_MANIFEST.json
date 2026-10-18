@@ -1378,7 +1378,7 @@
     "plugin_impact": "CLIC_NATIVE_RECEIPT_EVIDENCE_READ_ONLY_PLUGIN_HOST_PARITY_UNVERIFIED"
   },
   "cls_host_readonly_provider_binding_2026_10_18": {
-    "status": "BODY_CANDIDATE_CI_AND_READBACK_REQUIRED",
+    "status": "SOURCE_IMPLEMENTED_CI_SUCCESS_HOST_EXECUTION_PENDING",
     "adapter": "continuity/starbridge-cls-host-adapter.mjs",
     "tests": "continuity/starbridge-cls-host-adapter.test.mjs",
     "mode": "READ_ONLY_PROVIDER_HANDLES",
@@ -1389,6 +1389,14 @@
     "plugin_impact": "SOURCE_ADAPTER_ONLY_LIVE_PARITY_NOT_VERIFIED",
     "foreign_writes": false,
     "pet": "PAUSED",
-    "junior": "PRESERVED"
+    "junior": "PRESERVED",
+    "source_body_commit": "9b4dce0a33fefc06c33ae0bcbf54c73605cab38e",
+    "adapter_blob": "aa05c767464b7c107846609de5b47f18b6c24bcf",
+    "tests_blob": "0de9b7e4aa3714baf0bb84e1d69440a8f41ceeec",
+    "ci_run": 39146536603,
+    "ci_conclusion": "success",
+    "ci_provenance": "GITHUB_ACTIONS_MOCK_HANDLE_TESTS_NOT_REAL_HOST",
+    "host": "NOT_VERIFIED",
+    "cas": false
   }
 }
