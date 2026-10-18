@@ -3929,5 +3929,34 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "PDI_NATIVE_PRIORITY_PRESERVED_FOUR_NETWORK_PEER_DELIVERIES_OPEN"
+  },
+  "update_2026_10_18_cls_docs_evidence_adapter": {
+    "classification": "CLIC_OWNED_READ_ONLY_DOCS_EVIDENCE_IMPLEMENTED_CI_VERIFIED",
+    "base_head": "70ce26a9ee403179244d01776a39062b6ca60f7f",
+    "prechange_recovery": "backup/clic-pre-cls-docs-evidence-20261018",
+    "body_head_before_pointer": "5ec1be389218b2b573cf63338e1e8bda3add6a23",
+    "reader_blob": "b1492170a439beaacfc98a784ac0bd0cc58ba92b",
+    "test_blob": "01c2c7c28620789d523331996b70e53bd3e5bcaa",
+    "manifest_blob": "cc071d119d090f786596a94fad7fba0e06ad903e",
+    "ci_run": 39137807134,
+    "ci_result": "44_PASS_0_FAIL_CONNECTOR_MOCKS",
+    "cls_source_blob": "a075c30231fcdafd92d0968442c7a7c9c616fc6d",
+    "cls_intake_id": "1OXX4trmZeJLXaEpuVsf2lkIvXy0mlGS1qyIjEAt9ap8",
+    "native_decision": "SCOPED_SOURCE_REVIEW_ONLY",
+    "cls_receipt": "NOT_PUBLISHED",
+    "delivery": "3_OF_7_UNCHANGED",
+    "adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "source_adapter": "SOURCE_CI_ONLY_FRESH_HOST_NOT_VERIFIED",
+    "cas": "NOT_CLAIMED_DOCS_DOUBLE_PROVIDER_READBACK",
+    "pdi_priorities": "PRESERVED",
+    "sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_impact": "READ_ONLY_EVIDENCE_EXTENSION_NATIVE_PLUGIN_LIVE_PARITY_NOT_VERIFIED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_CLS_DOCS_ADAPTER_SOURCE_44_PASS_NATIVE_RECEIPT_AND_HOST_OPEN"
   }
+
 }
