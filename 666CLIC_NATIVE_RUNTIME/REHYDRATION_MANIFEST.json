@@ -1398,5 +1398,20 @@
     "ci_provenance": "GITHUB_ACTIONS_MOCK_HANDLE_TESTS_NOT_REAL_HOST",
     "host": "NOT_VERIFIED",
     "cas": false
+  },
+  "cls_native_host_dispatch_2026_10_18": {
+    "status": "CLIC_SOURCE_CANDIDATE_NATIVE_GITHUB_READONLY_PREFLIGHT",
+    "dispatch": "continuity/cls-native-host-dispatch.mjs",
+    "runner": "continuity/cls-native-actions-readonly.mjs",
+    "workflow": ".github/workflows/clic-cls-native-dispatch-readonly.yml",
+    "native_docs_handles": "UNAVAILABLE_IN_GITHUB_ACTIONS_WORKFLOW",
+    "host": "BLOCKED",
+    "delivery": "3_OF_7",
+    "adoption": "NOT_VERIFIED",
+    "plugin_release": "NONE",
+    "plugin_impact": "CLIC_INTERNAL_EVIDENCE_READONLY_LIVE_PARITY_NOT_VERIFIED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false
   }
 }
