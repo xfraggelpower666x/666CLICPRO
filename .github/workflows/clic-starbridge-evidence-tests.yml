@@ -6,6 +6,7 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.mjs'
       - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/receiver-gates-negatives.test.mjs'
       - '666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_SB01_SB03_CHANNEL_INVENTORY_2026-10-16.md'
       - '.github/workflows/clic-starbridge-evidence-tests.yml'
   workflow_dispatch:
@@ -23,5 +24,5 @@ jobs:
         with:
           node-version: '22'
       - name: Test StarBridge idempotency, provenance and work-anchor guards
-        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/receiver-gates-negatives.test.mjs
 # Offline logic checks only; no remote delivery, foreign writes or fresh-chat claims.
