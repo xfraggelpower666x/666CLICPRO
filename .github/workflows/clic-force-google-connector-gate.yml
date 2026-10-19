@@ -5,6 +5,8 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.mjs'
       - '666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.test.mjs'
       - '.github/workflows/clic-force-google-connector-gate.yml'
   workflow_dispatch:
 permissions:
@@ -21,5 +23,5 @@ jobs:
         with:
           node-version: '22'
       - name: Isolated test fixture, denial and recovery regression
-        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.test.mjs
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.test.mjs
 # Fixture-only execution cannot prove live Google Write, Host or CAS.
