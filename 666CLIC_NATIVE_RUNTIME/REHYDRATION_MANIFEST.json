@@ -1488,5 +1488,27 @@
     "foreign_writes": false,
     "pet": "PAUSED",
     "junior": "PRESERVED"
+  },
+  "google_docs_force_host_adapter_2026_10_20": {
+    "status": "SOURCE_IMPLEMENTED_CI_20_OF_20_HOST_WRITE_BLOCKED",
+    "adapter": "continuity/force-google-docs-host-adapter.mjs",
+    "tests": "continuity/force-google-docs-host-adapter.test.mjs",
+    "contract": "continuity/FORCE_GOOGLE_DOCS_HOST_ADAPTER.md",
+    "ci_run": 39337294718,
+    "ci_tests_pass": 20,
+    "ci_tests_fail": 0,
+    "prechange_recovery": "backup/clic-pre-google-docs-host-gate-20261020",
+    "historic_u16_u11_u10": "SOURCE_PROVENANCE_ONLY_NOT_WRITE_TARGET",
+    "approval": "INDEPENDENT_HOST_ATTESTATION_NOT_VERIFIED",
+    "write": "WRITE_BLOCKED_NOT_EXECUTED",
+    "restore": "NOT_EXECUTED",
+    "cas": "GOOGLE_DOCS_REQUIRED_REVISION_ID_SOURCE_TESTS_ONLY",
+    "host": "NOT_VERIFIED",
+    "plugin": "UNCHANGED_LIVE_PARITY_OPEN",
+    "delivery": "3_OF_7_UNCHANGED",
+    "foreign_writes": false,
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
