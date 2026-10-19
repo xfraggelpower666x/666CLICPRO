@@ -4063,5 +4063,15 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_CLS_INVOCATION_PROOF_GUARD_REPAIRED_CI_PASS_PROVIDER_HOST_BLOCKED"
+  },
+  "receiver_card_reconciliation_2026_10_19": {
+    "status": "CI_PASS_9_OF_9_DELIVERY_3_OF_7_PENDING_4",
+    "manifest_blob": "0e99eda11c2b32e2d9c1890a2b5e3052a7f6c15c",
+    "body_head": "f0dcfae9aef6bc7dd7d35bd813ad4eafacf07318",
+    "ci_run": 39206044536,
+    "pointer_last": true,
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
