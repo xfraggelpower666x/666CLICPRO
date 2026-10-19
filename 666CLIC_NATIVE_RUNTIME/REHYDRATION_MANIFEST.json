@@ -1469,5 +1469,24 @@
     "pet": "PAUSED",
     "plugin_release": "NONE",
     "plugin_parity": "OPEN_UNCHANGED"
+  },
+  "force_google_connector_read_write_gate_2026_10_20": {
+    "status": "SOURCE_11_OF_11_CI_PASS_LIVE_READ_VERIFIED_WRITE_BLOCKED",
+    "gate": "continuity/force-google-connector-gate.mjs",
+    "tests": "continuity/force-google-connector-gate.test.mjs",
+    "contract": "continuity/FORCE_GOOGLE_CONNECTOR_READ_WRITE_GATE.md",
+    "ci_run": 39336460109,
+    "fixture_tests": "11_PASS_ZERO_FAIL",
+    "real_provider_read": "CLIC_OWN_HISTORY_FOLDER_METADATA_AND_CHILDREN",
+    "isolated_write": "WRITE_BLOCKED_NO_VALID_CLIC_OWN_TEST_TARGET",
+    "recovery_live": "NOT_TESTED",
+    "host": "NOT_VERIFIED",
+    "cas": "NOT_VERIFIED",
+    "delivery": "3_OF_7_UNCHANGED",
+    "prechange": "backup/clic-pre-force-google-connector-gate-20261020",
+    "plugin_impact": "CLIC_OWN_SOURCE_ONLY_LIVE_PARITY_OPEN",
+    "foreign_writes": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
   }
 }
