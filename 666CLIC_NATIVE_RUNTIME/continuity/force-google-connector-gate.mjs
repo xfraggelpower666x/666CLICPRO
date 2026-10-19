@@ -31,7 +31,7 @@ export async function forceGoogleConnectorGate({provider,scope,live=false}={}){
  if(typeof provider.authorizeIsolatedWrite!=="function"||typeof provider.writeIfRevision!=="function"||
     typeof provider.restoreIfRevision!=="function")
    return blocked("INDEPENDENT_AUTHORIZED_WRITE_HANDLES_REQUIRED",readState);
- const nonce=randomUUID(),testContent=before.content+"\nCLIC_CONNECTOR_FORCE_NONCE="+nonce+"\n";
+ const nonce=randomUUID(),testContent=before.content+" CLIC_CONNECTOR_FORCE_NONCE="+nonce;
  let permit;
  try{permit=await provider.authorizeIsolatedWrite({fileId:scope.fileId,parentId:scope.parentId,
   owner:"666CLIC",nonce,expectedRevision:before.revision,expectedMime:scope.expectedMime});}
