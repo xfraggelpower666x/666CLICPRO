@@ -5,6 +5,8 @@ on:
     paths:
       - '666CLIC_NATIVE_RUNTIME/continuity/r02-source-intake-create-only.mjs'
       - '666CLIC_NATIVE_RUNTIME/continuity/r02-source-intake-create-only.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/r02-native-approval-readback.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/r02-native-approval-readback.test.mjs'
       - '.github/workflows/clic-r02-source-intake-contract-ci.yml'
   workflow_dispatch:
 permissions:
@@ -21,5 +23,5 @@ jobs:
         with:
           node-version: '22'
       - name: Test CLIC-native create-only and StarBridge guards offline
-        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/r02-source-intake-create-only.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/r02-source-intake-create-only.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/r02-native-approval-readback.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs
 # NEVER creates native receipt, dispatches to foreign systems or grants write authority.

@@ -15,7 +15,7 @@ const fixture=()=>{
  };
 };
 const reject=(change,reason)=>{const f=fixture();change(f);const x=prepareR02ReceiptCreateOnly(f);assert.equal(x.status,"WRITE_BLOCKED");assert.equal(x.reason,reason);assert.equal(x.receipt_written,false)};
-test("valid supplied evidence only yields a plan, never performs a write",()=>{const x=prepareR02ReceiptCreateOnly(fixture());assert.equal(x.status,"AUTHORIZED_CREATE_PLAN_ONLY");assert.equal(x.receipt_written,false);assert.equal(x.expected_head,HEAD);assert.equal(x.path,R02_RECEIPT.path);assert.equal(x.delivery_verified,false)});
+test("valid supplied evidence only yields a plan, never performs a write",()=>{const x=prepareR02ReceiptCreateOnly(fixture());assert.equal(x.status,"UNTRUSTED_CREATE_PLAN_ONLY");assert.equal(x.may_create_only,false);assert.equal(x.receipt_write_authorized,false);assert.equal(x.receipt_written,false);assert.equal(x.expected_head,HEAD);assert.equal(x.path,R02_RECEIPT.path);assert.equal(x.delivery_verified,false)});
 test("missing native approval fails closed",()=>reject(f=>delete f.authorization,"SEPARATE_CLIC_NATIVE_WRITE_APPROVAL_REQUIRED"));
 test("generic approval cannot replace receipt-specific approval",()=>reject(f=>f.authorization.separate_receipt_write_approved=false,"SEPARATE_CLIC_NATIVE_WRITE_APPROVAL_REQUIRED"));
 test("foreign path fails",()=>reject(f=>f.authorization.path="other/repo","SEPARATE_CLIC_NATIVE_WRITE_APPROVAL_REQUIRED"));

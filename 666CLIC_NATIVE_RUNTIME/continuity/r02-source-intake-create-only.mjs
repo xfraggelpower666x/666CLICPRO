@@ -47,7 +47,7 @@ export function prepareR02ReceiptCreateOnly({authorization,source,head,tree,exis
     receipt?.gates?.adoption!=="NOT_VERIFIED_BY_TARGETS"||
     receipt?.gates?.host!=="NOT_VERIFIED")
   return denied("RECEIPT_SCHEMA_OR_GATE_MISMATCH");
- return {status:"AUTHORIZED_CREATE_PLAN_ONLY",receipt_written:false,may_create_only:true,
+ return {status:"UNTRUSTED_CREATE_PLAN_ONLY",receipt_written:false,may_create_only:false,approval_verified:false,receipt_write_authorized:false,
   repository:R02_RECEIPT.repository,branch:R02_RECEIPT.branch,path:R02_RECEIPT.path,
   expected_head:head,content:JSON.stringify(receipt,null,2)+"\n",
   requires_fresh_head:true,requires_prechange_recovery:true,requires_expected_sha_cas:true,
