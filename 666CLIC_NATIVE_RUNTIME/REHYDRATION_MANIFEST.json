@@ -1450,5 +1450,24 @@
     "pdi_sb05": "PRESERVED",
     "visual_ci": "SUCCESS",
     "plugin_impact": "CLIC_ONLY_SECURITY_GUARD_SOURCE_NO_PLUGIN_RELEASE_LIVE_PARITY_OPEN"
+  },
+  "four_receiver_cards_2026_10_19": {
+    "status": "RECONCILED_CI_SUCCESS_NATIVE_RECEIPTS_OPEN",
+    "body_head": "ed59bb0e8a31e706700efdc055ab353ad454feda",
+    "ci_run": 39206044536,
+    "ci_tests": "9_OF_9_PASS",
+    "delivery": "3_OF_7",
+    "adoption": "0_OF_7",
+    "host": "0_OF_7",
+    "lingua": "V3_4_4_R16_POINTER_PASS_LAST",
+    "mira_head": "730610610e4645fd51f8bb08d7a2774217fa96f8",
+    "tdh": "V1_14_0_NATIVE",
+    "cls": "HOST_BLOCKED",
+    "foreign_mutation": false,
+    "pdi_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_release": "NONE",
+    "plugin_parity": "OPEN_UNCHANGED"
   }
 }
