@@ -78,7 +78,18 @@
       "delivery": "NOT_VERIFIED",
       "adoption": "NOT_VERIFIED",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT",
+      "receiver_reconciliation": {
+        "review_date": "2026-10-19",
+        "status": "HOST_BLOCKED",
+        "reason": "DRIVE_DOCS_ORIGINAL_EXECUTION_NOT_PROVEN",
+        "native_receipt": "NOT_VERIFIED",
+        "receipt_path": "UNCONFIRMED",
+        "delivery": "NOT_VERIFIED",
+        "adoption": "NOT_VERIFIED",
+        "host": "NOT_VERIFIED",
+        "foreign_mutation": false
+      }
     },
     {
       "system": "666LINGUA",
@@ -89,7 +100,18 @@
       "delivery": "NOT_VERIFIED",
       "adoption": "NOT_VERIFIED",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT",
+      "receiver_reconciliation": {
+        "review_date": "2026-10-19",
+        "status": "RECEIPT_BLOCKED",
+        "reason": "LIVE_V3_4_4_R16_POINTER_PASS_LAST_NATIVE_R01_RECEIPT_UNCONFIRMED",
+        "native_receipt": "NOT_VERIFIED",
+        "receipt_path": "UNCONFIRMED",
+        "delivery": "NOT_VERIFIED",
+        "adoption": "NOT_VERIFIED",
+        "host": "NOT_VERIFIED",
+        "foreign_mutation": false
+      }
     },
     {
       "system": "666MIRA",
@@ -100,7 +122,18 @@
       "delivery": "NOT_VERIFIED",
       "adoption": "NOT_VERIFIED",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT",
+      "receiver_reconciliation": {
+        "review_date": "2026-10-19",
+        "status": "RECEIPT_BLOCKED",
+        "reason": "PFS_CHILD_CURRENT_VERIFIED_NO_MIRA_NATIVE_R01_DECISION",
+        "native_receipt": "NOT_VERIFIED",
+        "receipt_path": "UNCONFIRMED",
+        "delivery": "NOT_VERIFIED",
+        "adoption": "NOT_VERIFIED",
+        "host": "NOT_VERIFIED",
+        "foreign_mutation": false
+      }
     },
     {
       "system": "666TDH",
@@ -111,7 +144,18 @@
       "delivery": "NOT_VERIFIED",
       "adoption": "NOT_VERIFIED",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT"
+      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT",
+      "receiver_reconciliation": {
+        "review_date": "2026-10-19",
+        "status": "RECEIPT_BLOCKED",
+        "reason": "TDH_V1_14_VISUAL_RETURN_NOT_R01_RECEIPT",
+        "native_receipt": "NOT_VERIFIED",
+        "receipt_path": "UNCONFIRMED",
+        "delivery": "NOT_VERIFIED",
+        "adoption": "NOT_VERIFIED",
+        "host": "NOT_VERIFIED",
+        "foreign_mutation": false
+      }
     }
   ],
   "managed_system_visual_evidence": "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
@@ -162,5 +206,22 @@
     "junior": "PRESERVED",
     "private_vault": "UNTOUCHED"
   },
-  "next": "FOUR_OTHER_NATIVE_RECIPIENT_RECEIPTS_PENDING_PDI_PRIORITY_PRESERVED"
+  "next": "FOUR_OTHER_NATIVE_RECIPIENT_RECEIPTS_PENDING_PDI_PRIORITY_PRESERVED",
+  "receiver_reconciliation": {
+    "owner": "666CLIC",
+    "review_date": "2026-10-19",
+    "classification": "SOURCE_ONLY_READ_ONLY_EVIDENCE",
+    "reviewed_receivers": 4,
+    "source_verified": 7,
+    "network_delivered": 3,
+    "network_total": 7,
+    "adoption_verified": 0,
+    "host_verified": 0,
+    "no_new_router": true,
+    "no_foreign_mutation": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pdi_priority": "UNCHANGED",
+    "visual_compliance": "CARDS_PARTIAL_OR_UNKNOWN_NOT_AUTOPROMOTED"
+  }
 }
