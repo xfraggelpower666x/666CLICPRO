@@ -4132,5 +4132,27 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_DOCS_HOST_ADAPTER_20_PASS_INDEPENDENT_APPROVAL_AND_LIVE_WRITE_BLOCKED"
+  },
+  "update_2026_10_20_starbridge_pdi_only_source_validator": {
+    "status": "SOURCE_CI_10_OF_10_PASS_HOST_WRITE_BLOCKED",
+    "body_head": "f0ec0c31be5242dc754a148bbd131f5851792380",
+    "manifest_blob": "1817522832deb6bb592fa281ad1a2681bbba266c",
+    "validator_blob": "41bb351ec84df38fee6678d4282e186bd7706745",
+    "test_blob": "ab98866e6c47b37fd50e7bf12de4dab5982c9e29",
+    "ci_run": 39489984609,
+    "recovery": "backup/clic-pre-starbridge-pdi-only-validator-20261020",
+    "source": "7_OF_7",
+    "delivery": "3_OF_7",
+    "adoption": "0_OF_7",
+    "host": "0_OF_7",
+    "core_reconciliation": "UNCHANGED",
+    "pdi_ledger": "UNCHANGED",
+    "pdi_sb05": "PRESERVED",
+    "authority": "NOT_INSTALLED",
+    "plugin_release": "NONE",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "STARBRIDGE_PDI_ONLY_SOURCE_VALIDATOR_CI_PASS_HOST_AUTHORITY_BLOCKED"
   }
 }
