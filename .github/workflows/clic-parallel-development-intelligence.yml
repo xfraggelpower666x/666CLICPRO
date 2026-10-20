@@ -31,3 +31,4 @@ jobs:
           node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-cas-reconciliation.test.mjs
           node --check 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs
           node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/starbridge-pdi-only-contract.test.mjs
