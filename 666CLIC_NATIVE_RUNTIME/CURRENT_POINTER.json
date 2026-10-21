@@ -4321,5 +4321,35 @@
     "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE",
     "pointer_last": true,
     "return_anchor": "CLIC_OWNER_STARBRIDGE_TECH_MAILBOX_SOURCE_CI_AND_DRIVE_PROBE_PASS_NATIVE_DELIVERY_OPEN"
+  },
+  "update_2026_10_21_pdi_authentic_event_source_governance": {
+    "status": "SOURCE_NEGATIVE_TESTS_CI_PASS_HOST_EVENT_WRITE_BLOCKED",
+    "base_head": "fbdd4b0dadb1b4e041e76ca334170cf5b6084276",
+    "recovery": "backup/clic-pre-pdi-event-source-governance-20261021-r01",
+    "body_head": "743f9fb7ec60117a871ded86ff98bab8545a007f",
+    "manifest_blob": "d6ce16339a406180afb83fe5c1b0659314dda636",
+    "source_binding_blob": "a7f2e849712506a43ec7e5b346bdb6269fd173c1",
+    "negative_tests_blob": "bd2beac0eed7d8e7864b85fcf82915f54e5c0644",
+    "required_order_count": 116,
+    "ci_runs": {
+      "pdi": 39623833774,
+      "static_guard": 39623833819,
+      "visual": 39623833786
+    },
+    "ci_status": "THREE_COMPLETED_SUCCESS",
+    "source_gate": "SOURCE_ONLY_CANDIDATE_HOST_AUTHORIZATION_PENDING",
+    "host_dispatch_write_enabled": false,
+    "authentic_event_host_receipt": "NOT_VERIFIED",
+    "atomic_branch_cas": "NOT_VERIFIED",
+    "pdi_ledger": "UNCHANGED",
+    "r02": "WRITE_BLOCKED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "pdi_source_17_of_17": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_mutation": false,
+    "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE_FRESH_HOST_PARITY_OPEN",
+    "pointer_last": true,
+    "return_anchor": "PDI_SOURCE_GOVERNANCE_NEGATIVE_CI_PASS_AUTHENTIC_EVENT_HOST_CAS_OPEN"
   }
 }
