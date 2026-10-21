@@ -1621,5 +1621,17 @@
     "junior": "PRESERVED",
     "pet": "PAUSED",
     "foreign_writes": false
+  },
+  "update_2026_10_21_scoped_drive_provider_trust": {
+    "status": "SOURCE_UPDATE_PENDING_CI",
+    "owner": "666CLIC",
+    "scope": "EXISTING_SCOPED_RECEIVER_ONLY",
+    "native_authority": "TRUSTED_HOST_INJECTION_REQUIRES_INDEPENDENT_READBACK",
+    "dual_revisions": true,
+    "no_foreign_writes": true,
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "pdi": "UNCHANGED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
