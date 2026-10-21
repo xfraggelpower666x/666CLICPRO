@@ -235,12 +235,12 @@
     "tdh_visual_compliance": "PARTIAL_NATIVE_VISUAL_REPORTED_V1_15_FUNCTIONAL_HOST_RENDER_UNVERIFIED"
   },
   "tdh_v115_native_evidence": {
-    "cliс_delivery_readback": "CLIC_OWN_INBOX_RECEIPT_SOURCE_TESTS_PASS",
     "sha256": "987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451",
     "pfs_release_backup": "PROVIDER_RAW_BYTE_EQUAL",
     "ci_run": 39550203388,
     "ci_pass": "6_OF_6",
     "historical_tdh_native_fields_remain": "CLIC_DELIVERY_READBACK_PENDING_AT_NATIVE_PUBLICATION",
-    "foreign_write": false
+    "foreign_write": false,
+    "clic_delivery_readback": "CLIC_OWN_INBOX_RECEIPT_SOURCE_TESTS_PASS"
   }
 }
