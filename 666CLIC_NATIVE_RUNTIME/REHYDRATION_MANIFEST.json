@@ -30,6 +30,8 @@
     "dashboard/development_progress/native-host-actions-readonly.mjs",
     "facets/parallel_development_intelligence/github-connector-binding.test.mjs",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
+    "dashboard/interactive-visual-gpt-native-binding.mjs",
+    "dashboard/interactive-visual-gpt-native-binding.test.mjs",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
     "facets/semantic_visual_intelligence/CURRENT_STATE.md",
