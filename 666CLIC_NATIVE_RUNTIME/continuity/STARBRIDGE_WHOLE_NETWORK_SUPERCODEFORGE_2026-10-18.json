@@ -4,7 +4,7 @@
   "date": "2026-10-18",
   "authority": "CLIC_NATIVE_REPOSITORY_ONLY",
   "mode": "CLIC_ONLY_SOURCE_PROPOSAL_AND_REVIEW",
-  "status": "THREE_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_FOUR_PENDING",
+  "status": "FOUR_OF_SEVEN_NATIVE_DELIVERIES_EVIDENCED_THREE_PENDING",
   "source": {
     "system": "LYVRA",
     "id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
@@ -139,23 +139,30 @@
       "system": "666TDH",
       "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/666TDH/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01.json",
       "outbox_blob": "924acd02df1b94768d0545ef1fd4e8f606cbf502",
-      "target_current_class": "CLIC_REGISTER_ONLY",
+      "target_current_class": "DIRECT_TDH_V1_15_LIVE_POINTER_AND_RETURN_HANDOFF_READ",
       "source": "DIRECT_CLIC_OUTBOX_FILE_READBACK_PASS",
-      "delivery": "NOT_VERIFIED",
-      "adoption": "NOT_VERIFIED",
+      "delivery": "DELIVERED_EVIDENCED",
+      "adoption": "PARTIAL_NATIVE_ADOPTION_REPORTED_BY_TDH_ONLY",
       "host": "NOT_VERIFIED",
-      "receipt": "EXPECTED_CONTRACT_ONLY_NO_REAL_RECEIPT",
+      "receipt": "INDEPENDENT_NATIVE_DRIVE_RECEIPT_VERIFIED",
       "receiver_reconciliation": {
-        "review_date": "2026-10-19",
-        "status": "RECEIPT_BLOCKED",
-        "reason": "TDH_V1_14_VISUAL_RETURN_NOT_R01_RECEIPT",
-        "native_receipt": "NOT_VERIFIED",
-        "receipt_path": "UNCONFIRMED",
-        "delivery": "NOT_VERIFIED",
-        "adoption": "NOT_VERIFIED",
+        "review_date": "2026-10-21",
+        "status": "NATIVE_R01_DELIVERY_RECEIPT_READBACK_VERIFIED",
+        "reason": "TDH_V1_15_NATIVE_R01_RECEIPT_POINTER_RETURN_ORIGINAL_BYTES_SHA256_PFS_PARITY",
+        "native_receipt": "VERIFIED",
+        "receipt_path": "drive://1TLY_LilP9z1ISa5DrkkbDPkPbc_P7weS",
+        "delivery": "DELIVERED_EVIDENCED",
+        "adoption": "PARTIAL_NATIVE_ADOPTION_REPORTED_BY_TDH_ONLY",
         "host": "NOT_VERIFIED",
         "foreign_mutation": false
-      }
+      },
+      "native_receipt_provider_id": "1TLY_LilP9z1ISa5DrkkbDPkPbc_P7weS",
+      "native_receipt_sha256": "987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451",
+      "native_receipt_bytes": 610,
+      "native_pointer_provider_id": "1bCjIwSsyvhTnFudfPtEr71dss179AuYS",
+      "native_return_handoff_provider_id": "14R8FZMNljI4LJQkbU5wnO1KpdbmB4YfW",
+      "clic_delivery_receipt": "666CLIC_NATIVE_RUNTIME/inbox/666TDH/receipts/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01-DELIVERY-READBACK.json",
+      "source_current_head_in_native_receipt": "98622df610aada53258f33d95b979499f48cbfe8"
     }
   ],
   "managed_system_visual_evidence": "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md",
@@ -188,12 +195,12 @@
     "target_envelopes": "7_OF_7_DIRECT_SOURCE_READBACK_PASS",
     "source_head_and_blob": "LYVRA_DIRECT_READ_PASS",
     "structural_negative_gates": "7_OF_7_NO_FALSE_DELIVERY_ADOPTION_HOST",
-    "real_peer_receipts": "3_NEW_NETWORK_LYVRA_PFS_STREAM_NATIVE_RECEIPTS_VERIFIED",
+    "real_peer_receipts": "4_NEW_NETWORK_LYVRA_PFS_STREAM_TDH_NATIVE_RECEIPTS_VERIFIED",
     "plugin_impact": "CLIC_OWNED_HANDOFF_DATA_ONLY_NO_RUNTIME_SKILL_OR_INTERFACE_CHANGE",
     "visual_compliance": "EXISTING_REGISTER_REUSED_NO_TARGET_LIVE_VISUAL_PASS",
-    "real_peer_delivery": "3_OF_7_DELIVERED_EVIDENCED",
+    "real_peer_delivery": "4_OF_7_DELIVERED_EVIDENCED",
     "automatic_transport": "NOT_VERIFIED",
-    "native_adoption": "ZERO_VERIFIED",
+    "native_adoption": "ZERO_FULL_NATIVE_CAPABILITY_ADOPTIONS_INDEPENDENTLY_HOST_VERIFIED_TDH_REPORTS_PARTIAL",
     "host": "ZERO_VERIFIED"
   },
   "guards": {
@@ -206,14 +213,14 @@
     "junior": "PRESERVED",
     "private_vault": "UNTOUCHED"
   },
-  "next": "FOUR_OTHER_NATIVE_RECIPIENT_RECEIPTS_PENDING_PDI_PRIORITY_PRESERVED",
+  "next": "THREE_NATIVE_RECIPIENT_RECEIPTS_PENDING_CLS_LINGUA_MIRA_PDI_PRIORITY_PRESERVED",
   "receiver_reconciliation": {
     "owner": "666CLIC",
-    "review_date": "2026-10-19",
+    "review_date": "2026-10-21",
     "classification": "SOURCE_ONLY_READ_ONLY_EVIDENCE",
     "reviewed_receivers": 4,
     "source_verified": 7,
-    "network_delivered": 3,
+    "network_delivered": 4,
     "network_total": 7,
     "adoption_verified": 0,
     "host_verified": 0,
@@ -222,6 +229,18 @@
     "junior": "PRESERVED",
     "pet": "PAUSED",
     "pdi_priority": "UNCHANGED",
-    "visual_compliance": "CARDS_PARTIAL_OR_UNKNOWN_NOT_AUTOPROMOTED"
+    "visual_compliance": "CARDS_PARTIAL_OR_UNKNOWN_NOT_AUTOPROMOTED",
+    "new_verified_target": "666TDH",
+    "native_reported_partial_adoption": "666TDH_ONLY_NOT_FULL_ADOPTION_PASS",
+    "tdh_visual_compliance": "PARTIAL_NATIVE_VISUAL_REPORTED_V1_15_FUNCTIONAL_HOST_RENDER_UNVERIFIED"
+  },
+  "tdh_v115_native_evidence": {
+    "cliс_delivery_readback": "CLIC_OWN_INBOX_RECEIPT_SOURCE_TESTS_PASS",
+    "sha256": "987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451",
+    "pfs_release_backup": "PROVIDER_RAW_BYTE_EQUAL",
+    "ci_run": 39550203388,
+    "ci_pass": "6_OF_6",
+    "historical_tdh_native_fields_remain": "CLIC_DELIVERY_READBACK_PENDING_AT_NATIVE_PUBLICATION",
+    "foreign_write": false
   }
 }
