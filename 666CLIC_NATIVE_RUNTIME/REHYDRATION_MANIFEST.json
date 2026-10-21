@@ -113,7 +113,9 @@
     "continuity/starbridge-cls-drive-receipt.mjs",
     "continuity/starbridge-cls-drive-receipt.test.mjs",
     "continuity/starbridge-drive-scoped-receiver.mjs",
-    "continuity/starbridge-drive-scoped-receiver.test.mjs"
+    "continuity/starbridge-drive-scoped-receiver.test.mjs",
+    "continuity/starbridge-owner-mailbox-transport.mjs",
+    "continuity/starbridge-owner-mailbox-transport.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1633,5 +1635,19 @@
     "pdi": "UNCHANGED",
     "junior": "PRESERVED",
     "pet": "PAUSED"
+  },
+  "starbridge_owner_private_drive_mailbox_2026_10_21": {
+    "status": "SOURCE_CANDIDATE",
+    "github_authority": "UNCHANGED_REPO_FIRST",
+    "folder_id": "1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs",
+    "family_mailbox": "EXCLUDED",
+    "historical_drive": "HISTORY_ONLY",
+    "technical_mailbox": "DRIVE_TECHNICAL_TRANSPORT_ONLY",
+    "owner_accepted_link_writer_access": true,
+    "delivery_4_of_7": "PRESERVED",
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "runtime": "NOT_VERIFIED"
   }
 }
