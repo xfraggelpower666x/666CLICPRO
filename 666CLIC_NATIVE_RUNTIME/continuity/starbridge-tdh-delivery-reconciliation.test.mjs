@@ -6,7 +6,7 @@ const dir=new URL("../inbox/666TDH/receipts/",import.meta.url);
 const raw=readFileSync(new URL("666TDH-CLIC-WHOLE-NET-20261018-R01-NATIVE-ORIGINAL.json",dir));
 const rec=JSON.parse(raw.toString("utf8"));
 const clic=JSON.parse(readFileSync(new URL("CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01-DELIVERY-READBACK.json",dir),"utf8"));
-const original=JSON.parse(readFileSync(new URL("../outbox/666TDH/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01.json",new URL("../",dir)),"utf8"));
+const original=JSON.parse(readFileSync(new URL("../outbox/666TDH/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01.json",import.meta.url),"utf8"));
 test("source receipt must be exact 610-byte native original and SHA-256",()=>{
  assert.equal(raw.length,610);
  assert.equal(createHash("sha256").update(raw).digest("hex"),"987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451");
