@@ -27,6 +27,7 @@
     "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
     "dashboard/development_progress/github-cas-transport.mjs",
     "dashboard/development_progress/github-connector-binding.mjs",
+    "facets/parallel_development_intelligence/github-connector-binding.test.mjs",
     "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
     "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
     "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
