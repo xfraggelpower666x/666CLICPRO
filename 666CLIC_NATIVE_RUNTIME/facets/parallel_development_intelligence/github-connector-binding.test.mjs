@@ -116,3 +116,52 @@ test("SB05 dispatch can attest native module invocation only with receipt and no
  assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,output:{...output,native_receipts_verified:false}}}).status,"HOST_DISPATCH_PENDING");
  assert.equal(evaluateClicNativeHostDispatchAcceptance({request,execution:{...execution,source_head:"c".repeat(40)}}).status,"HOST_DISPATCH_PENDING");
 });
+
+import {inspectClicPdiEventIngressBoundary as inspectPdiIngress} from "../../dashboard/development_progress/github-connector-binding.mjs";
+const entry=()=>{
+ const event={type:"START",event_id:"clic-event-20261021",source_revision:h,evidence_ref:"666CLIC_NATIVE_RUNTIME/current/CURRENT_STATE.md"};
+ return {request:{repository:OWNER,branch,operation:"PDI_EVENT_SOURCE_PREFLIGHT",mode:"SOURCE_ONLY",allow_event_write:false,allow_foreign_write:false,allow_pointer_write:false},
+  event,source:{repository:OWNER,commit:h,evidence_blob_sha:"b".repeat(40),evidence_path:event.evidence_ref},
+  ledger:{base_head:h,observed_head:h,expected_blob:"c".repeat(40),observed_blob:"c".repeat(40),processed_event_ids:[]}};
+};
+test("PDI event ingress source gate never grants an actual write or host pass",()=>{
+ const x=inspectPdiIngress(entry());
+ assert.equal(x.status,"SOURCE_ONLY_CANDIDATE_HOST_AUTHORIZATION_PENDING");
+ assert.equal(x.event_write_authorized,false);assert.equal(x.ledger_persisted,false);
+ assert.equal(x.pdi_persisted,false);assert.equal(x.host_verified,false);
+ assert.equal(x.required_export,"bindVerifiedCoreLedger");
+});
+test("PDI source gate rejects foreign repository and attempted write promotion",()=>{
+ const x=entry();x.request.repository="foreign/repo";
+ assert.equal(inspectPdiIngress(x).reason,"SOURCE_ONLY_CLIC_SCOPE_REQUIRED");
+ const y=entry();y.request.allow_event_write=true;
+ assert.equal(inspectPdiIngress(y).reason,"SOURCE_ONLY_CLIC_SCOPE_REQUIRED");
+});
+test("PDI source gate rejects forged event origin and cross-commit evidence",()=>{
+ const x=entry();x.source.commit="d".repeat(40);
+ assert.equal(inspectPdiIngress(x).reason,"SOURCE_COMMIT_BLOB_PATH_BINDING_MISMATCH");
+ const y=entry();y.event.evidence_ref="";
+ assert.equal(inspectPdiIngress(y).reason,"EVENT_IDENTITY_OR_PROVENANCE_MISSING");
+});
+test("PDI source gate rejects stale head or blob without rebase",()=>{
+ const x=entry();x.ledger.observed_head="d".repeat(40);
+ assert.equal(inspectPdiIngress(x).reason,"BRANCH_OR_BLOB_VERSION_CONFLICT");
+ const y=entry();y.ledger.observed_blob="d".repeat(40);
+ assert.equal(inspectPdiIngress(y).reason,"BRANCH_OR_BLOB_VERSION_CONFLICT");
+});
+test("PDI source gate prevents same event replay",()=>{
+ const x=entry();x.ledger.processed_event_ids=[x.event.event_id];
+ assert.equal(inspectPdiIngress(x).reason,"EVENT_REPLAY");
+});
+test("PDI ledger-only recovery requires first-stage receipt and never repeats event",()=>{
+ const x=entry();x.stage="LEDGER_COMMITTED_PDI_PENDING";x.ledger.processed_event_ids=[x.event.event_id];
+ assert.equal(inspectPdiIngress(x).reason,"RECONCILIATION_ORIGINAL_LEDGER_RECEIPT_REQUIRED");
+ x.ledger.ledger_commit="d".repeat(40);x.ledger.ledger_blob="e".repeat(40);
+ const o=inspectPdiIngress(x);
+ assert.equal(o.status,"SOURCE_ONLY_RECONCILE_WITHOUT_REPLAY_PENDING");
+ assert.equal(o.repeat_event_write,false);assert.equal(o.pdi_persisted,false);
+});
+test("PDI source gate fails closed on unsupported recovery stages",()=>{
+ const x=entry();x.stage="PRETEND_SUCCESS";
+ assert.equal(inspectPdiIngress(x).reason,"UNSUPPORTED_RECOVERY_STAGE");
+});

@@ -167,3 +167,54 @@ export function evaluateClicNativeHostDispatchAcceptance({request,execution}={})
   delivery_verified:false,adoption_verified:false,fresh_host_verified:false,writes:0,
   plugin_published:false,return_anchor:"CHATGPT_FRESH_HOST_AND_AUTHENTIC_EVENT_CAS_SEPARATE"};
 }
+
+// Source-only PDI ingress boundary. This is NOT a writable host dispatch, event sensor, or approval.
+// Actual GitHub commit/tree/blob evidence and host execution must be independently verified outside caller data.
+export function inspectClicPdiEventIngressBoundary({request,event,source,ledger,stage="NEW_EVENT"}={}){
+ const deny=reason=>({schema:"CLIC_PDI_AUTHENTIC_EVENT_INGRESS_SOURCE_V1",status:"WRITE_BLOCKED",reason,
+  event_write_authorized:false,ledger_persisted:false,pdi_persisted:false,
+  host_verified:false,pointer_published:false,foreign_mutation:false});
+ const sha=x=>typeof x==="string"&&/^[a-f0-9]{40}$/i.test(x);
+ const ident=x=>typeof x==="string"&&/^[A-Za-z0-9._:-]{8,128}$/.test(x);
+ if(!request||request.repository!==OWNER||request.branch!==BRANCH||
+   request.operation!=="PDI_EVENT_SOURCE_PREFLIGHT"||request.mode!=="SOURCE_ONLY"||
+   request.allow_event_write!==false||request.allow_foreign_write!==false||
+   request.allow_pointer_write!==false)return deny("SOURCE_ONLY_CLIC_SCOPE_REQUIRED");
+ if(!event||!["START","TASK_STATUS","PAUSE","RESUME","COMPLETE","INACTIVE"].includes(event.type)||
+   !ident(event.event_id)||!sha(event.source_revision)||
+   typeof event.evidence_ref!=="string"||!event.evidence_ref.trim())
+   return deny("EVENT_IDENTITY_OR_PROVENANCE_MISSING");
+ if(!source||source.repository!==OWNER||source.commit!==event.source_revision||
+   !sha(source.evidence_blob_sha)||typeof source.evidence_path!=="string"||
+   !source.evidence_path.startsWith("666CLIC_NATIVE_RUNTIME/")||
+   source.evidence_path.includes(".."))
+   return deny("SOURCE_COMMIT_BLOB_PATH_BINDING_MISMATCH");
+ if(!ledger||!sha(ledger.base_head)||!sha(ledger.observed_head)||
+   ledger.base_head!==ledger.observed_head||
+   !sha(ledger.expected_blob)||ledger.expected_blob!==ledger.observed_blob||
+   !Array.isArray(ledger.processed_event_ids))
+   return deny("BRANCH_OR_BLOB_VERSION_CONFLICT");
+ if(stage==="NEW_EVENT"){
+   if(ledger.processed_event_ids.includes(event.event_id))return deny("EVENT_REPLAY");
+   return {schema:"CLIC_PDI_AUTHENTIC_EVENT_INGRESS_SOURCE_V1",
+    status:"SOURCE_ONLY_CANDIDATE_HOST_AUTHORIZATION_PENDING",event_id:event.event_id,
+    expected_head:ledger.base_head,expected_ledger_blob:ledger.expected_blob,
+    required_export:"bindVerifiedCoreLedger",required_followup:"reconcilePdiLedger",
+    independent_source_readback_required:true,atomic_cas_host_proof_required:true,
+    independent_commit_tree_blob_readback_required:true,write_authorized:false,
+    event_write_authorized:false,ledger_persisted:false,pdi_persisted:false,
+    host_verified:false,pointer_published:false,foreign_mutation:false};
+ }
+ if(stage==="LEDGER_COMMITTED_PDI_PENDING"){
+   if(!ledger.processed_event_ids.includes(event.event_id)||
+     !sha(ledger.ledger_commit)||!sha(ledger.ledger_blob))
+     return deny("RECONCILIATION_ORIGINAL_LEDGER_RECEIPT_REQUIRED");
+   return {schema:"CLIC_PDI_AUTHENTIC_EVENT_INGRESS_SOURCE_V1",
+    status:"SOURCE_ONLY_RECONCILE_WITHOUT_REPLAY_PENDING",event_id:event.event_id,
+    required_export:"reconcilePdiLedger",repeat_event_write:false,
+    independent_ledger_commit_tree_blob_readback_required:true,
+    event_write_authorized:false,ledger_persisted:false,pdi_persisted:false,
+    host_verified:false,pointer_published:false,foreign_mutation:false};
+ }
+ return deny("UNSUPPORTED_RECOVERY_STAGE");
+}
