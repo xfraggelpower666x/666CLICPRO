@@ -115,7 +115,9 @@
     "continuity/starbridge-drive-scoped-receiver.mjs",
     "continuity/starbridge-drive-scoped-receiver.test.mjs",
     "continuity/starbridge-owner-mailbox-transport.mjs",
-    "continuity/starbridge-owner-mailbox-transport.test.mjs"
+    "continuity/starbridge-owner-mailbox-transport.test.mjs",
+    "continuity/starbridge-owner-mailbox-github-binding.mjs",
+    "continuity/starbridge-owner-mailbox-github-binding.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1649,5 +1651,17 @@
     "junior": "PRESERVED",
     "pet": "PAUSED",
     "runtime": "NOT_VERIFIED"
+  },
+  "starbridge_owner_mailbox_github_binding_2026_10_21": {
+    "scope": "CLIC_SOURCE_ONLY",
+    "github": "COMMIT_TREE_BLOB_DOUBLE_HEAD_READBACK",
+    "drive": "SEPARATE_TECH_MAILBOX_REPLY_DOUBLE_READBACK",
+    "native_delivery": "NOT_PROMOTED",
+    "authority": "GITHUB_REPO_FIRST",
+    "family_mailbox": "EXCLUDED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

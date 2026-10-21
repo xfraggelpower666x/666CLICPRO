@@ -5,6 +5,7 @@ on:
       - clic-migration-rev79-staging
     paths:
       - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-transport*'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-github-binding*'
       - '.github/workflows/clic-owner-mailbox-ci.yml'
   workflow_dispatch:
 permissions:
@@ -19,5 +20,7 @@ jobs:
           node-version: '22'
       - name: Verify private owner mailbox transport boundaries
         run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-transport.test.mjs
+      - name: Verify GitHub commit/tree/blob to Drive reply correlation
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-github-binding.test.mjs
       - name: Preserve existing scoped and CLS Drive source regression
         run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-drive-scoped-receiver.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.test.mjs
