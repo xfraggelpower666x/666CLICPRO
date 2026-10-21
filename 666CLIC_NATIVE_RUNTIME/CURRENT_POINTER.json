@@ -4178,5 +4178,41 @@
     "plugin_release": "NONE",
     "pointer_last": true,
     "return_anchor": "PDI_SEMANTIC_EVENT_ID_BOUND_SOURCE_CI_PASS_HOST_APPROVAL_OPEN"
+  },
+  "update_2026_10_21_ac_drive_scoped_lyvra_cards": {
+    "status": "CLIC_SOURCE_CI_VERIFIED_HOST_AND_NATIVE_RECEIPT_OPEN",
+    "body_head": "d5834c188c3befcaaa12e18663b71a7e26ee5eae",
+    "body_tree": "6598c41251b25fcf942cbbbee2552d5940536521",
+    "manifest_blob": "e885b31363a6ef9ef543d4d20baf0871b1fe7fb9",
+    "receiver_blob": "db81470ac82a271225affdec8979fa6d76c64f80",
+    "test_blob": "3f1c675d291bbe1856512c0c824d6deeb7e8cf29",
+    "lyvra_card_blob": "32802713f8211b2555de87b3aa95d1bd6c0d914c",
+    "cross_system_blob": "720381eca4291d702c43b80d76832f9a4b23e320",
+    "facet_registry_blob": "e9675ab1b68c63447173047a2afc9516b56afcc5",
+    "ci": {
+      "scoped_drive": 39548879931,
+      "card_semantic_force": 39548879929,
+      "pdi": 39548879918,
+      "static_guard": 39548879917,
+      "visual": 39548879971
+    },
+    "ci_status": "FIVE_COMPLETED_SUCCESS_AT_BODY_HEAD",
+    "recovery": "backup/clic-pre-ac-drive-lyvra-20261021-r01",
+    "required_order_count": 111,
+    "source_scope": "CORRESPONDENCE_READ_ONLY_TARGET_PIN_REQUIRED",
+    "drive_native_target_approval": "NOT_VERIFIED",
+    "family_letter": "MESSAGE_OBSERVED_NOT_RECEIPT",
+    "delivery": "3_OF_7_UNCHANGED",
+    "adoption": "0_OF_7_UNCHANGED",
+    "host": "0_OF_7_UNCHANGED",
+    "pdi_ledger": "UNCHANGED",
+    "pdi_priority": "PRESERVED",
+    "cls_original": "UNCHANGED",
+    "plugin_release": "NONE_PARITY_REVIEW_OPEN",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_AC_SCOPED_DRIVE_SOURCE_CI_PASS_NATIVE_TARGET_HOST_OPEN"
   }
 }
