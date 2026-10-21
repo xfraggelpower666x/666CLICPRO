@@ -24,3 +24,36 @@ export function selectClicNativeChatView(prepared={},selectedId){
  const model=updateLocalVisualSelection(prepared.model,selectedId);
  return {...prepared,model,ui:toNativeUiModel(model),host_selection_verified:false,host_render_verified:false,plugin_host_dispatch_verified:false};
 }
+
+
+// Pure custom-input interruption/continuation protocol. Local view-state only:
+// no host automation, no foreground takeover, no loss of parallel obligations.
+export function prepareClicCustomInputContinuation({previous,input,decision}={}){
+ const hold=reason=>({schema:"CLIC_CUSTOM_INPUT_CONTINUITY_V1",status:"CONTINUITY_HOLD",reason,
+  host_verified:false,foreign_mutation:false,pointer_published:false,automatic_dispatch:false});
+ const own=x=>x&&typeof x==="object"&&!Array.isArray(x);
+ const valid=s=>typeof s==="string"&&s.trim().length>0;
+ if(!own(previous)||previous.system_id!=="666CLIC"||!valid(previous.return_anchor)||
+  !Array.isArray(previous.streams)||!Array.isArray(previous.obligations)||
+  !own(previous.visual)||!valid(previous.visual.return_anchor)||
+  !valid(previous.source_head)||!/^[a-f0-9]{40}$/i.test(previous.source_head))
+  return hold("VERIFIED_PREVIOUS_CONTINUITY_REQUIRED");
+ if(!own(input)||!valid(input.text)||!["QUESTION","INFORMATION","CORRECTION","NEW_TASK","EXPLICIT_REDIRECT"].includes(input.kind))
+  return hold("INPUT_CLASSIFICATION_REQUIRED");
+ if(input.kind==="EXPLICIT_REDIRECT"&&(!own(decision)||decision.explicit_user_redirect!==true||
+  !valid(decision.new_return_anchor)))return hold("EXPLICIT_REDIRECT_AUTHORITY_REQUIRED");
+ const stable=structuredClone(previous);
+ const redirect=input.kind==="EXPLICIT_REDIRECT";
+ // Redirect is an explicit user decision; carry old lineage as an interruption,
+ // not as an erased stream. Other input kinds always resume the old anchor.
+ return {schema:"CLIC_CUSTOM_INPUT_CONTINUITY_V1",status:redirect?"EXPLICIT_REDIRECT_CARRIED":"INGEST_THEN_RESUME",
+  source_head:previous.source_head,classification:input.kind,
+  resume_anchor:redirect?decision.new_return_anchor:previous.return_anchor,
+  prior_anchor:previous.return_anchor,visual_return_anchor:previous.visual.return_anchor,
+  visual_selection:stable.visual.selection??null,visual_foreground:stable.visual.foreground===true,
+  preserved_streams:stable.streams,preserved_obligations:stable.obligations,
+  interrupted_lineage:redirect?{return_anchor:previous.return_anchor,reason:"EXPLICIT_USER_REDIRECT"}:null,
+  relevant_effects:"REVALIDATE_CAUSALLY_RELATED_CHANGES_BEFORE_RESUME",
+  visible_junior:true,pet:"PAUSED",authoritative_write:false,
+  host_verified:false,foreign_mutation:false,pointer_published:false,automatic_dispatch:false};
+}
