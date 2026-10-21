@@ -1584,5 +1584,42 @@
     "junior": "PRESERVED",
     "pet": "PAUSED",
     "plugin_release": "UNCHANGED_HOST_PARITY_OPEN"
+  },
+  "starbridge_tdh_v115_r01_delivery_reconciliation_2026_10_21": {
+    "status": "CLIC_OWN_RECEIPT_READBACK_VERIFIED_DELIVERY_4_OF_7",
+    "source_current_head_at_initial_tdh_receipt": "98622df610aada53258f33d95b979499f48cbfe8",
+    "target": "666TDH",
+    "target_native_version": "v1.15.0",
+    "original_native_receipt": "inbox/666TDH/receipts/666TDH-CLIC-WHOLE-NET-20261018-R01-NATIVE-ORIGINAL.json",
+    "clic_delivery_receipt": "inbox/666TDH/receipts/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01-DELIVERY-READBACK.json",
+    "network": "continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json",
+    "receipt_sha256": "987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451",
+    "native_receipt_bytes": 610,
+    "tdh_live_pointer_id": "1bCjIwSsyvhTnFudfPtEr71dss179AuYS",
+    "tdh_return_id": "14R8FZMNljI4LJQkbU5wnO1KpdbmB4YfW",
+    "pfs_release_receipt_id": "1YGZETPC42ib0awApK1gdU2o_AHN3VgCA",
+    "pfs_backup_receipt_id": "124DIuk_z_MDxoFHNilCizazaRev2z6d2",
+    "source_blob": "924acd02df1b94768d0545ef1fd4e8f606cbf502",
+    "ci_workflow": ".github/workflows/clic-starbridge-tdh-r01-reconciliation.yml",
+    "ci_test": "continuity/starbridge-tdh-delivery-reconciliation.test.mjs",
+    "ci_run": 39550323995,
+    "ci_pass": "6_OF_6",
+    "delivery": "4_OF_7_VERIFIED",
+    "other_pending": [
+      "666CLS",
+      "666LINGUA",
+      "666MIRA"
+    ],
+    "tdh_adoption": "PARTIAL_NATIVE_ADOPTION_REPORTED_BY_TDH_ONLY",
+    "full_network_capability_adoption": "0_OF_7_INDEPENDENTLY_HOST_VERIFIED",
+    "host": "0_OF_7_VERIFIED",
+    "visual": "TDH_V1_15_PARTIAL_VISUAL_HOST_RENDER_OPEN",
+    "recovery": "backup/clic-pre-tdh-r01-delivery-reconciliation-20261021",
+    "source_only_connector_provenance": "INDEPENDENT_NATIVE_DRIVE_READS_AND_CLIC_GITHUB_SOURCE",
+    "plugin_impact": "EVIDENCE_REGISTRY_ONLY_NO_RUNTIME_TRIGGER_SEMANTICS_CHANGE",
+    "pdi_sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false
   }
 }
