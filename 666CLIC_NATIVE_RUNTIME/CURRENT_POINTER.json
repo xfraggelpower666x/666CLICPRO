@@ -4249,5 +4249,40 @@
     "visual": "TDH_PARTIAL_V115_HOST_RENDER_OPEN",
     "pointer_last": true,
     "return_anchor": "CLIC_STARBRIDGE_TDH_V115_RECEIPT_PERSISTED_DELIVERY_4_OF_7_CLS_LINGUA_MIRA_OPEN"
+  },
+  "update_2026_10_21_scoped_drive_native_trust_dual_revisions": {
+    "status": "SOURCE_CI_PASS_HOST_AUTHORITY_PENDING",
+    "body_head": "39777c358a76a4d3a9138b332b5a55cef435eb28",
+    "body_tree": "d0dc8c59036efc42f4ade28cb8bbb51effc746e1",
+    "manifest_blob": "844eed5bdc4d5241b5a424195b58b03fdcacc308",
+    "receiver_blob": "50ccc80bf7e53bd98ed58de80f5d49883ea8dc1f",
+    "test_blob": "ef4bee6604aba8d9468d395fc49c5e42b07bb375",
+    "ci_runs": {
+      "drive": 39556853525,
+      "static_guard": 39556853453,
+      "pdi": 39556853446,
+      "visual": 39556853463
+    },
+    "ci_status": "FOUR_WORKFLOWS_COMPLETED_SUCCESS",
+    "recovery": "backup/clic-pre-scoped-drive-trust-revisions-20261021-r01",
+    "scope": "CLIC_OWNED_SCOPED_DRIVE_SOURCE_ONLY",
+    "drive_docs_revisions": "SEPARATE_DOUBLE_READBACK",
+    "authority": "NATIVE_CONTRACT_DOUBLE_BYTE_READBACK_GIT_BLOB_BOUND_SOURCE_ONLY",
+    "target_native_approval": "NOT_VERIFIED",
+    "provider_host": "NOT_VERIFIED",
+    "no_boolean_only_authority": true,
+    "cls_original": "UNCHANGED",
+    "lyvra_cards": "PRESERVED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "adoption": "NO_PROMOTION",
+    "host": "NO_PROMOTION",
+    "pdi_ledger": "UNCHANGED",
+    "pdi_priority": "PRESERVED",
+    "plugin_release": "NONE_SOURCE_ONLY_HOST_PARITY_OPEN",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_SCOPED_DRIVE_DUAL_REVISION_SOURCE_CI_PASS_NATIVE_AUTHORITY_HOST_OPEN"
   }
 }
