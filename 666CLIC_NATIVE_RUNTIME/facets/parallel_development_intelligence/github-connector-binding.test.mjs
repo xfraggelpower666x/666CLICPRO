@@ -1,4 +1,5 @@
 import test from "node:test";
+import {readFileSync} from "node:fs";
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
 import {bindClicNativeGithubTools,bindClicReadOnlyHostTools,verifyClicPdiHostReadiness,inspectClicBoundHostReadbacks,evaluateClicNativeHostDispatchAcceptance} from "../../dashboard/development_progress/github-connector-binding.mjs";
@@ -164,4 +165,16 @@ test("PDI ledger-only recovery requires first-stage receipt and never repeats ev
 test("PDI source gate fails closed on unsupported recovery stages",()=>{
  const x=entry();x.stage="PRETEND_SUCCESS";
  assert.equal(inspectPdiIngress(x).reason,"UNSUPPORTED_RECOVERY_STAGE");
+});
+
+test("fresh native read-only runner pins workflow SHA and rejects moved module blobs",()=>{
+ const script=readFileSync(new URL("../../dashboard/development_progress/native-host-actions-readonly.mjs",import.meta.url),"utf8");
+ const wf=readFileSync(new URL("../../../.github/workflows/clic-pdi-sb05-native-readonly-execution.yml",import.meta.url),"utf8");
+ assert.match(script,/checkout_source_head=source/);
+ assert.match(script,/CHECKOUT_MODULE_BLOB_NE_PINNED_SOURCE/);
+ assert.match(script,/LIVE_MODULE_SUPERSESSION_REQUIRES_NEW_RUN/);
+ assert.match(script,/pinned_module_blobs_verified=true/);
+ assert.match(wf,/github-connector-binding\.mjs/);
+ assert.match(wf,/contents: read/);
+ assert.doesNotMatch(wf,/contents: write/);
 });

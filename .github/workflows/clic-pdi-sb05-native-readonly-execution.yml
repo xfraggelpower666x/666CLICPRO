@@ -4,6 +4,8 @@ on:
     branches: [clic-migration-rev79-staging]
     paths:
       - '666CLIC_NATIVE_RUNTIME/dashboard/development_progress/native-host-actions-readonly.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs'
       - '.github/workflows/clic-pdi-sb05-native-readonly-execution.yml'
   workflow_dispatch:
 permissions:

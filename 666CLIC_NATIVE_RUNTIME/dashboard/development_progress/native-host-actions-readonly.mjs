@@ -43,17 +43,27 @@ try{
  const binding=bindClicReadOnlyHostTools({fetch:fetchGit,fetch_file:fetchFile});
  const headReply=await fetchGit({url:"https://api.github.com/repos/"+CLIC+"/branches/"+BRANCH});
  const clicHead=JSON.parse(headReply.result.content).commit.sha;
+ // The Actions checkout is pinned by GITHUB_SHA. A later pointer-last commit may
+ // advance the branch, but may not silently replace the modules being executed.
+ const sourceReply=await fetchGit({url:"https://api.github.com/repos/"+CLIC+"/git/trees/"+source+"?recursive=1"});
+ const pinnedTree=JSON.parse(sourceReply.result.content);
  const treeReply=await fetchGit({url:"https://api.github.com/repos/"+CLIC+"/git/trees/"+clicHead+"?recursive=1"});
  const tree=JSON.parse(treeReply.result.content);
- if(tree.truncated!==false)throw Error("CLIC_TREE_TRUNCATED");
- const blobOf=path=>tree.tree.find(x=>x.path===path&&x.type==="blob")?.sha;
- const moduleBlobs={[modPdi]:blobOf(modPdi),[modSb05]:blobOf(modSb05)};
- if(!Object.values(moduleBlobs).every(s=>/^([a-f0-9]{40})$/i.test(s??"")))throw Error("MODULE_BLOBS_NOT_FOUND");
- // A workflow checkout must agree with the committed module contents.
+ if(pinnedTree.truncated!==false||tree.truncated!==false||
+    !Array.isArray(pinnedTree.tree)||!Array.isArray(tree.tree))throw Error("CLIC_TREE_TRUNCATED");
+ const blobAt=(entries,path)=>entries.find(x=>x.path===path&&x.type==="blob")?.sha;
+ const moduleBlobs={[modPdi]:blobAt(pinnedTree.tree,modPdi),[modSb05]:blobAt(pinnedTree.tree,modSb05)};
+ if(!Object.values(moduleBlobs).every(s=>/^([a-f0-9]{40})$/i.test(s??"")))throw Error("PINNED_MODULE_BLOBS_NOT_FOUND");
+ // Byte-level checkout identity; moving branch is permitted only when the modules match.
  const {readFileSync}=await import("node:fs");
  for(const [path,sha] of Object.entries(moduleBlobs)){
-   if(hash(readFileSync(path,"utf8"))!==sha)throw Error("CHECKOUT_MODULE_BLOB_NE_LIVE_HEAD_"+path);
+   if(hash(readFileSync(path,"utf8"))!==sha)throw Error("CHECKOUT_MODULE_BLOB_NE_PINNED_SOURCE_"+path);
+   if(blobAt(tree.tree,path)!==sha)throw Error("LIVE_MODULE_SUPERSESSION_REQUIRES_NEW_RUN_"+path);
  }
+ results.checkout_source_head=source;
+ results.live_branch_head_at_read=clicHead;
+ results.pinned_module_blobs_verified=true;
+ results.live_module_parity_verified=true;
  const pdi=await verifyClicPdiHostReadiness({github:binding.github});
  const pdiReq={facet:"PDI_READONLY",export_name:"verifyClicPdiHostReadiness",repository:CLIC,branch:BRANCH,
   mode:"READ_ONLY",allow_foreign_write:false,allow_event_write:false,expected_head:clicHead};
