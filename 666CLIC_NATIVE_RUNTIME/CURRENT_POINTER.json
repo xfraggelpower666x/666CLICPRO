@@ -4154,5 +4154,29 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "STARBRIDGE_PDI_ONLY_SOURCE_VALIDATOR_CI_PASS_HOST_AUTHORITY_BLOCKED"
+  },
+  "update_2026_10_21_starbridge_pdi_semantic_replay_binding": {
+    "status": "SOURCE_CI_17_OF_17_PASS_HOST_WRITE_BLOCKED",
+    "body_head": "e29dc3508d319a659d934343167088a67ea298bf",
+    "manifest_blob": "d2b72c551b2f1042fa2e2856f536848da386a4a2",
+    "validator_blob": "042d1430b96673371d995c6f5664105091d9c1bd",
+    "test_blob": "5ca7f0c572902a1d4dbb2c2c0ac2e6ec70bd12c9",
+    "ci_run": 39524563471,
+    "recovery": "backup/clic-pre-pdi-semantic-replay-binding-20261021",
+    "semantic_id": "BOUND_TO_EVENT_ID",
+    "replay_history": "SAME_PDI_BLOB_CANDIDATE_FAIL_CLOSED",
+    "source": "7_OF_7",
+    "delivery": "3_OF_7",
+    "adoption": "0_OF_7",
+    "host": "0_OF_7",
+    "pdi_ledger": "UNCHANGED",
+    "core_reconciliation": "UNCHANGED",
+    "host_approval": "NOT_INSTALLED",
+    "pdi_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_release": "NONE",
+    "pointer_last": true,
+    "return_anchor": "PDI_SEMANTIC_EVENT_ID_BOUND_SOURCE_CI_PASS_HOST_APPROVAL_OPEN"
   }
 }
