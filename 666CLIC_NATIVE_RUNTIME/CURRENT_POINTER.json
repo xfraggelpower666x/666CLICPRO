@@ -4437,5 +4437,42 @@
     "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE_HOST_PARITY_SEPARATE",
     "pointer_last": true,
     "return_anchor": "PDI_GITHUB_ACTIONS_FRESH_READONLY_MODULE_PASS_EVENT_CAS_AND_CHAT_FRESH_HOST_OPEN"
+  },
+  "update_2026_10_21_custom_input_visual_pdi_continuity": {
+    "status": "CLIC_NATIVE_CUSTOM_INPUT_CONTINUITY_SOURCE_CI_VERIFIED_HOST_PARITY_OPEN",
+    "prechange_head": "205c3edff08f4a5fc71063530003443eecc23a70",
+    "recovery": "backup/clic-pre-custom-input-continuity-20261021-r01",
+    "body_head": "9f76d08a4c5039248544be6dd6e5abf3191f148b",
+    "manifest_blob": "e26f9cb09adbc9e76d67978a1b44fe6958a60438",
+    "visual_binding_blob": "448157cf8b51b98eaa9fcf29e1c536a17be25b6a",
+    "visual_tests_blob": "447ad226cb91eda4112c5934758be464f98f10a0",
+    "visual_lifecircle_blob": "68075354eafa7c98e5c468b5d44e40df24081d22",
+    "visual_rehydration_blob": "b636ee703df1fff93f1dc9f5200a286fb39f7532",
+    "required_order_count": 119,
+    "ci_runs": {
+      "ivi": 39644406153,
+      "bounded_learning": 39644406149,
+      "card_force": 39644406176,
+      "manifest_pdi": 39644532193,
+      "manifest_visual": 39644532255,
+      "static_guard": 39644532340
+    },
+    "ci_status": "SIX_COMPLETED_SUCCESS_TWO_PHASES",
+    "classification": "CUSTOM_INPUT_SEMANTIC_INGEST_CAUSAL_REVALIDATION_RESUME",
+    "visual_foreground": "PRESERVE_IF_VERIFIED_VALID_CHAT_LOCAL_STATE",
+    "parallel_streams": "PRESERVE_OPEN_OBLIGATIONS_AND_RETURN_ANCHORS",
+    "explicit_redirect": "ONLY_USER_AUTHORITY_WITH_PREVIOUS_LINEAGE_CARRIED",
+    "host_runtime_execution": "NOT_VERIFIED_SOURCE_ONLY",
+    "plugin_impact": "SEMANTIC_RUNTIME_CHANGE_LIVE_PLUGIN_RELEASE_PENDING_PROVIDER_BINARY_APPROVAL",
+    "plugin_release": "NONE",
+    "r02": "WRITE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pdi_host_readonly": "PREVIOUS_VERIFIED_RUN_PRESERVED",
+    "pdi_event_cas": "WRITE_BLOCKED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "foreign_mutation": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_CUSTOM_INPUT_VISUAL_PDI_CONTINUITY_SOURCE_PASS_HOST_PLUGIN_PARITY_OPEN_RESUME_PDI_CAS"
   }
 }
