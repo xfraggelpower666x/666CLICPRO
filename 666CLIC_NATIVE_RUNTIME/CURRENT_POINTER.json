@@ -4214,5 +4214,40 @@
     "foreign_mutation": false,
     "pointer_last": true,
     "return_anchor": "CLIC_AC_SCOPED_DRIVE_SOURCE_CI_PASS_NATIVE_TARGET_HOST_OPEN"
+  },
+  "update_2026_10_21_tdh_v115_starbridge_r01_delivery_reconciliation": {
+    "status": "TDH_V115_NATIVE_RECEIPT_VERIFIED_CLIC_DELIVERY_4_OF_7",
+    "prechange_head": "95e75bc7059b2a53755783c8fa50b5c70bfc2503",
+    "recovery": "backup/clic-pre-tdh-r01-delivery-reconciliation-20261021",
+    "body_head_before_pointer": "dbed8f16a37fc8d1e6e6635cc5fcae31bd97c855",
+    "network_blob": "74ba1648ef6ede064417ee92c61a1ffa13ad2f3c",
+    "original_tdh_receipt_blob": "0e56795bd909dbefa2ee9e07e9e0429fdbf15289",
+    "clic_receipt_blob": "288b64b81c019f1164edcc91406bc04e38cb2cf0",
+    "manifest_blob": "32630917bfcaaa5f1e1f249e68bc9840722d570f",
+    "native_receipt_sha256": "987c49d4870fc101cb5e16c925df481c6a19a9bd3f62021f43d840e31c403451",
+    "tdh_current": "v1.15.0",
+    "native_receipt_provider_id": "1TLY_LilP9z1ISa5DrkkbDPkPbc_P7weS",
+    "tdh_live_pointer": "1bCjIwSsyvhTnFudfPtEr71dss179AuYS",
+    "tdh_return_handoff": "14R8FZMNljI4LJQkbU5wnO1KpdbmB4YfW",
+    "pfs_release_backup": "RAW_RECEIPT_BYTE_EQUAL",
+    "ci_run": 39550323995,
+    "ci_pass": 6,
+    "ci_fail": 0,
+    "delivery": "4_OF_7",
+    "remaining": [
+      "666CLS",
+      "666LINGUA",
+      "666MIRA"
+    ],
+    "tdh_adoption": "PARTIAL_NATIVE_ADOPTION_REPORTED_BY_TDH_ONLY",
+    "host": "0_OF_7_VERIFIED",
+    "foreign_writes": false,
+    "pdi_sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin": "DATA_ONLY_NO_NEW_NATIVE_RUNTIME_OR_PLUGIN_SEMANTICS",
+    "visual": "TDH_PARTIAL_V115_HOST_RENDER_OPEN",
+    "pointer_last": true,
+    "return_anchor": "CLIC_STARBRIDGE_TDH_V115_RECEIPT_PERSISTED_DELIVERY_4_OF_7_CLS_LINGUA_MIRA_OPEN"
   }
 }
