@@ -4391,5 +4391,51 @@
     "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE",
     "pointer_last": true,
     "return_anchor": "CLIC_OWNER_MAILBOX_GITHUB_BIND_SOURCE_CI_VERIFIED_POINTER_LAST_NATIVE_DELIVERY_OPEN"
+  },
+  "update_2026_10_21_pdi_readonly_fresh_host_revision_bound": {
+    "status": "NATIVE_READONLY_MODULE_EXECUTION_VERIFIED_CURRENT_SOURCE_NO_EVENT_CAS",
+    "prechange_head": "4d6024a9d601f47a573146cf17c8df9225307671",
+    "recovery": "backup/clic-pre-pdi-readonly-fresh-host-20261021-r01",
+    "body_head": "60eb96aef166d80fdcfeca1560fea1f73274dc51",
+    "manifest_blob": "e78cfefbfb1afd07709c94655424498ec82611c0",
+    "runner_blob": "7d46243fb9dc96fcb068dbf32c57e667385898b0",
+    "workflow_blob": "3bbebc729d6fe5c593c6652ab3b8f14ff320f552",
+    "tests_blob": "4f13e55069ef4a86ff303a99d6b18cd7bd721f8b",
+    "required_order_count": 117,
+    "ci_runs": {
+      "native_readonly": 39632249638,
+      "pdi": 39632249653,
+      "static_guard": 39632249512,
+      "visual": 39632249468,
+      "card_force": 39632249480
+    },
+    "ci_status": "FIVE_COMPLETED_SUCCESS",
+    "native_actions_execution_receipt": {
+      "run_id": 39632249638,
+      "artifact_id": 12359811704,
+      "checkout_head": "60eb96aef166d80fdcfeca1560fea1f73274dc51",
+      "live_head_at_execution": "60eb96aef166d80fdcfeca1560fea1f73274dc51",
+      "connector_blob": "a7f2e849712506a43ec7e5b346bdb6269fd173c1",
+      "pdi": "READ_ONLY_LEDGER_READBACK_VERIFIED",
+      "sb05": "NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING",
+      "native_module_execution": "TWO_NATIVE_MODULE_EXECUTIONS_EVIDENCED",
+      "github_api_read_calls": 21,
+      "write_operations": 0
+    },
+    "historic_run_39089455296": "PRESERVED_HISTORICAL",
+    "source_revision_binding": "PINNED_CHECKOUT_AND_LIVE_MODULE_BLOBS_VERIFIED",
+    "host_scope": "GITHUB_ACTIONS_NATIVE_READONLY_ONLY",
+    "chatgpt_fresh_host": "NOT_VERIFIED",
+    "authentic_event_cas": "NOT_VERIFIED",
+    "pdi_ledger": "UNCHANGED",
+    "pdi_source_17_of_17": "PRESERVED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "r02": "WRITE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false,
+    "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE_HOST_PARITY_SEPARATE",
+    "pointer_last": true,
+    "return_anchor": "PDI_GITHUB_ACTIONS_FRESH_READONLY_MODULE_PASS_EVENT_CAS_AND_CHAT_FRESH_HOST_OPEN"
   }
 }
