@@ -15,14 +15,18 @@ export function validateStarbridgePdiOnlyContract(input={}){
  if(event?.stream_id!=="STARBRIDGE"||event?.action!=="EVIDENCE"||event?.source_head!==PIN.head_sha||!event?.evidence_ref||event?.task||event?.obligation||event?.return_anchor)return halt("EVIDENCE_ONLY_NO_TASK_OR_OTHER_STREAM");
  if(!event.event_id||typeof event.event_id!=="string"||!event.event_id.trim())return halt("INDEPENDENT_EVENT_ID_REQUIRED");
  const semantic=`${REPO}:${PIN.head_sha}:STARBRIDGE_REGRESSION_EXTENSION:workflow-and-negative-tests`;
- if(event.semantic_key!==semantic)return halt("SEMANTIC_REPLAY_BINDING_REQUIRED");
- if(pdi_state.processed_event_ids.includes(event.event_id)||pdi_state.processed_event_ids.includes(semantic)||input.existing_semantic_keys?.includes(semantic))return halt("SEMANTIC_OR_EVENT_REPLAY");
- if(input.existing_semantic_keys===undefined||!Array.isArray(input.existing_semantic_keys))return halt("PERSISTED_SEMANTIC_REPLAY_READBACK_REQUIRED");
+ // One stable event ID is the semantic fingerprint. A different run of the same
+ // source change cannot mint a second PDI event; no caller-supplied replay list.
+ if(event.event_id!==semantic||event.semantic_key!==semantic)return halt("SEMANTIC_EVENT_ID_BINDING_REQUIRED");
+ if(Object.hasOwn(input,"existing_semantic_keys"))return halt("CALLER_REPLAY_LIST_FORBIDDEN");
+ if(pdi_state.processed_event_ids.length>=5000)return halt("EVENT_HISTORY_ROTATION_REQUIRED");
+ if(pdi_state.processed_event_ids.includes(semantic))return halt("SEMANTIC_OR_EVENT_REPLAY");
  if(!SHA.test(cas?.expected_head??"")||!SHA.test(cas?.expected_pdi_blob??"")||cas?.current_head!==cas.expected_head||cas?.current_pdi_blob!==cas.expected_pdi_blob||cas?.target_path!==PDI_ONLY_PATH)return halt("EXPECTED_HEAD_AND_BLOB_CAS_REQUIRED");
  if(!recovery||recovery.head!==cas.expected_head||recovery.readback_verified!==true||!SHA.test(recovery.backup_commit??""))return halt("INDEPENDENT_RECOVERY_READBACK_REQUIRED");
  if(!approval||approval.scope!==PDI_ONLY_PATH||approval.operation!=="STARBRIDGE_EVIDENCE_PDI_ONLY"||approval.expected_head!==cas.expected_head||approval.expected_blob!==cas.expected_pdi_blob||approval.event_id!==event.event_id||approval.semantic_key!==semantic)return halt("EXACT_APPROVAL_SCOPE_REQUIRED");
  // Caller booleans are never independent approval, nonce consumption, CAS or host identity.
  // Readback proof and explicit authorization can only originate from a separate native executor.
+ // In particular, caller origin/source/recovery objects are NOT independent evidence.
  let candidate;
  try{
   candidate=applyPdiEvent(pdi_state,{event_id:event.event_id,stream_id:"STARBRIDGE",action:"EVIDENCE",source_head:PIN.head_sha,evidence_ref:event.evidence_ref},{independent_source_readback:true});
@@ -31,5 +35,6 @@ export function validateStarbridgePdiOnlyContract(input={}){
   if(JSON.stringify(candidate.streams.find(x=>x.id===s.id))!==JSON.stringify(s))return halt("OTHER_WORKSTREAM_CHANGED");
  }
  if(candidate.streams.find(s=>s.id==="STARBRIDGE").status!==pdi_state.streams.find(s=>s.id==="STARBRIDGE").status)return halt("STARBRIDGE_STATUS_PROMOTION_FORBIDDEN");
+ if(candidate.processed_event_ids.length!==pdi_state.processed_event_ids.length+1||candidate.processed_event_ids.at(-1)!==semantic)return halt("SAME_PDI_BLOB_EVENT_REPLAY_BINDING_REQUIRED");
  return {status:"SOURCE_CANDIDATE_ONLY_AUTHORITY_NOT_INSTALLED",reason:"INDEPENDENT_APPROVER_NONCE_AND_PRIVILEGED_HOST_UNVERIFIED",source_candidate:true,semantic_key:semantic,proposed_event_id:event.event_id,pdi_candidate:candidate,may_write:false,cas_accepted:false,pdi_persisted:false,host_verified:false,approval_verified:false,pointer_published:false,foreign_mutation:false};
 }
