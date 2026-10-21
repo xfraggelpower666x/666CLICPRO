@@ -4284,5 +4284,42 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_SCOPED_DRIVE_DUAL_REVISION_SOURCE_CI_PASS_NATIVE_AUTHORITY_HOST_OPEN"
+  },
+  "update_2026_10_21_owner_starbridge_private_drive_transport": {
+    "status": "CLIC_SOURCE_CI_PASS_DRIVE_CONNECTOR_PROBE_READBACK_PASS_NATIVE_TARGET_OPEN",
+    "source_body_head": "a6911dafc56e3f703877c3d54af3a70598f425ab",
+    "body_tree": "617d1f9d65d956019f94f24eff0145ec8b18bc7d",
+    "manifest_blob": "127e20a14817ec9e736d55c27b42ef16c2ec8e53",
+    "transport_module_blob": "174d4b3e5a7849ca63fc1f8dd69f31b018a085ec",
+    "transport_tests_blob": "1393efb10f579acf8e32e6fba46e4a31a6bc5774",
+    "workflow_blob": "9aea3880369a73b233784586f8b2ac53a7f344f4",
+    "ci": {
+      "mailbox": 39561072794,
+      "static_guard": 39561072608,
+      "pdi": 39561072670,
+      "visual": 39561072680
+    },
+    "ci_status": "FOUR_COMPLETED_SUCCESS_AT_SOURCE_BODY",
+    "recovery": "backup/clic-pre-private-starbridge-drive-mail-20261021-r01",
+    "google_drive_mailbox_id": "1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs",
+    "drive_probe_file_id": "1Y09mKh8IJLLDMS7t5b0n_1Sfm4YxdcWYhiSwcXSY3O8",
+    "drive_probe": "CLIC_OWNED_TECHNICAL_CREATE_MOVE_DOCUMENT_TEXT_READBACK_PARENT_PASS",
+    "drive_probe_is_native_receipt": false,
+    "drive_permissions": "ANYONE_WITH_LINK_WRITER_USER_ACCEPTED",
+    "drive_role": "TRANSPORT_ONLY_HISTORICAL_DRIVE_STILL_NON_AUTHORITATIVE",
+    "family_mailbox": "UNTOUCHED_EXCLUDED",
+    "native_recipient_receipt": "NOT_VERIFIED",
+    "delivery": "4_OF_7_PRESERVED",
+    "adoption": "NO_PROMOTION",
+    "host": "NO_FOREIGN_HOST_PASS",
+    "historical_drive": "HISTORY_ONLY",
+    "repo_first_authority": "PRESERVED",
+    "cls_receipt_module": "UNCHANGED",
+    "pdi_priority": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin": "SOURCE_ONLY_NO_PLUGIN_RELEASE",
+    "pointer_last": true,
+    "return_anchor": "CLIC_OWNER_STARBRIDGE_TECH_MAILBOX_SOURCE_CI_AND_DRIVE_PROBE_PASS_NATIVE_DELIVERY_OPEN"
   }
 }
