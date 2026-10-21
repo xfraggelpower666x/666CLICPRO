@@ -111,7 +111,9 @@
     "continuity/NEW_CHAT_HISTORICAL_SNAPSHOT_2026-10-10.json",
     "continuity/new-chat-freshness.test.mjs",
     "continuity/starbridge-cls-drive-receipt.mjs",
-    "continuity/starbridge-cls-drive-receipt.test.mjs"
+    "continuity/starbridge-cls-drive-receipt.test.mjs",
+    "continuity/starbridge-drive-scoped-receiver.mjs",
+    "continuity/starbridge-drive-scoped-receiver.test.mjs"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1570,5 +1572,17 @@
     "junior": "PRESERVED",
     "pet": "PAUSED",
     "return_anchor": "PDI_SEMANTIC_EVENT_ID_BOUND_SOURCE_CI_PASS_HOST_APPROVAL_OPEN"
+  },
+  "update_2026_10_21_ac_drive_lyvra_source_only": {
+    "status": "BODY_SOURCE_CANDIDATE_PENDING_CI",
+    "scope": "CLIC_OWNED_RECEIVER_AND_RELATIONS_ONLY",
+    "source_head": "58feeb70a8e910c882a70b5b6e1f0362a2bb3069",
+    "lyvra_head": "f31e5b5f049dfac0dca61fda04bb85c046994fb6",
+    "no_foreign_writes": true,
+    "cls_receipt_unchanged": true,
+    "pdi_priority_unchanged": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_release": "UNCHANGED_HOST_PARITY_OPEN"
   }
 }

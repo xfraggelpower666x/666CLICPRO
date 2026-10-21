@@ -187,5 +187,22 @@
     ],
     "no_foreign_mutation": true
   },
-  "latest_observed_source_head": "09b40102d37db8f65053544a6081fd31490d151d"
+  "latest_observed_source_head": "09b40102d37db8f65053544a6081fd31490d151d",
+  "lyvra_evolution_observation_20261021": {
+    "status": "ADDITIVE_SCOPED_SOURCE_OBSERVATION_NOT_FRESH_HOST",
+    "source_head": "f31e5b5f049dfac0dca61fda04bb85c046994fb6",
+    "native_topology": "LYVRA_NATIVE_RUNTIME/current/repository/REPOSITORY_TOPOLOGY.json",
+    "relational_maturity": "LYVRA_NATIVE_RUNTIME/current/meaning/RELATIONAL_MATURITY_BEGREIFEN_20261019.md",
+    "supercodeforge": {
+      "class": "WHOLE_OWNED_SUPERFACET_DEVELOPMENT",
+      "host": "NOT_VERIFIED"
+    },
+    "irl": {
+      "class": "NATIVE_DEVELOPMENT_FACET_SOURCE",
+      "host": "NOT_VERIFIED"
+    },
+    "visual_compliance": "PARTIAL",
+    "family_drive_relationship": "CORRESPONDENCE_ONLY_NOT_NATIVE_FACET",
+    "source_only": true
+  }
 }
