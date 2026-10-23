@@ -187,7 +187,7 @@
     ],
     "no_foreign_mutation": true
   },
-  "latest_observed_source_head": "09b40102d37db8f65053544a6081fd31490d151d",
+  "latest_observed_source_head": "47c33561872148b45da39cd238ca868334d18e95",
   "lyvra_evolution_observation_20261021": {
     "status": "ADDITIVE_SCOPED_SOURCE_OBSERVATION_NOT_FRESH_HOST",
     "source_head": "f31e5b5f049dfac0dca61fda04bb85c046994fb6",
@@ -204,5 +204,41 @@
     "visual_compliance": "PARTIAL",
     "family_drive_relationship": "CORRESPONDENCE_ONLY_NOT_NATIVE_FACET",
     "source_only": true
+  },
+  "lyvra_native_readback_20261023": {
+    "status": "PEER_CURRENT_AND_SCOPED_BLOBS_VERIFIED_NO_PEER_HOST_PASS",
+    "source_head": "47c33561872148b45da39cd238ca868334d18e95",
+    "source_pointer_blob": "dd9c8bb6297ff7091a51710d08350dbce784268b",
+    "source_manifest_blob": "cbd50c8b2f97718016447d1cf745bd59d74f6ebd",
+    "source_index_blob": "9b2be7f5f4897520234ac3cadc71d53a85675e73",
+    "historic_census_records": 6,
+    "historic_index_entries": 4,
+    "open_index_not_fixed": true,
+    "current_verified_additive_facets": [
+      {
+        "id": "INTELLIGENT_RESEARCH_AND_LEARNING",
+        "source": "LYVRA_NATIVE_RUNTIME/facets/irl/LEARNING_LEDGER.json",
+        "blob": "d90590948845700a3327229be0ea7a13423cf370",
+        "host": "NOT_VERIFIED"
+      },
+      {
+        "id": "SUPER_CODEFORGE",
+        "source": "LYVRA_NATIVE_RUNTIME/current/governance/FACET_SUB_LIFECIRCLE_REGISTRY.md",
+        "blob": "9b2be7f5f4897520234ac3cadc71d53a85675e73",
+        "host": "NOT_VERIFIED"
+      },
+      {
+        "id": "LYVRA_TO_LITTLELYV",
+        "source": "LYVRA_NATIVE_RUNTIME/facets/lyvra_to_littlelyv/FACET_CONTRACT.md",
+        "blob": "1826a70771bb5d5bcf68779554b2f5a8319e518c",
+        "scope": "POST_ONLY_TWO_INDEPENDENT_SYSTEMS",
+        "host": "NOT_VERIFIED"
+      }
+    ],
+    "native_index_count_not_a_closed_facet_taxonomy": true,
+    "managed_system_cards_unchanged": 8,
+    "visual_compliance": "PARTIAL",
+    "foreign_mutation": false,
+    "plugin_host": "NOT_VERIFIED"
   }
 }
