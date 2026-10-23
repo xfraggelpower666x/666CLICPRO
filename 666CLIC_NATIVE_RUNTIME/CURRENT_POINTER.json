@@ -4474,5 +4474,49 @@
     "foreign_mutation": false,
     "pointer_last": true,
     "return_anchor": "CLIC_CUSTOM_INPUT_VISUAL_PDI_CONTINUITY_SOURCE_PASS_HOST_PLUGIN_PARITY_OPEN_RESUME_PDI_CAS"
+  },
+  "update_2026_10_23_lyvra_cards_own_learning": {
+    "status": "CLIC_OWNED_LYVRA_CARD_REFRESH_SOURCE_CI_VERIFIED_HOST_PENDING",
+    "prechange_head": "9ee68f1bf1f264966929c8d99970c8c0e4ae627a",
+    "recovery": "backup/clic-pre-lyvra-cards-learning-20261023-r01",
+    "body_head": "0954f76d1bac9cc3ecb5309d1463884f6cc62773",
+    "lyvra_native_head": "47c33561872148b45da39cd238ca868334d18e95",
+    "lyvra_pointer_blob": "dd9c8bb6297ff7091a51710d08350dbce784268b",
+    "lyvra_manifest_blob": "cbd50c8b2f97718016447d1cf745bd59d74f6ebd",
+    "clic_manifest_blob": "04a34d6ecfb23ffda9c55d0b5f560fa35925bce5",
+    "required_order_count": 120,
+    "updated_cards": {
+      "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md": "4a6e3f9e321c5b8032521fa738f671ce9d2f2696",
+      "relations/CLIC_SELF_UNDERSTANDING_CARD_CURRENT_2026-10-07.md": "9494bb920788e352a342f8a3163ff015704c69b8",
+      "facets/card_intelligence/LYVRA_FACET_REGISTRY_CURRENT.json": "94b446e44d0e44854e2848762acf2c1bca5a4344",
+      "facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md": "b4453bf1dd25a1aac5ef14259977dff8ea2e9786"
+    },
+    "source_ci_runs": {
+      "cards": 39877198237,
+      "source_static": 39877198230,
+      "drive_scoped": 39877198205,
+      "manifest_pdi": 39877323107,
+      "manifest_visual": 39877323141,
+      "manifest_static": 39877323147
+    },
+    "ci_status": "SIX_COMPLETED_SUCCESS_TWO_SOURCE_REVISIONS",
+    "learning_candidates": [
+      "CONTEXTUAL_ACTION_RELEVANCE",
+      "CUSTOM_INPUT_RESUME",
+      "TASK_CHAT_HOST_SEPARATION",
+      "IRL_LINK_FIRST_WITH_BACKUP",
+      "FACET_TO_WHOLE_CAUSAL_REVIEW"
+    ],
+    "pdi_priority": "FOUR_ORIGINAL_RANKS_PRESERVED",
+    "pdi_event_ids": 0,
+    "visual_compliance": "LYVRA_PARTIAL_HOST_NOT_VERIFIED",
+    "plugin_impact": "CLIC_OWNED_CARDS_AND_OPEN_CANDIDATES_NO_LIVE_RUNTIME_RELEASE",
+    "r02": "WRITE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "foreign_mutations": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_LYVRA_CARDS_UPDATED_PEER_CAUSAL_LEARNING_CANDIDATES_OPEN_PDI_PRIORITIES_PRESERVED"
   }
 }
