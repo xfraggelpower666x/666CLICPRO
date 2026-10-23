@@ -1673,19 +1673,19 @@
     "pet": "PAUSED"
   },
   "starbridge_owner_mailbox_host_adapter_2026_10_23": {
-    "status": "OFFLINE_GOVERNED_HOST_BINDING_TESTED_NO_LIVE_PUBLICATION",
+    "status": "OFFLINE_FAIL_CLOSED_INDEPENDENT_APPROVAL_AND_DURABLE_RECOVERY_GATE_CI_PASS",
     "authority": "CLIC_GITHUB_REPO_FIRST",
     "reused_adapter": "continuity/starbridge-owner-mailbox-host-adapter.mjs",
     "reused_source": "continuity/starbridge-owner-mailbox-github-binding.mjs",
     "reused_reader": "continuity/starbridge-owner-mailbox-transport.mjs",
     "host_adapter_blob": "31b60333f53a074fea1707f0e7313d012995c1d8",
     "host_test_blob": "36f1b33cd52494ce70cbab360cd076b6d850d850",
-    "approval": "INDEPENDENT_BOUND_SERVICE_REQUIRED_NO_APPROVAL_EXECUTED",
+    "approval": "NO_HOST_ATTESTED_APPROVAL_CANNOT_TRUST_INJECTED_CALLBACK",
     "acl": "ANYONE_WRITER_DETECTED_IN_PROVIDER_NEEDS_RISK_APPROVAL_NOT_TRUSTED_SENDER",
     "parent": "CREATE_DEFAULT_ROOT_THEN_PROVIDER_MOVE_AND_SCOPED_READBACK",
     "provider": "DOCS_REVISION_WRITE_GUARD_AND_DRIVE_DOCS_DOUBLE_REVISION",
     "source": "GITHUB_HEAD_TREE_BLOB_PRE_AND_POST_PROVIDER",
-    "ci_run": 39905631999,
+    "ci_run": 39909467107,
     "ci_status": "PASS",
     "local_negative_tests": "PASS",
     "native_delivery": "NOT_PROMOTED",
@@ -1696,7 +1696,12 @@
     "pet": "PAUSED",
     "foreign_writes": false,
     "live_mailbox_publication": false,
-    "plugin_impact": "CLIC_HOST_ADAPTER_GUARDS_ONLY_NO_TRIGGER_DASHBOARD_OR_PLUGIN_API_CHANGE",
-    "backup_branch": "backup/clic-pre-owner-mailbox-host-guard-20261023"
+    "plugin_impact": "CLIC_OWN_HOST_SAFETY_GUARD_ONLY_NO_TRIGGER_DASHBOARD_FACET_OR_API_CHANGE",
+    "backup_branch": "backup/clic-pre-owner-mailbox-host-guard-20261023",
+    "adapter_blob": "7febfd37bbe01e67d2711030d0058d433864a472",
+    "test_blob": "54996424d7f7c066eeb2edcc05aa0c08cd31e2b7",
+    "recovery": "NO_PERSISTENT_PRECREATE_CAS_LEDGER_LIVE_MUTATIONS_BLOCKED",
+    "provider_writes": 0,
+    "prechange_backup_branch": "backup/clic-pre-mailbox-approval-recovery-20261023"
   }
 }
