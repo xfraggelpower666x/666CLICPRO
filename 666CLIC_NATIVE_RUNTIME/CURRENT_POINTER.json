@@ -4556,5 +4556,31 @@
     "plugin": "SOURCE_ONLY_HOST_PARITY_OPEN",
     "pointer_last": true,
     "return_anchor": "CLIC_OWNER_STARBRIDGE_EXPLICIT_HOST_SOURCE_CI_PASS_REAL_PROVIDER_EXECUTION_OPEN"
+  },
+  "update_2026_10_23_owner_mailbox_host_guard_offline": {
+    "status": "VERIFIED_OFFLINE_GUARDED_HOST_BINDING_LIVE_PUBLICATION_BLOCKED",
+    "prechange_head": "46c751763011d4ded6530d07bc8ec692d255e462",
+    "recovery_branch": "backup/clic-pre-owner-mailbox-host-guard-20261023",
+    "body_head_before_pointer": "78807582ee8f9a1ce567e8e19037395be87d6364",
+    "host_adapter_blob": "31b60333f53a074fea1707f0e7313d012995c1d8",
+    "host_test_blob": "36f1b33cd52494ce70cbab360cd076b6d850d850",
+    "manifest_blob": "818978b95d779e5f10f3ddb1ec9409739aff96bd",
+    "network_blob": "74ba1648ef6ede064417ee92c61a1ffa13ad2f3c",
+    "offline_ci_run": 39905631999,
+    "offline_ci": "PASS",
+    "acl": "ANYONE_WRITER_REQUIRES_INDEPENDENT_BOUND_RISK_PROOF",
+    "approval": "REQUIRED_NOT_AVAILABLE_AS_VERIFIED_LIVE_SERVICE",
+    "provider_revisions": "GUARDED",
+    "source_freshness": "PRE_POST_GUARDED",
+    "live_publication": "NOT_PERFORMED",
+    "native_receiver_receipts": "NO_NEW_RECEIPTS",
+    "delivery": "4_OF_7_UNCHANGED",
+    "pdi_sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_impact": "NO_RUNTIME_TRIGGER_VISUAL_API_DELTA",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_OWNER_MAILBOX_HOST_GUARD_OFFLINE_CI_PASS_ACL_APPROVAL_LIVE_HOLD_DELIVERY_4_OF_7"
   }
 }
