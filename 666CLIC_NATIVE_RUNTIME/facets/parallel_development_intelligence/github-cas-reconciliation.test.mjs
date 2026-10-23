@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {createClicGithubCasTransport} from "../../dashboard/development_progress/github-cas-transport.mjs";
+import {createClicGithubCasTransport,verifyClicPdiEventOrigin} from "../../dashboard/development_progress/github-cas-transport.mjs";
 import {reconcilePdiLedger,PDI_LEDGER_PATH} from "./pdi-ledger-reconciliation.mjs";
 import {createPdiState} from "./parallel-development.mjs";
 import {CLIC_LEDGER_PATH} from "../../dashboard/development_progress/development-ledger-store.mjs";
@@ -29,18 +29,16 @@ function fixture(){
 test("native CLIC scope and real connector methods are required",()=>{
  assert.throws(()=>createClicGithubCasTransport({repository:"foreign",branch,github:{},verifyEventSource:()=>true}),/CLIC_NATIVE/);
 });
-test("CAS transport enforces expected file SHA, commit ancestry and exact tree readback",async()=>{
+test("CAS source refuses to write without independent atomic branch authority",async()=>{
  const f=fixture();
- const t=createClicGithubCasTransport({repository:repo,branch,github:f.github,verifyEventSource:async e=>({verified:true,source_revision:e.source_revision,evidence_ref_verified:true})});
+ const t=createClicGithubCasTransport({repository:repo,branch,github:f.github,
+  verifyEventSource:async e=>({verified:true,source_revision:e.source_revision,evidence_ref_verified:true})});
  assert.equal(await t.readHead(),H);
- const old=await t.readCurrent(CLIC_LEDGER_PATH);assert.equal(old.blob_sha,O);
- const next={...old.ledger,status:"ACTIVE",source_revision:H,last_event_id:"evt-1",processed_event_ids:["evt-1"],tasks:event.tasks,current_work:"verified"};
- const c=await t.compareAndSwap(CLIC_LEDGER_PATH,O,next);
- assert.equal(c.cas_accepted,true);
- const back=await t.readBack(CLIC_LEDGER_PATH);
- assert.equal(back.blob_sha,B);
- assert.equal(await t.verifyLatestCasLineage({base_head:H,head:N,blob_sha:B}),true);
- assert.equal((await t.compareAndSwap(CLIC_LEDGER_PATH,O,next)).cas_accepted,false);
+ const before=await t.readCurrent(CLIC_LEDGER_PATH);
+ const result=await t.compareAndSwap(CLIC_LEDGER_PATH,before.blob_sha,{...before.ledger,status:"ACTIVE"});
+ assert.equal(result.cas_accepted,false);
+ assert.equal(result.reason,"ATOMIC_BRANCH_CAS_HOST_AUTHORITY_NOT_VERIFIED");
+ assert.equal(f.read().writeCount,0);
 });
 test("reconciliation starts after ledger proof and never replays ledger event",async()=>{
  const f=fixture();const p=native();p.processed_event_ids.push("evt-1");p.streams[0].status="ACTIVE";p.streams[0].tasks=[{id:"task",status:"OPEN",evidence_ref:"git/evidence"}];
@@ -57,5 +55,31 @@ test("PDI stage refuses forged lineage, concurrent file state and missing event 
  assert.equal((await reconcilePdiLedger(base)).status,"READBACK_PENDING");
  assert.equal((await reconcilePdiLedger({...base,expected_pdi_blob:O,verifyOrigin:async()=>({verified:true,ledger_event_verified:true,lineage_verified:true,ledger_blob_sha:B})})).status,"READBACK_PENDING");
  assert.equal((await reconcilePdiLedger({...base,pdi_candidate:native()})).status,"WRITE_BLOCKED");
+ assert.equal(f.read().writeCount,0);
+});
+
+test("event origin requires independently matching commit, tree, file bytes and identity",async()=>{
+ const {createHash}=await import("node:crypto");
+ const payload="{\"event\":\"verified\"}\n";
+ const b=Buffer.from(payload);
+ const blob=createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex");
+ const path="666CLIC_NATIVE_RUNTIME/current/VERIFIED_EVENT.json";
+ const ev={source_revision:H,event_id:"event-unique-one",evidence_ref:path};
+ const git={fetchCommit:async()=>({sha:H}),fetchTree:async()=>({truncated:false,tree:[{path,type:"blob",sha:blob}]}),
+  fetchFile:async()=>({sha:blob,content:payload})};
+ const good=await verifyClicPdiEventOrigin({event:ev,github:git});
+ assert.equal(good.verified,true);assert.equal(good.event_write_authorized,false);
+ assert.equal((await verifyClicPdiEventOrigin({event:ev,github:git,processed_event_ids:[ev.event_id]})).reason,"EVENT_REPLAY");
+ assert.equal((await verifyClicPdiEventOrigin({event:ev,github:{...git,fetchCommit:async()=>({sha:N})}})).reason,"COMMIT_IDENTITY_NOT_INDEPENDENTLY_BOUND");
+ assert.equal((await verifyClicPdiEventOrigin({event:ev,github:{...git,fetchTree:async()=>({truncated:false,tree:[{path,type:"blob",sha:O}]})}})).reason,"COMMIT_TREE_BLOB_CONTENT_MISMATCH");
+ assert.equal((await verifyClicPdiEventOrigin({event:ev,github:{...git,fetchFile:async()=>({sha:blob,content:"tampered"})}})).reason,"COMMIT_TREE_BLOB_CONTENT_MISMATCH");
+ assert.equal((await verifyClicPdiEventOrigin({event:{...ev,evidence_ref:"../foreign"},github:git})).reason,"EVENT_SCOPE_OR_IDENTITY_INVALID");
+});
+test("caller-controlled source booleans cannot promote source without repository readback",async()=>{
+ const f=fixture();
+ const t=createClicGithubCasTransport({repository:repo,branch,github:f.github,
+  verifyEventSource:async e=>({verified:true,source_revision:e.source_revision,evidence_ref_verified:true})});
+ const proof=await t.verifyEventSource(event);
+ assert.equal(proof.verified,false);
  assert.equal(f.read().writeCount,0);
 });

@@ -26,6 +26,7 @@
     "facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs",
     "facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json",
     "dashboard/development_progress/github-cas-transport.mjs",
+    "facets/parallel_development_intelligence/github-cas-reconciliation.test.mjs",
     "dashboard/development_progress/github-connector-binding.mjs",
     "dashboard/development_progress/native-host-actions-readonly.mjs",
     "facets/parallel_development_intelligence/github-connector-binding.test.mjs",
