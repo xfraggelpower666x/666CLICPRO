@@ -9,19 +9,50 @@ function gh(){return {fetch:async({url})=>({result:{content:JSON.stringify(url.i
 function drive(){const f={};let count=0;const state={files:f,get count(){return count},fail:null};const api={
  list_folder:async()=>({result:{files:Object.values(f).filter(x=>x.parent_ids.includes("1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs")).map(x=>({id:x.id,title:x.title}))}}),
  create_file:async({title,mime_type})=>{count++;f["doc-"+count]={id:"doc-"+count,title,mime_type,parent_ids:["root"],content:"",rev:"1"};return {result:{fileId:"doc-"+count,mimeType:mime_type}}},
- get_file_metadata:async({fileId})=>({result:{id:fileId,parent_ids:[...f[fileId].parent_ids],mime_type:f[fileId].mime_type}}),
+ get_file_metadata:async({fileId})=>({result:fileId==="1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs"?{id:fileId,permissions:[{type:"anyone",role:"writer"}]}:{id:fileId,parent_ids:[...f[fileId].parent_ids],mime_type:f[fileId].mime_type}}),
  get_document:async({document_id})=>({result:{documentId:document_id,revisionId:f[document_id].rev}}),
  batch_update_document:async({document_id,requests,write_control})=>{const x=f[document_id];if(x.rev!==write_control.requiredRevisionId)throw Error("CONFLICT");x.content=requests[0].insertText.text;x.rev="2";return {result:{revisionId:"2"}}},
  update_file:async({fileId,addParents})=>{if(state.fail==="MOVE")throw Error("MOVE_DENIED");f[fileId].parent_ids=[addParents];return {result:{success:true,parent_ids:[addParents]}}},
  list_file_revisions:async({fileId})=>({result:{fileId,currentRevisionId:"2",revisions:[{id:"2"}]}}),
  get_document_text:async({document_id})=>({result:{documentId:document_id,revisionId:f[document_id].rev,paragraphs:[{text:f[document_id].content}]}})
  };return {api,state}}
+const approved={verify:async x=>({result:{valid:true,independentVerifier:true,proofId:"independent-proof",opaqueReceipt:"separately-authenticated-receipt",worldWritableRiskApproved:true,source_head:x.source_head,source_blob_sha:x.source_blob_sha,handoff_id:x.handoff_id,folder_id:x.folder_id,target_system:x.target_system}})};
 test("explicit execution required",async()=>{const d=drive();const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path});assert.equal(x.status,"MESSAGE_PREPARED");assert.equal(d.state.count,0)});
-test("create/write/move/double readback source remains not native delivery",async()=>{const d=drive();const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});assert.equal(x.status,"MESSAGE_ACCESSIBLE",JSON.stringify(x));assert.equal(x.delivery_verified,false);assert.equal(d.state.count,1)});
-test("idempotent second call doesn't create duplicate",async()=>{const d=drive();await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});assert.equal(x.reused,true,JSON.stringify(x));assert.equal(d.state.count,1)});
-test("missing trusted handle fail closed",async()=>{assert.equal((await publishVerifiedClicOutbox({github:gh(),drive:{},source_path:path,execute:true})).status,"HOLD")});
-test("unverified source fail closed before any write",async()=>{const d=drive();const g=gh();g.fetchFile=async()=>({result:{content:original,sha:"b".repeat(40)}});assert.equal((await publishVerifiedClicOutbox({github:g,drive:d.api,source_path:path,execute:true})).status,"HOLD");assert.equal(d.state.count,0)});
-test("move failure returns file id for recovery, no fabricated publication",async()=>{const d=drive();d.state.fail="MOVE";const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});assert.equal(x.status,"HOLD");assert.equal(x.stage,"MOVE");assert.equal(x.file_id,"doc-1")});
-test("tampered duplicate must not promote",async()=>{const d=drive();await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});d.state.files["doc-1"].content="{}";const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});assert.equal(x.status,"HOLD");assert.equal(d.state.count,1)});
+test("create/write/move/double readback source remains not native delivery",async()=>{const d=drive();const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});assert.equal(x.status,"MESSAGE_ACCESSIBLE",JSON.stringify(x));assert.equal(x.delivery_verified,false);assert.equal(d.state.count,1)});
+test("idempotent second call doesn't create duplicate",async()=>{const d=drive();await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});assert.equal(x.reused,true,JSON.stringify(x));assert.equal(d.state.count,1)});
+test("missing trusted handle fail closed",async()=>{assert.equal((await publishVerifiedClicOutbox({github:gh(),drive:{},source_path:path,execute:true,approval:approved})).status,"HOLD")});
+test("unverified source fail closed before any write",async()=>{const d=drive();const g=gh();g.fetchFile=async()=>({result:{content:original,sha:"b".repeat(40)}});assert.equal((await publishVerifiedClicOutbox({github:g,drive:d.api,source_path:path,execute:true,approval:approved})).status,"HOLD");assert.equal(d.state.count,0)});
+test("move failure returns file id for recovery, no fabricated publication",async()=>{const d=drive();d.state.fail="MOVE";const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});assert.equal(x.status,"HOLD");assert.equal(x.stage,"MOVE");assert.equal(x.file_id,"doc-1")});
+test("tampered duplicate must not promote",async()=>{const d=drive();await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});d.state.files["doc-1"].content="{}";const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});assert.equal(x.status,"HOLD");assert.equal(d.state.count,1)});
 test("reply requires trusted separate document",async()=>{const d=drive();const x=await inspectSeparateClicReply({github:gh(),drive:d.api,source_path:path,reply_file_id:"absent"});assert.equal(x.status,"HOLD")});
 test("no automatic background dispatch or native decision",()=>{assert.equal(CLIC_OWNER_MAILBOX_HOST.background_dispatch,false);assert.equal(CLIC_OWNER_MAILBOX_HOST.receipt_promotion,false)});
+
+test("execute true without independent approval must not create a file",async()=>{
+ const d=drive();const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true});
+ assert.equal(x.status,"HOLD");assert.equal(x.reason,"INDEPENDENT_APPROVAL_SERVICE_REQUIRED");assert.equal(d.state.count,0);
+});
+test("public writer ACL with unapproved risk blocks before create",async()=>{
+ const d=drive(),approval={verify:async x=>({result:{...(await approved.verify(x)).result,worldWritableRiskApproved:false}})};
+ const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval});
+ assert.equal(x.status,"HOLD");assert.equal(x.reason,"WORLD_WRITER_ACL_UNTRUSTED");assert.equal(d.state.count,0);
+});
+test("unbound approval proof is rejected",async()=>{
+ const d=drive(),approval={verify:async x=>({result:{...(await approved.verify(x)).result,source_blob_sha:"wrong"}})};
+ const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval});
+ assert.equal(x.status,"HOLD");assert.equal(d.state.count,0);
+});
+test("fake boolean approval is not enough",async()=>{
+ const d=drive();const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:{valid:true}});
+ assert.equal(x.status,"HOLD");assert.equal(d.state.count,0);
+});
+test("Docs unchanged revision blocks publish, never claims delivery",async()=>{
+ const d=drive();d.api.batch_update_document=async()=>({result:{revisionId:"1"}});
+ const x=await publishVerifiedClicOutbox({github:gh(),drive:d.api,source_path:path,execute:true,approval:approved});
+ assert.equal(x.status,"HOLD");assert.equal(x.stage,"WRITE");assert.equal(x.delivery_verified,false);
+});
+test("source HEAD changed during publish fails final readback",async()=>{
+ const d=drive(),g=gh();let hits=0;const orig=g.fetch;
+ g.fetch=async arg=>{if(arg.url.includes("/branches/")&&++hits>2)return {result:{content:JSON.stringify({commit:{sha:"b".repeat(40)}})}};return orig(arg)};
+ const x=await publishVerifiedClicOutbox({github:g,drive:d.api,source_path:path,execute:true,approval:approved});
+ assert.equal(x.status,"HOLD");assert.equal(x.delivery_verified,false);
+});
