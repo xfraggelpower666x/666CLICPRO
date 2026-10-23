@@ -4627,5 +4627,40 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_LYVRA_24_COMMIT_DELTA_FOUR_CARDS_CI_PASS_CONTEXTUAL_CAUSAL_LEARNING_SOURCE_ONLY"
+  },
+  "update_2026_10_23_contextual_operation_outcome_r01": {
+    "status": "CLIC_SOURCE_CI_PASS_OPERATION_LOCAL_OUTCOME_GUARD_POINTER_LAST",
+    "prechange_head": "0e19c39bf6373ec5ea63fe5231422955d249e57f",
+    "backup": "backup/clic-pre-contextual-operation-outcome-20261023-r01",
+    "body_head": "1da97dd51718b85b2aa414a121c8ad979c0a2f9d",
+    "body_tree": "8b63920edd146490cc24fa56bbdbd5bf53f765d5",
+    "module_blob": "bf6eede68eacced7e88ac6c124b67fb5e97c0a6d",
+    "tests_blob": "db35e2d41640e1dd0e5b5ff4752f09c3fe89ddae",
+    "manifest_blob": "818978b95d779e5f10f3ddb1ec9409739aff96bd",
+    "ci": {
+      "card_force": 39908206155
+    },
+    "ci_status": "COMPLETED_SUCCESS",
+    "three_scoped_checks": [
+      "CONTEXTUAL_OUTCOME",
+      "PDI_REPLAY",
+      "STARBRIDGE_HOLD_RECOVERY_VISUAL"
+    ],
+    "scope": "EXISTING_CLIC_OWNED_CONTEXTUAL_OUTCOME_CODE_ONLY",
+    "operation_local_denial": "FAIL_CLOSED",
+    "independent_positive_readback": "OTHER_OPERATION_DOES_NOT_AUTHORIZE_DENIED_OPERATION",
+    "host_authority": "UNVERIFIED_ACTION_STAYS_HOLD",
+    "native_runtime_host_acceptance": "NOT_VERIFIED",
+    "plugin_impact": "SEMANTIC_SOURCE_CHANGE_LIVE_PLUGIN_PARITY_REVIEW_REQUIRED_NO_RELEASE",
+    "pdi_priorities": "FOUR_PRESERVED",
+    "pdi_ledger": "UNCHANGED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "r02": "WRITE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "family_post": "EXCLUDED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_OPERATION_LOCAL_CONTEXTUAL_OUTCOME_SOURCE_CI_PASS_HOST_PLUGIN_PARITY_OPEN"
   }
 }
