@@ -4699,5 +4699,28 @@
     "plugin_release": "NONE_SOURCE_ONLY",
     "pointer_last": true,
     "return_anchor": "PDI_ORIGIN_SOURCE_GOVERNANCE_CI_PASS_ATOMIC_BRANCH_CAS_AND_HOST_EVENT_RECEIPT_BLOCKED"
+  },
+  "update_2026_10_23_mailbox_approval_recovery_fail_closed": {
+    "status": "VERIFIED_OFFLINE_CI_PASS_LIVE_WRITE_BLOCKED",
+    "prechange_head": "6be1115481d5279f55975de679815721136abe79",
+    "backup_branch": "backup/clic-pre-mailbox-approval-recovery-20261023",
+    "body_head_before_pointer": "c4eed57beed52e8b793f806b7b43d8bab182f8df",
+    "adapter_blob": "7febfd37bbe01e67d2711030d0058d433864a472",
+    "tests_blob": "54996424d7f7c066eeb2edcc05aa0c08cd31e2b7",
+    "manifest_blob": "764a970529b27894247c9dcef8c961738ef5a0e3",
+    "ci_run": 39909467107,
+    "ci": "PASS",
+    "live_approval": "NOT_VERIFIED_CALLBACK_INJECTION_BLOCKED",
+    "durable_recovery": "NOT_VERIFIED_PRECREATE_WRITE_BLOCKED",
+    "write_count_live": 0,
+    "mailbox_publication": false,
+    "foreign_writes": false,
+    "delivery": "4_OF_7_UNCHANGED",
+    "pdi_sb04_sb05": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_impact": "HOST_SAFETY_GUARD_ONLY_NO_TRIGGER_OR_VISUAL_SEMANTICS_CHANGED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_MAILBOX_APPROVAL_RECOVERY_OFFLINE_GUARD_PASS_LIVE_BLOCKED_STARBRIDGE_4_OF_7"
   }
 }
