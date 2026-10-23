@@ -4662,5 +4662,42 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_OPERATION_LOCAL_CONTEXTUAL_OUTCOME_SOURCE_CI_PASS_HOST_PLUGIN_PARITY_OPEN"
+  },
+  "update_2026_10_23_pdi_independent_origin_branch_cas_fail_closed": {
+    "status": "PDI_SOURCE_GOVERNANCE_CI_VERIFIED_EVENT_WRITES_FAIL_CLOSED",
+    "base_head": "5b655e946a61fa5153c135b07e202b75b0b922ad",
+    "candidate_branch": "candidate/clic-pdi-origin-cas-20261023-r01",
+    "candidate_commit": "2590c80e67599c69734de598102e68de5d8df92a",
+    "recovery": "backup/clic-pre-pdi-candidate-integration-20261023-r01",
+    "body_head": "34de01bc54871254990d2a4c9f9317f80c892d78",
+    "source_blob": "b77e3f4005c0ed9afd11f9f3826a40800602e362",
+    "negative_tests_blob": "fd46028d383e4954e8be7699629061e4d9b62199",
+    "manifest_blob": "8ddc9f7f26979bfe7fbecaed719696018228aff5",
+    "required_order_count": 123,
+    "ci_runs": {
+      "card_force": 39908534761,
+      "pdi": 39908534804,
+      "visual": 39908534767,
+      "static_guard": 39908534774
+    },
+    "ci_status": "FOUR_COMPLETED_SUCCESS",
+    "event_origin": "INDEPENDENT_GIT_COMMIT_TREE_BLOB_READBACK_SOURCE_ONLY",
+    "event_source_host_authentication": "NOT_VERIFIED",
+    "atomic_branch_cas": "NOT_VERIFIED",
+    "event_write_enabled": false,
+    "ledger_blob": "66882c3f9e8aac86ab1475e162d9b2658e2f3400",
+    "pdi_ledger_blob": "27f389112cdac4c0bac41a8be84172922b5fcbfc",
+    "event_ids": 0,
+    "read_only_native_host": "HISTORICAL_VERIFIED_UNCHANGED",
+    "ledger_reconciliation": "UNCHANGED",
+    "pdi_priorities": "FOUR_UNCHANGED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "r02": "WRITE_BLOCKED",
+    "foreign_mutation": false,
+    "plugin_release": "NONE_SOURCE_ONLY",
+    "pointer_last": true,
+    "return_anchor": "PDI_ORIGIN_SOURCE_GOVERNANCE_CI_PASS_ATOMIC_BRANCH_CAS_AND_HOST_EVENT_RECEIPT_BLOCKED"
   }
 }
