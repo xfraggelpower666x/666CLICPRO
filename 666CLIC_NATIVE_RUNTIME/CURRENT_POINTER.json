@@ -4518,5 +4518,43 @@
     "foreign_mutations": false,
     "pointer_last": true,
     "return_anchor": "CLIC_LYVRA_CARDS_UPDATED_PEER_CAUSAL_LEARNING_CANDIDATES_OPEN_PDI_PRIORITIES_PRESERVED"
+  },
+  "update_2026_10_23_owner_mailbox_explicit_host_adapter": {
+    "status": "CLIC_SOURCE_CI_PASS_EXPLICIT_HOST_BINDING_NATIVE_TRANSPORT_NOT_RUN",
+    "prechange_head": "e652e3c077e6c4bddd12e811dc37355e669be7cd",
+    "backup": "backup/clic-pre-owner-mailbox-host-adapter-20261023-r01",
+    "body_head": "46c751763011d4ded6530d07bc8ec692d255e462",
+    "body_tree": "b08f7308b4da9c0fdd39c443b0cc93cf16d6cf7e",
+    "module_blob": "707d9680c4fd4c9d9a5808c92804f780e526496f",
+    "tests_blob": "4fd0fd2c0463d08791dc3096600be9146ab02a27",
+    "manifest_blob": "e3cd5e36cc0471090c2bfaddbd14db35a75b55ab",
+    "workflow_blob": "418d63ad4f85aae055df29a44b35855d2b7e7ad4",
+    "required_order_count": 122,
+    "ci_runs": {
+      "mailbox": 39905403476,
+      "pdi": 39905403431,
+      "visual": 39905403408,
+      "static": 39905403398
+    },
+    "ci": "FOUR_COMPLETED_SUCCESS_AT_BODY",
+    "github": "SOURCE_COMMIT_TREE_BLOB_GUARD",
+    "drive": "EXPLICIT_CONNECTOR_HOST_CREATE_WRITE_MOVE_DOUBLE_READBACK",
+    "drive_host_execution": "NOT_RUN",
+    "drive_mailbox_id": "1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs",
+    "idempotence": "SOURCE_TEST_VERIFIED_NO_ATOMIC_PROVIDER_LOCK",
+    "native_receipt": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "host_pass": "NOT_VERIFIED",
+    "repo_first": "PRESERVED",
+    "newer_pdi": "PRESERVED",
+    "tdh_delivery": "4_OF_7_PRESERVED",
+    "r02": "WRITE_BLOCKED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "family_mailbox": "EXCLUDED",
+    "foreign_mutation": false,
+    "plugin": "SOURCE_ONLY_HOST_PARITY_OPEN",
+    "pointer_last": true,
+    "return_anchor": "CLIC_OWNER_STARBRIDGE_EXPLICIT_HOST_SOURCE_CI_PASS_REAL_PROVIDER_EXECUTION_OPEN"
   }
 }
