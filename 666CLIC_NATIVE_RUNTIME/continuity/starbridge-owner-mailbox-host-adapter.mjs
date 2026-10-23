@@ -37,6 +37,17 @@ export async function publishVerifiedClicOutbox({github,drive,source_path,execut
  if(execute!==true)return {...source,status:"MESSAGE_PREPARED",publish_invoked:false};
  // Explicit approval verification binds this exact source, target and mailbox; no general write capability.
  if(typeof approval?.verify!=="function")return stopped("INDEPENDENT_APPROVAL_SERVICE_REQUIRED");
+ // No independently authenticated host-backed approval provenance exists in the current
+ // connector surface. Callback return fields (valid, independentVerifier, proofId) are
+ // forgeable by the caller. Likewise no durable pre-create transaction ledger exists.
+ // Fail closed BEFORE any provider create/write/move, including purported valid approvals.
+ return stopped("HOST_AUTHENTICITY_AND_DURABLE_PRECREATE_RECOVERY_NOT_VERIFIED",{
+   publish_invoked:false,provider_writes:0,recovery_state:"NO_TRANSACTION_STARTED",
+   approval_trust:"CALLBACK_ASSERTIONS_NOT_AUTHORITY",
+   blocked_gates:["HOST_AUTHENTICATED_APPROVAL_PROVENANCE","DURABLE_RECOVERY_PRECREATE_CAS"],
+   source_blob_sha:source.source_blob_sha
+ });
+
  let permission;
  try {
    const m=unwrap(await drive.get_file_metadata({fileId:CLIC_MAILBOX.folder_id}));
