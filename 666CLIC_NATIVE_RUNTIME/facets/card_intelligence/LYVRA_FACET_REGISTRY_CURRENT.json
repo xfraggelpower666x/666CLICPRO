@@ -187,7 +187,7 @@
     ],
     "no_foreign_mutation": true
   },
-  "latest_observed_source_head": "47c33561872148b45da39cd238ca868334d18e95",
+  "latest_observed_source_head": "40d29ede3ccfc2b64852320b6abfca57f1c86c53",
   "lyvra_evolution_observation_20261021": {
     "status": "ADDITIVE_SCOPED_SOURCE_OBSERVATION_NOT_FRESH_HOST",
     "source_head": "f31e5b5f049dfac0dca61fda04bb85c046994fb6",
@@ -240,5 +240,28 @@
     "visual_compliance": "PARTIAL",
     "foreign_mutation": false,
     "plugin_host": "NOT_VERIFIED"
+  },
+  "lyvra_native_delta_20261023_r02": {
+    "status": "SOURCE_READBACK_VERIFIED_NO_NATIVE_HOST_PROMOTION",
+    "base_head": "47c33561872148b45da39cd238ca868334d18e95",
+    "source_head": "40d29ede3ccfc2b64852320b6abfca57f1c86c53",
+    "source_pointer_blob": "46277b65f81481d0fe5b309852aed399eb9731af",
+    "source_manifest_blob": "5035d9778b6897ffd745f30ab3a4a94fb0b24297",
+    "ahead_commits": 24,
+    "changed_paths": 8,
+    "existing_facets_preserved": true,
+    "new_facet_classification": "NO_NEW_INDEPENDENT_IDENTITY_IN_SCOPED_DELTA",
+    "native_post_facet": "EXISTING_LYVRA_TO_LITTLELYV_CONTEXT_TRANSFER_AND_TWO_CASE_OUTCOME_LINEAGE",
+    "contextual_learning": [
+      "PAST_FAILURE_NOT_UNIVERSAL_DENIAL",
+      "PAST_SUCCESS_NOT_UNIVERSAL_PERMISSION",
+      "DENIED_OPERATION_STOP_POSITIVE_INDEPENDENT_READBACK_PRESERVED",
+      "FACET_TO_WHOLE_NOT_AUTO_GLOBAL_RULE"
+    ],
+    "track_design": "ONE_FULL_NATIVE_CAPABILITY_MULTIPLE_CONTEXTUAL_OUTPUT_PATHS",
+    "event_storyboard": "EXPERIMENT_AUDIO_NOT_VERIFIED",
+    "visual": "PARTIAL_SOURCE_ONLY_HOST_UNVERIFIED",
+    "private_letter_payload": "EXCLUDED",
+    "foreign_mutations": false
   }
 }
