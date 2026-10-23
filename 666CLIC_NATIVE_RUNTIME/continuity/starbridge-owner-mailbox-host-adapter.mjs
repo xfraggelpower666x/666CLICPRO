@@ -29,11 +29,34 @@ async function folderEntries(drive){
  return r.files;
 }
 function nameFor(x){return "CLIC_SB_MSG_"+x.handoff_id+"_"+x.source_blob_sha.slice(0,12)}
-export async function publishVerifiedClicOutbox({github,drive,source_path,execute=false}={}){
+export async function publishVerifiedClicOutbox({github,drive,source_path,execute=false,approval}={}){
+ // A caller boolean is not an approval. Only an independent authenticated verifier may authorize live writes.
  if(!checkHandles(github,drive))return stopped("TRUSTED_CONNECTOR_HANDLES_REQUIRED");
  const source=await bindVerifiedOutboxToMailbox({github,source_path});
  if(source.status!=="MESSAGE_PREPARED")return stopped("SOURCE_UNVERIFIED",{source_reason:source.reason});
  if(execute!==true)return {...source,status:"MESSAGE_PREPARED",publish_invoked:false};
+ // Explicit approval verification binds this exact source, target and mailbox; no general write capability.
+ if(typeof approval?.verify!=="function")return stopped("INDEPENDENT_APPROVAL_SERVICE_REQUIRED");
+ let permission;
+ try {
+   const m=unwrap(await drive.get_file_metadata({fileId:CLIC_MAILBOX.folder_id}));
+   if(m?.id!==CLIC_MAILBOX.folder_id||!Array.isArray(m.permissions))
+      return stopped("MAILBOX_ACL_UNVERIFIED");
+   const worldWrite=m.permissions.some(p=>p?.type==="anyone"&&["writer","owner","organizer","fileOrganizer"].includes(p.role));
+   const evidence=unwrap(await approval.verify({operation:"CLIC_OWNER_MAILBOX_PUBLISH",
+     source_head:source.source_head,source_blob_sha:source.source_blob_sha,
+     handoff_id:source.handoff_id,folder_id:CLIC_MAILBOX.folder_id,
+     target_system:source.target_system,world_writable:worldWrite}));
+   if(!evidence?.proofId||!evidence?.opaqueReceipt||evidence?.independentVerifier!==true||
+      evidence?.valid!==true||evidence?.source_head!==source.source_head||
+      evidence?.source_blob_sha!==source.source_blob_sha||evidence?.handoff_id!==source.handoff_id||
+      evidence?.folder_id!==CLIC_MAILBOX.folder_id||
+      evidence?.target_system!==source.target_system||
+      (worldWrite&&evidence?.worldWritableRiskApproved!==true))
+      return stopped(worldWrite?"WORLD_WRITER_ACL_UNTRUSTED":"INDEPENDENT_APPROVAL_INVALID");
+   permission={proofId:evidence.proofId,worldWrite};
+ } catch(e){return stopped("APPROVAL_PREFLIGHT_FAILED:"+String(e?.message??e))}
+
  let file_id=null,stage="BEFORE_CREATE";
  try{
   const provider=readAdapter(drive);
@@ -64,7 +87,8 @@ export async function publishVerifiedClicOutbox({github,drive,source_path,execut
   stage="WRITE";
   const doc=unwrap(await drive.get_document({document_id:file_id}));
   if(!valid(doc?.revisionId))throw Error("DOCS_INITIAL_REVISION_MISSING");
-  await drive.batch_update_document({document_id:file_id,requests:[{insertText:{location:{index:1},text:body}}],write_control:{requiredRevisionId:doc.revisionId}});
+  const written=unwrap(await drive.batch_update_document({document_id:file_id,requests:[{insertText:{location:{index:1},text:body}}],write_control:{requiredRevisionId:doc.revisionId}}));
+  if(!valid(written?.revisionId)||written.revisionId===doc.revisionId)throw Error("DOCS_WRITE_REVISION_UNVERIFIED");
   stage="MOVE";
   const meta=unwrap(await drive.get_file_metadata({fileId:file_id}));
   if(!Array.isArray(meta.parent_ids)||meta.parent_ids.length!==1)throw Error("SOURCE_PARENT_AMBIGUOUS");
@@ -78,7 +102,12 @@ export async function publishVerifiedClicOutbox({github,drive,source_path,execut
   if(saved.source_blob_sha!==source.source_blob_sha||saved.correlation_key!==source.correlation_key||
    saved.source_path!==source.source_path||saved.source_head!==source.source_head)
     throw Error("PUBLISHED_SOURCE_BINDING_MISMATCH");
-  return {...checked,status:"MESSAGE_ACCESSIBLE",file_id,published:true,source_blob_sha:source.source_blob_sha,
+  // Recheck source at latest HEAD after external provider operations to prevent stale publication PASS.
+  const fresh=await bindVerifiedOutboxToMailbox({github,source_path});
+  if(fresh.status!=="MESSAGE_PREPARED"||fresh.source_head!==source.source_head||
+     fresh.source_blob_sha!==source.source_blob_sha)throw Error("SOURCE_HEAD_OR_BLOB_CHANGED");
+  return {...checked,status:"MESSAGE_ACCESSIBLE",file_id,published:true,approval_proof_id:permission.proofId,
+    mailbox_world_writable:permission.worldWrite,receipt_trust:"NOT_NATIVE_RECEIPT",source_blob_sha:source.source_blob_sha,
    correlation_key:source.correlation_key,delivery_verified:false,adoption_verified:false,host_verified:false};
  }catch(e){return stopped("PUBLISH_"+stage+"_FAILED:"+String(e?.message??e),{file_id,stage,recovery:"INSPECT_FILE_BEFORE_RETRY_NO_BLIND_DUPLICATE"})}
 }
