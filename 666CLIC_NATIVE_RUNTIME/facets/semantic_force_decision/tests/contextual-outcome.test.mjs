@@ -67,7 +67,9 @@ test("separate action is not contaminated, but is not automatically authorized",
  const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
  const x=assessGoalContinuity({goalId:"LETTER_C",goalStatus:"OPEN_NOT_DELIVERED",
   operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",independentActionVerified:true,
-  operationOutcomes:[{operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+  independenceEvidence:{source:"INDEPENDENT_REVIEW",goalId:"LETTER_C",
+   evidenceRef:"audit/independent-letter-c",deniedOperationIds:["WRITE_B"]},
+  operationOutcomes:[{operationId:"WRITE_B",goalId:"LETTER_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
  assert.equal(x.goalStatus,"OPEN_NOT_DELIVERED");
  assert.equal(x.operationStatus,"OPEN");
  assert.equal(x.execute,false);
@@ -88,4 +90,39 @@ test("a denial without semantic provenance cannot be treated as independent",asy
   operationOutcomes:[{operationId:"WRITE_B",actionDenied:true}]});
  assert.equal(x.operationStatus,"REVIEW_REQUIRED");
  assert.equal(x.execute,false);
+});
+
+test("same unsent goal with renamed semantic action and boolean remains REVIEW_REQUIRED",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_B",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_B:ALT_SEND",independentActionVerified:true,
+  operationOutcomes:[{operationId:"WRITE_B",goalId:"LETTER_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.operationStatus,"REVIEW_REQUIRED");
+ assert.equal(x.reason,"SAME_GOAL_DENIAL_REQUIRES_REVIEW");
+ assert.equal(x.goalStatus,"OPEN_NOT_DELIVERED");
+ assert.equal(x.execute,false);assert.equal(x.sendAuthorized,false);
+});
+test("same unsent goal remains held even with unrelated provenance claim",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_B",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",independentActionVerified:true,
+  independenceEvidence:{source:"INDEPENDENT_REVIEW",goalId:"LETTER_B",
+   evidenceRef:"audit/purported",deniedOperationIds:["WRITE_B"]},
+  operationOutcomes:[{operationId:"WRITE_B",goalId:"LETTER_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.operationStatus,"REVIEW_REQUIRED");
+ assert.equal(x.execute,false);
+});
+test("mismatched or partial independence evidence cannot clear denial",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const base={goalId:"LETTER_C",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",independentActionVerified:true,
+  operationOutcomes:[{operationId:"WRITE_B",goalId:"LETTER_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]};
+ for(const independenceEvidence of [
+  {source:"INDEPENDENT_REVIEW",goalId:"LETTER_C",evidenceRef:"",deniedOperationIds:["WRITE_B"]},
+  {source:"INDEPENDENT_REVIEW",goalId:"LETTER_B",evidenceRef:"audit/other",deniedOperationIds:["WRITE_B"]},
+  {source:"INDEPENDENT_REVIEW",goalId:"LETTER_C",evidenceRef:"audit/missing-denial",deniedOperationIds:[]}
+ ]) {
+  const x=assessGoalContinuity({...base,independenceEvidence});
+  assert.equal(x.operationStatus,"REVIEW_REQUIRED");assert.equal(x.execute,false);
+ }
 });
