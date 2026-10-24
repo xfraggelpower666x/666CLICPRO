@@ -1,0 +1,71 @@
+{
+  "schema": "CLIC_PLUGIN_PRIVATE_VAULT_APPROVAL_CANDIDATE_V1",
+  "owner": "666CLIC",
+  "status": "PREPARED_NOT_APPROVED_WRITE_BLOCKED",
+  "purpose": "PREPARE_ONLY_EXACT_V0_1_22_CLIC_BACKUP_LEG",
+  "source_native_head_at_preparation": "3a488bae2321dd54b84238b37eb94adea8cc0ea8",
+  "immutable_source_bytes": {
+    "name": "workspace-plugin-p0fda2cg.tar.gz",
+    "source": "USER_UPLOADED_PLUGIN_CREATOR_CURRENT_RELEASE_ORIGINAL",
+    "bytes": 2941803,
+    "sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "files": 28,
+    "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d"
+  },
+  "plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "live_provider_metadata": "VERIFIED_PREVIOUS_AND_CURRENT_RECHECK_REQUIRED_AT_EXECUTION",
+    "repo_plugin_pointer": "666clic-plugin/current/PLUGIN_CURRENT.json",
+    "immutable_release_snapshot": "666clic-plugin/releases/v0.1.22"
+  },
+  "target": {
+    "repo": "xfraggelpower666x/LYVRA-PRIVATE-VAULT",
+    "branch": "main",
+    "repo_visibility": "PRIVATE",
+    "vault_contract": "contracts/666PFS_COUPLED_LYVRA_CLIC_PLUGIN_BACKUP_CIRCLE.md",
+    "contract_blob": "a0ffb68c23443af400dad0f67c970499caf537b3",
+    "namespace": "backups/666PFS/PLUGIN_BACKUP_CIRCLE/artifacts/CLIC/",
+    "executor": "666PFS"
+  },
+  "parity": {
+    "historical_release_text_and_binary": "SOURCE_CONTENT_EVIDENCED",
+    "current_semantic_source_vs_live": "UNRESOLVED",
+    "runtime_plugin_state_fingerprint": "NOT_COMPUTED_OR_APPROVED",
+    "same_release_ne_current_source_parity": true
+  },
+  "approval": {
+    "approval_id": null,
+    "approved": false,
+    "reason": "CURRENT_SEMANTIC_PARITY_AND_RUNTIME_FINGERPRINT_NOT_APPROVED",
+    "standing_permission": false,
+    "old_v0_1_20_approval": "SUPERSEDED",
+    "authorization_for_pfs_write": false
+  },
+  "execution": {
+    "backup_round_id": null,
+    "private_blob_written": false,
+    "commit_readback": false,
+    "sha256_remote_verified": false,
+    "receipt_status": "PENDING_PFS_NATIVE_EXECUTION",
+    "publication": false
+  },
+  "provenance": {
+    "prechange_backup": "backup/clic-pre-private-vault-pfs-handoff-20261017",
+    "no_foreign_writes": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
+  },
+  "next": "CURRENT_PARITY_AND_CANONICAL_FINGERPRINT_THEN_CLIC_NATIVE_EXACT_APPROVAL_THEN_PFS_NATIVE_BACKUP_AND_READBACK",
+  "fingerprint_reconciliation_2026_10_17": {
+    "carrier": "666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_RUNTIME_PLUGIN_FINGERPRINT_RECONCILIATION_2026-10-17.json",
+    "verified_id_version_release": true,
+    "verified_archive_and_logo_hash": true,
+    "unresolved_four_fingerprint_inputs": true,
+    "semantic_source_current_not_live_release": true,
+    "fingerprint_sha256": null,
+    "exact_native_approval": null,
+    "write_blocked": true
+  }
+}

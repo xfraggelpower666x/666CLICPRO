@@ -1,0 +1,37 @@
+name: CLIC PDI SB05 Native Readonly Execution
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/dashboard/development_progress/native-host-actions-readonly.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs'
+      - '.github/workflows/clic-pdi-sb05-native-readonly-execution.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live-module-readonly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute original PDI and SB05 Node exports using real read-only GitHub API
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLIC_EXECUTION_RECEIPT_PATH: clic-native-execution-receipt.json
+        run: node 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/native-host-actions-readonly.mjs
+      - name: Store independently inspectable execution receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clic-pdi-sb05-readonly-execution
+          path: clic-native-execution-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+# A successful Node module execution is not Event CAS, SB05 Delivery, Adoption or ChatGPT Fresh Host.

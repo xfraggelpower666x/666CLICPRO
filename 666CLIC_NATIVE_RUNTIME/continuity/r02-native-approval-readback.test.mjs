@@ -1,0 +1,25 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
+import {APPROVAL_SOURCE,inspectR02NativeApproval} from "./r02-native-approval-readback.mjs";
+import {R02_RECEIPT} from "./r02-source-intake-create-only.mjs";
+const H="a".repeat(40),other="b".repeat(40),root="https://api.github.com/repos/"+APPROVAL_SOURCE.repo;
+const blob=x=>{const b=Buffer.from(x);return createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex")};
+const fixture=({present=false,wrongScope=false,race=false,truncated=false,corrupt=false}={})=>{
+ let n=0;const approval={owner:"666CLIC",operation:"CREATE_SOURCE_INTAKE_ONLY",repository:R02_RECEIPT.repository,branch:R02_RECEIPT.branch,path:R02_RECEIPT.path,handoff_id:R02_RECEIPT.handoff,source_commit:R02_RECEIPT.source_commit,source_blob:R02_RECEIPT.source_blob,expected_head:H,recovery_required:true,create_only:true,authority_transfer:false};
+ if(wrongScope)approval.path="foreign/receipt";
+ const content=JSON.stringify(approval),sha=blob(content);
+ const fetch=async ({url})=>{n++;assert.ok([root+"/branches/"+APPROVAL_SOURCE.branch,root+"/git/trees/"+H+"?recursive=1"].includes(url));if(url.includes("/branches/"))return {result:{content:JSON.stringify({commit:{sha:race&&n>2?other:H}})}};return {result:{content:JSON.stringify({truncated,tree:present?[{path:APPROVAL_SOURCE.path,sha,type:"blob"}]:[]})}}};
+ const fetchFile=async ({repository_full_name,path,ref})=>{assert.equal(repository_full_name,APPROVAL_SOURCE.repo);assert.equal(path,APPROVAL_SOURCE.path);assert.equal(ref,H);return {result:{sha,content:corrupt?content+"corrupt":content}}};
+ return {fetch,fetchFile,getCalls:()=>n};
+};
+test("self-attested flags rejected before provider calls",async()=>{const f=fixture();const r=await inspectR02NativeApproval({...f,expectedHead:H,approvalFlags:{native_approval_verified:true,separate_receipt_write_approved:true}});assert.equal(r.reason,"SELF_ATTESTED_APPROVAL_FLAGS_REJECTED");assert.equal(f.getCalls(),0)});
+test("missing connector blocked",async()=>{assert.equal((await inspectR02NativeApproval({expectedHead:H})).reason,"AUTHORIZED_READ_CONNECTORS_REQUIRED")});
+test("wrong target expected head blocked",async()=>{const f=fixture();assert.equal((await inspectR02NativeApproval({...f,expectedHead:"x"})).reason,"SOURCE_OR_EXPECTED_HEAD_MISMATCH")});
+test("missing native approval record cannot be invented",async()=>{const f=fixture();const r=await inspectR02NativeApproval({...f,expectedHead:H});assert.equal(r.reason,"NO_CLIC_NATIVE_APPROVAL_RECORD");assert.equal(r.approval_verified,false)});
+test("stale HEAD blocked",async()=>{const f=fixture();const r=await inspectR02NativeApproval({...f,expectedHead:other});assert.equal(r.reason,"CONCURRENT_CLIC_HEAD_CHANGE")});
+test("truncated tree blocked",async()=>{const f=fixture({truncated:true});assert.equal((await inspectR02NativeApproval({...f,expectedHead:H})).reason,"INCOMPLETE_NATIVE_TREE")});
+test("tampered file blocked by blob integrity",async()=>{const f=fixture({present:true,corrupt:true});assert.equal((await inspectR02NativeApproval({...f,expectedHead:H})).reason,"APPROVAL_BLOB_READBACK_MISMATCH")});
+test("foreign approval scope blocked",async()=>{const f=fixture({present:true,wrongScope:true});assert.equal((await inspectR02NativeApproval({...f,expectedHead:H})).reason,"APPROVAL_SCOPE_OR_PROVENANCE_MISMATCH")});
+test("valid-looking JSON still cannot self-authorize",async()=>{const f=fixture({present:true});const r=await inspectR02NativeApproval({...f,expectedHead:H});assert.equal(r.reason,"NATIVE_APPROVER_IDENTITY_AND_REPLAY_AUTHORITY_NOT_ATTESTED");assert.equal(r.source_integrity_verified,true);assert.equal(r.approval_verified,false);assert.equal(r.receipt_write_authorized,false);assert.equal(r.writes,0)});
+test("HEAD race blocked even after valid blob",async()=>{const f=fixture({present:true,race:true});assert.equal((await inspectR02NativeApproval({...f,expectedHead:H})).reason,"CONCURRENT_CLIC_HEAD_CHANGE")});

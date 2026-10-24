@@ -1,0 +1,93 @@
+{
+  "schema": "CLIC_TO_LYVRA_NATIVE_DEVELOPMENT_HANDOFF_V1",
+  "handoff_id": "CLIC-LYVRA-VISUAL-INTELLIGENCE-20261010-R01",
+  "revision": 1,
+  "status": "PREPARED",
+  "delivery_status": "NOT_VERIFIED",
+  "ack_status": "NOT_RECEIVED",
+  "adoption_status": "NOT_VERIFIED",
+  "source": {
+    "system": "666CLIC",
+    "repository": "xfraggelpower666x/666CLICPRO",
+    "branch": "clic-migration-rev79-staging",
+    "verified_preparation_head": "2fcf4043d416ba56301662ae6bdd2ee0f4b4a0ae",
+    "pointer": "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",
+    "native_authority": "CLIC_ONLY"
+  },
+  "target": {
+    "system": "LYVRA",
+    "repository": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+    "branch": "lyvra",
+    "observed_head_at_preparation": "03dfabb12254cc9c7ca6c4ca048c5fe2d72f06ab",
+    "authority": "LYVRA_ONLY",
+    "expected_native_consumer": "LYVRA_NATIVE_RUNTIME/handoffs/666CLIC/CURRENT.json",
+    "consumer_presence": "NOT_VERIFIED",
+    "native_trigger_required": true
+  },
+  "purpose": "LYVRA independently evaluate and natively develop equivalent evidence-first semantic visual intelligence while choosing its own colors and artistic direction",
+  "source_contracts": [
+    "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md",
+    "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+    "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+    "666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.mjs",
+    "666CLIC_NATIVE_RUNTIME/dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md",
+    "666CLIC_NATIVE_RUNTIME/dashboard/CLIC_JUNIOR_FOREGROUND_CONTRACT.md",
+    "666CLIC_NATIVE_RUNTIME/facets/card_intelligence/REGISTRY.json",
+    "666CLIC_NATIVE_RUNTIME/continuity/LIVE_CIRCLE.md"
+  ],
+  "functional_criteria": [
+    "Context-sensitive visual selection from verified meaning and evidence",
+    "Evidence-labelled diagrams, maps, system cards and authority boundaries without inventing causality",
+    "Automatic native-trigger visual presentation and chat/host acceptance",
+    "Conditional development panel using verified task IDs, NEVER synthetic progress percentages",
+    "Native facet intelligence Sub-LifeCircle and Sub-Rehydration scoped to Whole LYVRA",
+    "Native plugin/app/website/dashboard surfaces only when LYVRA chooses and validates them",
+    "Versioned reciprocal native return handoff enabling CLIC understanding-card refresh after target readback",
+    "No overwriting of LYVRA newer valid evolution or existing music/Speech/Studio functional copy boundaries"
+  ],
+  "design_autonomy": {
+    "LYVRA_selects_colors": true,
+    "LYVRA_selects_visual_weighting": true,
+    "LYVRA_selects_motion_and_composition": true,
+    "CLIC_palette": "REFERENCE_ONLY_NOT_MANDATORY",
+    "preserve_LYVRA_native_logo_and_identity": true,
+    "accessibility": "COLOR_NOT_SOLE_STATUS_CARRIER_READABLE_CONTRAST"
+  },
+  "adoption_limits": {
+    "no_foreign_autoactivation": true,
+    "no_target_repo_mutation_by_CLIC": true,
+    "no_plugin_publish": true,
+    "no_new_router": true,
+    "no_authority_transfer": true,
+    "pet": "PAUSED_UNMODIFIED"
+  },
+  "delivery": {
+    "transport": "CLIC_PUBLIC_REPOSITORY_OUTBOX_REFERENCE",
+    "source_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-VISUAL-INTELLIGENCE-20261010-R01.json",
+    "source_url": "https://github.com/xfraggelpower666x/666CLICPRO/blob/clic-migration-rev79-staging/666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-VISUAL-INTELLIGENCE-20261010-R01.json",
+    "status": "PREPARED",
+    "ack_receipt": null,
+    "recipient_readback": null,
+    "claim": "GITHUB_REPO_WRITE_ALONE_DOES_NOT_PROVE_TARGET_DELIVERY"
+  },
+  "expected_return": {
+    "system": "LYVRA",
+    "transport": "LYVRA_NATIVE_REPOSITORY_HANDOFF",
+    "minimum_fields": [
+      "handoff_id",
+      "LYVRA_current_head",
+      "decision",
+      "native_design_choices",
+      "implementation_scope",
+      "test_results",
+      "target_readback",
+      "source_ref"
+    ],
+    "clic_card_refresh_condition": "DIRECT_LYVRA_CURRENT_READBACK_ONLY"
+  },
+  "supersedes": [
+    "CLIC-NEON-LYVRA-20261009"
+  ],
+  "supersession_scope": "PROPOSAL_REFINEMENT_ONLY_OLD_NOTICE_REMAINS_HISTORICAL",
+  "no_new_release": true
+}

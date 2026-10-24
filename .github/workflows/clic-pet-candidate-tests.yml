@@ -1,0 +1,24 @@
+name: CLIC Shared PET candidate tests
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - 'CLIC_PET/worker/**'
+      - '.github/workflows/clic-pet-candidate-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: CLIC_PET/worker
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node.js version
+        run: node --version
+      - name: Native tests
+        run: node --test tests/*.test.mjs

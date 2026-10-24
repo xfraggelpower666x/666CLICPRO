@@ -1,0 +1,26 @@
+name: CLIC TDH StarBridge R01 native reconciliation
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/inbox/666TDH/receipts/**'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-tdh-delivery-reconciliation.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json'
+      - '.github/workflows/clic-starbridge-tdh-r01-reconciliation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tdh-reconciliation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact original bytes, scoped native R01 delivery and negative gates
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-tdh-delivery-reconciliation.test.mjs
+# Offline CI validates pinned source evidence only, not foreign runtime, host, or future provider state.

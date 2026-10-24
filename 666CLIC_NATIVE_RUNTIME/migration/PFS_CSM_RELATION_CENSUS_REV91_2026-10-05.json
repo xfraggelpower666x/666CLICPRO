@@ -1,0 +1,90 @@
+{
+  "schema": "666CLIC_PFS_CSM_RELATION_CENSUS_V1",
+  "date_local": "2026-10-05",
+  "clic_authority": "GOOGLE_DRIVE_REV91",
+  "sources": {
+    "csm_index": {
+      "id": "1uZmeer1NfeRQlnXfjjcr-d5w8pmPXwf6iIlRC9knF6I",
+      "status": "ACTIVE_PENDING_FINAL_POINTER"
+    },
+    "relation_index": {
+      "id": "1BUBV9S2W4maBgUKqshZSPhqLIxg43FM0henWulRnqFo",
+      "status": "ACTIVE_PENDING_FINAL_POINTER"
+    },
+    "pfs_live_pointer": {
+      "id": "1DZ8SERyNIeDCb0fe5funDqO12BL5_554ro6tFwMWpzc"
+    }
+  },
+  "invariants": {
+    "pfs_ne_csm": true,
+    "csm_ne_child": true,
+    "relation_ne_identity": true,
+    "shared_management_ne_shared_authority": true,
+    "default_child_autoload": "FORBIDDEN_UNLESS_CURRENT_REGISTRY_OVERRIDE_ALLOWS"
+  },
+  "directly_verified_relations": [
+    {
+      "subject": "CODEFORGE-11001",
+      "relation": "666PFS-CORE-001->666CSM->CODEFORGE-11001/PFS-CODEFORGE-UNIVERSAL-001",
+      "types": [
+        "BACKUP_MIRROR",
+        "RECOVERY_FALLBACK",
+        "EXTERNAL_LIVE_REFERENCE"
+      ],
+      "runtime_authority": "EXTERNAL_NATIVE",
+      "status": "VERIFIED_BOUNDED"
+    },
+    {
+      "subject": "MIRA-27001",
+      "relation": "666PFS-CORE-001->666CSM->MIRA-27001/666MIRA-CORE-001",
+      "types": [
+        "PARENT_CHILD",
+        "MANAGES_REGISTRATION",
+        "TRIGGER_ROUTE_REFERENCE",
+        "STORAGE_RELATION"
+      ],
+      "runtime_authority": "666MIRA_NATIVE",
+      "status": "ACTIVE_VERIFIED"
+    },
+    {
+      "subject": "CSLO-9001",
+      "relation": "PARENT_CHILD_WITH_CSM_MANAGEMENT_EXPECTED_FROM_ACTIVE_REGISTRY",
+      "status": "INFERRED_FROM_CURRENT_REGISTRY_NOT_DIRECT_RELATION_CARD"
+    },
+    {
+      "subject": "ITRF-6001",
+      "relation": "PARENT_CHILD_WITH_CSM_MANAGEMENT_EXPECTED_FROM_ACTIVE_REGISTRY",
+      "status": "INFERRED_FROM_CURRENT_REGISTRY_NOT_DIRECT_RELATION_CARD"
+    },
+    {
+      "subject": "UCCF-10001",
+      "relation": "PARENT_CHILD_WITH_CSM_MANAGEMENT_EXPECTED_FROM_ACTIVE_REGISTRY",
+      "status": "INFERRED_FROM_CURRENT_REGISTRY_NOT_DIRECT_RELATION_CARD"
+    }
+  ],
+  "stale_or_open": [
+    "RELATION_INDEX_NOT_COMPLETE_FOR_ALL_24_ACTIVE_EVIDENCE_IDENTITIES",
+    "CSM_CARD_INDEX_ACTIVE_PENDING_FINAL_POINTER",
+    "CHILD_CARD_INDEX_NOT_DIRECTLY_READ_IN_THIS_TRANSACTION",
+    "UCCF_HISTORICAL_POINTER_REFERENCE_UNREACHABLE"
+  ],
+  "refresh_rules": [
+    "NEW_CHILD",
+    "CHILD_UPDATE",
+    "CHILD_RENAME",
+    "CHILD_RETIRE",
+    "PARENT_CHANGE",
+    "SUBCHILD_CHANGE",
+    "BACKUP_ROLE_CHANGE",
+    "TRIGGER_MODEL_CHANGE",
+    "AUTHORITY_CHANGE"
+  ],
+  "disposition": "PARTIAL_RELATION_CENSUS_FAIL_CLOSED",
+  "gates": {
+    "full_relation_census": "OPEN",
+    "card_parity": "OPEN",
+    "runtime_acceptance": "OPEN",
+    "foreign_writes": false,
+    "promotion": false
+  }
+}

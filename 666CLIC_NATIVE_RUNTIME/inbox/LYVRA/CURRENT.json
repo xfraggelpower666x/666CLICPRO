@@ -1,0 +1,463 @@
+{
+  "schema": "CLIC_REPO_HANDOFF_V1",
+  "handoff_id": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
+  "source_system": "LYVRA",
+  "source_repo": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+  "source_branch": "worker-v2-main-system-authority",
+  "source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
+  "created_at": "2026-10-05T13:13:19Z",
+  "affected_facets": [
+    "SOURCE_AUTHORITY",
+    "REPOSITORY_NATIVE_CONTINUITY",
+    "GOOGLE_DRIVE_RECOVERY_ROLE",
+    "SHARED_MAIN_SYSTEM_EVIDENCE_GATE",
+    "BOOT_FOREGROUND_RECOVERY_EVIDENCE",
+    "CROSS_SYSTEM_BOUNDARY"
+  ],
+  "relation_delta": {
+    "clic_current_verified_source": "GITHUB_REPO_CURRENT",
+    "clic_repo": "xfraggelpower666x/666CLICPRO",
+    "clic_current_branch": "clic-migration-rev79-staging",
+    "clic_drive_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+    "drive_is_active_current_source": false,
+    "shared_service_name": "666 MAIN SYSTEM AUTHORITY EVIDENCE GATE",
+    "shared_service_id": "666_MAIN_SYSTEM_AUTHORITY_EVIDENCE_GATE",
+    "shared_service_version": "2.1.0",
+    "cloudflare_technical_legacy_script_id": "lyvrasystem",
+    "worker_role": "ADDITIONAL_INDEPENDENT_SIGNED_EVIDENCE_ONLY",
+    "worker_is_source_authority": false,
+    "clic_worker_registration": {
+      "system_id": "666CLIC-CORE-001",
+      "namespace": "666CLIC",
+      "authority_context": "666CLIC_MAIN_PERSONAL",
+      "signing_secret_binding": "CLIC_AUTHORITY_SIGNING_SECRET",
+      "live_binding_present": true,
+      "secret_value_exposed": false
+    },
+    "lyvra_worker_registration": {
+      "namespace": "LYVRA",
+      "signing_secret_binding": "LYVRA_BOOT_SIGNING_SECRET",
+      "live_binding_present": true,
+      "secret_value_exposed": false
+    },
+    "cross_system_secret_reuse": false,
+    "cross_system_authority_inheritance": false,
+    "new_cloudflare_worker_created": false,
+    "sqlite_required": false,
+    "durable_object_required": false
+  },
+  "combined_handoff_summary": [
+    "The first historical handoff introduced 666CLIC as a separately namespaced consumer of the shared evidence Worker with its own signing secret and no LYVRA authority inheritance.",
+    "The second historical handoff requested repo-first CLIC operation with Drive secondary and the shared Worker as additional evidence.",
+    "CLIC has since evolved: the current repository pointer and rehydration manifest now verify GITHUB_REPO_CURRENT as the sole active working/current authority and Drive as history, repository backup, recovery and provenance.",
+    "Therefore this repository handoff supersedes the old pending-promotion wording: repo-first is current; the remaining task is native CLIC adjudication of the Worker relationship, not source-authority promotion."
+  ],
+  "historical_handoffs": {
+    "first_drive_handoff_id": "1xZNk6s40qqN6v4KfbvoHRhcRoJfTcv8Ciy_1kyGYK6c",
+    "second_drive_handoff_id": "1ZloYaaMKRCJRmRSaMUMmAVcoLKAtqFdoT0L--wumcxM",
+    "role": "HISTORICAL_PROVENANCE_ONLY"
+  },
+  "analysis_request": {
+    "requested_action": "CLIC_NATIVE_REVIEW_AND_OPTIONAL_INTEGRATION",
+    "instructions": [
+      "Independently verify the declared LYVRA source HEAD before accepting this handoff.",
+      "Preserve GitHub repository current as CLIC's sole active working/current authority.",
+      "Preserve Google Drive only as history, repository backup, recovery and provenance; do not reactivate it as current authority.",
+      "Evaluate the shared Worker only as additional signed counter-evidence for BOOT, FOREGROUND and RECOVERY where CLIC-native semantics allow.",
+      "Do not share LYVRA and CLIC secret values and do not inherit authority across namespaces.",
+      "Do not mark P20, P21, Live-Circle, isolated restore, private recovery or semantic-security gates as passed merely because the Worker is reachable.",
+      "If accepted, record the relationship natively in CLIC while preserving current open-gate truth and rollback provenance."
+    ]
+  },
+  "currentness_evidence": {
+    "clic_observed_head": "284ca0396a0ea23b7493cbc40c90494ac26c1c65",
+    "clic_pointer_source_authority": "GITHUB_REPO_CURRENT",
+    "clic_pointer_authority_switch": true,
+    "clic_pointer_migration_promotion": true,
+    "clic_manifest_authority": "GITHUB_REPO_CURRENT",
+    "clic_manifest_drive_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE"
+  },
+  "supersedes": [
+    "DRIVE_HANDOFF_1_PENDING_WORKER_RELATION_ONLY",
+    "DRIVE_HANDOFF_2_REPO_FIRST_TARGET_NOT_YET_PROMOTED"
+  ],
+  "authority_transfer": false,
+  "foreign_mutation_authorized": false,
+  "roundtrip_test": {
+    "requested": true,
+    "test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
+    "purpose": "VERIFY_REPO_TO_REPO_HANDOFF_AND_CLIC_RESPONSE_PATH",
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-CLIC-ROUNDTRIP-20261005-01.json",
+    "required_response_fields": [
+      "test_id",
+      "receiver_system",
+      "receiver_head",
+      "handoff_id_received",
+      "source_head_verified",
+      "worker_relation_disposition",
+      "clic_primary_source",
+      "drive_role",
+      "worker_evidence_status",
+      "open_gates_preserved",
+      "result"
+    ],
+    "response_requirements": [
+      "Respond only after native CLIC verification of this handoff.",
+      "Confirm the declared LYVRA source HEAD was independently checked.",
+      "Confirm CLIC remains repo-first and Drive remains secondary history/backup/recovery/provenance.",
+      "Report whether the shared Worker relationship is ACCEPTED, PARTIAL, BLOCKED or CONFLICT_QUARANTINE.",
+      "Do not claim Worker evidence is functioning unless CLIC has actually verified the relevant evidence path.",
+      "Preserve all still-open functional gates exactly as open unless separately tested.",
+      "Write the response to the specified CLIC outbox path; do not mutate LYVRA."
+    ]
+  },
+  "worker_functional_test_request": {
+    "requested": true,
+    "test_id": "CLIC-WORKER-FUNCTIONAL-20261005-01",
+    "target_service": "666 MAIN SYSTEM AUTHORITY EVIDENCE GATE",
+    "target_service_version": "2.1.0",
+    "clic_namespace": "666CLIC",
+    "clic_system_id": "666CLIC-CORE-001",
+    "required_evidence_flow": [
+      "resolve CLIC authority context from shared Worker",
+      "issue CLIC BOOT evidence ticket using CLIC namespace only",
+      "verify the issued CLIC ticket",
+      "confirm ticket lifetime does not exceed 300 seconds",
+      "confirm issuer, subject, namespace, system id and authority context match CLIC registration",
+      "confirm LYVRA signing secret/value is neither used nor exposed",
+      "confirm Worker remains additional evidence only and does not replace GitHub current authority"
+    ],
+    "required_result_values": [
+      "PASS",
+      "PARTIAL",
+      "BLOCKED",
+      "CONFLICT_QUARANTINE"
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-WORKER-FUNCTIONAL-20261005-01.json",
+    "fail_closed_rules": [
+      "Do not report PASS from configuration/readback alone.",
+      "Do not expose any secret value or signed ticket in repository output.",
+      "Do not mutate LYVRA.",
+      "Do not change CLIC source authority.",
+      "Preserve all unrelated open functional gates."
+    ]
+  },
+  "internal_dashboard_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-INTERNAL-DASHBOARD-20261005-01",
+    "scope": "CLIC_INTERNAL_ONLY",
+    "public_surface_forbidden": true,
+    "purpose": "Provide CLIC with a compact internal HTML operations dashboard mirroring LYVRA's internal mini-ops concept for the CLIC -> LYVRA direction.",
+    "suggested_trigger": "666CLIC DASHBOARD",
+    "dashboard_direction": "666CLIC_TO_LYVRA",
+    "required_views": [
+      "current CLIC repository HEAD and source authority",
+      "latest CLIC outbox handoff to LYVRA",
+      "latest LYVRA receipt or response if available",
+      "roundtrip test status",
+      "shared 666 MAIN SYSTEM AUTHORITY EVIDENCE GATE status",
+      "CLIC secret binding shown only as BOUND or NOT_BOUND",
+      "worker functional evidence state",
+      "OPEN PARTIAL VERIFIED BLOCKED CONFLICT_QUARANTINE gates",
+      "last verified readback",
+      "next meaningful action"
+    ],
+    "privacy_and_boundary_rules": [
+      "Do not place this dashboard on any public CLIC or LYVRA website.",
+      "Do not expose secret values, signed tickets, private recovery material or sensitive repository contents.",
+      "Use it only as an internal GPT/browser diagnostic and operations surface.",
+      "Dashboard state must be evidence-backed from current repository/native reads; do not fabricate PASS from stale state.",
+      "Dashboard has no decision authority, no routing authority and no mutation authority."
+    ],
+    "symmetry_with_lyvra": {
+      "lyvra_internal_trigger": "LYVRA DASHBOARD",
+      "clic_internal_trigger": "666CLIC DASHBOARD",
+      "lyvra_view_direction": "LYVRA_TO_666CLIC",
+      "clic_view_direction": "666CLIC_TO_LYVRA",
+      "shared_worker": "666 MAIN SYSTEM AUTHORITY EVIDENCE GATE v2.1"
+    },
+    "requested_response": {
+      "response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-INTERNAL-DASHBOARD-20261005-01.json",
+      "required_fields": [
+        "handoff_id_received",
+        "disposition",
+        "dashboard_trigger",
+        "public_surface_forbidden",
+        "repo_first_preserved",
+        "worker_role_preserved",
+        "result"
+      ]
+    },
+    "authority_transfer": false,
+    "foreign_mutation_authorized": false,
+    "systemstart_dashboard_extension": {
+      "requested": true,
+      "principle": "SYSTEMSTART_RENDER_VERIFIED_MAIN_SYSTEM_DASHBOARD",
+      "clic_trigger": "666CLIC SYSTEMSTART",
+      "lyvra_reference_trigger": "LYVRA SYSTEMSTART",
+      "clic_dashboard_scope": "WHOLE_666CLIC_MAIN_SYSTEM",
+      "required_systemstart_views": [
+        "identity and current authority",
+        "repository HEAD and current pointer",
+        "rehydration status and required domains",
+        "operations center / active work",
+        "continuity, interruptions and return anchor",
+        "handoff inbox and outbox state",
+        "shared Worker evidence state",
+        "open functional gates",
+        "recovery and provenance state",
+        "last verified readback",
+        "uncertainty / blockers",
+        "next meaningful action"
+      ],
+      "rendering_rules": [
+        "Render only after current pointer and required current references were actually read.",
+        "If rehydration is partial, visibly show PARTIAL or READBACK_PENDING instead of PASS.",
+        "Dashboard is presentation only and has no decision, routing or mutation authority.",
+        "Do not expose secret values or private recovery material.",
+        "Keep public websites completely separate from the internal dashboard."
+      ],
+      "symmetry_goal": {
+        "LYVRA SYSTEMSTART": "internal Whole-LYVRA dashboard",
+        "666CLIC SYSTEMSTART": "internal Whole-CLIC dashboard",
+        "LYVRA DASHBOARD": "internal LYVRA cross-system / ops mini dashboard",
+        "666CLIC DASHBOARD": "internal CLIC cross-system / ops mini dashboard"
+      }
+    },
+    "clic_native_visual_extension": {
+      "requested": true,
+      "handoff_id": "LYVRA-REQUEST-CLIC-NATIVE-DASHBOARD-SYSTEM-20261005-02",
+      "principle": "CLIC_DEFINES_OWN_INTERNAL_VISUAL_LANGUAGE",
+      "copy_lyvra_palette": false,
+      "public_surface_forbidden": true,
+      "dashboard_role": "PRESENTATION_ONLY",
+      "required_scope": [
+        "Whole-CLIC SYSTEMSTART dashboard",
+        "CLIC operations / cross-system dashboard",
+        "trigger-specific dashboards for CLIC-native trigger families where visual state materially improves correctness or continuity",
+        "system/facet-specific dashboards for CLIC-owned trigger systems and specialist surfaces, without creating new authorities or identities"
+      ],
+      "trigger_discovery_rule": "CLIC must inspect its own current trigger registry, native runtime, operations, continuity and specialist surfaces and decide which triggers materially benefit from an internal dashboard.",
+      "examples_of_likely_trigger_families": [
+        "666CLIC SYSTEMSTART",
+        "666CLIC DASHBOARD",
+        "666CLIC UPDATE",
+        "666CLIC WEITER",
+        "666CLIC INTEGRATION AUDIT",
+        "recovery / continuity / Live-Circle / forensic / learning-import specialist contexts where CLIC already has native trigger semantics"
+      ],
+      "required_dashboard_semantics": [
+        "current repository HEAD and CURRENT pointer",
+        "authority/currentness",
+        "rehydration/coverage status",
+        "active work / current package / return anchor",
+        "input/handoff relationships",
+        "P20/P21 and Live-Circle state when relevant",
+        "recovery/provenance/security state",
+        "worker evidence state when relevant",
+        "open/partial/blocked/conflict gates",
+        "last verified readback",
+        "next meaningful action"
+      ],
+      "clic_visual_language_request": {
+        "ownership": "666CLIC",
+        "instruction": "Choose and document a CLIC-native color palette and visual semantics that best fit CLIC's identity, causal-learning role and forensic/evidence workflows.",
+        "requirements": [
+          "Do not mechanically copy LYVRA neon colors.",
+          "Every status color must also have a readable text label.",
+          "Use color semantically, not decoratively only.",
+          "Preserve accessible contrast and compact internal-browser readability.",
+          "Define explicit semantics for VERIFIED, ACTIVE, PARTIAL, OPEN, BLOCKED, CONFLICT_QUARANTINE and historical/provenance states.",
+          "No fake green, no fabricated percentages, no fake live-sync indicators."
+        ]
+      },
+      "architecture_fences": [
+        "Dashboard is not CLIC identity.",
+        "Dashboard is not a controller.",
+        "Dashboard is not a router.",
+        "Dashboard has no decision authority.",
+        "Dashboard has no mutation authority.",
+        "Trigger dashboard does not create a new system or authority.",
+        "Repository current remains CLIC authority.",
+        "Drive remains history / repository backup / recovery / provenance.",
+        "Public websites must not expose internal operations dashboards or diagnostics."
+      ],
+      "symmetry_reference": {
+        "note": "LYVRA uses the same architectural principle but its own visual language.",
+        "lyvra_whole": "LYVRA SYSTEMSTART -> Whole-LYVRA internal dashboard",
+        "lyvra_ops": "LYVRA DASHBOARD -> internal Ops/Cross-System dashboard",
+        "lyvra_facets": "Track Design / Studio 2 / Speech Design -> contextual LYVRA facet dashboards"
+      },
+      "requested_response": {
+        "response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-NATIVE-DASHBOARD-SYSTEM-20261005-02.json",
+        "required_fields": [
+          "handoff_id_received",
+          "disposition",
+          "selected_visual_language",
+          "selected_trigger_dashboard_families",
+          "systemstart_dashboard_enabled",
+          "public_surface_forbidden",
+          "repo_first_preserved",
+          "result",
+          "automatic_trigger_dashboard_policy",
+          "complete_dashboard_scope"
+        ]
+      },
+      "authority_transfer": false,
+      "foreign_mutation_authorized": false,
+      "automatic_trigger_policy": {
+        "requested": true,
+        "principle": "AUTOMATIC_CONTEXTUAL_DASHBOARD_FOR_MEANINGFUL_NATIVE_TRIGGERS",
+        "required_trigger_families": [
+          "666CLIC SYSTEMSTART",
+          "666CLIC UPDATE",
+          "666CLIC WEITER",
+          "666CLIC NEW CHAT",
+          "666CLIC NEXT CHAT",
+          "666CLIC DASHBOARD",
+          "666CLIC INTEGRATION AUDIT",
+          "other CLIC-native specialist/forensic/recovery/learning triggers when visualization materially improves correctness or continuity"
+        ],
+        "trigger_intent": {
+          "666CLIC SYSTEMSTART": "render Whole-CLIC current/rehydration dashboard after verified current reads",
+          "666CLIC UPDATE": "render pre-change/write/readback/recovery/open-gates dashboard around governed mutation",
+          "666CLIC WEITER": "render continuity/return-anchor/open-work dashboard",
+          "666CLIC NEW CHAT|666CLIC NEXT CHAT": "render continuity/handoff/resume dashboard",
+          "666CLIC DASHBOARD": "render COMPLETE INTERNAL WHOLE-CLIC SYSTEM VISUALIZATION with all materially relevant current information",
+          "666CLIC INTEGRATION AUDIT": "render evidence/relationship/regression/open-gates audit dashboard"
+        },
+        "complete_dashboard_required_domains": [
+          "identity and authority",
+          "repository branch/head/current pointer",
+          "rehydration/semantic coverage",
+          "system/work/todo/interruptions/obligations/daemon/best-valid-continuation",
+          "P14/P20/P21 and Live-Circle when relevant",
+          "relations / learning / input classification",
+          "cross-system inbox/outbox and handoffs",
+          "shared Worker evidence",
+          "recovery / provenance / backup / restore",
+          "security / uncertainty / blockers",
+          "last verified readback",
+          "next meaningful action"
+        ],
+        "rendering_rules": [
+          "Automatic dashboard rendering does not require separate user confirmation when the native trigger is already invoked.",
+          "Dashboard remains presentation-only with no authority or mutation power.",
+          "Do not claim completeness when required evidence has not been read; visibly show PARTIAL or READBACK_PENDING.",
+          "The DASHBOARD trigger must show the complete system with relevant current information, not only a mini-ops subset.",
+          "Use CLIC's own selected visual language and semantic colors."
+        ]
+      }
+    }
+  },
+  "clic_plugin_sync_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01",
+    "purpose": "Keep the CLIC plugin aligned with current CLIC repository semantics using the same governed plugin workflow proven for LYVRA.",
+    "required_steps": [
+      "Verify current CLIC repository HEAD, CURRENT_POINTER and REHYDRATION_MANIFEST first.",
+      "Use Plugin Creator to discover the editable CLIC plugin by its own current metadata.",
+      "Read current plugin version, release id and only the relevant trigger/visual skills.",
+      "Create a new plugin version; do not overwrite the prior release in place.",
+      "Overlay only changed manifest/skill files and preserve other files/assets.",
+      "Use the current release id as the guarded expected version.",
+      "Read back plugin metadata and every changed skill after publication.",
+      "Report repository currentness and plugin publication as separate evidence."
+    ],
+    "dashboard_alignment": [
+      "SYSTEMSTART -> Whole-CLIC internal dashboard after verified current reads",
+      "UPDATE -> write/readback/recovery/open-gates dashboard",
+      "WEITER -> continuity and return-anchor dashboard",
+      "NEW CHAT / NEXT CHAT -> handoff and resume dashboard",
+      "DASHBOARD -> complete internal Whole-CLIC visualization",
+      "INTEGRATION AUDIT -> evidence/regression/open-gates dashboard",
+      "other native triggers only when visualization materially improves correctness or continuity"
+    ],
+    "visual_policy": [
+      "CLIC defines its own visual language.",
+      "Do not copy LYVRA colors mechanically.",
+      "Status colors must also have text labels.",
+      "No fake progress, fake green or fake live-sync.",
+      "Internal GPT/browser surface only; no public operations dashboard."
+    ],
+    "boundaries": [
+      "Plugin is an execution/presentation surface, not CLIC authority.",
+      "GitHub repository current remains CLIC authority.",
+      "Drive remains history, backup, recovery and provenance.",
+      "Dashboard has no decision, routing or mutation authority."
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-PLUGIN-SYNC-20261005-01.json",
+    "authority_transfer": false
+  },
+  "lyvra_plugin_mapping_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01",
+    "purpose": "Add both current LYVRA plugin surfaces to CLIC's LYVRA mapping without splitting LYVRA identity.",
+    "mapping_rules": [
+      "Represent LYVRA as ONE native identity/system.",
+      "Represent plugin surfaces as execution/presentation interfaces of the same LYVRA, never as separate root systems.",
+      "Preserve repository current as LYVRA authority.",
+      "Do not infer authority from plugin presence, version, UI or migration history.",
+      "Track plugin version/release/readback status as interface metadata only."
+    ],
+    "lyvra_plugin_surfaces": [
+      {
+        "logical_name": "LYVRA Native Runtime Plugin",
+        "plugin_name": "lyvra-native-runtime",
+        "role": "NEWLY_CREATED_NATIVE_RUNTIME_PLUGIN",
+        "current_verified_version": "0.1.5",
+        "relation_to_lyvra": "EXECUTION_PRESENTATION_SURFACE_OF_SAME_LYVRA"
+      },
+      {
+        "logical_name": "LYVRA Migrated GPT Plugin",
+        "plugin_name": "L.Y.V.R.A.",
+        "role": "GPT_MIGRATED_PLUGIN_SURFACE",
+        "current_verified_version": "0.13.3",
+        "relation_to_lyvra": "EXECUTION_PRESENTATION_SURFACE_OF_SAME_LYVRA"
+      }
+    ],
+    "requested_mapping_updates": [
+      "LYVRA relation map / system card should show both plugin surfaces.",
+      "Mark both as children/interfaces of one LYVRA identity, not children in the authority sense and not separate systems.",
+      "Include current plugin version, provenance class, dashboard capability and trigger alignment.",
+      "Record that both surfaces use evidence-first internal dashboard semantics.",
+      "Record that the migrated GPT plugin is successor execution surface of the legacy Custom GPT, while legacy GPT remains provenance/history only.",
+      "Preserve all existing LYVRA relation mappings and newer valid CLIC learning."
+    ],
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01.json",
+    "authority_transfer": false
+  },
+  "clic_repository_hygiene_handoff": {
+    "requested": true,
+    "handoff_id": "LYVRA-REQUEST-CLIC-REPO-BRANCH-STEWARDSHIP-20261005-01",
+    "purpose": "Adopt a CLIC-native repository and branch stewardship method inspired by LYVRA CodeForge, without copying LYVRA branch topology or transferring authority.",
+    "source_learning": {
+      "lyvra_method": "DISCOVER > CLASSIFY > RELATE > DETECT_REDUNDANCY > VERIFY_SUPERSESSION > PRESERVE_RECOVERY > PREPARE_CLEANUP_PROPOSAL > AUTHORIZED_CLEANUP > DIRECT_READBACK",
+      "lyvra_phase1_observation": "120 branches, 8 exact duplicate SHA groups, no deletion performed"
+    },
+    "clic_required_adaptation": [
+      "Use CLIC's own repository structure and authority model.",
+      "Inventory all CLIC branches from current repo HEAD.",
+      "Classify each branch by actual role: current authority, active work, recovery, audit, migration history, deployment history, superseded, cleanup candidate, unknown.",
+      "Detect exact duplicate SHAs and branches already fully represented by current history.",
+      "Preserve recovery and provenance before any cleanup proposal.",
+      "Keep cleanup as a separate governed phase; do not remove branches in the mapping phase.",
+      "Expose repository health in CLIC's internal Operations/Forensic dashboard when useful.",
+      "No synthetic health percentage; evidence labels only.",
+      "CLIC remains sole decision authority for its own repo.",
+      "Drive remains history/repo-backup/recovery/provenance and must not become alternate current authority."
+    ],
+    "desired_artifacts": [
+      "CLIC-native Branch Stewardship contract",
+      "current branch inventory/registry",
+      "duplicate/redundancy ledger",
+      "supersession/recovery classification",
+      "cleanup proposal list with evidence and blockers",
+      "dashboard repository-health view"
+    ],
+    "first_phase": "READ_ONLY_MAPPING_AND_CLASSIFICATION_NO_BRANCH_REMOVAL",
+    "expected_response_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/LYVRA-REQUEST-CLIC-REPO-BRANCH-STEWARDSHIP-20261005-01.json",
+    "authority_transfer": false,
+    "foreign_mutation": false
+  }
+}

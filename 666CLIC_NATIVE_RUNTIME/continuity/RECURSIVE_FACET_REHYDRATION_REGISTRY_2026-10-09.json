@@ -1,0 +1,153 @@
+{
+  "schema": "CLIC_RECURSIVE_FACET_REHYDRATION_REGISTRY_V1",
+  "status": "SOURCE_CONTRACT_VERIFIED_FRESH_BOOT_EXECUTION_PENDING",
+  "authority": "GITHUB_REPO_CURRENT",
+  "based_on_commit": "b4a30dc397fac7d81eda7e58a2c0dc2b20b4c462",
+  "prechange_backup": "backup/clic-pre-recursive-facet-lifecircle-rehydration-20261009-2304",
+  "scope": "CLIC_NATIVE_ONLY",
+  "facets": [
+    {
+      "id": "repository_bridge",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/repository_bridge/FACET_CONTRACT.md",
+      "sub_lifecircle": "facets/repository_bridge/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/repository_bridge/SUB_REHYDRATION.md",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION",
+      "current": "facets/repository_bridge/CURRENT_STATE.json",
+      "relevant_receipt": {
+        "path": "recovery/PLUGIN_V0122_SOURCE_ZIP_REMOTE_BINARY_BINDING_CURRENT_2026-10-09.json",
+        "bridge_commit": "4392de07191ac7ee3e2b60b96efc25a57999a389",
+        "source_zip_logo_remote": "VERIFIED",
+        "provider_tar_gz": "UNVERIFIED",
+        "pet": "PAUSED_UNMODIFIED"
+      }
+    },
+    {
+      "id": "semantic_visual_intelligence",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/semantic_visual_intelligence/FACET_CONTRACT.md",
+      "sub_lifecircle": "facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/semantic_visual_intelligence/SUB_REHYDRATION.md",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION",
+      "current": "facets/semantic_visual_intelligence/CURRENT_STATE.md"
+    },
+    {
+      "id": "card_intelligence",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/card_intelligence/FACET_CONTRACT.md",
+      "sub_lifecircle": "facets/card_intelligence/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/card_intelligence/SUB_REHYDRATION.md",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION",
+      "additional": [
+        "facets/card_intelligence/REGISTRY.json",
+        "facets/card_intelligence/CARD_CONTRACT.json"
+      ]
+    },
+    {
+      "id": "semantic_force_decision",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/semantic_force_decision/FACET_CONTRACT.md",
+      "sub_lifecircle": "facets/semantic_force_decision/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/semantic_force_decision/SUB_REHYDRATION.md",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION"
+    },
+    {
+      "id": "cross_surface_learning",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/cross_surface_learning/FACET_CONTRACT.md",
+      "sub_lifecircle": "facets/cross_surface_learning/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/cross_surface_learning/SUB_REHYDRATION.md",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION"
+    },
+    {
+      "id": "parallel_development_intelligence",
+      "parent": "WHOLE_666CLIC",
+      "contract": "facets/parallel_development_intelligence/FACET_CONTRACT.md",
+      "current": "facets/parallel_development_intelligence/CURRENT_STATE.json",
+      "sub_lifecircle": "facets/parallel_development_intelligence/SUB_LIFECIRCLE.md",
+      "sub_rehydration": "facets/parallel_development_intelligence/SUB_REHYDRATION.md",
+      "runtime": "facets/parallel_development_intelligence/parallel-development.mjs",
+      "load_default": "REHYDRATED_IDLE_REACHABLE",
+      "foreground_policy": "DIRECT_CLIC_TRIGGER_OR_VERIFIED_CAUSAL_ANCHOR_ONLY",
+      "writes": "NONE_ON_REHYDRATION",
+      "activation": "NONE",
+      "pet": "PAUSED"
+    }
+  ],
+  "trigger_contract": {
+    "666CLIC SYSTEMSTART": "VERIFY_WHOLE_HEAD_POINTER_MANIFEST_THEN_RECURSIVE_FACET_PRESENCE_AND_OWNING_SUBCIRCLE; NO_AUTORUN",
+    "666CLIC WEITER": "REVALIDATE_CURRENT_HEAD_AND_CAUSALLY_RELEVANT_SUBCIRCLE_RECEIPTS_RESUME_VERIFIED_ANCHOR",
+    "666CLIC UPDATE": "HEAD_LOCK_BACKUP_SCOPED_MUTATION_SUBCIRCLE_EVIDENCE_READBACK_POINTER_LAST",
+    "666CLIC NEW CHAT": "PRESERVE_ALL_FACET_IDENTITIES_LAST_VALID_STATES_OPEN_WORK_BLOCKERS_AND_RETURN_ANCHORS_IN_CLIC_HANDOFF",
+    "666CLIC NEXT CHAT": "FRESH_WHOLE_BOOT_THEN_RESOLVE_SAVED_FACET_ANCHORS_FROM_CURRENT_NOT_STALE_HANDOFF",
+    "666CLIC INTEGRATION AUDIT": "READ_ONLY_RECURSIVE_RELATION_PROVENANCE_EXECUTION_AND_VISUAL_COMPLIANCE",
+    "666CLIC DASHBOARD": "RENDER_EVIDENCE_BACKED_WHOLE_AND_SUBCIRCLE_STATES_NEVER_FABRICATE_PERCENTAGES"
+  },
+  "nested_facets": {
+    "policy": "DISCOVER_FROM_REPO_CURRENT_WITH_PARENT_ID_AND_SUBCIRCLE_PATHS",
+    "known_independent_nested_facets": "NONE_VERIFIED_UNDER_CURRENT_FIVE_ROOT_FACETS",
+    "missing_nested_contract": "HOLD_UNKNOWN_NOT_SILENT_SKIP",
+    "no_new_router": true
+  },
+  "system_protection": {
+    "foreign_autoactivation": false,
+    "foreign_mutation": false,
+    "pet": "PAUSED_UNMODIFIED",
+    "pet_development_mutation": false,
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "auto_git_push": false,
+    "background_execution": false
+  },
+  "verification": {
+    "github_tree_complete": true,
+    "root_facets_found": 6,
+    "facets_with_contract_lifecircle_rehydration": 6,
+    "source_registration": "VERIFIED_AFTER_REPO_READBACK_ONLY",
+    "fresh_systemstart_runtime": "NOT_EXECUTED_NEW_PDI",
+    "fresh_new_chat_runtime": "NOT_EXECUTED_NEW_PDI",
+    "trigger_host_dispatch": "NOT_VERIFIED",
+    "plugin_current_release": "0.1.22_UNCHANGED",
+    "plugin_parity": "SOURCE_AHEAD_HOST_NOT_VERIFIED",
+    "provider_archive": "NOT_BYTE_VERIFIED"
+  },
+  "supersession": {
+    "rule": "NEWER_VALID_EVIDENCE_OVER_STALE_CARRIERS",
+    "registry_ne_fresh_runtime_proof": true,
+    "registry_ne_live_plugin_release": true
+  },
+  "return_anchor": "RUN_FRESH_SYSTEMSTART_AND_NEXT_CHAT_WITH_DIRECT_CONTRACT_READBACK_THEN_COMPARE_ALL_5_FACET_STATES; LIVE_PLUGIN_TRIGGER_PARITY_SEPARATE; PET_PAUSED",
+  "whole_relational_recovery_binding_2026_10_09": {
+    "schema": "CLIC_RECURSIVE_FACET_RELATIONAL_RECOVERY_BINDING_V1",
+    "status": "SOURCE_BOUND_FRESH_HOST_PENDING",
+    "whole_first": true,
+    "currentness_order": "LIVE_BRANCH_HEAD_ROOT_POINTER_MANIFEST_RECURSIVE_REGISTRY_CAUSAL_RECEIPTS",
+    "recovery": "continuity/WHOLE_CLIC_HOST_DRIFT_RELATIONAL_RECOVERY_CURRENT_2026-10-09.json",
+    "new_chat": "continuity/NEW_CHAT_CURRENT.json",
+    "facet_count": 5,
+    "each_facet_subcircle_preserved": true,
+    "states": "REHYDRATED_IDLE_REACHABLE_NOT_AUTO_FOREGROUND",
+    "peer_cards": "FACET_CARD_REGISTRY_PLUS_RELATIONS_DIRECT_CURRENT_RECHECK",
+    "peer_notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "peer_adoption": "NATIVE_TARGET_READBACK_REQUIRED",
+    "provider_archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "archive_content_parity": "28_OF_28_PREVIOUSLY_VERIFIED",
+    "old_registry_provider_archive_unknown": "SUPERSEDED_BY_NEWER_ROOT_CURRENT_EVIDENCE_NOT_REWRITTEN",
+    "plugin_source_impact": "PLUGIN_SEMANTIC_CONTINUITY_IMPACT_PENDING_GUARDED_RELEASE",
+    "host_trigger_provenance_fuck_horst": "UNVERIFIED_NO_REGISTRATION",
+    "new_chat_next_chat_host_acceptance": "NOT_TESTED",
+    "foreign_mutation": false,
+    "pet": "PAUSED_UNMODIFIED",
+    "return_anchor": "LIVE_ROOT_FIRST_RESTORE_FIVE_FACET_RELATIONAL_STATES_THEN_PEER_RECEIPTS_AND_VERIFIED_OPEN_WORK"
+  },
+  "parallel_development_intelligence_2026_10_17": "SOURCE_REGISTERED_NO_AUTORUN_NEW_FACET_NO_FOREIGN_AUTHORITY"
+}

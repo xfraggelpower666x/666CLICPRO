@@ -1,0 +1,78 @@
+{
+  "schema": "666CLIC_CARD_REGISTRY_V1",
+  "status": "INDEX_ALIGNED_TO_EXISTING_CLIC_RELATION_CARDS_NO_NEW_TARGET_SCAN",
+  "owner": "666CLIC",
+  "cards": [
+    {
+      "system": "666CLS",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/CLS_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "666MIRA",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/MIRA_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+      "visual": "UNKNOWN"
+    },
+    {
+      "system": "666TDH",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/TDH_UNDERSTANDING_CARD_CURRENT_2026-10-09.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "LYVRA",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "666PFS",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/PFS_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "666CSM",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/CSM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "666STREAM",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/STREAM_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-07.md",
+      "visual": "PARTIAL"
+    },
+    {
+      "system": "666LINGUA",
+      "path": "666CLIC_NATIVE_RUNTIME/relations/LINGUA_UNDERSTANDING_CARD_CURRENT_2026-10-08.md",
+      "visual": "PARTIAL"
+    }
+  ],
+  "new_cards_require": "DIRECT_CLIC_SOURCE_READBACK_AND_GOVERNED_UPDATE",
+  "auto_publish": false,
+  "registry_alignment_2026_10_09": {
+    "authority": "CLIC_OWNED_RELATION_CARDS_ONLY",
+    "status": "EIGHT_EXISTING_TARGET_CARDS_INDEXED_SOURCE_CARRIER_ONLY",
+    "card_count": 8,
+    "new_cards_created": false,
+    "existing_cards_modified": false,
+    "peer_source_heads_not_refetched": true,
+    "visual_compliance": "PRESERVE_EXISTING_CARD_REGISTER_PARTIAL_OR_UNKNOWN_NOT_TARGET_HOST_PASS",
+    "source": "relations/CROSS_SYSTEM_RELATIONS.md",
+    "peer_delivery_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "peer_delivery": "SEVEN_PREPARED_ZERO_VERIFIED_RECEIPTS",
+    "foreign_mutations": false,
+    "auto_publish": false,
+    "pet": "PAUSED",
+    "return_anchor": "REVALIDATE_EACH_TARGET_NATIVE_CURRENT_BEFORE_CARD_EVOLUTION; DO_NOT_INFER_RECEIPT_OR_FUNCTIONAL_HOST_ACCEPTANCE"
+  },
+  "facet_census": {
+    "status": "LYVRA_CURRENT_SOURCE_FACET_CENSUS_DIRECT_REPO_READBACK_VERIFIED_HOST_PENDING",
+    "lyvra": "666CLIC_NATIVE_RUNTIME/facets/card_intelligence/LYVRA_FACET_REGISTRY_CURRENT.json",
+    "source_head": "a230fa93a6ab80bcefb6526eb14db4edad635309",
+    "indexed_facets": 4,
+    "additional_current_facets": 2,
+    "facet_records": 6,
+    "codeforge_class": "NATIVE_CAPABILITY_SEPARATE_FROM_FACET_COUNT",
+    "managed_system_cards_unchanged": 8,
+    "other_system_facet_census": "NOT_YET_SOURCE_VERIFIED",
+    "peer_readonly": true,
+    "pet": "PAUSED"
+  }
+}

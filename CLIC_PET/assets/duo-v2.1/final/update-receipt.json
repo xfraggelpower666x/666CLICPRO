@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIZIERT",
+  "pet_id": "pet_6ac7feb2372081919fed6fd60bdf809c",
+  "name": "Cyberpunk System Doctor",
+  "is_custom": true,
+  "is_active": true,
+  "existing_id_preserved": true,
+  "metadata_preserved": true,
+  "sprite_version": 2,
+  "standard_states": 9,
+  "look_directions": 16,
+  "validated_source_sha256": "accb63f58b97761db070daf49bf889553ca6a377d16bb84a37b303b4899abca1",
+  "update_returned_same_id": true,
+  "list_readback_confirmed": true,
+  "prior_artwork_backed_up": true,
+  "complete_package_library_file_id": "libfile_1237a1adb62081918cb5822752941547"
+}

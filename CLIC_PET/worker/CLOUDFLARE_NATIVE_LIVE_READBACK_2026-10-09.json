@@ -1,0 +1,35 @@
+{
+  "schema": "CLIC_PET_CLOUDFLARE_LIVE_READBACK_V1",
+  "status": "LIVE_CLIC_PET_NOT_VERIFIED",
+  "source": "DIRECT_AUTHORIZED_CLOUDFLARE_ACCOUNT_READ_ONLY_API",
+  "account_reachable": true,
+  "account_name": "666SOUNDsDESIGn",
+  "worker_scripts_count": 20,
+  "worker_expected_name": "clic-junior-pet",
+  "expected_worker_found": false,
+  "matching_worker_clic_pet_found": false,
+  "do_namespace_count": 2,
+  "namespace_owner_categories": [
+    "WEBRADIO_DISCORD_GATE",
+    "LYVRA_PET_READ_STAGING_BUDGET"
+  ],
+  "clic_pet_do_namespace_found": false,
+  "foreign_namespace_reuse_permitted": false,
+  "workers_live_clic_pet": "NO_MATCH_FOUND_IN_SCRIPT_INVENTORY",
+  "junior_native_current": "NOT_VERIFIED",
+  "signed_native_event_producer": "UNBOUND",
+  "trusted_signer_keys": "NOT_VERIFIED",
+  "budget_real_production_usage": "NOT_PROVEN",
+  "pet_visual_host_acceptance": "UNKNOWN",
+  "visual_compliance": "UNKNOWN_NO_LIVE_PET_APP_RENDER",
+  "source_contract": "CLIC_PET/worker/NATIVE_PRODUCER_ACCEPTANCE.md",
+  "ci_source_only": "PASS_37952980914",
+  "no_live_deployment": true,
+  "foreign_mutations": false,
+  "limits": [
+    "ACCOUNT_SCOPED_SCRIPT_AND_NAMESPACE_INVENTORY_ONLY",
+    "NO_ASSUMED_EXISTENCE_OF_ALTERNATE_ACCOUNTS",
+    "NO_HOST_RENDER_OR_SIGNED_EVENT_END_TO_END_ACCEPTANCE"
+  ],
+  "recommendation": "FIND_AND_READ_NATIVE_JUNIOR_CURRENT_AND_SIGNED_PRODUCER_PROVENANCE; ONLY_THEN_AUTHORIZE_SEPARATE_CLIC_PET_DO_AND_WORKER_STAGING"
+}

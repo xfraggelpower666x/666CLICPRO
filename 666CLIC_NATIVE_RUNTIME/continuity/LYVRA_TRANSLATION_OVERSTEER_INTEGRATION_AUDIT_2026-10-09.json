@@ -1,0 +1,59 @@
+{
+  "schema": "CLIC_LYVRA_SEMANTIC_TRANSLATION_OVERSTEER_AUDIT_V1",
+  "date": "2026-10-09",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_GUARDS_AND_RELATIONAL_CARD_INTEGRATED_FRESH_HOST_NOT_TESTED",
+  "backup": "backup/clic-pre-lyvra-semantic-translation-oversteer-20261009-2225",
+  "prechange_head": "4027455b5ad5072940e41a0f0df130570f6eb9e0",
+  "lyvra_observed_head": "f1ec0c8968df4750051e3e71d38182dc00ca4f03",
+  "changes": [
+    {
+      "path": "continuity/RECOVERY_AND_HANDOFF.md",
+      "blob": "c2379aeca820c8794334d135d6c123fdc5a88e6a",
+      "kind": "READ_ONLY_PRE_REHYDRATION_OVERSTEER_GUARD_CONTRACT"
+    },
+    {
+      "path": "facets/cross_surface_learning/SUB_REHYDRATION.md",
+      "blob": "cbfc22a2f4f0ed0c716d4dfd2c1dc014f3db8c22",
+      "kind": "EVIDENCE_BOUND_SEMANTIC_TRANSLATION_EXISTING_FACET"
+    },
+    {
+      "path": "relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md",
+      "blob": "3942d92ebad217ab67a45d4454826977377630f2",
+      "kind": "NEWER_VALID_LYVRA_SEMANTIC_FORCE_VISUAL_BRIDGE_PROVENANCE"
+    }
+  ],
+  "target_preservation": {
+    "tdh_version": "v1.14.0",
+    "tdh_card_sha_unchanged": "8aed4a830c5dfabb39d7ccf5d7bb9971e833efaf",
+    "cards_indexed": 8,
+    "manifest_required": 92,
+    "peer_notices": 7,
+    "verified_delivery_receipts": 0,
+    "peer_adoptions": 0,
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutation": false
+  },
+  "source_checks": {
+    "guard_fields": "PASS_STATIC_READBACK",
+    "semantic_evidence_axes": "PASS_STATIC_READBACK",
+    "source_lyvra_contract_binds": "PASS_STATIC_READBACK",
+    "negative_case_scenarios": "DECLARED_NOT_EXECUTED",
+    "test_class": "SOURCE_STATIC_ASSERTIONS_NOT_RUNTIME_TESTS",
+    "fresh_host": "NOT_EXECUTED",
+    "plugin_live_parity": "NOT_VERIFIED",
+    "visual_runtime": "NOT_VERIFIED"
+  },
+  "plugin_impact": {
+    "semantic_runtime_changed": true,
+    "live_plugin": "v0.1.22_UNCHANGED",
+    "approval": "NOT_ISSUED",
+    "candidate_skill_update": "REQUIRED_GOVERNED_SEPARATE_SOURCE_PARITY_REVIEW",
+    "publish": "NOT_AUTHORIZED_WITHOUT_COMPLETE_APPROVAL_AND_HOST_GATES"
+  },
+  "new_system": false,
+  "new_router": false,
+  "new_controller": false,
+  "new_facet": false,
+  "return_anchor": "REVALIDATE_LYVRA_LIVE_HEAD_BEFORE_FURTHER_CARD_CHANGE; EXECUTE_REAL_NEGATIVE_FRESH_BOOT_HOST_TEST; PLAN_CLIC_NATIVE_PLUGIN_PARITY_NOT_AUTO_PUBLISH; PRESERVE_TDH_V1_14_AND_PET_PAUSE"
+}

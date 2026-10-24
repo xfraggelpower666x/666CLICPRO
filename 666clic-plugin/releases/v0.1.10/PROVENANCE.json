@@ -1,0 +1,15 @@
+{
+  "plugin_name": "666clic-native-runtime",
+  "version": "0.1.10",
+  "release_id": "pluginrel_6ac68b7c6b9c8191804cc12bf5c0373c",
+  "source_class": "REPO_SOURCE_LIVE_PLUGIN_DIRECT_READBACK",
+  "file_count": 16,
+  "immutable_release_snapshot": true,
+  "source_tree_sha": "b2e9c19e375dc72cfe4773484f348b5582e177fc",
+  "source_parity": "PASS_16_OF_16",
+  "semantic_status": "CURRENT_LIVE_PARITY_BASELINE",
+  "includes_shared_daemon_adapter_rehydration": true,
+  "includes_scope_lifecycle_synthesis": true,
+  "repo_current_remains_authority": true,
+  "authority_transfer": false
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "CLIC_SEMANTIC_BODY_BOUNDARY_REPAIR_READBACK_V1",
+  "system": "666CLIC",
+  "scope": "CLIC_ONLY",
+  "status": "TARGETED_SOURCE_CI_PASS_SIBLING_LEGACY_CI_FAIL_FINGERPRINT_BLOCKED",
+  "base_head": "a2150ec250a6c0ec4dd7a636dd1f952b3a99d80a",
+  "prechange_backup": "backup/clic-pre-semantic-boundary-three-fixes-20261017",
+  "implementation_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs",
+  "implementation_blob": "875652fa03a15ccc6b7e4050c261c88feffb7cc0",
+  "test_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs",
+  "test_blob": "73c1da1fa9b3dfe3e1d7a160174f9afb410fd4eb",
+  "repairs": [
+    "NOOP_REQUIRES_COMMIT_TREE_EQUALS_PARENT_TREE_WITH_EXPLICIT_EVIDENCE",
+    "RELATIONS_SEMANTIC_UNPUBLISHED_PATCHFIRST_SKILLS_SEMANTIC_CANDIDATE_METADATA_GOVERNANCE",
+    "CURRENT_FINGERPRINT_APPROVAL_GOVERNANCE_NON_SEMANTIC_REAL_CURRENT_RUNTIME_PRESERVED"
+  ],
+  "full_parent_chain": "290_OF_290_VERIFIED_PRIOR_READ_ONLY_AUDIT",
+  "historical_noop_commit": "ea4ccf5a8bc4fcd0986b12a85fd01710595239d4",
+  "historical_noop_tree": "3386e313bd16fda3233b22a9e4b2686f067110db",
+  "targeted_ci": {
+    "id": 39036011865,
+    "conclusion": "SUCCESS",
+    "head": "dfca838edb76afa155fbe75aff9eaed67a85ed97"
+  },
+  "sibling_ci": {
+    "id": 39036011880,
+    "conclusion": "FAILURE",
+    "test": "visual-lifecycle-continuity.test.mjs",
+    "observed": "6_CURRENT_FACETS_VS_TEST_EXPECTS_5",
+    "scope": "NOT_CHANGED_PREEXISTING_TEST"
+  },
+  "source_live_plugin_conflict": "PRESERVED",
+  "live_plugin_version": "0.1.22",
+  "provider_publication": false,
+  "canonical_fingerprint": null,
+  "backup_approval": false,
+  "actual_body_head": null,
+  "foreign_writes": false,
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "return_anchor": "SOURCE_REPAIR_TARGETED_PASS_SIBLING_LEGACY_TEST_AND_LIVE_BINDINGS_OPEN"
+}

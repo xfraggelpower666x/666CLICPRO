@@ -1,0 +1,38 @@
+name: CLIC CLS native dispatch readonly preflight
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/continuity/cls-native-host-dispatch.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/cls-native-host-dispatch.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/cls-native-actions-readonly.mjs'
+      - '.github/workflows/clic-cls-native-dispatch-readonly.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cls-native-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Negative dispatch-gate tests
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/cls-native-host-dispatch.test.mjs
+      - name: Real GitHub-only source readback; native CLS provider handles absent
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node 666CLIC_NATIVE_RUNTIME/continuity/cls-native-actions-readonly.mjs
+      - name: Store truthful native execution receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clic-cls-github-only-native-dispatch
+          path: clic-cls-native-dispatch-readonly-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
+# This workflow must never claim CLS Native Delivery, ChatGPT Fresh Host, Drive CAS, or CLS Adoption.

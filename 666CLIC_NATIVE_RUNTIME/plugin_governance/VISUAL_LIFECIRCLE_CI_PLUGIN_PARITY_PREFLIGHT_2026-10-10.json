@@ -1,0 +1,48 @@
+{
+  "schema": "CLIC_VISUAL_CI_PLUGIN_PARITY_PREFLIGHT_V1",
+  "status": "CI_SUCCESS_PLUGIN_RELEASE_PENDING",
+  "prechange_head": "660b65cc31f3883ad8b3ac6d6437926eaf66033b",
+  "prechange_backup": "backup/clic-pre-visual-ci-plugin-parity-20261010-0247",
+  "workflow": ".github/workflows/clic-card-force-candidate-tests.yml",
+  "workflow_blob": "c22243182e20771b15d4f9d20ab120d49bd3b506",
+  "visual_node_test": "666CLIC_NATIVE_RUNTIME/dashboard/visual-lifecycle-continuity.test.mjs",
+  "ci": {
+    "run_id": 38010583970,
+    "commit": "8985c50a8b19c34075a670a6b19846f567646713",
+    "conclusion": "success",
+    "node_job": "success",
+    "structural_checks": "success",
+    "url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/38010583970"
+  },
+  "provider": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "visual_interface": {
+      "source_blob": "d2a16e62b35139168f1627a0648ffc738712230c",
+      "provider_equal": false
+    },
+    "dashboard": {
+      "source_blob": "7e61ded56da1b7b5448b966d910a706a6725d88c",
+      "provider_equal": false
+    }
+  },
+  "release_gates": {
+    "native_approval": "NOT_ISSUED",
+    "provider_original_binary": "NOT_REVERIFIED_IN_THIS_RUN",
+    "asset_logo_parity": "NOT_REVERIFIED_IN_THIS_RUN",
+    "live_publish": "NOT_ATTEMPTED",
+    "postpublish_host_acceptance": "NOT_TESTED",
+    "prepublish_postpublish_separated": true,
+    "source_changes_ne_live_release": true
+  },
+  "protections": {
+    "facets": 5,
+    "manifest_refs": 95,
+    "pet": "PAUSED",
+    "foreign_mutations": false,
+    "system_cards": 8,
+    "peer_receipts_verified": 0
+  },
+  "return_anchor": "REVALIDATE_PROVIDER_BINARY_AND_LOGO_BACKUP_APPROVAL; GOVERNED_PLUGIN_RELEASE_ONLY_WHEN_PREPUBLISH_PASS; POSTPUBLISH_TRIGGER_VISUAL_HOST_TEST_REQUIRED; PET_PAUSED"
+}

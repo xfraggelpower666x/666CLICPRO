@@ -1,0 +1,12 @@
+import test from "node:test";import assert from "node:assert/strict";import {createHash} from "node:crypto";import {obtainTrustedClicSnapshot} from "./interactive-visual-github-connector.mjs";
+const head="a".repeat(40), repo="xfraggelpower666x/666CLICPRO";
+const p="666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json",m="666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json";
+const contents={[p]:'{"status":"verified"}',[m]:'{"system":"666CLIC","authority":"GITHUB_REPO_CURRENT","required_order":["CURRENT_POINTER.json"]}'};
+const hash=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex")};
+const blobs=Object.entries(contents).map(([path,content])=>({path,sha:hash(content),type:"blob"}));
+const snap={source_commit:head,source_paths:[p]};
+const fixture=(change={})=>{let calls=0;return {fetch:async ({url})=>url.includes("/branches/")?{result:{content:JSON.stringify({commit:{sha:change.moved&&++calls===2?"b".repeat(40):head}})}}:{result:{content:JSON.stringify({truncated:change.truncated??false,tree:change.tree??blobs})}},fetchFile:async ({path})=>({result:{content:contents[path],sha:change.fakeSha&&path===p?"c".repeat(40):hash(contents[path])}})}};
+test("computed committed bytes and two HEAD reads admit a snapshot without caller flags",async()=>{const r=await obtainTrustedClicSnapshot(fixture(),snap);assert.equal(r.verified,true);assert.equal(r.status,"CONTENT_AND_CURRENT_READBACK_VERIFIED");assert.equal(r.source_evidence.length,2);assert.equal(r.host_verified,false)});
+test("missing connector, wrong HEAD and unavailable tree fail closed",async()=>{assert.equal((await obtainTrustedClicSnapshot({},snap)).verified,false);assert.equal((await obtainTrustedClicSnapshot(fixture(),{...snap,source_commit:"b".repeat(40)})).status,"STALE_OR_DIFFERENT_HEAD");assert.equal((await obtainTrustedClicSnapshot(fixture({truncated:true}),snap)).verified,false)});
+test("blob spoofing and missing tree entry rejected",async()=>{assert.equal((await obtainTrustedClicSnapshot(fixture({fakeSha:true}),snap)).status,"CONTENT_TREE_BLOB_MISMATCH");assert.equal((await obtainTrustedClicSnapshot(fixture({tree:blobs.slice(0,1)}),snap)).status,"MISSING_COMMITTED_BLOBS")});
+test("concurrent HEAD movement, foreign paths and malformed calls fail closed",async()=>{assert.equal((await obtainTrustedClicSnapshot(fixture({moved:true}),snap)).status,"CONCURRENT_HEAD_CHANGE");assert.equal((await obtainTrustedClicSnapshot(fixture(),{...snap,source_paths:["../secret"]})).status,"INVALID_SNAPSHOT_PATHS")});

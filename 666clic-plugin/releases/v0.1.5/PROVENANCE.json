@@ -1,0 +1,10 @@
+{
+  "plugin_name": "666clic-native-runtime",
+  "version": "0.1.5",
+  "release_id": "pluginrel_6ac3bd798a748191816c9aef71adc919",
+  "source_class": "DIRECT_LIVE_PLUGIN_READBACK",
+  "file_count": 13,
+  "immutable_release_snapshot": true,
+  "semantic_status": "HISTORICAL_LIVE_BASELINE_CURRENT_AT_CAPTURE",
+  "later_repo_runtime_evolution_exists": true
+}
