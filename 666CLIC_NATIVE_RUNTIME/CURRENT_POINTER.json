@@ -4751,5 +4751,32 @@
     "family_post": "EXCLUDED",
     "pointer_last": true,
     "return_anchor": "CLIC_FORCE_OPERATION_LOCAL_ADVISORY_SOURCE_CI_PASS_HOST_PLUGIN_PARITY_PENDING"
+  },
+  "update_2026_10_24_starbridge_reciprocal_relational_learning": {
+    "status": "CLIC_REPOSITORY_SOURCE_INTEGRATED_LYVRA_DELIVERY_PENDING",
+    "prechange_head": "8c890dcdac174dcc646daa0c79608fe83e487c99",
+    "prechange_recovery_branch": "backup/clic-pre-starbridge-relational-learning-20261024-r01",
+    "body_commit": "53dd0ac17b8177c3bf329fb6cd9ec03e15c8dfda",
+    "outbox_commit": "7fbc367688d31de2c9331df6826f7e359d039323",
+    "module_path": "666CLIC_NATIVE_RUNTIME/facets/cross_surface_learning/starbridge-relational-learning.mjs",
+    "module_blob": "9b8d2a0e60ba7a5ced302f0a87ac33da175863ad",
+    "test_path": "666CLIC_NATIVE_RUNTIME/facets/cross_surface_learning/starbridge-relational-learning.test.mjs",
+    "test_blob": "98328f04f836c91fe514acf103dc1817f8d7f305",
+    "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-RECIPROCAL-RELATIONAL-LEARNING-20261024-R01.json",
+    "outbox_blob": "f2c0e045a93a7576bfd505837388cd1cd3a66f02",
+    "local_candidate_tests": "7_OF_7_PASS",
+    "repository_ci": "NOT_RUN",
+    "live_plugin_release": "NOT_UPDATED_PLUGIN_IMPACT_PENDING",
+    "visual_impact": "REPOSITORY_NATIVE_LEARNING_UI_ADAPTATION_PENDING",
+    "lyvra_delivery": "NOT_VERIFIED",
+    "lyvra_adoption": "NOT_VERIFIED",
+    "real_host": "NOT_VERIFIED",
+    "family_post": "READ_ONLY_UNMODIFIED_CLOUD_MCP_AUTH_PENDING",
+    "pdi": "UNCHANGED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_writes": false,
+    "pointer_last": true,
+    "return_anchor": "CLIC_STARBRIDGE_RELATIONAL_LEARNING_SOURCE_PUBLISHED_AWAIT_PLUGIN_PARITY_CI_AND_LYVRA_RECEIPT"
   }
 }
