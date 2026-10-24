@@ -43,3 +43,49 @@ test("unverified claims do not produce positive outcome",async()=>{
  const {assessOperationEvidence}=await import("../src/contextual-outcome.mjs");
  assert.equal(assessOperationEvidence({...opBase,operationOutcomes:[{operationId:"CLIC_PDI_EVENT_1",currentReadback:"PASS",independentReadback:false}]}).status,"OPEN");
 });
+
+test("an explicitly denied action preserves the original unsent goal",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_B",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",
+  operationOutcomes:[{operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.goalStatus,"OPEN_NOT_DELIVERED");
+ assert.equal(x.operationStatus,"DENIED");
+ assert.equal(x.execute,false);
+ assert.equal(x.sendAuthorized,false);
+});
+test("renamed operation cannot replay the same semantically denied action",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_B",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_B:SEND",independentActionVerified:true,
+  operationOutcomes:[{operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.operationStatus,"DENIED");
+ assert.equal(x.reason,"SEMANTIC_DENIAL_NO_REPLAY");
+ assert.equal(x.execute,false);
+});
+test("separate action is not contaminated, but is not automatically authorized",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_C",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",independentActionVerified:true,
+  operationOutcomes:[{operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.goalStatus,"OPEN_NOT_DELIVERED");
+ assert.equal(x.operationStatus,"OPEN");
+ assert.equal(x.execute,false);
+ assert.equal(x.sendAuthorized,false);
+});
+test("missing proof of semantic independence remains review-required",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_C",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",
+  operationOutcomes:[{operationId:"WRITE_B",semanticActionKey:"LETTER_B:SEND",actionDenied:true}]});
+ assert.equal(x.operationStatus,"REVIEW_REQUIRED");
+ assert.equal(x.execute,false);
+});
+test("a denial without semantic provenance cannot be treated as independent",async()=>{
+ const {assessGoalContinuity}=await import("../src/contextual-outcome.mjs");
+ const x=assessGoalContinuity({goalId:"LETTER_C",goalStatus:"OPEN_NOT_DELIVERED",
+  operationId:"WRITE_C",semanticActionKey:"LETTER_C:SEND",independentActionVerified:true,
+  operationOutcomes:[{operationId:"WRITE_B",actionDenied:true}]});
+ assert.equal(x.operationStatus,"REVIEW_REQUIRED");
+ assert.equal(x.execute,false);
+});
