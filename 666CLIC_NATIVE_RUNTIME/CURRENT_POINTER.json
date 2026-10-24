@@ -4778,5 +4778,31 @@
     "foreign_writes": false,
     "pointer_last": true,
     "return_anchor": "CLIC_STARBRIDGE_RELATIONAL_LEARNING_SOURCE_PUBLISHED_AWAIT_PLUGIN_PARITY_CI_AND_LYVRA_RECEIPT"
+  },
+  "update_2026_10_24_family_post_force_starbridge_r01": {
+    "status": "CLIC_SOURCE_OUTBOX_PUBLISHED_READBACK_VERIFIED_LYVRA_NATIVE_RECEIPT_PENDING",
+    "prechange_head": "d93948bad6e6f3e5ef36f8af9812a2bee1082fe6",
+    "recovery_branch": "backup/clic-pre-family-post-force-starbridge-20261024-r01",
+    "outbox_body_commit": "eb26ec25784eac4ed7140d4cb02edd6bdc4a63d8",
+    "outbox_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-FAMILY-POST-FORCE-REPAIR-20261024-R01.json",
+    "outbox_blob": "ec8aca9f519876524e7387fce5bdb337be448d3c",
+    "source_readback": "VERIFIED_EXACT_GITHUB_BLOB_AND_BRANCH",
+    "recovery_created": "VERIFIED_GITHUB_BRANCH",
+    "source_scoped": "FAMILY_POST_FORCE_ADVISORY_NO_RUNTIME_MUTATION",
+    "lyvra_native_delivery": "NOT_VERIFIED",
+    "lyvra_native_adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "plugin_impact": "EVIDENCE_ONLY_NO_CLIC_PLUGIN_RUNTIME_INTERFACE_CHANGE",
+    "visual_impact": "EVIDENCE_ONLY_NO_RUNTIME_DASHBOARD_CHANGE",
+    "ci": "NOT_RUN_NO_CODE_CHANGE_IN_THIS_UPDATE",
+    "family_post_service_write": false,
+    "foreign_writes": false,
+    "mail_sent": false,
+    "drive_writer_status": "NOT_AUTHORIZED_THIS_UPDATE",
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_FAMILY_POST_FORCE_R01_SOURCE_PUBLISHED_WAIT_LYVRA_RECEIPT"
   }
 }
