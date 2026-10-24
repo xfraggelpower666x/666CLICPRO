@@ -43,14 +43,30 @@ export function assessGoalContinuity(input={}) {
  const deniedKeys=records.filter(x=>x&&(x.actionDenied===true||x.permissionDenied===true))
   .map(x=>x.semanticActionKey).filter(x=>typeof x==="string"&&x.trim());
  const sameSemanticDenial=semanticKey!==null&&deniedKeys.includes(semanticKey);
- const hasPriorDenial=records.some(x=>x&&(x.actionDenied===true||x.permissionDenied===true));
+ const denied=records.filter(x=>x&&(x.actionDenied===true||x.permissionDenied===true));
+ const hasPriorDenial=denied.length>0;
+ // A semantic key is a hint, not proof: preserve goal identity across renaming.
+ const keyGoal=x=>typeof x==="string"&&x.includes(":")?x.slice(0,x.indexOf(":")):null;
+ const sameGoalDenial=goalId!==null&&denied.some(x=>
+  (typeof x.goalId==="string"&&x.goalId===goalId)||
+  (typeof x.goalId!=="string"&&keyGoal(x.semanticActionKey)===goalId));
+ // Referenced provenance can be audited by an independent host; this pure
+ // advisory function cannot itself authenticate that reference.
+ const proof=input.independenceEvidence;
+ const provenancePresent=proof&&typeof proof==="object"&&
+  proof.goalId===goalId&&
+  typeof proof.evidenceRef==="string"&&proof.evidenceRef.trim().length>0&&
+  proof.source==="INDEPENDENT_REVIEW"&&
+  Array.isArray(proof.deniedOperationIds)&&
+  denied.every(x=>typeof x.operationId==="string"&&
+   proof.deniedOperationIds.includes(x.operationId));
  const unresolvedIdentity=hasPriorDenial&&!sameSemanticDenial&&
-  (!semanticKey||input.independentActionVerified!==true||
-   records.some(x=>(x.actionDenied===true||x.permissionDenied===true)&&!x.semanticActionKey));
+  (sameGoalDenial||!semanticKey||!goalId||!provenancePresent);
  const operationStatus=(operation.status==="DENIED"||sameSemanticDenial)?"DENIED":
   unresolvedIdentity?"REVIEW_REQUIRED":operation.status;
  return {goalId,goalStatus,operationId,operationStatus,
   reason:sameSemanticDenial?"SEMANTIC_DENIAL_NO_REPLAY":
-   unresolvedIdentity?"INDEPENDENCE_NOT_VERIFIED":operation.reason,
+   sameGoalDenial?"SAME_GOAL_DENIAL_REQUIRES_REVIEW":
+   unresolvedIdentity?"INDEPENDENCE_PROVENANCE_NOT_VERIFIED":operation.reason,
   execute:false,sendAuthorized:false};
 }
