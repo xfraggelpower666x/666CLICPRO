@@ -27,3 +27,30 @@ export function suggestOutcome(input={}) {
   if(input.writeRequested===true && (input.userAuthorizedUpdate!==true||input.lockVerified!==true||input.backupVerified!==true)) return {outcome:"HOLD",reason:"WRITE_GOVERNANCE_REQUIRED",execute:false};
   return {outcome:"EXECUTE",reason:"AUTHORIZED_CANDIDATE_REQUIRES_STEP_LOCAL_VALIDATION",execute:false};
 }
+
+/**
+ * Advisory goal-preservation assessment, not a retry or send authorization.
+ * Semantic identity must be independently supplied; operation IDs alone cannot
+ * distinguish a genuinely new action from replay of a denied action.
+ */
+export function assessGoalContinuity(input={}) {
+ const goalId=typeof input.goalId==="string"&&input.goalId.trim()?input.goalId:null;
+ const operationId=typeof input.operationId==="string"&&input.operationId.trim()?input.operationId:null;
+ const goalStatus=input.goalStatus==="OPEN_NOT_DELIVERED"?"OPEN_NOT_DELIVERED":"UNVERIFIED";
+ const records=Array.isArray(input.operationOutcomes)?input.operationOutcomes:[];
+ const operation=assessOperationEvidence({operationId,operationOutcomes:records});
+ const semanticKey=typeof input.semanticActionKey==="string"&&input.semanticActionKey.trim()?input.semanticActionKey:null;
+ const deniedKeys=records.filter(x=>x&&(x.actionDenied===true||x.permissionDenied===true))
+  .map(x=>x.semanticActionKey).filter(x=>typeof x==="string"&&x.trim());
+ const sameSemanticDenial=semanticKey!==null&&deniedKeys.includes(semanticKey);
+ const hasPriorDenial=records.some(x=>x&&(x.actionDenied===true||x.permissionDenied===true));
+ const unresolvedIdentity=hasPriorDenial&&!sameSemanticDenial&&
+  (!semanticKey||input.independentActionVerified!==true||
+   records.some(x=>(x.actionDenied===true||x.permissionDenied===true)&&!x.semanticActionKey));
+ const operationStatus=(operation.status==="DENIED"||sameSemanticDenial)?"DENIED":
+  unresolvedIdentity?"REVIEW_REQUIRED":operation.status;
+ return {goalId,goalStatus,operationId,operationStatus,
+  reason:sameSemanticDenial?"SEMANTIC_DENIAL_NO_REPLAY":
+   unresolvedIdentity?"INDEPENDENCE_NOT_VERIFIED":operation.reason,
+  execute:false,sendAuthorized:false};
+}
