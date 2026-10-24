@@ -1,0 +1,41 @@
+# 666CLIC — REV83 Native Target-Card Supersession Ledger
+DATE=2026-10-02
+SOURCE_CLIC_CURRENT_REV=82
+STATUS=BOUNDED_SOURCE_CORRECTION
+LYVRA_HEAD=f9b68ab4f37d5f501b7f572c4537fd2b944d014e
+LYVRA_HEAD_DELTA_SINCE_CLIC_REV80=77_AHEAD_ZERO_BEHIND
+WHOLE_LYVRA_REV=242
+TRACK_DESIGN_REV=v3.4_REV92
+LYVRA_POINTER_BLOB=48b3fba543f15419e7106138233acf1d8591e13a
+LYVRA_WHOLE_CURRENT_POINTER_BODY=UNCHANGED_ACROSS_PLUGIN_ARCHIVE_COMMITS
+NEW_PUBLIC_PLUGIN_ARCHIVES=ACCOUNT_v0.13.1|NATIVE_RUNTIME_v0.1.3
+ACCOUNT_RELEASE_PROVENANCE=pluginrel_6abf5fbe0acc8191ba395c6d17f0725e
+NATIVE_RELEASE_PROVENANCE=pluginrel_6abf5fc5cf808191b4fd0d4beae8bcce
+ACCOUNT_SOURCE_TEXT_BACKUP=18_OF_18_REPORTED_PASS
+NATIVE_SOURCE_TEXT_BACKUP=12_OF_12_REPORTED_PASS
+PLUGIN_ORIGINAL_ARCHIVE_RESTORE=OPEN
+PLUGIN_HOST_END_TO_END=OPEN
+LYVRA_GPT_UPDATE_007=ADDITIVE_VALIDATOR_CARRIER_PRESENT
+GPT_BUILDER_COMPLETE_RESTORE=UNVERIFIED
+PFS_GPT_EXTERNAL_BACKUP=ARCHIVE_VERIFIED_REGISTRATION_PENDING
+PFS_FOREIGN_MUTATION=NONE
+
+## Provenance-safe local target-card repair
+The following older CLIC-owned target reference cards contained historical descriptions that are superseded by productive LYVRA:
+- CLIC target LYVRA card: Track Design as separate specialist, ancient Drive pointer and v3.0.
+- CLIC target LYVRA Track Design card: 'TRACK_DESIGN_NE_WHOLE_LYVRA=TRUE' and 'TARGET_SPECIALIST_SYSTEM_CARD'.
+- CLIC target LYVRA Analytics card: 'STANDALONE_LIVE_RESEARCH_TRANSLATION_FRAMEWORK'.
+The current LYVRA repo identifies ONE_LYVRA_IDENTITY, Track Design as LYVRA when creative track thinking foregrounds, Studio 2 as its own native track facet, and Analytics as a native specialist facet. Old cards remain as provenance; CLIC addendum must clearly supersede old roles. Historic pointers must not be treated as current.
+
+## Native source inventory
+Target system cards directory inspected; 15 entries observed including 4 earlier prechange snapshots, read of INDEX, LYVRA, LYVRA_TRACK_DESIGN, ANALYTICS, PFS, MAINSYSTEM and CODEFORGE_11001.
+Tool capability folder observed: capability index plus UNIVERSAL_TOOLS, WORKFLOWS, PATTERNS, CAPABILITIES. Developer references and global result inbox observed as independent root domains.
+SOURCE_COVERAGE=BOUNDED_NOT_EXHAUSTIVE
+FULL_REHYDRATION=NOT_TESTED
+FRESH_CHAT_RUNTIME=NOT_TESTED
+LIVE_CIRCLE_FUNCTIONAL_ACCEPTANCE=NOT_TESTED
+RESTORE_DRILL=NOT_TESTED
+PRODUCTION_AUTHORITY=CLIC_GOOGLE_DRIVE_UNTIL_PROMOTION
+NO_FOREIGN_MUTATION=true
+NO_CROSS_SYSTEM_MERGE=true
+NO_ROLLBACK=true

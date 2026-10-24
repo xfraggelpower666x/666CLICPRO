@@ -1,0 +1,28 @@
+name: CLIC Bounded Learning by Doing
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/current/CROSS_SYSTEM_DEVELOPMENT_EXCHANGE_LIVECIRCLE.md'
+      - '666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/SUB_LIFECIRCLE.md'
+      - '666CLIC_NATIVE_RUNTIME/current/learning-by-doing-policy.test.mjs'
+      - '.github/workflows/clic-three-checks-learning-by-doing.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bounded-development:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test causal development and existing interactive source
+        run: |
+          node --test 666CLIC_NATIVE_RUNTIME/current/learning-by-doing-policy.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-presentation.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.test.mjs

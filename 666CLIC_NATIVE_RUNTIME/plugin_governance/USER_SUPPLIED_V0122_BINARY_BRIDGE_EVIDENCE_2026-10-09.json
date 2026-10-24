@@ -1,0 +1,64 @@
+{
+  "schema": "CLIC_USER_SUPPLIED_BINARY_BRIDGE_EVIDENCE_V1",
+  "date": "2026-10-09",
+  "source_authority": "GITHUB_REPO_CURRENT",
+  "source_head": "2c5901fe7f0dd348db4223cfdc536661009589c2",
+  "prechange_backup": "backup/clic-pre-user-plugin-zip-proof-20261009-2244",
+  "scope": "CLIC_OWNED_RECOVERY_EVIDENCE_ONLY",
+  "original_user_supplied_file": "CLIC plugin.zip",
+  "original_user_supplied_file_sha256": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+  "original_user_supplied_file_size_bytes": 2949853,
+  "zip_integrity": "PASS_ZIP_TESTZIP_NONE",
+  "zip_entries": 28,
+  "plugin_name": "666clic-native-runtime",
+  "plugin_version": "0.1.22",
+  "logo": {
+    "path": "assets/clic-logo.png",
+    "size_bytes": 2929725,
+    "measured_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "expected_source_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "source_hash_comparison": "PASS_USER_UPLOADED_LOGO_TO_REPO_EXPECTATION",
+    "actual_provider_live_binary_sha256": "UNVERIFIED_PROVIDER_BYTES_NOT_OBTAINED"
+  },
+  "plugin_provider": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "provider_current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "current_version": "0.1.22",
+    "provider_archive_format": "tar.gz",
+    "uploaded_source_format": "zip",
+    "provider_archive_hash_equivalence": "NOT_ESTABLISHED",
+    "uploaded_content_to_provider_release_identity": "NOT_PROVEN"
+  },
+  "repository_snapshot": {
+    "text_files": 27,
+    "parity": "27_OF_27_PASS_FROM_PREVIOUS_DIRECT_AUDIT",
+    "recomparison_in_this_update": "NOT_RERUN_AGAINST_REMOTE_BYTES"
+  },
+  "bridge": {
+    "archive_file": "666CLIC_Plugin_OriginalBinary_Bridge_v0122_20261009.zip",
+    "transport_manifest": "bridge_manifest.json",
+    "local_preflight": "PASS_EXECUTED_2026_10_09_NO_NETWORK_NO_WRITES",
+    "bridge_backup_uses_head": "2c5901fe7f0dd348db4223cfdc536661009589c2",
+    "target_archive": "666clic-plugin/binary-backups/v0.1.22/CLIC-plugin-v0.1.22-verified-source.zip",
+    "target_logo": "666clic-plugin/releases/v0.1.22/assets/clic-logo.png",
+    "remote_target_files_present": false,
+    "remote_upload": "NOT_EXECUTED",
+    "remote_readback": "NOT_EXECUTED",
+    "receipt": "NOT_AVAILABLE",
+    "execute_at_user_local_pc_requires_explicit_public_repo_confirmation": true
+  },
+  "release_gates": {
+    "repo_binary_mirror": "BLOCKED_MISSING_REMOTE_BYTES",
+    "current_provider_original_tar_gz_archive_sha256": "UNKNOWN",
+    "current_provider_logo_sha256": "UNKNOWN",
+    "native_prepublish": "WRITE_BLOCKED",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "host_acceptance": "NOT_VERIFIED"
+  },
+  "continuity": {
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "FOREGROUND_PRESENTATION_SOURCE_ONLY",
+    "foreign_mutations": false
+  },
+  "return_anchor": "RUN_GUARDED_USER_LOCAL_BINARY_BRIDGE_ON_UNCHANGED_HEAD_THEN_VERIFY_REMOTE_EXACT_ARCHIVE_AND_LOGO_SHA256; AFTER_RECEIPT_PERFORM_NATIVE_CLIC_UPDATE; PLUGIN_PROVIDER_ORIGINAL_TAR_GZ_PARITY_REQUIRES_SEPARATE_PROOF"
+}

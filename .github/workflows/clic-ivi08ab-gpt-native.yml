@@ -1,0 +1,31 @@
+name: CLIC IVI08 AB GPT-Native Binding
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.test.mjs'
+      - '.github/workflows/clic-ivi08ab-gpt-native.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source syntax and all visual contract regressions
+        run: |
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-gpt-native-binding.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-github-connector.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-adapter.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-v014.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs
+# This tests a host-neutral UI recipe, not actual ChatGPT host rendering.

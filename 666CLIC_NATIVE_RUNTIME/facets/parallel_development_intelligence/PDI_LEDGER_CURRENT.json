@@ -1,0 +1,93 @@
+{
+  "schema": "CLIC_PDI_STATE_V1",
+  "authority": "WHOLE_666CLIC",
+  "streams": [
+    {
+      "id": "CORE_DEVELOPMENT",
+      "status": "READY",
+      "return_anchor": "CORE_NATIVE_DEVELOPMENT_LAST_VERIFIED",
+      "evidence_refs": [
+        "dashboard/development_progress/development-event-adapter.mjs"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "VISUAL_INTELLIGENCE",
+      "status": "WAITING",
+      "return_anchor": "VISUAL_V014_SOURCE_HOST_PARITY_OPEN",
+      "evidence_refs": [
+        "facets/semantic_visual_intelligence/FACET_CONTRACT.md"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "STARBRIDGE",
+      "status": "WAITING",
+      "return_anchor": "SB05_NATIVE_RECEIPT_COMPATIBILITY_OPEN",
+      "evidence_refs": [
+        "outbox/666PFS/CLIC-STARBRIDGE-SB05-20261017-01.json"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    },
+    {
+      "id": "CODEFORGE_RECOVERY",
+      "status": "WAITING",
+      "return_anchor": "BRIDGE_HOST_AND_PLUGIN_BINARY_PROOF_OPEN",
+      "evidence_refs": [
+        "facets/repository_bridge/FACET_CONTRACT.md"
+      ],
+      "obligations": [],
+      "interruptions": [],
+      "tasks": [],
+      "last_source_head": null
+    }
+  ],
+  "processed_event_ids": [],
+  "no_automatic_foreign_mutation": true,
+  "development_priority": {
+    "policy": "EXPLICIT_USER_ORDER_2026_10_17_NO_SILENT_REORDER",
+    "items": [
+      {
+        "rank": 1,
+        "id": "PDI_LIVE_PERSISTENCE_HOST",
+        "stream": "CORE_DEVELOPMENT",
+        "status": "READ_ONLY_PREFLIGHT_SOURCE_CANDIDATE",
+        "next": "TRUSTED_CONNECTOR_LEDGER_READBACK_THEN_AUTHENTIC_EVENT_CAS_AND_PDI_RECONCILIATION"
+      },
+      {
+        "rank": 2,
+        "id": "STARBRIDGE_SB01_SB05_RECEIPTS",
+        "stream": "STARBRIDGE",
+        "status": "OPEN_NATIVE_RECEIPTS",
+        "next": "REAL_PEER_DELIVERY_RECEIPTS_AND_ADOPTION_READBACK"
+      },
+      {
+        "rank": 3,
+        "id": "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+        "stream": "CODEFORGE_RECOVERY",
+        "status": "PRIVATE_BYTE_READBACK_BLOCKED",
+        "next": "AUTHORIZED_PRIVATE_ARCHIVE_BYTES_INDEPENDENT_SHA256"
+      },
+      {
+        "rank": 4,
+        "id": "PLUGIN_SOURCE_LIVE_PARITY",
+        "stream": "VISUAL_INTELLIGENCE",
+        "status": "LIVE_0_1_22_BEHIND_SOURCE",
+        "next": "FINGERPRINT_AND_APPROVAL_AFTER_PRIOR_GATES"
+      }
+    ],
+    "blocked_policy": "RETAIN_ANCHOR_ADVANCE_NEXT_EXECUTABLE_THEN_RETURN",
+    "actual_host_events_recorded": 0,
+    "real_cas_write_claim": false,
+    "host_acceptance": false
+  }
+}

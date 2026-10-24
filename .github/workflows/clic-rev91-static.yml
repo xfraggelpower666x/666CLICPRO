@@ -1,0 +1,41 @@
+name: 666CLIC Repository-Native Static Guard
+
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+      - '666CLIC_NATIVE_RUNTIME/AUTHORITY_CONTRACT.md'
+      - '666CLIC_NATIVE_RUNTIME/current/REPO_NATIVE_AUTHORITY_AND_RECOVERY.md'
+      - '666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md'
+      - '666CLIC_NATIVE_RUNTIME/tools/rev91_validator.py'
+      - '666CLIC_NATIVE_RUNTIME/tests/test_rev91_validator.py'
+      - '666CLIC_NATIVE_RUNTIME/tools/continuity_recovery_probe.py'
+      - '666CLIC_NATIVE_RUNTIME/tests/test_continuity_recovery_probe.py'
+      - '.github/workflows/clic-rev91-static.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-guard:
+    name: Repository-native fail-closed fixture tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout canonical CLIC branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify offline guard fixtures
+        run: python3 -m unittest discover -s 666CLIC_NATIVE_RUNTIME/tests -p 'test_*.py' -v
+
+# Synthetic/offline only. No Drive, foreign systems, restore, deploy or release writes.
+# A successful workflow run is not P20/P21/Live-Circle/restore acceptance.

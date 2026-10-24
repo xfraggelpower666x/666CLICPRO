@@ -1,0 +1,27 @@
+{
+  "interface": {
+    "displayName": "C.L.I.C.",
+    "shortDescription": "Repository-native CLIC",
+    "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, native Semantic Visual Intelligence, mandatory managed-system visual compliance, GPT-native dashboards and governed plugin parity.",
+    "developerName": "FRAGGELPOWER666 / 666SOUNDsDESIGn",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "skills",
+      "Write"
+    ],
+    "defaultPrompt": "666CLIC SYSTEMSTART",
+    "websiteURL": "https://github.com/xfraggelpower666x/666CLICPRO",
+    "logo": "./assets/clic-logo.png",
+    "composerIcon": "./assets/clic-logo.png"
+  },
+  "apps": "./.app.json",
+  "name": "666clic-native-runtime",
+  "version": "0.1.22",
+  "description": "Native 666CLIC repository-first runtime with causal learning, Semantic Visual Intelligence, mandatory managed-system visual compliance, GPT-native dashboards, relational rehydration, audits and evidence-first surfaces.",
+  "author": {
+    "name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

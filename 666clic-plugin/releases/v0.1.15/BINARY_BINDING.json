@@ -1,0 +1,20 @@
+{
+  "schema": "CLIC_BINARY_ASSET_BINDING_V1",
+  "status": "VERIFIED_CAUSAL_BINARY_BINDING",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "version": "0.1.15",
+  "release_id": "pluginrel_6ac69d1c913c81918aca4a6f40113616",
+  "asset_path": "assets/clic-logo.png",
+  "source_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+  "source_size_bytes": 2929725,
+  "live_reported_size_bytes": 2929725,
+  "publication_source": "EXACT_USER_DESIGNATED_OFFICIAL_LOGO",
+  "publication_path": "HOST_UPLOADED_PLUGIN_OVERLAY",
+  "direct_live_binary_hash_readback": "UNAVAILABLE",
+  "repo_binary_copy": "NOT_PRESENT",
+  "causal_binding": "VERIFIED",
+  "pfs_backup_readback_required": {
+    "extracted_sha256_must_equal": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "extracted_size_must_equal": 2929725
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "CLIC_CARD_FORCE_HOST_RELEASE_READBACK_V1",
+  "status": "SOURCE_VERIFIED_LIVE_PLUGIN_UNCHANGED",
+  "provider": "PLUGIN_CREATOR_DIRECT_METADATA_AND_FILE_INVENTORY",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "version": "0.1.22",
+  "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "card_skill_live": false,
+  "force_skill_live": false,
+  "card_source_repo": "666clic-plugin/source/skills/666clic-card/SKILL.md",
+  "force_source_repo": "666clic-plugin/source/skills/666clic-force/SKILL.md",
+  "logo_provider_size_bytes": 2929725,
+  "logo_actual_sha256": "UNKNOWN_NOT_READ",
+  "archive_metadata_available": true,
+  "archive_bytes_retrieved": false,
+  "archive_download": "ENVIRONMENT_BLOCKED",
+  "host_trigger_acceptance": "NOT_PERFORMED_SKILLS_NOT_LIVE",
+  "inbox_live_integration": "UNPROVEN_SOURCE_ADAPTER_ONLY",
+  "live_release_performed": false,
+  "recovery_49_files": "PRESERVED",
+  "foreign_mutations": false,
+  "return_anchor": "BYTE_EXACT_RELEASE_ARCHIVE_PROVENANCE_AND_HOST_GATED_CONTROLLED_PLUGIN_RELEASE"
+}

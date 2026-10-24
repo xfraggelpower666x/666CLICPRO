@@ -1,0 +1,332 @@
+{
+  "bridge_version": "0.2.0",
+  "source_archive": "Cyberpunk-System-Doctor-Duo-v2.1-REPARIERT.zip",
+  "source_archive_sha256": "85bfff5f123d913cfb67bce859e197dfa96ccb16bfaf2d4ed1e2479f20c4f84e",
+  "archive_entry_count": 422,
+  "archive_integrity": "PASS_ZIPFILE_TESTZIP",
+  "target_repo": "xfraggelpower666x/666CLICPRO",
+  "target_branch": "clic-migration-rev79-staging",
+  "mode": "ASSET_BRIDGE_READ_ONLY_NO_AUTOPUSH",
+  "asset_count": 78,
+  "validated_extended_sprite_sha256": "accb63f58b97761db070daf49bf889553ca6a377d16bb84a37b303b4899abca1",
+  "files": {
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/00.png": {
+      "sha256": "d7fc1e730f88da3799fd9930c1c8e22c3371a6285b9697688373b6f76d3d995f",
+      "bytes": 49790
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/01.png": {
+      "sha256": "1e746a014f91f05e33b388bd678cbb2c994fd40b2067d5649254cadca5b10385",
+      "bytes": 46978
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/02.png": {
+      "sha256": "58c61f6cd99f2830e6b7bd0cd3a3cde281990e621c94fd9a5a20ca18f5bdb8e2",
+      "bytes": 45153
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/03.png": {
+      "sha256": "8e1bf25ff4a93c32370fd1476f341bfcb1e73263db9adc46a1ef48eefc03f1c2",
+      "bytes": 43617
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/04.png": {
+      "sha256": "391149012320813f95ddaa7849a0be0226eff31f8e0cc8bbe3520a101c02e2b5",
+      "bytes": 39785
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/05.png": {
+      "sha256": "16d53666cd34ef93300730f015d20d4172f6980e19f4cb8abc54975ece76c053",
+      "bytes": 42724
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/06.png": {
+      "sha256": "07ec08b80c48010806b9e69fb1c9a1ef8ecf1d22d823e490754cf609b387376b",
+      "bytes": 45850
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/failed/07.png": {
+      "sha256": "99545db83bd5d37d3415dd77a7fb53c89e709364653becfb86d1f9f3ec15d8b4",
+      "bytes": 47898
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/00.png": {
+      "sha256": "246ab35c881219e387452959ad0d529fd2832ad41ea74f44bef85f3400574d04",
+      "bytes": 53185
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/01.png": {
+      "sha256": "6c7aeaf3e44849745a8bab1955753d8b0dab0d3d726aaade4912009745bf2ff5",
+      "bytes": 53162
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/02.png": {
+      "sha256": "a904f595cba9135e972dbe0fc39ff840f2f22a6dec371dd81240bdfe8ab30e48",
+      "bytes": 53393
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/03.png": {
+      "sha256": "2699564db43ee8a4ddfa4f2ace639a57c09ae82c5042ab7a56052f3be86afeed",
+      "bytes": 53709
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/04.png": {
+      "sha256": "cc889857a133045575955e3880ef5e0d0ed1c662804271e37fce89c7fd1e17d7",
+      "bytes": 53325
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/idle/05.png": {
+      "sha256": "33c768022c3b0c325da15acd1b68206e0d4b4c4e6c780a0f92267b7654af4743",
+      "bytes": 53079
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/jumping/00.png": {
+      "sha256": "91240b515a2f4c92f7f51e17fab5eac365c07f161ff611e18e248c957dc65786",
+      "bytes": 34095
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/jumping/01.png": {
+      "sha256": "465ccde8d8ff80c6d647a14b57fb8264ac443b4808667eb3ef8243dd24272d19",
+      "bytes": 35515
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/jumping/02.png": {
+      "sha256": "965343e88f3fff0b55425853bffc23b6faca9ff798b5e1f593c34f1951313dd3",
+      "bytes": 35830
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/jumping/03.png": {
+      "sha256": "1bd96cc0f2bd1d985816aa7c0fb4e48a4a710e2d2c1d919417ee2e6ada35f722",
+      "bytes": 35636
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/jumping/04.png": {
+      "sha256": "7025d0bc22fc6e57c4615542ea4fe8fc554f9465918f19a5dea4bc22ef7176ad",
+      "bytes": 34730
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/00.png": {
+      "sha256": "81b7855e6d8ce272461254cfbe97041488189db67fedd04d53c4ec3a1162bae5",
+      "bytes": 51891
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/01.png": {
+      "sha256": "fceab1f57fd2b63b91e09bfdd3da7ddf2e3d14c91283f0edac9ca782b83018f9",
+      "bytes": 50210
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/02.png": {
+      "sha256": "6a43dc979891a69994869fcef5db83473e5490adf96374ffe0f312f374808771",
+      "bytes": 49965
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/03.png": {
+      "sha256": "12cf6eadcce3a8b35a708285ae30e810170ea193f00516cb0e1b4b9e7124bb47",
+      "bytes": 49464
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/04.png": {
+      "sha256": "a9e2181cf78df97e1dca2c17ccd9edb8ae36b04e2faeb27ecd06e7112cb7e3c3",
+      "bytes": 48377
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/review/05.png": {
+      "sha256": "20813b583dd871459b1708402e37b6272968cb4cf4b53ac3586d3682eec5c5be",
+      "bytes": 49221
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/00.png": {
+      "sha256": "073d7317b6314158a8fdcfddc024a317660a041e3cf6744278b26cdecbb9061e",
+      "bytes": 48648
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/01.png": {
+      "sha256": "091eab711df71afe4ec27526419519c24d3cde0eb98e0765c90c39030012e42a",
+      "bytes": 48568
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/02.png": {
+      "sha256": "4b6e21f5817d2ab0b1444bff9105c4d5f3557d2e5b05959e8cde9395e66fabdb",
+      "bytes": 47856
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/03.png": {
+      "sha256": "e93544ff521c229cfbd39cdcd23da926ef4c5bd3832675bf573c9fbee28ab062",
+      "bytes": 48776
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/04.png": {
+      "sha256": "e8bf26c84cffb8ea4a9b0acb6d2f02d32e5e2d30d83c3aa1495bd50e60407f73",
+      "bytes": 48469
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running/05.png": {
+      "sha256": "2dcea2bdf70ccc45354149f026bdf2f9da9234d7fc194b2006fb4444d5acbd4b",
+      "bytes": 48605
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/00.png": {
+      "sha256": "ee54ae52e1ced65c1de4bd1cbd102437a4293ed810372ad5438f4041cce3b8d8",
+      "bytes": 50604
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/01.png": {
+      "sha256": "14bc78faeef3d313f8c2e19cbfa62c09252d9d6be26f709de491408d9e87da6d",
+      "bytes": 46791
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/02.png": {
+      "sha256": "1ac2ed22e63f20fc658d250688d5b92dd27bf6d955008893414c3a084f6a932d",
+      "bytes": 51934
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/03.png": {
+      "sha256": "993842828734a2ae5acc7eb3f206e9e93512992d85d91f29610bf03a04a510b3",
+      "bytes": 46756
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/04.png": {
+      "sha256": "f2cda22a6a9efdcd5470b5aeadaef6a176b016b263c6d2fcc85eb2d22cb91f89",
+      "bytes": 49856
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/05.png": {
+      "sha256": "3d034a16451e4bfea196c5f1312533259072c59dfcca8259942efaabe5410a88",
+      "bytes": 48864
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/06.png": {
+      "sha256": "6cd292aa1decd13806665323cc70716bea7e77cfc4c6327769e24c767673cac8",
+      "bytes": 50215
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-left/07.png": {
+      "sha256": "f3c359715bf8ececa2b0ec53d60b5ba56dc07aacaea15ee3612181301912660f",
+      "bytes": 46449
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/00.png": {
+      "sha256": "f46d097e1e2e8f91513d3050c42c1903dd962d7d16d62d5cafbb5fc61844471d",
+      "bytes": 49940
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/01.png": {
+      "sha256": "176735bba5e7fdf7c9d299ecd456efe0acb35ff4f27eeae6218fd106fe69d1d9",
+      "bytes": 49738
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/02.png": {
+      "sha256": "b34a2226d75fd97da2a98774c5a3992dbcc8adc766e8c72031e0c945bec97703",
+      "bytes": 48161
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/03.png": {
+      "sha256": "97ae68b88e38e03027299e242309d8f3360c1e9e51692a250c8529874ef77d5f",
+      "bytes": 50649
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/04.png": {
+      "sha256": "21f40a801b443a278fb0105553ff095cf842a298bb9e30387442c7ab9c3a9788",
+      "bytes": 48695
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/05.png": {
+      "sha256": "d9ade2b047e5a7539044cb92620498e9660f54beb9c313fd3a75fd81e05c40c7",
+      "bytes": 47828
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/06.png": {
+      "sha256": "49c732fd53df9c730e04c3b0c29c377dcab22b056012da4f69a778ed9cf797d0",
+      "bytes": 47641
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/running-right/07.png": {
+      "sha256": "543ad77a21ad02a7f514174fa5cb823fd4a61946db734568507cde7255ecbfcc",
+      "bytes": 49835
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/00.png": {
+      "sha256": "58e8f4b2a91cf613c8a80fccba1906ea1be9caf20c24a33e39de03cfd0caa521",
+      "bytes": 51927
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/01.png": {
+      "sha256": "06aa349803c1faa5ba23dcfafc76dcc79bb05a5ac58ed420b0f7a65af5df4007",
+      "bytes": 48389
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/02.png": {
+      "sha256": "d78fc146e269ee11afeafb16649a8ecd0346cedb12d898fe1b79f944eeacb5d6",
+      "bytes": 53659
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/03.png": {
+      "sha256": "f31d014e8b6e214083347da8fb802c62d3e124eb4ac9806e5b8c19224bf083e4",
+      "bytes": 53774
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/04.png": {
+      "sha256": "8ef599bb6040eacf17f1291dbdbecdcc6bef763d5ee559e09147077f4c6e138a",
+      "bytes": 47792
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waiting/05.png": {
+      "sha256": "bfb757ac8f7e154de6cfb3187c6d017e05aaef451a3ce12c734a2a498e4c9e31",
+      "bytes": 51003
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waving/00.png": {
+      "sha256": "f99a31144293ee9cc6abcf2cb07baa5ea214e052c7113b2bf0250418a10c68cd",
+      "bytes": 58123
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waving/01.png": {
+      "sha256": "6bd53cf8c12c8e0c4e3c5922405a33e29e1d78c2aa2c80dad0773e0e7a68bc1c",
+      "bytes": 58692
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waving/02.png": {
+      "sha256": "60ee1951dbb28e07527b3383000161c30a7015d8e3c1c0b755ebf993f4804cd9",
+      "bytes": 58193
+    },
+    "CLIC_PET/assets/duo-v2.1/final/frames/waving/03.png": {
+      "sha256": "13493fb1855880c1064d9f81474c321ed5d712aaa87209626915119e3520bd45",
+      "bytes": 58910
+    },
+    "CLIC_PET/assets/duo-v2.1/final/spritesheet-extended.png": {
+      "sha256": "accb63f58b97761db070daf49bf889553ca6a377d16bb84a37b303b4899abca1",
+      "bytes": 3500065
+    },
+    "CLIC_PET/assets/duo-v2.1/final/spritesheet-standard.png": {
+      "sha256": "e820ca99dfaffc0f67a085a568e21875eaf2d93da5726bdf7d9cc20af4d766cf",
+      "bytes": 2682130
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/all-states.gif": {
+      "sha256": "e82acdb708758a63d366c506b8a6ec00c63ff2ae9c6a9b7ed60dc82898c4e4d7",
+      "bytes": 816751
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/animation-stills.png": {
+      "sha256": "299e9aa888f4f707ad4f245abb4bfd2bd761d0da817dac56666c22fcc10b531d",
+      "bytes": 174113
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/failed.gif": {
+      "sha256": "83d51aff29924165e5a557b81c8307f09b6e4731d11424fe628b01cbac5541a9",
+      "bytes": 110056
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/idle-jump-idle.gif": {
+      "sha256": "c92abd29ce43a28349ad803a283bb6ef010d7f35c37ca12f885c943d9ca84f94",
+      "bytes": 241368
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/idle.gif": {
+      "sha256": "6b0f9c9bcac562a0460a94cf61ef62b26427af97fbb841b4375f84f8f4577466",
+      "bytes": 93414
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/jumping.gif": {
+      "sha256": "3c4913744be05450a2481ea39bc4fecb0ca4331dc513b0237298850f14036f79",
+      "bytes": 54606
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/look-loop.gif": {
+      "sha256": "a065059acbc47f8d11e52d0183164fe253cb3a28593f5da651408b6071a3d639",
+      "bytes": 226255
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/preview-manifest.json": {
+      "sha256": "62979f301f6dfdc88de4b54883d2abe36364c16c28071f49f5d73906e17f63a3",
+      "bytes": 496
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/review.gif": {
+      "sha256": "74c95216fa754f94f66359b3eff468159d7a522dca9cdd025ce0ce2fb78a1a68",
+      "bytes": 88494
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/running-left.gif": {
+      "sha256": "143aa9dd194164e3940f9bcb4e2494352af4d24944422c7e7365565476df90ef",
+      "bytes": 113377
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/running-right.gif": {
+      "sha256": "1ced605f2158c0b5fe19098b40766f2298cb6584caa70ec1ddf71260dff8988c",
+      "bytes": 113671
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/running.gif": {
+      "sha256": "f5e8c0d4f9cc9b8e34bd8212bfd51640c26df032e874e3464f831facd5643767",
+      "bytes": 86722
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/waiting.gif": {
+      "sha256": "bf700bb11d8ad09a7ceae38dbb522bf2f3d839dd0dabbd3ce262e8746646c24b",
+      "bytes": 89606
+    },
+    "CLIC_PET/assets/duo-v2.1/final/previews/waving.gif": {
+      "sha256": "b25e928dd45caf9af275229f2265c6181fedd78c68d06a99889717fb900841ea",
+      "bytes": 67069
+    },
+    "CLIC_PET/provenance/source/README_DE.md": {
+      "sha256": "5aadbaa4911379dd90416ec08562637e95aa5ad99e0c079244277a95a36133be",
+      "bytes": 1883
+    },
+    "CLIC_PET/assets/duo-v2.1/final/pets-preflight.json": {
+      "sha256": "b8f4cdea5f4f06478c47591441e6320d61cf7e2ee3611da2e376ff9f0892d883",
+      "bytes": 298
+    },
+    "CLIC_PET/assets/duo-v2.1/final/validation-extended.json": {
+      "sha256": "17e58ade103e71f346889cae976a09a91d2381e31514e9de3bdfd2fb598756ec",
+      "bytes": 18283
+    },
+    "CLIC_PET/assets/duo-v2.1/final/update-receipt.json": {
+      "sha256": "1da90c66e0d8a9e5cd2c99fdf4a7ffe2b979cce6d31c41443c5590225407dbeb",
+      "bytes": 580
+    },
+    "CLIC_PET/provenance/source/frames/frames-manifest.json": {
+      "sha256": "05c8daf70460fec728a9b7f97c9fcb8a7b7b50162b6d1037c3fac9152ad04fae",
+      "bytes": 5553
+    }
+  },
+  "caveats": [
+    "No CLIC Junior current pointer was verified",
+    "Original GPT Pet update receipt is source evidence, not proof of CLIC integration",
+    "No code automatically activates worker/plugin/livecircle",
+    "This package excludes rejected sources and original images outside final selection"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "CLIC_NEON_VISUAL_NOTICE_REGISTRY_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "PREPARED_NOT_DELIVERED",
+  "visual_contract": "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/UNIFIED_NEON_VISUAL_CONTRACT.md",
+  "developer_contract": "666CLIC_NATIVE_RUNTIME/dashboard/UNIFIED_NEON_DEVELOPER_DASHBOARD_CONTRACT.md",
+  "pet": "PAUSED_NO_MUTATION",
+  "delivery_requires_external_ack": true,
+  "adoption_requires_native_trigger": true,
+  "host_verified_requires_real_host_render": true,
+  "notices": [
+    {
+      "id": "CLIC-NEON-LYVRA-20261009",
+      "target": "LYVRA",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "PET_PAUSED_DEFERRED",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666PFS_CSM-20261009",
+      "target": "666PFS_CSM",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666PFS_CSM/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666STREAM-20261009",
+      "target": "666STREAM",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666LINGUA-20261009",
+      "target": "666LINGUA",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666LINGUA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666TDH-20261009",
+      "target": "666TDH",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666TDH/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666CLS-20261009",
+      "target": "666CLS",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    },
+    {
+      "id": "CLIC-NEON-666MIRA-20261009",
+      "target": "666MIRA",
+      "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666MIRA/CLIC_UNIFIED_NEON_VISUAL_DEVELOPMENT_PROPOSAL_2026-10-09.md",
+      "state": "PREPARED",
+      "receipts": [],
+      "native_authority_ref": null,
+      "target_readback_ref": null,
+      "host_render_evidence": null,
+      "pet_scope": "NO_PET_MUTATION",
+      "return_trigger": "TARGET_NATIVE_UPDATE_REQUIRED"
+    }
+  ]
+}

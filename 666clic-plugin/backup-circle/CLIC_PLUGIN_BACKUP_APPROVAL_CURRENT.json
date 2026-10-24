@@ -1,0 +1,121 @@
+{
+  "schema": "CLIC_PLUGIN_BACKUP_APPROVAL_v1",
+  "status": "SUPERSEDED_BY_V0_1_22_SNAPSHOT_APPROVAL_PENDING_LIVE_REVALIDATION",
+  "approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-023",
+  "owner_system": "666CLIC",
+  "target_executor": "666PFS",
+  "source_notice": {
+    "system": "LYVRA",
+    "schema": "LYVRA_TO_CLIC_COUPLED_PLUGIN_BACKUP_NOTICE_v2",
+    "source_head": "d3ea7301555099e8e8f885eb91d6d927d400cf2d",
+    "source_notice_sha": "c1df0e212163d6be6cd498dce3cbc80dda73e011"
+  },
+  "exact_release": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.20",
+    "release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726"
+  },
+  "clic_authority": {
+    "repository": "xfraggelpower666x/666CLICPRO",
+    "branch": "clic-migration-rev79-staging",
+    "semantic_authority_head": "bc4157106ab7518f0336642e1b62ca9716fc163e"
+  },
+  "plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
+  "immutable_snapshot": "666clic-plugin/releases/v0.1.20",
+  "source_parity": "PASS_23_OF_23_TEXT_PLUS_VERIFIED_CAUSAL_BINARY_BINDING",
+  "semantic_parity": "VERIFIED_CURRENT_RUNTIME_SCOPE",
+  "approved_scope": "PLUGIN_BACKUP_WITH_HASH_AND_READBACK_RECEIPT",
+  "freshness_race_guard": "SUPERSEDED_IF_RUNTIME_PLUGIN_STATE_FINGERPRINT_CHANGES_OR_CANNOT_BE_REVERIFIED",
+  "restore_rule": "RECOVERY_CANDIDATE_ONLY_REQUIRES_CURRENT_RUNTIME_IMPACT_CHECK",
+  "pfs_execution_status": "BLOCKED_PENDING_DIRECT_LIVE_RELEASE_READBACK_AND_NEW_FINGERPRINT",
+  "backup_write_status": "PENDING",
+  "backup_readback_status": "PENDING",
+  "receipt_status": "PENDING",
+  "lyvra_approval_for_clic": false,
+  "pfs_self_approval": false,
+  "authority_transfer": false,
+  "foreign_mutation": false,
+  "execution_allowed": false,
+  "reissue_required": true,
+  "transaction_tail_writes": [
+    "APPROVAL_CARRIER",
+    "ROOT_POINTER"
+  ],
+  "superseded_by": {
+    "plugin_version": "0.1.11",
+    "release_id": "pluginrel_6ac68de349a88191996787ed7da86b10",
+    "display_name": "C.L.I.C.",
+    "logo_path": "assets/clic-logo.png",
+    "reason": "VALID_NEWER_LIVE_PLUGIN_EVOLUTION_WITH_BINARY_ASSET_NOT_YET_REPO_BYTE_VERIFIED"
+  },
+  "supersession_body_head": "d3084ca886afcfce848fe651b05ace817b098a65",
+  "binary_parity_evidence": "666CLIC_NATIVE_RUNTIME/migration/PLUGIN_V0_1_12_LOGO_ALIGNMENT_2026-10-07.md",
+  "binary_parity": {
+    "live_asset_path": "assets/clic-logo.png",
+    "official_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "official_logo_size_bytes": 2929725,
+    "live_reported_size_bytes": 2929725,
+    "live_alignment": "VERIFIED_BY_EXACT_UPLOAD_SOURCE_PLUS_POST_UPDATE_SIZE_READBACK",
+    "repo_binary_mirror": "PENDING",
+    "full_source_parity": "PARTIAL"
+  },
+  "binary_binding": {
+    "manifest": "666clic-plugin/releases/v0.1.20/BINARY_BINDING.json",
+    "path": "assets/clic-logo.png",
+    "sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "size_bytes": 2929725,
+    "status": "VERIFIED_CAUSAL_BINARY_BINDING",
+    "pfs_must_verify_extracted_hash_and_size": true
+  },
+  "hybrid_snapshot_status": "VERIFIED",
+  "runtime_plugin_state_fingerprint": {
+    "algorithm": "SHA256_CANONICAL_JSON_V1",
+    "value": "5bb3ced2117c3a81f4bda70a16d40233d97d2530d42e74fb68f15a44217820a9",
+    "inputs": {
+      "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+      "plugin_version": "0.1.20",
+      "plugin_release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
+      "repo_text_source_tree_sha": "e415a0548c0a81ad754205479529bb0816e8365b",
+      "binary_binding_manifest_sha": "51f543d02210ff63fbaa47646b33b8ff6c90127e",
+      "runtime_semantic_body_head": "bc4157106ab7518f0336642e1b62ca9716fc163e",
+      "plugin_current_semantic_class": "VERIFIED_HYBRID_SNAPSHOT"
+    }
+  },
+  "approval_freshness_model": "RUNTIME_PLUGIN_STATE_FINGERPRINT",
+  "head_change_ne_automatic_supersession": true,
+  "fingerprint_change_supersedes": true,
+  "governance_only_head_advance_may_preserve_after_direct_revalidation": true,
+  "pfs_round_context": {
+    "round_id": "PFS-MANAGED-PLUGIN-ROUND-2026-10-08-R02",
+    "pfs_source_head": "364339e440ef03273a519b3dabf8e8c19e0c236a",
+    "clic_response": "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_RESPONSE_PFS_MANAGED_PLUGIN_ROUND_R02_2026-10-08.md",
+    "final_execution_revalidation_required": true
+  },
+  "new_chat_context": {
+    "handoff": "666CLIC_NATIVE_RUNTIME/continuity/NEW_CHAT_CURRENT.json",
+    "next_chat_instruction": "666CLIC SYSTEMSTART",
+    "handoff_creation_ne_fresh_chat_acceptance": true
+  },
+  "last_reconciliation": {
+    "date": "2026-10-08",
+    "prior_approval_id": "CLIC-PFS-PLUGIN-BACKUP-2026-10-08-023",
+    "lyvra_approval_id": "LYVRA-PFS-PLUGIN-BACKUP-2026-10-08-045",
+    "lyvra_head": "1b278248d7c759827be110c744b38a0391c500c5",
+    "pfs_round": "PFS-MANAGED-PLUGIN-ROUND-2026-10-08-R02",
+    "reason": "CLIC_CARD_AND_HANDOFF_BODY_ADVANCED_FINGERPRINT_NOT_RECOMPUTED",
+    "next": "REVALIDATE_PLUGIN_RUNTIME_STATE_FINGERPRINT_THEN_NATIVE_REISSUE",
+    "backup_written": false,
+    "readback": false,
+    "receipt": false
+  },
+  "latest_snapshot_2026_10_08": {
+    "snapshot": "666clic-plugin/releases/v0.1.22",
+    "source_git_tree_sha": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "source_blob_parity": "PASS_27_OF_27",
+    "snapshot_files": 29,
+    "binary_parity": "VERIFIED_CAUSAL_BINARY_BINDING_ONLY",
+    "direct_live_release_readback": "NOT_PERFORMED",
+    "new_approval": "NOT_ISSUED",
+    "prior_approval": "023_FOR_V0_1_20_SUPERSEDED"
+  }
+}

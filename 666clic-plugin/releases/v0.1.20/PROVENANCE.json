@@ -1,0 +1,19 @@
+{
+  "plugin_name": "666clic-native-runtime",
+  "display_name": "C.L.I.C.",
+  "version": "0.1.20",
+  "release_id": "pluginrel_6ac6bcf153c881919715b6bc3028e726",
+  "text_source_tree_sha": "e415a0548c0a81ad754205479529bb0816e8365b",
+  "text_source_parity": "PASS_23_OF_23",
+  "binary_binding_manifest": "BINARY_BINDING.json",
+  "binary_binding_status": "VERIFIED_CAUSAL_BINARY_BINDING",
+  "hybrid_snapshot_status": "VERIFIED",
+  "local_adaptive_learning": true,
+  "gpt_native_visual_interface": true,
+  "visual_learning_base": "SEMANTIC_CYBER_FIELD_V01.2_LOCAL_EXTENSION_V01.3",
+  "direct_live_binary_hash_readback": "UNAVAILABLE",
+  "repo_binary_copy": "NOT_PRESENT",
+  "repo_current_remains_authority": true,
+  "plugin_is_authority": false,
+  "no_fake_repo_byte_parity": true
+}

@@ -1,0 +1,10 @@
+import {test} from "node:test";import assert from "node:assert/strict";import {inspectNativeProducerBinding} from "../src/native-producer-gate.mjs";
+const sha="a".repeat(40);const good={parentSystem:"666CLIC",clicCurrentHead:sha,clicCurrentReadback:true,juniorSource:"native-current",juniorCurrentHead:sha,juniorCurrentReadback:true,nativeAuthorityApproval:true,scopedReadPermission:true,signedProducerBound:true,trustedKeyBindingReadback:true,actorIsolationProven:true,actor:"JUNIOR",exactRevisionBinding:true,antiReplayAcceptance:true,budgetDurableObjectBound:true,budgetLiveReadback:true,workerLiveDeployment:true,workerEndpointReadback:true,visualHostAcceptance:true};
+test("default blocked and never claims connected",()=>{const r=inspectNativeProducerBinding();assert.equal(r.status,"BLOCKED");assert.equal(r.connected,false)});
+test("signed verifier present is not signed producer",()=>{const r=inspectNativeProducerBinding({...good,signedProducerBound:false});assert.ok(r.blockers.includes("SIGNED_PRODUCER_OR_KEYS_UNBOUND"))});
+test("missing Junior native authority is blocked",()=>assert.ok(inspectNativeProducerBinding({...good,juniorCurrentReadback:false}).blockers.includes("JUNIOR_NATIVE_CURRENT_UNVERIFIED")));
+test("joint actor requires joint authority",()=>assert.ok(inspectNativeProducerBinding({...good,actor:"JOINT"}).blockers.includes("ACTOR_AUTHORITY_NOT_PROVEN")));
+test("fake worker code is not live deployment",()=>assert.ok(inspectNativeProducerBinding({...good,workerLiveDeployment:false}).blockers.includes("WORKER_RUNTIME_NOT_VERIFIED")));
+test("unverified visual host is blocked",()=>assert.ok(inspectNativeProducerBinding({...good,visualHostAcceptance:false}).blockers.includes("PET_APP_VISUAL_HOST_NOT_ACCEPTED")));
+test("foreign mutation is prohibited",()=>assert.ok(inspectNativeProducerBinding({...good,foreignMutation:true}).blockers.includes("FOREIGN_MUTATION_FORBIDDEN")));
+test("all inputs true produce eligibility, never auto connection",()=>{const r=inspectNativeProducerBinding(good);assert.equal(r.status,"ELIGIBLE_FOR_OWNER_FINAL_ACCEPTANCE");assert.equal(r.connected,false);assert.equal(r.deploy,false)});

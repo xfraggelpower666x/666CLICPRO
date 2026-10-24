@@ -1,0 +1,31 @@
+name: CLIC IVI08 Host Evidence Boundary
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-evidence-gate.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-adapter.mjs'
+      - '666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-adapter.test.mjs'
+      - '.github/workflows/clic-ivi08-host-boundary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check source and run legacy and IVI08 tests
+        run: |
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-evidence-gate.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-adapter.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-host-adapter.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/interactive-visual-v014.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/dashboard/verified-visual-presenter.test.mjs
+# Synthetic caller-provided readback fixtures, no authenticated GitHub remote or GPT host execution.

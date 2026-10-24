@@ -1,0 +1,56 @@
+{
+  "schema": "CLIC_PRIVATE_PROVIDER_ARCHIVE_BRIDGE_GATE_V1",
+  "authority": "WHOLE_666CLIC",
+  "status": "SOURCE_BYTES_AND_PRIVACY_GUARD_CI_VERIFIED_REMOTE_TRANSFER_WRITE_BLOCKED",
+  "prechange_backup": "backup/clic-pre-private-provider-binary-bridge-guard-20261017",
+  "source": {
+    "kind": "USER_UPLOADED_ORIGINAL_PLUGIN_CREATOR_TARGZ",
+    "archive_bytes": 2941803,
+    "archive_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "git_blob_sha1": "0f73e4906a96bdf20bfe60d9152e2d03f56a479b",
+    "base64_expected_chars": 3922404,
+    "regular_file_count": 28,
+    "logo_bytes": 2929725,
+    "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d"
+  },
+  "source_provider": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "scope": "USER_PRIVATE",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186"
+  },
+  "target": {
+    "repository": "xfraggelpower666x/666CLICPRO",
+    "branch": "clic-migration-rev79-staging",
+    "visibility": "PUBLIC_INDEPENDENT_GITHUB_REPO_METADATA",
+    "proposed_path": "666clic-plugin/binary-backups/v0.1.22/provider-original/workspace-plugin-p0fda2cg.tar.gz",
+    "binary_target_present": false
+  },
+  "existing_bridge": "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/FACET_CONTRACT.md",
+  "input_adapter": "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/binary-github-input-adapter.mjs",
+  "github_connector_methods_available": [
+    "create_blob",
+    "create_tree",
+    "create_commit",
+    "update_ref",
+    "fetch_blob"
+  ],
+  "sandbox_external_github_network": "DNS_UNAVAILABLE",
+  "host_local_file_bytes_bridge_to_connector": "NOT_VERIFIED",
+  "privacy_rule": "PRIVATE_PROVIDER_ARCHIVE_TO_PUBLIC_CLIC_REPO_FORBIDDEN",
+  "target_visibility_spoof_guard": true,
+  "adapter_ci_run": 39000834003,
+  "adapter_ci": "SUCCESS",
+  "remote_import_performed": false,
+  "remote_commit": null,
+  "remote_blob_sha": null,
+  "independent_remote_byte_sha256_readback": false,
+  "host_test": "NOT_PROVEN",
+  "plugin_release": "UNCHANGED_0.1.22",
+  "next": "OBTAIN_AUTHORIZED_PRIVATE_REPOSITORY_OR_PRIVATE_BACKUP_STORAGE_THEN_REVERIFY_CONNECTOR_BRIDGE_BYTE_TRANSFER_WITH_NEW_APPROVAL",
+  "no_second_bridge": true,
+  "no_foreign_mutation": true,
+  "pet": "PAUSED",
+  "junior": "PRESERVED",
+  "return_anchor": "PRIVATE_PROVIDER_BINARY_SOURCE_VALIDATED_PUBLIC_REPO_WRITE_BLOCKED_USE_EXISTING_BRIDGE_AFTER_PRIVATE_DESTINATION_AUTHORIZATION"
+}

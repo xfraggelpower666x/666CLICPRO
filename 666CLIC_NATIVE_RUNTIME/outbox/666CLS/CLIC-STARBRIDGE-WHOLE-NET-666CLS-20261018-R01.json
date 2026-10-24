@@ -1,0 +1,70 @@
+{
+  "schema": "CLIC_STARBRIDGE_PDI_TARGET_SPECIFIC_PROPOSAL_V1",
+  "handoff_id": "CLIC-STARBRIDGE-WHOLE-NET-666CLS-20261018-R01",
+  "source_system": "666CLIC",
+  "target_system": "666CLS",
+  "source_repository": "xfraggelpower666x/666CLICPRO",
+  "source_branch": "clic-migration-rev79-staging",
+  "source_base_head": "fabbee6fd0c76ff6d2e6d42c54e987428de336fe",
+  "source_handoff": {
+    "handoff_id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
+    "repository": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+    "branch": "lyvra",
+    "source_head": "a485333c76dfd3420aaf6f98f517203d659cb790",
+    "observed_live_head": "4db2e54fc294d8b6ab133706f071651eb1c6e2a7",
+    "path": "LYVRA_NATIVE_RUNTIME/continuity/development_exchange/LYVRA_TO_CLIC_SUPERCODEFORGE_STARBRIDGE_20261018_R01.json",
+    "blob": "84b139648074233b058157a05836d60594a7b4ed"
+  },
+  "classification": "CLIC_OWNED_TARGET_SPECIFIC_PREPARED_PROPOSAL",
+  "target_role": "Independent system: assess existing presentation/receipt adaptation only after direct current verification",
+  "proposal_mode": "RECEIPT_PATTERN_CANDIDATE",
+  "existing_channel_evidence": "Existing CLS outbox and CLIC understanding card",
+  "managed_visual_status": "PARTIAL_STRUCTURAL_ONLY_CLIC_REGISTER",
+  "source_verification": "REGISTERED_CARD_ONLY_TARGET_CURRENT_NOT_FRESHLY_READ",
+  "source_current_verification_required_before_delivery": true,
+  "scope": {
+    "type": "SEMANTIC_EVIDENCE_EXCHANGE_ONLY",
+    "capability": "LYVRA_SUPERCODEFORGE_READ_ONLY_CAPABILITY_PROPOSAL",
+    "transport": "EXISTING_STARBRIDGE_PDI_NATIVE_REPO_REFERENCES",
+    "reuse": [
+      "STARBRIDGE_SB04_DELIVERY_EVIDENCE",
+      "STARBRIDGE_SB05_PFS_PREPARED",
+      "PDI_NATIVE_WORKSTREAM",
+      "EXISTING_REPO_PEER_CHANNEL"
+    ],
+    "no_new_router": true,
+    "no_new_controller": true,
+    "no_foreign_automation": true,
+    "no_runtime_module_injection_claim": true
+  },
+  "receipt_contract": {
+    "expected_target_native_receipt_id": "666CLS-CLIC-WHOLE-NET-20261018-R01-RECEIPT",
+    "expected_handoff_id": "CLIC-STARBRIDGE-WHOLE-NET-666CLS-20261018-R01",
+    "require_native_current_head": true,
+    "require_native_commit_tree_blob": true,
+    "require_receive_decision": true,
+    "require_host_proof_separately": true,
+    "receipt_path": null,
+    "receipt_sha": null
+  },
+  "gates": {
+    "source": "CLIC_PREPARED_PENDING_DIRECT_COMMIT_READBACK",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "lyvra_executor": "BLOCKED_HANDLE_INJECTION"
+  },
+  "safeguards": {
+    "native_decision_authority": "666CLS",
+    "foreign_writes": false,
+    "foreign_autoactivation": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "original_clic_priority_order": [
+      "PDI_LIVE_PERSISTENCE_HOST",
+      "STARBRIDGE_SB01_SB05_RECEIPTS",
+      "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+      "PLUGIN_SOURCE_LIVE_PARITY"
+    ]
+  }
+}

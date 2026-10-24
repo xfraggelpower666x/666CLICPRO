@@ -1,0 +1,26 @@
+{
+  "schema": "CLIC_LYVRA_SOURCE_INTAKE_EVIDENCE_V1",
+  "owner": "666CLIC",
+  "classification": "SOURCE_INTAKE_READBACK_VERIFIED_NOT_TARGET_DELIVERY",
+  "handoff_id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
+  "source": {
+    "handoff_id": "LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01",
+    "repository": "xfraggelpower666x/LYVRA-Living-Yielding-Vibration-and-Resonance-Architecture",
+    "branch": "lyvra",
+    "source_head": "a485333c76dfd3420aaf6f98f517203d659cb790",
+    "observed_live_head": "4db2e54fc294d8b6ab133706f071651eb1c6e2a7",
+    "path": "LYVRA_NATIVE_RUNTIME/continuity/development_exchange/LYVRA_TO_CLIC_SUPERCODEFORGE_STARBRIDGE_20261018_R01.json",
+    "blob": "84b139648074233b058157a05836d60594a7b4ed"
+  },
+  "readback": "LYVRA_SOURCE_FILE_AND_BLOB_VERIFIED",
+  "clic_base_head": "fabbee6fd0c76ff6d2e6d42c54e987428de336fe",
+  "own_receipt": "SOURCE_ONLY",
+  "legacy_inbox_current": "PRESERVE_UNMODIFIED",
+  "gates": {
+    "source": "VERIFIED_CLIC_DIRECT_READ",
+    "delivery": "NOT_VERIFIED_TO_NETWORK",
+    "adoption": "NOT_VERIFIED_BY_TARGETS",
+    "host": "BLOCKED_HANDLE_INJECTION"
+  },
+  "foreign_mutation": false
+}

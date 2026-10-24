@@ -1,0 +1,70 @@
+{
+  "schema": "CLIC_CARD_FORCE_RELEASE_PREFLIGHT_V1",
+  "observed_date": "2026-10-09",
+  "source_authority": "CLIC_REPO_CURRENT",
+  "plugin_provider": "OPENAI_PLUGIN_CREATOR",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "live_version": "0.1.22",
+  "live_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "current_repo_release_id_matches_provider": true,
+  "older_immutable_v0122_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+  "older_immutable_snapshot_not_current": true,
+  "live_provider_file_count": 28,
+  "live_provider_text_files": 27,
+  "live_text_matches_repo_source": 26,
+  "live_text_divergences": [
+    {
+      "path": "README.md",
+      "reason": "REPOSITORY_CANDIDATE_CARD_FORCE_DEVELOPMENT_AFTER_LIVE_RELEASE",
+      "classification": "SOURCE_AHEAD_EXPECTED"
+    }
+  ],
+  "logo": {
+    "path": "assets/clic-logo.png",
+    "provider_size_bytes": 2929725,
+    "repo_expected_source_size_bytes": 2929725,
+    "repo_expected_source_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "release_archive_metadata_received": true,
+    "release_archive_bytes_downloaded": false,
+    "actual_binary_sha256": "NOT_VERIFIED",
+    "comparison": "BLOCKED_MISSING_BYTES",
+    "size_match_ne_hash_match": true
+  },
+  "candidate_source": {
+    "skills": [
+      "skills/666clic-card/SKILL.md",
+      "skills/666clic-force/SKILL.md"
+    ],
+    "references": [
+      "references/card-intelligence.md",
+      "references/cross-surface-learning.md"
+    ],
+    "native_contracts": [
+      "666CLIC_NATIVE_RUNTIME/facets/card_intelligence/CARD_CONTRACT.json",
+      "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/FACET_CONTRACT.md",
+      "666CLIC_NATIVE_RUNTIME/facets/cross_surface_learning/FACET_CONTRACT.md"
+    ],
+    "repo_paths_verified": true,
+    "live_plugin_skill_presence": false
+  },
+  "host": {
+    "card_host_trigger": "NOT_TESTED",
+    "force_host_trigger": "NOT_TESTED",
+    "cross_project_scan": "NOT_TESTED",
+    "inbox_transport": "SOURCE_ONLY_NO_LIVE_ADAPTER",
+    "developer_connector_host_file_list": "DIRECT_READ"
+  },
+  "release_decision": {
+    "status": "WRITE_BLOCKED",
+    "reason": "MISSING_INDEPENDENT_PLUGIN_ARCHIVE_BINARY_READBACK_AND_HOST_ACCEPTANCE",
+    "new_release_published": false,
+    "legacy_release_unchanged": true,
+    "recommended_next": "OBTAIN_RELEASE_ARCHIVE_BYTES_VERIFY_LOGO_HASH_PACKAGE_CANDIDATE_COMPARE_PUBLISH_GUARDED_RELEASE_THEN_HOST_READBACK"
+  },
+  "backup": {
+    "clic_prechange_branch": "backup/clic-pre-card-force-plugin-release-20261009",
+    "clic_repo_prechange_head": "0bce5abca6c923754e8c066bdddea832a5c8b8e5",
+    "plugin_archive_backup": "NOT_VERIFIED_ARCHIVE_DOWNLOAD_BLOCKED"
+  },
+  "no_foreign_mutation": true
+}

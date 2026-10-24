@@ -1,0 +1,1 @@
+{"name":"clic-shared-pet-candidate","type":"module","private":true,"scripts":{"test":"node --test tests/worker.test.mjs"}}

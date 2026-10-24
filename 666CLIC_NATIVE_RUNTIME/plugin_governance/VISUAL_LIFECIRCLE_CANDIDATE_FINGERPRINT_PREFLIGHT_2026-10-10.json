@@ -1,0 +1,75 @@
+{
+  "schema": "CLIC_VISUAL_LIFECIRCLE_FINGERPRINT_PREFLIGHT_V1",
+  "status": "CANDIDATE_SCOPE_VALIDATED_FINGERPRINT_INCOMPLETE_NO_APPROVAL",
+  "owner": "666CLIC",
+  "prechange_backup": "backup/clic-pre-visual-candidate-fingerprint-20261010-0336",
+  "prechange_head": "0052d513d9ce4d1549c9dddc96c162a971d28d5e",
+  "candidate_source_tree": "1aafd2c39fbac9e7fc2ef0149547bdbc50324d38",
+  "candidate_binding_path": "plugin_governance/VISUAL_LIFECIRCLE_CANDIDATE_BINARY_BINDING_2026-10-10.json",
+  "candidate_binding_blob": "99f289db99997e1e3f013401546566eba89c2ef8",
+  "seven_fields": {
+    "plugin_id": {
+      "value": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+      "status": "VERIFIED_BASELINE_AND_CANDIDATE_OWNER"
+    },
+    "plugin_version": {
+      "value": "UNASSIGNED_CANDIDATE_VERSION",
+      "baseline": "0.1.22",
+      "status": "BLOCKED_NEW_RELEASE_VERSION_NOT_SELECTED"
+    },
+    "plugin_release_id": {
+      "value": "NOT_PUBLISHED",
+      "baseline": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+      "status": "PREPUBLISH_NOT_APPLICABLE_FUTURE_RELEASE_ID"
+    },
+    "repo_text_source_tree_sha": {
+      "value": "1aafd2c39fbac9e7fc2ef0149547bdbc50324d38",
+      "scope": "666clic-plugin/source",
+      "status": "VERIFIED_GIT_TREE_CURRENT_CANDIDATE"
+    },
+    "binary_binding_manifest_sha": {
+      "value": "99f289db99997e1e3f013401546566eba89c2ef8",
+      "status": "CANDIDATE_EVIDENCE_BLOB_ONLY_NOT_FINAL_VERSIONED_RELEASE_BINDING"
+    },
+    "runtime_semantic_body_head": {
+      "value": "14ce529ead6e955b8d4278fe6b5376a82381afa8",
+      "native_facet_relation": "493aefe9169e5a4b706ace5364c16e30d4ef8314",
+      "status": "DERIVED_LAST_SEMANTIC_CHANGE_SCOPE_NEEDS_RELEASE_CONFIRMATION"
+    },
+    "plugin_current_semantic_class": {
+      "value": "SOURCE_CANDIDATE_AHEAD_OF_LIVE_RELEASE",
+      "status": "DERIVED_CANDIDATE_CLASS_NOT_PROVIDER_LIVE_CLASS"
+    }
+  },
+  "fingerprint_canonical_digest": "NOT_COMPUTED_INCOMPLETE_RELEASE_TUPLE",
+  "baseline_text_parity": "27_OF_27_PROVIDER_V022_SNAPSHOT_HISTORICALLY_VERIFIED",
+  "baseline_zip_logo_tar_content": "28_OF_28_HISTORICALLY_VERIFIED_NOT_REEXECUTED",
+  "source_semantics": [
+    "VISUAL_LIFECIRCLE",
+    "SUB_REHYDRATION",
+    "NEON_DASHBOARD",
+    "JUNIOR_FOREGROUND",
+    "CARD_FORCE_CANDIDATE_SCOPE_PROTECT"
+  ],
+  "prepublish_gates": {
+    "complete_source_inventory": "NEEDS_FINAL_CANDIDATE_SCOPE",
+    "plugin_schema": "PENDING_FULL_PACKAGE_PREFLIGHT",
+    "logo_preservation": "HISTORICAL_BYTES_KNOWN_CANDIDATE_PACKAGE_NOT_BUILT",
+    "provider_release_pinned": "YES_BASELINE_V0_1_22",
+    "fingerprint": "NOT_READY",
+    "native_approval": "NOT_ISSUED"
+  },
+  "postpublish_gates": {
+    "new_provider_release_id": "NOT_AVAILABLE",
+    "exact_release_readback": "NOT_STARTED",
+    "logo_readback": "NOT_STARTED",
+    "fresh_host_visual_lifecycle": "NOT_STARTED",
+    "card_force_if_included": "NOT_STARTED"
+  },
+  "current_plugin": "0.1.22_UNMODIFIED",
+  "source_only": true,
+  "old_snapshots_mutated": false,
+  "foreign_mutation": false,
+  "pet": "PAUSED_UNMODIFIED",
+  "return_anchor": "SELECT_EXACT_CANDIDATE_SCOPE_AND_VERSION; REBUILD_RELEASE_SPECIFIC_BINDING_WITH_PINNED_ASSETS; PREPUBLISH_TEST; NATIVE_APPROVAL; ONLY_THEN_PROVIDER_PUBLISH_AND_HOST_ACCEPTANCE"
+}

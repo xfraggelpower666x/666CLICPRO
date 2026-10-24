@@ -1,0 +1,14 @@
+{
+  "schema": "CLIC_PDI_DEVELOPMENT_GRAPH_V1",
+  "semantics": "dependency_edges_are_proposals_until_independent_evidence",
+  "nodes": [
+    "CORE_DEVELOPMENT",
+    "VISUAL_INTELLIGENCE",
+    "STARBRIDGE",
+    "CODEFORGE_RECOVERY"
+  ],
+  "edges": [],
+  "note": "No fabricated causal dependence; graph initially empty pending evidence-specific events.",
+  "provenance": "CLIC native verified module references",
+  "foreign_decision_authority": false
+}
