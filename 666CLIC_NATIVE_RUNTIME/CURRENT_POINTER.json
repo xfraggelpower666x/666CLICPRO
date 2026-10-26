@@ -4834,4 +4834,6 @@
     "pointer_last": true,
     "return_anchor": "CLIC_LINGUA_R18_CARD_REFRESH_DONE_WAIT_MUM_NATIVE_HOST_OUTCOME"
   }
+,
+  "update_2026_10_26_lyvra_evolution_refresh_r01": {"status":"CARD_VERIFIED","source_head":"cbe1940607e9bd736f425ab90f919be072aece50","body_commit":"2acc4bd8f29ba52da59016256310c4d7ec7eb804","card_blob":"a30d6fcb92121eb2e97bf9e8e60aae6bbd7821db","recovery":"backup/clic-pre-lyvra-evolution-refresh-20261026-r01","host":"OPEN","plugin_impact":"CARD_ONLY","foreign_writes":false,"pointer_last":true}
 }
