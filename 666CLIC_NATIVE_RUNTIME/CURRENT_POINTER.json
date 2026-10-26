@@ -4833,7 +4833,41 @@
     "pdi": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "CLIC_LINGUA_R18_CARD_REFRESH_DONE_WAIT_MUM_NATIVE_HOST_OUTCOME"
+  },
+  "update_2026_10_26_lyvra_evolution_refresh_r01": {
+    "status": "CARD_VERIFIED",
+    "source_head": "cbe1940607e9bd736f425ab90f919be072aece50",
+    "body_commit": "2acc4bd8f29ba52da59016256310c4d7ec7eb804",
+    "card_blob": "a30d6fcb92121eb2e97bf9e8e60aae6bbd7821db",
+    "recovery": "backup/clic-pre-lyvra-evolution-refresh-20261026-r01",
+    "host": "OPEN",
+    "plugin_impact": "CARD_ONLY",
+    "foreign_writes": false,
+    "pointer_last": true
+  },
+  "update_2026_10_26_starbridge_relational_learning_ci_binding_r01": {
+    "status": "CLIC_STARBRIDGE_RELATIONAL_LEARNING_NODE_TEST_CI_SUCCESS",
+    "prechange_head": "88caece14525c9ec793e5879be66b0db8d2fc69c",
+    "recovery_branch": "backup/clic-pre-starbridge-learning-ci-binding-20261026-r01",
+    "workflow": ".github/workflows/clic-card-force-candidate-tests.yml",
+    "workflow_blob": "7a5dc838ce54cef765326858dad1a85fde148ea4",
+    "workflow_commit": "6c5fba05e8bdcceb5e570e24975a7822e126c748",
+    "ci_run_id": 40408703185,
+    "ci_conclusion": "success",
+    "ci_scope": "EXISTING_CARD_FORCE_NODE_TESTS_PLUS_STARBRIDGE_RELATIONAL_LEARNING",
+    "source_readback": "PASS",
+    "plugin_impact": "CI_WORKFLOW_ONLY_NO_SEMANTIC_RUNTIME_SKILL_OR_PLUGIN_CHANGE",
+    "plugin_release": "UNCHANGED",
+    "runtime_semantic_body": "UNCHANGED",
+    "seven_test_cases": "INCLUDED_IN_SUCCESSFUL_WORKFLOW_NO_INDIVIDUAL_TEST_LOG_COUNT_READBACK",
+    "fingerprint_gates": "INDEPENDENT_OPEN_UNCHANGED",
+    "lyvra_receipt": "NOT_VERIFIED",
+    "starbridge_host": "NOT_VERIFIED",
+    "foreign_writes": false,
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_RELATIONAL_LEARNING_CI_BOUND_SUCCESS_CONTINUE_FOUR_FINGERPRINT_GATES_AND_NATIVE_STARBRIDGE_RECEIPTS"
   }
-,
-  "update_2026_10_26_lyvra_evolution_refresh_r01": {"status":"CARD_VERIFIED","source_head":"cbe1940607e9bd736f425ab90f919be072aece50","body_commit":"2acc4bd8f29ba52da59016256310c4d7ec7eb804","card_blob":"a30d6fcb92121eb2e97bf9e8e60aae6bbd7821db","recovery":"backup/clic-pre-lyvra-evolution-refresh-20261026-r01","host":"OPEN","plugin_impact":"CARD_ONLY","foreign_writes":false,"pointer_last":true}
 }
