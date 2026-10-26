@@ -4869,5 +4869,29 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "CLIC_RELATIONAL_LEARNING_CI_BOUND_SUCCESS_CONTINUE_FOUR_FINGERPRINT_GATES_AND_NATIVE_STARBRIDGE_RECEIPTS"
+  },
+  "update_2026_10_26_four_fingerprint_gates_current_readback_r01": {
+    "status": "CURRENT_FOUR_GATES_REVALIDATED_PARTIAL_FINGERPRINT_WRITE_BLOCKED",
+    "base_head": "ae0a29444a2dad7b15e1fec334e8260378be3adb",
+    "recovery_branch": "backup/clic-pre-fingerprint-four-gates-20261026-r01",
+    "body_commit": "5eb0e79f4315ad08745ec3b8a166f3b0ee051ecb",
+    "evidence_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_FOUR_FINGERPRINT_GATES_CURRENT_READBACK_2026-10-26.json",
+    "evidence_blob": "b10d098af09af59a6eb8c8a1ba881ca294f84fbd",
+    "provider_metadata": "LIVE_V0122_RELEASE_ID_DIRECT_VERIFIED",
+    "current_source_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+    "historical_live_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "unclassified_post_suffix_commits": 151,
+    "current_binary_parity": "NOT_VERIFIED",
+    "canonical_fingerprint": null,
+    "backup_approval": false,
+    "pfs_execution": false,
+    "plugin_impact": "EVIDENCE_ONLY_RUNTIME_AND_PLUGIN_UNCHANGED",
+    "ci": "NOT_RUN_EVIDENCE_ONLY",
+    "visual_impact": "SOURCE_EVIDENCE_ONLY_HOST_UNVERIFIED",
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "FOUR_GATES_UNRESOLVED_NEXT_POST_SUFFIX_SEMANTIC_PATHS_AND_CURRENT_PROVIDER_BINARY"
   }
 }
