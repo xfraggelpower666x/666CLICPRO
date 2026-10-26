@@ -1,0 +1,64 @@
+{
+  "schema": "CLIC_V0122_FOUR_FINGERPRINT_GATES_READBACK_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "PARTIAL_INDEPENDENT_CURRENT_READBACK_CANONICAL_FINGERPRINT_WRITE_BLOCKED",
+  "date": "2026-10-26",
+  "base_head": "ae0a29444a2dad7b15e1fec334e8260378be3adb",
+  "recovery": "backup/clic-pre-fingerprint-four-gates-20261026-r01",
+  "plugin_provider": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "metadata_direct_provider_readback": true
+  },
+  "four_gates": {
+    "repo_text_source_tree": {
+      "status": "CURRENT_GITHUB_TREE_READBACK_VERIFIED_BUT_NE_HISTORICAL_LIVE_TREE",
+      "sha": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+      "historical_live_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+      "equal": false
+    },
+    "binary_binding": {
+      "status": "HISTORICAL_BINDING_NOT_CURRENT_LIVE_RELEASE;CURRENT_PROVIDER_BINARY_UNVERIFIED",
+      "historical_binding_git_blob": "b108d4723714844d13743e388a0bcd394748245c",
+      "historical_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+      "current_provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+      "source_zip_remote_git_blob": "9a7967fad75ae76a8af22203da31b728e8beddaf",
+      "original_provider_archive_sha256_reported": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+      "source_zip_sha256_reported": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+      "live_archive_byte_identity": "NOT_PROVEN"
+    },
+    "runtime_semantic_body_head": {
+      "status": "PARTIAL_HISTORICAL_CONTIGUOUS_SUFFIX_VERIFIED_CURRENT_CHAIN_UNCLASSIFIED",
+      "historical_suffix_base": "9d6287912286977ecdbee90acef540563bbb1445",
+      "historical_suffix_head": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+      "historical_suffix_commit_count": 35,
+      "historical_latest_semantic_candidate": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+      "newer_commits_to_current_head": 151,
+      "newer_commit_paths_fully_classified": false,
+      "canonical_semantic_body_head": null
+    },
+    "plugin_current_semantic_class": {
+      "status": "HISTORICAL_LIVE_HYBRID_SNAPSHOT_NEWER_UNPUBLISHED_DEV_SOURCE",
+      "source_current_ne_historical_live": true,
+      "source_live_parity": "NOT_VERIFIED",
+      "fresh_host": "NOT_VERIFIED"
+    }
+  },
+  "limits": {
+    "current_plugin_metadata": "DIRECT_PROVIDER_PASS",
+    "current_plugin_original_archive_bytes": "NOT_READ",
+    "whole_151_commit_semantic_changed_paths": "NOT_COMPLETE",
+    "source_vs_live_plugin": "NOT_EQUIVALENT",
+    "canonical_fingerprint_sha256": null,
+    "backup_approval": false,
+    "pfs_write_approval": false,
+    "plugin_release_published": false,
+    "foreign_writes": false,
+    "ci": "NO_CODE_CHANGE_SOURCE_EVIDENCE_ONLY",
+    "visual_impact": "EVIDENCE_ONLY_NO_GPT_NATIVE_DASHBOARD_OR_PLUGIN_SEMANTIC_CHANGE",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
+  },
+  "return_anchor": "REVALIDATE_POST_SUFFIX_SEMANTIC_CHANGED_PATHS_THEN_PROVIDER_CURRENT_TEXT_BINARY_AND_CLASS;NO_APPROVAL_UNTIL_ALL_FOUR_PASS"
+}
