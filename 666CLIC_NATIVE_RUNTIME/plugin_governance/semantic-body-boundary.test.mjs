@@ -106,3 +106,18 @@ test('independently read 35-commit PDI and SB05 suffix retains newest semantic c
  const unknown=structuredClone(args);unknown.commits[33].paths=['unclassified/unknown-carrier'];
  assert.ok(evaluate(unknown).failures.some(x=>x.startsWith('UNCLASSIFIED_CHANGE')));
 });
+
+test('exact unpublished patch-first implementation is semantic candidate, not a provider release',()=>{
+ const exact='666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.mjs';
+ assert.equal(classify(exact),'SEMANTIC');
+ assert.equal(classify('666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.test.mjs'),'GOVERNANCE');
+ assert.equal(classify('666clic-plugin/candidates/patchfirst-visual-20261017/PATCH_FIRST_CANDIDATE.json'),'GOVERNANCE');
+ assert.equal(classify('666clic-plugin/candidates/other/patchfirst-integrity-plan.mjs'),'UNKNOWN');
+ const a=args();a.commits[1].paths=[exact];a.pluginSourceTree=B;a.binaryBinding=null;
+ const v=evaluate(a);
+ assert.equal(v.semantic_body_candidate,C);
+ assert.equal(v.semantic_body_head,null);
+ assert.equal(v.status,'WRITE_BLOCKED');
+ assert.equal(v.plugin_published,false);
+ assert.equal(v.approval_granted,false);
+});
