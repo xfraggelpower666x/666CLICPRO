@@ -27,3 +27,16 @@ export function suggestOutcome(input={}) {
   if(input.writeRequested===true && (input.userAuthorizedUpdate!==true||input.lockVerified!==true||input.backupVerified!==true)) return {outcome:"HOLD",reason:"WRITE_GOVERNANCE_REQUIRED",execute:false};
   return {outcome:"EXECUTE",reason:"AUTHORIZED_CANDIDATE_REQUIRES_STEP_LOCAL_VALIDATION",execute:false};
 }
+
+export function assessEvidenceStages(input={}) {
+ const op=input.operationId;
+ if(typeof op!=='string'||!op.trim())return {status:'UNSCOPED',execute:false};
+ const a=Array.isArray(input.observations)?input.observations.filter(e=>e?.operationId===op):[];
+ const valid=e=>e.sourceGrade==='DIRECT_PROVIDER'&&e.independentReadback===true&&typeof e.evidenceRef==='string'&&e.evidenceRef.length>0;
+ const storage=a.some(e=>valid(e)&&e.storedContentReadback===true&&e.targetParentVerified===true);
+ const delivery=a.some(e=>valid(e)&&e.deliveryReceiptVerified===true);
+ const recipient=a.some(e=>valid(e)&&e.recipientAcknowledgementVerified===true);
+ const denied=a.some(e=>e.permissionDenied===true||e.actionDenied===true||e.safetyRefusal===true);
+ const contradiction=a.some(e=>e.contradictionUnresolved===true);
+ return {status:denied?'DENIED':contradiction?'CONTRADICTORY':storage&&delivery&&recipient?'STAGES_VERIFIED':'PARTIAL_EVIDENCE',storage,delivery,recipient,denied,contradiction,rootCause:'UNKNOWN',execute:false,adoption:false,host:false};
+}
