@@ -43,3 +43,29 @@ test("unverified claims do not produce positive outcome",async()=>{
  const {assessOperationEvidence}=await import("../src/contextual-outcome.mjs");
  assert.equal(assessOperationEvidence({...opBase,operationOutcomes:[{operationId:"CLIC_PDI_EVENT_1",currentReadback:"PASS",independentReadback:false}]}).status,"OPEN");
 });
+
+test("operation stage evidence never claims host or execution",async()=>{
+ const {assessEvidenceStages}=await import("../src/contextual-outcome.mjs");
+ const x=assessEvidenceStages({operationId:"MAIL_A",observations:[{operationId:"MAIL_A",sourceGrade:"DIRECT_PROVIDER",independentReadback:true,evidenceRef:"blob/one",storedContentReadback:true,targetParentVerified:true}]});
+ assert.equal(x.status,"PARTIAL_EVIDENCE");assert.equal(x.storage,true);assert.equal(x.delivery,false);assert.equal(x.recipient,false);assert.equal(x.host,false);assert.equal(x.execute,false);
+});
+test("reported peer receipt does not become independent success",async()=>{
+ const {assessEvidenceStages}=await import("../src/contextual-outcome.mjs");
+ const x=assessEvidenceStages({operationId:"MAIL_A",observations:[{operationId:"MAIL_A",sourceGrade:"PEER_REPORTED",independentReadback:true,evidenceRef:"peer/one",storedContentReadback:true,targetParentVerified:true,deliveryReceiptVerified:true,recipientAcknowledgementVerified:true}]});
+ assert.equal(x.status,"PARTIAL_EVIDENCE");assert.equal(x.storage,false);assert.equal(x.delivery,false);assert.equal(x.recipient,false);
+});
+test("separate operation successes never lift a denial",async()=>{
+ const {assessEvidenceStages}=await import("../src/contextual-outcome.mjs");
+ const x=assessEvidenceStages({operationId:"MAIL_A",observations:[{operationId:"MAIL_A",actionDenied:true},{operationId:"MAIL_B",sourceGrade:"DIRECT_PROVIDER",independentReadback:true,evidenceRef:"blob/b",storedContentReadback:true,targetParentVerified:true,deliveryReceiptVerified:true,recipientAcknowledgementVerified:true}]});
+ assert.equal(x.status,"DENIED");assert.equal(x.storage,false);assert.equal(x.rootCause,"UNKNOWN");
+});
+test("contradictions remain observable despite independently read back stages",async()=>{
+ const {assessEvidenceStages}=await import("../src/contextual-outcome.mjs");
+ const x=assessEvidenceStages({operationId:"MAIL_A",observations:[{operationId:"MAIL_A",sourceGrade:"DIRECT_PROVIDER",independentReadback:true,evidenceRef:"blob/a",storedContentReadback:true,targetParentVerified:true,deliveryReceiptVerified:true,recipientAcknowledgementVerified:true,contradictionUnresolved:true}]});
+ assert.equal(x.status,"CONTRADICTORY");assert.equal(x.storage,true);assert.equal(x.delivery,true);assert.equal(x.recipient,true);assert.equal(x.adoption,false);
+});
+test("independent evidence stages remain no-approval even when complete",async()=>{
+ const {assessEvidenceStages}=await import("../src/contextual-outcome.mjs");
+ const x=assessEvidenceStages({operationId:"MAIL_A",observations:[{operationId:"MAIL_A",sourceGrade:"DIRECT_PROVIDER",independentReadback:true,evidenceRef:"blob/a",storedContentReadback:true,targetParentVerified:true,deliveryReceiptVerified:true,recipientAcknowledgementVerified:true}]});
+ assert.equal(x.status,"STAGES_VERIFIED");assert.equal(x.execute,false);assert.equal(x.host,false);assert.equal(x.adoption,false);
+});
