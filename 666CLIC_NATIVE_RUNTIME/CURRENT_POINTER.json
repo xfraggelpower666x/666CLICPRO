@@ -4955,5 +4955,38 @@
     "pdi": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "CLIC_OPERATION_EVIDENCE_SOURCE_CI_PASS_PLUGIN_PARITY_BLOCKED_FINGERPRINT_GATES"
+  },
+  "update_2026_10_27_patchfirst_semantic_boundary_r01": {
+    "status": "EXACT_PATCHFIRST_SEMANTIC_CANDIDATE_CLASSIFIED_TWO_SOURCE_CI_PASS_LIVE_FINGERPRINT_BLOCKED",
+    "base_head": "9e254d846bd879b33d3b676b5097dd77887f6d94",
+    "recovery_branch": "backup/clic-pre-patchfirst-semantic-boundary-20261027-r01",
+    "body_head": "1448225790684fbbf0a56609abec4da59ea78f66",
+    "classifier_blob": "352f22052c7b77207c36d48f0b0e6e60de3027a5",
+    "test_blob": "03a62b935d1db0a886d7b5e2f188847f4e0a1746",
+    "receipt_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/PATCHFIRST_SEMANTIC_BOUNDARY_REPAIR_READBACK_2026-10-27.json",
+    "receipt_blob": "553956ea04defffec588cf9a3fcbbf8865525d5f",
+    "ci_runs": [
+      40557824071,
+      40557824521
+    ],
+    "ci": "BOTH_SUCCESS",
+    "unknown_patchfirst": "EXACT_PATH_NOW_SEMANTIC_CANDIDATE",
+    "unknown_other_paths": "PRESERVED_FAIL_CLOSED",
+    "previous_semantic_candidate": "2acc4bd8f29ba52da59016256310c4d7ec7eb804",
+    "semantic_body_canonical": "NOT_ISSUED",
+    "provider_binary": "UNVERIFIED",
+    "plugin_text_historical": "27_OF_27_PASS",
+    "plugin_text_development": "23_OF_27",
+    "fingerprint": "WRITE_BLOCKED",
+    "backup_approval": false,
+    "plugin_release": "0.1.22_UNCHANGED",
+    "plugin_promotion": false,
+    "visual_compliance": "PARTIAL_HOST_OPEN",
+    "foreign_writes": false,
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_PATCHFIRST_EXACT_UNKNOWN_CLOSED_NOW_LIVE_BINARY_AND_SEMANTIC_PARITY_GATES"
   }
 }
