@@ -1,0 +1,56 @@
+{
+  "schema": "CLIC_PATCHFIRST_SEMANTIC_BOUNDARY_REPAIR_V1",
+  "system": "666CLIC",
+  "date": "2026-10-27",
+  "status": "TARGETED_CLASSIFIER_REPAIR_TWO_WORKFLOWS_SUCCESS_FINGERPRINT_BLOCKED",
+  "authority": "CLIC_OWNED_ONLY",
+  "base_head": "9e254d846bd879b33d3b676b5097dd77887f6d94",
+  "prechange_backup": "backup/clic-pre-patchfirst-semantic-boundary-20261027-r01",
+  "scope": {
+    "classifier": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs",
+    "classifier_blob": "352f22052c7b77207c36d48f0b0e6e60de3027a5",
+    "tests": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs",
+    "tests_blob": "03a62b935d1db0a886d7b5e2f188847f4e0a1746",
+    "code_commit": "9416392eac4105e8934bb90339e6b8318454ecdc",
+    "tests_commit": "329aeee5dca64f837a7a71039c54fc31c583958e"
+  },
+  "classification": {
+    "exact_path": "666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.mjs",
+    "result": "SEMANTIC_UNPUBLISHED_CANDIDATE",
+    "other_unknown_paths": "REMAIN_UNKNOWN",
+    "test_and_candidate_metadata": "REMAIN_GOVERNANCE",
+    "history_153_prior_readback": "PRESERVED_NOT_RERUN",
+    "prior_semantic_candidate": "2acc4bd8f29ba52da59016256310c4d7ec7eb804",
+    "new_runtime_semantic_body_head": "NOT_CANONICALLY_ISSUED"
+  },
+  "ci": {
+    "bridge": {
+      "run": 40557824071,
+      "conclusion": "success"
+    },
+    "card_force": {
+      "run": 40557824521,
+      "conclusion": "success"
+    },
+    "individual_test_count": "NOT_SEPARATELY_EXTRACTED"
+  },
+  "plugin_impact": {
+    "provider_live_version": "0.1.22",
+    "source_classifier_governance_change": true,
+    "plugin_source_skill_changed": false,
+    "release_changed": false,
+    "historical_text_parity": "27_OF_27_PASS_PRESERVED",
+    "current_development_text_parity": "23_OF_27_PRESERVED",
+    "live_binary_binding": "OPEN",
+    "canonical_fingerprint": null,
+    "plugin_promotion": false,
+    "backup_approval": false,
+    "host_acceptance": "NOT_VERIFIED"
+  },
+  "visual_compliance": "PARTIAL_NO_GPT_NATIVE_VISUAL_HOST_CHANGE",
+  "foreign_writes": false,
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "pdi": "PRESERVED",
+  "return_anchor": "CLIC_PATCHFIRST_UNKNOWN_CLOSED_EXACT_SCOPE_TWO_CI_SUCCESS_BINARY_AND_LIVE_PARITY_REMAIN_OPEN"
+}
