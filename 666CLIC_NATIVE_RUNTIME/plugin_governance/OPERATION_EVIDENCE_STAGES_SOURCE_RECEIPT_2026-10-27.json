@@ -1,0 +1,67 @@
+{
+  "schema": "CLIC_OPERATION_EVIDENCE_STAGES_SOURCE_RECEIPT_V1",
+  "date": "2026-10-27",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_CI_SUCCESS_PLUGIN_PARITY_PENDING",
+  "base_head": "1312096082e743ddcc67a73aaaaf48e8499ba74b",
+  "prechange_backup": "backup/clic-pre-operation-evidence-stages-20261027-r01",
+  "code_path": "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/src/contextual-outcome.mjs",
+  "code_blob": "ebe245ad5f9372a71f31135439fc5861a06b0c8b",
+  "test_path": "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/contextual-outcome.test.mjs",
+  "test_blob": "08769ac5a20e0677eecdb550cf8dbedb1d1b8044",
+  "source_commit": "fbb8abea3411972e424b84fc14531deb7662ae21",
+  "tests_commit": "60696acdc854c633793974bedf817caa3b3c790c",
+  "ci": {
+    "workflow": "CLIC CARD and Semantic FORCE candidate tests",
+    "run": 40556121642,
+    "status": "completed",
+    "conclusion": "success",
+    "assertions_added": 5,
+    "test_log_individual_assertion_count": "NOT_INDEPENDENTLY_EXTRACTED"
+  },
+  "semantics": {
+    "mode": "READ_ONLY_ADVISORY",
+    "operation_scoped": true,
+    "storage_stage_requires": "DIRECT_PROVIDER_AND_INDEPENDENT_READBACK_AND_CONTENT_AND_PARENT",
+    "delivery_stage_requires": "DIRECT_PROVIDER_AND_INDEPENDENT_READBACK_AND_DELIVERY_RECEIPT",
+    "recipient_stage_requires": "DIRECT_PROVIDER_AND_INDEPENDENT_READBACK_AND_EXPLICIT_ACKNOWLEDGEMENT",
+    "contradictions_preserved": true,
+    "root_cause": "UNKNOWN",
+    "cross_operation_promotion": false,
+    "execution_authority": false,
+    "adoption_authority": false,
+    "host_authority": false,
+    "existing_suggestOutcome_unchanged": true
+  },
+  "plugin_impact": {
+    "source_semantic_extension": true,
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "live_version": "0.1.22",
+    "current_live_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "live_skill_changed": false,
+    "live_release_changed": false,
+    "source_plugin_parity": "PENDING_FINGERPRINT_GATES",
+    "new_plugin_publication": false,
+    "source_is_not_live_host": true
+  },
+  "visual_impact": "NO_VISUAL_CONTRACT_OR_PRESENTER_CHANGE;SOURCE_VISUAL_COMPLIANCE_PARTIAL_HOST_OPEN",
+  "fingerprint": {
+    "historical_text": "27_OF_27",
+    "development_text": "23_OF_27",
+    "patchfirst_unknown": "PRESERVED",
+    "semantic_candidate_prior": "2acc4bd8f29ba52da59016256310c4d7ec7eb804",
+    "semantic_candidate_new": "fbb8abea3411972e424b84fc14531deb7662ae21",
+    "binary_provider": "READBACK_OPEN",
+    "canonical_sha256": null,
+    "approval": false
+  },
+  "cross_system": {
+    "foreign_writes": false,
+    "lyvra_authority": "LYVRA_ONLY",
+    "pfs_writes": false
+  },
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "pdi": "PRESERVED",
+  "return_anchor": "CLIC_OPERATION_EVIDENCE_SOURCE_CI_PASS_PLUGIN_PARITY_BLOCKED_FINGERPRINT_GATES"
+}
