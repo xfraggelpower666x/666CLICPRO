@@ -4928,5 +4928,32 @@
     "pdi": "PRESERVED",
     "pointer_last": true,
     "return_anchor": "CLIC_LYVRA_29_COMMIT_CARD_VISUAL_VERIFIED_CONTINUE_CAUSAL_OUTCOME_HOST_EVIDENCE_AND_FINGERPRINT_GATES"
+  },
+  "update_2026_10_27_operation_evidence_stages_r01": {
+    "status": "SOURCE_CI_SUCCESS_PLUGIN_PARITY_PENDING",
+    "base_head": "1312096082e743ddcc67a73aaaaf48e8499ba74b",
+    "recovery": "backup/clic-pre-operation-evidence-stages-20261027-r01",
+    "body_head": "363b27b7b9fd2fdd765352181dd523d28132fdef",
+    "code_blob": "ebe245ad5f9372a71f31135439fc5861a06b0c8b",
+    "test_blob": "08769ac5a20e0677eecdb550cf8dbedb1d1b8044",
+    "receipt_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/OPERATION_EVIDENCE_STAGES_SOURCE_RECEIPT_2026-10-27.json",
+    "receipt_blob": "44f9a41cb51ec346f18a962dc6d620b5b668842d",
+    "ci_run": 40556121642,
+    "ci_conclusion": "success",
+    "semantic_runtime_source_change": true,
+    "live_plugin_version": "0.1.22",
+    "plugin_parity": "PENDING_FINGERPRINT_GATES",
+    "host": "NOT_VERIFIED",
+    "fingerprint": "WRITE_BLOCKED",
+    "canonical_fingerprint_sha256": null,
+    "plugin_published": false,
+    "backup_approval": false,
+    "visual_compliance": "PARTIAL_SOURCE_ONLY",
+    "foreign_writes": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pdi": "PRESERVED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_OPERATION_EVIDENCE_SOURCE_CI_PASS_PLUGIN_PARITY_BLOCKED_FINGERPRINT_GATES"
   }
 }
