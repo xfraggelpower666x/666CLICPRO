@@ -23,6 +23,7 @@ const isSemantic=p=>p.startsWith('666CLIC_NATIVE_RUNTIME/dashboard/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/learning/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/events/')
  ||p.startsWith('666CLIC_NATIVE_RUNTIME/relations/')
+ ||p==='666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.mjs'
  ||p.startsWith('666clic-plugin/candidates/patchfirst-visual-20261017/skills/')
  ||p.startsWith('666clic-plugin/source/')
  ||p==='666clic-plugin/current/PLUGIN_CURRENT.json'
