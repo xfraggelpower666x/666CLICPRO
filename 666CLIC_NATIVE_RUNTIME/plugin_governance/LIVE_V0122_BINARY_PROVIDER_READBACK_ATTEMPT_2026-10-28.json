@@ -1,0 +1,52 @@
+{
+  "schema": "CLIC_V0122_PROVIDER_BINARY_READBACK_ATTEMPT_V1",
+  "system": "666CLIC",
+  "date": "2026-10-28",
+  "authority": "CLIC_GITHUB_REPO_ONLY",
+  "status": "PROVIDER_RELEASE_METADATA_VERIFIED_ARCHIVE_URL_RETURNED_BINARY_BYTES_UNAVAILABLE_WRITE_BLOCKED",
+  "base_head": "eb9af7bae2af4c5a80f9db065f5436599ac7965b",
+  "recovery_branch": "backup/clic-pre-live-binary-provider-readback-20261028-r01",
+  "provider": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "metadata_direct_readback": "PASS",
+    "archive_link_obtained": true,
+    "archive_file": "workspace-plugin-p0fda2cg.tar.gz",
+    "archive_bytes_download": "BLOCKED_URL_ACCESS_GATE",
+    "archive_sha256_computed": false,
+    "logo_sha256_extracted": false,
+    "archive_bytes_stored_in_repo": false,
+    "download_url_or_token_stored": false
+  },
+  "git": {
+    "current_source_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+    "historical_live_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "historical_v0122_release_tree": "05a8e2ceaa246bccee1d9354784180993c41330e",
+    "historical_binary_binding_blob": "b108d4723714844d13743e388a0bcd394748245c",
+    "source_zip_backup_blob": "9a7967fad75ae76a8af22203da31b728e8beddaf",
+    "current_semantic_outcome_source_blob": "ebe245ad5f9372a71f31135439fc5861a06b0c8b"
+  },
+  "preserved": {
+    "live_historical_text": "27_OF_27_PREVIOUS_INDEPENDENT_PASS_NOT_RERUN",
+    "live_current_development_text": "23_OF_27_PREVIOUS_INDEPENDENT_READBACK_NOT_RERUN",
+    "patchfirst_unknown": "EXACT_PATH_CLOSED_PREVIOUS_TWO_CI_PASS",
+    "semantic_boundary": "CANONICAL_UNRESOLVED_POST_NEW_SEMANTIC_SOURCE_CHANGE",
+    "foreign_writes": false,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "pdi": "PRESERVED"
+  },
+  "gates": {
+    "current_provider_archive_hash": "OPEN",
+    "current_provider_logo_hash": "OPEN",
+    "live_current_text_semantic_parity": "OPEN",
+    "canonical_runtime_plugin_fingerprint": "WRITE_BLOCKED",
+    "approval": false,
+    "plugin_promotion": false,
+    "host": "NOT_VERIFIED",
+    "visual_compliance": "PARTIAL_UNCHANGED"
+  },
+  "ci": "NOT_RUN_EVIDENCE_ONLY_NO_RUNTIME_OR_PLUGIN_SOURCE_WRITE",
+  "return_anchor": "LIVE_V0122_ARCHIVE_URL_FOUND_BYTES_BLOCKED_SOURCE_AND_HISTORICAL_RELEASE_TREES_VERIFIED_REQUIRES_AUTHORIZED_BINARY_BYTE_ACCESS"
+}
