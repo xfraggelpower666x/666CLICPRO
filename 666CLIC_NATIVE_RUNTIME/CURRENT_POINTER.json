@@ -4988,5 +4988,31 @@
     "pet": "PAUSED",
     "pointer_last": true,
     "return_anchor": "CLIC_PATCHFIRST_EXACT_UNKNOWN_CLOSED_NOW_LIVE_BINARY_AND_SEMANTIC_PARITY_GATES"
+  },
+  "update_2026_10_28_live_v0122_binary_provider_readback_r01": {
+    "status": "PROVIDER_METADATA_AND_GIT_OBJECTS_REVERIFIED_BINARY_BYTES_BLOCKED",
+    "prechange_head": "eb9af7bae2af4c5a80f9db065f5436599ac7965b",
+    "recovery": "backup/clic-pre-live-binary-provider-readback-20261028-r01",
+    "body_head": "4005647c29c026994352d76e294983d63e47edcf",
+    "evidence_path": "666CLIC_NATIVE_RUNTIME/plugin_governance/LIVE_V0122_BINARY_PROVIDER_READBACK_ATTEMPT_2026-10-28.json",
+    "evidence_blob": "b885658a801b4601b51355ce379300527228f132",
+    "live_plugin_version": "0.1.22",
+    "live_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "current_source_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+    "historical_live_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "live_original_archive": "URL_AVAILABLE_BYTES_NOT_RETRIEVED",
+    "live_logo_binary_sha256": null,
+    "canonical_fingerprint": null,
+    "backup_approval": false,
+    "plugin_promotion": false,
+    "plugin_impact": "EVIDENCE_ONLY_NO_RUNTIME_OR_PLUGIN_CODE_CHANGE",
+    "ci": "NOT_RUN_EVIDENCE_ONLY",
+    "visual_compliance": "PARTIAL_UNCHANGED",
+    "foreign_writes": false,
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "return_anchor": "CLIC_V0122_ORIGINAL_PROVIDER_BINARY_ACCESS_BLOCKED_REQUIRE_AUTHORIZED_BYTE_READBACK"
   }
 }
