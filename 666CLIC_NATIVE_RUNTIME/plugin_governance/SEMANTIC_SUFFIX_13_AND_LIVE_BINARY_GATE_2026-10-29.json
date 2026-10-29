@@ -1,0 +1,172 @@
+{
+  "schema": "CLIC_SEMANTIC_SUFFIX_13_AND_PROVIDER_GATE_V1",
+  "system": "666CLIC",
+  "authority": "CLIC_ONLY",
+  "status": "SUFFIX_13_DIRECT_GITHUB_PATHS_AND_PARENT_VERIFIED_LIVE_BINARY_BLOCKED",
+  "observation_date": "2026-10-29",
+  "prechange_head": "bba79a83c3352ba77cf9cf90f6e0b8d5ae3b0822",
+  "recovery_branch": "backup/clic-pre-semantic-suffix-13-provider-gate-20261029-r01",
+  "base": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+  "head": "bba79a83c3352ba77cf9cf90f6e0b8d5ae3b0822",
+  "commit_count": 13,
+  "contiguous_parent_chain": true,
+  "changed_path_detail_readback": true,
+  "no_op_commits": 0,
+  "counts": {
+    "SEMANTIC": 3,
+    "GOVERNANCE": 8,
+    "TEST": 2
+  },
+  "commits": [
+    {
+      "sha": "8b12b722e46664650bf8ee000f7a972c6ad8f8d5",
+      "parent": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md"
+      ],
+      "tree": "1e74569e01bf0970803bee6bf569fa4945b40581",
+      "class": "SEMANTIC"
+    },
+    {
+      "sha": "f5fe15d7696f42135bd73fdec37109727cfd7049",
+      "parent": "8b12b722e46664650bf8ee000f7a972c6ad8f8d5",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md"
+      ],
+      "tree": "01ddaccdc4a7c3f3f97a3dcc36264662fa68689c",
+      "class": "SEMANTIC"
+    },
+    {
+      "sha": "1312096082e743ddcc67a73aaaaf48e8499ba74b",
+      "parent": "f5fe15d7696f42135bd73fdec37109727cfd7049",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "tree": "8d366bbf3ede81bc41a3eb1154c6585f56b154d5",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "fbb8abea3411972e424b84fc14531deb7662ae21",
+      "parent": "1312096082e743ddcc67a73aaaaf48e8499ba74b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/src/contextual-outcome.mjs"
+      ],
+      "tree": "52d96d0a61c794e5ec54b8db82a9849274bb106d",
+      "class": "SEMANTIC"
+    },
+    {
+      "sha": "60696acdc854c633793974bedf817caa3b3c790c",
+      "parent": "fbb8abea3411972e424b84fc14531deb7662ae21",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/semantic_force_decision/tests/contextual-outcome.test.mjs"
+      ],
+      "tree": "aed53538fa4b81f63b132fab3fa0178a9f670d3a",
+      "class": "TEST"
+    },
+    {
+      "sha": "363b27b7b9fd2fdd765352181dd523d28132fdef",
+      "parent": "60696acdc854c633793974bedf817caa3b3c790c",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/OPERATION_EVIDENCE_STAGES_SOURCE_RECEIPT_2026-10-27.json"
+      ],
+      "tree": "5727cf9f6d122af6a7d3366f7a96ab68048da0bc",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "9e254d846bd879b33d3b676b5097dd77887f6d94",
+      "parent": "363b27b7b9fd2fdd765352181dd523d28132fdef",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "tree": "606001190a5c0bb0f74c7fcd11f914caa7c928ff",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "9416392eac4105e8934bb90339e6b8318454ecdc",
+      "parent": "9e254d846bd879b33d3b676b5097dd77887f6d94",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs"
+      ],
+      "tree": "aa89c0fbccd9496116bddc69ef9e57583b23601a",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "329aeee5dca64f837a7a71039c54fc31c583958e",
+      "parent": "9416392eac4105e8934bb90339e6b8318454ecdc",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs"
+      ],
+      "tree": "95003c246d3e66ce0c61c0c88d27013443f02d8d",
+      "class": "TEST"
+    },
+    {
+      "sha": "1448225790684fbbf0a56609abec4da59ea78f66",
+      "parent": "329aeee5dca64f837a7a71039c54fc31c583958e",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/PATCHFIRST_SEMANTIC_BOUNDARY_REPAIR_READBACK_2026-10-27.json"
+      ],
+      "tree": "7342d718c6b3d9b6820a8fec0960736dc3063eea",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "eb9af7bae2af4c5a80f9db065f5436599ac7965b",
+      "parent": "1448225790684fbbf0a56609abec4da59ea78f66",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "tree": "dc4d8831ee95adbac3008f8ab50245bd23db2f0c",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "4005647c29c026994352d76e294983d63e47edcf",
+      "parent": "eb9af7bae2af4c5a80f9db065f5436599ac7965b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/LIVE_V0122_BINARY_PROVIDER_READBACK_ATTEMPT_2026-10-28.json"
+      ],
+      "tree": "d23e7857edd45e8fbbebeae917a8e70341de67c7",
+      "class": "GOVERNANCE"
+    },
+    {
+      "sha": "bba79a83c3352ba77cf9cf90f6e0b8d5ae3b0822",
+      "parent": "4005647c29c026994352d76e294983d63e47edcf",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "tree": "3d7dac753eaa9a8de22f265050c082b92a3d7abd",
+      "class": "GOVERNANCE"
+    }
+  ],
+  "latest_semantic_body_candidate": "fbb8abea3411972e424b84fc14531deb7662ae21",
+  "latest_semantic_change": "READ_ONLY_OPERATION_EVIDENCE_STAGES_ADVISORY",
+  "classifier_patch": "9416392eac4105e8934bb90339e6b8318454ecdc",
+  "classifier_patch_category": "GOVERNANCE_IN_EXISTING_IMPLEMENTATION",
+  "semantic_body_canonical": null,
+  "history_preceding_153": "PRESERVED_NOT_RECONSTRUCTED",
+  "historical_live_text_files": "27_OF_27_INDEPENDENT_PASS_PREVIOUS_AUDIT",
+  "live_vs_current_development_text": "23_OF_27_PREVIOUS_AUDIT",
+  "current_source_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+  "historical_plugin_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+  "provider": {
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "metadata": "DIRECT_VERIFIED",
+    "download_link": "OBTAINED_NOT_STORED",
+    "archive_binary_bytes": "UNAVAILABLE_AFTER_ACCESS_GATE",
+    "archive_sha256": null,
+    "logo_binary_sha256": null
+  },
+  "gates": {
+    "canonical_fingerprint": "WRITE_BLOCKED",
+    "plugin_promotion": false,
+    "backup_approval": false,
+    "host_acceptance": "NOT_VERIFIED",
+    "source_ci": "PREVIOUS_CI_PASS_NOT_RERUN"
+  },
+  "visual_impact": "FORENSIC_EVIDENCE_ONLY_NO_DASHBOARD_RENDER_CHANGE",
+  "plugin_impact": "EVIDENCE_ONLY_NO_NEW_CODE_OR_SKILL_CHANGE",
+  "foreign_writes": false,
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "pdi": "PRESERVED",
+  "return_anchor": "CLIC_SUFFIX_13_VERIFIED_SEMANTIC_BODY_CANDIDATE_FBB8_BINARY_PROVIDER_BYTES_OPEN_NO_APPROVAL"
+}
