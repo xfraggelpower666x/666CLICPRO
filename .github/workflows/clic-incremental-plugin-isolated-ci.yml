@@ -1,0 +1,31 @@
+name: CLIC incremental plugin governance isolated read-only CI
+on:
+  push:
+    branches:
+      - clic-incremental-plugin-update-20261030-r01
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/incremental-plugin-update.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/INCREMENTAL_PLUGIN_UPDATE_CANDIDATE_2026-10-30.md'
+      - '.github/workflows/clic-incremental-plugin-isolated-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-read-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated incremental contract and negative regressions
+        run: |
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/incremental-plugin-update.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/release-gate-check.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/archive-preflight.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs
+          node --test 666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.test.mjs
+# SOURCE-ONLY: no provider, PFS, runtime or root-current writes; no fake archive-byte acceptance.
