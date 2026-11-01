@@ -1,0 +1,26 @@
+{
+  "expected_plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "live_metadata": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186"
+  },
+  "archive_export": {
+    "plugin": {
+      "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+      "version": "0.1.22",
+      "current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186"
+    },
+    "release": {
+      "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+      "version": "0.1.22",
+      "is_current": true
+    },
+    "file_name": "workspace-plugin-p0fda2cg.tar.gz",
+    "mime_type": "application/gzip",
+    "has_download_url": true
+  },
+  "provenance_status": "PROVIDER_CURRENT_RELEASE_AND_EXPORT_VERIFIED_URL_ONLY_NO_BYTES",
+  "original_archive_bytes_readback": false,
+  "full_zip_backup_readback": false
+}
