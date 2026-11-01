@@ -1,0 +1,30 @@
+name: CLIC own-plugin restore preflight (isolated)
+on:
+  push:
+    branches:
+      - 'dev/clic-own-plugin-backup-zip-parity-20261101'
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/development/own_plugin_backup_parity/restore_preflight.py'
+      - '666CLIC_NATIVE_RUNTIME/development/own_plugin_backup_parity/test_restore_preflight.py'
+      - '.github/workflows/own-plugin-backup-restore-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  restore-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact workflow commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run isolated restore-preflight tests only
+        working-directory: 666CLIC_NATIVE_RUNTIME/development/own_plugin_backup_parity
+        run: python -m unittest -v test_restore_preflight.py
