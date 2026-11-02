@@ -14,4 +14,4 @@ jobs:
       - name: Verify native reader with repository classifier
         run: |
           node --version
-          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-reader.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-host-adapter.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-reader.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-host-adapter.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-checkpoint-git-cas.test.mjs
