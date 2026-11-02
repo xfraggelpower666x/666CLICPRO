@@ -1,0 +1,17 @@
+name: CLIC Semantic Reader R02 Isolated
+on:
+  push:
+    branches:
+      - clic-reader-r01-20261102
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  semantic-reader-native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify native reader with repository classifier
+        run: |
+          node --version
+          node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-reader.test.mjs 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-host-adapter.test.mjs
