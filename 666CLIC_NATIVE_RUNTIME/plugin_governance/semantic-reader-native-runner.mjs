@@ -7,7 +7,7 @@ const branch='clic-reader-r01-20261102',repo='xfraggelpower666x/666CLICPRO';
 const dir='666CLIC_NATIVE_RUNTIME/plugin_governance/semantic_reader_checkpoints/';
 const base='9a9d904e7a67bedf55896bb9fd907031102c945a';
 const end='b4ca517971f927c868bbc1c86b5b31a59dae1734';
-const prev=dir+'153bridge_0011_2026-11-02.json',next=dir+'153bridge_0019_2026-11-02.json';
+const prev=dir+'153bridge_0019_2026-11-02.json',next=dir+'153bridge_0027_2026-11-02.json';
 const token=process.env.GITHUB_TOKEN;
 if(process.env.GITHUB_REF_NAME!==branch||!token||process.env.GITHUB_REPOSITORY!==repo)throw Error('AUTHORIZED_ISOLATED_GITHUB_ACTION_CONTEXT_REQUIRED');
 const api='https://api.github.com/repos/'+repo;
@@ -38,12 +38,12 @@ if(head!==process.env.GITHUB_SHA)throw Error('CONCURRENT_BRANCH_CHANGE_BEFORE_RU
 const prior=await git.readFile({ref:head,path:prev});
 if(!prior)throw Error('PRIOR_CHECKPOINT_MISSING');
 const checkpoint=JSON.parse(prior.content);
-if(checkpoint.count!==11)throw Error('RESUME_POSITION_NOT_11');
+if(checkpoint.count!==19)throw Error('RESUME_POSITION_NOT_19');
 const step=await runBoundedSemanticGithubStep({
  fetch:async({url})=>{if(!url.startsWith(api+'/'))throw Error('FOREIGN_URL_DENIED');return {result:{content:JSON.stringify(await req(url.slice(api.length)))}}},
  base,head:end,checkpoint,limit:8
 });
-if(step.status!=='READBACK_PENDING'||step.checkpoint?.count!==19)throw Error('READ_PHASE_HOLD_'+step.reason+'_'+step.status);
+if(step.status!=='READBACK_PENDING'||step.checkpoint?.count!==27)throw Error('READ_PHASE_HOLD_'+step.reason+'_'+step.status);
 const outcome=await appendIsolatedSemanticCheckpoint({github:git,branch,path:next,previousPath:prev,previousBlob:prior.sha,record:step.checkpoint});
 if(outcome.status!=='ISOLATED_CHECKPOINT_READBACK_VERIFIED')throw Error('CAS_READBACK_GATE_'+outcome.reason+'_'+outcome.status);
-console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({status:outcome.status,commit:outcome.commit,count:outcome.count,previous:11,new_items:8,production_published:false,plugin_promotion:false}));
+console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({status:outcome.status,commit:outcome.commit,count:outcome.count,previous:19,new_items:8,production_published:false,plugin_promotion:false}));
