@@ -1,0 +1,40 @@
+{
+  "schema": "CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1",
+  "base": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+  "head": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+  "total": 153,
+  "count": 3,
+  "last_sha": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+  "entries": [
+    {
+      "sha": "a3a10cc5a0f0d6a8f4db4eb9f047692a1e98e1f0",
+      "parent": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BOUNDARY_VERIFIED_SUFFIX_35_2026-10-18.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "c8ecf915067ab9d661397ec100f187ae120c7989",
+      "parent": "a3a10cc5a0f0d6a8f4db4eb9f047692a1e98e1f0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+      "parent": "c8ecf915067ab9d661397ec100f187ae120c7989",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    }
+  ]
+}
