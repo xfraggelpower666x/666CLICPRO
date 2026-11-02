@@ -1,0 +1,25 @@
+name: CLIC Isolated Semantic Reader Native Host CAS
+on:
+  push:
+    branches:
+      - clic-reader-r01-20261102
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-reader-native-runner.mjs'
+permissions:
+  contents: write
+concurrency:
+  group: clic-semantic-reader-isolated
+  cancel-in-progress: false
+jobs:
+  isolated-native-cas:
+    if: github.ref == 'refs/heads/clic-reader-r01-20261102'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Execute existing CLIC native reader and CAS modules
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-reader-native-runner.mjs
