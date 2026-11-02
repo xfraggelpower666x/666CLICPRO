@@ -1,0 +1,34 @@
+{
+  "schema": "CLIC_SEMANTIC_BOUNDARY_R02_ISOLATED_READBACK_V1",
+  "status": "ISOLATED_IMPLEMENTED_TESTED_LOCAL_READBACK_PENDING",
+  "source_parent": "515327b824d7f02f6f922a90c29b254c3e2cc9f9",
+  "branch": "clic-reader-r01-20261102",
+  "recovery": "backup/clic-pre-semantic-reader-20261102-r01",
+  "bridge": {
+    "base": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+    "head": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+    "total": 153,
+    "real_first_three": [
+      "a3a10cc5a0f0d6a8f4db4eb9f047692a1e98e1f0",
+      "c8ecf915067ab9d661397ec100f187ae120c7989",
+      "95b5a9684900e3000f5539b2635a15c8e92cfaae"
+    ],
+    "first_three_classes": [
+      "GOVERNANCE",
+      "GOVERNANCE",
+      "GOVERNANCE"
+    ],
+    "real_adapter_execution": "NOT_YET_VERIFIED"
+  },
+  "append_only": "CALLER_SUPPLIED_NATIVE_CAS_AND_DIRECT_DIGEST_READBACK_REQUIRED",
+  "baseline_classifier": "UNCHANGED",
+  "baseline_plugin": "UNCHANGED",
+  "r01b": "PRESERVED",
+  "junior": "PRESERVED",
+  "pdi": "PRESERVED",
+  "pet": "PAUSED",
+  "binary": "BLOCKED_UNCHANGED",
+  "promotion": false,
+  "canonical_fingerprint": null,
+  "return_anchor": "CLIC_R02_HOST_ADAPTER_ISOLATED_REQUIRE_REAL_HOST_CAS_AND_ORIGINAL_CLASSIFIER_TEST"
+}
