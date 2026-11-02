@@ -1,0 +1,25 @@
+{
+  "schema": "CLIC_SEMANTIC_READER_R01_SOURCE_CANDIDATE",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_CANDIDATE_READBACK_PENDING",
+  "base_head": "b41b4a086682f7631c6dcfff3a0f4e6eb5e47983",
+  "bridge": {
+    "base": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+    "head": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+    "commit_count": 153
+  },
+  "recovery_branch": "backup/clic-pre-semantic-reader-20261102-r01",
+  "work_branch": "clic-reader-r01-20261102",
+  "reader": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-reader.mjs",
+  "tests": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-boundary-reader.test.mjs",
+  "real_153_details": "NOT_READ_AND_NOT_CLAIMED",
+  "provider_binary": "BLOCKED_UNCHANGED",
+  "canonical_fingerprint": null,
+  "plugin_promotion": false,
+  "pfs": false,
+  "pet": "PAUSED",
+  "junior": "PRESERVED",
+  "pdi": "PRESERVED",
+  "r01b": "PRESERVED_NOT_MODIFIED",
+  "return_anchor": "CLIC_SEMANTIC_READER_R01_ISOLATED_SOURCE_CHECKPOINT_RECEIPT_PENDING"
+}
