@@ -1,0 +1,440 @@
+{
+  "schema": "CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1",
+  "base": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+  "head": "b4ca517971f927c868bbc1c86b5b31a59dae1734",
+  "total": 153,
+  "count": 43,
+  "last_sha": "2e2464d979e4b9fea56ae46d0829a694f4f05db6",
+  "entries": [
+    {
+      "sha": "a3a10cc5a0f0d6a8f4db4eb9f047692a1e98e1f0",
+      "parent": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BOUNDARY_VERIFIED_SUFFIX_35_2026-10-18.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "c8ecf915067ab9d661397ec100f187ae120c7989",
+      "parent": "a3a10cc5a0f0d6a8f4db4eb9f047692a1e98e1f0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+      "parent": "c8ecf915067ab9d661397ec100f187ae120c7989",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "c4b82673f615ad7f31b680fae70fd2d7d2f9dd37",
+      "parent": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+      "paths": [
+        "666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "354559198bf6926b015e772543a5537e4c573a6d",
+      "parent": "c4b82673f615ad7f31b680fae70fd2d7d2f9dd37",
+      "paths": [
+        "666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "4588df8c098d6fddbffbc26de79110cda7d45af4",
+      "parent": "354559198bf6926b015e772543a5537e4c573a6d",
+      "paths": [
+        ".github/workflows/clic-patchfirst-visual-candidate.yml"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "f3ba988bf9699ceb7c8e77bfb35a62834632d039",
+      "parent": "4588df8c098d6fddbffbc26de79110cda7d45af4",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/PATCHFIRST_EXACT_DELTA_READBACK_2026-10-18.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "c23c7f840e4a08e83c3d02c3588e0224ccf62a36",
+      "parent": "f3ba988bf9699ceb7c8e77bfb35a62834632d039",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "c0a723e527eb8d99e8d9580866d0e5e6f36cbe70",
+      "parent": "c23c7f840e4a08e83c3d02c3588e0224ccf62a36",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "a8f7d342c71185a14e38bcc119b701de6468af43",
+      "parent": "c0a723e527eb8d99e8d9580866d0e5e6f36cbe70",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "e44b03f80b731032ca76cc85e35ec63d7ff75e7e",
+      "parent": "a8f7d342c71185a14e38bcc119b701de6468af43",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "e3dfec1a857e563ad4d901e82d5f162b4d38a482",
+      "parent": "e44b03f80b731032ca76cc85e35ec63d7ff75e7e",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "e1c28ed5a2ff285a225fa1b48b4899baff562ff4",
+      "parent": "e3dfec1a857e563ad4d901e82d5f162b4d38a482",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "807bab497e03b0a89c9beb1a0ea44c8262c397df",
+      "parent": "e1c28ed5a2ff285a225fa1b48b4899baff562ff4",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "1c5f7da50e925666c87952abe3477a28ce6a47ea",
+      "parent": "807bab497e03b0a89c9beb1a0ea44c8262c397df",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/PDI_SB05_READONLY_HOST_BINDING_EVIDENCE_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "aa448eb64f56cc05ef2e2afba18adbd52240662d",
+      "parent": "1c5f7da50e925666c87952abe3477a28ce6a47ea",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "2f11224f00f1218fe4222df6804eaeeefa30b888",
+      "parent": "aa448eb64f56cc05ef2e2afba18adbd52240662d",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "24497df6aa7cc546a88198e5b1a8d3b31b7aaa8d",
+      "parent": "2f11224f00f1218fe4222df6804eaeeefa30b888",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "78d1615d75fa117ddd992f8ff17571bc8daccfe0",
+      "parent": "24497df6aa7cc546a88198e5b1a8d3b31b7aaa8d",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/PDI_SB05_HOST_DISPATCH_ACCEPTANCE_HANDOFF_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "74a2bfbac815baca7f79a2cc18ad2540739cacc6",
+      "parent": "78d1615d75fa117ddd992f8ff17571bc8daccfe0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "3d5ee7fc535d665227a61a4b59a509592739043b",
+      "parent": "74a2bfbac815baca7f79a2cc18ad2540739cacc6",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/native-host-actions-readonly.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "5b14527465670f6eb0b1e015b6220c4e412b68da",
+      "parent": "3d5ee7fc535d665227a61a4b59a509592739043b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/native-host-actions-readonly.mjs"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "2d92217eb0cb1102e86a156076f1f5e7770e0002",
+      "parent": "5b14527465670f6eb0b1e015b6220c4e412b68da",
+      "paths": [
+        ".github/workflows/clic-pdi-sb05-native-readonly-execution.yml"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "a538ee827947457a078f38400273ae148d6feecd",
+      "parent": "2d92217eb0cb1102e86a156076f1f5e7770e0002",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/PDI_SB05_REAL_NATIVE_EXECUTION_RECEIPT_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "fabbee6fd0c76ff6d2e6d42c54e987428de336fe",
+      "parent": "a538ee827947457a078f38400273ae148d6feecd",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "5ebf38193766df525731d8a1ffea54a44cc2b7df",
+      "parent": "fabbee6fd0c76ff6d2e6d42c54e987428de336fe",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/inbox/LYVRA/receipts/LYVRA-CLIC-SUPERCODEFORGE-STARBRIDGE-20261018-R01-SOURCE-INTAKE.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "cada2a2c8ffac690db52e09eb7559a68d92e5032",
+      "parent": "5ebf38193766df525731d8a1ffea54a44cc2b7df",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-STARBRIDGE-WHOLE-NET-LYVRA-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "16f54375c55d1a90202f0716e70cbe37337505fd",
+      "parent": "cada2a2c8ffac690db52e09eb7559a68d92e5032",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666PFS_CSM/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "655b8d13c2df0707fbe3db71ca71740d9deda7cb",
+      "parent": "16f54375c55d1a90202f0716e70cbe37337505fd",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-STARBRIDGE-WHOLE-NET-666STREAM-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "fe4b054382e2887e26d4faee24d1c5b976a90c80",
+      "parent": "655b8d13c2df0707fbe3db71ca71740d9deda7cb",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-STARBRIDGE-WHOLE-NET-666CLS-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "431fd60f24b87447cc3e420520556546805600a0",
+      "parent": "fe4b054382e2887e26d4faee24d1c5b976a90c80",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666LINGUA/CLIC-STARBRIDGE-WHOLE-NET-666LINGUA-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "1dcfbcfb07121586704b0fa690494993287e6d25",
+      "parent": "431fd60f24b87447cc3e420520556546805600a0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666MIRA/CLIC-STARBRIDGE-WHOLE-NET-666MIRA-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "bf9c91cfba1e066c97d200ecae36048ccc19ccdf",
+      "parent": "1dcfbcfb07121586704b0fa690494993287e6d25",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666TDH/CLIC-STARBRIDGE-WHOLE-NET-666TDH-20261018-R01.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "80a83940ff6db646fea1fad321bc36bcb4dfea36",
+      "parent": "bf9c91cfba1e066c97d200ecae36048ccc19ccdf",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "219b30fe3f6f2a44b0655621fc4314190043f29b",
+      "parent": "80a83940ff6db646fea1fad321bc36bcb4dfea36",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "dc50a2353012ab952acb977648f79f77050c7dd0",
+      "parent": "219b30fe3f6f2a44b0655621fc4314190043f29b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "b853ff4949eb9e34865cf27e797a00dd387dcc20",
+      "parent": "dc50a2353012ab952acb977648f79f77050c7dd0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/inbox/LYVRA/receipts/CLIC-STARBRIDGE-WHOLE-NET-LYVRA-20261018-R01-DELIVERY-READBACK.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "30992e7d62c29f5e4f0907ad8a4753a9d4216c6b",
+      "parent": "b853ff4949eb9e34865cf27e797a00dd387dcc20",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "124be4b8188b5ce50e54da7ee03b5618fd9b8ac5",
+      "parent": "30992e7d62c29f5e4f0907ad8a4753a9d4216c6b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "e6c2d706226edc91c67c92de7d8934f225094b3e",
+      "parent": "124be4b8188b5ce50e54da7ee03b5618fd9b8ac5",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "0521db2e7f004365bce45fd68a19b5ebb14a78ad",
+      "parent": "e6c2d706226edc91c67c92de7d8934f225094b3e",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/inbox/666PFS/receipts/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01-DELIVERY-READBACK.json"
+      ],
+      "classes": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "sha": "df160d680b5db12fc68158cdb3ac5d1f222bb2cd",
+      "parent": "0521db2e7f004365bce45fd68a19b5ebb14a78ad",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_WHOLE_NETWORK_SUPERCODEFORGE_2026-10-18.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "sha": "2e2464d979e4b9fea56ae46d0829a694f4f05db6",
+      "parent": "df160d680b5db12fc68158cdb3ac5d1f222bb2cd",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json"
+      ],
+      "classes": [
+        "SEMANTIC"
+      ]
+    }
+  ]
+}
