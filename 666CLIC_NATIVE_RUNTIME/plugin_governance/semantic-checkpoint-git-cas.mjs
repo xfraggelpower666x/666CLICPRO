@@ -33,9 +33,15 @@ export async function appendIsolatedSemanticCheckpoint({github,branch=BRANCH,pat
   if(!SHA.test(commit?.sha??''))return deny('COMMIT_CREATION_FAILED');
   const moved=await github.updateRef({repository:REPO,branch,expected_sha:head,sha:commit.sha,force:false});
   if(moved?.success!==true)return deny('BRANCH_CAS_CONFLICT');
-  const finalHead=await github.readHead({repository:REPO,branch});
-  const finalFile=await github.readFile({repository:REPO,ref:finalHead,path});
-  if(finalHead!==commit.sha||finalFile?.sha!==expected||finalFile.content!==content)return {status:'READBACK_PENDING',persisted:false,commit:commit.sha};
-  return {status:'ISOLATED_CHECKPOINT_READBACK_VERIFIED',persisted:true,commit:commit.sha,blob:expected,count:record.count,production_published:false};
+  let lastReadback='UNAVAILABLE';
+  for(let attempt=1;attempt<=3;attempt++){
+   const finalHead=await github.readHead({repository:REPO,branch});
+   if(finalHead!==commit.sha){lastReadback='POSTWRITE_HEAD_NOT_VISIBLE';continue;}
+   const finalFile=await github.readFile({repository:REPO,ref:commit.sha,path});
+   if(finalFile?.sha!==expected){lastReadback='POSTWRITE_BLOB_NOT_MATCHED';continue;}
+   if(finalFile.content!==content){lastReadback='POSTWRITE_CONTENT_NOT_MATCHED';continue;}
+   return {status:'ISOLATED_CHECKPOINT_READBACK_VERIFIED',persisted:true,commit:commit.sha,blob:expected,count:record.count,production_published:false};
+  }
+  return {status:'READBACK_PENDING',reason:lastReadback,persisted:false,commit:commit.sha};
  }catch(e){return deny('GITHUB_CAS_READBACK_FAILED_'+String(e?.message??e))}
 }

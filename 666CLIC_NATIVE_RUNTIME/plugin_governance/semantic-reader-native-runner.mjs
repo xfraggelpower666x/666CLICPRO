@@ -39,6 +39,25 @@ const prior=await git.readFile({ref:head,path:prev});
 if(!prior)throw Error('PRIOR_CHECKPOINT_MISSING');
 const checkpoint=JSON.parse(prior.content);
 if(checkpoint.count!==27)throw Error('RESUME_POSITION_NOT_27');
+// Recover a committed checkpoint after a transient final host readback failure.
+// No replay, no new Git object and no ref write when the target is already present.
+const existing=await git.readFile({ref:head,path:next});
+if(existing){
+ const saved=JSON.parse(existing.content);
+ const expectedPrefix=JSON.stringify(checkpoint.entries);
+ if(saved?.schema!=='CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1'||saved.base!==base||saved.head!==end||
+    saved.total!==153||saved.count!==35||saved.entries?.length!==35||
+    JSON.stringify(saved.entries.slice(0,27))!==expectedPrefix||
+    saved.entries[27]?.parent!==checkpoint.last_sha||saved.entries.at(-1)?.sha!==saved.last_sha)
+   throw Error('RECOVERED_CHECKPOINT_CONFLICT');
+ const checkedHead=await git.readHead();
+ if(checkedHead!==head)throw Error('RECOVERED_CHECKPOINT_HEAD_CHANGED');
+ console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({
+  status:'ISOLATED_CHECKPOINT_RECOVERED_READBACK_VERIFIED',commit:head,
+  count:35,previous:27,new_items:8,write_attempted:false,
+  production_published:false,plugin_promotion:false}));
+ process.exit(0);
+}
 const step=await runBoundedSemanticGithubStep({
  fetch:async({url})=>{if(!url.startsWith(api+'/'))throw Error('FOREIGN_URL_DENIED');return {result:{content:JSON.stringify(await req(url.slice(api.length)))}}},
  base,head:end,checkpoint,limit:8
