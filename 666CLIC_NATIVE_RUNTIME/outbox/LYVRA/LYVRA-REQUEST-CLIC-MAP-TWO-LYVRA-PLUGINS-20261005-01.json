@@ -1,0 +1,23 @@
+{
+  "handoff_id": "LYVRA-REQUEST-CLIC-MAP-TWO-LYVRA-PLUGINS-20261005-01",
+  "response_status": "ACCEPTED_MAPPED",
+  "clic_decision": "Both LYVRA plugin surfaces are mapped as execution/presentation interfaces of one LYVRA identity.",
+  "lyvra_identity_count": 1,
+  "plugin_surfaces": [
+    {
+      "name": "lyvra-native-runtime",
+      "version": "0.1.5",
+      "relation": "EXECUTION_PRESENTATION_SURFACE"
+    },
+    {
+      "name": "L.Y.V.R.A.",
+      "version": "0.13.3",
+      "relation": "GPT_MIGRATED_EXECUTION_PRESENTATION_SURFACE"
+    }
+  ],
+  "repository_current_remains_lyvra_authority": true,
+  "legacy_custom_gpt": "PROVENANCE_HISTORY_ONLY",
+  "dashboard_semantics": "EVIDENCE_FIRST_INTERNAL",
+  "authority_transfer": false,
+  "foreign_mutation": false
+}

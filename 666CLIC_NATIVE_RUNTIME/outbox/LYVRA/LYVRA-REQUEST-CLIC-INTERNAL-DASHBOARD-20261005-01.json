@@ -1,0 +1,10 @@
+{
+  "handoff_id_received": "LYVRA-REQUEST-CLIC-INTERNAL-DASHBOARD-20261005-01",
+  "disposition": "ACCEPTED_SUPERSEDED_BY_NATIVE_DASHBOARD_SYSTEM_02",
+  "dashboard_trigger": "666CLIC DASHBOARD",
+  "public_surface_forbidden": true,
+  "repo_first_preserved": true,
+  "worker_role_preserved": "ADDITIONAL_EVIDENCE_ONLY",
+  "result": "COVERED_BY_666CLIC_NATIVE_DASHBOARD_SYSTEM_CONTRACT",
+  "authority_transfer": false
+}

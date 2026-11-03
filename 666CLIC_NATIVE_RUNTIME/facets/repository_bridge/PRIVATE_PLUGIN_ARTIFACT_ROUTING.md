@@ -1,0 +1,55 @@
+# CLIC Repository Bridge — private plugin artifact routing
+STATUS=CLIC_NATIVE_SOURCE_GOVERNANCE_CURRENT
+OWNER=666CLIC
+CANONICAL_BRIDGE=666CLIC_NATIVE_RUNTIME/facets/repository_bridge/FACET_CONTRACT.md
+NO_SECOND_BRIDGE=true
+
+## Authority and visibility
+PUBLIC_DEVELOPMENT=xfraggelpower666x/666CLICPRO@clic-migration-rev79-staging
+PRIVATE_PLUGIN_ARTIFACT=PRIVATE_BACKUP_STORAGE_ONLY
+PLUGIN_PUBLICATION=INDEPENDENT_PLUGIN_CREATOR_DECISION
+PUBLIC_DEVELOPMENT_NE_PLUGIN_PUBLICATION=true
+PRIVATE_ARCHIVE_TO_PUBLIC_GITHUB=FORBIDDEN
+TRANSFER_RECEIPT_NE_BACKUP_RECEIPT_NE_PLUGIN_RELEASE=true
+
+## Existing private target contract readback, 2026-10-17
+VAULT=xfraggelpower666x/LYVRA-PRIVATE-VAULT
+BRANCH=main
+VAULT_VISIBILITY=PRIVATE_DIRECT_READBACK
+VAULT_HEAD_AT_INSPECTION=64be51ed9c6683c9165423aaf8747d4d94657ee9
+CONTRACT=contracts/666PFS_COUPLED_LYVRA_CLIC_PLUGIN_BACKUP_CIRCLE.md
+CONTRACT_GIT_BLOB=a0ffb68c23443af400dad0f67c970499caf537b3
+RECOMMENDED_CLIC_ROOT=backups/666PFS/PLUGIN_BACKUP_CIRCLE/artifacts/CLIC/
+TARGET_ROLE=EXISTING_PFS_BACKUP_NAMESPACE_NOT_CLIC_OWNED_UNRESTRICTED_WRITE_ROOT
+CLIC_BACKUP_AUTHORITY=CLIC_ONLY
+BACKUP_ORCHESTRATOR=666PFS_ONLY
+VAULT_CONTRACT_OWNER=LYVRA
+NO_VAULT_WRITE_FROM_CLIC_UPDATE=true
+NO_PFS_CHILD_AUTOLOAD=true
+
+## Original provider artifact
+PLUGIN_ID=plugins_6abfb2e08fdc8191920dcdc4349c69c8
+PLUGIN_VERSION=0.1.22
+PLUGIN_RELEASE_ID=pluginrel_6ac6f4e703288191b8757f336d33e186
+ARCHIVE_FILENAME=workspace-plugin-p0fda2cg.tar.gz
+ARCHIVE_BYTES=2941803
+ARCHIVE_SHA256=b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6
+ARCHIVE_REGULAR_FILES=28
+ORIGINAL_LOGO_SHA256=f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d
+ORIGINAL_ARCHIVE_VERIFIED_BY_LOCAL_UPLOADED_BYTES=true
+PRIVATE_REMOTE_ARTIFACT_WRITE=NOT_PERFORMED
+PRIVATE_REMOTE_SHA256_READBACK=NOT_PERFORMED
+HOST_LOCAL_BYTES_TO_GITHUB_CONNECTOR=NOT_VERIFIED
+
+## Transaction boundary
+A new PFS backup leg requires actual latest CLIC plugin release readback, immutable snapshot and parity/fingerprint review, exact CLIC approval, private vault path authority, PFS-native execution, independent blob bytes/size/SHA256 and a native PFS receipt. CLIC's public-source evidence or the uploaded bytes alone cannot authorize PFS execution. Do not mutate LYVRA private vault or PFS without matching direct native user trigger. Approval request != approval != private write != remote readback. If current plugin-source semantic parity is unresolved, approval stays PENDING; preserve newer valid CLIC source evolution rather than rebasing to historical v0.1.22 snapshot.
+
+## Bridge route
+REUSE=repository_bridge
+PREFERRED=create_blob(base64)>create_tree>create_commit>update_ref(expected_head,no_force)>independent_commit_tree_blob_and_byte_readback
+FALLBACK=existing_authorized_local_git_adapter_if_its_actual_runner_is_VERIFIED
+NO_NEW_BRIDGE=true
+NO_AUTOMATIC_PUBLICATION=true
+PET=PAUSED
+JUNIOR=PRESERVED
+RETURN_ANCHOR=CLIC_PRIVATE_ARTIFACT_APPROVAL_PARITY_AND_PFS_NATIVE_EXECUTION_PENDING

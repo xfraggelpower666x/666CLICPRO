@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "source": "/workspace/scratch/da0f52bfb772/doctor-duo-v2/final/spritesheet-extended.png",
+  "sha256": "accb63f58b97761db070daf49bf889553ca6a377d16bb84a37b303b4899abca1",
+  "previews": "/workspace/scratch/da0f52bfb772/doctor-duo-v2/final/previews",
+  "frame_source": "exact final atlas cells",
+  "states": {
+    "idle": 6,
+    "running-right": 8,
+    "running-left": 8,
+    "waving": 4,
+    "jumping": 5,
+    "failed": 8,
+    "waiting": 6,
+    "running": 6,
+    "review": 6
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "CLIC_BRIDGE_CARD_PEER_RECONCILIATION_V1",
+  "date": "2026-10-09",
+  "status": "CLIC_SOURCE_RECONCILED_PEER_DELIVERY_AND_HOST_NOT_ACCEPTED",
+  "prechange_head": "2fbe17c07d34b28cac3ef3dcacaba324c5804b06",
+  "backup": "backup/clic-pre-bridge-card-registry-align-20261009-2205",
+  "bridge": {
+    "contract": "facets/repository_bridge/FACET_CONTRACT.md",
+    "current": "facets/repository_bridge/CURRENT_STATE.json",
+    "reconciled": "NATIVE_REGISTERED_REHYDRATED_IDLE_REACHABLE",
+    "fresh_host": "NOT_TESTED",
+    "live_plugin": "0.1.22_UNCHANGED"
+  },
+  "cards": {
+    "registry": "facets/card_intelligence/REGISTRY.json",
+    "existing_cards_indexed": 8,
+    "card_content_changed": false,
+    "peer_current_new_readback": "NOT_PERFORMED",
+    "visual_evidence_status": "PRESERVED_EXISTING_PARTIAL_UNKNOWN",
+    "next": "REVALIDATE_TARGET_NATIVE_CURRENT_BEFORE_CARD_UPGRADE"
+  },
+  "peers": {
+    "notice_registry": "outbox/visual/UNIFIED_NEON_VISUAL_NOTICE_REGISTRY_CURRENT.json",
+    "registry_blob_before_change": "f6907ffb2f6d1480c7208db11ea9f1194ca52bc9",
+    "notice_count": 7,
+    "prepared": 7,
+    "delivery_receipts": 0,
+    "delivered_verified": 0,
+    "native_adoption_verified": 0,
+    "targets": [
+      "LYVRA",
+      "666PFS_CSM",
+      "666STREAM",
+      "666LINGUA",
+      "666TDH",
+      "666CLS",
+      "666MIRA"
+    ],
+    "notice_registry_mutated": false,
+    "delivery_ne_adoption": true,
+    "no_fake_peer_receipts": true
+  },
+  "integration": {
+    "facets": 5,
+    "required_manifest_refs": 92,
+    "host_fresh_boot": "NOT_TESTED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutations": false,
+    "plugin_impact": "CLIC_NATIVE_SEMANTIC_STATUS_AND_CARD_INDEX_CHANGED_SOURCE_AHEAD_LIVE_PLUGIN_PARITY_REQUIRES_SEPARATE_GOVERNED_GATE",
+    "no_new_plugin_release": true
+  },
+  "return_anchor": "DIRECT_NATIVE_PEER_READBACK_FOR_8_CARDS; VERIFY_7_NOTICE_DELIVERY_RETURNS_IF_ANY; FRESH_HOST_AND_PLUGIN_IMPACT_SEPARATE; PET_PAUSED"
+}

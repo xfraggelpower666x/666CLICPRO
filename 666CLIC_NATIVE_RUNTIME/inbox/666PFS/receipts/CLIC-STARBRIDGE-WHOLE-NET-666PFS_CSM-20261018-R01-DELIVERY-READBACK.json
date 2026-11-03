@@ -1,0 +1,56 @@
+{
+  "schema": "CLIC_STARBRIDGE_WHOLE_NETWORK_DELIVERY_RECEIPT_V1",
+  "owner": "666CLIC",
+  "classification": "DELIVERED_EVIDENCED_NATIVE_PFS_RECEIPT",
+  "handoff_id": "CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01",
+  "source_system": "666CLIC",
+  "target_system": "666PFS_CSM",
+  "source_repository": "xfraggelpower666x/666CLICPRO",
+  "source_branch": "clic-migration-rev79-staging",
+  "source_commit": "e6c2d706226edc91c67c92de7d8934f225094b3e",
+  "source_commit_tree": "2fe05f165858caf472249b7524bc354cfd1d8a6d",
+  "source_path": "666CLIC_NATIVE_RUNTIME/outbox/666PFS_CSM/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01.json",
+  "source_blob_sha": "e524c745cb79f5d2204fd91a1e7ef0697bcba741",
+  "recipient_repository": "xfraggelpower666x/666PFS_CSM",
+  "recipient_branch": "main",
+  "recipient_commit": "730610610e4645fd51f8bb08d7a2774217fa96f8",
+  "recipient_commit_tree": "4cc6660ae0d1f153b9241319c9e0faeae19a44ce",
+  "recipient_path": "handoff/receipts/CLIC-STARBRIDGE-WHOLE-NET-666PFS_CSM-20261018-R01_PFS_SOURCE_RECEIPT.json",
+  "recipient_blob_sha": "4bb3fde4e95762ae07514b6df2094217dd58117e",
+  "recipient_receipt_id": "666PFS_CSM-CLIC-WHOLE-NET-20261018-R01-RECEIPT",
+  "pfs_native_decision": "RECEIVE_SOURCE_EVIDENCE_FOR_PFS_SCOPED_REVIEW_ONLY",
+  "independent_verification": {
+    "source_commit_tree_path_blob": "PASS",
+    "source_file_direct_readback": "PASS",
+    "recipient_commit_tree_path_blob": "PASS",
+    "recipient_file_direct_readback": "PASS",
+    "handoff_id": "MATCH",
+    "recipient_scope": "PFS_NATIVE_ONLY",
+    "no_foreign_writes": true
+  },
+  "gates": {
+    "source": "PASS",
+    "delivery": "DELIVERED_EVIDENCED",
+    "automatic_transport": "NOT_VERIFIED",
+    "native_adoption": "NOT_VERIFIED",
+    "host": "NOT_VERIFIED",
+    "supercodeforge_host": "BLOCKED",
+    "other_network_peers": "FOUR? NO_FIVE_PENDING"
+  },
+  "network_count": {
+    "previous_lyvra_delivery": 1,
+    "new_pfs_delivery": 1,
+    "other_pending": 5,
+    "total": 7
+  },
+  "preserve": {
+    "sb04_sb05": true,
+    "pdi_priority": true,
+    "junior": true,
+    "pet_paused": true,
+    "plugin_current": true,
+    "foreign_writes": false
+  },
+  "prechange_recovery": "backup/clic-pre-whole-net-pfs-delivery-20261018",
+  "return_anchor": "PDI_PRIORITY_UNCHANGED_FIVE_OTHERS_PENDING"
+}

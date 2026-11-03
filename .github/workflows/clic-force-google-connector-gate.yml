@@ -1,0 +1,27 @@
+name: CLIC Force Google Connector Gate
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.test.mjs'
+      - '.github/workflows/clic-force-google-connector-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  force-google-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated test fixture, denial and recovery regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/force-google-connector-gate.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/force-google-docs-host-adapter.test.mjs
+# Fixture-only execution cannot prove live Google Write, Host or CAS.

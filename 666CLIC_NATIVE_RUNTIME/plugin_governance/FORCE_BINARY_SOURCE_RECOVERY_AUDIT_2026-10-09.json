@@ -1,0 +1,57 @@
+{
+  "schema": "CLIC_FORCE_BINARY_SOURCE_RECOVERY_AUDIT_V1",
+  "date": "2026-10-09",
+  "scope": "CLIC_OWNED_ONLY_READONLY_EVIDENCE_AND_GOVERNED_LEDGER_WRITE",
+  "source_head": "c7bd2a22dc5c8514799ab249075093567af2b1da",
+  "prechange_backup": "backup/clic-pre-force-binary-gate-stewardship-20261009-2040",
+  "source_authority": "GITHUB_REPO_CURRENT",
+  "plugin": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "current_version": "0.1.22",
+    "current_provider_release_verified": true,
+    "provider_archive_download_url_available": true,
+    "original_archive_bytes_obtained": false,
+    "original_archive_sha256": null,
+    "logo_provider_size_bytes": 2929725,
+    "logo_live_sha256": null,
+    "older_same_version_snapshot_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "older_snapshot_is_current": false,
+    "source_expected_logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "source_expected_hash_is_live_proof": false,
+    "provider_text_parity": "HISTORICAL_DIRECT_READBACK_27_OF_27_NO_NEW_FULL_COMPARE"
+  },
+  "evidence": {
+    "plugin_provider": "DIRECT_GET_OWNED_PLUGIN_ARCHIVE_CURRENT_RELEASE_METADATA",
+    "github_tree": "DIRECT_717_ENTRY_NONTRUNCATED_TREE",
+    "github_logo_original_binary_copy": "NOT_PRESENT",
+    "archive_access": "PREVIOUS_ATTEMPTS_BLOCKED_NO_RAW_BYTES",
+    "live_logo_access": "METADATA_ONLY_NO_BINARY_BYTES"
+  },
+  "gates": {
+    "sha256": "BLOCKED_MISSING_ORIGINAL_BYTES",
+    "prepublish": "WRITE_BLOCKED_PENDING_BYTES_HASH_AND_NATIVE_APPROVAL",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "postpublish_host": "NOT_STARTED",
+    "neon_card_force_host": "SOURCE_AHEAD_NOT_INSTALLED",
+    "seven_notices": "7_PREPARED_0_DELIVERED_0_ADOPTED",
+    "dashboard_host": "NOT_VERIFIED",
+    "pet": "PAUSED_UNMODIFIED"
+  },
+  "visual_impact": {
+    "junior": "PINNED_SOURCE_FOREGROUND_WORKER_UNVERIFIED",
+    "semantic_visual_intelligence": "REHYDRATED_REACHABLE",
+    "external_system_visual_compliance": "UNCHANGED_NO_FOREIGN_DIRECT_READ"
+  },
+  "next_safe_actions": [
+    "OBTAIN_ACTUAL_PROVIDER_ORIGINAL_ARCHIVE_BYTES_WITH_AUTHORIZED_DOWNLOAD_PATH",
+    "COMPUTE_SHA256_OVER_EXACT_ARCHIVE_AND_EXTRACTED_LOGO_BYTES",
+    "COMPARE_ACTUAL_LOGO_SIZE_AND_HASH_TO_SOURCE_EXPECTATION_AND_CURRENT_PROVIDER_RELEASE",
+    "VERIFY_NATIVE_PREPUBLISH_APPROVAL_FINGERPRINT_AND_BACKUP_BEFORE_ANY_PLUGIN_PUBLICATION",
+    "RUN_SEPARATE_REAL_HOST_ACCEPTANCE_AFTER_AUTHORIZED_RELEASE"
+  ],
+  "foreign_mutations": false,
+  "pet_mutations": false,
+  "plugin_mutations": false,
+  "prepointer_status": "EVIDENCE_STEWARDSHIP_ONLY"
+}

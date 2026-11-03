@@ -1,0 +1,32 @@
+{
+  "schema": "CLIC_BINARY_BINDING_REPAIR_CANDIDATE_V1",
+  "mode": "FAIL_CLOSED_MINIMAL_REPAIR",
+  "status": "REPAIR_PREPARED_EVIDENCE_PENDING",
+  "source_head": "90611ce1db07bba969b6bec04959cc5ccd644eb1",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "version": "0.1.22",
+  "current_live_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "historical_bound_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+  "historical_binding_file": "666clic-plugin/releases/v0.1.22/BINARY_BINDING.json",
+  "historical_binding_immutable": true,
+  "asset_path": "assets/clic-logo.png",
+  "historical_source_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+  "historical_size_bytes": 2929725,
+  "live_release_metadata": "VERIFIED",
+  "text_parity": "PASS_27_OF_27_PREVIOUS_DIRECT",
+  "generic_overlay_preserves_omitted_binary": true,
+  "specific_transition_payload": "NOT_OBSERVED",
+  "current_live_binary_sha256": null,
+  "current_release_causal_binding": "NOT_VERIFIED",
+  "fingerprint": "NOT_ESTABLISHED",
+  "backup_approval": "WRITE_BLOCKED",
+  "pfs_execution_allowed": false,
+  "requirements": [
+    "Obtain exact transition payload proving binary omission and no deletion with size and publication provenance, OR original live archive bytes",
+    "Reconcile current live asset hash/size or policy-complete causal binding",
+    "Verify runtime semantic body and complete fingerprint",
+    "Review new CLIC-owned exact-release approval separately",
+    "PFS backup/write/readback/receipt remain distinct"
+  ],
+  "no_foreign_mutation": true
+}

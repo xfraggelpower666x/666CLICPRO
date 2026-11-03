@@ -1,0 +1,29 @@
+name: CLIC StarBridge owner mailbox source checks
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-transport*'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-github-binding*'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-host-adapter*'
+      - '.github/workflows/clic-owner-mailbox-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  owner-mailbox-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify private owner mailbox transport boundaries
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-transport.test.mjs
+      - name: Verify GitHub commit/tree/blob to Drive reply correlation
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-github-binding.test.mjs
+      - name: Verify explicit host adapter and fail-closed transport
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-owner-mailbox-host-adapter.test.mjs
+      - name: Preserve existing scoped and CLS Drive source regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-drive-scoped-receiver.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.test.mjs

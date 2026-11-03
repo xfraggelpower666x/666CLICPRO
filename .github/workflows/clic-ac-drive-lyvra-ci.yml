@@ -1,0 +1,28 @@
+name: CLIC A+C scoped Drive source checks
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-drive-scoped-receiver*'
+      - '666CLIC_NATIVE_RUNTIME/relations/LYVRA_UNDERSTANDING_CARD_REPO_CURRENT_2026-10-05.md'
+      - '666CLIC_NATIVE_RUNTIME/relations/CROSS_SYSTEM_RELATIONS.md'
+      - '666CLIC_NATIVE_RUNTIME/facets/card_intelligence/LYVRA_FACET_REGISTRY_CURRENT.json'
+      - '.github/workflows/clic-ac-drive-lyvra-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scoped-drive-readonly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify new read-only scoped correspondence checks
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-drive-scoped-receiver.test.mjs
+      - name: Preserve existing CLS Drive receipt and host adapter regressions
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-drive-receipt.test.mjs 666CLIC_NATIVE_RUNTIME/continuity/starbridge-cls-host-adapter.test.mjs
+      - name: Verify unchanged canonical CLIC PDI reducer tests
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.test.mjs

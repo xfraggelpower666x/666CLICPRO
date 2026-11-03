@@ -1,0 +1,28 @@
+name: CLIC StarBridge SB04 SB05 Receipt Readback
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs'
+      - '666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs'
+      - '.github/workflows/clic-starbridge-sb04-sb05-readback.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  receipt-readback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native SB04 SB05 receipt and preexisting source regressions
+        run: |
+          node --check 666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/continuity/starbridge-evidence.test.mjs
+# Injected GitHub connector mock tests are source-only; not proof of real delivery.

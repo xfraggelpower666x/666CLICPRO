@@ -1,0 +1,280 @@
+{
+  "schema": "CLIC_SEMANTIC_BODY_VERIFIED_SUFFIX_EVIDENCE_V1",
+  "authority": "666CLIC_ONLY",
+  "base": "9d6287912286977ecdbee90acef540563bbb1445",
+  "head": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+  "scope": "LATEST_35_INDEPENDENT_GITHUB_COMMIT_DIFF_READBACK",
+  "prior_history": "PREVIOUS_290_OF_290_ANCHOR_EVIDENCE_NOT_REEXECUTED_THIS_TURN",
+  "source": "GITHUB_COMPARE_PAGINATION_AND_INDEPENDENT_PER_COMMIT_CHANGED_PATHS_READBACK",
+  "source_independent_per_commit_readback": true,
+  "commits": [
+    {
+      "sha": "3effc9bfd5e9fbd7971199d94377b71b792d68b1",
+      "parent": "9d6287912286977ecdbee90acef540563bbb1445",
+      "paths": [
+        "666clic-plugin/backup-circle/CLIC_V0122_PRIVATE_VAULT_APPROVAL_CANDIDATE_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "a05d84c92585a03fec665b9a1b6d31ccea6219d9",
+      "parent": "3effc9bfd5e9fbd7971199d94377b71b792d68b1",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_PRIVATE_PLUGIN_V0122_BACKUP_REQUEST_20261017.json"
+      ]
+    },
+    {
+      "sha": "aaf5957bdb6ecefbc08c3fc7e4e8b88d6ce80112",
+      "parent": "a05d84c92585a03fec665b9a1b6d31ccea6219d9",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs"
+      ]
+    },
+    {
+      "sha": "2b8dc52b52d2e4b2a095a656ec864cc20e98c28b",
+      "parent": "aaf5957bdb6ecefbc08c3fc7e4e8b88d6ce80112",
+      "paths": [
+        ".github/workflows/clic-repository-bridge-master-ref.yml"
+      ]
+    },
+    {
+      "sha": "644c6ee10f4241ed4450eed7eef2075a1807045d",
+      "parent": "2b8dc52b52d2e4b2a095a656ec864cc20e98c28b",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "4e40384a3ee1569dcbaeb400ac1e1bc971e29e98",
+      "parent": "644c6ee10f4241ed4450eed7eef2075a1807045d",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_RUNTIME_PLUGIN_FINGERPRINT_RECONCILIATION_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "bda3ea14765f5e85812859a637d40c104fe8db9f",
+      "parent": "4e40384a3ee1569dcbaeb400ac1e1bc971e29e98",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_PRIVATE_PLUGIN_V0122_BACKUP_REQUEST_20261017.json"
+      ]
+    },
+    {
+      "sha": "c47c98186a5498638957c537f9667b9bf628b3b0",
+      "parent": "bda3ea14765f5e85812859a637d40c104fe8db9f",
+      "paths": [
+        "666clic-plugin/backup-circle/CLIC_V0122_PRIVATE_VAULT_APPROVAL_CANDIDATE_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "c669f35c9c19c23d43fadad840b0999ecc347af7",
+      "parent": "c47c98186a5498638957c537f9667b9bf628b3b0",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/v0122-fingerprint-reconciliation.test.mjs"
+      ]
+    },
+    {
+      "sha": "e96461c0b8b7bec92c10e2f153c10a9ba64d5b6d",
+      "parent": "c669f35c9c19c23d43fadad840b0999ecc347af7",
+      "paths": [
+        ".github/workflows/clic-repository-bridge-master-ref.yml"
+      ]
+    },
+    {
+      "sha": "0027467d3a5ecf30f317ef6143ed6ba91488bd2f",
+      "parent": "e96461c0b8b7bec92c10e2f153c10a9ba64d5b6d",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs"
+      ]
+    },
+    {
+      "sha": "649725b337051ee59ea63c7eb7f371caac9249f3",
+      "parent": "0027467d3a5ecf30f317ef6143ed6ba91488bd2f",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs"
+      ]
+    },
+    {
+      "sha": "08ba29983814192f0dd33a7d4aaee5ec7c0d40c8",
+      "parent": "649725b337051ee59ea63c7eb7f371caac9249f3",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs"
+      ]
+    },
+    {
+      "sha": "388def78bf1dc2353dbb4b4e0f118d24cf820706",
+      "parent": "08ba29983814192f0dd33a7d4aaee5ec7c0d40c8",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "fdb11a88c646a159b08f7a778bebf3141a6fd259",
+      "parent": "388def78bf1dc2353dbb4b4e0f118d24cf820706",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs"
+      ]
+    },
+    {
+      "sha": "9ad933c94df595d4356d9cc965c99c6a9560fbae",
+      "parent": "fdb11a88c646a159b08f7a778bebf3141a6fd259",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs"
+      ]
+    },
+    {
+      "sha": "48c5a68559429848b604f2a61114a5032feefce1",
+      "parent": "9ad933c94df595d4356d9cc965c99c6a9560fbae",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md"
+      ]
+    },
+    {
+      "sha": "af374dbc7136ad0afe2b642df82015c778f06229",
+      "parent": "48c5a68559429848b604f2a61114a5032feefce1",
+      "paths": [
+        ".github/workflows/clic-repository-bridge-master-ref.yml"
+      ]
+    },
+    {
+      "sha": "3971514cc6fa9d771fe58bb5ed433f07c3045a44",
+      "parent": "af374dbc7136ad0afe2b642df82015c778f06229",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BODY_BOUNDARY_CURRENT_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "a2150ec250a6c0ec4dd7a636dd1f952b3a99d80a",
+      "parent": "3971514cc6fa9d771fe58bb5ed433f07c3045a44",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "8068b872300e2e4b6a85c284c196bda49c440da5",
+      "parent": "a2150ec250a6c0ec4dd7a636dd1f952b3a99d80a",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs"
+      ]
+    },
+    {
+      "sha": "dfca838edb76afa155fbe75aff9eaed67a85ed97",
+      "parent": "8068b872300e2e4b6a85c284c196bda49c440da5",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs"
+      ]
+    },
+    {
+      "sha": "8b00f42c8fa396a8d5cccfbd88846a8f64673cad",
+      "parent": "dfca838edb76afa155fbe75aff9eaed67a85ed97",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/plugin_governance/SEMANTIC_BODY_BOUNDARY_REPAIR_READBACK_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "be9d685f812a0c4656005f42cda7cb7051c2f7fb",
+      "parent": "8b00f42c8fa396a8d5cccfbd88846a8f64673cad",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "ba2acc9232b2de523458f5e3326c9e60ec7fde29",
+      "parent": "be9d685f812a0c4656005f42cda7cb7051c2f7fb",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/visual-lifecycle-continuity.test.mjs"
+      ]
+    },
+    {
+      "sha": "102c5b001eb62e465a441657076d07fcccdc163f",
+      "parent": "ba2acc9232b2de523458f5e3326c9e60ec7fde29",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "9bea2abe911ae4b5d3a0e621387fd047f89abad1",
+      "parent": "102c5b001eb62e465a441657076d07fcccdc163f",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs"
+      ]
+    },
+    {
+      "sha": "f6abdc0c806129d88762f140cdc92a01dd1d8823",
+      "parent": "9bea2abe911ae4b5d3a0e621387fd047f89abad1",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs"
+      ]
+    },
+    {
+      "sha": "71c919ae751991b9dbd003c5fa4c5ce1db4b7244",
+      "parent": "f6abdc0c806129d88762f140cdc92a01dd1d8823",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/CURRENT_STATE.json"
+      ]
+    },
+    {
+      "sha": "315f5e06fb369493ee74dc401640756ba59a96a4",
+      "parent": "71c919ae751991b9dbd003c5fa4c5ce1db4b7244",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/PDI_LEDGER_CURRENT.json"
+      ]
+    },
+    {
+      "sha": "cf4e70569a3c2649fe36b227b3b866cb54fc0a6d",
+      "parent": "315f5e06fb369493ee74dc401640756ba59a96a4",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    },
+    {
+      "sha": "5c7cebdcc36b5f75d965af767540f31a53cf524a",
+      "parent": "cf4e70569a3c2649fe36b227b3b866cb54fc0a6d",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs"
+      ]
+    },
+    {
+      "sha": "02738d1ab83c14e8fd28482a4591a39989d04fbc",
+      "parent": "5c7cebdcc36b5f75d965af767540f31a53cf524a",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.test.mjs"
+      ]
+    },
+    {
+      "sha": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+      "parent": "02738d1ab83c14e8fd28482a4591a39989d04fbc",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/continuity/STARBRIDGE_SB05_PFS_DUAL_RECEIPT_READBACK_2026-10-17.json"
+      ]
+    },
+    {
+      "sha": "9a9d904e7a67bedf55896bb9fd907031102c945a",
+      "parent": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+      "paths": [
+        "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      ]
+    }
+  ],
+  "verified_ancestry_count": 35,
+  "changed_paths_complete": true,
+  "no_op_commits": 0,
+  "latest_semantic_candidate": "f3c7a143c65e8ede90d4c23b8d9481ea72b23c1e",
+  "semantic_candidate_not_canonical_fingerprint": true,
+  "repo_text_source_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+  "live_text_source_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+  "current_binary_binding": null,
+  "plugin_semantic_class": "SOURCE_NEWER_THAN_LIVE_PLUGIN_UNRELEASED_UNAPPROVED",
+  "actual_fingerprint": null,
+  "plugin_published": false,
+  "pfs_execution": false,
+  "pdi_return_anchor": "AUTHENTIC_EVENT_CAS_AND_HOST_RECONCILIATION_PENDING",
+  "starbridge_return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING",
+  "priority_order": [
+    "PDI_LIVE_PERSISTENCE_HOST",
+    "STARBRIDGE_SB01_SB05_RECEIPTS",
+    "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+    "PLUGIN_SOURCE_LIVE_PARITY"
+  ],
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "return_anchor": "SEMANTIC_BOUNDARY_SOURCE_SUFFIX_35_VERIFIED_LIVE_PARITY_BINARY_CLASS_OPEN"
+}

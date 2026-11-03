@@ -1,0 +1,57 @@
+{
+  "schema": "CLIC_SEMANTIC_BODY_BOUNDARY_CURRENT_V1",
+  "system": "666CLIC",
+  "status": "SOURCE_CLASSIFIER_AND_NEGATIVE_TESTS_CI_PASS_REAL_CONTIGUOUS_HISTORY_EVALUATION_PENDING",
+  "base_verified_head": "388def78bf1dc2353dbb4b4e0f118d24cf820706",
+  "prechange_backup": "backup/clic-pre-semantic-body-boundary-20261017",
+  "governance": "666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md",
+  "existing_implementation": "666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs",
+  "new_architecture": false,
+  "source_commit_ancestry": "REQUIRES_COMPLETE_CONTIGUOUS_INDEPENDENT_PARENT_AND_CHANGED_PATHS_READBACK",
+  "historical_observed_compare": {
+    "old_candidate": "90e0253f216d62560c1a3d6d03c3f2d88be40d96",
+    "target_base": "388def78bf1dc2353dbb4b4e0f118d24cf820706",
+    "total_commits": 284,
+    "returned_commits": 250,
+    "complete": false,
+    "reason": "GITHUB_COMPARE_PAGE_TRUNCATION_PREVENTS_CLOSED_FULL_CHAIN"
+  },
+  "semantic_body_head": null,
+  "semantic_body_candidate_status": "UNRESOLVED_NO_COMPLETE_HISTORY",
+  "runtime_plugin_fingerprint_sha256": null,
+  "seven_fingerprint_inputs": {
+    "verified": 3,
+    "unresolved": 4,
+    "current_repo_text_tree": "c2650c8bd8be1fddbb6d0d8552c0c597d64d9c1d",
+    "historical_release_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+    "historical_binary_binding_blob": "b108d4723714844d13743e388a0bcd394748245c",
+    "current_release_binding": "NOT_ISSUED",
+    "plugin_semantic_class": "HISTORICAL_HYBRID_SNAPSHOT_NEWER_UNPUBLISHED_SOURCE"
+  },
+  "negative_guards": [
+    "MISSING_CHANGED_PATHS",
+    "BROKEN_PARENT_CHAIN",
+    "UNKNOWN_SCOPE",
+    "MIXED_SEMANTIC_AND_GOVERNANCE",
+    "CURRENT_SOURCE_NE_LIVE_PROVIDER",
+    "CURRENT_BINARY_BINDING_MISSING",
+    "UNRESOLVED_SEMANTIC_CLASS"
+  ],
+  "ci": {
+    "workflow": "CLIC Repository Bridge Master Reference",
+    "run_id": 39006746090,
+    "conclusion": "SUCCESS",
+    "source_only": true
+  },
+  "approval": {
+    "issued": false,
+    "backup_allowed": false,
+    "provider_publication": false,
+    "fresh_host_pass": false
+  },
+  "pfs_handoff": "PREPARED_NOT_DELIVERED",
+  "foreign_writes": false,
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "return_anchor": "FETCH_ALL_PAGINATED_COMMIT_PATH_HISTORY_WITH_INDEPENDENT_VERIFICATION_THEN_BIND_CURRENT_SEMANTIC_BODY_AND_RESOLVE_LIVE_SOURCE_BINARY_CLASS_SEPARATELY"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "CLIC_REPO_HANDOFF_RESPONSE_V1",
+  "test_id": "LYVRA-CLIC-ROUNDTRIP-20261005-01",
+  "receiver_system": "666CLIC",
+  "receiver_head": "36f76eb5771443cf93bfd14889372f8d95dea1aa",
+  "handoff_id_received": "LYVRA-COMBINED-WORKER-REPO-FIRST-20261005-01",
+  "source_head_verified": true,
+  "verified_source_head": "ab24c0b4480ea8078e11a8dc741777bdf028b5dc",
+  "worker_relation_disposition": "PARTIAL",
+  "clic_primary_source": "GITHUB_REPO_CURRENT",
+  "drive_role": "HISTORY|REPO_BACKUP|RECOVERY|PROVENANCE",
+  "worker_evidence_status": "RELATION_ACCEPTED_RUNTIME_EVIDENCE_NOT_FUNCTIONALLY_VERIFIED",
+  "open_gates_preserved": true,
+  "result": "ROUNDTRIP_CLIC_RECEIVE_AND_RESPONSE_PATH_VERIFIED_WORKER_FUNCTIONAL_GATE_OPEN",
+  "authority_transfer": false,
+  "foreign_mutation": false
+}

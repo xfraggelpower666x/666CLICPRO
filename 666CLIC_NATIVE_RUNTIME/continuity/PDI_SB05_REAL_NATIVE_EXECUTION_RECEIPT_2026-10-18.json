@@ -1,0 +1,55 @@
+{
+  "schema": "CLIC_PDI_SB05_REAL_NATIVE_EXECUTION_READBACK_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "PDI_AND_SB05_NATIVE_NODE_EXECUTION_INDEPENDENTLY_EVIDENCED",
+  "prechange_backup": "backup/clic-pre-actions-readonly-native-execution-20261018",
+  "source_head_before_runner": "74a2bfbac815baca7f79a2cc18ad2540739cacc6",
+  "execution_commit": "2d92217eb0cb1102e86a156076f1f5e7770e0002",
+  "github_run_id": 39089455296,
+  "github_run_conclusion": "SUCCESS",
+  "runner": "AUTHORIZED_GITHUB_ACTIONS_NODE_READONLY",
+  "github_rest_reads": 20,
+  "artifact": {
+    "id": 12121976894,
+    "name": "clic-pdi-sb05-readonly-execution",
+    "size_bytes": 981,
+    "sha256": "231121d44d88798e8a16ecfa629b356b5bd6893e57c6e0b3b704f53564303583",
+    "expired": false
+  },
+  "source_modules": {
+    "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs": "a8d90521318065470ab07f65bec6b214b5129bb1",
+    "666CLIC_NATIVE_RUNTIME/continuity/starbridge-receipt-readback.mjs": "b5882093d96f56e0c1e4a28332933728be6eef08"
+  },
+  "pdi": {
+    "native_module_execution": "PASS",
+    "status": "READ_ONLY_LEDGER_READBACK_VERIFIED",
+    "ledger_blobs": [
+      "66882c3f9e8aac86ab1475e162d9b2658e2f3400",
+      "27f389112cdac4c0bac41a8be84172922b5fcbfc"
+    ],
+    "acceptance": "NATIVE_MODULE_EXECUTION_EVIDENCED_NOT_CHAT_FRESH_HOST",
+    "authentic_event_cas": false
+  },
+  "sb05": {
+    "native_module_execution": "PASS",
+    "status": "NATIVE_SB05_READBACK_EVIDENCED_DELIVERY_PENDING",
+    "recipient_blob": "4033565921f051bac0a0d80391544afd9d0cb355",
+    "additive_blob": "3816086f09935cb54450174ad2f2718932114421",
+    "acceptance": "NATIVE_MODULE_EXECUTION_EVIDENCED_NOT_CHAT_FRESH_HOST",
+    "delivery_verified": false,
+    "adoption_verified": false
+  },
+  "chatgpt_fresh_host": false,
+  "plugin_published": false,
+  "no_event_writes": true,
+  "foreign_writes": false,
+  "priority_order": [
+    "PDI_LIVE_PERSISTENCE_HOST",
+    "STARBRIDGE_SB01_SB05_RECEIPTS",
+    "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+    "PLUGIN_SOURCE_LIVE_PARITY"
+  ],
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "return_anchor": "PDI_SB05_NATIVE_NODE_EXECUTION_PASS_AUTHENTIC_EVENT_CAS_AND_DELIVERY_ADOPTION_FRESH_HOST_OPEN"
+}

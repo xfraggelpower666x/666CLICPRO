@@ -1,0 +1,62 @@
+{
+  "schema": "CLIC_PATCH_FIRST_VISUAL_CANDIDATE_V1",
+  "status": "SOURCE_CANDIDATE_VISUAL_COMPLETION_SYNC_BINARY_PROVIDER_HOST_GATES_OPEN",
+  "owner": "666CLIC",
+  "base_head": "66bbd8d1ca43c9e2c88dede03ff0b6c31f7c24dd",
+  "prechange_backup": "backup/clic-pre-patchfirst-visual-skills-20261017",
+  "candidate_root": "666clic-plugin/candidates/patchfirst-visual-20261017",
+  "target_plugin": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "observed_live_version": "0.1.22",
+  "observed_live_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "three_source_skills": [
+    {
+      "name": "666clic-visual-interface",
+      "source_blob": "543448ea6c80119f085b115f8964f5e17bfe6485",
+      "frozen_release_blob": "e7cf4ba14ca89d359f3309d06216357fcd05a0f0"
+    },
+    {
+      "name": "666clic-dashboard",
+      "source_blob": "acc66f8a063648e0af73acccf58fded5680f0805",
+      "frozen_release_blob": "01885e83676a21194c46d79a5efa0ed7698d552c"
+    },
+    {
+      "name": "666clic-continuity",
+      "source_blob": "b65f1cfc5365b45b99cb4797113a9eeef35f115e",
+      "frozen_release_blob": "15527dca4c215a336f2f36e0a698c58a4a790d94"
+    }
+  ],
+  "governance": {
+    "native_approval": "NOT_ISSUED",
+    "provider_original_binary": "NOT_AVAILABLE",
+    "asset_logo_sha256": "UNKNOWN",
+    "full_plugin_parity": "NOT_PROVEN",
+    "provider_release": "NOT_PUBLISHED",
+    "fresh_host_acceptance": "NOT_TESTED",
+    "no_write_to_frozen_release": true,
+    "no_foreign_mutation": true,
+    "pet": "PAUSED",
+    "junior": "PRESERVED",
+    "sb04_sb05": "OPEN"
+  },
+  "next": "TARGETED_CANDIDATE_TESTS_AND_DIRECT_READBACK_THEN_POINTER_LAST;PROVIDER_PATCH_FIRST_REQUIRES_BINARY_AND_APPROVAL",
+  "visual_completion_2026_10_17": {
+    "native_guard": "666CLIC_NATIVE_RUNTIME/dashboard/visual-completion-guard.mjs",
+    "guard_blob": "50bf36f64f9064abaf9f8cec2a00a65a1751d9ee",
+    "native_contract_blob": "84b78566549bd984626cb27e01dbc86da2c9b5c7",
+    "native_head_at_candidate": "fc85f551603ae505a3c18962ad477f518ca5c774",
+    "five_options_preserved": true,
+    "completion_gate": "WHOLE_HEAD_POINTER_MANIFEST_AND_CONTINUITY_VERIFIED",
+    "read_only_fifth_choice": true,
+    "provider_metadata_readback_version": "0.1.22",
+    "provider_metadata_readback_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "live_skill_readback_not_matching_patch_candidate": true,
+    "provider_original_binary": "NOT_DOWNLOADED_FOR_EDIT",
+    "full_binary_preservation": "NOT_VERIFIED",
+    "plugin_update": "NOT_PUBLISHED",
+    "fresh_host": "NOT_TESTED",
+    "one_provider_plugin_verified": true,
+    "second_provider_plugin": "NOT_VERIFIED",
+    "pet": "PAUSED",
+    "junior": "PRESERVED"
+  }
+}

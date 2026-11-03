@@ -1,0 +1,16 @@
+{
+  "plugin_name": "666clic-native-runtime",
+  "display_name": "C.L.I.C.",
+  "version": "0.1.15",
+  "release_id": "pluginrel_6ac69d1c913c81918aca4a6f40113616",
+  "text_source_tree_sha": "f2dddc4e8ba8e4c7f5b98e4283f8e7a81df07022",
+  "text_source_parity": "PASS_19_OF_19",
+  "binary_binding_manifest": "BINARY_BINDING.json",
+  "binary_binding_status": "VERIFIED_CAUSAL_BINARY_BINDING",
+  "hybrid_snapshot_status": "VERIFIED",
+  "direct_live_binary_hash_readback": "UNAVAILABLE",
+  "repo_binary_copy": "NOT_PRESENT",
+  "repo_current_remains_authority": true,
+  "plugin_is_authority": false,
+  "no_fake_repo_byte_parity": true
+}

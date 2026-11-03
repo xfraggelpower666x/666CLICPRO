@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "666clic-native-runtime",
+  "version": "0.1.15",
+  "description": "Native 666CLIC repository-first runtime with relational rehydration, shared daemon adapter continuity, understeer/oversteer guards, currentness fingerprints, governed plugin parity, native plugin-backup approval, self-interest learning sweeps, audits and evidence-first dashboards.",
+  "author": {"name": "FRAGGELPOWER666 / 666SOUNDsDESIGn"},
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "C.L.I.C.",
+        "shortDescription": "Repository-native CLIC",
+        "longDescription": "666CLIC causal learning, forensic integration and recovery with GitHub as sole active current authority, relational rehydration, shared daemon adapter continuity, understeer/oversteer rehydration guards, currentness fingerprints, governed plugin parity and native plugin-backup approval.",
+        "developerName": "FRAGGELPOWER666 / 666SOUNDsDESIGn",
+        "category": "Productivity",
+        "capabilities": ["Interactive", "skills", "Write"],
+        "defaultPrompt": "666CLIC SYSTEMSTART",
+        "websiteURL": "https://github.com/xfraggelpower666x/666CLICPRO",
+        "logo": "./assets/clic-logo.png",
+        "composerIcon": "./assets/clic-logo.png"
+      },
+      "apps": "./.app.json"
+    }
+  }
+}

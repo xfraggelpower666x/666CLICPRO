@@ -1,0 +1,13 @@
+{
+  "schema": "CLIC_BINARY_ASSET_BINDING_V1",
+  "status": "VERIFIED_CAUSAL_BINARY_BINDING_NOT_REPO_BYTE_PARITY",
+  "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "version": "0.1.22",
+  "release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+  "asset_path": "assets/clic-logo.png",
+  "source_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+  "source_size_bytes": 2929725,
+  "direct_live_binary_sha256_readback": "UNAVAILABLE",
+  "repo_binary_copy": "NOT_PRESENT",
+  "backup_executor_must_verify_extracted_hash_and_size": true
+}

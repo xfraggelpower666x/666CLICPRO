@@ -1,0 +1,53 @@
+{
+  "schema": "CLIC_PATCHFIRST_EXACT_DELTA_READBACK_V1",
+  "owner": "666CLIC",
+  "status": "THREE_SKILL_PATCH_DELTA_SOURCE_CI_PASS_RELEASE_APPROVAL_AND_HOST_BLOCKED",
+  "base_head": "95b5a9684900e3000f5539b2635a15c8e92cfaae",
+  "prechange_backup": "backup/clic-pre-patchfirst-parity-delta-20261018",
+  "provider": {
+    "id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "scope": "USER_PRIVATE",
+    "file_list_direct_readback": 28,
+    "original_logo_path": "assets/clic-logo.png",
+    "current_original_archive_bytes_read": false,
+    "current_provider_archive_sha256": null
+  },
+  "patch": {
+    "existing_candidate": "666clic-plugin/candidates/patchfirst-visual-20261017",
+    "changed_paths": [
+      "skills/666clic-continuity/SKILL.md",
+      "skills/666clic-dashboard/SKILL.md",
+      "skills/666clic-visual-interface/SKILL.md"
+    ],
+    "changed_count": 3,
+    "untouched_file_count": 25,
+    "no_delete_paths": true,
+    "candidate_source_identity": "EXISTING_EXACT_BLOB_TESTED",
+    "provider_overlay_binary_preservation": "NOT_VERIFIED_NOT_PUBLISHED"
+  },
+  "source_module": "666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.mjs",
+  "test_module": "666clic-plugin/candidates/patchfirst-visual-20261017/patchfirst-integrity-plan.test.mjs",
+  "workflow": ".github/workflows/clic-patchfirst-visual-candidate.yml",
+  "ci_run": 39086999390,
+  "ci_conclusion": "SUCCESS",
+  "binary_binding": "CURRENT_PROVIDER_BYTES_NOT_MEASURED",
+  "canonical_fingerprint": null,
+  "native_backup_approval": false,
+  "provider_release_published": false,
+  "host_verified": false,
+  "foreign_writes": false,
+  "pdi_return_anchor": "AUTHENTIC_EVENT_CAS_AND_HOST_RECONCILIATION_PENDING",
+  "starbridge_return_anchor": "SB05_PFS_NATIVE_READBACK_SOURCE_PASS_REAL_BINDER_DELIVERY_PENDING",
+  "private_vault_return_anchor": "PRIVATE_VAULT_VERIFIED_BINARY_TRANSFER_PENDING_NATIVE_APPROVAL",
+  "priority_order": [
+    "PDI_LIVE_PERSISTENCE_HOST",
+    "STARBRIDGE_SB01_SB05_RECEIPTS",
+    "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+    "PLUGIN_SOURCE_LIVE_PARITY"
+  ],
+  "junior": "PRESERVED",
+  "pet": "PAUSED",
+  "return_anchor": "THREE_SKILL_PATCHFIRST_SOURCE_DELTA_READY_CURRENT_PROVIDER_BINARY_AND_FINGERPRINT_APPROVAL_PENDING"
+}

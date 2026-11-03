@@ -1,0 +1,22 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
+import {bindVerifiedOutboxToMailbox,correlateMailboxReplyReadback} from "./starbridge-owner-mailbox-github-binding.mjs";
+const repo="xfraggelpower666x/666CLICPRO",h="a".repeat(40),path="666CLIC_NATIVE_RUNTIME/outbox/666CLS/handoff.json";
+const original=JSON.stringify({handoff_id:"CLIC-CLS-EXAMPLE-R01",source_system:"666CLIC",target_system:"666CLS",status:"PREPARED"});
+const hash=s=>{const b=Buffer.from(s);return createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex")};
+function github(){const sha=hash(original);return {fetch:async({url})=>({result:{content:JSON.stringify(url.includes("/branches/")?{commit:{sha:h}}:{truncated:false,tree:[{path,type:"blob",sha}]})}}),fetchFile:async()=>({result:{content:original,sha}})}}
+const outbound=async()=>bindVerifiedOutboxToMailbox({github:github(),source_path:path});
+test("immutable commit tree blob verified then no delivery promotion",async()=>{const x=await outbound();assert.equal(x.status,"MESSAGE_PREPARED");assert.equal(x.source_blob_sha,hash(original));assert.equal(x.delivery_verified,false);assert.equal(x.message_published,false)});
+test("forged file hash HOLD",async()=>{const g=github();g.fetchFile=async()=>({result:{content:original,sha:"b".repeat(40)}});assert.equal((await bindVerifiedOutboxToMailbox({github:g,source_path:path})).status,"HOLD")});
+test("changed source head HOLD",async()=>{const g=github();let n=0;const f=g.fetch;g.fetch=async args=>{if(args.url.includes("/branches/")&&++n===2)return {result:{content:JSON.stringify({commit:{sha:"c".repeat(40)}})}};return f(args)};assert.equal((await bindVerifiedOutboxToMailbox({github:g,source_path:path})).status,"HOLD")});
+test("incomplete tree HOLD",async()=>{const g=github();const f=g.fetch;g.fetch=async args=>args.url.includes("/trees/")?{result:{content:JSON.stringify({truncated:true,tree:[]})}}:f(args);assert.equal((await bindVerifiedOutboxToMailbox({github:g,source_path:path})).status,"HOLD")});
+test("wrong target HOLD",async()=>{assert.equal((await bindVerifiedOutboxToMailbox({github:github(),source_path:"666CLIC_NATIVE_RUNTIME/outbox/666MIRA/handoff.json"})).status,"HOLD")});
+const folder="1vMFbTGGKwJXQERgFteCP_ofJmgssSXKs";
+function replyFixture(x){const reply={schema:"CLIC_STARBRIDGE_MAILBOX_REPLY_V1",reply_to_handoff_id:x.handoff_id,reply_to_source_blob_sha:x.source_blob_sha,reply_to_correlation_key:x.correlation_key,sender:"666CLS",message_id:"reply-001"};const meta={id:"reply-doc",parents:[folder],mimeType:"application/vnd.google-apps.document",drive_revision:"2",docs_revision:"docs-v"};const txt={file_id:"reply-doc",docs_revision:"docs-v",content:JSON.stringify(reply),representation:"NORMALIZED_DOCS_PARAGRAPHS"};return {provider:{getMetadata:async()=>({...meta}),readText:async()=>({...txt})},file_id:"reply-doc",outbound:x,meta,txt,reply}}
+test("independent reply readback is MESSAGE_OBSERVED only",async()=>{const x=await outbound();const r=await correlateMailboxReplyReadback(replyFixture(x));assert.equal(r.status,"MESSAGE_OBSERVED");assert.equal(r.delivery_verified,false);assert.equal(r.host_verified,false)});
+test("wrong reply folder HOLD",async()=>{const f=replyFixture(await outbound());f.provider.getMetadata=async()=>({...f.meta,parents:["other"]});assert.equal((await correlateMailboxReplyReadback(f)).status,"HOLD")});
+test("Drive race HOLD",async()=>{const f=replyFixture(await outbound());let n=0;f.provider.getMetadata=async()=>({...f.meta,drive_revision:++n===1?"2":"3"});assert.equal((await correlateMailboxReplyReadback(f)).reason,"REPLY_DRIVE_RACE")});
+test("Docs race HOLD",async()=>{const f=replyFixture(await outbound());let n=0;f.provider.readText=async()=>({...f.txt,content:++n===1?f.txt.content:"tampered"});assert.equal((await correlateMailboxReplyReadback(f)).reason,"REPLY_DOCS_RACE")});
+test("wrong source correlation HOLD",async()=>{const f=replyFixture(await outbound());f.provider.readText=async()=>({...f.txt,content:JSON.stringify({...f.reply,reply_to_source_blob_sha:"c".repeat(40)})});assert.equal((await correlateMailboxReplyReadback(f)).status,"HOLD")});
+test("unauthorized receipt promotion HOLD",async()=>{const f=replyFixture(await outbound());f.provider.readText=async()=>({...f.txt,content:JSON.stringify({...f.reply,claimed_native_receipt:true})});assert.equal((await correlateMailboxReplyReadback(f)).status,"HOLD")});

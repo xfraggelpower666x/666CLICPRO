@@ -1,0 +1,68 @@
+{
+  "schema": "CLIC_NATIVE_PDI_SB05_READONLY_HOST_BINDING_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_BOUND_READONLY_GITHUB_CONNECTOR_CI_PASS_DIRECT_CONNECTOR_READBACK_VERIFIED_CHAT_HOST_EXECUTION_OPEN",
+  "base_head": "c23c7f840e4a08e83c3d02c3588e0224ccf62a36",
+  "prechange_backup": "backup/clic-pre-readonly-host-binding-20261018",
+  "binding_source": "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs",
+  "binding_blob": "9ef5cc43eb426a787703a2ba0cff612b0e209732",
+  "pdi_test_blob": "f56a689d9f6c773a820bd9925d0f9c8fd60d20f4",
+  "sb05_source_blob": "b5882093d96f56e0c1e4a28332933728be6eef08",
+  "sb05_test_blob": "47ee6eb52ba58f90a727ee401d4e452efedca80c",
+  "ci": [
+    {
+      "run_id": 39087757679,
+      "conclusion": "SUCCESS",
+      "scope": "PDI_HOST_ADAPTER_SOURCE"
+    },
+    {
+      "run_id": 39087829167,
+      "conclusion": "SUCCESS",
+      "scope": "STARBRIDGE_SB05_RECEIPT_SOURCE"
+    }
+  ],
+  "connector_direct_readback": {
+    "clic_head": "807bab497e03b0a89c9beb1a0ea44c8262c397df",
+    "pdi_ledger_blobs": [
+      "66882c3f9e8aac86ab1475e162d9b2658e2f3400",
+      "27f389112cdac4c0bac41a8be84172922b5fcbfc"
+    ],
+    "pdi_git_tree_complete": true,
+    "pdi_git_tree_blob_match": true,
+    "pfs_head": "f2354d1ddb50f3a184daa8c3ffc9f9c441a21e6d",
+    "sb05_receipt_blobs": [
+      "4033565921f051bac0a0d80391544afd9d0cb355",
+      "3816086f09935cb54450174ad2f2718932114421"
+    ],
+    "pfs_git_tree_complete": true,
+    "pfs_git_tree_blob_match": true
+  },
+  "execution": {
+    "actual_chat_host_invocation_of_repo_module": false,
+    "authentic_pdi_event_cas": false,
+    "processed_pdi_events": 0,
+    "sb05_binder_actual_host_execution": false,
+    "receipt_files_present": true,
+    "sb05_delivery_verified": false,
+    "sb05_adoption_verified": false,
+    "sb05_host_verified": false
+  },
+  "security": {
+    "readonly_tool_facade": true,
+    "update_file_exposed": false,
+    "files_scope_allowlisted": true,
+    "git_blob_sha_checked": true,
+    "committed_sb05_envelope_equality_required": true,
+    "foreign_writes": false,
+    "plugin_published": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
+  },
+  "priority_order": [
+    "PDI_LIVE_PERSISTENCE_HOST",
+    "STARBRIDGE_SB01_SB05_RECEIPTS",
+    "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+    "PLUGIN_SOURCE_LIVE_PARITY"
+  ],
+  "return_anchor": "READONLY_HOST_CONNECTOR_ADAPTER_SOURCE_PASS_REAL_CHATGPT_MODULE_EXECUTION_AND_EVENT_CAS_PENDING"
+}

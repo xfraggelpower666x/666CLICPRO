@@ -1,0 +1,154 @@
+{
+  "schema": "CLIC_IMMUTABLE_HYBRID_PLUGIN_SNAPSHOT_V1",
+  "plugin": "666clic-native-runtime",
+  "version": "0.1.22",
+  "release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+  "source_authority_head": "b020eb428bcfb29cbfccd96c6cdb03ad8253246c",
+  "source_git_tree_sha": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+  "source_blobs": [
+    {
+      "path": ".app.json",
+      "sha": "d9c8e3f87c763f0d005e9b3ab34ee62d8ead863e",
+      "size": 236
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha": "18831fcd359b4c6698675575b4c34a39020cff82",
+      "size": 1166
+    },
+    {
+      "path": "README.md",
+      "sha": "553399be31010d82d6a26a47008abd698de33275",
+      "size": 768
+    },
+    {
+      "path": "plugin.json",
+      "sha": "0a499ae110758afb69c6f33dce69e19efb6ca28c",
+      "size": 1127
+    },
+    {
+      "path": "references/authority.md",
+      "sha": "1ac81652dae93c8a3ca3c37c154301bb9324ec7e",
+      "size": 747
+    },
+    {
+      "path": "references/binary-asset-binding.md",
+      "sha": "9350f50c842d224d0bf0c7b6102c4a35e991dadb",
+      "size": 1438
+    },
+    {
+      "path": "references/continuity-and-forensics.md",
+      "sha": "94a5042a20c71ad38b9a5b35e8a8b263624b44b7",
+      "size": 1848
+    },
+    {
+      "path": "references/cross-system-development-proposals.md",
+      "sha": "08ca0a611d3d873302b3a3c59437b62f62114127",
+      "size": 873
+    },
+    {
+      "path": "references/development-exchange-lifecycle.md",
+      "sha": "2a7e8fe2679de6110020a63b0618fa5fc3c1fed0",
+      "size": 1624
+    },
+    {
+      "path": "references/external-learning-self-interest.md",
+      "sha": "c965f505ce1bd3467a3e373ff74826afefff3dee",
+      "size": 1181
+    },
+    {
+      "path": "references/local-adaptive-learning.md",
+      "sha": "9a45d898e41e3c3ed91700843beca3df71e2d1a8",
+      "size": 1025
+    },
+    {
+      "path": "references/managed-system-visual-compliance.md",
+      "sha": "6ba62b53d9a768fb4c583de3291fe18970ccdcf6",
+      "size": 970
+    },
+    {
+      "path": "references/plugin-backup-governance.md",
+      "sha": "d0c116f7a80d792181210c18a98bfb9acdd2e616",
+      "size": 1416
+    },
+    {
+      "path": "references/runtime-plugin-state-fingerprint.md",
+      "sha": "35b4d4d9e4e607a7506be96bc7f32c368d9ae073",
+      "size": 896
+    },
+    {
+      "path": "references/scope-lifecycle-synthesis.md",
+      "sha": "fb837274d61ffd6b943cbcdbbdf619ad8a283eea",
+      "size": 794
+    },
+    {
+      "path": "references/semantic-visual-intelligence-facet.md",
+      "sha": "75465683c55516b4c0ce3b7c5658b4396f42b377",
+      "size": 1064
+    },
+    {
+      "path": "references/storage-connectors.md",
+      "sha": "f908315888b24ee865a2a4c3185bbec207797a63",
+      "size": 735
+    },
+    {
+      "path": "references/visual-interface-contract.md",
+      "sha": "dce6677d8e5c319f2e784721a20ef25bbe340904",
+      "size": 671
+    },
+    {
+      "path": "skills/666clic-audit/SKILL.md",
+      "sha": "af1144713a7b32ad4fe305d2b3453a9b1ea9ea79",
+      "size": 1198
+    },
+    {
+      "path": "skills/666clic-continuity/SKILL.md",
+      "sha": "15527dca4c215a336f2f36e0a698c58a4a790d94",
+      "size": 1563
+    },
+    {
+      "path": "skills/666clic-dashboard/SKILL.md",
+      "sha": "01885e83676a21194c46d79a5efa0ed7698d552c",
+      "size": 1092
+    },
+    {
+      "path": "skills/666clic-integration-audit/SKILL.md",
+      "sha": "935e74d5a7acfa9c9ae14bb1c2124bf8b23b0e50",
+      "size": 1060
+    },
+    {
+      "path": "skills/666clic-local-learning/SKILL.md",
+      "sha": "4d9ee0baa347b38dc9503287047a8f23788bff29",
+      "size": 1072
+    },
+    {
+      "path": "skills/666clic-systemstart/SKILL.md",
+      "sha": "e91c60949986492dd67edb79dd078855c717c1df",
+      "size": 1547
+    },
+    {
+      "path": "skills/666clic-update/SKILL.md",
+      "sha": "9562b784c662ce9fc91e90ea2a3386476ce2cf0f",
+      "size": 1756
+    },
+    {
+      "path": "skills/666clic-visual-interface/SKILL.md",
+      "sha": "e7cf4ba14ca89d359f3309d06216357fcd05a0f0",
+      "size": 1942
+    },
+    {
+      "path": "skills/666clic-visual/SKILL.md",
+      "sha": "5ded0aea0ceb6f78442b4e9d7b7759077234aff8",
+      "size": 1375
+    }
+  ],
+  "text_file_count": 27,
+  "binary_binding": "BINARY_BINDING.json",
+  "kind": "GIT_BLOB_REFERENCED_SOURCE_PLUS_CAUSAL_BINARY_BINDING",
+  "live_plugin_metadata_evidence": "666clic-plugin/current/PLUGIN_CURRENT.json",
+  "limitations": [
+    "NO_DIRECT_LIVE_BINARY_HASH_READBACK",
+    "NO_REPO_BINARY_COPY",
+    "LIVE_RELEASE_ARCHIVE_NOT_REEXTRACTED_IN_THIS_TRANSACTION"
+  ]
+}

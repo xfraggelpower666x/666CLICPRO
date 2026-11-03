@@ -1,0 +1,35 @@
+{
+  "schema": "CLIC_NATIVE_HOST_DISPATCH_ACCEPTANCE_HANDOFF_V1",
+  "authority": "666CLIC_ONLY",
+  "status": "SOURCE_ACCEPTANCE_CONTRACT_CI_PASS_REAL_CHATGPT_HOST_DISPATCH_UNAVAILABLE",
+  "base_head": "aa448eb64f56cc05ef2e2afba18adbd52240662d",
+  "prechange_backup": "backup/clic-pre-host-dispatch-acceptance-handoff-20261018",
+  "target_runtime": "EXISTING_CLIC_GITHUB_HOST_ADAPTER",
+  "source": "666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs",
+  "source_blob": "a8d90521318065470ab07f65bec6b214b5129bb1",
+  "test_blob": "7267b719aeddc00cd82fee79b59d418a0fb2efa7",
+  "ci_run": 39088415996,
+  "ci_conclusion": "SUCCESS",
+  "allowed_exports": [
+    "verifyClicPdiHostReadiness",
+    "inspectPfsSb05NativeReceipts"
+  ],
+  "required_executor": "AUTHORIZED_NATIVE_NODE_RUNTIME_WITH_REAL_INJECTED_GITHUB_CONNECTOR",
+  "module_dispatch_available_in_current_chat_host": false,
+  "actual_native_module_receipt": false,
+  "authentic_event_cas": false,
+  "sb05_delivery": false,
+  "sb05_adoption": false,
+  "fresh_host_pass": false,
+  "plugin_published": false,
+  "foreign_writes": false,
+  "priority_order": [
+    "PDI_LIVE_PERSISTENCE_HOST",
+    "STARBRIDGE_SB01_SB05_RECEIPTS",
+    "REPOSITORY_BRIDGE_PRIVATE_BINARY",
+    "PLUGIN_SOURCE_LIVE_PARITY"
+  ],
+  "return_anchor": "NATIVE_READONLY_DISPATCH_ACCEPTANCE_SOURCE_PASS_AUTHORIZED_RUNTIME_EXECUTION_RECEIPT_REQUIRED",
+  "junior": "PRESERVED",
+  "pet": "PAUSED"
+}

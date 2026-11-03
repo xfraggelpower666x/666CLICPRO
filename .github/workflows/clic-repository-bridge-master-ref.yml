@@ -1,0 +1,34 @@
+name: CLIC Repository Bridge Master Reference
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/facets/repository_bridge/**'
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/V0122_RUNTIME_PLUGIN_FINGERPRINT_RECONCILIATION_2026-10-17.json'
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/v0122-fingerprint-reconciliation.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.mjs'
+      - '666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/current/RUNTIME_PLUGIN_STATE_FINGERPRINT_APPROVAL_GOVERNANCE.md'
+      - '666clic-plugin/backup-circle/CLIC_V0122_PRIVATE_VAULT_APPROVAL_CANDIDATE_2026-10-17.json'
+      - '666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC_PRIVATE_PLUGIN_V0122_BACKUP_REQUEST_20261017.json'
+      - '666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-STREAM-MASTER-BRIDGE-REVIEW-20261017.md'
+      - '.github/workflows/clic-repository-bridge-master-ref.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/master-reference.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/binary-github-input-adapter.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/repository_bridge/private-plugin-routing.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/v0122-fingerprint-reconciliation.test.mjs
+      - run: node --test 666CLIC_NATIVE_RUNTIME/plugin_governance/semantic-body-boundary.test.mjs

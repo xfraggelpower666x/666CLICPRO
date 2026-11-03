@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
+const root='666CLIC_NATIVE_RUNTIME';
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const audit=JSON.parse(read('current/NONPET_COMPLETION_AUDIT_2026-10-09.json'));
+const manifest=JSON.parse(read('REHYDRATION_MANIFEST.json'));
+const visual=read('facets/semantic_visual_intelligence/VISUAL_COMPLIANCE_REGISTER.md');
+test('paused PET excluded from work and preserved',()=>{assert.equal(audit.pet_status,'PAUSED_BY_DIRECT_USER_REQUEST');assert.equal(audit.pet_mutation,false);assert.ok(audit.scope_excluded.includes('CLIC_PET'))});
+test('required native rehydration files all exist',()=>{for(const p of manifest.required_order)assert.ok(fs.existsSync(path.join(root,p)),p)});
+test('three CLIC-managed system cards exist',()=>{for(const id of ['CLS','MIRA','TDH'])assert.ok(fs.existsSync(path.join(root,'relations',id+'_UNDERSTANDING_CARD_CURRENT_2026-10-09.md')))});
+test('visual register explicitly reflects card evidence and uncertainty',()=>{assert.match(visual,/666CLS_COMPLIANCE=PARTIAL/);assert.match(visual,/666MIRA=UNKNOWN/);assert.match(visual,/666TDH=PARTIAL/);assert.match(visual,/RUNTIME_UI_ACCEPTANCE=OPEN/)});
+test('no fabricated host release or visualization',()=>{assert.equal(audit.plugin.new_release,'NOT_PUBLISHED');assert.equal(audit.plugin.logo_live_sha256,'NOT_VERIFIED');assert.equal(audit.dashboard.live_render,'NOT_VERIFIED')});

@@ -1,0 +1,34 @@
+name: CLIC Parallel Development Intelligence Native
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/**'
+      - '666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json'
+      - '666CLIC_NATIVE_RUNTIME/continuity/RECURSIVE_FACET_REHYDRATION_REGISTRY_2026-10-09.json'
+      - '.github/workflows/clic-parallel-development-intelligence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scoped-pdi-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native scoped PDI evidence and rehydration tests
+        run: |
+          node --check 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/parallel-development.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/core-ledger-evidence-binding.test.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-cas-transport.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/pdi-ledger-reconciliation.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-cas-reconciliation.test.mjs
+          node --check 666CLIC_NATIVE_RUNTIME/dashboard/development_progress/github-connector-binding.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/github-connector-binding.test.mjs
+          node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/starbridge-pdi-only-contract.test.mjs

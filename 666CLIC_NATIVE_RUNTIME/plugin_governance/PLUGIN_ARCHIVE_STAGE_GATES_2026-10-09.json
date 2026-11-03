@@ -1,0 +1,37 @@
+{
+  "schema": "CLIC_PLUGIN_ARCHIVE_STAGE_GATES_V1",
+  "status": "PREPUBLISH_BINARY_BLOCKED_POSTPUBLISH_UNTRIGGERED",
+  "date": "2026-10-09",
+  "initial_head": "971dfa683bc92cbfec69e8b02d822da232e6c3a1",
+  "backup_branch": "backup/clic-pre-archive-gate-review-20261009",
+  "plugin": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+  "current_live_version": "0.1.22",
+  "current_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+  "provider_original_archive_url_returned": true,
+  "provider_original_archive_download_result": "BLOCKED_URL_NOT_VIEWED_BY_CONTAINER_DOWNLOAD_POLICY",
+  "provider_original_archive_bytes_obtained": false,
+  "original_archive_sha256": "UNKNOWN",
+  "logo_binary_sha256": "UNKNOWN",
+  "prepublish": "WRITE_BLOCKED_ACTUAL_ARCHIVE_BYTES_AND_NATIVE_APPROVAL_MISSING",
+  "postpublish": "NOT_STARTED_NO_RELEASE_PUBLISHED",
+  "candidate_host_skills": {
+    "neon": "SOURCE_AHEAD",
+    "card": "SOURCE_AHEAD",
+    "force": "SOURCE_AHEAD"
+  },
+  "native_visual_host": "CHAT_PRESENTATION_POSSIBLE_LIVE_PLUGIN_AUTOMATION_UNVERIFIED",
+  "pet_development": "PAUSED",
+  "junior_foreground": "PINNED_SOURCE_MODEL",
+  "notices": {
+    "prepared": 7,
+    "delivered_verified": 0,
+    "adopted_verified": 0
+  },
+  "stage_gate_logic": "plugin_governance/neon-host-parity.mjs",
+  "stage_gate_tests": "plugin_governance/neon-host-parity.test.mjs",
+  "ci": "SUCCESS",
+  "ci_url": "https://github.com/xfraggelpower666x/666CLICPRO/actions/runs/37966258732/job/113941246435",
+  "foreign_mutation": false,
+  "live_plugin_mutation": false,
+  "return_anchor": "OBTAIN_ALLOWED_BYTE_ACCESS_TO_ORIGINAL_CURRENT_RELEASE_ARCHIVE_AND_VERIFY_SHA256; AFTER_NATIVE_APPROVAL_CANDIDATE_RELEASE_THEN_POSTPUBLISH_HOST_READBACK"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "CLIC_STARBRIDGE_PREPARED_ENVELOPE_V1",
+  "handoff_id": "CLIC-STARBRIDGE-SB04-20261017-01",
+  "source_system": "666CLIC",
+  "target_system": "LYVRA",
+  "source_repository": "xfraggelpower666x/666CLICPRO",
+  "source_head": "26799d79511f633a47149bb13c2408dcf755f998",
+  "source_path": "666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-LYVRA-VISUAL-DEVELOPMENT-REPORT-20261010-R02.json",
+  "status": "PREPARED",
+  "purpose": "Immutable content-addressed source reference for native peer receipt verification",
+  "receipt_path": null,
+  "receipt_id": null,
+  "delivery_verified": false,
+  "native_adoption_verified": false,
+  "host_verified": false,
+  "foreign_mutation": false,
+  "legacy_r02_evidence_preserved": true
+}

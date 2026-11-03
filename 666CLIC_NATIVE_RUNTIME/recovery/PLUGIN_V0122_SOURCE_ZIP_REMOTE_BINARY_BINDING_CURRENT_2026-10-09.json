@@ -1,0 +1,76 @@
+{
+  "schema": "CLIC_PLUGIN_V0122_SOURCE_BINARY_REPOSITORY_BINDING_V1",
+  "date": "2026-10-09",
+  "kind": "CLIC_OWNED_RECOVERY_GOVERNANCE_EVIDENCE_ONLY",
+  "status": "VERIFIED_REPOSITORY_SOURCE_ZIP_AND_LOGO_NOT_PROVIDER_ORIGINAL_ARCHIVE",
+  "repo": "xfraggelpower666x/666CLICPRO",
+  "branch": "clic-migration-rev79-staging",
+  "bridge_commit": "4392de07191ac7ee3e2b60b96efc25a57999a389",
+  "bridge_parent_head": "c9baebd7208bcdbac692345e3fcc3f0bc8379b4b",
+  "prechange_backup": "backup/clic-pre-v0122-binary-bridge-ingest-20261009-2301",
+  "source": {
+    "type": "USER_SUPPLIED_PLUGIN_ZIP",
+    "filename": "CLIC plugin.zip",
+    "sha256": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+    "size_bytes": 2949853,
+    "archive_entries": 28,
+    "zip_integrity": "PASS_LOCAL_ORIGINAL_BYTES",
+    "repo_path": "666clic-plugin/binary-backups/v0.1.22/CLIC-plugin-v0.1.22-verified-source.zip",
+    "repo_git_blob_sha1": "9a7967fad75ae76a8af22203da31b728e8beddaf",
+    "git_blob_id_from_actual_uploaded_bytes": "MATCH"
+  },
+  "logo": {
+    "repo_path": "666clic-plugin/releases/v0.1.22/assets/clic-logo.png",
+    "sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+    "size_bytes": 2929725,
+    "repo_git_blob_sha1": "1bcc00bdadacb09a200cf765ba762ca6ab090ab5",
+    "git_blob_id_from_actual_uploaded_bytes": "MATCH"
+  },
+  "receipt": {
+    "filename": "CLIC_BRIDGE_RECEIPT_20261009-225846.json",
+    "status": "VERIFIED_BINARY_BRIDGE_COMPLETE",
+    "reported_remote_readback": "VERIFIED_EXACT_GIT_BLOB_BYTES",
+    "independent_repo_blob_identity_readback": "PASS",
+    "bridge_backup_branch": "backup/clic-pre-plugin-binary-bridge-20261009-225846"
+  },
+  "plugin": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "current_provider_release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "historical_snapshot_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "historical_snapshot": "666clic-plugin/releases/v0.1.22/BINARY_BINDING.json",
+    "historical_provenance": "IMMUTABLE_UNMODIFIED",
+    "live_provider_tar_gz_original_byte_identity": "NOT_ESTABLISHED",
+    "live_provider_logo_sha256": "UNKNOWN",
+    "source_zip_to_provider_release_exact_identity": "NOT_PROVEN",
+    "new_plugin_release": "NOT_PUBLISHED",
+    "plugin_parity": "NOT_FULLY_VERIFIED"
+  },
+  "gates": {
+    "source_recovery_binary_mirror": "PASS",
+    "source_zip_remote_blob_identity": "PASS",
+    "logo_remote_blob_identity": "PASS",
+    "exact_live_provider_tar_gz": "BLOCKED_NO_BYTES",
+    "prepublish_plugin_release": "WRITE_BLOCKED_UNTIL_CURRENT_PROVIDER_EVIDENCE_AND_APPROVAL",
+    "host_functional_acceptance": "NOT_VERIFIED",
+    "recovery_approval": "SOURCE_RECOVERY_CARRIER_VERIFIED_ONLY"
+  },
+  "rehydration": {
+    "manifest_file": "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json",
+    "required_order_count": 91,
+    "change_class": "ADDITIVE_PROVENANCE_NO_RUNTIME_SEMANTIC_CHANGE",
+    "manifest_changes": "NONE_REQUIRED_FOR_RECOVERY_EVIDENCE",
+    "live_runtime_changes": false,
+    "pet": "PAUSED_UNMODIFIED",
+    "junior": "PINNED_PRESENTATION_SOURCE_ONLY"
+  },
+  "visual_impact": {
+    "assessed": true,
+    "type": "EVIDENCE_AND_RECOVERY_ONLY",
+    "native_semantic_visual_facets_changed": false,
+    "managed_system_visual_compliance_unchanged": true,
+    "host_render": "NOT_TESTED"
+  },
+  "foreign_mutations": false,
+  "return_anchor": "SOURCE_ZIP_AND_LOGO_REMOTE_BYTES_VERIFIED; OBTAIN_PROVIDER_CURRENT_RELEASE_ORIGINAL_TAR_GZ_BYTES_OR_POLICY_COMPLETE_CAUSAL_EVIDENCE; RECHECK_EXACT_LIVE_PARITY_AND_APPROVAL_SEPARATELY; PET_PAUSED"
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "CLIC_V0122_RUNTIME_PLUGIN_FINGERPRINT_BOUNDARY_AUDIT_V1",
+  "date": "2026-10-09",
+  "status": "SEMANTIC_BOUNDARY_CANDIDATE_VERIFIED_COMMIT_SEQUENCE_FULL_FINGERPRINT_NOT_APPROVED",
+  "governance": "CLIC_NATIVE_EVIDENCE_ONLY_NO_APPROVAL",
+  "prechange_head": "6aff234e7b2ff2e3b6ae313fc3168b5429af7a90",
+  "prechange_backup": "backup/clic-pre-fingerprint-semantic-boundary-20261009-2325",
+  "plugin_current": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "repo_plugin_current": "666clic-plugin/current/PLUGIN_CURRENT.json",
+    "semantic_class_reported": "VERIFIED_HYBRID_SNAPSHOT"
+  },
+  "seven_fingerprint_inputs": {
+    "plugin_id": {
+      "status": "VERIFIED",
+      "value": "plugins_6abfb2e08fdc8191920dcdc4349c69c8"
+    },
+    "plugin_version": {
+      "status": "VERIFIED",
+      "value": "0.1.22"
+    },
+    "plugin_release_id": {
+      "status": "VERIFIED",
+      "value": "pluginrel_6ac6f4e703288191b8757f336d33e186"
+    },
+    "repo_text_source_tree_sha": {
+      "status": "VERIFIED_CURRENT_DEVELOPMENT_SOURCE_SEPARATE_FROM_LIVE_RELEASE",
+      "development_source_tree": "611367a33be2e8f59f119c86832214952ad0f342",
+      "historical_live_release_snapshot_text_tree": "69ca6144abed03e9db4235998e7c87b3f6cc0288",
+      "choose_for_approval": "UNRESOLVED_CANDIDATE_VS_LIVE_STATE"
+    },
+    "binary_binding_manifest_sha": {
+      "status": "HISTORICAL_RELEASE_BINDING_NOT_CURRENT_APPROVAL",
+      "historical_git_blob_sha": "b108d4723714844d13743e388a0bcd394748245c",
+      "provider_tar_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+      "source_zip_sha256": "07e6151089889f3d213154f16a7f4ea16257f0abc58bdeafe4216ae5bd146257",
+      "logo_sha256": "f2f3897727b62aa22f9d99d2cb8dca2920b7ca26829c902d45795822edbb0b7d",
+      "content_parity": "VERIFIED_28_OF_28",
+      "new_current_release_binding_manifest": "NOT_ISSUED"
+    },
+    "runtime_semantic_body_head": {
+      "status": "DERIVED_CANDIDATE_COMMIT_SEQUENCE_NOT_CLOSED_RUNTIME_FINGERPRINT",
+      "candidate": "90e0253f216d62560c1a3d6d03c3f2d88be40d96",
+      "reason": "LAST_OBSERVED_NEW_CHAT_CONTINUITY_BODY_CHANGE_BEFORE_POINTER_ARCHIVE_EVIDENCE_AND_POINTER_COMMITS",
+      "later_governance_only": [
+        "8c67554669d2afef721d0a7af89ae764279350b3",
+        "9467aae5cb83939d8f2343b0a835a37368c450a4",
+        "6aff234e7b2ff2e3b6ae313fc3168b5429af7a90"
+      ],
+      "boundary_acceptance": "PENDING_COMPLETE_RUNTIME_SEMANTIC_DIFF_REVIEW"
+    },
+    "plugin_current_semantic_class": {
+      "status": "DECLARED_SOURCE_CURRENT_NOT_FULLY_REVALIDATED",
+      "value": "VERIFIED_HYBRID_SNAPSHOT"
+    }
+  },
+  "provenance": {
+    "historical_snapshot_release_id": "pluginrel_6ac6da22f8f4819186d1ad6481f7d27c",
+    "preserve_history": true,
+    "old_backup_approval_version": "0.1.20",
+    "old_approval_status": "SUPERSEDED",
+    "old_fingerprint": "5bb3ced2117c3a81f4bda70a16d40233d97d2530d42e74fb68f15a44217820a9"
+  },
+  "gates": {
+    "archive_content_parity": "PASS_28_OF_28",
+    "live_release_metadata": "PASS",
+    "fingerprint_canonical_digest": "NOT_COMPUTED_INPUTS_NOT_UNAMBIGUOUS",
+    "native_approval": "NOT_ISSUED",
+    "plugin_prepublish": "WRITE_BLOCKED_PENDING_SOURCE_CANDIDATE_MANIFEST_HOST_PREFLIGHT",
+    "postpublish_host": "NOT_STARTED",
+    "github_original_tar_file": "NOT_MIRRORED_SOURCE_ZIP_ONLY",
+    "fresh_chat": "NOT_VERIFIED",
+    "pet": "PAUSED_UNMODIFIED",
+    "foreign_mutations": false
+  },
+  "visual_impact": {
+    "assessed": true,
+    "semantic_visual_facets_changed": false,
+    "visual_host_acceptance": "NOT_TESTED",
+    "dashboard_update_needed": "NONE_FOR_EVIDENCE_ONLY"
+  },
+  "return_anchor": "RESOLVE_LIVE_VS_DEVELOPMENT_SOURCE_TREE_AND_CURRENT_RELEASE_BINARY_BINDING_MANIFEST; VERIFY_SEMANTIC_BODY_BOUNDARY; COMPUTE_EXACT_FINGERPRINT_AND_NATIVE_APPROVAL_ONLY_WITH_ALL_GATES; PET_PAUSED"
+}
