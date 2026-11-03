@@ -33,36 +33,82 @@ const git={
   return {success:true};
  }
 };
-const head=await git.readHead();
-if(head!==process.env.GITHUB_SHA)throw Error('CONCURRENT_BRANCH_CHANGE_BEFORE_RUN');
-const prior=await git.readFile({ref:head,path:prev});
-if(!prior)throw Error('PRIOR_CHECKPOINT_MISSING');
-const checkpoint=JSON.parse(prior.content);
-if(checkpoint.count!==43)throw Error('RESUME_POSITION_NOT_43');
-// Recover a committed checkpoint after a transient final host readback failure.
-// No replay, no new Git object and no ref write when the target is already present.
-const existing=await git.readFile({ref:head,path:next});
-if(existing){
- const saved=JSON.parse(existing.content);
- const expectedPrefix=JSON.stringify(checkpoint.entries);
- if(saved?.schema!=='CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1'||saved.base!==base||saved.head!==end||
-    saved.total!==153||saved.count!==51||saved.entries?.length!==51||
-    JSON.stringify(saved.entries.slice(0,43))!==expectedPrefix||
-    saved.entries[43]?.parent!==checkpoint.last_sha||saved.entries.at(-1)?.sha!==saved.last_sha)
-   throw Error('RECOVERED_CHECKPOINT_CONFLICT');
- const checkedHead=await git.readHead();
- if(checkedHead!==head)throw Error('RECOVERED_CHECKPOINT_HEAD_CHANGED');
- console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({
-  status:'ISOLATED_CHECKPOINT_RECOVERED_READBACK_VERIFIED',commit:head,
-  count:51,previous:43,new_items:8,write_attempted:false,
-  production_published:false,plugin_promotion:false}));
- process.exit(0);
+const initialHead=await git.readHead();
+if(initialHead!==process.env.GITHUB_SHA)throw Error('CONCURRENT_BRANCH_CHANGE_BEFORE_RUN');
+const checkpointPath=n=>dir+'153bridge_'+String(n).padStart(4,'0')+'_2026-11-03.json';
+let path=checkpointPath(51);
+let pinnedHead=initialHead;
+let prior=await git.readFile({ref:pinnedHead,path});
+if(!prior)throw Error('VERIFIED_51_CHECKPOINT_MISSING');
+let checkpoint=JSON.parse(prior.content);
+if(checkpoint.schema!=='CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1'||
+ checkpoint.base!==base||checkpoint.head!==end||checkpoint.count!==51||
+ checkpoint.entries?.length!==51||checkpoint.total!==153||
+ checkpoint.entries.at(-1)?.sha!==checkpoint.last_sha)
+ throw Error('UNEXPECTED_START_CHECKPOINT');
+let batches=0,writeCount=0,recoveredCount=0;
+while(checkpoint.count<153){
+ if(batches>=13)throw Error('BOUNDED_BATCH_BUDGET_EXCEEDED');
+ const previous=checkpoint.count;
+ const target=Math.min(153,previous+8);
+ const dest=checkpointPath(target);
+ const currentHead=await git.readHead();
+ if(currentHead!==pinnedHead)throw Error('UNEXPECTED_BRANCH_HEAD_BEFORE_BATCH_'+previous);
+ const existing=await git.readFile({ref:currentHead,path:dest});
+ if(existing){
+  const saved=JSON.parse(existing.content);
+  if(saved.schema!=='CLIC_SEMANTIC_BRIDGE_CHECKPOINT_V1'||saved.base!==base||
+   saved.head!==end||saved.total!==153||saved.count!==target||
+   saved.entries?.length!==target||
+   JSON.stringify(saved.entries.slice(0,previous))!==JSON.stringify(checkpoint.entries)||
+   saved.entries[previous]?.parent!==checkpoint.last_sha||
+   saved.entries.at(-1)?.sha!==saved.last_sha)
+   throw Error('EXISTING_CHECKPOINT_CONFLICT_AT_'+target);
+  const confirm=await git.readHead();
+  if(confirm!==currentHead)throw Error('EXISTING_CHECKPOINT_HEAD_CHANGED');
+  checkpoint=saved;path=dest;prior=existing;pinnedHead=confirm;recoveredCount++;
+  console.log('CLIC_SEMANTIC_BATCH_RECOVERED',JSON.stringify({count:target,head:confirm,write_attempted:false}));
+  batches++;continue;
+ }
+ const step=await runBoundedSemanticGithubStep({
+  fetch:async({url})=>{
+   if(!url.startsWith(api+'/'))throw Error('FOREIGN_URL_DENIED');
+   return {result:{content:JSON.stringify(await req(url.slice(api.length)))}};
+  },
+  base,head:end,checkpoint,limit:target-previous
+ });
+ if(step.status!=='READBACK_PENDING'||step.checkpoint?.count!==target||
+    step.processed!==target-previous)
+  throw Error('SEMANTIC_BATCH_FAIL_CLOSED_'+previous+'_'+step.status+'_'+step.reason);
+ const outcome=await appendIsolatedSemanticCheckpoint({
+  github:git,branch,path:dest,previousPath:path,previousBlob:prior.sha,record:step.checkpoint
+ });
+ if(outcome.status!=='ISOLATED_CHECKPOINT_READBACK_VERIFIED'){
+  // A successful push can precede a delayed readback. Recover only exact immutable bytes.
+  const revised=await git.readHead();
+  const already=await git.readFile({ref:revised,path:dest});
+  if(!already||JSON.stringify(JSON.parse(already.content))!==JSON.stringify(step.checkpoint)||
+     revised!==outcome.commit)throw Error('CHECKPOINT_CAS_OR_READBACK_UNRESOLVED_'+previous+'_'+outcome.status+'_'+outcome.reason);
+  console.log('CLIC_SEMANTIC_BATCH_LATE_READBACK',JSON.stringify({count:target,head:revised}));
+ }else{writeCount++;}
+ const nextHead=await git.readHead();
+ const nextFile=await git.readFile({ref:nextHead,path:dest});
+ if(!nextFile||JSON.stringify(JSON.parse(nextFile.content))!==JSON.stringify(step.checkpoint))
+  throw Error('INDEPENDENT_CHECKPOINT_READBACK_MISMATCH_'+target);
+ if(nextHead!==outcome.commit)throw Error('COMMIT_LINEAGE_HEAD_MISMATCH_'+target);
+ checkpoint=JSON.parse(nextFile.content);prior=nextFile;path=dest;pinnedHead=nextHead;
+ batches++;
+ console.log('CLIC_SEMANTIC_BATCH_RECEIPT',JSON.stringify({count:target,batch:target-previous,head:nextHead,checkpoint_blob:nextFile.sha,approval_granted:false}));
 }
-const step=await runBoundedSemanticGithubStep({
- fetch:async({url})=>{if(!url.startsWith(api+'/'))throw Error('FOREIGN_URL_DENIED');return {result:{content:JSON.stringify(await req(url.slice(api.length)))}}},
- base,head:end,checkpoint,limit:8
-});
-if(step.status!=='READBACK_PENDING'||step.checkpoint?.count!==51)throw Error('READ_PHASE_HOLD_'+step.reason+'_'+step.status);
-const outcome=await appendIsolatedSemanticCheckpoint({github:git,branch,path:next,previousPath:prev,previousBlob:prior.sha,record:step.checkpoint});
-if(outcome.status!=='ISOLATED_CHECKPOINT_READBACK_VERIFIED')throw Error('CAS_READBACK_GATE_'+outcome.reason+'_'+outcome.status);
-console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({status:outcome.status,commit:outcome.commit,count:outcome.count,previous:43,new_items:8,production_published:false,plugin_promotion:false}));
+if(checkpoint.count!==153||checkpoint.entries?.length!==153||checkpoint.last_sha!==end)
+ throw Error('INCOMPLETE_FINAL_BOUNDARY');
+const last=await git.readHead();
+if(last!==pinnedHead)throw Error('FINAL_BRANCH_HEAD_CHANGED');
+console.log('CLIC_SEMANTIC_NATIVE_HOST_RECEIPT',JSON.stringify({
+ status:'ISOLATED_153_CHAIN_CHECKPOINT_READBACK_VERIFIED',
+ commit:last,count:153,initial:51,new_items:102,
+ batches,write_count:writeCount,recovered_batches:recoveredCount,
+ source_semantic_classification_only:true,
+ canonical_fingerprint_approved:false,provider_binary_verified:false,
+ production_published:false,plugin_promotion:false,foreign_writes:false
+}));
