@@ -18,6 +18,8 @@ def materialize(source_path, target_path, expected_tar_sha256):
     content = []
     with tarfile.open(fileobj=io.BytesIO(tar_bytes), mode='r:gz') as archive:
         for member in archive.getmembers():
+            if member.isdir():
+                continue  # Standard directory headers carry no plugin file bytes.
             if not member.isfile():
                 raise ValueError('non_regular_tar_member_forbidden')
             name = member.name

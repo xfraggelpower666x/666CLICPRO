@@ -1,0 +1,95 @@
+{
+  "schema": "CLIC_OWN_PLUGIN_BACKUP_R05_R09_NATIVE_UPDATE_EVIDENCE_V1",
+  "system": "666CLIC",
+  "authority": "CLIC_ONLY",
+  "status": "ISOLATED_SOURCE_REPAIR_AND_LOCAL_EVIDENCE_NATIVE_APPROVAL_WRITE_BLOCKED",
+  "scope": "EXISTING_ISOLATED_BACKUP_DEVELOPMENT_BRANCH_ONLY",
+  "canonical_current": {
+    "branch": "clic-migration-rev79-staging",
+    "head": "b41b4a086682f7631c6dcfff3a0f4e6eb5e47983",
+    "pointer_change": false
+  },
+  "prechange_recovery": {
+    "branch": "dev/clic-own-plugin-backup-zip-parity-20261101",
+    "head": "d1a2689ebcee046fb964bd0b7c485d7b7495946e",
+    "original_materializer_blob": "eeaf897f0d35e7c958dca06394bfd0728da8d624"
+  },
+  "source_evidence": {
+    "original_tar_name": "workspace-plugin-p0fda2cg.tar.gz",
+    "tar_sha256": "b465f4e3490106a41adc78c5780003cf3a4d2942d5bd9855680c7bba3c3398f6",
+    "tar_bytes": 2941803,
+    "regular_files": 28,
+    "normal_directory_headers": 13,
+    "original_file_preserved": true,
+    "transport": "CHAT_UPLOADED_OFFLINE_BRIDGE",
+    "repo_original_tar_write": false
+  },
+  "local_backup_candidate": {
+    "backup_zip_sha256": "16cbf6789b1ed861d5fa9c818275e535746c350f19587c532d436247aa092e5c",
+    "backup_zip_bytes": 2949853,
+    "entries": 28,
+    "local_zip_preflight": "PASS_IN_CHAT_EVIDENCE",
+    "local_temporary_restore": "PASS_IN_CHAT_EVIDENCE",
+    "original_local_tests_not_repeated": true,
+    "remote_backup_readback": false
+  },
+  "minimal_repair": {
+    "path": "666CLIC_NATIVE_RUNTIME/development/own_plugin_backup_parity/materialize_complete_plugin_zip.py",
+    "reason": "ACCEPT_SAFE_TAR_DIRECTORY_HEADERS_ONLY",
+    "regular_file_guard_preserved": true,
+    "unsafe_paths_guard_preserved": true,
+    "nonregular_members_forbidden": true,
+    "isolated_code_change": true,
+    "github_ci_after_write": "NOT_YET_RUN"
+  },
+  "provider": {
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "version": "0.1.22",
+    "release_id": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "metadata_direct_readback": true,
+    "plugin_release_changed": false
+  },
+  "plugin_impact": {
+    "existing_four_differing_files": [
+      "references/visual-interface-contract.md",
+      "skills/666clic-continuity/SKILL.md",
+      "skills/666clic-dashboard/SKILL.md",
+      "skills/666clic-visual-interface/SKILL.md"
+    ],
+    "new_unreleased_files": [
+      "references/card-intelligence.md",
+      "references/cross-surface-learning.md",
+      "skills/666clic-card/SKILL.md",
+      "skills/666clic-force/SKILL.md"
+    ],
+    "classification": "NEWER_VALID_SOURCE_EVOLUTION_NOT_CURRENT_LIVE_PARITY",
+    "patch_first_required_before_any_live_release": true,
+    "live_release_publication_authorized": false
+  },
+  "semantic_history": {
+    "historical_153_chain": "PRESERVED",
+    "suffix_13": "PRESERVED",
+    "semantic_body_candidate": "fbb8abea3411972e424b84fc14531deb7662ae21",
+    "canonical_fingerprint_issued": false
+  },
+  "native_gates": {
+    "R05_receipt": "NOT_SUPPLIED",
+    "native_backup_approval": "WRITE_BLOCKED",
+    "current_runtime_plugin_fingerprint": "NOT_APPROVED",
+    "backup_remote_readback": "NOT_PERFORMED",
+    "protected_vault_write": "FORBIDDEN",
+    "fresh_host": "NOT_VERIFIED"
+  },
+  "preserve": {
+    "pdi": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "lyvra_write": false,
+    "pfs_write": false,
+    "plugin_update": false,
+    "release": false,
+    "merge": false,
+    "pointer_promotion": false
+  },
+  "next": "FRESH_NATIVE_PLUGIN_IMPACT_AND_CURRENT_BINARY_BINDING_GATE_BEFORE_APPROVAL_NO_RETEST_OF_LOCAL_ARCHIVE"
+}
