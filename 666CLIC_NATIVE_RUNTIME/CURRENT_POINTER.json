@@ -5181,5 +5181,43 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "next": "NATIVE_NODE_CI_AND_REAL_CONNECTOR_COMMIT_TREE_BLOB_VERIFIER_HOST_ACCEPTANCE_IF_AVAILABLE"
+  },
+  "update_2026_11_21_parallel_analytics_ci_tree_r03": {
+    "status": "NATIVE_CI_WORKFLOW_SOURCE_DIRECT_READBACK_VERIFIED_EXECUTION_PENDING",
+    "scope": "CLIC_NATIVE_SCOPED_NODE_REGRESSION_AND_INDEPENDENT_GIT_COMMIT_TREE_BLOB_CHECKOUT",
+    "prechange_head": "dc13a10a9dbecd14eadcbecc32cd93a49c4c001e",
+    "recovery_branch": "backup/clic-pre-r02-native-ci-tree-20261121-r03",
+    "body_head_before_pointer": "f0c890fdc9da055a2da94414da08ef391855dc07",
+    "body_readback": {
+      ".github/workflows/clic-parallel-analytics-r02.yml": "8fe3acb1d587bd450a3c0df57f80599c25844559",
+      "666CLIC_NATIVE_RUNTIME/current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md": "95e6a2cb6a7ede7bf773728292678a70966dca0b",
+      "666CLIC_NATIVE_RUNTIME/current/CURRENT_STATE.md": "6f77191b2a90466ec4e676abfee68c817d4a18a5",
+      "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json": "251f5847a2fc106c5dc5bb13d8d27205f0e02e2b"
+    },
+    "node_ci": {
+      "workflow_source_readback": "VERIFIED",
+      "test_suite": "13_EXISTING_NATIVE_NODE_TESTS",
+      "live_execution": "READBACK_PENDING",
+      "github_combined_status_at_workflow_source": "NO_STATUS_RETURNED",
+      "workflow_run_lookup": "PULL_REQUEST_FILTER_ONLY_NO_RUN_RETURNED",
+      "no_ci_pass_claim": true
+    },
+    "git_tree": {
+      "workflow_git_checkout_validation": "CONFIGURED_NOT_EXECUTED",
+      "pinned_source_sha": "7a8f40bfc096da1a667e89a799365d3fe4686a05",
+      "pinned_test_sha": "2d1d27909d0e74401e248c33fc4b41ee7a746aa1",
+      "independent_host_readback": "READBACK_PENDING"
+    },
+    "plugin_impact": "CI_AND_GOVERNANCE_DOCUMENTATION_ONLY_LIVE_PLUGIN_UNMODIFIED",
+    "foreign_mutation": false,
+    "no_new_controller": true,
+    "no_new_router": true,
+    "no_deployment": true,
+    "pdi_priority_order": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "starbridge_receipts": "PRESERVED",
+    "pointer_last": true,
+    "next": "READ_REAL_GITHUB_ACTIONS_NODE_RESULT_AND_INDEPENDENT_GIT_TREE_PROOF_WITHOUT_REPEATING_13_IN_MEMORY_TESTS"
   }
 }
