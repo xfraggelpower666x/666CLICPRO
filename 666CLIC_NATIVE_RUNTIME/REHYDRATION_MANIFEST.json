@@ -130,7 +130,8 @@
     "outbox/LYVRA/CLIC_TRACK_DESIGN_ADAPTIVE_TRANSLATION_PROPOSAL_2026-11-21.md",
     "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs",
     "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs",
-    "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md"
+    "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md",
+    "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1747,5 +1748,19 @@
       "foreign_mutation": false,
       "plugin_impact": "REVIEW_REQUIRED"
     }
+  },
+  "parallel_analytics_ci_pdi_readback_2026_11_22": {
+    "status": "NATIVE_NODE_CI_AND_READONLY_PDI_COMMIT_TREE_BLOBS_VERIFIED",
+    "evidence": "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md",
+    "ci_run_id": 44933470573,
+    "node_tests_passed": 13,
+    "node_tests_total": 13,
+    "source_commit": "b237ba6630aae6cb799da4da75022b9d8de14fd5",
+    "source_tree": "13451e418e9b8432dda0eae5d74a883f80e4fd8e",
+    "host_atomic_cas": "READBACK_PENDING",
+    "plugin_binary_parity": "READBACK_PENDING",
+    "foreign_mutation": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
