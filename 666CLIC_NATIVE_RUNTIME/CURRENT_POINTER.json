@@ -5219,5 +5219,41 @@
     "starbridge_receipts": "PRESERVED",
     "pointer_last": true,
     "next": "READ_REAL_GITHUB_ACTIONS_NODE_RESULT_AND_INDEPENDENT_GIT_TREE_PROOF_WITHOUT_REPEATING_13_IN_MEMORY_TESTS"
+  },
+  "update_2026_11_22_parallel_analytics_ci_pdi_r04": {
+    "status": "NODE_CI_AND_PINNED_PDI_COMMIT_TREE_SOURCE_READBACK_VERIFIED_ATOMIC_CAS_HOST_PENDING",
+    "prechange_head": "b237ba6630aae6cb799da4da75022b9d8de14fd5",
+    "recovery_branch": "backup/clic-pre-r04-ci-pdi-evidence-20261122",
+    "body_head_before_pointer": "9ffcf2dec68e4d7d5a1c97993306b9b0baafc596",
+    "body_readback": {
+      "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md": "bf0edc98925ae90c0c7b798b1c6019a1b69c811a",
+      "current/CURRENT_STATE.md": "0b8b70078588af2adb4f28c0d6e0d9f2c9a22863",
+      "REHYDRATION_MANIFEST.json": "9e37b84c2ccd76cacf41c20468b964a6f4bff441"
+    },
+    "ci": {
+      "run_id": 44933470573,
+      "job_id": 136934939008,
+      "native_node_tests_pass": 13,
+      "native_node_tests_total": 13,
+      "commit_tree_blob": "PASS",
+      "source_commit": "b237ba6630aae6cb799da4da75022b9d8de14fd5",
+      "source_tree": "13451e418e9b8432dda0eae5d74a883f80e4fd8e"
+    },
+    "pdi_source": {
+      "ledger_blob": "66882c3f9e8aac86ab1475e162d9b2658e2f3400",
+      "pdi_blob": "27f389112cdac4c0bac41a8be84172922b5fcbfc",
+      "ledger_status": "INACTIVE",
+      "actual_host_events": 0,
+      "atomic_branch_cas": "READBACK_PENDING"
+    },
+    "plugin_impact": "EVIDENCE_CONTINUITY_ONLY_LIVE_PLUGIN_UNCHANGED",
+    "visual_impact": "EXISTING_NATIVE_VISUAL_GOVERNANCE_UNMODIFIED",
+    "foreign_mutation": false,
+    "pdi_priority_order": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "PDI_LIVE_PERSISTENCE_HOST_ATOMIC_CAS_AUTHORITY_OPEN"
   }
 }
