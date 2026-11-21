@@ -1,0 +1,78 @@
+name: CLIC Parallel Analytics R02 · Node and Git-tree evidence
+on:
+  push:
+    branches:
+      - clic-migration-rev79-staging
+    paths:
+      - ".github/workflows/clic-parallel-analytics-r02.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: clic-parallel-analytics-r02-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  node-and-git-tree:
+    name: Native Node regression + pinned commit/tree/blob integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run the existing scoped tests using native Node
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs
+      - name: Verify current commit/tree/blob against native R02 pointer
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          import assert from 'node:assert/strict';
+          const git=(...args)=>execFileSync('git',args,{encoding:'utf8'}).trim();
+          const base='666CLIC_NATIVE_RUNTIME/';
+          const paths=[
+            'facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs',
+            'facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs',
+            'REHYDRATION_MANIFEST.json'
+          ];
+          const head=git('rev-parse','HEAD');
+          assert.match(head,/^[a-f0-9]{40}$/);
+          assert.equal(git('cat-file','-t',head),'commit');
+          const rootTree=git('rev-parse',head+'^{tree}');
+          assert.match(rootTree,/^[a-f0-9]{40}$/);
+          assert.equal(git('cat-file','-t',rootTree),'tree');
+          const pointer=JSON.parse(readFileSync(base+'CURRENT_POINTER.json','utf8'));
+          const r02=pointer.update_2026_11_21_parallel_analytics_repair_r02;
+          assert.ok(r02?.source_readback,'R02 current pointer receipt required');
+          const manifest=JSON.parse(readFileSync(base+'REHYDRATION_MANIFEST.json','utf8'));
+          assert.ok(Array.isArray(manifest.required_order));
+          for(const path of paths){
+            const full=base+path;
+            const rows=git('ls-tree','-r',head,'--',full).split('\n').filter(Boolean);
+            assert.equal(rows.length,1,'exactly one committed tree entry for '+path);
+            const match=/^100644 blob ([0-9a-f]{40})\t(.+)$/.exec(rows[0]);
+            assert.ok(match,'regular committed blob required: '+path);
+            assert.equal(match[2],full,'tree entry path binding');
+            assert.equal(match[1],r02.source_readback[path],'tree blob equals pointer receipt');
+            assert.equal(git('hash-object',full),match[1],'local file bytes equal committed git blob');
+            assert.equal(git('cat-file','-t',match[1]),'blob');
+            if(path!=='REHYDRATION_MANIFEST.json')
+              assert.ok(manifest.required_order.includes(path),'registered native carrier '+path);
+          }
+          assert.equal(git('merge-base','--is-ancestor',
+            'acf12591618ae94674dd5f1d8c9f5acad3ecd05a',head)||'', '');
+          assert.equal(git('merge-base','--is-ancestor',
+            '0b5755aee7905dc8eb661b91ee0ae3828bb7ad8f',head)||'', '');
+          console.log(JSON.stringify({status:'NATIVE_NODE_GIT_COMMIT_TREE_BLOB_PASS',head,rootTree,paths_checked:paths.length}));
+          NODE
