@@ -127,7 +127,10 @@
     "continuity/starbridge-owner-mailbox-host-adapter.mjs",
     "continuity/starbridge-owner-mailbox-host-adapter.test.mjs",
     "learning/TRACK_DESIGN_ADAPTIVE_TRANSLATION_CHECKPOINT_2026-11-21.md",
-    "outbox/LYVRA/CLIC_TRACK_DESIGN_ADAPTIVE_TRANSLATION_PROPOSAL_2026-11-21.md"
+    "outbox/LYVRA/CLIC_TRACK_DESIGN_ADAPTIVE_TRANSLATION_PROPOSAL_2026-11-21.md",
+    "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs",
+    "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs",
+    "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1720,5 +1723,18 @@
     "foreign_mutation": false,
     "lyvra_adoption": "NOT_VERIFIED",
     "next": "666CLIC_INTEGRATION_AUDIT"
+  },
+  "parallel_analytics_cooperation_2026_11_21": {
+    "status": "REPOSITORY_NATIVE_SOURCE_INTEGRATED_HOST_ACCEPTANCE_PENDING",
+    "module": "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs",
+    "test": "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs",
+    "contract": "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md",
+    "decision_authority": "WHOLE_666CLIC",
+    "foreign_mutation": false,
+    "plugin_impact": "REVIEW_REQUIRED",
+    "host_acceptance": "READBACK_PENDING",
+    "pdi_priority_order_preserved": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
