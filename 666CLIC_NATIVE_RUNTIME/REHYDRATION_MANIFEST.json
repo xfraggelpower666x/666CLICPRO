@@ -125,7 +125,9 @@
     "continuity/starbridge-owner-mailbox-github-binding.mjs",
     "continuity/starbridge-owner-mailbox-github-binding.test.mjs",
     "continuity/starbridge-owner-mailbox-host-adapter.mjs",
-    "continuity/starbridge-owner-mailbox-host-adapter.test.mjs"
+    "continuity/starbridge-owner-mailbox-host-adapter.test.mjs",
+    "learning/TRACK_DESIGN_ADAPTIVE_TRANSLATION_CHECKPOINT_2026-11-21.md",
+    "outbox/LYVRA/CLIC_TRACK_DESIGN_ADAPTIVE_TRANSLATION_PROPOSAL_2026-11-21.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1703,5 +1705,20 @@
     "recovery": "NO_PERSISTENT_PRECREATE_CAS_LEDGER_LIVE_MUTATIONS_BLOCKED",
     "provider_writes": 0,
     "prechange_backup_branch": "backup/clic-pre-mailbox-approval-recovery-20261023"
+  },
+  "track_design_adaptive_translation_checkpoint_2026_11_21": {
+    "status": "CLIC_OWNED_DEVELOPMENT_CHECKPOINT",
+    "checkpoint": "learning/TRACK_DESIGN_ADAPTIVE_TRANSLATION_CHECKPOINT_2026-11-21.md",
+    "lyvra_proposal": "outbox/LYVRA/CLIC_TRACK_DESIGN_ADAPTIVE_TRANSLATION_PROPOSAL_2026-11-21.md",
+    "lyvra_head": "f75789056f37c3fd03fa351ec594f0548384d999",
+    "lyvra_pointer_blob": "e90784f8949ecf1bc5e4a73d808485cf8a2a4984",
+    "lyvra_manifest_blob": "f8517ffb31b099d3c65c9ca8b63aab325c75521f",
+    "track_design_current": "v3.4",
+    "track_logical_revision_current": "92",
+    "plugin_impact": "CHECKED_NO_RUNTIME_RELEASE_REQUIRED",
+    "visual_compliance": "REVALIDATION_REQUIRED_FROM_CURRENT_LYVRA",
+    "foreign_mutation": false,
+    "lyvra_adoption": "NOT_VERIFIED",
+    "next": "666CLIC_INTEGRATION_AUDIT"
   }
 }
