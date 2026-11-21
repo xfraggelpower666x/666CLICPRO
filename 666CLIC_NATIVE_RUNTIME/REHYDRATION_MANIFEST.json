@@ -1735,6 +1735,17 @@
     "host_acceptance": "READBACK_PENDING",
     "pdi_priority_order_preserved": true,
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "repair_r02": {
+      "status": "DIRECT_SOURCE_READBACK_VERIFIED_NATIVE_HOST_PENDING",
+      "source": "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs",
+      "regression": "13_OF_13_IN_MEMORY_PASS",
+      "native_node_ci": "READBACK_PENDING",
+      "peer_evidence": "CANDIDATE_UNTIL_INDEPENDENT_BINDING",
+      "identity_mismatch": "CONFLICT_QUARANTINE",
+      "repository_root_publication": "SERIALIZED",
+      "foreign_mutation": false,
+      "plugin_impact": "REVIEW_REQUIRED"
+    }
   }
 }
