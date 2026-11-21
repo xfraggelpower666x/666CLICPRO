@@ -5135,5 +5135,51 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "next": "VERIFY_NATIVE_NODE_CI_AND_HOST_EVIDENCE_WHEN_AVAILABLE_KEEP_PDI_PRIORITIES_UNCHANGED"
+  },
+  "update_2026_11_21_parallel_analytics_repair_r02": {
+    "status": "CLIC_NATIVE_REPAIR_BODY_DIRECT_READBACK_AND_TARGETED_IN_MEMORY_REGRESSION_VERIFIED_HOST_PENDING",
+    "scope": "CLIC_OWNED_PARALLEL_ANALYTICS_EVIDENCE_AND_CONFLICT_GUARDS",
+    "prechange_head": "b06bb017df9bb339b41401392d9ae2ec89e3422d",
+    "prechange_recovery": "backup/clic-pre-parallel-analytics-repair-20261121-r02",
+    "body_head_before_pointer": "cc3ae58646538d0c14622bc1938dd3d8c2611cf2",
+    "source_readback": {
+      "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs": "7a8f40bfc096da1a667e89a799365d3fe4686a05",
+      "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs": "2d1d27909d0e74401e248c33fc4b41ee7a746aa1",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "319c978b565489b3970ba5faefd0d36dec31c1be",
+      "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md": "9aff56f324a4f3efc561fdc7a148b3619914b4ad",
+      "current/CURRENT_STATE.md": "f4f0b324c6abca82334562ac31d0743d490f0b39",
+      "REHYDRATION_MANIFEST.json": "251f5847a2fc106c5dc5bb13d8d27205f0e02e2b"
+    },
+    "repair_cause": [
+      "BOOLEAN_ONLY_SOURCE_VERIFICATION_GAP",
+      "MISMATCHED_PEER_RESPONSE_GAP",
+      "SHARED_REPOSITORY_BASE_HEAD_CONFLICT_GAP"
+    ],
+    "corrective_semantics": [
+      "INDEPENDENT_COMMIT_TREE_BLOB_VERIFIER_REQUIRED",
+      "PEER_IDENTITY_MISMATCH_QUARANTINED",
+      "DUPLICATE_WORKSTREAM_IDS_BLOCKED",
+      "COMMON_REPO_DIFFERENT_BASE_HEAD_BLOCKED",
+      "ROOT_PUBLICATION_SERIALIZED"
+    ],
+    "targeted_regressions": {
+      "passed": 13,
+      "total": 13,
+      "scope": "IN_MEMORY_V8_TARGETED",
+      "node_ci": "READBACK_PENDING",
+      "real_provider_host": "READBACK_PENDING"
+    },
+    "plugin_impact": "CHECKED_SOURCE_REPAIR_SEMANTICS_LIVE_PLUGIN_PARITY_AND_BINARY_APPROVAL_PENDING",
+    "visual_impact": "EXISTING_VISUAL_COMPLIANCE_CONTRACT_RETAINED_NO_FOREIGN_VISUAL_WRITE",
+    "no_new_router": true,
+    "no_new_controller": true,
+    "foreign_mutation": false,
+    "starbridge_receipts": "PRESERVED_NOT_REPLAYED",
+    "pdi_priority_order": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_written_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "NATIVE_NODE_CI_AND_REAL_CONNECTOR_COMMIT_TREE_BLOB_VERIFIER_HOST_ACCEPTANCE_IF_AVAILABLE"
   }
 }
