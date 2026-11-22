@@ -156,7 +156,11 @@
     "facets/parallel_development_intelligence/cls-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs",
     "docs/R12_CLS_INTEGRATION.md",
-    "outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json"
+    "outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json",
+    "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs",
+    "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs",
+    "docs/R13_LYVRA_WHOLE_PLUGIN_AUDIT.md",
+    "outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1973,5 +1977,34 @@
     "static_ci_run": 45004247003,
     "visual_ci_run": 45004246995,
     "secondary_ci": "SUCCESS"
+  },
+  "lyvra_r13_whole_dual_plugin_audit_2026_11_22": {
+    "status": "PREPARED_SOURCE_COMMIT_CI_PENDING",
+    "adapter": "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs",
+    "test": "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs",
+    "governance": "docs/R13_LYVRA_WHOLE_PLUGIN_AUDIT.md",
+    "handoff": "outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json",
+    "workflow": ".github/workflows/clic-lyvra-r13.yml",
+    "lyvra_observed_head": "dfba2bf1f03ba76cc5a71e8840bf67ba149e18e3",
+    "lyvra_tree": "5437bf4a895a689ba45ce87d8f0f4b084c6fe24e",
+    "native_plugin": "0.1.93",
+    "alive_plugin": "0.13.89",
+    "suno_mcp_plugin": "0.4.0",
+    "coding_profi_plugin": "0.87.5",
+    "shared_skills_checked": 17,
+    "shared_skills_equal": 14,
+    "suno_index_blobs_checked": 22,
+    "suno_index_blobs_matched": 22,
+    "node_tests": "CI_PENDING",
+    "host_parity": "READBACK_PENDING",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "visual_compliance": "PARTIAL",
+    "plugin_impact": "EXISTING_PDI_AUDIT_PLUGIN_V0.1.23_REFERENCE_REUSE_NO_NEW_TRIGGER_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "starbridge": "PRESERVED",
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

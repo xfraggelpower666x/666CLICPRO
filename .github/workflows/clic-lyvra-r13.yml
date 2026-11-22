@@ -1,0 +1,43 @@
+name: CLIC R13 LYVRA Peer Plugin Evidence
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '.github/workflows/clic-lyvra-r13.yml'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r13:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: CLIC R13 evidence projection regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs
+      - name: Ensure exact Git blob provenance and bounded handoff
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const paths=['666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs','666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs','666CLIC_NATIVE_RUNTIME/outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json'];
+          for(const p of paths)assert.equal(execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim(),execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim());
+          assert.equal(execFileSync('git',['hash-object',paths[0]],{encoding:'utf8'}).trim(),'1fba0cb4621d6944673e1fb2a0abe2c4c7539260');
+          assert.equal(execFileSync('git',['hash-object',paths[1]],{encoding:'utf8'}).trim(),'01f36e4a242139e4e9d5a2ca02c3e5af45cdf8e7');
+          const h=JSON.parse(fs.readFileSync(paths[2],'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-LYVRA-R13-20261122-01');
+          assert.equal(h.target.observed_head,'dfba2bf1f03ba76cc5a71e8840bf67ba149e18e3');
+          assert.equal(h.findings.length,8);
+          for(const v of ['delivery_verified','adoption_verified','host_accepted','foreign_mutation','plugin_release_mutation'])assert.equal(h.boundaries[v],false);
+          console.log('CLIC_R13_GIT_BLOBS_HANDOFF_AUTHORITY_GATES_PASS');
+          NODE
