@@ -165,7 +165,13 @@
     "inbox/666CLS/CLIC_R12_RETURN_INTAKE_EVIDENCE.json",
     "continuity/cls-r12-return-intake.mjs",
     "continuity/cls-r12-return-intake.test.mjs",
-    "docs/R14_CLS_RETURN_INTAKE.md"
+    "docs/R14_CLS_RETURN_INTAKE.md",
+    "inbox/666TDI/666TDI-TO-666CLIC-R11-20261122-01.json",
+    "continuity/tdi-r11-return-intake.mjs",
+    "continuity/tdi-r11-return-intake.test.mjs",
+    "inbox/666TDI/CLIC_R11_RETURN_INTAKE_EVIDENCE.json",
+    "inbox/666TDI/CLIC_TDI_R11_ACCEPTANCE.json",
+    "docs/R15_TDI_R11_RETURN_INTAKE.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -2069,5 +2075,21 @@
     "prior_visual_run_id": 45014227428,
     "prior_secondary_ci": "SUCCESS",
     "tdi_source": "OBSERVATION_ONLY"
+  },
+  "tdi_r15_native_receipt_intake_2026_11_22": {
+    "status": "SOURCE_CANDIDATE_PUBLISHED_FINAL_CI_AND_POINTER_READBACK_PENDING",
+    "source_handoff_blob": "b9dfe4a3e153dc494f3966e216787cbf8918c529",
+    "receipt_blob": "f37865eb6984a9b1cffd5e98422b986f12f2de28",
+    "source_verification": "INDEPENDENT_COMMIT_TREE_BLOB_READBACK",
+    "decision_consistency": "TDI_01_06_6_OF_6",
+    "scope": "CLIC_OWNED_RECEIPT_ONLY",
+    "foreign_write": false,
+    "tdi_audio": "OPTIONAL_NOT_BLOCKING",
+    "tdi_visual_host": "OPEN",
+    "existing_cls_r12": "PRESERVED",
+    "pdi_priorities": "PRESERVED",
+    "starbridge": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
