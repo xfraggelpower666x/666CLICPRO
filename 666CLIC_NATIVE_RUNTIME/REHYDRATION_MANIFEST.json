@@ -1808,6 +1808,12 @@
     "foreign_mutation": false,
     "plugin_impact": "READ_ONLY_ADVISORY_SKILL_MAPPING_REVIEW_REQUIRED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 44998710416,
+    "ci_job_id": 137135267659,
+    "ci_source_commit": "233ff039e18f2cb20b702404e7616a941dd7b922",
+    "ci_conclusion": "SUCCESS",
+    "ci_node_tests_pass": 11,
+    "ci_node_tests_fail": 0
   }
 }
