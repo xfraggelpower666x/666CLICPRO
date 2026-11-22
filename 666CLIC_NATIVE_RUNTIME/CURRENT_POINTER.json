@@ -5286,5 +5286,42 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "TARGETED_PLUGIN_MAIN_BEHAVIORAL_PARITY_AND_HOST_SMOKE_READBACK"
+  },
+  "update_2026_11_22_dev_r06_native_advisory_and_handoff": {
+    "status": "CLIC_R06_SOURCE_CI_AND_OUTBOX_VERIFIED_666DEV_CONSUMER_NOT_VERIFIED",
+    "prechange_head": "6f7a0462f439a9034390839798979a02468a3ff0",
+    "backup_branch": "backup/clic-pre-dev-r06-handoff-adaptation-20261122",
+    "body_head_before_pointer": "6f0328d56c00cb15e1f3bc6eb1ae3d7645d983f4",
+    "body_readback": {
+      "facets/parallel_development_intelligence/dev-pattern-adaptation.mjs": "66ce26d301fa08fa4e69b1d59fe0cfb0035f1d6c",
+      "facets/parallel_development_intelligence/dev-pattern-adaptation.test.mjs": "ea8cba7b6d9a03a8ef978f5eb9ee3bdb5bf9b191",
+      "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json": "f21d5734292ac262c76d136e9c3af642397f2066",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "be02c696d415c727848a71c1c5957ae8a13c8d15",
+      "current/CURRENT_STATE.md": "ffa08246e4bdcda54a2955512585fe4d3bb957e9",
+      "REHYDRATION_MANIFEST.json": "48b3be959fa61929400cdb8b42ccc31cdf4df638",
+      ".github/workflows/clic-dev-pattern-r06.yml": "cf68ba941edab8b4916bbe73b33401c9f0e14066"
+    },
+    "ci": {
+      "workflow_run_id": 44991459922,
+      "source_commit": "21e614a482fc29540a90b161470cc1d8426b2f2e",
+      "node_tests_pass": 10,
+      "node_tests_total": 10,
+      "conclusion": "SUCCESS"
+    },
+    "source_handoff_stage": "PREPARED",
+    "delivery_receipt": null,
+    "dev_consumer": "NOT_VERIFIED",
+    "dev_adoption": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "pdi_priority_order": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "plugin_impact": "REVIEWED_NATIVE_ADVISORY_SOURCE_ONLY_CURRENT_LIVE_PLUGIN_V0.1.23_UNCHANGED_HOST_PARITY_PENDING",
+    "visual_impact": "DEV_VISUAL_SOURCE_PRESENT_NATIVE_HOST_ACCEPTANCE_PARTIAL",
+    "no_new_controller": true,
+    "no_new_router": true,
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "DEV_NATIVE_UPDATE_MUST_DISCOVER_AND_VERIFY_THIS_EXACT_CLIC_OUTBOX_SOURCE_AND_RETURN_INDEPENDENT_RECEIPT"
   }
 }
