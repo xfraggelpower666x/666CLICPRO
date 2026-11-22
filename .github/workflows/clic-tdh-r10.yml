@@ -1,0 +1,57 @@
+name: CLIC R10 TDH Native Advisory Regression
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - ".github/workflows/clic-tdh-r10.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run R10 16-case targeted Node regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs
+      - name: Verify commit tree blobs and native TDH handoff guards
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const root='666CLIC_NATIVE_RUNTIME/';
+          const paths=[
+            root+'facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs',
+            root+'facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs',
+            root+'outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json'
+          ];
+          for(const p of paths) {
+            const committed=execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim();
+            const actual=execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim();
+            assert.equal(committed,actual);
+          }
+          assert.equal(execFileSync('git',['hash-object',paths[0]],{encoding:'utf8'}).trim(),'ee83d0d1f20f459ba1c717f3308a4f99d7702a76');
+          assert.equal(execFileSync('git',['hash-object',paths[1]],{encoding:'utf8'}).trim(),'3e076729633b4c03b03eccf6a1b4115adb4d7c4a');
+          const h=JSON.parse(fs.readFileSync(paths[2],'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-666TDH-R10-20261122-01');
+          assert.equal(h.target_system,'666TRACKHUB-001');
+          assert.equal(h.target_release,'v1.15.0');
+          assert.equal(h.findings.length,5);
+          assert.equal(h.delivery_verified,false);
+          assert.equal(h.target_consumed,false);
+          assert.equal(h.target_adopted,false);
+          assert.equal(h.foreign_writes,false);
+          assert.equal(h.host_accepted,false);
+          console.log('CLIC_R10_NATIVE_COMMIT_TREE_BLOB_AND_TDH_HANDOFF_GATES_PASS');
+          NODE

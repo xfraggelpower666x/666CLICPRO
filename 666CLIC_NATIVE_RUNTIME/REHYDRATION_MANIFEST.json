@@ -144,7 +144,11 @@
     "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json",
     "facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs",
-    "outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json"
+    "outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json",
+    "facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs",
+    "docs/R10_INTEGRATION_AND_GOVERNANCE.md",
+    "outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1866,5 +1870,26 @@
     "ci_node_tests_pass": 19,
     "ci_node_tests_fail": 0,
     "ci_commit_tree_readback": "VERIFIED_SOURCE_PATH_AND_BLOB_MAPPING"
+  },
+  "tdh_r10_native_advisory_and_handoff_2026_11_22": {
+    "status": "PREPARED_SOURCE_COMMIT_CI_PENDING",
+    "adapter": "facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs",
+    "governance": "docs/R10_INTEGRATION_AND_GOVERNANCE.md",
+    "handoff": "outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json",
+    "workflow": ".github/workflows/clic-tdh-r10.yml",
+    "tests_local_pass": 16,
+    "tdh_observed_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "tdh_native_release": "v1.15.0",
+    "source_github_ci": "READBACK_PENDING",
+    "native_tdh_consumer": "NOT_VERIFIED",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "visual_compliance": "SOURCE_NATIVE_PARTIAL_HOST_OPEN",
+    "plugin_impact": "READONLY_ADVISORY_REFERENCE_EXISTING_PDI_SKILL_V0123_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
