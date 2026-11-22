@@ -1979,7 +1979,7 @@
     "secondary_ci": "SUCCESS"
   },
   "lyvra_r13_whole_dual_plugin_audit_2026_11_22": {
-    "status": "PREPARED_SOURCE_COMMIT_CI_PENDING",
+    "status": "SOURCE_GITHUB_CI_VERIFIED_POINTER_FINALIZATION_PENDING",
     "adapter": "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs",
     "test": "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs",
     "governance": "docs/R13_LYVRA_WHOLE_PLUGIN_AUDIT.md",
@@ -1995,7 +1995,7 @@
     "shared_skills_equal": 14,
     "suno_index_blobs_checked": 22,
     "suno_index_blobs_matched": 22,
-    "node_tests": "CI_PENDING",
+    "node_tests": "PASS_20_OF_20",
     "host_parity": "READBACK_PENDING",
     "delivery": "NOT_VERIFIED",
     "adoption": "NOT_VERIFIED",
@@ -2005,6 +2005,16 @@
     "starbridge": "PRESERVED",
     "pdi_priorities": "PRESERVED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_source_commit": "04e0825f8ffbfe298f53fafda5d9ba86010867f3",
+    "ci_run_id": 45013299958,
+    "ci_job_id": 137180112266,
+    "ci_tests_pass": 20,
+    "ci_tests_fail": 0,
+    "ci_git_blob_handoff_gate": "PASS",
+    "pdi_run_id": 45013299936,
+    "static_run_id": 45013300025,
+    "visual_run_id": 45013300026,
+    "secondary_ci": "SUCCESS"
   }
 }
