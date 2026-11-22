@@ -1907,7 +1907,7 @@
     "ci_secondary_checks": "SUCCESS"
   },
   "tdi_r11_native_advisory_and_handoff_2026_11_22": {
-    "status": "PREPARED_SOURCE_COMMIT_CI_PENDING",
+    "status": "SOURCE_GITHUB_CI_VERIFIED_POINTER_FINALIZATION_PENDING",
     "adapter": "facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs",
     "test": "facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs",
     "governance": "docs/R11_INTEGRATION_AND_GOVERNANCE.md",
@@ -1916,7 +1916,7 @@
     "tests_local_pass": 18,
     "tdi_observed_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
     "tdi_native_release": "v2.5_R0.8",
-    "source_github_ci": "READBACK_PENDING",
+    "source_github_ci": "SUCCESS",
     "native_tdi_consumer": "NOT_VERIFIED",
     "delivery": "NOT_VERIFIED",
     "adoption": "NOT_VERIFIED",
@@ -1925,6 +1925,16 @@
     "foreign_mutation": false,
     "pdi_priorities": "PRESERVED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 45003210826,
+    "ci_job_id": 137149039418,
+    "ci_source_commit": "f81ccb149f0b539adab28e0e6c2e416569a447c8",
+    "ci_node_tests_pass": 18,
+    "ci_node_tests_fail": 0,
+    "ci_commit_tree_blob": "PASS",
+    "ci_pdi_run_id": 45003210734,
+    "ci_static_guard_run_id": 45003210730,
+    "ci_visual_run_id": 45003210729,
+    "ci_secondary_checks": "SUCCESS"
   }
 }
