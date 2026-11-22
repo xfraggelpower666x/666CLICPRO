@@ -148,7 +148,11 @@
     "facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs",
     "docs/R10_INTEGRATION_AND_GOVERNANCE.md",
-    "outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json"
+    "outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json",
+    "facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs",
+    "docs/R11_INTEGRATION_AND_GOVERNANCE.md",
+    "outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1901,5 +1905,26 @@
     "ci_static_guard_run_id": 45002333595,
     "ci_visual_run_id": 45002333555,
     "ci_secondary_checks": "SUCCESS"
+  },
+  "tdi_r11_native_advisory_and_handoff_2026_11_22": {
+    "status": "PREPARED_SOURCE_COMMIT_CI_PENDING",
+    "adapter": "facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs",
+    "governance": "docs/R11_INTEGRATION_AND_GOVERNANCE.md",
+    "handoff": "outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json",
+    "workflow": ".github/workflows/clic-tdi-r11.yml",
+    "tests_local_pass": 18,
+    "tdi_observed_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "tdi_native_release": "v2.5_R0.8",
+    "source_github_ci": "READBACK_PENDING",
+    "native_tdi_consumer": "NOT_VERIFIED",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "visual_compliance": "UNKNOWN_HOST_PENDING",
+    "plugin_impact": "READONLY_ADVISORY_REFERENCE_EXISTING_PDI_SKILL_V0123_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

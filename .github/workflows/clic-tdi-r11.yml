@@ -1,0 +1,53 @@
+name: CLIC R11 666TDI Evidence and Learning Adapter Regression
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - ".github/workflows/clic-tdi-r11.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: CLIC R11 18-case native regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs
+      - name: Verify exact original adapter and test and R11 peer handoff
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const root='666CLIC_NATIVE_RUNTIME/';
+          const adapter=root+'facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs';
+          const test=root+'facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs';
+          const outbox=root+'outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json';
+          for(const p of [adapter,test,outbox]){
+            assert.equal(execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim(),
+              execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim());
+          }
+          assert.equal(execFileSync('git',['hash-object',adapter],{encoding:'utf8'}).trim(),'06b60302ae1909142424e60933002f23863085a1');
+          assert.equal(execFileSync('git',['hash-object',test],{encoding:'utf8'}).trim(),'6d5941898437d5e60abb471a998851e3b8d6f636');
+          const h=JSON.parse(fs.readFileSync(outbox,'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-666TDI-R11-20261122-01');
+          assert.equal(h.target_system_id,'666TDI-001');
+          assert.equal(h.findings.length,6);
+          assert.equal(h.delivery_verified,false);
+          assert.equal(h.native_consumer_verified,false);
+          assert.equal(h.target_adoption_verified,false);
+          assert.equal(h.foreign_mutation,false);
+          assert.equal(h.native_recipient_contract.trigger_registration,'NOT_CONFIRMED_IN_TARGET_CURRENT');
+          console.log('CLIC_R11_ORIGINAL_BYTES_AND_HANDOFF_GATES_PASS');
+          NODE
