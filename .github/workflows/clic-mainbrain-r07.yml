@@ -1,0 +1,49 @@
+name: CLIC R07 MAIN BRAIN Native Advisory Regression
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - ".github/workflows/clic-mainbrain-r07.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r07:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Native R07 regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs
+      - name: Verify source-bound handoff and git blobs
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const prefix='666CLIC_NATIVE_RUNTIME/';
+          const path=prefix+'outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json';
+          const data=JSON.parse(fs.readFileSync(path,'utf8'));
+          assert.equal(data.source_system,'666CLIC');
+          assert.equal(data.target,'666MAIN BRAIN');
+          assert.equal(data.status,'PREPARED');
+          assert.equal(data.foreign_mutation,false);
+          assert.equal(data.native_adoption_verified,false);
+          assert.equal(data.automatic_consumer_verified,false);
+          assert.equal(data.delivery_receipt,null);
+          for(const p of [path,prefix+'facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs',prefix+'facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs']) {
+            const blob=execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim();
+            const file=execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim();
+            assert.equal(blob,file);
+          }
+          console.log('CLIC_R07_SOURCE_BLOB_AND_HANDOFF_GATES_PASS');
+          NODE
