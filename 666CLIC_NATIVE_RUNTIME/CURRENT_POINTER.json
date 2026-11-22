@@ -5448,5 +5448,53 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "666PFS_UPDATE_NATIVE_INDEPENDENT_HANDOFF_SOURCE_READBACK_AND_RETURN_RECEIPT"
+  },
+  "update_2026_11_22_tdh_r10": {
+    "status": "R10_CLIC_NATIVE_ADVISORY_CI_AND_OUTBOX_READBACK_VERIFIED_TDH_ADOPTION_PENDING",
+    "prechange_head": "a7cd81179797682764bf8dbfc828d598b0d3b3ec",
+    "backup_branch": "backup/clic-pre-tdh-r10-20261122",
+    "body_head_before_pointer": "abc1dce30a4ef936a1b5b3a1949f5100c123e622",
+    "body_blobs": {
+      "REHYDRATION_MANIFEST.json": "518cedfc9d251d4f901a5e8d98a2b29e9b589595",
+      "current/CURRENT_STATE.md": "e83b5afe05cd64d4c8f34ec7f0781a8e1e9d44a4",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "c2824e895c72eb8f1e1992d92de20bbbee2e0276",
+      "facets/parallel_development_intelligence/tdh-pattern-adaptation.mjs": "ee83d0d1f20f459ba1c717f3308a4f99d7702a76",
+      "facets/parallel_development_intelligence/tdh-pattern-adaptation.test.mjs": "3e076729633b4c03b03eccf6a1b4115adb4d7c4a",
+      "docs/R10_INTEGRATION_AND_GOVERNANCE.md": "392cfb0d8b92bc538235c8455f91563a7aac14a3",
+      "outbox/666TDH/CLIC-TO-666TDH-R10-20261122-01.json": "ae8de1cb6280a6fe602f9d4cb0f7be914ff7046b",
+      ".github/workflows/clic-tdh-r10.yml": "a650fcfdedd4c424be688efcb06ec7ffab074bc4"
+    },
+    "ci": {
+      "run_id": 45002333676,
+      "job_id": 137146378225,
+      "source_commit": "d5dcc2acdc304db4a7af70a3e4391c1419637450",
+      "tests_pass": 16,
+      "tests_fail": 0,
+      "conclusion": "SUCCESS",
+      "commit_tree_blob_readback": "PASS",
+      "pdi_run_id": 45002333608,
+      "static_guard_run_id": 45002333595,
+      "visual_run_id": 45002333555,
+      "secondary_ci_conclusion": "SUCCESS"
+    },
+    "handoff_id": "CLIC-TO-666TDH-R10-20261122-01",
+    "handoff_stage": "PREPARED_SOURCE_PUBLICATION_ONLY",
+    "delivery_receipt": "NOT_VERIFIED",
+    "tdh_native_consumer": "NOT_VERIFIED",
+    "tdh_adoption": "NOT_VERIFIED",
+    "tdh_head_observed": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "tdh_native_release": "v1.15.0",
+    "visual_compliance": "TDH_NATIVE_SOURCE_PARTIAL_HOST_PENDING",
+    "plugin_impact": "READONLY_PDI_ADVISORY_EXISTING_PLUGIN_V0.1.23_REFERENCE_ONLY_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "no_new_engine": true,
+    "no_new_router": true,
+    "no_new_controller": true,
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "666TDH_UPDATE_NATIVE_R10_INDEPENDENT_READBACK_AND_RETURN_RECEIPT"
   }
 }
