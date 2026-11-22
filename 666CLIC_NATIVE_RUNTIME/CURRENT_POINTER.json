@@ -5255,5 +5255,36 @@
     "pointer_written_last": true,
     "no_post_pointer_mutation": true,
     "next": "PDI_LIVE_PERSISTENCE_HOST_ATOMIC_CAS_AUTHORITY_OPEN"
+  },
+  "update_2026_11_22_clic_plugin_r05_v0123": {
+    "status": "LIVE_PLUGIN_V0123_RELEASE_AND_SEVEN_SOURCE_DELTA_READBACK_VERIFIED_BEHAVIORAL_HOST_PARTIAL",
+    "prechange_head": "c66ed317b015095e5e74368f28cdc71fb150a995",
+    "recovery_branch": "backup/clic-pre-plugin-r04-parity-20261122-r05",
+    "prechange_live_release": "pluginrel_6ac6f4e703288191b8757f336d33e186",
+    "plugin_id": "plugins_6abfb2e08fdc8191920dcdc4349c69c8",
+    "plugin_version": "0.1.23",
+    "live_release_id": "pluginrel_6b0255b3ae548191a8780663ca3fbe0f",
+    "body_head_before_pointer": "5df0ab732361e09616b211528f84bb7758c3701e",
+    "evidence_blobs": {
+      "plugin_governance/PLUGIN_R05_V0123_RELEASE_READBACK_2026-11-22.md": "79045f8d0935957450b4199e0db095d9ba65a07e",
+      "current/CURRENT_STATE.md": "ba8ee20a63cd83011b6661c7fdc028eaeb4252fd",
+      "REHYDRATION_MANIFEST.json": "50a19a953d64720eb97f8e53c50564cee19761b9"
+    },
+    "source_overlay": "666clic-plugin/releases/v0.1.23/",
+    "source_base": "666clic-plugin/releases/v0.1.22/",
+    "live_source_delta_readback": "7_OF_7",
+    "logo_policy": "KEEP_OMITTED_ASSET_NO_LOGO_GATE",
+    "native_ci_prior": "13_OF_13_PASS",
+    "host_behavioral_parity": "READBACK_PENDING",
+    "pdi_atomic_cas": "READBACK_PENDING",
+    "no_foreign_mutation": true,
+    "no_new_controller": true,
+    "no_new_router": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pdi_priority_order": "UNCHANGED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "TARGETED_PLUGIN_MAIN_BEHAVIORAL_PARITY_AND_HOST_SMOKE_READBACK"
   }
 }
