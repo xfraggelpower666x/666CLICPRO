@@ -1,4 +1,4 @@
- // CLIC R08. Existing PDI/continuity/parity/learning engines retain ownership.
+// CLIC R08. Existing PDI/continuity/parity/learning engines retain ownership.
 // Pure advisory projections: no I/O, background process, network or write authority.
 const SHA=/^[0-9a-f]{40}$/i;
 const FINGERPRINT=/^[0-9a-f]{64}$/i;
