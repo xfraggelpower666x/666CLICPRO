@@ -1942,7 +1942,7 @@
     "ci_secondary_checks": "SUCCESS"
   },
   "cls_r12_native_advisory_and_handoff_2026_11_22": {
-    "status": "PREPARED_SOURCE_CI_PENDING",
+    "status": "SOURCE_GITHUB_CI_VERIFIED_POINTER_FINALIZATION_PENDING",
     "adapter": "facets/parallel_development_intelligence/cls-pattern-adaptation.mjs",
     "test": "facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs",
     "governance": "docs/R12_CLS_INTEGRATION.md",
@@ -1951,7 +1951,7 @@
     "tests_local_pass": 20,
     "cls_observed_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
     "cls_release": "v1.24.11",
-    "ci": "READBACK_PENDING",
+    "ci": "SUCCESS",
     "cls_consumer": "NOT_VERIFIED",
     "delivery": "NOT_VERIFIED",
     "adoption": "NOT_VERIFIED",
@@ -1962,6 +1962,16 @@
     "pdi_priorities": "PRESERVED",
     "starbridge": "PRESERVED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 45004247041,
+    "ci_job_id": 137152191728,
+    "ci_source_commit": "fb40d0a42c3d392d599ed06ac632ad6f51f3bc24",
+    "ci_node_pass": 20,
+    "ci_node_fail": 0,
+    "ci_commit_tree_blob": "PASS",
+    "pdi_ci_run": 45004246982,
+    "static_ci_run": 45004247003,
+    "visual_ci_run": 45004246995,
+    "secondary_ci": "SUCCESS"
   }
 }
