@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {assessScopedFacetCheckpoint,planRevisionBoundRecovery,planCausalRevalidation} from './dev-pattern-adaptation.mjs';
+const a='a'.repeat(40),b='b'.repeat(40),c='c'.repeat(40),d='d'.repeat(64);
+test('foreign checkpoint scope blocked',()=>assert.equal(assessScopedFacetCheckpoint({owner:'666DEV',scope:'PARALLEL_DEVELOPMENT_INTELLIGENCE',revision:a,pointer_blob:b,checkpoint_blob:c,observed_head:a}).status,'WRITE_BLOCKED'));
+test('unverified checkpoint remains pending',()=>assert.equal(assessScopedFacetCheckpoint({owner:'666CLIC',scope:'PARALLEL_DEVELOPMENT_INTELLIGENCE',revision:a}).status,'READBACK_PENDING'));
+test('changed source checkpoint quarantined',()=>assert.equal(assessScopedFacetCheckpoint({owner:'666CLIC',scope:'PARALLEL_DEVELOPMENT_INTELLIGENCE',revision:a,pointer_blob:b,checkpoint_blob:c,observed_head:b}).status,'CONFLICT_QUARANTINE'));
+test('valid checkpoint is advisory not persisted',()=>{let x=assessScopedFacetCheckpoint({owner:'666CLIC',scope:'PARALLEL_DEVELOPMENT_INTELLIGENCE',revision:a,pointer_blob:b,checkpoint_blob:c,observed_head:a});assert.equal(x.write_authorized,false);assert.equal(x.status,'SCOPED_CHECKPOINT_CANDIDATE')});
+test('recovery planning without authentic archive stays pending',()=>assert.equal(planRevisionBoundRecovery({owner:'666CLIC',head:a,tree:b,artifact_sha256:d}).status,'READBACK_PENDING'));
+test('recovery verified input never auto-restores',()=>{let x=planRevisionBoundRecovery({owner:'666CLIC',head:a,tree:b,artifact_sha256:d,archive_verified:true,bundle_verified:true});assert.equal(x.status,'RECOVERY_EVIDENCE_CANDIDATE');assert.equal(x.auto_restore,false)});
+test('graph uncertainty forces recheck',()=>{let x=planCausalRevalidation({owner:'666CLIC',base_head:a,target_head:b,changed_paths:['x.mjs'],dependent_checks:[{id:'test',inputs:['other.mjs']}],unresolved_graph:true});assert.equal(x.checks[0].disposition,'RECHECK');assert.equal(x.executed_checks,0)});
+test('unimpacted applies only to exact diff',()=>{let x=planCausalRevalidation({owner:'666CLIC',base_head:a,target_head:b,changed_paths:['x.mjs'],dependent_checks:[{id:'t',inputs:['other.mjs']}]});assert.equal(x.checks[0].disposition,'UNIMPACTED_FOR_THIS_DIFF')});
+test('untrusted changed path blocked',()=>assert.equal(planCausalRevalidation({owner:'666CLIC',base_head:a,target_head:b,changed_paths:['../outside'],dependent_checks:[]}).status,'CONFLICT_QUARANTINE'));
+test('no silent execution or promotion',()=>{let x=planCausalRevalidation({owner:'666CLIC',base_head:a,target_head:b,changed_paths:['x'],dependent_checks:[{id:'x',inputs:['x']}]});assert.equal(x.learning_promoted,false);assert.equal(x.checks[0].executed,false)});
