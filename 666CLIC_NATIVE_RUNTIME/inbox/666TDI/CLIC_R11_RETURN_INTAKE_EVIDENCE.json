@@ -1,0 +1,79 @@
+{
+  "schema": "CLIC_TDI_R11_NATIVE_RETURN_INTAKE_EVIDENCE_V1",
+  "intake_id": "CLIC-INBOX-666TDI-R11-20261122-01",
+  "target_owner": "666CLIC",
+  "source_owner": "666TDI-001",
+  "status": "SOURCE_GIT_PROVENANCE_VERIFIED_CLIC_FINAL_POINTER_READBACK_PENDING",
+  "original_handoff": {
+    "repository": "xfraggelpower666x/666CLICPRO",
+    "branch": "clic-migration-rev79-staging",
+    "path": "666CLIC_NATIVE_RUNTIME/outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json",
+    "commit": "0d955834f58181cf1b0cb94c8c81dc299c07dbfe",
+    "tree": "f39f2dd42562d0d171346335f905a3ca8b22c615",
+    "blob": "b9dfe4a3e153dc494f3966e216787cbf8918c529"
+  },
+  "native_receipt": {
+    "repository": "xfraggelpower666x/666MAIN_BRAIN_MYCEL_SYSTEM",
+    "branch": "666MAIN_BRAIN",
+    "path": "PROJECTS/666TDI/outbox/666CLIC/666TDI-TO-666CLIC-R11-20261122-01.json",
+    "readback_head": "c40b64d65a8f34c25dfebc672bb2c26fe118175d",
+    "readback_root_tree": "2d42ff84e5cdc41e11d7bee4f86d8c6207354584",
+    "blob": "f37865eb6984a9b1cffd5e98422b986f12f2de28",
+    "native_integration_commit": "0fe9dd81570aaaee2251072d0a2111d68a0f0196",
+    "native_integration_tree": "bb9886c2ab31ff67844bad6a36c992ed436c11c2",
+    "native_tdi_subtree": "05e459598d8fd79b421c8d59ba3db665d7e08293"
+  },
+  "original_bytes_mirrored_in": "666CLIC_NATIVE_RUNTIME/inbox/666TDI/666TDI-TO-666CLIC-R11-20261122-01.json",
+  "decision_review": {
+    "count": 6,
+    "consistent": 6,
+    "decisions": {
+      "TDI-01": "ACCEPTED_INVENTORY_VERIFIED",
+      "TDI-02": "ACCEPTED_NO_ROLLBACK",
+      "TDI-03": "REPAIRED_OPTIONAL_AUDIO_DEPENDENCY",
+      "TDI-04": "PRESERVED_SCOPED_LEARNING_NO_GLOBAL_PROMOTION",
+      "TDI-05": "OPTIONAL_REAL_AUDIO_GATE_OPEN",
+      "TDI-06": "VISUAL_HOST_PARITY_NOT_VERIFIED"
+    }
+  },
+  "gates": {
+    "source_commit_tree_blob": "INDEPENDENT_GITHUB_READBACK_VERIFIED",
+    "receipt_mirror_blob": "EXACT_SHA_VERIFIED",
+    "integration_commit_tree": "INDEPENDENT_GITHUB_READBACK_VERIFIED",
+    "tdi_runtime_authority": "NATIVE_TDI_ONLY",
+    "clic_git_persistence": "PENDING_FINAL_POINTER_READBACK",
+    "clic_host": "NOT_VERIFIED",
+    "foreign_adoption": false,
+    "foreign_writes": false,
+    "real_audio": "OPTIONAL_NOT_REQUIRED",
+    "visual_host": "OPEN",
+    "new_tdi_tests": "NOT_RERUN",
+    "prior_local_tdi_tests": "84_OF_84_EXISTING_AND_8_OF_8_NATIVE_REPORTED_NO_NEW_CI_CLAIM"
+  },
+  "visual_compliance": {
+    "classification": "UNKNOWN_HOST_PENDING",
+    "source_unchanged": true,
+    "no_host_pass_claim": true
+  },
+  "plugin_impact": {
+    "classification": "CLIC_NATIVE_RECEIPT_EVIDENCE_USING_EXISTING_REHYDRATION_AND_AUDIT_SURFACE",
+    "new_plugin_trigger": false,
+    "new_host_action": false,
+    "existing_plugin_version": "0.1.23",
+    "plugin_release_change": false,
+    "plugin_host_parity": "PENDING"
+  },
+  "preserved": {
+    "r04_r14": true,
+    "pdi_priorities": true,
+    "starbridge": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "foreign_identity": true
+  },
+  "new_router": false,
+  "new_engine": false,
+  "receipt_ne_delivery": true,
+  "ack_ne_host_acceptance": true,
+  "foreign_mutations": false
+}
