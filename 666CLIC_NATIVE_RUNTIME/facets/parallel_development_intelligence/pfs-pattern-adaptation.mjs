@@ -1,4 +1,4 @@
- // CLIC-owned R09 advisory functions based on verified PFS governance patterns.
+// CLIC-owned R09 advisory functions based on verified PFS governance patterns.
 // No filesystem/network effects, no scheduling, no foreign activation or writing.
 const SHA = /^[a-f0-9]{40}$/i;
 const DIGEST = /^[a-f0-9]{64}$/i;
