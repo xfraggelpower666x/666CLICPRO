@@ -1,0 +1,58 @@
+name: CLIC R08 STREAM Native Advisory Regression
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - ".github/workflows/clic-stream-r08.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/stream-pattern-adaptation.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stream-r08-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run exact R08 Node 15-case suite
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs
+      - name: Verify native scope and original Git source blobs
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const prefix='666CLIC_NATIVE_RUNTIME/';
+          const paths=[
+            prefix+'facets/parallel_development_intelligence/stream-pattern-adaptation.mjs',
+            prefix+'facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs',
+            prefix+'outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json'
+          ];
+          const original=['4b806c53db27b286454ca35f70cddc12d2c00016','de48b4e0ba0d68c8bd03780d2cb50d58cb9bc353'];
+          for(let i=0;i<paths.length;i++){
+            const blob=execFileSync('git',['rev-parse','HEAD:'+paths[i]],{encoding:'utf8'}).trim();
+            const measured=execFileSync('git',['hash-object',paths[i]],{encoding:'utf8'}).trim();
+            assert.equal(blob,measured);
+            if(i<2)assert.equal(blob,original[i]);
+          }
+          const h=JSON.parse(fs.readFileSync(paths[2],'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-666STREAM-R08-20261122-01');
+          assert.equal(h.source_system,'666CLIC');
+          assert.equal(h.target,'666STREAM_STRUCTURE_CONTROL');
+          assert.equal(h.status,'PREPARED');
+          assert.equal(h.delivery_status,'NOT_VERIFIED');
+          assert.equal(h.delivery_receipt,null);
+          assert.equal(h.native_adoption_verified,false);
+          assert.equal(h.automatic_consumer_verified,false);
+          assert.equal(h.foreign_mutation,false);
+          assert.equal(h.findings.length,5);
+          console.log('CLIC_R08_ORIGINAL_BLOBS_AND_HANDOFF_GATES_PASS');
+          NODE
