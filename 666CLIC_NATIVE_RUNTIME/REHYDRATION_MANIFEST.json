@@ -152,7 +152,11 @@
     "facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs",
     "docs/R11_INTEGRATION_AND_GOVERNANCE.md",
-    "outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json"
+    "outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json",
+    "facets/parallel_development_intelligence/cls-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs",
+    "docs/R12_CLS_INTEGRATION.md",
+    "outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1936,5 +1940,28 @@
     "ci_static_guard_run_id": 45003210730,
     "ci_visual_run_id": 45003210729,
     "ci_secondary_checks": "SUCCESS"
+  },
+  "cls_r12_native_advisory_and_handoff_2026_11_22": {
+    "status": "PREPARED_SOURCE_CI_PENDING",
+    "adapter": "facets/parallel_development_intelligence/cls-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs",
+    "governance": "docs/R12_CLS_INTEGRATION.md",
+    "handoff": "outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json",
+    "workflow": ".github/workflows/clic-cls-r12.yml",
+    "tests_local_pass": 20,
+    "cls_observed_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "cls_release": "v1.24.11",
+    "ci": "READBACK_PENDING",
+    "cls_consumer": "NOT_VERIFIED",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "visual_compliance": "PARTIAL_HOST_PENDING",
+    "plugin_impact": "READONLY_PDI_ADVISORY_CURRENT_PLUGIN_V0123_HOST_PARITY_PENDING",
+    "foreign_write": false,
+    "maintain_cures_hold": true,
+    "pdi_priorities": "PRESERVED",
+    "starbridge": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

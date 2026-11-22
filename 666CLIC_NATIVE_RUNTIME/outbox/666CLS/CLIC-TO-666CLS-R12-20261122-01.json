@@ -1,0 +1,102 @@
+{
+  "schema": "CLIC_CLS_NATIVE_PEER_HANDOFF_R12_V1",
+  "handoff_id": "CLIC-TO-666CLS-R12-20261122-01",
+  "status": "LOCAL_PREPARED_NOT_PUBLISHED_NOT_DELIVERED",
+  "source": {
+    "system_id": "666CLIC",
+    "repository": "xfraggelpower666x/666CLICPRO",
+    "branch": "clic-migration-rev79-staging",
+    "observed_current_head": "0d955834f58181cf1b0cb94c8c81dc299c07dbfe",
+    "required_publication_path": "666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json"
+  },
+  "recipient": {
+    "system_id": "666CLS-CORE-001",
+    "repository": "xfraggelpower666x/666MAIN_BRAIN_MYCEL_SYSTEM",
+    "branch": "666MAIN_BRAIN",
+    "root": "PROJECTS/666CLS",
+    "current_version": "1.24.11",
+    "observed_git_head": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "root_pointer_blob": "afb3c09c7e966789c520459b6aa7bb5629e7cb9b"
+  },
+  "findings": [
+    {
+      "id": "CLS-01",
+      "status": "SOURCE_VERIFIED",
+      "classification": "CURRENT_AUTHORITY",
+      "evidence": "CURRENT_POINTER.json @ afb3c09c7e966789c520459b6aa7bb5629e7cb9b",
+      "action": "Preserve v1.24.11 current, own authority, Drive recovery only"
+    },
+    {
+      "id": "CLS-02",
+      "status": "NATIVE_CI_VERIFIED_HISTORICAL",
+      "classification": "REGRESSION",
+      "evidence": "GitHub Actions run 44970676624 / job 137049543332: 55 tests OK",
+      "action": "Do not repeat passed tests without changed source inputs"
+    },
+    {
+      "id": "CLS-03",
+      "status": "SOURCE_VERIFIED",
+      "classification": "FIVE_SUBFACETS_REFERENCE_ONLY",
+      "evidence": "facets/FACET_REGISTRY.json, runtime/cls_facet_runtime.py",
+      "action": "Keep five independent source identities and no foreign autoload"
+    },
+    {
+      "id": "CLS-04",
+      "status": "HOLD",
+      "classification": "PFS_CURES_EXTERNAL_PAYLOAD",
+      "evidence": "666PFS_CSM/main 08989d5dc71259cbebf108c71d2e315aa9ac28a1, CURES-16001 HOLD_FUNCTIONAL_PAYLOAD_SOURCE_NOT_FOUND",
+      "action": "Preserve PFS HOLD, seek original executable bytes only via native PFS evidence, no promotion"
+    },
+    {
+      "id": "CLS-05",
+      "status": "PARTIAL",
+      "classification": "INDEPENDENT_SOURCE_ORIGINALS",
+      "evidence": "facets/FACET_REGISTRY.json local archive candidate statuses",
+      "action": "Keep candidate originals separate from remote owner current"
+    },
+    {
+      "id": "CLS-06",
+      "status": "PARTIAL",
+      "classification": "VISUAL_HOST_COMPLIANCE",
+      "evidence": "integrations/visual and native UI/daemon source; full interactive GPT host not read back",
+      "action": "Use existing visual paths; verify host rather than create another dashboard/router"
+    },
+    {
+      "id": "CLS-07",
+      "status": "SOURCE_VERIFIED",
+      "classification": "RECONSTRUCTION_PROFILE_SCOPE",
+      "evidence": "runtime/reconstruction_adapter.py, contracts/RECONSTRUCTION_PROFILES_R01.json",
+      "action": "Preserve profile/version/operation/source gate and real owner approval without copying CLIC engines"
+    }
+  ],
+  "clic_adaptations": [
+    "SCOPED_LEDGER_MENU_PARITY",
+    "SOURCE_VAULT_PUBLICATION_BOUNDARY",
+    "PROFILE_BOUND_RECONSTRUCTION_PLAN"
+  ],
+  "native_recipient_contract": {
+    "direct_trigger": "666CLS UPDATE",
+    "read_handoff_after_publishing": true,
+    "require_independent_source_commit_tree_blob_readback": true,
+    "verify_target_current_and_supersession": true,
+    "no_auto_adoption_from_outbox": true,
+    "pre_change_backup_before_native_mutation": true,
+    "targeted_regressions": true,
+    "pointer_last": true,
+    "return_receipt_required": true,
+    "return_to": "666CLIC_NATIVE_RUNTIME/inbox/666CLS/",
+    "no_foreign_autoactivation": true,
+    "no_cross_system_merge": true
+  },
+  "boundaries": {
+    "clic_write_authority": false,
+    "cls_write_authority": false,
+    "delivery_verified": false,
+    "native_consumer_verified": false,
+    "adoption_verified": false,
+    "host_pass": false,
+    "pdi_priorities_preserved": true,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
+  }
+}

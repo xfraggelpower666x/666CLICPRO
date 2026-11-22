@@ -1,0 +1,41 @@
+name: CLIC R12 CLS Evidence Adapter
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '.github/workflows/clic-cls-r12.yml'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cls-pattern-adaptation.mjs'
+      - '666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs'
+      - '666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r12:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs
+      - name: Check scoped handoff and exact tree files
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const paths=['666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cls-pattern-adaptation.mjs','666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cls-pattern-adaptation.test.mjs','666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json'];
+          for(const p of paths) assert.equal(execFileSync('git',['rev-parse',`HEAD:${p}`],{encoding:'utf8'}).trim(),execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim());
+          const h=JSON.parse(fs.readFileSync(paths[2],'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-666CLS-R12-20261122-01');
+          assert.equal(h.recipient.system_id,'666CLS-CORE-001');
+          assert.equal(h.findings.length,7);
+          assert.equal(h.boundaries.delivery_verified,false);
+          assert.equal(h.boundaries.adoption_verified,false);
+          console.log('R12_CLS_HANDOFF_AND_BLOBS_PASS');
+          NODE
