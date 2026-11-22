@@ -1820,7 +1820,7 @@
     "ci_node_tests_fail": 0
   },
   "stream_r08_peer_adaptation_2026_11_22": {
-    "status": "SOURCE_INTEGRATED_GITHUB_CI_PENDING_STREAM_DELIVERY_NOT_VERIFIED",
+    "status": "SOURCE_AND_NATIVE_GITHUB_CI_VERIFIED_STREAM_DELIVERY_NOT_VERIFIED",
     "adapter": "facets/parallel_development_intelligence/stream-pattern-adaptation.mjs",
     "test": "facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs",
     "outbox": "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json",
@@ -1831,6 +1831,14 @@
     "adoption": "NOT_VERIFIED",
     "foreign_mutation": false,
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 44999619959,
+    "ci_job_id": 137138070386,
+    "ci_source_commit": "f026059e910e123699fe4979226a36331d201672",
+    "ci_conclusion": "SUCCESS",
+    "ci_node_tests_pass": 15,
+    "ci_node_tests_fail": 0,
+    "original_source_git_blob": "4b806c53db27b286454ca35f70cddc12d2c00016",
+    "original_test_git_blob": "de48b4e0ba0d68c8bd03780d2cb50d58cb9bc353"
   }
 }
