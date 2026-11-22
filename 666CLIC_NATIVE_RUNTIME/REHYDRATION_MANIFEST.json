@@ -138,7 +138,10 @@
     "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json",
     "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs",
-    "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json"
+    "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json",
+    "facets/parallel_development_intelligence/stream-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs",
+    "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1815,5 +1818,19 @@
     "ci_conclusion": "SUCCESS",
     "ci_node_tests_pass": 11,
     "ci_node_tests_fail": 0
+  },
+  "stream_r08_peer_adaptation_2026_11_22": {
+    "status": "SOURCE_INTEGRATED_GITHUB_CI_PENDING_STREAM_DELIVERY_NOT_VERIFIED",
+    "adapter": "facets/parallel_development_intelligence/stream-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs",
+    "outbox": "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json",
+    "workflow": ".github/workflows/clic-stream-r08.yml",
+    "local_node_tests_pass": 15,
+    "stream_observed_head": "b4debd9ec038d3be02103d5e5aea3b89478bf75a",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
