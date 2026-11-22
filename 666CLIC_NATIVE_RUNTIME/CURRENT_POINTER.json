@@ -5362,5 +5362,47 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "666MAIN_BRAIN_UPDATE_NATIVE_INDEPENDENT_RECEIPT_AND_ADOPTION_DECISION"
+  },
+  "update_2026_11_22_stream_r08": {
+    "status": "CLIC_R08_ADAPTER_ORIGINAL_BLOBS_GITHUB_CI_OUTBOX_AND_POINTER_LAST_VERIFIED_PENDING_FINAL_READBACK",
+    "prechange_head": "9960dc4c5f2c591f696de317fd2287824768805e",
+    "backup_branch": "backup/clic-pre-stream-r08-20261122",
+    "body_head_before_pointer": "60ac6c3075af521de9ecd2fa3aa60501c2a7ed92",
+    "body_blobs": {
+      "REHYDRATION_MANIFEST.json": "37e91e8a51c02a4ba3ce95888cd376debd1214fa",
+      "current/CURRENT_STATE.md": "0adfce5d7b172611d4703a88d8324c19ee25df05",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "4da0440315200d92632f0ca20c63cbd1874f65a9",
+      "facets/parallel_development_intelligence/stream-pattern-adaptation.mjs": "4b806c53db27b286454ca35f70cddc12d2c00016",
+      "facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs": "de48b4e0ba0d68c8bd03780d2cb50d58cb9bc353",
+      "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json": "e75616b8c5caf03c71c155cda0aee3dfd5bf029b",
+      ".github/workflows/clic-stream-r08.yml": "bd6af4bd210fd315b2a834d41fa0ee18324a8d16"
+    },
+    "original_source_git_blobs_verified": true,
+    "ci": {
+      "run_id": 44999619959,
+      "job_id": 137138070386,
+      "source_commit": "f026059e910e123699fe4979226a36331d201672",
+      "tests_pass": 15,
+      "tests_fail": 0,
+      "conclusion": "SUCCESS"
+    },
+    "handoff_id": "CLIC-TO-666STREAM-R08-20261122-01",
+    "handoff_status": "PREPARED",
+    "delivery_receipt": "NOT_VERIFIED",
+    "stream_native_consumer": "NOT_VERIFIED",
+    "stream_adoption": "NOT_VERIFIED",
+    "stream_head_observed": "b4debd9ec038d3be02103d5e5aea3b89478bf75a",
+    "stream_visual_compliance": "PARTIAL_NATIVE_PRESENT_HOST_PENDING",
+    "plugin_impact": "READONLY_PDI_ADVISORY_NATIVE_ONLY_PLUGIN_V0.1.23_UNCHANGED_HOST_BEHAVIORAL_PARITY_OPEN",
+    "cost_consent": "UNTOUCHED",
+    "foreign_mutation": false,
+    "no_new_router": true,
+    "no_new_controller": true,
+    "pdi_priority_order": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "666STREAM_NATIVE_UPDATE_MUST_VERIFY_EXACT_CLIC_R08_OUTBOX_COMMIT_TREE_BLOB_AND_ISSUE_OWN_RECEIPT"
   }
 }
