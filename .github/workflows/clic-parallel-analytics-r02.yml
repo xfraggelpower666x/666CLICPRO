@@ -8,6 +8,7 @@ on:
       - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs"
       - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs"
       - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+      - "666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json"
   workflow_dispatch:
 
 permissions:
@@ -32,7 +33,7 @@ jobs:
           node-version: "22"
       - name: Run the existing scoped tests using native Node
         run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs
-      - name: Verify current commit/tree/blob against native R02 pointer
+      - name: Verify current tree and historical native R02 receipt
         shell: bash
         run: |
           node --input-type=module <<'NODE'
@@ -55,6 +56,10 @@ jobs:
           const pointer=JSON.parse(readFileSync(base+'CURRENT_POINTER.json','utf8'));
           const r02=pointer.update_2026_11_21_parallel_analytics_repair_r02;
           assert.ok(r02?.source_readback,'R02 current pointer receipt required');
+          const receiptHead=r02.body_head_before_pointer;
+          assert.match(receiptHead,/^[a-f0-9]{40}$/);
+          assert.equal(git('cat-file','-t',receiptHead),'commit');
+          git('merge-base','--is-ancestor',receiptHead,head);
           const manifest=JSON.parse(readFileSync(base+'REHYDRATION_MANIFEST.json','utf8'));
           assert.ok(Array.isArray(manifest.required_order));
           for(const path of paths){
@@ -64,7 +69,14 @@ jobs:
             const match=/^100644 blob ([0-9a-f]{40})\t(.+)$/.exec(rows[0]);
             assert.ok(match,'regular committed blob required: '+path);
             assert.equal(match[2],full,'tree entry path binding');
-            assert.equal(match[1],r02.source_readback[path],'tree blob equals pointer receipt');
+            const receiptRows=git('ls-tree','-r',receiptHead,'--',full).split('\n').filter(Boolean);
+            assert.equal(receiptRows.length,1,'exactly one R02 tree entry for '+path);
+            const receiptMatch=/^100644 blob ([0-9a-f]{40})\t(.+)$/.exec(receiptRows[0]);
+            assert.ok(receiptMatch,'regular R02 blob required: '+path);
+            assert.equal(receiptMatch[2],full,'R02 tree entry path binding');
+            assert.equal(receiptMatch[1],r02.source_readback[path],'R02 tree blob equals pointer receipt');
+            if(path!=='REHYDRATION_MANIFEST.json')
+              assert.equal(match[1],receiptMatch[1],'current source blob equals R02 receipt');
             assert.equal(git('hash-object',full),match[1],'local file bytes equal committed git blob');
             assert.equal(git('cat-file','-t',match[1]),'blob');
             if(path!=='REHYDRATION_MANIFEST.json')
