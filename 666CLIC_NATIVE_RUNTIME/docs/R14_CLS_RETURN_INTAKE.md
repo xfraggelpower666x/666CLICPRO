@@ -1,0 +1,18 @@
+# CLIC R14 · CLS R12 native Return-Receipt intake
+SOURCE_NATIVE_RECEIPT=COMMIT_TREE_BLOB_VERIFIED
+CLIC_INBOX_PERSISTENCE=TO_BE_VERIFIED_BY_INDEPENDENT_FINAL_HEAD_READBACK
+CLIC_INBOX_ORIGINAL_BLOB=fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a
+FOREIGN_NATIVE_ADOPTION=NOT_GRANTED
+CLS_NATIVE_DECISION=REVIEWED_NO_RUNTIME_REPAIR_REQUIRED
+CLS_VERSION=1.24.11
+CLS_01_07_CONSISTENT=7/7
+CLS_CURES_HOLD=PRESERVED
+CLS_VISUAL_HOST=OPEN
+CLS_EXTERNAL_SOURCE_CURRENTNESS=PARTIAL
+STARBRIDGE_EXISTING_TRANSPORT=PRESERVED
+TDI_R11_USER_LINK=READ_ONLY_SEPARATE_OBSERVATION_NOT_INTAKE
+PLUGIN_IMPACT=PURE_NATIVE_RECEIPT_INTAKE_NO_NEW_TRIGGER_NO_SKILL_CHANGE_HOST_PARITY_PENDING
+Clic R04–R13, PDI live persistence priority, StarBridge receipts, Junior PRESERVED, PET PAUSED remain intact.
+No CLS/PFS/TDI native writes. Receipt is external evidence, not a trigger or independent authority.
+Only exact immutable owner commit/tree/blob and canonical CLIC repo readback support source verification.
+The mirror original bytes are tracked as CLIC inbox evidence; metadata status before final readback is not a native host acceptance.

@@ -1,0 +1,43 @@
+name: CLIC R14 CLS R12 Native Return Intake
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '.github/workflows/clic-cls-r14-return-intake.yml'
+      - '666CLIC_NATIVE_RUNTIME/inbox/666CLS/**'
+      - '666CLIC_NATIVE_RUNTIME/continuity/cls-r12-return-intake.*'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  receipt-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: CLIC CLS original receipt 15-case regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/cls-r12-return-intake.test.mjs
+      - name: Verify original bytes, native owner and no foreign admission
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {execFileSync} from 'node:child_process';
+          import {readFileSync} from 'node:fs';
+          const base='666CLIC_NATIVE_RUNTIME/';
+          const files=[base+'continuity/cls-r12-return-intake.mjs',base+'continuity/cls-r12-return-intake.test.mjs',base+'inbox/666CLS/666CLS-TO-666CLIC-R12-20261122-01.json',base+'inbox/666CLS/CLIC_R12_RETURN_INTAKE_EVIDENCE.json'];
+          for(const p of files)assert.equal(execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim(),execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim());
+          assert.equal(execFileSync('git',['hash-object',files[2]],{encoding:'utf8'}).trim(),'fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a');
+          const r=JSON.parse(readFileSync(files[2],'utf8'));
+          const e=JSON.parse(readFileSync(files[3],'utf8'));
+          assert.equal(r.receipt_id,'666CLS-TO-666CLIC-R12-20261122-01');
+          assert.equal(e.native_receipt.blob,'fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a');
+          assert.equal(e.gates.foreign_runtime_adopted,false);
+          assert.equal(e.together_with_r11_tdi.scope,'OBSERVATION_ONLY_NOT_IMPORTED');
+          console.log('CLIC_R14_EXACT_CLS_RETURN_BYTES_AND_INTAKE_GATES_PASS');
+          NODE

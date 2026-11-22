@@ -160,7 +160,12 @@
     "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.mjs",
     "facets/parallel_development_intelligence/lyvra-plugin-parity-advisory.test.mjs",
     "docs/R13_LYVRA_WHOLE_PLUGIN_AUDIT.md",
-    "outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json"
+    "outbox/LYVRA/CLIC-TO-LYVRA-R13-20261122-01.json",
+    "inbox/666CLS/666CLS-TO-666CLIC-R12-20261122-01.json",
+    "inbox/666CLS/CLIC_R12_RETURN_INTAKE_EVIDENCE.json",
+    "continuity/cls-r12-return-intake.mjs",
+    "continuity/cls-r12-return-intake.test.mjs",
+    "docs/R14_CLS_RETURN_INTAKE.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -2016,5 +2021,37 @@
     "static_run_id": 45013300025,
     "visual_run_id": 45013300026,
     "secondary_ci": "SUCCESS"
+  },
+  "cls_r14_native_receipt_intake_2026_11_22": {
+    "status": "BODY_SOURCE_CI_PENDING",
+    "owner": "666CLIC",
+    "original_cls_receipt_blob": "fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a",
+    "cls_receipt_source_commit": "26ed77554aa97e7619d872d596c44c466b1a2152",
+    "cls_receipt_source_tree": "cf9966996e1f3bb17be78ef78ca129b2e58dd5c7",
+    "original_clic_handoff_blob": "f267809ed2ec9653994b7679cafac2abdc218b95",
+    "carriers": [
+      "inbox/666CLS/666CLS-TO-666CLIC-R12-20261122-01.json",
+      "inbox/666CLS/CLIC_R12_RETURN_INTAKE_EVIDENCE.json",
+      "continuity/cls-r12-return-intake.mjs",
+      "continuity/cls-r12-return-intake.test.mjs",
+      "docs/R14_CLS_RETURN_INTAKE.md"
+    ],
+    "workflow": ".github/workflows/clic-cls-r14-return-intake.yml",
+    "decision_count": 7,
+    "decisions_consistent": 7,
+    "cls_runtime_repair": "NOT_REQUIRED",
+    "cures": "HOLD_FUNCTIONAL_PAYLOAD_SOURCE_NOT_FOUND",
+    "visual_compliance": "PARTIAL_HOST_OPEN",
+    "cls_external_originals": "PARTIAL",
+    "together_with_tdi": "OBSERVATION_ONLY_SEPARATE",
+    "tdi_observed_receipt_blob": "f37865eb6984a9b1cffd5e98422b986f12f2de28",
+    "ci": "PENDING",
+    "clic_inbox_readback": "PENDING",
+    "foreign_runtime_adoption": false,
+    "host_execution": "NOT_VERIFIED",
+    "pdi_priorities": "PRESERVED",
+    "starbridge": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }

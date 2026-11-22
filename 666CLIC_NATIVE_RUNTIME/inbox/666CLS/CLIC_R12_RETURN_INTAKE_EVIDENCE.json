@@ -1,0 +1,74 @@
+{
+  "schema": "CLIC_NATIVE_PEER_RETURN_INTAKE_R14_V1",
+  "intake_id": "CLIC-INBOX-666CLS-R12-20261122-01",
+  "source_owner": "666CLS-CORE-001",
+  "target_owner": "666CLIC",
+  "status": "SOURCE_COMMIT_TREE_BLOB_VERIFIED_INTAKE_PUBLICATION_PENDING",
+  "original_handoff": {
+    "path": "666CLIC_NATIVE_RUNTIME/outbox/666CLS/CLIC-TO-666CLS-R12-20261122-01.json",
+    "published_commit": "433afe3a71759556173e3f670f4983e962a72860",
+    "tree": "d0d676c6f2121e7377b7202c75b22f82a4536a21",
+    "blob": "f267809ed2ec9653994b7679cafac2abdc218b95"
+  },
+  "native_receipt": {
+    "repo": "xfraggelpower666x/666MAIN_BRAIN_MYCEL_SYSTEM",
+    "branch": "666MAIN_BRAIN",
+    "path": "PROJECTS/666CLS/continuity/CLIC_R12_RETURN_RECEIPT.json",
+    "commit": "26ed77554aa97e7619d872d596c44c466b1a2152",
+    "tree": "cf9966996e1f3bb17be78ef78ca129b2e58dd5c7",
+    "blob": "fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a",
+    "receipt_id": "666CLS-TO-666CLIC-R12-20261122-01"
+  },
+  "original_bytes_mirrored_in": "666CLIC_NATIVE_RUNTIME/inbox/666CLS/666CLS-TO-666CLIC-R12-20261122-01.json",
+  "decision_review": {
+    "count": 7,
+    "consistent": 7,
+    "decisions": {
+      "CLS-01": "PRESERVE",
+      "CLS-02": "PRESERVE",
+      "CLS-03": "PRESERVE",
+      "CLS-04": "HOLD",
+      "CLS-05": "OPEN_SOURCE_GATES",
+      "CLS-06": "HOST_CHECK_OPEN",
+      "CLS-07": "PRESERVE"
+    },
+    "cls_runtime_repair_required": false,
+    "cls_version": "1.24.11"
+  },
+  "gates": {
+    "source_receipt": "COMMIT_TREE_BLOB_VERIFIED",
+    "original_handoff": "DIRECT_BLOB_READBACK_VERIFIED",
+    "source_native_reply": "VERIFIED",
+    "clic_inbox_persisted": "PENDING_DIRECT_GITHUB_READBACK",
+    "clic_recorded_review": "PENDING_DIRECT_GITHUB_READBACK",
+    "cls_delivered_to_clic_runtime": "NOT_HOST_VERIFIED",
+    "foreign_runtime_adopted": false,
+    "cls_cures_hold": "HOLD_FUNCTIONAL_PAYLOAD_SOURCE_NOT_FOUND",
+    "cls_visual_host": "OPEN",
+    "cls_external_source_currentness": "PARTIAL",
+    "cls_owner_execution": "NOT_AUTHORIZED"
+  },
+  "together_with_r11_tdi": {
+    "observed_source": "PROJECTS/666TDI/outbox/666CLIC/666TDI-TO-666CLIC-R11-20261122-01.json",
+    "observed_blob": "f37865eb6984a9b1cffd5e98422b986f12f2de28",
+    "scope": "OBSERVATION_ONLY_NOT_IMPORTED",
+    "separate_tdi_decisions": true,
+    "needs_independent_tdi_native_intake": true
+  },
+  "visual_compliance": {
+    "cls": "PARTIAL_HOST_PENDING",
+    "source_verified": true,
+    "no_host_pass_claim": true
+  },
+  "no_new_router": true,
+  "no_new_starbridge_transport": true,
+  "foreign_writes": false,
+  "plugin_release_change": false,
+  "existing_clic_plugin": "0.1.23",
+  "plugin_impact": "READ_ONLY_NATIVE_INBOX_RECEIPT_NO_NEW_TRIGGER_OR_HOST_ACTION_PLUGIN_RELEASE_NOT_REQUIRED_BY_SCOPE_HOST_PARITY_PENDING",
+  "prior_r04_r13": "PRESERVED",
+  "pdi_priorities": "PRESERVED",
+  "starbridge": "PRESERVED",
+  "junior": "PRESERVED",
+  "pet": "PAUSED"
+}
