@@ -2023,7 +2023,7 @@
     "secondary_ci": "SUCCESS"
   },
   "cls_r14_native_receipt_intake_2026_11_22": {
-    "status": "BODY_SOURCE_CI_PENDING",
+    "status": "CLIC_INBOX_SOURCE_CI_VERIFIED_POINTER_FINALIZATION_PENDING",
     "owner": "666CLIC",
     "original_cls_receipt_blob": "fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a",
     "cls_receipt_source_commit": "26ed77554aa97e7619d872d596c44c466b1a2152",
@@ -2045,13 +2045,29 @@
     "cls_external_originals": "PARTIAL",
     "together_with_tdi": "OBSERVATION_ONLY_SEPARATE",
     "tdi_observed_receipt_blob": "f37865eb6984a9b1cffd5e98422b986f12f2de28",
-    "ci": "PENDING",
-    "clic_inbox_readback": "PENDING",
+    "ci": "SUCCESS",
+    "clic_inbox_readback": "GIT_BLOB_CI_VERIFIED_FINAL_HEAD_PENDING",
     "foreign_runtime_adoption": false,
     "host_execution": "NOT_VERIFIED",
     "pdi_priorities": "PRESERVED",
     "starbridge": "PRESERVED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 45014300846,
+    "ci_job_id": 137183186907,
+    "ci_commit": "ac58f71c582a6076d3b8e4a590533ad03f6f3351",
+    "tests_pass": 15,
+    "tests_fail": 0,
+    "original_owner_blob_verified": "fe8efffef57114dd6ffc5a371eb8a2a0aa2a716a",
+    "original_owner_bytes_identical": true,
+    "ci_original_git_blob_gate": "PASS",
+    "prior_attempt_fail_run": 45014227616,
+    "prior_attempt_failure": "TEST_RELATIVE_PATH_ONLY",
+    "repair_commit": "ac58f71c582a6076d3b8e4a590533ad03f6f3351",
+    "prior_pdi_run_id": 45014227455,
+    "prior_static_run_id": 45014227430,
+    "prior_visual_run_id": 45014227428,
+    "prior_secondary_ci": "SUCCESS",
+    "tdi_source": "OBSERVATION_ONLY"
   }
 }
