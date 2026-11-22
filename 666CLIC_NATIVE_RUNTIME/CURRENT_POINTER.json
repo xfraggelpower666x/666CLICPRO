@@ -5496,5 +5496,53 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "666TDH_UPDATE_NATIVE_R10_INDEPENDENT_READBACK_AND_RETURN_RECEIPT"
+  },
+  "update_2026_11_22_tdi_r11": {
+    "status": "R11_CLIC_NATIVE_ADVISORY_CI_AND_OUTBOX_READBACK_VERIFIED_TDI_ADOPTION_PENDING",
+    "prechange_head": "de02b5afa85a04015fed70b64eb54ba48fb933c1",
+    "backup_branch": "backup/clic-pre-tdi-r11-20261122",
+    "body_head_before_pointer": "2a113b8a3f011d0871645a86ce512fbb3f429647",
+    "body_blobs": {
+      "REHYDRATION_MANIFEST.json": "9804983b3d6c9cb9739708c131772ba2d307a34e",
+      "current/CURRENT_STATE.md": "89782f9660312a8d825c49431edce33578d0d0d2",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "57eb4c12798cddf4111aea629fe0620486c85a3f",
+      "facets/parallel_development_intelligence/tdi-pattern-adaptation.mjs": "06b60302ae1909142424e60933002f23863085a1",
+      "facets/parallel_development_intelligence/tdi-pattern-adaptation.test.mjs": "6d5941898437d5e60abb471a998851e3b8d6f636",
+      "docs/R11_INTEGRATION_AND_GOVERNANCE.md": "122efd3e184406ffd0afc5d21cb9ec2f7a026d00",
+      "outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json": "b9dfe4a3e153dc494f3966e216787cbf8918c529",
+      ".github/workflows/clic-tdi-r11.yml": "c96330fab7da28c9e2cb35d87f0911b0a0d4646b"
+    },
+    "ci": {
+      "run_id": 45003210826,
+      "job_id": 137149039418,
+      "source_commit": "f81ccb149f0b539adab28e0e6c2e416569a447c8",
+      "tests_pass": 18,
+      "tests_fail": 0,
+      "conclusion": "SUCCESS",
+      "commit_tree_blob_readback": "PASS",
+      "pdi_run_id": 45003210734,
+      "static_guard_run_id": 45003210730,
+      "visual_run_id": 45003210729,
+      "secondary_ci_conclusion": "SUCCESS"
+    },
+    "handoff_id": "CLIC-TO-666TDI-R11-20261122-01",
+    "handoff_stage": "PREPARED_SOURCE_PUBLICATION_ONLY",
+    "delivery_receipt": "NOT_VERIFIED",
+    "tdi_native_consumer": "NOT_VERIFIED",
+    "tdi_adoption": "NOT_VERIFIED",
+    "tdi_head_observed": "a1e3aad4ff3d38315429a7f1cfb1746c6418b204",
+    "tdi_native_release": "v2.5_R0.8",
+    "visual_compliance": "TDI_SOURCE_UNKNOWN_HOST_PENDING",
+    "plugin_impact": "READONLY_PDI_ADVISORY_EXISTING_PLUGIN_V0.1.23_REFERENCE_ONLY_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "no_new_engine": true,
+    "no_new_router": true,
+    "no_new_controller": true,
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "666TDI_NATIVE_AUTHORIZED_INTAKE_AND_RETURN_RECEIPT_AFTER_INDEPENDENT_SOURCE_READBACK"
   }
 }
