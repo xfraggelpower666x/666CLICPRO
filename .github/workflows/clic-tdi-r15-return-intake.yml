@@ -1,0 +1,65 @@
+name: CLIC R15 666TDI R11 Native Return Intake
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - '.github/workflows/clic-tdi-r15-return-intake.yml'
+      - '666CLIC_NATIVE_RUNTIME/inbox/666TDI/**'
+      - '666CLIC_NATIVE_RUNTIME/continuity/tdi-r11-return-intake.*'
+      - '666CLIC_NATIVE_RUNTIME/REHYDRATION_MANIFEST.json'
+      - '666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tdi-native-receipt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: R15 native six-decision and negative gate tests
+        run: node --test 666CLIC_NATIVE_RUNTIME/continuity/tdi-r11-return-intake.test.mjs
+      - name: Original Git blobs, scoped acknowledgment and manifest integrity
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {execFileSync} from 'node:child_process';
+          const prefix='666CLIC_NATIVE_RUNTIME/';
+          const files=[
+            'outbox/666TDI/CLIC-TO-666TDI-R11-20261122-01.json',
+            'inbox/666TDI/666TDI-TO-666CLIC-R11-20261122-01.json',
+            'inbox/666TDI/CLIC_R11_RETURN_INTAKE_EVIDENCE.json',
+            'inbox/666TDI/CLIC_TDI_R11_ACCEPTANCE.json',
+            'continuity/tdi-r11-return-intake.mjs',
+            'continuity/tdi-r11-return-intake.test.mjs',
+            'docs/R15_TDI_R11_RETURN_INTAKE.md'
+          ];
+          const sha=p=>execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim();
+          for(const file of files){
+            const p=prefix+file;
+            assert.ok(fs.existsSync(p),p);
+            assert.equal(execFileSync('git',['rev-parse','HEAD:'+p],{encoding:'utf8'}).trim(),sha(p));
+          }
+          assert.equal(sha(prefix+files[0]),'b9dfe4a3e153dc494f3966e216787cbf8918c529');
+          assert.equal(sha(prefix+files[1]),'f37865eb6984a9b1cffd5e98422b986f12f2de28');
+          const e=JSON.parse(fs.readFileSync(prefix+files[2],'utf8'));
+          const a=JSON.parse(fs.readFileSync(prefix+files[3],'utf8'));
+          const m=JSON.parse(fs.readFileSync(prefix+'REHYDRATION_MANIFEST.json','utf8'));
+          for(const file of files.slice(1))assert.ok(m.required_order.includes(file),file);
+          assert.equal(e.decision_review.consistent,6);
+          assert.equal(a.decision_count,6);
+          assert.equal(a.foreign_runtime_adopted,false);
+          assert.equal(a.host_accepted,false);
+          assert.equal(a.real_audio_required,false);
+          assert.equal(a.foreign_writes,false);
+          assert.equal(e.preserved.junior,'PRESERVED');
+          assert.equal(e.preserved.pet,'PAUSED');
+          assert.equal(new Set(m.required_order).size,m.required_order.length);
+          console.log('CLIC_R15_NATIVE_TDI_RECEIPT_GIT_BLOB_MANIFEST_AND_SCOPE_PASS');
+          NODE
