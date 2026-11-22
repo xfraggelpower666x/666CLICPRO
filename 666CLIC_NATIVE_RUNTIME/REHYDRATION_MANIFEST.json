@@ -131,7 +131,8 @@
     "facets/parallel_development_intelligence/cross-system-parallel-analytics.mjs",
     "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs",
     "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md",
-    "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md"
+    "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md",
+    "plugin_governance/PLUGIN_R05_V0123_RELEASE_READBACK_2026-11-22.md"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1762,5 +1763,16 @@
     "foreign_mutation": false,
     "junior": "PRESERVED",
     "pet": "PAUSED"
+  },
+  "plugin_r05_2026_11_22": {
+    "version": "0.1.23",
+    "release_id": "pluginrel_6b0255b3ae548191a8780663ca3fbe0f",
+    "delta_source": "666clic-plugin/releases/v0.1.23/",
+    "base_source": "666clic-plugin/releases/v0.1.22/",
+    "delta_files_verified": 7,
+    "live_release_metadata_verified": true,
+    "host_behavioral_parity": "READBACK_PENDING",
+    "logo_gate": "DISABLED",
+    "foreign_mutation": false
   }
 }
