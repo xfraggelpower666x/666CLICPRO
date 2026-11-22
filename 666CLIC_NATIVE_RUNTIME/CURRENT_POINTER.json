@@ -5404,5 +5404,49 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "666STREAM_NATIVE_UPDATE_MUST_VERIFY_EXACT_CLIC_R08_OUTBOX_COMMIT_TREE_BLOB_AND_ISSUE_OWN_RECEIPT"
+  },
+  "update_2026_11_22_pfs_r09": {
+    "status": "R09_CLIC_NATIVE_ADAPTER_CI_OUTBOX_AND_READBACK_VERIFIED_PFS_ADOPTION_PENDING",
+    "prechange_head": "710b93e3a742efabcd0c1e66e1bddfa65235b0f1",
+    "backup_branch": "backup/clic-pre-pfs-r09-20261122",
+    "body_head_before_pointer": "b1eff5e75ee20ab843b86e60cf6d5c36f31a7145",
+    "body_blobs": {
+      "REHYDRATION_MANIFEST.json": "c954a429f76dca18a7d3edf4cd6466caf802455d",
+      "current/CURRENT_STATE.md": "1ed96ec7591a83247d4eefa22361969c3f8088e6",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "0652cf424d5984e934696ed2595dc6cb142d01cd",
+      "facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs": "793458841f3cf8ea29b0b3f675a22288624e1670",
+      "facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs": "ac0c4362f603cdef7413024dcf4fd1bfebce7bf3",
+      "outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json": "a8b648d651b06e78de52f562da3575f41459241a",
+      ".github/workflows/clic-pfs-r09.yml": "c0c1a24492968b6afb616989d131863cb7256079"
+    },
+    "original_adapter_blob_verified": true,
+    "test_source": "RELATIVE_IMPORT_ADAPTED_FROM_LOCAL_R09_19_CASES",
+    "ci": {
+      "run_id": 45000873782,
+      "job_id": 137141891322,
+      "source_commit": "5fa1d8f215fa9aacc5e66012a9d90d58607335c7",
+      "tests_pass": 19,
+      "tests_fail": 0,
+      "conclusion": "SUCCESS"
+    },
+    "handoff_id": "CLIC-TO-666PFS-R09-20261122-01",
+    "handoff_stage": "PREPARED",
+    "delivery_receipt": "NOT_VERIFIED",
+    "pfs_native_consumer": "NOT_VERIFIED",
+    "pfs_adoption": "NOT_VERIFIED",
+    "pfs_head_observed": "08989d5dc71259cbebf108c71d2e315aa9ac28a1",
+    "visual_compliance": "PFS_NATIVE_PARTIAL_HOST_PENDING",
+    "plugin_impact": "CLIC_NATIVE_READONLY_ADVISORY_ONLY_PLUGIN_V0.1.23_UNCHANGED_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "no_new_engine": true,
+    "no_new_registry": true,
+    "no_new_controller": true,
+    "no_new_router": true,
+    "pdi_priorities": "PRESERVED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "666PFS_UPDATE_NATIVE_INDEPENDENT_HANDOFF_SOURCE_READBACK_AND_RETURN_RECEIPT"
   }
 }
