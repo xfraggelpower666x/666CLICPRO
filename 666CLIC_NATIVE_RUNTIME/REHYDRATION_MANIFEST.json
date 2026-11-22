@@ -1858,6 +1858,13 @@
     "adoption": "NOT_VERIFIED",
     "foreign_mutation": false,
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 45000873782,
+    "ci_job_id": 137141891322,
+    "ci_source_commit": "5fa1d8f215fa9aacc5e66012a9d90d58607335c7",
+    "ci_conclusion": "SUCCESS",
+    "ci_node_tests_pass": 19,
+    "ci_node_tests_fail": 0,
+    "ci_commit_tree_readback": "VERIFIED_SOURCE_PATH_AND_BLOB_MAPPING"
   }
 }
