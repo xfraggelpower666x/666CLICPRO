@@ -141,7 +141,10 @@
     "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json",
     "facets/parallel_development_intelligence/stream-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/stream-pattern-adaptation.test.mjs",
-    "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json"
+    "outbox/666STREAM/CLIC-TO-666STREAM-R08-20261122-01.json",
+    "facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs",
+    "outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1840,5 +1843,21 @@
     "ci_node_tests_fail": 0,
     "original_source_git_blob": "4b806c53db27b286454ca35f70cddc12d2c00016",
     "original_test_git_blob": "de48b4e0ba0d68c8bd03780d2cb50d58cb9bc353"
+  },
+  "pfs_r09_native_advisory_2026_11_22": {
+    "status": "CLIC_ADAPTER_AND_HANDOFF_PUBLISHED_NATIVE_PFS_CONSUMER_UNVERIFIED",
+    "adapter": "facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs",
+    "handoff": "outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json",
+    "ci_workflow": ".github/workflows/clic-pfs-r09.yml",
+    "original_adapter_git_blob": "793458841f3cf8ea29b0b3f675a22288624e1670",
+    "adapted_test_git_blob": "ac0c4362f603cdef7413024dcf4fd1bfebce7bf3",
+    "tests_local_pass": 19,
+    "pfs_observed_head": "08989d5dc71259cbebf108c71d2e315aa9ac28a1",
+    "delivery": "NOT_VERIFIED",
+    "adoption": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
