@@ -1788,6 +1788,10 @@
     "foreign_mutation": false,
     "dev_adoption": "NOT_VERIFIED",
     "junior": "PRESERVED",
-    "pet": "PAUSED"
+    "pet": "PAUSED",
+    "ci_run_id": 44991459922,
+    "ci_conclusion": "SUCCESS",
+    "native_node_tests_pass": 10,
+    "ci_source_commit": "21e614a482fc29540a90b161470cc1d8426b2f2e"
   }
 }
