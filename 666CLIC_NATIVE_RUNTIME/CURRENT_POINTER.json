@@ -5323,5 +5323,44 @@
     "pointer_last": true,
     "no_post_pointer_mutation": true,
     "next": "DEV_NATIVE_UPDATE_MUST_DISCOVER_AND_VERIFY_THIS_EXACT_CLIC_OUTBOX_SOURCE_AND_RETURN_INDEPENDENT_RECEIPT"
+  },
+  "update_2026_11_22_mainbrain_r07": {
+    "status": "R07_CLIC_SOURCE_OUTBOX_CI_AND_READBACK_VERIFIED_TARGET_ADOPTION_PENDING",
+    "prechange_head": "1055af17f05cd405c7aad028e27bb8a206af0e2e",
+    "backup_branch": "backup/clic-pre-mainbrain-r07-20261122",
+    "body_head_before_pointer": "534e43945ef3a98bb7e0322359cec8ebe273f071",
+    "body_blobs": {
+      "REHYDRATION_MANIFEST.json": "6ae890198c95e62e47a048cb6f8f46f3100706c5",
+      "current/CURRENT_STATE.md": "32caaeff883aa70e4d14ee79129c5250f57479f3",
+      "facets/parallel_development_intelligence/FACET_CONTRACT.md": "f5403928379d6ae21922f2ea5aca4a2cf894f606",
+      "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs": "bd71063c58be97aeac017cef932d87e19ff5f3eb",
+      "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs": "67197dfe05b646573e4813338f475843da9df2f5",
+      "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json": "38f2e49eb86b4bc035f0b0a1926d393c6a46185a",
+      ".github/workflows/clic-mainbrain-r07.yml": "e5df72b767b529db6fb7fcead67d32bb79c1e7c1"
+    },
+    "ci": {
+      "run_id": 44998710416,
+      "job_id": 137135267659,
+      "source_commit": "233ff039e18f2cb20b702404e7616a941dd7b922",
+      "pass": 11,
+      "total": 11,
+      "fail": 0,
+      "status": "SUCCESS"
+    },
+    "handoff_stage": "PREPARED",
+    "delivery_receipt": "NOT_VERIFIED",
+    "mainbrain_adoption": "NOT_VERIFIED",
+    "mainbrain_consumer": "NOT_VERIFIED",
+    "visual_compliance": "SOURCE_PARTIAL_HOST_PENDING",
+    "plugin_impact": "NATIVE_READONLY_ADVISORY_MAPPING_REVIEWED_LIVE_V0.1.23_UNCHANGED_HOST_PARITY_PENDING",
+    "foreign_mutation": false,
+    "junior": "PRESERVED",
+    "pet": "PAUSED",
+    "pdi_priority_order": "UNCHANGED",
+    "no_new_router": true,
+    "no_new_controller": true,
+    "pointer_last": true,
+    "no_post_pointer_mutation": true,
+    "next": "666MAIN_BRAIN_UPDATE_NATIVE_INDEPENDENT_RECEIPT_AND_ADOPTION_DECISION"
   }
 }
