@@ -132,7 +132,10 @@
     "facets/parallel_development_intelligence/cross-system-parallel-analytics.test.mjs",
     "current/PARALLEL_ANALYTICS_CROSS_SYSTEM_COOPERATION_R01.md",
     "learning/PARALLEL_ANALYTICS_R04_NATIVE_CI_PDI_READBACK_2026-11-22.md",
-    "plugin_governance/PLUGIN_R05_V0123_RELEASE_READBACK_2026-11-22.md"
+    "plugin_governance/PLUGIN_R05_V0123_RELEASE_READBACK_2026-11-22.md",
+    "facets/parallel_development_intelligence/dev-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/dev-pattern-adaptation.test.mjs",
+    "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1774,5 +1777,17 @@
     "host_behavioral_parity": "READBACK_PENDING",
     "logo_gate": "DISABLED",
     "foreign_mutation": false
+  },
+  "dev_r06_native_advisory_and_handoff_2026_11_22": {
+    "status": "CLIC_SOURCE_AND_OUTBOX_PUBLISHED_CONSUMER_UNVERIFIED",
+    "adapter": "facets/parallel_development_intelligence/dev-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/dev-pattern-adaptation.test.mjs",
+    "outbox": "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json",
+    "ci_workflow": ".github/workflows/clic-dev-pattern-r06.yml",
+    "local_node_tests": 10,
+    "foreign_mutation": false,
+    "dev_adoption": "NOT_VERIFIED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
