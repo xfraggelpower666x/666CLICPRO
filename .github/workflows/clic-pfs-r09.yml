@@ -1,0 +1,56 @@
+name: CLIC R09 PFS Governance Adapter Regression
+on:
+  push:
+    branches: [clic-migration-rev79-staging]
+    paths:
+      - ".github/workflows/clic-pfs-r09.yml"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs"
+      - "666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs"
+      - "666CLIC_NATIVE_RUNTIME/outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json"
+      - "666CLIC_NATIVE_RUNTIME/CURRENT_POINTER.json"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-r09:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run CLIC R09 19-case targeted Node regression
+        run: node --test 666CLIC_NATIVE_RUNTIME/facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs
+      - name: Verify original adapter blob, derived test and guarded PFS handoff
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const root='666CLIC_NATIVE_RUNTIME/';
+          const adapter=root+'facets/parallel_development_intelligence/pfs-pattern-adaptation.mjs';
+          const test=root+'facets/parallel_development_intelligence/pfs-pattern-adaptation.test.mjs';
+          const outbox=root+'outbox/666PFS/CLIC-TO-666PFS-R09-20261122-01.json';
+          for(const path of [adapter,test,outbox]){
+            const blob=execFileSync('git',['rev-parse','HEAD:'+path],{encoding:'utf8'}).trim();
+            const working=execFileSync('git',['hash-object',path],{encoding:'utf8'}).trim();
+            assert.equal(blob,working);
+          }
+          assert.equal(execFileSync('git',['hash-object',adapter],{encoding:'utf8'}).trim(),'793458841f3cf8ea29b0b3f675a22288624e1670');
+          assert.equal(execFileSync('git',['hash-object',test],{encoding:'utf8'}).trim(),'ac0c4362f603cdef7413024dcf4fd1bfebce7bf3');
+          const h=JSON.parse(fs.readFileSync(outbox,'utf8'));
+          assert.equal(h.handoff_id,'CLIC-TO-666PFS-R09-20261122-01');
+          assert.equal(h.source_system,'666CLIC');
+          assert.equal(h.target,'666PFS');
+          assert.equal(h.status,'PREPARED');
+          assert.equal(h.delivery_status,'NOT_VERIFIED');
+          assert.equal(h.delivery_receipt,null);
+          assert.equal(h.native_adoption_verified,false);
+          assert.equal(h.foreign_mutation,false);
+          assert.equal(h.consumer_verified,false);
+          assert.equal(h.findings.length,5);
+          console.log('CLIC_R09_ORIGINAL_ADAPTER_DERIVED_TEST_AND_PFS_HANDOFF_GATES_PASS');
+          NODE
