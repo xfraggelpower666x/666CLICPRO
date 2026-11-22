@@ -135,7 +135,10 @@
     "plugin_governance/PLUGIN_R05_V0123_RELEASE_READBACK_2026-11-22.md",
     "facets/parallel_development_intelligence/dev-pattern-adaptation.mjs",
     "facets/parallel_development_intelligence/dev-pattern-adaptation.test.mjs",
-    "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json"
+    "outbox/666DEV/CLIC-TO-666DEV-R06-20261122-01.json",
+    "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs",
+    "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs",
+    "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json"
   ],
   "pass_gates": [
     "CURRENT_POINTER_MATCHES_GIT_HEAD",
@@ -1793,5 +1796,18 @@
     "ci_conclusion": "SUCCESS",
     "native_node_tests_pass": 10,
     "ci_source_commit": "21e614a482fc29540a90b161470cc1d8426b2f2e"
+  },
+  "mainbrain_r07_peer_learning_2026_11_22": {
+    "status": "CLIC_SOURCE_AND_HANDOFF_PUBLISHED_NATIVE_CONSUMER_UNVERIFIED",
+    "adapter": "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.mjs",
+    "test": "facets/parallel_development_intelligence/mainbrain-pattern-adaptation.test.mjs",
+    "handoff": "outbox/666MAIN_BRAIN/CLIC-TO-666MAIN-BRAIN-R07-20261122-01.json",
+    "ci_workflow": ".github/workflows/clic-mainbrain-r07.yml",
+    "local_node_tests_pass": 11,
+    "main_brain_adoption": "NOT_VERIFIED",
+    "foreign_mutation": false,
+    "plugin_impact": "READ_ONLY_ADVISORY_SKILL_MAPPING_REVIEW_REQUIRED",
+    "junior": "PRESERVED",
+    "pet": "PAUSED"
   }
 }
